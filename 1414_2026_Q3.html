@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ショーボンドホールディングス株式会社 2026年6月期第3四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #B8963E;
+    --gold-light: #D4AF6A;
+    --gold-pale: #F5EDD8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F8F5F0;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(184,150,62,0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--charcoal); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold)); }
+  header::after { content: '建設補修'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 120px; font-weight: 700; color: rgba(255,255,255,0.03); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--gold-light); border: 1px solid var(--gold); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--gold-light); font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--gold-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--gold-pale); border-left: 4px solid var(--gold); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  footer { background: var(--charcoal); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--gold); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>ショーボンドホールディングス株式会社</h1>
+  <p class="subtitle">2026年6月期第3四半期　決算短信（連結）要約　／　証券コード 1414</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月11日</span></div>
+    <div class="meta-item">対象期間 <span>2025年7月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">66,753<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ -1.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">16,591<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 1.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">11,860<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 1.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">58.27<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 56.49円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成</div>
+      
+        <div class="data-row">
+          <span class="data-key">グループ形態</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">持株会社制（連結）</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">主要子会社（国内）</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ショーボンド建設株式会社 等</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">主要子会社（海外）</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">海外建設セグメント（その他）</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">報告セグメント</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">国内建設、その他（海外建設・製品製造販売・国内外製品販売）</span>
+        </div>
+    </div>
+    <div class="highlight">橋梁・トンネル等インフラの補修・補強工事を主力とする専門建設グループ。高水準の完成工事総利益率を維持し収益安定性が高い。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">66,753 <span class='data-sub'>百万円 -1.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">20,685<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">16,591 <span class='data-sub'>百万円 +1.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">16,968 <span class='data-sub'>百万円 +2.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主に帰属する四半期純利益</span>
+          <span class="data-val">11,860 <span class='data-sub'>百万円 +1.5%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 完成工事総利益率の高水準維持</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌎 工事材料売上高の増加（+8.2%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💎 持分法による投資利益の増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚙️ 国・高速道路会社向け工事売上の低調</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 販売費及び一般管理費の微増</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2026年6月期（通期））</div>
+      
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">91,000 <span class='data-sub'>百万円 +0.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">21,000 <span class='data-sub'>百万円 +1.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">当期純利益</span>
+          <span class="data-val">15,300 <span class='data-sub'>百万円 +1.6%</span></span>
+        </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">124,880<span class='data-sub'>百万円</span><span class='data-sub'>（前期比▲4,275百万円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">105,446<span class='data-sub'>百万円</span><span class='data-sub'>（前期比▲946百万円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">83.3<span class='data-sub'>%</span><span class='data-sub'>（前期81.4%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val"><span class='data-sub'>円</span><span class='data-sub'>（開示なし）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">非開示<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">非開示<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">非開示<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val" style="color:var(--green);">21,047<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>第3四半期連結キャッシュ・フロー計算書は作成していない。現金預金は前期末32,523百万円から21,047百万円へ大幅減少（自己株式取得3,921百万円や配当支払等が要因）。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    
+    <div class="div-row">
+      
+      <div class="div-cell">
+        <div class="div-cell-label">2025年6月期</div>
+        <div class="div-cell-val">175.50<span style="font-size:14px;color:var(--mid);">円</span></div>
+        
+      </div>
+      
+      <div class="div-cell" style="background:var(--gold-pale);">
+        <div class="div-cell-label">2026年6月期</div>
+        <div class="div-cell-val" style="color:var(--gold);">107.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        
+      </div>
+      
+      <div class="div-cell">
+        <div class="div-cell-label">2026年6月期（期末予想）</div>
+        <div class="div-cell-val">25.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:14px;">中間配当82円（実績）＋期末配当25円（予想）。株式分割（1→4株）考慮後の合計。分割考慮前の期末配当予想は100円。年間配当予想は単純合計不可のため非表示。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      
+      <div class="risk-item high">中東情勢による原材料調達・価格影響<br><small>業績予想に未織り込みの不確実性あり</small></div>
+      <div class="risk-item high">受注残高の減少<br><small>前年同期比▲11.2%と大幅減少</small></div>
+      <div class="risk-item high">高速道路会社・地方自治体受注の低調<br><small>大型工事受注が伸び悩み</small></div>
+      <div class="risk-item mid-level">国向け工事売上の低調継続<br><small>期首受注残減少が売上に波及</small></div>
+      <div class="risk-item mid-level">自己株式取得による現金減少<br><small>3,921百万円取得し手元現金減少</small></div>
+      <div class="risk-item ">人件費・一般管理費の増加<br><small>販管費が前年同期比微増</small></div>
+      <div class="risk-item ">為替・海外事業リスク<br><small>海外建設セグメントの変動</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年6月期第3四半期累計は売上高が前年同期比1.7%減と微減となったものの、完成工事総利益率の高水準維持と工事材料売上増加により売上総利益は前年を上回り、営業利益・経常利益・純利益はいずれも増益を確保した。受注残高が前年同期比11.2%減と大幅に落ち込んでおり、今後の売上高維持が課題となる。財務面では自己資本比率83.3%と極めて健全な財務体質を維持しており、3,921百万円の自己株式取得を実施するなど株主還元にも積極的。中東情勢に起因する原材料コストや調達への影響は業績予想に未織り込みであり、下期以降の不確実性として留意が必要。通期業績予想は据え置きで、売上高9,100億円・営業利益2,100億円を見込んでいる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はショーボンドホールディングス株式会社（1414）2026年6月期第3四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
