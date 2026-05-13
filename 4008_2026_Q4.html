@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>住友精化株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #B8963E;
+    --gold-light: #D4AF6A;
+    --gold-pale: #F5EDD8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F8F5F0;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(184,150,62,0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--charcoal); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold)); }
+  header::after { content: '化学・樹脂'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 120px; font-weight: 700; color: rgba(255,255,255,0.03); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--gold-light); border: 1px solid var(--gold); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--gold-light); font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--gold-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--gold-pale); border-left: 4px solid var(--gold); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  footer { background: var(--charcoal); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--gold); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>住友精化株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 4008</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月12日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">148,354<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 0.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">14,464<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 35.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">7,677<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 28.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">117.48<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 90.12円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成</div>
+      
+        <div class="data-row">
+          <span class="data-key">グループ形態</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">連結（国内外子会社を含む）</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">主要子会社（国内）</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">記載なし</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">主要子会社（海外）</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">シンガポール連結子会社（吸水性樹脂製造）</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">報告セグメント</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">吸水性樹脂、機能マテリアル</span>
+        </div>
+    </div>
+    <div class="highlight">吸水性樹脂（紙おむつ・衛生材料向け）を主力とし、水溶性ポリマーやPSA酸素発生装置等の機能マテリアルも展開する化学メーカー。中国・アジアを中心にグローバルに販売。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">148,354 <span class='data-sub'>百万円 +0.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">35,435<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">14,464 <span class='data-sub'>百万円 +35.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">15,249 <span class='data-sub'>百万円 +37.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主に帰属する当期純利益</span>
+          <span class="data-val">7,677 <span class='data-sub'>百万円 +28.8%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 原燃料（ナフサ）価格の低下で原価改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌎 吸水性樹脂セグメントの販売数量増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💎 過剰請求関連費用3,208百万円の特別損失計上</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚙️ 機能マテリアルで水溶性ポリマー・PSA装置拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 為替差益の増加（営業外収益+529百万円）</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">未定 <span class='data-sub'>－ －</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">未定 <span class='data-sub'>－ －</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">当期純利益</span>
+          <span class="data-val">未定 <span class='data-sub'>－ －</span></span>
+        </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">152,732<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">103,621<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">67.8<span class='data-sub'>%</span><span class='data-sub'>（前期66.6%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,601.96<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+17,480<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">▲11,331<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">▲5,091<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val" style="color:var(--green);">17,989<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>営業CFは前期比約38億円増の174億円。投資CFはシンガポール子会社の吸水性樹脂設備増強により有形固定資産取得支出が約124億円。財務CFは短期借入金を約107億円純返済する一方、長期借入94億円を新規調達。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    
+    <div class="div-row">
+      
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">200.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 44.4%</div>
+      </div>
+      
+      <div class="div-cell" style="background:var(--gold-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--gold);">220.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 37.3%</div>
+      </div>
+      
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3</div>
+        <div class="div-cell-val">48.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:14px;">2027年3月期予想配当は株式分割（1→5株）後ベースで年間48円（第2四半期末24円・期末24円）。業績連動で株主還元を継続する方針。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      
+      <div class="risk-item high">中東情勢・ホルムズ海峡封鎖<br><small>石油関連原料の供給不安・価格高騰リスク</small></div>
+      <div class="risk-item high">米国関税引き上げの影響<br><small>グローバルサプライチェーン混乱による販売・コスト影響</small></div>
+      <div class="risk-item high">過剰請求関連費用の追加発生<br><small>連結子会社による製品代金過剰請求の再発・追加賠償リスク</small></div>
+      <div class="risk-item mid-level">原燃料価格の変動<br><small>ナフサ等の価格上昇による収益圧迫</small></div>
+      <div class="risk-item mid-level">為替変動リスク<br><small>円高による海外売上・資産目減り</small></div>
+      <div class="risk-item mid-level">中国市場の需要変動<br><small>最大市場・中国での吸水性樹脂需要鈍化リスク</small></div>
+      <div class="risk-item mid-level">減損損失の再発<br><small>千葉工場等での設備減損が継続する可能性</small></div>
+      <div class="risk-item ">設備投資の回収リスク<br><small>シンガポール工場増強投資の需要回収見通し</small></div>
+      <div class="risk-item ">業績予想未定による不透明感<br><small>来期予想が未定のため投資家への情報不足</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は売上高が微増にとどまったものの、原燃料価格の低下を主因に営業利益が前期比35%増の144億円と大幅増益を達成した。吸水性樹脂セグメントが牽引役となり、機能マテリアルも水溶性ポリマー等の拡大で増益に貢献。一方、連結子会社による製品代金の過剰請求に伴う賠償金32億円や機能マテリアルの減損損失12億円が特別損失として重なり、純利益の伸びは営業利益ほどではなかった。財務面では自己資本比率67.8%と健全で、D/Eレシオも0.17と低水準を維持。配当は株式分割考慮後で年間44円相当（分割前220円）と増配を実施。2027年3月期は中東情勢やホルムズ海峡封鎖の影響が算定困難として業績予想を未定としており、地政学リスクへの対応が当面の最大課題となっている。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は住友精化株式会社（4008）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
