@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ライオン株式会社 2026年12月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #B8963E;
+    --gold-light: #D4AF6A;
+    --gold-pale: #F5EDD8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F8F5F0;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(184,150,62,0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--charcoal); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold)); }
+  header::after { content: '日用品'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 120px; font-weight: 700; color: rgba(255,255,255,0.03); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--gold-light); border: 1px solid var(--gold); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--gold-light); font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--gold-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--gold-pale); border-left: 4px solid var(--gold); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  footer { background: var(--charcoal); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--gold); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated</div>
+  <h1>ライオン株式会社</h1>
+  <p class="subtitle">2026年12月期 第1四半期　決算短信（連結）要約　／　証券コード 4912</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月12日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">99,205<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 5.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">6,292<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 11.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">4,206<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 4.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">15.21<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 14.57円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成</div>
+      
+        <div class="data-row">
+          <span class="data-key">グループ形態</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">持株会社型連結グループ</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">主要子会社（国内）</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">建設請負・不動産管理・人材派遣子会社等</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">主要子会社（海外）</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">タイ・マレーシア・中国・韓国・オーストラリア等の関係会社、PNB Consolidated Pty Ltd（新規子会社化）</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">報告セグメント</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">一般用消費財事業、産業用品事業、海外事業</span>
+        </div>
+    </div>
+    <div class="highlight">ライオン株式会社は、ハミガキ・ハブラシ・洗濯洗剤・台所用洗剤等の日用品・一般用医薬品を国内外で製造販売する消費財メーカー。オーラルヘルスケアを最重点事業と位置付け、アジア・オセアニア地域への海外展開を積極推進している。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">99,205 <span class='data-sub'>百万円 +5.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">45,778<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">6,292 <span class='data-sub'>百万円 +11.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前利益</span>
+          <span class="data-val">7,392 <span class='data-sub'>百万円 +16.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期利益</span>
+          <span class="data-val">4,206 <span class='data-sub'>百万円 +4.5%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 海外事業の事業利益が60.7%増と大幅伸長</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌎 オーラルヘルスケア分野が9.8%増と好調</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💎 重点ブランド向け広告宣伝費増で一般用消費財の利益は減少</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚙️ PNB社子会社化によるオセアニア事業拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 リビングケア分野でリード譲渡影響により19.8%減収</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2026年12月期（通期））</div>
+      
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">430,000 <span class='data-sub'>百万円 +1.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">40,000 <span class='data-sub'>百万円 +10.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期利益</span>
+          <span class="data-val">25,000 <span class='data-sub'>百万円 -9.4%</span></span>
+        </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">520,307<span class='data-sub'>百万円</span><span class='data-sub'>（前期末528,596百万円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産（資本合計）</span>
+          <span class="data-val">349,708<span class='data-sub'>百万円</span><span class='data-sub'>（前期末348,419百万円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">62.1<span class='data-sub'>%</span><span class='data-sub'>（前期末61.1%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val"><span class='data-sub'>円</span><span class='data-sub'>（開示なし）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--red);">▲10,868<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">▲17,792<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">▲1,231<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val" style="color:var(--green);">58,424<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>投資CFはPNB Consolidated Pty Ltd株式取得（135億99百万円）が主因で大幅なマイナス。営業CFは営業債務の減少（194億円）や法人税支払（47億円）が影響。コマーシャルペーパー100億円発行で財務CF圧迫を緩和。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    
+    <div class="div-row">
+      
+      <div class="div-cell">
+        <div class="div-cell-label">2025/12</div>
+        <div class="div-cell-val">30.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        
+      </div>
+      
+      <div class="div-cell" style="background:var(--gold-pale);">
+        <div class="div-cell-label">2026/12</div>
+        <div class="div-cell-val" style="color:var(--gold);">―</div>
+        
+      </div>
+      
+      <div class="div-cell">
+        <div class="div-cell-label">2026/12（予想）</div>
+        <div class="div-cell-val">34.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:14px;">2026年12月期の年間配当予想は1株当たり34円（中間17円・期末17円）。前期比4円増配の予定。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      
+      <div class="risk-item high">為替変動リスク<br><small>海外売上高が全体の約42%を占め、円高進行時に円換算業績が悪化</small></div>
+      <div class="risk-item high">原材料コスト上昇<br><small>油脂・石油化学系原料の価格高騰が売上原価を圧迫するリスク</small></div>
+      <div class="risk-item high">中国事業の減速<br><small>中国売上高が前年同期比15.9%減（実質22.9%減）と大幅減収が継続</small></div>
+      <div class="risk-item mid-level">地政学リスク<br><small>タイ周辺国への輸出が地政学的影響で減少するリスク</small></div>
+      <div class="risk-item mid-level">競合激化・価格競争<br><small>国内日用品市場での競合激化により広告宣伝費増加が利益を圧迫</small></div>
+      <div class="risk-item mid-level">M&amp;A統合リスク<br><small>PNB社など新規子会社の統合・シナジー実現に不確実性</small></div>
+      <div class="risk-item mid-level">事業ポートフォリオ再編リスク<br><small>化学品事業子会社2社の株式譲渡など再編に伴う一時損失の可能性</small></div>
+      <div class="risk-item ">国内需要の伸び悩み<br><small>人口減少・消費者節約志向により国内消費財市場の成長が限定的</small></div>
+      <div class="risk-item ">法規制・環境規制<br><small>国内外での化学物質規制強化が製品設計・コストに影響するリスク</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年12月期第1四半期は、売上高が前年同期比5.3%増の992億円、営業利益が同11.6%増の63億円と増収増益を達成した。特に海外事業がPNB社子会社化を含むオセアニア進出効果と東南アジアの堅調な需要により事業利益が60.7%増と牽引役となった。一方、国内一般用消費財事業は広告宣伝費の積極投下により事業利益が8.1%減少しており、先行投資局面にある。財務面では自己資本比率62.1%と健全な水準を維持しているものの、PNB社取得により投資CFが大幅なマイナスとなり現金残高は前期末比304億円減少した。通期業績予想は据え置きで売上高4,300億円・営業利益400億円を見込んでいるが、親会社帰属利益は前期比9.4%減の250億円と減益予想であり、為替リスクや中国事業の低迷が下振れ要因として注意が必要。配当は年間34円（前期比4円増）を予定しており株主還元姿勢は維持されている。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はライオン株式会社（4912）2026年12月期 第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
