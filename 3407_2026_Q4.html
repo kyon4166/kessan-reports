@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>旭化成株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #B8963E;
+    --gold-light: #D4AF6A;
+    --gold-pale: #F5EDD8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F8F5F0;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(184,150,62,0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--charcoal); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold)); }
+  header::after { content: '総合化学'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 120px; font-weight: 700; color: rgba(255,255,255,0.03); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--gold-light); border: 1px solid var(--gold); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--gold-light); font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--gold-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--gold-pale); border-left: 4px solid var(--gold); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  footer { background: var(--charcoal); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--gold); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>旭化成株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 3407</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月12日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">30,745<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 1.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">2,312<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 9.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">1,588<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 17.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">116.97<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 97.94円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成</div>
+      
+        <div class="data-row">
+          <span class="data-key">グループ形態</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">事業持株会社制（旭化成㈱が事業持株会社）</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">主要子会社（国内）</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">旭化成ホームズ㈱、旭化成ファーマ㈱（旭化成セラピューティクス㈱へ改称）、旭化成エレクトロニクス㈱ 等</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">主要子会社（海外）</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ZOLL Medical Corporation、Veloxis Pharmaceuticals Inc.、Calliditas Therapeutics AB 等</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">報告セグメント</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ヘルスケア／住宅／マテリアル</span>
+        </div>
+    </div>
+    <div class="highlight">化学・素材・住宅・ヘルスケアを3セグメントで展開する総合化学グループ。医薬・クリティカルケア・半導体材料・住宅建築まで幅広い事業ポートフォリオを持つ。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">30,745 <span class='data-sub'>億円 +1.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">10,086<span class='data-sub'>億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">2,312 <span class='data-sub'>億円 +9.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">2,304 <span class='data-sub'>億円 +19.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">1,588 <span class='data-sub'>億円 +17.6%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 医薬事業の主力製品販売量増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌎 国内住宅事業の平均単価上昇</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💎 持分法投資利益の改善（前期損失→当期利益）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚙️ エッセンシャルケミカル事業の定期修理・在庫受払差影響</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 税金費用の減少による純利益押し上げ</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">32,540 <span class='data-sub'>億円 +5.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">2,480 <span class='data-sub'>億円 +7.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">当期純利益</span>
+          <span class="data-val">1,600 <span class='data-sub'>億円 +0.8%</span></span>
+        </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">41,379<span class='data-sub'>億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">21,656<span class='data-sub'>億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">50.5<span class='data-sub'>%</span><span class='data-sub'>（前期46.3%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,539.66<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+3,031<span class='data-sub'>億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">▲1,069<span class='data-sub'>億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">▲2,454<span class='data-sub'>億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val" style="color:var(--green);">3,721<span class='data-sub'>億円</span></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>有利子負債は前期比1,899億円減少し9,675億円。棚卸資産増加766億円が営業CFを圧迫したが、子会社株式売却収入626億円などで投資CFは前期比大幅改善。短期借入金・CPの返済2,454億円が財務CFを押し下げた。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    
+    <div class="div-row">
+      
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">38.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 38.8%</div>
+      </div>
+      
+      <div class="div-cell" style="background:var(--gold-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--gold);">42.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 35.9%</div>
+      </div>
+      
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3</div>
+        <div class="div-cell-val">44.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:14px;">業績・財務状況を踏まえた安定的な配当を目指す。配当性向は概ね35〜40%程度を意識した水準。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      
+      <div class="risk-item high">石化事業の市況悪化<br><small>エッセンシャルケミカルの在庫受払差・交易条件悪化</small></div>
+      <div class="risk-item high">Aicuris買収ののれん負担<br><small>783百万ユーロ取得、のれん等償却費が増加見込み</small></div>
+      <div class="risk-item high">水島製造所再構築リスク<br><small>2030年度目途に誘導品生産終了、撤去費用が発生予定</small></div>
+      <div class="risk-item mid-level">為替変動リスク<br><small>海外売上比率が高く円高は業績・純資産に影響</small></div>
+      <div class="risk-item mid-level">北米住宅需要の低迷<br><small>米国住宅需要落ち込みによる販売数量・価格対応</small></div>
+      <div class="risk-item mid-level">カーインテリア事業の中国不振<br><small>中国での販売量減少・固定費増加が継続</small></div>
+      <div class="risk-item mid-level">事業構造改善費用の増加<br><small>当期478億円計上、来期も高水準継続の可能性</small></div>
+      <div class="risk-item mid-level">借入金増加による財務負担<br><small>Aicuris取得に伴い1,290億円借入実行</small></div>
+      <div class="risk-item ">減損リスク<br><small>汎用石化・樹脂資産グループで108億円減損計上</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は売上高3兆745億円（前期比+1.2%）、営業利益2,312億円（+9.1%）と増収増益を達成した。ヘルスケアセグメントは医薬事業の販売量増加とCalliditas新規連結効果で大幅増益、住宅セグメントも平均単価上昇で堅調に推移。一方、マテリアルセグメントは定期修理・在庫受払差の影響で減益となった。財務面では自己資本比率が50.5%へ改善し有利子負債も1,899億円削減するなど財務体力は向上した。後発事象としてAicuris（783百万ユーロ）取得に伴う借入や水島製造所の誘導品事業再構築など中期的なコスト負担増要因が存在するが、来期は増収増益計画かつ増配方針を維持しており、事業ポートフォリオ転換を着実に進める姿勢がうかがえる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は旭化成株式会社（3407）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
