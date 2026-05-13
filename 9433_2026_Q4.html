@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KDDI株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #B8963E;
+    --gold-light: #D4AF6A;
+    --gold-pale: #F5EDD8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F8F5F0;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(184,150,62,0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--charcoal); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold)); }
+  header::after { content: '通信'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 120px; font-weight: 700; color: rgba(255,255,255,0.03); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--gold-light); border: 1px solid var(--gold); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--gold-light); font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--gold-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--gold-pale); border-left: 4px solid var(--gold); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  footer { background: var(--charcoal); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--gold); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated</div>
+  <h1>KDDI株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 9433</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月12日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">60,719<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 4.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">10,991<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 1.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">7,071<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 7.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">183.59<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 161.86円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成</div>
+      
+        <div class="data-row">
+          <span class="data-key">グループ形態</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">連結（子会社193社、持分法適用46社）</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">主要子会社（国内）</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">沖縄セルラー電話、JCOM、UQコミュニケーションズ、ビッグローブ、auフィナンシャルホールディングス、JCOMほか</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">主要子会社（海外）</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">KDDI America、KDDI Europe、Telehouse Holdings、MobiCom Corporation LLC ほか</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">報告セグメント</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">パーソナル、ビジネス</span>
+        </div>
+    </div>
+    <div class="highlight">au・UQ mobile・povoのマルチブランドで5G通信サービスを展開する通信キャリア。金融・エネルギー・IoT・データセンターなどグロース領域を拡大中。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">60,719 <span class='data-sub'>億円 +4.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">25,906 <span class='data-sub'>億円 +4.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">10,991 <span class='data-sub'>億円 +1.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前利益</span>
+          <span class="data-val">11,179 <span class='data-sub'>億円 +4.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期利益</span>
+          <span class="data-val">7,071 <span class='data-sub'>億円 +7.9%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 モバイル収入・金融事業収入の増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌎 IoT・データセンター等グロース領域拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💎 短期解約者契約コストの減損（パーソナル減益要因）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚙️ 持分法投資損益の増加（+45.1%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 販管費増加（+7.0%）が利益を圧迫</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">64,100 <span class='data-sub'>億円 +5.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">調整後営業利益</span>
+          <span class="data-val">12,100 <span class='data-sub'>億円 +5.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属調整後当期利益</span>
+          <span class="data-val">7,310 <span class='data-sub'>億円 +2.7%</span></span>
+        </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">190,634<span class='data-sub'>億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産（資本合計）</span>
+          <span class="data-val">55,927<span class='data-sub'>億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">26.6<span class='data-sub'>%</span><span class='data-sub'>（前期30.1%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,333.50<span class='data-sub'>円</span><span class='data-sub'>（前期1,264.94円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+17,889<span class='data-sub'>億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">▲10,805<span class='data-sub'>億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">▲5,531<span class='data-sub'>億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val" style="color:var(--green);">10,788<span class='data-sub'>億円</span></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>営業CFは金融事業預金増加により前期比+5,398億円の大幅増。投資CFは前期のローソン株式取得がなくなり支出減少。財務CFは社債・長期借入収入減少等で支出増加。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    
+    <div class="div-row">
+      
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">145.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 44.8%</div>
+      </div>
+      
+      <div class="div-cell" style="background:var(--gold-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--gold);">80.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 43.6%</div>
+      </div>
+      
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3</div>
+        <div class="div-cell-val">84.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 42.8%</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:14px;">連結配当性向40%超を維持する方針。次期以降3ヶ年は調整後当期利益に対する配当性向40%超を維持。なお2025年4月1日付で1株→2株の株式分割を実施。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      
+      <div class="risk-item high">内部統制リスク（不正取引）<br><small>子会社ビッグローブ等で架空循環取引が発覚</small></div>
+      <div class="risk-item high">金融事業拡大に伴う信用リスク<br><small>貸出金残高が大幅増加、預金・借入も膨張</small></div>
+      <div class="risk-item high">有利子負債の増加<br><small>有利子負債5.4兆円、EBITDA純有利子負債倍率2.3倍</small></div>
+      <div class="risk-item mid-level">競争環境の激化<br><small>料金競争・MVNO台頭によるモバイル収入への影響</small></div>
+      <div class="risk-item mid-level">ミャンマー事業リスク<br><small>外貨兌換規制・政情不安による事業継続リスク</small></div>
+      <div class="risk-item mid-level">契約コストの減損リスク<br><small>短期解約者増加により資産計上コストが減損</small></div>
+      <div class="risk-item ">規制・制度変更リスク<br><small>通信政策変更や電気通信事業法改正の影響</small></div>
+      <div class="risk-item ">サイバーセキュリティリスク<br><small>大規模通信障害・情報漏洩による信頼失墜</small></div>
+      <div class="risk-item ">自然災害・設備障害リスク<br><small>通信インフラ被災による事業継続への影響</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は売上高6.1兆円（+4.1%）、親会社帰属利益7,071億円（+7.9%）と増収増益を達成。モバイル収入・金融事業・IoT/データセンターなどグロース領域の拡大が牽引した。ただし金融事業の規模拡大に伴い有利子負債が5.4兆円に膨らみ、自己資本比率は30.1%から26.6%へ低下、財務レバレッジの上昇が課題。子会社での架空循環取引発覚はガバナンスリスクとして注視が必要。配当は株式分割後ベースで年80円（性向43.6%）、来期は84円増配予定と株主還元姿勢は継続的。来期は売上6.4兆円・調整後営業利益1.2兆円を見込み、AI基盤融合戦略「Power-to-Connect 2028」のもと持続的成長を目指す。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はKDDI株式会社（9433）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
