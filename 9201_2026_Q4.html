@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本航空株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #8B1A1A;
+    --red-light: #C0392B;
+    --red-pale: #FAF0EF;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F5F5;
+    --white: #FFFFFF;
+    --green: #1E7E4A;
+    --loss: #C0392B;
+    --border: rgba(139,26,26,0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--red); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #E74C3C, #F5A0A0, #E74C3C); }
+  header::after { content: '航空・運輸'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #F5A0A0; border: 1px solid rgba(255,160,160,0.5); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #F5A0A0; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--red-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--loss); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--red-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--red-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--red-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: #8B1A1A; }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--red-pale); border-left: 4px solid var(--red-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--red-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--red); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--red); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  footer { background: var(--red); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #A02020; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated</div>
+  <h1>日本航空株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信〔IFRS〕（連結）要約　／　証券コード 9201</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年4月30日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上収益</div>
+      <div class="kpi-value">2,012,515<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 9.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EBIT（財務・法人所得税前利益）</div>
+      <div class="kpi-value">218,004<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 26.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社帰属当期利益</div>
+      <div class="kpi-value">137,604<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 28.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">306.96<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 245.09円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長執行役員　鳥取 三津子</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（3事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">フルサービスキャリア事業、LCC事業、マイル／金融・コマース事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">重要な変更なし</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">国際会計基準（IFRS）／2021年3月期より任意適用</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">保有航空機数</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">234機（所有208機・リース26機）／2026年3月31日時点</span>
+      </div>
+    </div>
+    <div class="highlight">
+      国際・国内航空輸送を中心に、LCC（ZIPAIR・スプリング・ジャパン）、マイル・金融・コマース事業（JALUXなど）を展開する総合航空グループ。中期経営計画最終年度として、EBIT目標2,000億円を上回る水準を達成。2026年3月には新たな長期成長戦略「JALグループ経営ビジョン2035」を発表し、2030年度EBIT3,000億円、2035年度EBIT3,500億円を目指す。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上収益</span>
+          <span class="data-val">2,012,515 <span class='data-sub'>百万円 ▲9.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業費用</span>
+          <span class="data-val">1,834,022 <span class='data-sub'>百万円 ▲8.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">207,349 <span class='data-sub'>百万円 ▲23.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EBIT（財務・法人所得税前利益）</span>
+          <span class="data-val">218,004 <span class='data-sub'>百万円 ▲26.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EBITマージン</span>
+          <span class="data-val">10.8 <span class='data-sub'>%（前期 9.4%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属当期利益</span>
+          <span class="data-val">137,604 <span class='data-sub'>百万円 ▲28.6%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">✈ 国際旅客が好調なインバウンド需要に加え日本発ビジネス需要も回復（旅客収入▲9.1%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📦 国際貨物が大幅増収（医薬品・AI/EV関連高単価貨物の獲得強化、前期比▲18.7%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🎯 マイル／金融・コマース事業の利益成長が継続（EBIT▲19.5%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 永久劣後債発行（約1,772億円）による財務体質の強化</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 航空燃油費は前期比▲4.1%増加（395,455百万円）。円安・原油高の影響は軽微</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 EBIT（財務・法人所得税前利益）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">✈ フルサービスキャリア事業</div>
+          <div class="segment-row"><span>外部売上収益</span><span>1,535,525 百万円</span></div>
+          <div class="segment-row"><span>EBIT（セグメント消去前）</span><span>145,056 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">▲30.5%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🛫 LCC事業</div>
+          <div class="segment-row"><span>外部売上収益</span><span>101,302 百万円</span></div>
+          <div class="segment-row"><span>EBIT（セグメント消去前）</span><span>9,601 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△17.1%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">💳 マイル／金融・コマース事業</div>
+          <div class="segment-row"><span>外部売上収益</span><span>148,210 百万円</span></div>
+          <div class="segment-row"><span>EBIT（セグメント消去前）</span><span>45,535 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">▲19.5%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏢 その他（旅行事業等）</div>
+          <div class="segment-row"><span>外部売上収益</span><span>227,477 百万円</span></div>
+          <div class="segment-row"><span>EBIT（セグメント消去前）</span><span>19,176 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">▲54.7%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上収益</td>
+          <td>2,012,515 百万円</td>
+          <td>2,095,000 百万円</td>
+          <td class="up">▲4.1%</td>
+        </tr>
+        <tr>
+          <td>EBIT（財務・法人所得税前利益）</td>
+          <td>218,004 百万円</td>
+          <td>180,000 百万円</td>
+          <td class="down">△17.4%</td>
+        </tr>
+        <tr>
+          <td>親会社帰属当期利益</td>
+          <td>137,604 百万円</td>
+          <td>110,000 百万円</td>
+          <td class="down">△20.1%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>⚠ 減益の主因：</strong>機材投資倍増（国際線増機・機材大型化）や戦略投資強化による費用増加、世界情勢の不確実性（ウクライナ・中東情勢による原油価格上昇懸念）を考慮。売上は引き続き増収見通しながら、積極的な成長投資がEBITを圧迫する構造。「JALグループ経営ビジョン2035」に沿った中長期投資フェーズへの移行。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">3,198,757<span class='data-sub'>百万円 ▲14.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">1,334,765<span class='data-sub'>百万円 ▲31.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債（流動＋非流動）</span>
+          <span class="data-val">875,917<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">40.3<span class='data-sub'>%</span><span class='data-sub'>（前期34.9%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり親会社所有者帰属持分</span>
+          <span class="data-val">2,586.99<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+394,879<span class='data-sub'>百万円 ▲3.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--loss);">△183,103<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--green);">+44,625<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF（営業＋投資）</span>
+          <span class="data-val" style="color:var(--green);">+211,776<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">1,010,185<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>永久劣後債（約1,772億円）の発行と親会社帰属当期利益による利益剰余金増加で資本合計が大幅増加。親会社所有者帰属持分比率が40.3%へ改善。投資CFは固定資産取得（△2,024億円）が主因だが前期（△2,811億円）から縮小。財務CFは永久劣後債発行収入により一転プラスへ転換。現金残高は1兆101億円と強固な手元流動性を維持。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">86.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 35.1%</div>
+      </div>
+      <div class="div-cell" style="background:var(--red-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--red-light);">96.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 31.3%　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">96.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 42.2%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">継続的・安定的な配当に加え、自己株式取得を柔軟に実施し、株主還元を積極的に行う方針。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度は期末50円・中間46円の計96円に増配（前期86円から11.6%増）。2026年度は中間・期末とも48円ずつ計96円を予定（据え置き）。業績予想を上回ったものの、中東情勢影響を考慮して配当予想を据え置き。また2026年4月に永久劣後債（社債型種類株式）2,000億円の発行も決議。
+    </div>
+  </section>
+
+  <!-- 05 輸送実績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">輸送実績（フルサービスキャリア）</span>
+    </div>
+    <div class="card">
+      <div class="card-title">フルサービスキャリア事業 旅客輸送実績</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🌏 国際線</div>
+          <div class="segment-row"><span>有償旅客数</span><span>8,008,848 人 ▲5.6%</span></div>
+          <div class="segment-row"><span>有償座席利用率</span><span>85.8% （前期83.9%）</span></div>
+          <div class="segment-row"><span>有償貨物トン・キロ</span><span>3,220,293千 ▲16.4%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🗾 国内線</div>
+          <div class="segment-row"><span>有償旅客数</span><span>38,234,040 人 ▲5.8%</span></div>
+          <div class="segment-row"><span>有償座席利用率</span><span>83.9% （前期78.9%）</span></div>
+          <div class="segment-row"><span>有償貨物トン・キロ</span><span>311,132千 ▲1.9%</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      国際旅客は好調なインバウンド需要に加え、日本発ビジネス需要の想定超の回復により旅客数・座席利用率ともに前期を上回る。2026年1月に成田=デリー線を新規開設。国内旅客も各種キャンペーンで旅客数・収入とも増加。国際貨物はアジア=北米間の需要増と高単価貨物獲得強化で有償貨物トン・キロが▲16.4%の大幅増。
+    </div>
+  </section>
+
+  <!-- 06 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">主要リスク・後発事象</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">航空安全リスク<br><small>定期航空運送事業の根幹。インシデント発生時の事業停止・レピュテーション毀損リスク</small></div>
+      <div class="risk-item high">燃油価格・為替リスク<br><small>航空燃油費395,455百万円（売上比19.6%）。原油高・円安の同時進行が収益を直撃</small></div>
+      <div class="risk-item high">国際情勢・地政学リスク<br><small>中東情勢悪化による運休（ドーハ線）は既発生。ウクライナ情勢の長期化も燃料コストを圧迫</small></div>
+      <div class="risk-item mid-level">機材調達リスク<br><small>ボーイング・エアバス機の納期遅延が相次ぎ、計画的な機材投資への影響が懸念</small></div>
+      <div class="risk-item mid-level">気候変動・環境規制リスク<br><small>SAF（持続可能な航空燃料）コスト上昇、カーボンオフセット負担増加</small></div>
+      <div class="risk-item mid-level">LCC事業の利益率低下<br><small>ZIPAIRの有償座席利用率が84.8%→77.7%へ低下。LCC事業EBIT△17.1%</small></div>
+      <div class="risk-item">疫病・パンデミックリスク<br><small>コロナ禍の経験から事業継続体制を強化。再発時の旅客需要急減リスク</small></div>
+      <div class="risk-item">IT・情報セキュリティリスク<br><small>デジタルサービス拡大に伴う情報漏洩・システム障害のリスク増大</small></div>
+      <div class="risk-item">後発事象：永久劣後債発行<br><small>2026年4月30日決議。第1回社債型種類株式2,000億円（払込期日：2026年6月）</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他・後発事象
+    </div>
+    <div class="highlight" style="margin-top:12px;">
+      <strong>後発事象②：ライフネット生命との資本業務提携</strong><br>
+      2026年4月30日付で、auフィナンシャルHDよりライフネット生命株式14,726,100株（持株比率18.32%）を取得予定。マイル・アセットを活用した保険商品の共同開発などを通じ、「マイル／金融・コマース事業」の多角化を推進。2027年3月期の連結業績への影響は軽微。
+    </div>
+  </section>
+
+  <!-- 07 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">07</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は売上収益・利益ともに大幅増収増益。好調なインバウンド需要、日本発ビジネス需要の想定超回復、国際貨物の高単価貨物獲得強化、マイル／金融・コマース事業の成長がEBIT目標2,000億円超過達成を牽引。中期経営計画を成功裡に締め括り、3月に発表した「JALグループ経営ビジョン2035」で10年先を見据えた成長戦略を明示。来期（2027年3月期）は成長投資フェーズへの移行でEBITが△17.4%減益見通しとなるものの、売上は▲4.1%増収見込み。親会社所有者帰属持分比率は40.3%に改善し、現金残高も1兆101億円と財務基盤は強固。配当は96円で据え置きながら、永久劣後債発行・自己株式取得（200億円）で株主還元・資本政策を多角化。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は日本航空株式会社（9201）2026年3月期決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
