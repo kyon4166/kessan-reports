@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社朝日ネット 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #1A4E5C;
+    --teal-light: #2E7D8A;
+    --teal-pale: #E6F4F6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F4F8F9;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,78,92,0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--teal); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--teal-light), #5BAAB5, var(--teal-light)); }
+  header::after { content: '通信・インターネット'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 90px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5BAAB5; border: 1px solid #2E7D8A; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5BAAB5; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--teal-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--teal-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--teal-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--teal-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--teal-pale); border-left: 4px solid var(--teal-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .service-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--teal-light); padding: 16px 18px; font-size: 13px; }
+  .service-name { font-weight: 500; color: var(--teal); margin-bottom: 6px; font-size: 13px; }
+  .service-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .service-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--teal); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  footer { background: var(--teal); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E7D8A; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .service-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Non-Consolidated</div>
+  <h1>株式会社朝日ネット</h1>
+  <p class="subtitle">2026年3月期　決算短信（非連結）要約　／　証券コード 3834</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月13日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">13,517<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 3.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">1,791<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 23.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">1,293<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 26.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">49.65<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 64.99円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">会社・事業構成</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役 社長執行役員　小松 大</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業区分</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ISP事業（単一セグメント）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要サービス</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ISP「ASAHIネット」、VNE「v6コネクト」、教育支援「manaba」</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）／非連結</span>
+      </div>
+    </div>
+    <div class="highlight">
+      インターネット接続サービス（ISP・VNE）と教育支援サービス（manaba）を主軸とする通信事業者。2026年4月に代表取締役社長の交代で新経営体制へ移行。「ISP」「VNE」「manaba」の3事業を中核に据えた中長期成長戦略を加速。RBBTODAYブロードバンドアワード2025においてプロバイダ部門（総合）で12年連続最優秀を受賞するなど通信品質・サポート面での高い評価が継続。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">13,517 <span class='data-sub'>百万円 ▲3.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上原価</span>
+          <span class="data-val">9,407 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">1,791 <span class='data-sub'>百万円 △23.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">1,821 <span class='data-sub'>百万円 △23.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">当期純利益</span>
+          <span class="data-val">1,293 <span class='data-sub'>百万円 △26.2%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌐 VNE「v6コネクト」がトラフィック増で増収（＋11.8%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📶 FTTH契約数増によりISP「ASAHIネット」は増収（＋2.2%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💻 基幹システム更改による減価償却費・業務委託費が増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📣 NTTチャネル・Webチャネルでのプロモーション強化で販管費増</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前期の投資有価証券売却益137百万円の剥落で純利益を圧迫</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">サービス別 売上高</div>
+      <div class="service-grid">
+        <div class="service-item">
+          <div class="service-name">🌐 ISP「ASAHIネット」</div>
+          <div class="service-row"><span>売上高</span><span>9,786 百万円</span></div>
+          <div class="service-row"><span>前期比</span><span class="up">＋2.2%</span></div>
+          <div class="service-row"><span>FTTH契約数</span><span>514千ID（＋3.2%）</span></div>
+        </div>
+        <div class="service-item">
+          <div class="service-name">📡 VNE「v6コネクト」</div>
+          <div class="service-row"><span>売上高</span><span>2,415 百万円</span></div>
+          <div class="service-row"><span>前期比</span><span class="up">＋11.8%</span></div>
+          <div class="service-row"><span>提携事業者数</span><span>10社（変化なし）</span></div>
+        </div>
+        <div class="service-item">
+          <div class="service-name">🎓 教育支援「manaba」</div>
+          <div class="service-row"><span>売上高</span><span>560 百万円</span></div>
+          <div class="service-row"><span>前期比</span><span class="down">△2.9%</span></div>
+          <div class="service-row"><span>契約ID数</span><span>761千ID（△0.9%）</span></div>
+        </div>
+        <div class="service-item">
+          <div class="service-name">📧 その他（メール・セキュリティ等）</div>
+          <div class="service-row"><span>売上高</span><span>754 百万円</span></div>
+          <div class="service-row"><span>前期比</span><span class="down">△0.9%</span></div>
+          <div class="service-row"><span>備考</span><span>ADSL終了（2026/1/31）</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>13,517 百万円</td>
+          <td>14,000 百万円</td>
+          <td class="up">＋3.6%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>1,791 百万円</td>
+          <td>1,800 百万円</td>
+          <td class="up">＋0.5%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>1,821 百万円</td>
+          <td>1,830 百万円</td>
+          <td class="up">＋0.5%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>1,293 百万円</td>
+          <td>1,300 百万円</td>
+          <td class="up">＋0.5%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>49.65 円</td>
+          <td>50.17 円</td>
+          <td class="up">＋1.0%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>来期見通しのポイント：</strong>ISP・VNE・manabaの各事業で増収を計画。費用面では回線仕入増・基幹システム更改による減価償却費増を見込む。設備投資は2,500百万円を予定（ネットワーク・サーバ領域）。FTTH接続サービスの料金体系一部見直しを2027年2月に実施予定。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">14,515<span class='data-sub'>百万円 △1.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">13,108<span class='data-sub'>百万円 ▲0.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">なし（無借金経営）</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">90.3<span class='data-sub'>%</span><span class='data-sub'>（前期88.5%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">505.90<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+1,914<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△2,239<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△1,361<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">2,474<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>投資CFは基幹システム更改に伴う無形固定資産取得1,851百万円が主因で前期比大幅拡大（前期△563百万円→△2,239百万円）。財務CFは自己株式取得701百万円・配当659百万円によるアウトフロー。期末現金は前期4,161百万円から2,474百万円へ大幅減少。財務基盤は自己資本比率90.3%と健全、無借金経営を継続。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">24.50<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 37.7%</div>
+      </div>
+      <div class="div-cell" style="background:var(--teal-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--teal-light);">25.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 50.4%　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">25.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 49.8%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">中間12円50銭・期末12円50銭の年間25円を維持。業績に応じた安定的な株主還元を方針とする。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度は中間12円50銭・期末12円50銭の計25円（前期24円50銭から増配）。2026年度も同額25円を予定。純利益が大幅に減少する中でも増配・維持を継続し、配当性向は50.4%と高水準。自己株式取得（701百万円）と合わせた総還元でも積極姿勢を維持している。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">コスト上昇リスク<br><small>基幹システム更改による減価償却費・委託費の継続増加。設備投資2,500百万円（来期予定）がCFを圧迫</small></div>
+      <div class="risk-item high">manaba競争激化<br><small>LMS市場のコモディティ化・二極化が進行。契約ID数・全学導入校数の緩やかな減少傾向が継続</small></div>
+      <div class="risk-item mid-level">ISP契約数の伸び鈍化<br><small>モバイル・ADSL終了による減少継続。法人退会増。FTTH料金改定による解約リスク</small></div>
+      <div class="risk-item mid-level">VNEトラフィック依存<br><small>提携事業者数10社で横ばい。トラフィック変動が収益に直結する従量課金モデルの脆弱性</small></div>
+      <div class="risk-item mid-level">現金・流動性の低下<br><small>期末現金が4,161百万円→2,474百万円と大幅減少。投資規模拡大に対する流動性管理が課題</small></div>
+      <div class="risk-item">通信インフラコスト<br><small>NTT東西の回線仕入コスト増。トラフィック増に対応する設備維持コストの継続増加リスク</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は売上高3.4%増と増収を確保した一方、基幹システム更改・プロモーション強化・原材料コスト上昇の影響で営業利益は△23.6%と大幅減益。前期の投資有価証券売却益剥落も純利益を圧迫した。VNE「v6コネクト」のトラフィック増収とFTTH契約数増加は底堅い事業基盤を示している。財務面では自己資本比率90.3%、無借金経営を維持しており盤石な健全性を誇る。来期（2027年3月期）は3事業での増収と利益回復（＋0.5%）を見込む。新経営体制のもと中長期的な成長軌道への回帰が焦点。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社朝日ネット（3834）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
