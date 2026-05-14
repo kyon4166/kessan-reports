@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三菱地所株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A2A4A;
+    --navy-light: #2E4E8A;
+    --navy-pale: #E8EDF8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F6FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,42,74,0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--navy); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--navy-light), #5B7DB5, var(--navy-light)); }
+  header::after { content: '不動産・都市開発'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 90px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5B7DB5; border: 1px solid #2E4E8A; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5B7DB5; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--navy-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--navy-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--navy-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--navy-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--navy-pale); border-left: 4px solid var(--navy-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--navy-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--navy); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--navy); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  footer { background: var(--navy); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E4E8A; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>三菱地所株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 8802</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月13日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">営業収益</div>
+      <div class="kpi-value">1,746,148<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 10.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">329,730<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 6.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属純利益</div>
+      <div class="kpi-value">222,507<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 17.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">181.80<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 151.04円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">執行役社長　中島 篤</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（6事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">コマーシャル不動産、丸の内、住宅、海外、投資マネジメント、設計監理・不動産サービス</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">新規1社（橋本デベロップメント特定目的会社）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）／連結　※IFRS適用は未定</span>
+      </div>
+    </div>
+    <div class="highlight">
+      大手町・丸の内・有楽町エリアを核に国内外で不動産開発・賃貸・販売・投資マネジメントを展開する総合不動産グループ。「長期経営計画2030」のもと毎期3円増配の累進配当を原則とし2030年で60円以上の配当を計画。丸の内オフィスの空室率は0.55%と極めて低水準を維持し、賃貸不動産の時価総額は9.5兆円規模に達する。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">営業収益</span>
+          <span class="data-val">1,746,148 <span class='data-sub'>百万円 ▲10.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業原価</span>
+          <span class="data-val">1,291,386 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">329,730 <span class='data-sub'>百万円 ▲6.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">273,086 <span class='data-sub'>百万円 ▲3.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属純利益</span>
+          <span class="data-val">222,507 <span class='data-sub'>百万円 ▲17.5%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 コマーシャル不動産・丸の内の安定的な賃貸収益増で増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏘 住宅事業は販売単価上昇で増益（57,287百万円、＋19.3%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 海外は英米アジアで物件売却増等により大幅増益（＋24.6%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 特別利益で投資有価証券売却益98,135百万円を計上</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 投資マネジメントは米国一過性フィー剥落で大幅減益（△88.0%）</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 営業収益・営業利益</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🏗 コマーシャル不動産事業</div>
+          <div class="segment-row"><span>営業収益</span><span>616,959 百万円</span></div>
+          <div class="segment-row"><span>営業利益</span><span>135,677 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">▲8.8%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏙 丸の内事業</div>
+          <div class="segment-row"><span>営業収益</span><span>408,996 百万円</span></div>
+          <div class="segment-row"><span>営業利益</span><span>97,534 百万円</span></div>
+          <div class="segment-row"><span>空室率</span><span>0.55%（極めて低水準）</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏠 住宅事業</div>
+          <div class="segment-row"><span>営業収益</span><span>453,881 百万円</span></div>
+          <div class="segment-row"><span>営業利益</span><span>57,287 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">▲19.3%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌏 海外事業</div>
+          <div class="segment-row"><span>営業収益</span><span>198,853 百万円</span></div>
+          <div class="segment-row"><span>営業利益</span><span>57,111 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">▲24.6%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">📊 投資マネジメント事業</div>
+          <div class="segment-row"><span>営業収益</span><span>37,000 百万円</span></div>
+          <div class="segment-row"><span>営業利益</span><span>1,435 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△88.0%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">📐 設計監理・不動産サービス事業</div>
+          <div class="segment-row"><span>営業収益</span><span>88,412 百万円</span></div>
+          <div class="segment-row"><span>営業利益</span><span>12,614 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">▲17.9%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）とセグメント別見通し</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>営業収益</td>
+          <td>1,746,148 百万円</td>
+          <td>2,000,000 百万円</td>
+          <td class="up">＋14.5%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>329,730 百万円</td>
+          <td>370,000 百万円</td>
+          <td class="up">＋12.2%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>273,086 百万円</td>
+          <td>295,000 百万円</td>
+          <td class="up">＋8.0%</td>
+        </tr>
+        <tr>
+          <td>親会社株主帰属純利益</td>
+          <td>222,507 百万円</td>
+          <td>235,000 百万円</td>
+          <td class="up">＋5.6%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>181.80 円</td>
+          <td>196.27 円</td>
+          <td class="up">＋8.0%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>来期見通しのポイント：</strong>営業収益は初の2兆円達成を見込む。丸の内・住宅・海外・投資マネジメントが増益予想。コマーシャル不動産は物件売却益減少により減益。後発事象として自己株式取得（上限500億円・最大2,000万株）と6,128,800株の消却を決議済み。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">8,566,247<span class='data-sub'>百万円 ▲7.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">2,877,585<span class='data-sub'>百万円 ▲5.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債</span>
+          <span class="data-val">3,610,907<span class='data-sub'>百万円 ▲8.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">31.4<span class='data-sub'>%</span><span class='data-sub'>（前期32.1%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">2,229.21<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+508,917<span class='data-sub'>百万円 ▲57.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△441,457<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△39,776<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">280,133<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>営業CFは税金等調整前純利益349,346百万円・減価償却費108,029百万円が牽引し大幅増（前期324,116百万円→508,917百万円）。投資CFは有形固定資産取得524,734百万円が主因で拡大（前期△361,505百万円→△441,457百万円）。賃貸不動産の期末時価は9.5兆円（帳簿価額4.5兆円）と保有資産の含み益が大きい。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">43.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 28.5%</div>
+      </div>
+      <div class="div-cell" style="background:var(--navy-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--navy-light);">46.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 25.3%　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">49.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 25.0%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">連結配当性向30%程度を目処に2030年まで毎期3円増配の累進配当を原則。2030年で原則60円以上を計画。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度は中間23円・期末23円の計46円（前期43円から3円増配）。2026年度は中間24円・期末25円の計49円を予定し累進増配方針を継続。「長期経営計画2030」のもと株主還元の予測可能性を高める姿勢を明示。後発事象として決議された自己株式取得（最大500億円）とあわせた総還元規模は大きい。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">有利子負債の増加<br><small>有利子負債3.6兆円へ拡大（前期3.3兆円）。支払利息55,125百万円。金利上昇局面での利払い増加リスク</small></div>
+      <div class="risk-item high">投資マネジメント収益変動<br><small>一過性フィー剥落で営業利益が11,950→1,435百万円と急減。来期65,000百万円への急回復を見込むが不確実性大</small></div>
+      <div class="risk-item high">海外不動産市況リスク<br><small>欧米・アジアに大規模保有。英米での物件売却益依存度が高く、市況変動の影響を受けやすい構造</small></div>
+      <div class="risk-item mid-level">大規模設備投資の継続<br><small>有形・無形固定資産増加額551,611百万円。丸の内再開発等の大型投資継続がCFと有利子負債を押し上げる</small></div>
+      <div class="risk-item mid-level">住宅市況の変動<br><small>分譲マンション販売戸数1,787→1,764戸に微減。単価上昇依存の増収構造が続く</small></div>
+      <div class="risk-item mid-level">自己資本比率の低下<br><small>自己資本比率32.1%→31.4%に低下。資産拡大ペースに対する資本充実が課題</small></div>
+      <div class="risk-item">地政学・為替リスク<br><small>米・欧・アジアの事業が為替変動の影響を受ける。為替換算調整勘定230,100百万円を計上</small></div>
+      <div class="risk-item">国内不動産市況リスク<br><small>丸の内空室率は現状0.55%と健全。金利上昇による不動産市況の反転リスクに注意が必要</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は営業収益が1.7兆円を突破し（＋10.5%）、営業利益・経常利益・純利益ともに大幅増益を達成。丸の内オフィスの空室率0.55%という逼迫した需給、住宅事業の販売単価上昇、海外での物件売却増が業績を牽引した。投資マネジメント事業は米国の一過性フィー剥落で急減したが来期の急回復を計画。来期は営業収益2兆円・営業利益3,700億円という強気な予想を掲げ、後発事象として大規模自己株式取得も決議。累進増配方針（3円増の49円予定）と合わせて株主還元に積極的な姿勢を堅持している。賃貸不動産の時価9.5兆円に象徴される潜在力は引き続き大きい。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は三菱地所株式会社（8802）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
