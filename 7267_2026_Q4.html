@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本田技研工業株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1A2A3C;
+    --blue-light: #C0392B;
+    --blue-pale: #FAF0EE;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,42,60,0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--blue); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--red), #E74C3C, var(--red)); }
+  header::after { content: '輸送機器・二輪四輪'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #E74C3C; border: 1px solid #C0392B; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #E74C3C; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--blue-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--red); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--red); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--red); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: #8B0000; }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--blue-pale); border-left: 4px solid var(--red); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.alert { background: #FFF3F3; border-left-color: #8B0000; }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--red); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--blue); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--blue); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  footer { background: var(--blue); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E3D50; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated</div>
+  <h1>本田技研工業株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 7267</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月14日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+    <div class="meta-item">会計基準 <span>IFRS</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上収益</div>
+      <div class="kpi-value">21,796,610<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 0.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業損失</div>
+      <div class="kpi-value">△414,346<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">赤字転落</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社帰属当期損失</div>
+      <div class="kpi-value">△423,941<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">赤字転落</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">△106.06<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 178.93円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">取締役 代表執行役社長　三部 敏宏</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（4事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">二輪事業、四輪事業、金融サービス事業、パワープロダクツ事業及びその他の事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">新規・除外ともになし（重要な変更なし）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS（2015年3月期より適用）　※国際的比較可能性の向上を目的</span>
+      </div>
+    </div>
+    <div class="highlight alert">
+      世界最大級の二輪・四輪メーカー。当期は<strong>EV（電気自動車）関連損失1兆4,536億円</strong>が業績を直撃し、営業・純損益ともに大幅な赤字転落。EV化戦略の見直しを余儀なくされる一方、二輪事業は堅調増益。金融サービス事業も安定推移し、来期の黒字回帰を見込む。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS・連結）</div>
+        <div class="data-row">
+          <span class="data-key">売上収益</span>
+          <span class="data-val">21,796,610 <span class='data-sub'>百万円 ▲0.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業費用合計</span>
+          <span class="data-val">22,210,956 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業損失</span>
+          <span class="data-val" style="color:var(--red);">△414,346 <span class='data-sub'>百万円（前期：1,213,486）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前損失</span>
+          <span class="data-val" style="color:var(--red);">△403,300 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社帰属当期損失</span>
+          <span class="data-val" style="color:var(--red);">△423,941 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">当期包括利益</span>
+          <span class="data-val">539,347 <span class='data-sub'>百万円 △29.6%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚗 四輪EV関連損失14,536億円が最大要因（減損・除却・引当金等）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏍️ 二輪事業は増収増益（売上：3.6兆円、営業利益：7,319億円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 為替換算の影響で売上は抑制、ただし包括利益には円安恩恵</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 持分法投資損失△1,621億円（前期：10億円の利益から急悪化）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 研究開発費1兆5,406億円（前期比40%増）がコストを押し上げ</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 営業利益（損失）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🏍️ 二輪事業</div>
+          <div class="segment-row"><span>売上収益（外部）</span><span>4,018,837 百万円</span></div>
+          <div class="segment-row"><span>営業利益</span><span>731,926 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">▲10.3%</span></div>
+        </div>
+        <div class="segment-item" style="border-top-color:#8B0000;">
+          <div class="segment-name">🚗 四輪事業</div>
+          <div class="segment-row"><span>売上収益（外部）</span><span>13,863,362 百万円</span></div>
+          <div class="segment-row"><span>営業損失</span><span style="color:var(--red);">△1,411,140 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">赤字転落（前期：2,439億円利益）</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏦 金融サービス事業</div>
+          <div class="segment-row"><span>売上収益（外部）</span><span>3,529,484 百万円</span></div>
+          <div class="segment-row"><span>営業利益</span><span>275,532 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△12.7%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">⚙️ パワープロダクツ事業及びその他</div>
+          <div class="segment-row"><span>売上収益（外部）</span><span>384,927 百万円</span></div>
+          <div class="segment-row"><span>営業損失</span><span style="color:var(--red);">△10,664 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">損失拡大（前期：△94億円）</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）と主要前提</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上収益</td>
+          <td>21,796,610 百万円</td>
+          <td>23,150,000 百万円</td>
+          <td class="up">▲6.2%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>△414,346 百万円</td>
+          <td>500,000 百万円</td>
+          <td class="up">黒字転換</td>
+        </tr>
+        <tr>
+          <td>税引前利益</td>
+          <td>△403,300 百万円</td>
+          <td>500,000 百万円</td>
+          <td class="up">黒字転換</td>
+        </tr>
+        <tr>
+          <td>親会社帰属当期利益</td>
+          <td>△423,941 百万円</td>
+          <td>260,000 百万円</td>
+          <td class="up">黒字転換</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>△106.06 円</td>
+          <td>66.79 円</td>
+          <td class="up">黒字転換</td>
+        </tr>
+      </table>
+      <div class="premise-grid">
+        <div class="premise-item"><span class="premise-key">為替レート（通期平均）</span><span class="premise-val">145円／ドル（前期：非開示）</span></div>
+        <div class="premise-item"><span class="premise-key">EV関連損失（来期想定）</span><span class="premise-val">△5,000億円（前期比▲9,536億円）</span></div>
+        <div class="premise-item"><span class="premise-key">関税影響（来期想定）</span><span class="premise-val">＋1,470億円（米国政策転換効果）</span></div>
+        <div class="premise-item"><span class="premise-key">為替影響（来期想定）</span><span class="premise-val">△1,420億円（円高シナリオ想定）</span></div>
+      </div>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>🔄 来期黒字回帰の根拠：</strong>前期に計上したEV関連損失（1兆4,536億円）の剥落が最大の押し上げ要因（＋9,143億円）。販売台数増加効果（＋2,667億円）も貢献。一方、売価・コスト影響（△3,130億円）・為替影響（△1,420億円）が逆風。来期EV損失も5,000億円残存予定。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">33,509,285<span class='data-sub'>百万円 ▲8.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">12,148,072<span class='data-sub'>百万円 △3.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社帰属持分</span>
+          <span class="data-val">11,817,512<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">35.3<span class='data-sub'>%</span><span class='data-sub'>（前期40.1%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり親会社所有者帰属持分</span>
+          <span class="data-val">3,035.91<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+1,135,261<span class='data-sub'>百万円 ▲約3.9倍</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△852,166<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△36,917<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">為替変動影響</span>
+          <span class="data-val" style="color:var(--green);">+343,504<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金及び現金同等物</span>
+          <span class="data-val">5,118,477<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>💡 キャッシュフロー：</strong>営業CFは前期292億円から大幅改善（＋8,431億円増）し1兆1,352億円に。これは部品・原材料の支払い減少や金融サービス債権の回収増加によるもの。投資CFは有形固定資産取得6,120億円が中心。自己株式取得（6,703億円）等で財務CFは小幅マイナス。現金残高は5.1兆円に積み上がり、財務余力は維持。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">68.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 38.0%</div>
+      </div>
+      <div class="div-cell" style="background:var(--blue-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--red);">70.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 —（赤字）　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">70.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 104.8%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">赤字決算においても増配を実施。来期も年間70円（中間・期末各35円）で維持予定。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度は中間・期末各35円の計70円に増配（前期68円から）。赤字転落の中でも配当を維持・増配する株主還元姿勢を堅持。来期（2027年3月期）も同額の70円を予定。ただし予想配当性向は104.8%と利益を上回る水準であり、来期の業績回帰が前提条件となる。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">EV戦略の抜本的見直し<br><small>EV関連損失1兆4,536億円（当期）。来期も5,000億円の損失残存。北米・中国EVモデルの開発・上市中止が相次ぐ</small></div>
+      <div class="risk-item high">四輪事業の収益悪化<br><small>四輪営業損失△1兆4,111億円。北米販売奨励金増加・競争激化が継続。EVから内燃機関へのピボットに時間とコストが必要</small></div>
+      <div class="risk-item high">持分法投資損失<br><small>前期10億円の利益から△1,621億円に急悪化。中国合弁への減損や北米共同開発EV補填費用が膨張</small></div>
+      <div class="risk-item mid-level">為替リスク<br><small>来期想定：145円/ドル。円高1円で△〜数十億円規模の影響。インフレ局面での購買コスト増も継続</small></div>
+      <div class="risk-item mid-level">米国関税政策リスク<br><small>米国政府の政策転換（化石燃料規制緩和・EV補助金見直し）が事業計画を根本から揺るがす</small></div>
+      <div class="risk-item mid-level">エアバッグインフレーター問題<br><small>市場措置継続中。引当金積み増しの可能性あり、財務インパクト見積もり困難</small></div>
+      <div class="risk-item">研究開発費の急増<br><small>当期1兆5,406億円（前期比40%増）。EV・ADAS投資が高水準で継続し短期的には収益を圧迫</small></div>
+      <div class="risk-item">自己資本比率の低下<br><small>親会社所有者帰属持分比率が40.1%→35.3%に低下。EV損失および自己株取得（6,703億円）が影響</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は、EV関連損失1兆4,536億円という想定外の大型損失により営業・純損益ともに赤字転落となった。これは北米・中国のEV商品計画見直しに伴う有形固定資産・無形資産の減損（5,214億円）、開発資産除却（3,314億円）、EV関連引当金積み増し（6,674億円）が複合したもの。一方、二輪事業は増収増益で堅調、金融サービスも安定しており、本業の基礎力は健在。売上収益は前期比0.5%増と微増を維持した。来期（2027年3月期）はEV損失が5,000億円に縮小し黒字回帰（営業利益5,000億円、純利益2,600億円）を予想。配当は赤字でも70円を維持・増配し、株主還元への姿勢は揺るがない。EV戦略の再設計と四輪収益の回復が当面の最大課題となる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は本田技研工業株式会社（7267）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
