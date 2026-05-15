@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ＣＤＳ株式会社 2026年12月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1A3A5C;
+    --blue-light: #2E6DA4;
+    --blue-pale: #E8F0F8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,58,92,0.18);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--blue); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue-light), #5B9BD5, var(--blue-light)); }
+  header::after { content: 'ソリューション'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5B9BD5; border: 1px solid #2E6DA4; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5B9BD5; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--blue-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--blue-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--blue-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--blue-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--blue-pale); border-left: 4px solid var(--blue-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--blue-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--blue); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--blue); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .bs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .bs-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .bs-key { color: var(--mid); }
+  .bs-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  footer { background: var(--blue); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E6DA4; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .bs-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Quarterly Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>ＣＤＳ株式会社</h1>
+  <p class="subtitle">2026年12月期　第1四半期決算短信（連結）要約　／　証券コード 2169</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月13日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>名古屋証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">2,103<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 19.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">172<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 48.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">四半期純利益</div>
+      <div class="kpi-value">118<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 47.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">17.33<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前年同期 32.96円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　芝崎 雄太</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（3事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">技術情報ソリューション事業、FAロボットソリューション事業、デジタルソリューション事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">該当事項なし</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）／連結</span>
+      </div>
+    </div>
+    <div class="highlight">
+      自動車業界を主要顧客に、産業機器・医療機器・情報機器・教育関連等幅広い業界へ技術情報・FAロボット・デジタルの3事業でソリューションを提供。当第1四半期は、技術情報・FAロボット事業が増益を確保した一方、主要顧客の投資抑制を直撃したデジタルソリューション事業の大幅減収が連結業績を押し下げた。米国の関税政策・地政学リスク・円安継続が引き続き先行き不透明感を高める環境。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当四半期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（累計・千円単位）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">2,103,995 <span class='data-sub'>千円 △19.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">635,491 <span class='data-sub'>千円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">販管費</span>
+          <span class="data-val">463,044 <span class='data-sub'>千円 △1.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">172,446 <span class='data-sub'>千円 △48.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">176,260 <span class='data-sub'>千円 △47.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期純利益</span>
+          <span class="data-val">118,221 <span class='data-sub'>千円 △47.4%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 デジタルソリューション事業が主要顧客の投資抑制・経費削減の影響で売上△36.6%と急減</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🤖 FAロボットソリューション事業は販管費削減で増益（営業利益＋7.6%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📋 技術情報ソリューション事業は作業効率向上が奏功し営業利益＋8.4%</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 営業外収益は受取利息増加（1,930千円→4,851千円）により改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌐 米国関税政策・地政学リスク・円安継続で自動車市場の先行き不透明感継続</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 業績（当第1四半期累計・千円）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">📋 技術情報ソリューション事業</div>
+          <div class="segment-row"><span>外部売上高</span><span>937,594 千円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>257,498 千円</span></div>
+          <div class="segment-row"><span>前年同期比（売上）</span><span class="up">＋0.1%</span></div>
+          <div class="segment-row"><span>前年同期比（利益）</span><span class="up">＋8.4%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🤖 FAロボットソリューション事業</div>
+          <div class="segment-row"><span>外部売上高</span><span>264,368 千円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>20,129 千円</span></div>
+          <div class="segment-row"><span>前年同期比（売上）</span><span class="up">＋0.5%</span></div>
+          <div class="segment-row"><span>前年同期比（利益）</span><span class="up">＋7.6%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">💻 デジタルソリューション事業</div>
+          <div class="segment-row"><span>外部売上高</span><span>902,032 千円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>82,706 千円</span></div>
+          <div class="segment-row"><span>前年同期比（売上）</span><span class="down">△36.6%</span></div>
+          <div class="segment-row"><span>前年同期比（利益）</span><span class="down">△69.4%</span></div>
+        </div>
+        <div class="segment-item" style="border-top-color:var(--mid);">
+          <div class="segment-name" style="color:var(--mid);">連結合計（調整後）</div>
+          <div class="segment-row"><span>売上高合計</span><span>2,103,995 千円</span></div>
+          <div class="segment-row"><span>営業利益合計</span><span>172,446 千円</span></div>
+          <div class="segment-row"><span>全社費用（調整額）</span><span>△190,786 千円</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 通期・第2四半期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期・第2四半期累計 業績予想（2026年12月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>Q1実績</th>
+          <th>第2四半期累計（予）</th>
+          <th>通期予想</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>2,103 百万円</td>
+          <td>4,334 百万円</td>
+          <td>9,451 百万円</td>
+        </tr>
+        <tr>
+          <td>前期比（通期基準）</td>
+          <td>△19.7%</td>
+          <td class="up">＋6.9%</td>
+          <td class="up">＋7.1%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>172 百万円</td>
+          <td>372 百万円</td>
+          <td>993 百万円</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>176 百万円</td>
+          <td>371 百万円</td>
+          <td>992 百万円</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>118 百万円</td>
+          <td>245 百万円</td>
+          <td>663 百万円</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>17.33 円</td>
+          <td>35.92 円</td>
+          <td>97.21 円</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📌 業績予想の変更なし：</strong>2026年2月13日公表の第2四半期累計・通期業績予想に変更はなし。Q1は主にデジタルソリューション事業の急減速が響いた一方、通期では売上高＋7.1%・営業利益＋44.9%の大幅増益回復を見込む。下期への挽回に期待がかかる構図。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（千円）</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">10,970,473<span class='data-sub'>千円 ＋3.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">8,819,997<span class='data-sub'>千円 △0.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">2,150,476<span class='data-sub'>千円 ＋25.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">80.4<span class='data-sub'>%</span><span class='data-sub'>（前期末83.9%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,293.32<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">主要科目の変動要因</div>
+        <div class="data-row">
+          <span class="data-key">現金及び預金</span>
+          <span class="data-val" style="color:var(--green);">4,744,836<span class='data-sub'>千円 ＋126百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売掛金・契約資産</span>
+          <span class="data-val">2,086,201<span class='data-sub'>千円 ＋275百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">短期借入金</span>
+          <span class="data-val" style="color:var(--red);">500,000<span class='data-sub'>千円 ＋230百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">賞与引当金</span>
+          <span class="data-val">443,713<span class='data-sub'>千円 ＋263百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資有価証券等</span>
+          <span class="data-val" style="color:var(--green);">786,615<span class='data-sub'>千円 ＋142百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ 財政状態：</strong>総資産は前期末比369百万円増の10,970百万円。賞与引当金計上・短期借入金増加で負債は442百万円増加した一方、配当252百万円支払による利益剰余金減少で純資産はわずかに減少。自己資本比率は83.9%→80.4%へ低下したが、引き続き高水準を維持。CFは第1四半期は作成不要（注記開示のみ）で、減価償却費35,766千円・のれん償却4,222千円を計上。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/12期 中間</div>
+        <div class="div-cell-val">37.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">実績</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2025/12期 期末</div>
+        <div class="div-cell-val">37.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">年間合計 74.00円</div>
+      </div>
+      <div class="div-cell" style="background:var(--blue-pale);">
+        <div class="div-cell-label">2026/12期 中間（予）</div>
+        <div class="div-cell-val" style="color:var(--blue-light);">37.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">予想（変更なし）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2026/12期 年間（予）</div>
+        <div class="div-cell-val">74.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">前期と同額維持</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2026年12月期の配当予想は前期と同額の年間74円（中間37円・期末37円）を維持。配当性向は通期EPS予想97.21円に対して約76.1%（予）。Q1業績が大幅減収減益となる中でも、配当予想の変更はなく株主還元方針を堅持。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">主要顧客（自動車業界）の投資抑制<br><small>米国関税政策・地政学リスクを背景にデジタルソリューション事業の売上が△36.6%と急減。回復時期が不透明</small></div>
+      <div class="risk-item high">米国関税政策・地政学リスク<br><small>ウクライナ情勢長期化・中東情勢悪化・米イスラエルのイラン攻撃等により、取引先の設備投資判断が停滞</small></div>
+      <div class="risk-item high">デジタルソリューション事業の収益回復<br><small>Q1は営業利益△69.4%と急落。通期予想達成には下期への大幅な挽回が不可欠</small></div>
+      <div class="risk-item mid-level">円安の継続<br><small>円安は輸入コスト上昇要因となり、取引先の経費削減意欲を高める可能性</small></div>
+      <div class="risk-item mid-level">原油・石油製品の価格高騰<br><small>エネルギーコスト上昇が取引先のコスト構造を悪化させ、IT投資削減に連鎖するリスク</small></div>
+      <div class="risk-item">短期借入金の増加<br><small>270百万円→500百万円へ増加。賞与引当金の積み増しと合わせ、流動負債全体が拡大中</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年12月期第1四半期は、売上高2,103百万円（前年同期比△19.7%）・営業利益172百万円（同△48.4%）と大幅な減収減益。主因はデジタルソリューション事業の急減速で、自動車業界を中心とした主要顧客の投資抑制・経費削減の影響を直接受けた。一方、技術情報ソリューション・FAロボットソリューション両事業は微増収ながら増益を確保し、事業の底堅さを示した。財務体力は引き続き高く、自己資本比率80.4%・現金及び預金47億円超と健全。通期予想は変更なく、売上高9,451百万円（＋7.1%）・営業利益993百万円（＋44.9%）の大幅回復を見込んでいるが、下期での急速な挽回が前提となっており、デジタルソリューション事業の受注動向が通期業績を左右する最大の注目点。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はＣＤＳ株式会社（2169）2026年12月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
