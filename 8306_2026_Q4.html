@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社三菱UFJフィナンシャル・グループ 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crimson: #7B1A1A;
+    --crimson-mid: #A03030;
+    --crimson-pale: #F7EDED;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F4F2;
+    --white: #FFFFFF;
+    --red: #B22020;
+    --green: #1A6E3E;
+    --accent: #9B3A3A;
+    --gold: #8A6E28;
+    --border: rgba(123,26,26,0.14);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--crimson); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--crimson-mid), #D47070, var(--crimson-mid)); }
+  header::after { content: '金融・銀行業'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 96px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #D47070; border: 1px solid #A03030; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #D47070; font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--crimson-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--crimson-mid); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--crimson-mid); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .highlight { background: var(--crimson-pale); border-left: 4px solid var(--crimson-mid); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--crimson-mid); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--crimson); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+
+  .forecast-note { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 20px 28px; margin-bottom: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.8; }
+  .forecast-note .note-title { font-size: 11px; letter-spacing: 0.1em; color: var(--gold); font-weight: 500; margin-bottom: 10px; }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--crimson-mid); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #C07030; }
+
+  .pl-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .pl-table th { background: var(--crimson); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .pl-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .pl-table td:first-child { text-align: left; color: var(--mid); }
+  .pl-table tr:last-child td { border-bottom: none; }
+  .pl-table .subtotal td { background: #FAF5F5; font-weight: 500; }
+
+  .bs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .cf-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 12px; }
+  .cf-cell { background: var(--white); padding: 16px 14px; text-align: center; }
+  .cf-cell-label { font-size: 10px; color: var(--mid); letter-spacing: 0.06em; margin-bottom: 6px; }
+  .cf-cell-val { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--dark); }
+  .cf-cell-sub { font-size: 10px; color: var(--mid); margin-top: 3px; }
+  .positive { color: var(--green); }
+  .negative { color: var(--red); }
+
+  footer { background: var(--crimson); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #A03030; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col, .bs-grid { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row, .cf-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Full Year</div>
+  <h1>株式会社三菱UFJフィナンシャル・グループ</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 8306</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月15日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所・名古屋証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">経常収益</div>
+      <div class="kpi-value">14,620,843<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋7.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">3,410,192<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋27.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益（親会社株主）</div>
+      <div class="kpi-value">2,427,229<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋30.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">213.17<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 160.02円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・基本情報</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表執行役社長　半沢 淳一</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">銀行業・信託銀行業・証券業・クレジットカード・貸金業等の金融サービス業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（主要7部門）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">リテール・デジタル、法人・WM、コーポレートバンキング、グローバルCB、受託財産、グローバルCIB、市場事業本部</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結子会社数 / 持分法適用会社数</span>
+        <span class="data-val">345社<span class="data-sub">/ 55社</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）／将来のIFRS適用に向け検討中</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ROE（自己資本当期純利益率）</span>
+        <span class="data-val">11.3<span class="data-sub">%（前期 9.3%）</span></span>
+      </div>
+    </div>
+    <div class="highlight">
+      国内最大規模の金融グループとして銀行・信託・証券等の総合金融サービスを展開。2026年3月期は円金利上昇の恩恵取り込み、海外買収案件の収益貢献、Morgan Stanleyの業績好調（持分法益8,455億円）が重なり、経常利益・純利益ともに過去最高水準を更新。連結業務粗利益は前期比1兆1,251億円増収の5兆9,444億円に達した。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+
+    <!-- 損益サマリー -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">損益サマリー（銀行業会計ベース：億円）</div>
+      <table class="pl-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度（当期）</th>
+          <th>2024年度（前期）</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>連結業務粗利益（信託勘定償却前）</td>
+          <td>59,444億円</td>
+          <td>48,193億円</td>
+          <td class="up">＋11,251</td>
+        </tr>
+        <tr>
+          <td>営業費</td>
+          <td>35,672億円</td>
+          <td>32,281億円</td>
+          <td class="down">△3,391</td>
+        </tr>
+        <tr class="subtotal">
+          <td>連結業務純益（一般貸倒引当金繰入前）</td>
+          <td>23,772億円</td>
+          <td>15,911億円</td>
+          <td class="up">＋7,860</td>
+        </tr>
+        <tr>
+          <td>与信関係費用総額</td>
+          <td>△3,558億円</td>
+          <td>△1,087億円</td>
+          <td class="down">△2,471</td>
+        </tr>
+        <tr>
+          <td>株式等関係損益</td>
+          <td>4,860億円</td>
+          <td>5,925億円</td>
+          <td class="down">△1,065</td>
+        </tr>
+        <tr>
+          <td>持分法による投資損益（Morgan Stanley等）</td>
+          <td>8,455億円</td>
+          <td>5,969億円</td>
+          <td class="up">＋2,485</td>
+        </tr>
+        <tr class="subtotal">
+          <td>経常利益</td>
+          <td>34,101億円</td>
+          <td>26,694億円</td>
+          <td class="up">＋7,407</td>
+        </tr>
+        <tr class="subtotal">
+          <td>親会社株主に帰属する当期純利益</td>
+          <td>24,272億円</td>
+          <td>18,629億円</td>
+          <td class="up">＋5,642</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 円金利上昇の取り込みと利ざや改善→資金利益が大幅増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 海外買収案件の収益貢献＋国内外手数料収入増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 Morgan Stanleyの業績好調→持分法益8,455億円（＋2,485億）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔄 前期の債券ポートフォリオ組替え売却損の反動→その他業務利益増</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益・抑制要因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💳 与信関係費用が前期比2,471億円増（海外大口戻入の剥落）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 政策保有株式大口売却益の剥落→株式等関係損益△1,065億</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💼 海外買収・成長投資・インフレ影響→営業費3,391億円増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚙ システム統合関連費用 △310億円（新規計上）</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-top:0; margin-bottom:16px;">
+      <div class="card-title">セグメント別 粗利益・営業純益（顧客部門）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🏘 リテール・デジタル事業本部</div>
+          <div class="segment-row"><span>粗利益</span><span>1,064,642 百万円</span></div>
+          <div class="segment-row"><span>営業純益</span><span>285,880 百万円</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🤝 法人・ウェルスマネジメント事業本部</div>
+          <div class="segment-row"><span>粗利益</span><span>866,902 百万円</span></div>
+          <div class="segment-row"><span>営業純益</span><span>407,977 百万円</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏢 コーポレートバンキング事業本部</div>
+          <div class="segment-row"><span>粗利益</span><span>1,125,924 百万円</span></div>
+          <div class="segment-row"><span>営業純益</span><span>706,964 百万円</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌐 グローバルCB事業本部</div>
+          <div class="segment-row"><span>粗利益</span><span>904,227 百万円</span></div>
+          <div class="segment-row"><span>営業純益</span><span>387,559 百万円</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏛 受託財産事業本部</div>
+          <div class="segment-row"><span>粗利益</span><span>621,834 百万円</span></div>
+          <div class="segment-row"><span>営業純益</span><span>152,483 百万円</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">💹 グローバルCIB事業本部</div>
+          <div class="segment-row"><span>粗利益</span><span>1,081,474 百万円</span></div>
+          <div class="segment-row"><span>営業純益</span><span>580,310 百万円</span></div>
+        </div>
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>顧客部門合計：</strong>粗利益5兆6,650億円、営業純益2兆5,211億円。市場事業本部（△354億）・その他（△1,203億）を含む全セグメント合計の営業純益は2兆3,653億円。コーポレートバンキングとグローバルCIBが高収益を牽引。
+      </div>
+    </div>
+
+    <!-- 来期目標 -->
+    <div class="forecast-note">
+      <div class="note-title">📌 2027年3月期の業績目標（業績予想に代えて目標値を開示）</div>
+      当社グループは、銀行業・信託銀行業・証券業等の金融サービス業に存する多様な不確実性を踏まえ、業績予想に代えて<strong>「親会社株主に帰属する当期純利益 2兆7,000億円」</strong>を目標値として開示しております。当期実績2兆4,272億円から約11%の増益目標。来期配当予想は年間96円（中間48円＋期末48円）。
+    </div>
+  </section>
+
+  <!-- 03 財政状態・CF -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="bs-grid">
+      <div class="card">
+        <div class="card-title">バランスシート（2026年3月31日）</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">431兆7,315億<span class='data-sub'>円 ＋4.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">貸出金</span>
+          <span class="data-val">133兆7,994億<span class='data-sub'>円 ＋10.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有価証券</span>
+          <span class="data-val">85兆7,147億<span class='data-sub'>円 △0.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">預金</span>
+          <span class="data-val">239兆4,392億<span class='data-sub'>円 ＋4.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">23兆7,441億<span class='data-sub'>円 ＋9.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率（J-GAAP）</span>
+          <span class="data-val">5.2<span class='data-sub'>%（前期 5.0%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,973.31<span class='data-sub'>円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">CET1比率（速報・国際統一基準）</span>
+          <span class="data-val">12.47<span class='data-sub'>%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー（2025年度）</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--red);">△23兆641億<span class='data-sub'>円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--green);">＋4兆4,739億<span class='data-sub'>円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△1兆1,498億<span class='data-sub'>円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金残高</span>
+          <span class="data-val">90兆451億<span class='data-sub'>円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">前期末現金残高</span>
+          <span class="data-val" style="font-size:14px;">109兆954億<span class='data-sub'>円（△19兆円）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ 営業CFの注意点：</strong>営業CFが△23兆円の大幅マイナスとなっているが、これは銀行業特有の項目（為替差益△3.3兆円、貸出金純増△11.2兆円、特定取引資産純増△13.5兆円等）の影響によるもので、事業上の資金繰りに問題はない。投資CFが＋4.5兆円のプラスなのは有価証券売却収入（7.4兆円）が取得支出（10.8兆円）を大きく相殺したため。財務CFの主要項目は配当金支払い△8,484億円と自己株式取得△5,002億円。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3期　年間</div>
+        <div class="div-cell-val">64.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 40.0%</div>
+      </div>
+      <div class="div-cell" style="background:var(--crimson-pale);">
+        <div class="div-cell-label">2026/3期　年間（実績）</div>
+        <div class="div-cell-val" style="color:var(--crimson-mid);">86.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 40.3%　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3期（予想）</div>
+        <div class="div-cell-val">96.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 40.1%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:12px;line-height:1.5;">配当性向40%程度を目安に維持・増配。自己株式取得も積極的に実施。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2026年3月期の年間配当は86円（中間35円＋期末51円）、前期64円から34.4%増配。来期は中間・期末各48円の計96円を予定し、3期連続増配を継続。配当金総額9,760億円。なお当期は自己株式5,001億円を取得（前期4,186億円）しており、総還元性向は高水準を維持。
+    </div>
+  </section>
+
+  <!-- 05 主要リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・留意事項</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">与信関係費用の増加<br><small>前期比2,471億円増の3,558億円。前期の海外大口戻入の剥落＋個別引当増。来期以降も増加傾向に注意</small></div>
+      <div class="risk-item high">金利・市場リスク<br><small>金利スワップのヘッジ残高54.5兆円超。円金利上昇は収益にプラスも、急激な変動時はリスクあり</small></div>
+      <div class="risk-item high">地政学リスク・貸倒引当<br><small>中東情勢等の不確実性を踏まえ追加予想損失243億円を計上。実勢変化で来期引当増減の可能性</small></div>
+      <div class="risk-item mid-level">来期業績目標の不確実性<br><small>2027/3期純利益2.7兆円目標。業績予想でなく目標値の開示であり、達成保証はない</small></div>
+      <div class="risk-item mid-level">後発事象：Shriram Finance出資<br><small>2026年4月、インドのリテールノンバンク株式20%を7,069億円で取得。持分法適用関連会社に</small></div>
+      <div class="risk-item mid-level">CET1比率の低下<br><small>12.47%（速報）と前期比△1.71%。リスクアセット増加（133兆円）が主因。規制水準は維持</small></div>
+      <div class="risk-item">Morgan Stanley依存リスク<br><small>持分法益8,455億円の大部分がMorgan Stanley由来。同社業績変動が連結収益に直結</small></div>
+      <div class="risk-item">コスト増圧力<br><small>海外買収・システム統合費用・インフレにより営業費が前期比3,391億円増。効率化が課題</small></div>
+      <div class="risk-item">IFRS移行リスク<br><small>将来のIFRS適用に向けたインフラ整備中。移行時期・影響額は未確定</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ee;">
+      2026年3月期は経常収益14.6兆円（＋7.3%）、経常利益3.4兆円（＋27.7%）、純利益2.4兆円（＋30.3%）と大幅増収増益を達成し、過去最高水準を更新した。円金利上昇の恩恵・海外買収の収益貢献・Morgan Stanleyの好業績という3つの追い風が重なり、連結業務粗利益は前期比1兆円超の増収となった。総資産は431兆円超と邦銀最大。財務体質も純資産23兆円（＋9.3%）、ROE11.3%と改善が続く。来期純利益目標2.7兆円は達成可能な水準にあり、年間96円への増配計画・大規模自己株式取得とあわせ、株主還元姿勢は鮮明である。インドShriram Finance出資（7,069億円）に象徴されるアジア新興国市場への積極展開も、中長期的な成長ドライバーとして注目される。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社三菱UFJフィナンシャル・グループ（8306）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
