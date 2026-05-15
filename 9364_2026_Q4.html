@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社上組 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1A3A5C;
+    --blue-light: #2E6DA4;
+    --blue-pale: #E8F0F8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,58,92,0.18);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--blue); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue-light), #5B9BD5, var(--blue-light)); }
+  header::after { content: '港湾・物流'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5B9BD5; border: 1px solid #2E6DA4; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5B9BD5; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--blue-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--blue-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--blue-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--blue-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--blue-pale); border-left: 4px solid var(--blue-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--blue-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--blue); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--blue); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  footer { background: var(--blue); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E6DA4; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>株式会社 上組</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 9364</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月14日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">営業収益</div>
+      <div class="kpi-value">294,758<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 5.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">36,544<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 10.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">31,262<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 16.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">311.26<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 257.88円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　田原 典人</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（2事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">物流事業、その他事業（重量・建設、不動産賃貸 等）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">新規4社（SAURASHTRA FREIGHT PVT.LTD. およびその子会社3社）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用は国内外情勢を勘案のうえ対応方針を検討</span>
+      </div>
+    </div>
+    <div class="highlight">
+      神戸を拠点に港湾運送・倉庫・国内外運送・重量建設など幅広い物流サービスを展開する総合物流グループ。今期を初年度とする「中期経営計画2030」に基づき、インドへの海外展開（SAURASHTRA FREIGHT 連結子会社化）および日本ポート産業の完全子会社化を実現。「長期ビジョン2035」の目標達成に向け順調に進捗。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">営業収益</span>
+          <span class="data-val">294,758 <span class='data-sub'>百万円 ▲5.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業原価</span>
+          <span class="data-val">232,627 <span class='data-sub'>百万円 ▲4.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">36,544 <span class='data-sub'>百万円 ▲10.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">40,685 <span class='data-sub'>百万円 ▲11.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">31,262 <span class='data-sub'>百万円 ▲16.1%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚢 港湾運送・倉庫・国内運送の取扱量増加が増収を牽引（物流事業＋7.4%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 SAURASHTRA FREIGHT 連結化で国際運送が大幅増収（＋28.9%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 賃貸不動産・政策保有株式売却益が純利益を押し上げ（特別利益 6,096百万円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚖️ 給料手当の増加（14,281百万円、前期12,608百万円）がコスト増要因</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 その他事業は重量貨物・新車整備・燃料販売の減少で△4.5%減収</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 業績（当期）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🚢 物流事業</div>
+          <div class="segment-row"><span>外部顧客営業収益</span><span>260,849 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>31,536 百万円</span></div>
+          <div class="segment-row"><span>前期比（収益）</span><span class="up">＋7.4%</span></div>
+          <div class="segment-row"><span>前期比（利益）</span><span class="up">＋9.9%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏗️ その他事業</div>
+          <div class="segment-row"><span>外部顧客営業収益</span><span>33,908 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>4,978 百万円</span></div>
+          <div class="segment-row"><span>前期比（収益）</span><span class="down">△4.5%</span></div>
+          <div class="segment-row"><span>前期比（利益）</span><span class="up">＋13.6%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 物流事業 内訳 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">物流事業 サービス別 営業収益内訳</div>
+      <div class="segment-grid">
+        <div class="segment-item" style="border-top-color:#4A90D9;">
+          <div class="segment-name">⚓ 港湾運送</div>
+          <div class="segment-row"><span>当期収益</span><span>139,151 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋6.5%</span></div>
+        </div>
+        <div class="segment-item" style="border-top-color:#4A90D9;">
+          <div class="segment-name">🏬 倉庫</div>
+          <div class="segment-row"><span>当期収益</span><span>41,162 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋5.1%</span></div>
+        </div>
+        <div class="segment-item" style="border-top-color:#4A90D9;">
+          <div class="segment-name">🚚 国内運送</div>
+          <div class="segment-row"><span>当期収益</span><span>35,330 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋10.3%</span></div>
+        </div>
+        <div class="segment-item" style="border-top-color:#4A90D9;">
+          <div class="segment-name">✈️ 国際運送</div>
+          <div class="segment-row"><span>当期収益</span><span>14,315 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋28.9%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>営業収益</td>
+          <td>294,758 百万円</td>
+          <td>305,000 百万円</td>
+          <td class="up">＋3.5%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>36,544 百万円</td>
+          <td>34,300 百万円</td>
+          <td class="down">△6.1%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>40,685 百万円</td>
+          <td>37,500 百万円</td>
+          <td class="down">△7.8%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>31,262 百万円</td>
+          <td>27,340 百万円</td>
+          <td class="down">△12.5%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>311.26 円</td>
+          <td>276.94 円</td>
+          <td class="down">△11.0%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>⚠ 来期減益の主因：</strong>原油等資源価格高騰によるコスト上昇の常態化、物価高に伴う諸経費増加、人口減少を見据えた戦略投資コストが重なる見通し。今期の特別利益（賃貸不動産・株式売却益等）の反動減も純利益圧迫要因。中期経営計画2030の財務目標（2030年3月期：営業収益3,500億円、営業利益380億円）は当初計画どおり進捗の見通し。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">538,407<span class='data-sub'>百万円 ▲9.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">397,859<span class='data-sub'>百万円 ▲3.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債</span>
+          <span class="data-val">70,591<span class='data-sub'>百万円（長短借入金合計）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">73.5<span class='data-sub'>%</span><span class='data-sub'>（前期78.0%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">4,006.48<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+35,717<span class='data-sub'>百万円 △11.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△60,608<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△1,613<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF</span>
+          <span class="data-val" style="color:var(--red);">△24,891<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">69,189<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>投資CFは定期預金純増200億円・SAURASHTRA FREIGHT取得193億円・関係会社株式取得192億円等が重なり606億円の支出と大幅拡大。財務CFは長期借入300億円を実行した一方、配当172億円・自己株取得130億円で16億円のわずかな純支出。自己資本比率は前期78.0%→73.5%へ低下（のれん・投資有価証券の増加が主因）。時価ベース自己資本比率は100.0%と株式価値が高水準。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">130.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 50.4%</div>
+      </div>
+      <div class="div-cell" style="background:var(--blue-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--blue-light);">205.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 65.9%　大幅増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">205.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 74.0%（予）維持</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">配当性向・純資産配当率を重視した安定的な株主還元を継続。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度は中間90円・期末115円の計205円に大幅増配（前期130円から57.7%増）。内訳：2025年6月定時株主総会で1株80円（期末）、2025年11月取締役会で中間90円を決議。2026年度も中間100円・期末105円の計205円を維持予想。来期減益見通しの中でも高水準配当を継続する姿勢を明示。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">資源価格高騰・コスト増<br><small>原油をはじめとした資源価格上昇がコスト増の常態化を招き、来期の収益を構造的に圧迫</small></div>
+      <div class="risk-item high">投資CF拡大・流動性低下<br><small>SAURASHTRA取得・定期預金増等でフリーCFが△249億円に転落。現金残高は9,552百万円減少</small></div>
+      <div class="risk-item high">自己資本比率低下<br><small>78.0%→73.5%に低下。のれん（110億円）発生・借入増が財務健全性の目視低下につながる</small></div>
+      <div class="risk-item mid-level">地政学・通商政策リスク<br><small>米国の通商政策・中東情勢が輸出入貨物取扱量や国際物流に影響するリスク継続</small></div>
+      <div class="risk-item mid-level">物流需要の変動<br><small>輸出入貨物取扱量はおおむね横ばい。景気停滞・物価高による企業活動縮小が貨物量に波及するリスク</small></div>
+      <div class="risk-item mid-level">人口減少・労働力不足<br><small>長期的な人口減少による貨物需要の構造的縮小、ドライバー不足など物流業界共通の課題</small></div>
+      <div class="risk-item">高配当性向の持続可能性<br><small>65.9%の高配当性向を維持。来期減益局面での200円維持は配当支払い負担となりうる</small></div>
+      <div class="risk-item">海外子会社管理リスク<br><small>インド・マレーシア・中国等の在外連結子会社における現地規制・為替・信用リスク</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は増収増益で着地。港湾運送・倉庫・国内運送のコア物流事業が堅調に拡大し、海外展開（インド・SAURASHTRA FREIGHT 連結化）と国内子会社強化（日本ポート産業完全子会社化）を同時達成するなど、中期経営計画2030の初年度として好スタートを切った。特別利益（賃貸不動産・政策保有株式売却）も加わり純利益は16.1%増と良好。一方、投資CFが606億円の大幅支出となり期末現金は減少。来期（2027年3月期）はコスト増・特別利益剥落により営業利益△6.1%・純利益△12.5%の減益予想ながら、配当は205円を維持予定。自己資本比率73.5%と財務体力は依然高水準であり、長期ビジョン2035（営業収益3,500億円）に向けた積極的な成長投資フェーズに入っている。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社上組（9364）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
