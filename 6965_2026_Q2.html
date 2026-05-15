@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>浜松ホトニクス株式会社 2026年9月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #0E4A5A;
+    --teal-light: #1A7A8A;
+    --teal-pale: #E4F3F6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F4F8F9;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(14,74,90,0.16);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--teal); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--teal-light), #5BB8C8, var(--teal-light)); }
+  header::after { content: '光技術・精密機器'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5BB8C8; border: 1px solid #1A7A8A; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5BB8C8; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--teal-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--teal-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--teal-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--teal-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--teal-pale); border-left: 4px solid var(--teal-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--teal-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--teal); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--teal); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  footer { background: var(--teal); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #1A7A8A; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2</div>
+  <h1>浜松ホトニクス株式会社</h1>
+  <p class="subtitle">2026年9月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 6965</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月14日</span></div>
+    <div class="meta-item">対象期間 <span>2025年10月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高（中間累計）</div>
+      <div class="kpi-value">112,496<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋5.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">10,023<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 7.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">中間純利益</div>
+      <div class="kpi-value">9,224<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 7.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">31.30<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 32.95円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　社長執行役員　丸野 正</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（4事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">電子管事業、光半導体事業、画像計測機器事業、レーザ事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の重要な変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">無</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）／連結　※第2四半期（中間期）決算短信</span>
+      </div>
+    </div>
+    <div class="highlight">
+      光・光電子技術を軸とした精密機器メーカー。生成AI向け半導体製造・検査装置向け需要の拡大が電子管・光半導体事業を牽引。一方、レーザ事業は顕微鏡向け需要減少等で赤字転落。物価上昇・地政学的リスクが続く不透明な環境の中でも売上は増収を確保。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当中間期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間累計）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">112,496 <span class='data-sub'>百万円 ＋5.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">54,256 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">販管費</span>
+          <span class="data-val">44,233 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">10,023 <span class='data-sub'>百万円 △7.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">12,484 <span class='data-sub'>百万円 ＋2.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間純利益（親会社株主帰属）</span>
+          <span class="data-val">9,224 <span class='data-sub'>百万円 △7.2%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💡 生成AI需要拡大で半導体製造・検査装置向け光電子増倍管・イメージセンサが伸長</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 画像計測機器：欧米での病理デジタルスライドスキャナ需要が堅調に拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠️ レーザ事業：顕微鏡向けレーザ減少で営業損失△3,475百万円（前期△1,371百万円）に拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 為替差益1,032百万円（前期461百万円）で経常利益は増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前期の特別利益（負ののれん発生益942百万円・補助金1,970百万円）剥落で純利益圧迫</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 業績（中間累計）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🔬 電子管事業</div>
+          <div class="segment-row"><span>売上高</span><span>38,417 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>10,873 百万円</span></div>
+          <div class="segment-row"><span>前期比（売上高）</span><span class="up">＋3.1%</span></div>
+          <div class="segment-row"><span>前期比（利益）</span><span class="up">＋8.7%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">💎 光半導体事業</div>
+          <div class="segment-row"><span>売上高</span><span>42,969 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>7,827 百万円</span></div>
+          <div class="segment-row"><span>前期比（売上高）</span><span class="up">＋9.5%</span></div>
+          <div class="segment-row"><span>前期比（利益）</span><span class="up">＋16.7%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🖥️ 画像計測機器事業</div>
+          <div class="segment-row"><span>売上高</span><span>17,342 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>5,219 百万円</span></div>
+          <div class="segment-row"><span>前期比（売上高）</span><span class="up">＋8.1%</span></div>
+          <div class="segment-row"><span>前期比（利益）</span><span class="up">＋8.0%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">⚡ レーザ事業</div>
+          <div class="segment-row"><span>売上高</span><span>10,480 百万円</span></div>
+          <div class="segment-row"><span>セグメント損失</span><span style="color:var(--red);">△3,475 百万円</span></div>
+          <div class="segment-row"><span>前期比（売上高）</span><span class="down">△7.2%</span></div>
+          <div class="segment-row"><span>前期（損失）</span><span style="color:var(--red);">△1,371 百万円</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 通期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年9月期）／今回修正後</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>前回発表予想</th>
+          <th>今回修正予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>222,000 百万円</td>
+          <td>232,000 百万円</td>
+          <td class="up">＋4.5%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>17,200 百万円</td>
+          <td>20,000 百万円</td>
+          <td class="up">＋16.3%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>20,200 百万円</td>
+          <td>23,500 百万円</td>
+          <td class="up">＋16.3%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>14,300 百万円</td>
+          <td>16,400 百万円</td>
+          <td class="up">＋14.7%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>48.67 円</td>
+          <td>56.33 円</td>
+          <td class="up">＋15.8%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📊 上方修正の主因：</strong>生成AI投資拡大を背景とした半導体製造・検査装置向け需要の継続的増加、非破壊検査装置向けX線源の伸長、および為替動向を勘案し、売上高・利益ともに大幅な上方修正。前年同期比では売上高＋9.4%、当期純利益＋15.5%の増収増益見通し。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（2026年3月31日）</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">486,218<span class='data-sub'>百万円 ＋6.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">322,917<span class='data-sub'>百万円 △0.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">163,300<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">66.1<span class='data-sub'>%</span><span class='data-sub'>（前期末70.7%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">（自己資本321,354百万円）</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー（中間累計）</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+25,193<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△4,549<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△10,720<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF（営業+投資）</span>
+          <span class="data-val" style="color:var(--green);">+20,644<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間期末現金</span>
+          <span class="data-val">99,958<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフローの状況：</strong>営業CFは税引前利益・減価償却費が主因で25,193百万円を確保。投資CFは前期比大幅改善（前期△22,478百万円→△4,549百万円）、有形固定資産取得が6,967百万円に縮小。財務CFはマイナスの主因は自己株式取得△13,010百万円（7,662,800株）。総資産増加は新棟建設・設備導入による固定資産増と現預金増が主因。自己資本比率は自己株式取得により前期末70.7%から66.1%へ低下。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/9期　中間</div>
+        <div class="div-cell-val">19.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">前期実績</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2025/9期　期末</div>
+        <div class="div-cell-val">19.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">合計 38.00円</div>
+      </div>
+      <div class="div-cell" style="background:var(--teal-pale);">
+        <div class="div-cell-label">2026/9期　中間（実績）</div>
+        <div class="div-cell-val" style="color:var(--teal-light);">19.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当支払開始 2026/6/2</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2026/9期　通期（予想）</div>
+        <div class="div-cell-val">38.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間19円＋期末19円（予）</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2026年9月期の中間配当は前期と同額の19円で実施。通期配当予想は中間・期末各19円の合計38円（前期と同水準）を維持。直近に公表されている配当予想からの修正はなし。EPS56.33円（通期予想）に対して配当性向は約67%。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">レーザ事業の赤字拡大<br><small>前期損失△1,371百万円→当中間期△3,475百万円。顕微鏡向け需要の回復が鍵</small></div>
+      <div class="risk-item high">地政学・調達リスク<br><small>中東情勢等による原材料・エネルギー価格変動、国際物流の不安定化が続く</small></div>
+      <div class="risk-item high">為替変動リスク<br><small>円安進行で経常利益は為替差益が貢献する一方、コスト面への影響も継続</small></div>
+      <div class="risk-item mid-level">自己株式取得による財務影響<br><small>取締役会決議に基づき13,010百万円の自己株式取得を実施。自己資本比率が66.1%に低下</small></div>
+      <div class="risk-item mid-level">設備投資・リース債務の増加<br><small>新棟建設・設備導入でリース資産が16,601百万円増加。固定費負担が拡大</small></div>
+      <div class="risk-item mid-level">半導体需要サイクルリスク<br><small>生成AI関連設備投資の継続性が売上の主要ドライバー。需要減速リスクに留意</small></div>
+      <div class="risk-item">学術研究向け需要の一時的減少<br><small>欧州の高エネルギー物理学プロジェクトへのフォトダイオードアレイ完納で学術向け需要が一巡</small></div>
+      <div class="risk-item">インフレ・コスト上昇<br><small>継続的な物価上昇が販管費を押し上げ（前期比＋5.8%増）。営業利益率の低下要因</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年9月期第2四半期（中間期）は売上高が前年比＋5.4%の112,496百万円と増収を確保した一方、営業利益は前年比△7.0%に留まった。生成AI需要拡大を追い風に電子管（＋8.7%増益）・光半導体（＋16.7%増益）・画像計測機器（＋8.0%増益）の3セグメントが堅調な反面、レーザ事業の赤字拡大が全体利益を圧迫。通期業績予想は今回、売上高・利益ともに大幅上方修正（売上高＋4.5%、純利益＋14.7%）し、前期比増収増益の回復見通しを示した。配当は通期38円を維持する方針。財務面では自己株式取得（13,010百万円）の実施により自己資本比率が低下したが、現預金は99,958百万円と潤沢な水準を保っている。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は浜松ホトニクス株式会社（6965）2026年9月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
