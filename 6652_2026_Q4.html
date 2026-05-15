@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDEC株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1A3A5C;
+    --blue-light: #2E6DA4;
+    --blue-pale: #E8F0F8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,58,92,0.18);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--blue); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue-light), #5B9BD5, var(--blue-light)); }
+  header::after { content: '制御機器・FA'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5B9BD5; border: 1px solid #2E6DA4; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5B9BD5; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--blue-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--blue-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--blue-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--blue-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--blue-pale); border-left: 4px solid var(--blue-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--blue-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--blue); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--blue); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  footer { background: var(--blue); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E6DA4; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>IDEC株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 6652</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月14日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">72,967<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋8.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">6,118<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋67.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">3,873<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋117.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">131.22<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 60.36円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役会長兼社長　舩木 俊之</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（地域別4区分）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本、米州、EMEA、アジア・パシフィック</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">除外1社（APEM, Inc.／IDEC CORPORATIONへ吸収合併）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用は当面予定なし</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結子会社数</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">26社（国内5社・海外21社）</span>
+      </div>
+    </div>
+    <div class="highlight">
+      制御機器（操作スイッチ・安全機器・FA機器）の製造・販売を主力とするグローバルメーカー。製品群はHMI事業、インダストリアルコンポーネンツ事業、オートメーション&センシング事業、安全・防爆事業、システムの5事業で構成。新中期経営計画（2026〜2028年度）において「顧客中心のビジネス構造への転換」と「グローバルベースでの市場変化への対応力向上」を掲げ構造改革を推進中。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">72,967 <span class='data-sub'>百万円 ＋8.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">32,349 <span class='data-sub'>百万円 ＋9.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">6,118 <span class='data-sub'>百万円 ＋67.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">6,569 <span class='data-sub'>百万円 ＋88.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">3,873 <span class='data-sub'>百万円 ＋117.7%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 アジア・パシフィックで自動車・半導体向け需要拡大（売上＋24.4%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🇺🇸 北米は追加関税の価格転嫁・受注残解消で売上＋11.2%増収</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 為替差益624百万円（前期64百万円）・ユーロ円安が売上下支え</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前期の事業構造改革費用2,628百万円・子会社株式売却益1,200百万円が剥落</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚙️ 売上総利益率44.3%（前期43.7%）に改善。EMEAは引き続き営業損失</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 売上高・利益（地域別）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🇯🇵 日本</div>
+          <div class="segment-row"><span>外部売上高</span><span>26,986 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>1,940 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋64.0%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌎 米州</div>
+          <div class="segment-row"><span>外部売上高</span><span>15,738 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>954 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△16.1%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌍 EMEA（欧州・中東・アフリカ）</div>
+          <div class="segment-row"><span>外部売上高</span><span>15,952 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>△247 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">損失縮小（前期△559）</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌏 アジア・パシフィック</div>
+          <div class="segment-row"><span>外部売上高</span><span>14,289 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>2,750 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋151.0%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 製品別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">製品別 売上高（当期）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🖲️ HMI事業</div>
+          <div class="segment-row"><span>売上高</span><span>34,085 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋7.0%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🔌 インダストリアルコンポーネンツ事業</div>
+          <div class="segment-row"><span>売上高</span><span>13,005 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋15.2%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🤖 オートメーション&センシング事業</div>
+          <div class="segment-row"><span>売上高</span><span>8,193 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△5.9%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🛡️ 安全・防爆事業</div>
+          <div class="segment-row"><span>売上高</span><span>12,665 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋14.7%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）と主要前提</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>72,967 百万円</td>
+          <td>75,500 百万円</td>
+          <td class="up">＋3.5%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>6,118 百万円</td>
+          <td>7,200 百万円</td>
+          <td class="up">＋17.7%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>6,569 百万円</td>
+          <td>6,750 百万円</td>
+          <td class="up">＋2.7%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>3,873 百万円</td>
+          <td>6,000 百万円</td>
+          <td class="up">＋54.9%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>131.22 円</td>
+          <td>203.25 円</td>
+          <td class="up">＋54.9%</td>
+        </tr>
+      </table>
+      <div class="premise-grid">
+        <div class="premise-item"><span class="premise-key">為替レート（米ドル）</span><span class="premise-val">150円（前期150.67円）</span></div>
+        <div class="premise-item"><span class="premise-key">為替レート（ユーロ）</span><span class="premise-val">180円（前期174.64円）</span></div>
+        <div class="premise-item"><span class="premise-key">国内売上見通し</span><span class="premise-val">25,400百万円（前期24,500）</span></div>
+        <div class="premise-item"><span class="premise-key">海外売上見通し</span><span class="premise-val">50,100百万円（前期48,466）</span></div>
+      </div>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📈 大幅増益の主因：</strong>AI・半導体関連向け需要の回復基調継続と、受注の段階的拡大。来期（2027年3月期）は旧米国社屋の譲渡（カリフォルニア州）による固定資産売却益約39億円を特別利益計上見込み（後発事象）。これが純利益を大きく押し上げる構造。グローバル生産拠点再編・DX活用による供給体制最適化も継続推進。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">113,572<span class='data-sub'>百万円 ＋5.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">69,920<span class='data-sub'>百万円 ＋9.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債（短長期合計）</span>
+          <span class="data-val">27,613<span class='data-sub'>百万円（概算）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">61.0<span class='data-sub'>%</span><span class='data-sub'>（前期58.9%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">2,345.80<span class='data-sub'>円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">ROE（自己資本当期純利益率）</span>
+          <span class="data-val">5.8<span class='data-sub'>%（前期2.8%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+7,442<span class='data-sub'>百万円 △33.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△5,296<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△3,690<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF</span>
+          <span class="data-val" style="color:var(--green);">+2,146<span class='data-sub'>百万円（概算）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">18,142<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>営業CFは前期比で減少（前期112億円→今期74億円）。これは主に法人税等の支払増（前期10億円→今期25億円）と売上債権増加によるもの。投資CFは固定資産取得53億円が主因。財務CFは配当支払い38億円が主な支出。のれん未償却残高は115億円（EMEA中心）で引き続き要注視。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">130.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 215.4%</div>
+      </div>
+      <div class="div-cell" style="background:var(--blue-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--blue-light);">130.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 99.1%　維持</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">130.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 64.0%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">ROE・株主資本配当率の向上を重視し、安定的な配当の維持・適正な利益還元を最重要施策と位置付け。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度・2026年度ともに中間65円・期末65円の年間130円を維持。前期は業績不振で配当性向が215%超と高水準だったが、今期の業績回復で99%まで正常化。来期は純利益の大幅増益（売却益含む）により配当性向64%へ低下見通し。引き続き中間・期末配当の安定実施を基本方針とする。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">米国関税政策リスク<br><small>追加関税の影響は価格転嫁で一部吸収できているものの、さらなる関税強化で収益・需要への影響が拡大するリスク</small></div>
+      <div class="risk-item high">欧州景気低迷・EMEA赤字<br><small>EMEA事業は今期も営業損失247百万円。欧州製造業の需要低迷・地政学リスクが長期化する懸念</small></div>
+      <div class="risk-item high">のれん減損リスク<br><small>EMEA中心に116億円ののれんを計上。業績回復が遅れた場合の減損が財務を大きく圧迫するリスク</small></div>
+      <div class="risk-item mid-level">為替リスク<br><small>米ドル・ユーロ・人民元等の変動が業績に直接影響。来期は米ドル150円・ユーロ180円を前提</small></div>
+      <div class="risk-item mid-level">OEM先の在庫調整<br><small>オートメーション&センシング事業でOEM先の在庫調整により売上が5.9%減少。在庫正常化の遅れリスク</small></div>
+      <div class="risk-item mid-level">北米体制強化による費用増<br><small>会社統合・新拠点設置等で販管費率が上昇し、北米営業利益が16.1%減。体制整備コストの高止まりリスク</small></div>
+      <div class="risk-item">中東・地政学リスク<br><small>中東情勢の緊迫化による原材料価格高騰・供給チェーンへの影響</small></div>
+      <div class="risk-item">中国不動産市場の低迷<br><small>中国における需要拡大は継続中だが、不動産市場悪化が産業全般に波及した場合のリスク</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は売上高＋8.3%・営業利益＋67.5%・純利益＋117.7%と大幅な増収増益を達成。前期の業績悪化要因であった事業構造改革費用（26億円）が剥落し、アジア・パシフィックでの需要急回復（営業利益＋151%）と為替差益の拡大が利益を押し上げた。EMEAの赤字縮小も寄与。自己資本比率61.0%と財務体質は堅固。来期（2027年3月期）は売上＋3.5%・営業利益＋17.7%の増収増益予想に加え、米国旧社屋の売却益（約39億円）が純利益を押し上げる見通しで、EPS203円まで大幅改善を見込む。配当は130円維持で株主還元継続。中期経営計画最終年度に向け、グローバル構造改革と顧客起点のビジネス転換が正念場を迎える。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はIDEC株式会社（6652）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
