@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ＮＴＮ株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1A3A5C;
+    --blue-light: #2E6DA4;
+    --blue-pale: #E8F0F8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,58,92,0.18);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--blue); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue-light), #5B9BD5, var(--blue-light)); }
+  header::after { content: '軸受・精密機器'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5B9BD5; border: 1px solid #2E6DA4; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5B9BD5; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--blue-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--blue-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--blue-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--blue-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--blue-pale); border-left: 4px solid var(--blue-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--blue-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--blue); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--blue); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .event-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid #E67E22; padding: 20px 24px; margin-bottom: 16px; }
+  .event-title { font-size: 13px; font-weight: 600; color: #E67E22; margin-bottom: 8px; letter-spacing: 0.05em; }
+  .event-body { font-size: 13px; color: var(--charcoal); line-height: 1.7; }
+  footer { background: var(--blue); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E6DA4; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>ＮＴＮ株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 6472</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月14日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">826,344<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 0.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">31,034<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 35.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">12,871<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">黒字転換</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">23.40<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 △44.90円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">執行役社長　鵜飼 英一</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（4地域）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本、米州、欧州、アジア他</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業形態</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">軸受他事業、CVJアクスル事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">重要な変更なし</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用は今後検討予定</span>
+      </div>
+    </div>
+    <div class="highlight">
+      軸受・ドライブシャフト・精密機器を主力製品とするグローバル製造グループ。中期経営計画「DRIVE NTN100」Finalに基づき、事業構造の変革（Transformation）の加速とNTN再生の完了を目指し、生産再編を中心とする事業構造改革と「SQCCD（安全・品質・法令遵守・コスト＆キャッシュ・納期＆開発）」の強化を推進。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">826,344 <span class='data-sub'>百万円 ▲0.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">151,774 <span class='data-sub'>百万円 ▲7.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">31,034 <span class='data-sub'>百万円 ▲35.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">23,484 <span class='data-sub'>百万円 ▲124.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">12,871 <span class='data-sub'>百万円（黒字転換）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔩 売価転嫁・変動費削減により営業利益は35.2%増</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 円安の進行で為替差損益が大幅改善（前期：差損4,397百万円→当期：差益488百万円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 米州・アジア他セグメントが黒字転換・増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前期の特別損失（減損11,735・独禁法909百万円）の縮小が純利益の黒字転換に寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💡 日本セグメントの税効果改善（税金費用△7,717百万円）が純利益押し上げ</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">地域別セグメント 営業利益（増減）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🇯🇵 日本</div>
+          <div class="segment-row"><span>外部売上高</span><span>216,392 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>9,192 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△18.0%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌎 米州</div>
+          <div class="segment-row"><span>外部売上高</span><span>262,523 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>5,469 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">黒字転換（前期：△395）</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌍 欧州</div>
+          <div class="segment-row"><span>外部売上高</span><span>193,562 百万円</span></div>
+          <div class="segment-row"><span>セグメント損失</span><span>△1,061 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">赤字縮小（前期：△4,163）</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌏 アジア他</div>
+          <div class="segment-row"><span>外部売上高</span><span>153,866 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>17,573 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋19.1%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 事業形態別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">事業形態別 売上高・営業利益</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">⚙️ 軸受他事業</div>
+          <div class="segment-row"><span>外部売上高</span><span>348,890 百万円</span></div>
+          <div class="segment-row"><span>営業利益</span><span>12,256 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△10.4%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🚗 CVJアクスル事業</div>
+          <div class="segment-row"><span>外部売上高</span><span>477,453 百万円</span></div>
+          <div class="segment-row"><span>営業利益</span><span>18,778 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋102.4%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）と主要前提</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>826,344 百万円</td>
+          <td>810,000 百万円</td>
+          <td class="down">△2.0%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>31,034 百万円</td>
+          <td>33,000 百万円</td>
+          <td class="up">＋6.3%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>23,484 百万円</td>
+          <td>21,000 百万円</td>
+          <td class="down">△10.6%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>12,871 百万円</td>
+          <td>15,000 百万円</td>
+          <td class="up">＋16.5%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>23.40 円</td>
+          <td>25.23 円</td>
+          <td class="up">＋7.8%</td>
+        </tr>
+      </table>
+      <div class="premise-grid">
+        <div class="premise-item"><span class="premise-key">為替レート（ドル）</span><span class="premise-val">150円／ドル（前期151円）</span></div>
+        <div class="premise-item"><span class="premise-key">為替レート（ユーロ）</span><span class="premise-val">175円／ユーロ（前期175円）</span></div>
+      </div>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>⚠ 来期見通しの要点：</strong>売上高は△2.0%の減収見込み。一方、CVJアクスル事業の収益改善や固定費・変動費の削減努力を継続し営業利益は増益を計画。経常利益は為替差損益の常態化で減少の見通し。純利益は特別損益の改善を見込み増益予想。米国通商政策の動向が最大の外部リスクとして注視される。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">878,676<span class='data-sub'>百万円 ▲2.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">311,389<span class='data-sub'>百万円 ▲25.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債</span>
+          <span class="data-val">319,173<span class='data-sub'>百万円 △9.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">33.8<span class='data-sub'>%</span><span class='data-sub'>（前期27.2%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">499.40<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+57,179<span class='data-sub'>百万円 ▲25.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△26,276<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△35,322<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF</span>
+          <span class="data-val" style="color:var(--green);">+30,903<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">131,255<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>税金等調整前純利益の黒字転換・棚卸資産の圧縮（14,640百万円収入）により営業CFは25.3%増と大幅改善。投資CFは有形固定資産取得29,118百万円が主因でほぼ前期並み。財務CFは社債償還50,000百万円・借入返済52,886百万円が重なりマイナス拡大。転換社債の転換（22,000百万円）により有利子負債が大幅削減、財務健全性は着実に向上。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">11.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 －（当期純損失）</div>
+      </div>
+      <div class="div-cell" style="background:var(--blue-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--blue-light);">11.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 47.0%　維持</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">13.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 51.5%（予）　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">将来の成長に必要な投資資金を確保しつつ、連結配当性向を重視し安定配当を継続する方針。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度は中間5.5円・期末5.5円の年間11円を維持（前期同額）。配当性向は47.0%。2026年度は中間6.5円・期末6.5円の年間13円に増配を予定（配当性向51.5%見込み）。前期の赤字局面でも配当を維持し、業績回復とともに増配姿勢を明示。
+    </div>
+  </section>
+
+  <!-- 05 リスク・後発事象 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・後発事象</span>
+    </div>
+
+    <!-- 重要後発事象 -->
+    <div class="event-box">
+      <div class="event-title">🔔 重要な後発事象：日本精工（NSK）との経営統合基本合意（2026年5月12日）</div>
+      <div class="event-body">
+        NTNとNSKは共同株式移転方式により共同持株会社を設立し、経営統合を行う基本合意書を2026年5月12日に締結。統合目的は長期的・利益ある成長の実現と日本の産業基盤の地位確保。本持株会社は2027年10月に東証プライムへテクニカル上場予定（両社は上場廃止）。株式移転比率は最終契約書締結時に決定。本経営統合が実施された場合、事業規模は大幅に拡大する見込み。
+      </div>
+    </div>
+
+    <div class="risk-grid">
+      <div class="risk-item high">米国通商政策リスク<br><small>関税政策の変動が米州事業（売上高262,523百万円）の収益に直接影響。来期予想の最大不確実要因</small></div>
+      <div class="risk-item high">自動車OEM向け需要低迷<br><small>日本・米州・欧州の自動車OEM向けで客先需要の低減が継続。CVJアクスル事業に特に影響大</small></div>
+      <div class="risk-item high">欧州事業の継続赤字<br><small>欧州セグメントは△1,061百万円の営業損失。製造業不振・構造コスト高止まりが課題</small></div>
+      <div class="risk-item mid-level">為替変動リスク<br><small>平均レートはドル150.73円・ユーロ174.75円。来期前提はドル150円・ユーロ175円。急激な円高は収益を圧迫</small></div>
+      <div class="risk-item mid-level">中国経済の減速<br><small>アジア他セグメントの自動車向けで需要低減。中国経済の成長鈍化が軸受需要に影響</small></div>
+      <div class="risk-item mid-level">ルノーとの独禁法訴訟<br><small>パリ控訴裁判所で控訴審継続中。請求額6,249万ユーロ（暫定額）。判決次第で財務影響の可能性</small></div>
+      <div class="risk-item">減損リスクの継続<br><small>当期の減損損失8,090百万円（前期11,735百万円）。生産再編に伴う資産評価見直しが続く見込み</small></div>
+      <div class="risk-item">経営統合の実行リスク<br><small>NTN・NSK統合に向けた競争法・証券法手続き、シナジー実現の不確実性</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は売上高がほぼ横ばい（▲0.1%）ながら、売価転嫁・変動費削減の徹底と為替差損益の大幅改善（前期△4,397百万円→当期＋488百万円）により経常利益は124.2%の大幅増益。税効果の改善を含め当期純利益も前期の大幅赤字（△23,801百万円）から12,871百万円の黒字に転換した。自己資本比率は33.8%へ大幅改善し、転換社債の転換により有利子負債も縮減。来期は営業利益増・純利益増を計画するも、米国関税政策・欧州需要低迷が主要リスク。また、NSKとの経営統合基本合意という歴史的な後発事象が発生しており、2027年10月の持株会社設立に向けた動向が注目される。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はＮＴＮ株式会社（6472）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
