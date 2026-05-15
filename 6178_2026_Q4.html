@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本郵政株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #8B1A1A;
+    --red-light: #C0392B;
+    --red-pale: #FAF0EF;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --green: #1E7E4A;
+    --loss: #C0392B;
+    --border: rgba(139,26,26,0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--red); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--red-light), #E05050, var(--red-light)); }
+  header::after { content: '郵便・物流・金融'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #E8A0A0; border: 1px solid rgba(255,255,255,0.25); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #E8A0A0; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--red-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--loss); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--red-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--red-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--red-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--red-pale); border-left: 4px solid var(--red-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--red-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--red); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--red); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  footer { background: var(--red); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid rgba(255,255,255,0.15); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>日本郵政株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 6178</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月15日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">経常収益</div>
+      <div class="kpi-value">11,440,586<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 0.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">1,074,966<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 32.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益（親会社帰属）</div>
+      <div class="kpi-value">374,556<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 1.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">129.14<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 119.30円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">取締役兼代表執行役社長　根岸 一行</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（6事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">郵便・物流事業、郵便局窓口事業、国際物流事業、不動産事業、銀行業、生命保険業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の重要な変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">新規33社（JPトナミグループ株式会社、トナミホールディングス株式会社 他31社）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用は検討中</span>
+      </div>
+    </div>
+    <div class="highlight">
+      郵便・物流・窓口・国際物流・不動産・銀行（ゆうちょ銀行）・生命保険（かんぽ生命）を擁する総合インフラグループ。中期経営計画「JP プラン 2028」のもと、物流ネットワーク強化（トナミHD子会社化）、銀行業の収益拡大（金利上昇メリット）、不動産開発推進を牽引役に、経常利益は前期比32.0%増の大幅増益を達成。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">経常収益</span>
+          <span class="data-val">11,440,586 <span class='data-sub'>百万円 △0.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常費用</span>
+          <span class="data-val">10,365,620 <span class='data-sub'>百万円 △2.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">1,074,966 <span class='data-sub'>百万円 ＋32.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税金等調整前当期純利益</span>
+          <span class="data-val">1,043,591 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">374,556 <span class='data-sub'>百万円 ＋1.1%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 銀行業が外債投信・国債利息増加により経常利益＋174,715百万円と大幅増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛡️ かんぽ生命が標準責任準備金負担減・順ざや増加で経常利益＋101,964百万円増</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏠 不動産事業は賃貸収益増加で経常利益＋7,725百万円増、郵便料金改定も寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📦 郵便・物流は人件費・委託費増加で依然経常損失（△5,494百万円）が継続</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前期の関係会社株式売却益（個別165,373百万円）の剥落で個別純利益は△43.1%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 経常利益（損失）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">📦 郵便・物流事業</div>
+          <div class="segment-row"><span>外部経常収益</span><span>2,270,269 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益（損失）</span><span>△5,494 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">改善（前期△32,220）</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏣 郵便局窓口事業</div>
+          <div class="segment-row"><span>外部経常収益</span><span>48,918 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>9,095 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△15,060百万円</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌍 国際物流事業</div>
+          <div class="segment-row"><span>外部経常収益</span><span>505,149 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>4,371 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△328百万円</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏢 不動産事業</div>
+          <div class="segment-row"><span>外部経常収益</span><span>85,115 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>20,092 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋7,725百万円</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏦 銀行業（ゆうちょ銀行）</div>
+          <div class="segment-row"><span>外部経常収益</span><span>2,849,853 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>759,093 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋174,715百万円</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🛡️ 生命保険業（かんぽ生命）</div>
+          <div class="segment-row"><span>外部経常収益</span><span>5,610,244 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>271,777 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋101,964百万円</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>経常収益</td>
+          <td>11,440,586 百万円</td>
+          <td>11,360,000 百万円</td>
+          <td class="down">△0.7%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>1,074,966 百万円</td>
+          <td>1,170,000 百万円</td>
+          <td class="up">＋8.8%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>374,556 百万円</td>
+          <td>380,000 百万円</td>
+          <td class="up">＋1.5%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>129.14 円</td>
+          <td>135.41 円</td>
+          <td class="up">＋4.9%</td>
+        </tr>
+      </table>
+      <div class="premise-grid">
+        <div class="premise-item"><span class="premise-key">郵便・物流セグメント利益</span><span class="premise-val">△96,000百万円（予）</span></div>
+        <div class="premise-item"><span class="premise-key">銀行業セグメント利益</span><span class="premise-val">955,000百万円（予）</span></div>
+        <div class="premise-item"><span class="premise-key">生命保険業セグメント利益</span><span class="premise-val">250,000百万円（予）</span></div>
+        <div class="premise-item"><span class="premise-key">不動産事業セグメント利益</span><span class="premise-val">19,000百万円（予）</span></div>
+      </div>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📈 来期見通しのポイント：</strong>郵便物数の減少等により郵便・物流セグメントは引き続き減益見込みながら、国内金利上昇に伴う銀行業の増益（ゆうちょ銀行純利益予想660,000百万円、＋134,416百万円）が全体を牽引。アフラック持分法投資利益52,000百万円も新たに算入。かんぽ生命は標準責任準備金負担増加等で141,000百万円（△27,798百万円）と減益見通し。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">289,864,524<span class='data-sub'>百万円 △2.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">16,481,925<span class='data-sub'>百万円 ＋7.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本（親会社）</span>
+          <span class="data-val">9,714,500<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">3.4<span class='data-sub'>%</span><span class='data-sub'>（前期3.1%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">3,461.65<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--loss);">△10,338,345<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--green);">＋669,224<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--loss);">△622,930<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">現金及び現金同等物期末残高</span>
+          <span class="data-val">56,910,206<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">前期末比</span>
+          <span class="data-val" style="color:var(--loss);">△10,289,057<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフローの注記：</strong>営業CFの大幅マイナスは、銀行業における貯金残高減少（△3,485,523百万円）・売現先勘定減少（△4,467,570百万円）等の資金運用・調達変動によるもので、事業実態の悪化ではない。投資CFは有価証券売却・償還超過により正。財務CFは自己株式取得（△251,115百万円）・配当支払が主因でマイナス転換。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">50.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 41.9%</div>
+      </div>
+      <div class="div-cell" style="background:var(--red-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--red-light);">50.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 38.7%　維持</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">60.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 44.3%（予）増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">経営成績に応じた継続的・安定的な株主利益還元を基本方針とし、内部留保の充実と資本効率を意識。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度は年間50円（中間25円・期末25円）を維持。2026年度は中間・期末とも各30円の計60円に増配予定（前期比20%増）。また2026年5月15日取締役会で自己株式取得（上限1億株・1,500億円、2026年5月18日〜2027年3月31日）を決議し、株主還元を一層強化する姿勢を明示。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・特記事項</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">郵便物数の構造的減少<br><small>郵便・物流セグメントは来期も経常損失△96,000百万円の見込み。人件費・委託費上昇が継続</small></div>
+      <div class="risk-item high">点呼業務不備による行政処分<br><small>日本郵便が国交省・総務省より行政処分継続。1t以上車両・一部軽四輪の使用停止が影響</small></div>
+      <div class="risk-item high">金利・市場リスク（銀行・保険）<br><small>金利上昇はゆうちょ銀行に追い風だが、有価証券の評価変動・資金調達コスト増大もリスク</small></div>
+      <div class="risk-item mid-level">かんぽ生命の保有契約減少<br><small>標準責任準備金負担増・保有契約減により来期純利益△27,798百万円減の見込み</small></div>
+      <div class="risk-item mid-level">トナミHD統合リスク<br><small>2025年4月に完全子会社化（取得額92,544百万円）。統合効果発現までの費用増加リスク</small></div>
+      <div class="risk-item mid-level">国際物流の収益低迷<br><small>フォワーディング事業の海上運賃下落・取扱量減少により経常利益は4,371百万円に縮小</small></div>
+      <div class="risk-item">為替・地政学リスク<br><small>海外投資（Toll Holdings等）や外債ポートフォリオへの為替変動・地政学的リスク</small></div>
+      <div class="risk-item">法規制・監督リスク<br><small>日本郵政株式会社法に基づく総務大臣認可要件。規制変更が配当政策等に影響する可能性</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は経常収益がわずかに減収（△0.2%）となった一方、経常利益は前期比32.0%増の1,074,966百万円と大幅増益を達成。主役はゆうちょ銀行（金利上昇メリット）とかんぽ生命（標準準備金負担減・順ざや増）。郵便・物流事業は行政処分の影響や人件費増でなお損失が続くが、改善傾向にある。親会社帰属純利益は374,556百万円（＋1.1%）と小幅増にとどまったのは、非支配株主利益（368,935百万円）が膨らんだため。来期（2027年3月期）は経常利益＋8.8%の増益予想で、増配（50円→60円）と自己株式取得による積極的な株主還元も打ち出しており、財務・資本政策は一段と充実した内容となっている。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は日本郵政株式会社（6178）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
