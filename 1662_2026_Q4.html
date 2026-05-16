@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>石油資源開発株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brown: #4A2C0A;
+    --brown-light: #8B5E2A;
+    --amber: #C17A2B;
+    --amber-pale: #F5ECD8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #FAF7F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(74,44,10,0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--brown); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--amber), #D4A55A, var(--amber)); }
+  header::after { content: '石油・天然ガス'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #D4A55A; border: 1px solid #8B5E2A; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #D4A55A; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--amber-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--amber); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--amber); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--amber); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--amber-pale); border-left: 4px solid var(--amber); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--amber); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--brown); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--brown); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  footer { background: var(--brown); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #8B5E2A; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>石油資源開発株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 1662</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月13日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">340,336<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 12.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">38,915<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 37.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">53,427<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 34.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">208.74<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 314.91円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　山下 通郎</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（4事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本、北米、欧州、中東</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">新規2社（Peoria Resources, LLC他）／除外2社（JAPEX UK E&P LIMITED他）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用は検討中</span>
+      </div>
+    </div>
+    <div class="highlight">
+      国内外で石油・天然ガスの探鉱・開発・生産（E&P）、LNG・電力・バイオマス等のインフラ・ユーティリティ事業を展開する総合エネルギー企業。「JAPEX経営計画2022-2030」の主要目標を前倒しで達成。2026年4月には「JAPEX経営計画2026-2035～Building Core Assets toward 2035」を公表し、次フェーズへ移行。米国でのVRIH社取得（約1,040百万ドル）により北米E&P事業を大幅に強化。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">340,336 <span class='data-sub'>百万円 △12.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">76,741 <span class='data-sub'>百万円 △22.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">38,915 <span class='data-sub'>百万円 △37.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">61,556 <span class='data-sub'>百万円 △4.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">53,427 <span class='data-sub'>百万円 △34.2%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛢️ 原油・LNG販売価格下落と販売量減少が売上を圧迫（△12.5%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌍 欧州（JUK株式譲渡）・国内ガス販売量減少が収益悪化に直撃</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 持分法投資損失→利益転換（△252→＋4,114百万円）・為替差益8,201百万円が経常利益を下支え</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前期の投資有価証券売却益45,698百万円が剥落し純利益を大幅圧迫</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏗️ VRIH社取得（1,040百万ドル）により北米資産が大幅増強</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 営業利益（地域別）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🗾 日本セグメント</div>
+          <div class="segment-row"><span>外部売上高</span><span>248,194 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>30,869 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△31.4%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌎 北米セグメント</div>
+          <div class="segment-row"><span>外部売上高</span><span>52,377 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>17,082 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△19.0%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🇪🇺 欧州セグメント</div>
+          <div class="segment-row"><span>外部売上高</span><span>8,072 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>1,626 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△70.9%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🛢️ 中東セグメント</div>
+          <div class="segment-row"><span>外部売上高</span><span>31,692 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>2,968 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△28.6%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）と主要前提</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>340,336 百万円</td>
+          <td>303,000 百万円</td>
+          <td class="down">△11.0%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>38,915 百万円</td>
+          <td>41,000 百万円</td>
+          <td class="up">＋5.4%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>61,556 百万円</td>
+          <td>45,000 百万円</td>
+          <td class="down">△26.9%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>53,427 百万円</td>
+          <td>60,000 百万円</td>
+          <td class="up">＋12.3%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>208.74 円</td>
+          <td>234.38 円</td>
+          <td class="up">＋12.3%</td>
+        </tr>
+      </table>
+      <div class="premise-grid">
+        <div class="premise-item"><span class="premise-key">原油CIF価格（通期）</span><span class="premise-val">74.91ドル／バレル</span></div>
+        <div class="premise-item"><span class="premise-key">為替レート（通期）</span><span class="premise-val">152.90円／ドル</span></div>
+        <div class="premise-item"><span class="premise-key">中東ガラフ油田</span><span class="premise-val">売上見込まず（操業停止中）</span></div>
+        <div class="premise-item"><span class="premise-key">北海道ガス事業譲渡益</span><span class="premise-val">来期に特別利益計上予定</span></div>
+      </div>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📝 来期見通しのポイント：</strong>中東ガラフ油田の操業停止（イラク政府不可抗力宣言）により中東からの売上を見込まず、売上は△11.0%を予想。一方、VRIH社取得による北米での原油・天然ガス販売量大幅増と原油価格上昇見込みにより営業利益は＋5.4%に転換。経常利益は当期の為替差益（8,201百万円）の剥落が響き減益。北海道ガス事業譲渡益（310億円）計上見込みで純利益は増益。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">862,470<span class='data-sub'>百万円 ＋26.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">658,897<span class='data-sub'>百万円 ＋18.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">72.8<span class='data-sub'>%</span><span class='data-sub'>（前期77.4%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本（参考）</span>
+          <span class="data-val">627,537<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">2,451.33<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+102,976<span class='data-sub'>百万円 △21.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△200,494<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--green);">+6,007<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF</span>
+          <span class="data-val" style="color:var(--red);">△97,518<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">49,954<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>投資CFはVRIH社取得（157,706百万円）により大幅拡大し△200,494百万円と急増。営業CFは前期の税負担急増（法人税支払17,180百万円）等により△21.2%に縮小。財務CFはコマーシャル・ペーパーの純増（19,979百万円）によりプラスに転換。期末現金は前期比△90,977百万円と大幅減少。総資産はVRIH社連結化・投資有価証券時価上昇等で26.5%増の8,625億円まで膨張。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3（分割後換算）</div>
+        <div class="div-cell-val">31.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 9.8%（参考）</div>
+      </div>
+      <div class="div-cell" style="background:var(--amber-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--amber);">65.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 31.1%　大幅増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">45.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 19.2%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">連結配当性向30%を目安。最低年間40円配当の維持に努める。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      ※2024年10月1日付で1株につき5株の株式分割を実施。分割前の配当実績はすべて分割後換算値に読み替えて表示しています。<br>
+      2025年3月期の年間配当31円（分割後換算）の内訳：中間25円＋期末6円。分割前の実際の支払額は中間125円＋期末30円でした。2026年3月期は中間20円＋期末45円の計65円に大幅増配。来期（2027年3月期）は中間・期末各22.5円の計45円を予定。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">中東情勢リスク<br><small>イラク・ガラフ油田が操業停止中。不可抗力宣言が長期化すれば来期以降も収益ゼロが継続。LNG代替調達コストも増加。</small></div>
+      <div class="risk-item high">原油・天然ガス価格リスク<br><small>原油1ドル変動は収益に直接影響。来期前提74.91ドル／バレルを下回れば計画未達リスク。</small></div>
+      <div class="risk-item high">為替リスク<br><small>当期の為替差益（8,201百万円）は来期前提で消失見込み。円安・円高ともに損益に大きく影響。</small></div>
+      <div class="risk-item mid-level">VRIH社統合リスク<br><small>北米タイトオイル・ガス資産（コロラド・ワイオミング）の早期統合と収益貢献が必要。確認埋蔵量担保借入361百万ドルの返済も課題。</small></div>
+      <div class="risk-item mid-level">資産除去債務の増大<br><small>資機材・人件費高騰による見積り変更で6,172百万円増加。営業利益を5,823百万円圧迫。</small></div>
+      <div class="risk-item mid-level">現金残高の急減<br><small>期末現金は前期比△90,977百万円の49,954百万円に急減。大型投資後の手元流動性管理が重要。</small></div>
+      <div class="risk-item">脱炭素・エネルギー転換リスク<br><small>JAPEX2050計画のもとカーボンニュートラル対応を推進。E&P事業の長期的なポートフォリオ転換が必要。</small></div>
+      <div class="risk-item">北海道ガス事業譲渡リスク<br><small>北海道電力への事業譲渡（310億円）は2027年3月期完了予定。譲渡後のガス供給契約維持が課題。</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は原油・LNG価格の下落と販売量減少に加え、前期に計上した投資有価証券売却益（45,698百万円）の剥落により、売上高・利益ともに前期比減収減益となった。ただし経常利益は持分法投資損益の改善と為替差益の計上により減益幅は△4.1%にとどまっている。財務面では1,040百万ドルのVRIH社取得により総資産が26.5%増と大幅拡大し、北米における資産基盤を一段と強化した。一方で現金残高は約90,977百万円急減し、財務CFもコマーシャルペーパーで辛うじてプラスを確保した状況。自己資本比率は72.8%と依然高水準を維持。配当は65円（前期分割後換算31円から大幅増）と連結配当性向30%目安の方針のもと積極的な株主還元姿勢を鮮明にしており、「JAPEX経営計画2026-2035」の下で北米E&P事業強化と事業ポートフォリオ転換を軸とした成長フェーズへの移行が鮮明となった。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は石油資源開発株式会社（1662）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
