@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>あいホールディングス株式会社 2026年6月期 第3四半期決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B2B4B;
+    --navy-mid: #2C4A7C;
+    --navy-pale: #E6EDF8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F4F6FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1A7A45;
+    --accent: #3A6FBF;
+    --border: rgba(27,43,75,0.16);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--navy); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--navy-mid), #6B98D4, var(--navy-mid)); }
+  header::after { content: '機器・通信・設計'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 96px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #6B98D4; border: 1px solid #2C4A7C; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #6B98D4; font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--navy-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .highlight { background: var(--navy-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--accent); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--navy); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--navy); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+
+  .bs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  footer { background: var(--navy); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2C4A7C; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col, .bs-grid { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q3 Cumulative</div>
+  <h1>あいホールディングス株式会社</h1>
+  <p class="subtitle">2026年6月期　第3四半期決算短信（連結）要約　／　証券コード 3076</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月15日</span></div>
+    <div class="meta-item">対象期間 <span>2025年7月1日〜2026年3月31日（累計9ヶ月）</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高（累計）</div>
+      <div class="kpi-value">64,733<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋28.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益（累計）</div>
+      <div class="kpi-value">8,719<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋17.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益（累計）</div>
+      <div class="kpi-value">9,914<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋35.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">四半期純利益（累計）</div>
+      <div class="kpi-value">9,643<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 42.7%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・基本情報</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役会長　佐々木 秀吉</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（6事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">セキュリティ機器、カード機器及びその他事務用機器、情報機器、計測機器、情報通信、設計事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">新規：グラフテック岩通計測㈱（第2四半期に設立）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）／連結四半期決算</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">EPS（四半期累計）</span>
+        <span class="data-val">181.01<span class="data-sub">円（前年同期 323.91円）</span></span>
+      </div>
+    </div>
+    <div class="highlight">
+      セキュリティ機器・情報通信・設計事業など多様な機器・サービス事業を展開する複合グループ。当第3四半期は、㈱ナカヨの通信機器事業の新規連結（情報通信セグメント）が売上を大きく押し上げ、設計事業も大幅増益。一方、前年同期に計上した負ののれん発生益（14,296百万円）の剥落により、純利益は前年比で大幅減少した。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（第3四半期累計）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">64,733 <span class='data-sub'>百万円 ＋28.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">25,938 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">販売費及び一般管理費</span>
+          <span class="data-val">17,218 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">8,719 <span class='data-sub'>百万円 ＋17.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">9,914 <span class='data-sub'>百万円 ＋35.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">9,643 <span class='data-sub'>百万円 △42.7%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📡 ㈱ナカヨの通信機器事業が連結入り→情報通信売上高が前年比137.1%増</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏗 設計事業が大口耐震診断受注で営業利益246.5%増</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 為替差益453百万円計上（前年は為替差損316百万円）で経常利益を押上</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前年計上の負ののれん発生益（14,296百万円）剥落→純利益が大幅減少</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📋 カード機器が主力製品の切替期でセグメント利益73.9%減</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 売上高・利益（第3四半期累計）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🔒 セキュリティ機器</div>
+          <div class="segment-row"><span>外部売上高</span><span>12,261 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>4,926 百万円</span></div>
+          <div class="segment-row"><span>前年同期比（売上）</span><span class="up">＋3.5%</span></div>
+          <div class="segment-row"><span>前年同期比（利益）</span><span class="up">＋1.2%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">💳 カード機器及びその他事務用機器</div>
+          <div class="segment-row"><span>外部売上高</span><span>1,794 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>184 百万円</span></div>
+          <div class="segment-row"><span>前年同期比（売上）</span><span class="down">△26.6%</span></div>
+          <div class="segment-row"><span>前年同期比（利益）</span><span class="down">△73.9%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🖨 情報機器</div>
+          <div class="segment-row"><span>外部売上高</span><span>9,288 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>281 百万円</span></div>
+          <div class="segment-row"><span>前年同期比（売上）</span><span class="down">△8.8%</span></div>
+          <div class="segment-row"><span>前年同期比（利益）</span><span class="up">＋4.9%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">📐 計測機器</div>
+          <div class="segment-row"><span>外部売上高</span><span>3,954 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>628 百万円</span></div>
+          <div class="segment-row"><span>前年同期比（売上）</span><span class="up">＋1.1%</span></div>
+          <div class="segment-row"><span>前年同期比（利益）</span><span class="down">△3.0%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">📡 情報通信</div>
+          <div class="segment-row"><span>外部売上高</span><span>21,162 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>973 百万円</span></div>
+          <div class="segment-row"><span>前年同期比（売上）</span><span class="up">＋137.1%</span></div>
+          <div class="segment-row"><span>前年同期比（利益）</span><span class="up">＋85.2%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏗 設計事業</div>
+          <div class="segment-row"><span>外部売上高</span><span>6,196 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>1,575 百万円</span></div>
+          <div class="segment-row"><span>前年同期比（売上）</span><span class="up">＋45.7%</span></div>
+          <div class="segment-row"><span>前年同期比（利益）</span><span class="up">＋246.5%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 通期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年6月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>前期実績（2025/6期）</th>
+          <th>今期通期予想</th>
+          <th>増減率</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>66,175 百万円（推計）</td>
+          <td>90,000 百万円</td>
+          <td class="up">＋36.0%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>8,888 百万円（推計）</td>
+          <td>10,700 百万円</td>
+          <td class="up">＋20.4%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>9,005 百万円（推計）</td>
+          <td>11,400 百万円</td>
+          <td class="up">＋26.6%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>6,794 百万円（推計）</td>
+          <td>10,300 百万円</td>
+          <td class="up">＋51.6%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>—</td>
+          <td>193.34 円</td>
+          <td>—</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📌 通期予想は変更なし：</strong>2025年8月19日付で公表した通期業績予想に修正はありません。第3四半期累計の進捗率は、売上高72%・営業利益81%・経常利益87%・純利益94%と、純利益は既に通期予想の9割超を達成。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="bs-grid">
+      <div class="card">
+        <div class="card-title">バランスシート（2026年3月31日）</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">144,057<span class='data-sub'>百万円 ＋2.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">流動資産</span>
+          <span class="data-val">90,132<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">固定資産</span>
+          <span class="data-val">53,924<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">29,695<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">114,362<span class='data-sub'>百万円 ＋2.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">79.2<span class='data-sub'>%</span><span class='data-sub'>（前期末 77.7%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">2,146.71<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">主要資産・負債の変動</div>
+        <div class="data-row">
+          <span class="data-key">現金及び預金</span>
+          <span class="data-val" style="color:var(--green);">48,787<span class='data-sub'>百万円 ＋37.3億増加</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">受取手形・売掛金及び契約資産</span>
+          <span class="data-val" style="color:var(--green);">20,982<span class='data-sub'>百万円 ＋31.6億増加</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">原材料及び貯蔵品</span>
+          <span class="data-val" style="color:var(--red);">4,755<span class='data-sub'>百万円 △10.3億減少</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">土地</span>
+          <span class="data-val" style="color:var(--red);">21,737<span class='data-sub'>百万円 △22.2億減少</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">未払法人税等</span>
+          <span class="data-val">2,727<span class='data-sub'>百万円 ＋11.5億増加</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">非支配株主持分</span>
+          <span class="data-val" style="color:var(--red);">270<span class='data-sub'>百万円 △22.5億減少</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>財政状態の概況：</strong>総資産は前期末比31.5億円増加し1,440億円台。現金・売掛金の増加が主因。一方、土地の売却（△22.2億円）や非支配株主持分の大幅減少（△22.5億円）が目立つ。自己資本比率は79.2%と引き続き高水準を維持。なお、㈱ナカヨとの企業結合については、当第3四半期末時点でも取得原価の配分が完了しておらず暫定的な会計処理中。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/6期　第2四半期末</div>
+        <div class="div-cell-val">45.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間配当</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2025/6期　期末</div>
+        <div class="div-cell-val">55.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">合計 100.00円</div>
+      </div>
+      <div class="div-cell" style="background:var(--navy-pale);">
+        <div class="div-cell-label">2026/6期　第2四半期末（実績）</div>
+        <div class="div-cell-val" style="color:var(--accent);">55.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間配当　前期比＋10円</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2026/6期　期末（予想）</div>
+        <div class="div-cell-val">70.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">合計 125.00円（予）＋25円増配</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2026年6月期の年間配当は125円を予定（前期100円から25円増配）。第2四半期末に55円を実施済み、期末に70円を予定。増収増益を背景に積極的な株主還元を継続する方針。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・留意事項</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">企業結合の暫定処理<br><small>㈱ナカヨとの企業結合について取得原価の配分未確定。確定後に業績数値が修正される可能性あり</small></div>
+      <div class="risk-item high">特殊利益の剥落<br><small>前年の負ののれん発生益14,296百万円・段階取得差損5,164百万円が消滅。純利益ベースでの比較に注意</small></div>
+      <div class="risk-item high">カード機器事業の低迷<br><small>主力製品の切替期による売上26.6%減・利益73.9%減。新製品の立ち上がりが課題</small></div>
+      <div class="risk-item mid-level">情報機器の売上減少<br><small>個人向けカッティングマシン等の売上8.8%減。市場環境の変化への対応が必要</small></div>
+      <div class="risk-item mid-level">物価上昇・個人消費リスク<br><small>国内の物価上昇が個人消費を下押しするリスクが継続。特にコンシューマー向け製品に影響</small></div>
+      <div class="risk-item mid-level">国際情勢・為替リスク<br><small>不安定な国際情勢の影響。為替は当期差益453百万円だが、変動リスクは継続</small></div>
+      <div class="risk-item">情報通信事業の統合リスク<br><small>ナカヨ（売上211億円）の事業統合・シナジー創出が業績の鍵。期中の決算期変更（3月→6月）も注意</small></div>
+      <div class="risk-item">設計事業の案件依存<br><small>大口の耐震診断受注等により246.5%増益も、案件の継続性・再現性には不確実性あり</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年6月期第3四半期（累計9ヶ月）は、売上高64,733百万円（＋28.0%）・営業利益8,719百万円（＋17.9%）・経常利益9,914百万円（＋35.0%）と本業ベースで着実な成長を達成。㈱ナカヨの連結入りによる情報通信事業の急拡大と、設計事業の大幅増益が業績を牽引した。一方、親会社株主帰属純利益は前年の特殊利益（負ののれん発生益14,296百万円）の剥落により9,643百万円（△42.7%）と大幅減となったが、これは一過性要因であり実力ベースでは大幅増益。通期業績予想に変更はなく、純利益進捗率は既に約94%に達している。財務体質は自己資本比率79.2%と引き続き優良。年間配当も125円（前期比＋25円）に引き上げ、株主還元を強化する姿勢を明確にしている。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はあいホールディングス株式会社（3076）2026年6月期第3四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
