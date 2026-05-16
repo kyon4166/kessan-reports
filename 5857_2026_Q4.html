@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AREホールディングス株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #8B6914;
+    --gold-light: #B8922A;
+    --gold-pale: #F9F4EA;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F5F0;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(139,105,20,0.18);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: #1C1A14; padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), #E8C96A, var(--gold)); }
+  header::after { content: '貴金属・リサイクル'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.03); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #E8C96A; border: 1px solid #8B6914; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #E8C96A; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--gold-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--gold-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--gold-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--gold-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--gold-pale); border-left: 4px solid var(--gold-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--gold-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--gold); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: #1C1A14; color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .sales-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .sales-table th { background: #1C1A14; color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .sales-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .sales-table td:first-child { text-align: left; color: var(--mid); }
+  .sales-table tr:last-child td { font-weight: 500; background: var(--gold-pale); }
+  footer { background: #1C1A14; padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #8B6914; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated</div>
+  <h1>ＡＲＥホールディングス株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信〔ＩＦＲＳ〕（連結）要約　／　証券コード 5857</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月1日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上収益</div>
+      <div class="kpi-value">569,992<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋12.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">37,088<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋85.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社帰属当期利益</div>
+      <div class="kpi-value">24,441<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋70.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">315.49<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 187.13円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　東浦 知哉</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（2事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">貴金属事業、環境保全事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">重要な変更なし</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">国際財務報告基準（IFRS）／2017年3月期第1四半期より適用</span>
+      </div>
+    </div>
+    <div class="highlight">
+      金・銀・パラジウム・プラチナ・ロジウム等の貴金属・希少金属をスクラップからリサイクル・精錬する純粋持株会社グループ。国内（アサヒプリテック等）に加え、北米（Asahi Refining USA/Canada）・アジア各国に展開するグローバルな貴金属リサイクル企業。金価格高騰・北米精錬事業の好調を背景に、当期は大幅増益を達成。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS連結）</div>
+        <div class="data-row">
+          <span class="data-key">売上収益</span>
+          <span class="data-val">569,992 <span class='data-sub'>百万円 ＋12.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">44,822 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">37,088 <span class='data-sub'>百万円 ＋85.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前利益</span>
+          <span class="data-val">34,706 <span class='data-sub'>百万円 ＋69.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社帰属当期利益</span>
+          <span class="data-val">24,441 <span class='data-sub'>百万円 ＋70.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">当期包括利益合計</span>
+          <span class="data-val">80,352 <span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🥇 金価格の高騰により金売上が前期比＋6.0%増（450,530百万円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 北米精錬事業が好調。製品・倉庫・トレーディング各分野で増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💎 パラジウム＋28.2%、プラチナ＋68.9%、銀＋88.2%と貴金属全般が伸長</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 CFヘッジ益（49,631百万円）計上により包括利益が大幅増（80,352百万円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 金融費用が194→3,251百万円に増加（借入コスト上昇）</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 貴金属別売上 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">貴金属別 売上収益</div>
+      <table class="sales-table">
+        <tr>
+          <th style="text-align:left;">品目</th>
+          <th>前期（2025/3）百万円</th>
+          <th>当期（2026/3）百万円</th>
+          <th>前期比</th>
+        </tr>
+        <tr><td>金</td><td>424,852</td><td>450,530</td><td class="up">＋6.0%</td></tr>
+        <tr><td>銀</td><td>6,973</td><td>13,122</td><td class="up">＋88.2%</td></tr>
+        <tr><td>パラジウム</td><td>21,077</td><td>27,011</td><td class="up">＋28.2%</td></tr>
+        <tr><td>プラチナ</td><td>17,200</td><td>29,045</td><td class="up">＋68.9%</td></tr>
+        <tr><td>その他</td><td>36,107</td><td>50,283</td><td class="up">＋39.3%</td></tr>
+        <tr><td>合計</td><td>506,211</td><td>569,992</td><td class="up">＋12.6%</td></tr>
+      </table>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 営業利益</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🥇 貴金属事業</div>
+          <div class="segment-row"><span>外部売上収益</span><span>569,863 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>35,424 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">大幅増益</span></div>
+          <div class="segment-row"><span>（前期）</span><span>18,339 百万円</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">♻️ 環境保全事業</div>
+          <div class="segment-row"><span>外部売上収益</span><span>— 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益（持分法）</span><span>1,845 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△3.9%</span></div>
+          <div class="segment-row"><span>（前期）</span><span>1,919 百万円</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上収益</td>
+          <td>569,992 百万円</td>
+          <td>680,000 百万円</td>
+          <td class="up">＋19.3%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>37,088 百万円</td>
+          <td>41,000 百万円</td>
+          <td class="up">＋10.8%</td>
+        </tr>
+        <tr>
+          <td>税引前利益</td>
+          <td>34,706 百万円</td>
+          <td>40,000 百万円</td>
+          <td class="up">＋15.2%</td>
+        </tr>
+        <tr>
+          <td>親会社帰属当期利益</td>
+          <td>24,441 百万円</td>
+          <td>29,000 百万円</td>
+          <td class="up">＋18.7%</td>
+        </tr>
+        <tr>
+          <td>EPS（基本的）</td>
+          <td>315.49 円</td>
+          <td>337.43 円</td>
+          <td class="up">＋7.0%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📈 来期見通し：</strong>引き続き収益拡大と企業価値向上に注力。第2四半期累計で売上収益330,000百万円（＋38.5%）・営業利益20,000百万円（＋30.4%）を予想。金銀を中心とした貴金属市況の継続と北米精錬事業の拡大が主な成長ドライバー。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">615,388<span class='data-sub'>百万円 ＋25.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">230,555<span class='data-sub'>百万円 ＋82.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">384,833<span class='data-sub'>百万円 ＋5.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">37.5<span class='data-sub'>%</span><span class='data-sub'>（前期25.8%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり親会社所有者帰属持分</span>
+          <span class="data-val">2,682.61<span class='data-sub'>円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">棚卸資産</span>
+          <span class="data-val">122,415<span class='data-sub'>百万円（前期51,178）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--red);">△99,385<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△349<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--green);">＋91,878<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">10,336<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">（前期末現金）</span>
+          <span class="data-val">17,555<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー特記事項：</strong>営業CFがマイナス転換（△99,385百万円）。これは棚卸資産が71,236百万円増加したことが主因で、金銀相場上昇に伴う在庫価値の膨張によるもの。財務CFは社債発行（39,833百万円）・長期借入（40,160百万円）・新株発行（24,141百万円）により大幅プラス。持分比率は37.5%に大きく改善。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">80.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 42.8%</div>
+      </div>
+      <div class="div-cell" style="background:var(--gold-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--gold-light);">125.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 39.6%　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">135.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 40.0%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">配当性向40%を目処に安定配当継続。成長投資・M&Aへの内部留保とのバランスを重視。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      当期は中間60円・期末65円の計125円（前期80円から56.3%増）と大幅増配。来期は中間65円・期末70円の計135円（8.0%増）を予定。利益成長に連動した積極的な還元姿勢が鮮明。配当金総額は10,282百万円（前期6,193百万円）。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">貴金属相場・為替変動<br><small>主力の金・パラジウム等は国際市場連動。ロジウムはヘッジ手段が限られ価格変動リスク大。為替相場も業績に直結。</small></div>
+      <div class="risk-item high">棚卸資産・営業CF変動リスク<br><small>当期棚卸資産が71,236百万円増加し営業CFが△99,385百万円に。金相場動向次第で資金繰りが大きく変動する構造。</small></div>
+      <div class="risk-item high">海外事業・地政学リスク<br><small>北米・アジアで事業展開。米国通商政策・関税変更・輸出入規制強化が事業に影響。北米精錬事業への依存度が高い。</small></div>
+      <div class="risk-item mid-level">法規制・コンプライアンス<br><small>貴金属サプライチェーンの人権・資金洗浄対応（責任ある貴金属管理）。各国の環境・気候変動規制強化リスク。</small></div>
+      <div class="risk-item mid-level">のれん・固定資産の減損<br><small>企業買収により計上したのれん・資産について、市場環境変化時に減損リスク。当期も494百万円の減損を計上。</small></div>
+      <div class="risk-item mid-level">金利上昇・資金調達リスク<br><small>有利子負債（社債・借入金）が増加傾向。金利上昇局面での利払い増加リスク。金融費用が前期比約17倍に拡大。</small></div>
+      <div class="risk-item">経済変動・景気後退<br><small>製造業・消費動向の悪化が貴金属スクラップの回収量・需要に影響を与える可能性。</small></div>
+      <div class="risk-item">競合激化・技術革新<br><small>国内外での競合激化や独自プロセス技術の研究開発費回収の不確実性。</small></div>
+      <div class="risk-item">情報セキュリティ・AI<br><small>高度化するサイバー攻撃リスクおよびAI活用に伴う機密情報漏洩・誤情報リスク。</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は売上収益＋12.6%・営業利益＋85.6%・親会社帰属当期利益＋70.7%と大幅増収増益を達成。金・プラチナ・パラジウム等の貴金属価格高騰と、北米精錬事業における金銀需給の変動への的確な対応が主要因。CFヘッジ益の計上もあり当期包括利益は80,352百万円に達した。財務面では新株発行・社債発行により持分比率が25.8%→37.5%に大幅改善。一方、棚卸資産の急増（＋71,236百万円）により営業CFはマイナスに転じており、貴金属相場の反落リスクには注視が必要。来期（2027年3月期）は増収増益継続を予想し、配当も135円（＋8.0%）増配予定。引き続き配当性向40%目処の株主還元方針を維持する。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はＡＲＥホールディングス株式会社（5857）2026年3月期決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
