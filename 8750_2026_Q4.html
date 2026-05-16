@@ -7,9 +7,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #12294A;
-    --navy-light: #1E4A7A;
-    --navy-pale: #E6EEF7;
+    --navy: #1A2E4A;
+    --navy-light: #2A5298;
+    --navy-pale: #E8EEF8;
     --dark: #1A1A1A;
     --charcoal: #2D2D2D;
     --mid: #5A5A5A;
@@ -17,20 +17,19 @@
     --white: #FFFFFF;
     --red: #C0392B;
     --green: #1E7E4A;
-    --gold: #B8860B;
-    --border: rgba(18,41,74,0.15);
+    --border: rgba(26,46,74,0.15);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
   header { background: var(--navy); padding: 56px 48px 40px; position: relative; overflow: hidden; }
-  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--navy-light), #4A8AC4, var(--gold)); }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--navy-light), #6B9BD2, var(--navy-light)); }
   header::after { content: '生命保険・金融'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
-  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #6AAAD4; border: 1px solid #2E6DA4; padding: 4px 12px; margin-bottom: 16px; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #6B9BD2; border: 1px solid #2A5298; padding: 4px 12px; margin-bottom: 16px; }
   header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
   header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
   .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
   .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
-  .meta-item span { color: #6AAAD4; font-weight: 500; }
+  .meta-item span { color: #6B9BD2; font-weight: 500; }
   main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
   .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
   .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
@@ -41,7 +40,6 @@
   .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
   .up { color: var(--green); }
   .down { color: var(--red); }
-  .flat { color: var(--mid); }
   section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
   section:nth-child(2) { animation-delay: 0.1s; }
   section:nth-child(3) { animation-delay: 0.15s; }
@@ -80,11 +78,7 @@
   .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
   .forecast-table td:first-child { text-align: left; color: var(--mid); }
   .forecast-table tr:last-child td { border-bottom: none; }
-  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
-  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
-  .premise-key { color: var(--mid); }
-  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
-  footer { background: var(--navy); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E6DA4; }
+  footer { background: var(--navy); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2A5298; }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
   @media (max-width: 640px) {
     header { padding: 40px 24px 32px; }
@@ -93,7 +87,6 @@
     .risk-grid { grid-template-columns: 1fr; }
     .div-row { grid-template-columns: repeat(2, 1fr); }
     .segment-grid { grid-template-columns: 1fr; }
-    .premise-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -107,7 +100,6 @@
     <div class="meta-item">決算発表日 <span>2026年5月15日</span></div>
     <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
     <div class="meta-item">上場 <span>東京証券取引所</span></div>
-    <div class="meta-item">旧商号 <span>第一生命ホールディングス（2026年4月1日付商号変更）</span></div>
   </div>
 </header>
 
@@ -118,7 +110,7 @@
     <div class="kpi-item">
       <div class="kpi-label">経常収益</div>
       <div class="kpi-value">11,308,275<span class="kpi-unit">百万円</span></div>
-      <div class="kpi-change up">▲ 14.5%</div>
+      <div class="kpi-change up">＋14.5%</div>
     </div>
     <div class="kpi-item">
       <div class="kpi-label">経常利益</div>
@@ -133,7 +125,7 @@
     <div class="kpi-item">
       <div class="kpi-label">EPS（基本的）</div>
       <div class="kpi-value">119.83<span class="kpi-unit">円</span></div>
-      <div class="kpi-change flat">前期 123.72円</div>
+      <div class="kpi-change">前期 123.72円</div>
     </div>
   </div>
 
@@ -154,20 +146,20 @@
         <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">国内保険事業、海外保険事業、その他事業</span>
       </div>
       <div class="data-row">
-        <span class="data-key">連結範囲の変更</span>
-        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">重要な変更なし</span>
+        <span class="data-key">連結範囲の重要な変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">無</span>
       </div>
       <div class="data-row">
         <span class="data-key">会計基準</span>
-        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用については継続調査・研究中</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用は将来的に想定し調査・検討中</span>
       </div>
       <div class="data-row">
-        <span class="data-key">株式分割</span>
-        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2025年4月1日付 普通株式1株→4株に分割。EPS・BPS等は遡及調整済</span>
+        <span class="data-key">商号変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年4月1日付で第一生命ホールディングス㈱より現商号へ変更</span>
       </div>
     </div>
     <div class="highlight">
-      国内最大級の生命保険グループ。第一生命・第一フロンティア生命・ネオファースト生命などを傘下に擁する国内保険事業に加え、米国Protective Life Corporationを軸とした海外保険事業が業績の両輪。2026年4月1日付で第一生命ホールディングス株式会社から株式会社第一ライフグループへ商号変更。
+      国内外の生命保険・損害保険事業を中核とする保険持株会社。主要子会社は第一生命、第一フロンティア生命、海外ではProtective Life Corporation（米国）等。当期は保険料等収入の増加と資産運用収益の大幅拡大により経常収益が11兆円を突破。一方、米国新保険会計基準（ASC Topic944）適用による責任準備金繰入額の急増が経常・純利益を圧迫した。
     </div>
   </section>
 
@@ -182,19 +174,19 @@
         <div class="card-title">損益サマリー</div>
         <div class="data-row">
           <span class="data-key">経常収益</span>
-          <span class="data-val">11,308,275 <span class='data-sub'>百万円 ▲14.5%</span></span>
+          <span class="data-val">11,308,275 <span class='data-sub'>百万円 ＋14.5%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">うち保険料等収入</span>
-          <span class="data-val">6,944,066 <span class='data-sub'>百万円 ▲2.1%</span></span>
+          <span class="data-val">6,944,066 <span class='data-sub'>百万円 ＋2.1%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">うち資産運用収益</span>
-          <span class="data-val">3,735,313 <span class='data-sub'>百万円 ▲47.7%</span></span>
+          <span class="data-val">3,735,313 <span class='data-sub'>百万円 ＋47.7%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">経常費用</span>
-          <span class="data-val">10,554,587 <span class='data-sub'>百万円 ▲15.7%</span></span>
+          <span class="data-val">10,554,587 <span class='data-sub'>百万円 ＋15.7%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">経常利益</span>
@@ -206,25 +198,25 @@
         </div>
         <div class="data-row">
           <span class="data-key">包括利益</span>
-          <span class="data-val">817,590 <span class='data-sub'>百万円（前期 △75,635）</span></span>
+          <span class="data-val">817,590 <span class='data-sub'>百万円</span></span>
         </div>
       </div>
       <div class="card">
         <div class="card-title">増減益の主因</div>
         <div class="data-row" style="display:block;padding:10px 0;">
-          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 第一フロンティア生命での販売増加等で保険料等収入が増加</span>
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 第一フロンティア生命の販売増等により保険料等収入＋2.1%増</span>
         </div>
         <div class="data-row" style="display:block;padding:10px 0;">
-          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 有価証券売却益・為替差益（3,641億円）の拡大で資産運用収益が大幅増</span>
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 資産運用収益が＋47.7%急増（有価証券売却益・為替差益の拡大）</span>
         </div>
         <div class="data-row" style="display:block;padding:10px 0;">
-          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 責任準備金等繰入額が前期比430.8%増（1兆8,149億円）で経常費用を押し上げ</span>
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 責任準備金等繰入額が1,814,937百万円へ急増（前期341,899百万円）</span>
         </div>
         <div class="data-row" style="display:block;padding:10px 0;">
-          <span style="font-size:13px;color:var(--charcoal);display:block;">🌐 Protective Life（米国）が米国新保険会計基準（ASC944）を適用し減益要因に</span>
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 米国子会社（Protective）で新保険会計基準（Topic944）を適用</span>
         </div>
         <div class="data-row" style="display:block;padding:10px 0;">
-          <span style="font-size:13px;color:var(--charcoal);display:block;">🔁 前期のセカンドキャリア特別支援費用（289億円）剥落で特別損失は縮小</span>
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 海外保険事業は増益傾向、持分法投資損益23,055百万円（前期3,526百万円）</span>
         </div>
       </div>
     </div>
@@ -234,25 +226,24 @@
       <div class="card-title">セグメント別 経常利益（当期）</div>
       <div class="segment-grid">
         <div class="segment-item">
-          <div class="segment-name">🏠 国内保険事業</div>
+          <div class="segment-name">🇯🇵 国内保険事業</div>
           <div class="segment-row"><span>外部経常収益</span><span>8,155,625 百万円</span></div>
           <div class="segment-row"><span>セグメント利益</span><span>676,269 百万円</span></div>
-          <div class="segment-row"><span>保険料等収入</span><span>5,108,737 百万円</span></div>
+          <div class="segment-row"><span>セグメント資産</span><span>45,559,593 百万円</span></div>
         </div>
         <div class="segment-item">
-          <div class="segment-name">🌐 海外保険事業</div>
+          <div class="segment-name">🌍 海外保険事業</div>
           <div class="segment-row"><span>外部経常収益</span><span>3,523,786 百万円</span></div>
           <div class="segment-row"><span>セグメント利益</span><span>112,629 百万円</span></div>
-          <div class="segment-row"><span>保険料等収入</span><span>1,835,328 百万円</span></div>
+          <div class="segment-row"><span>セグメント資産</span><span>28,033,406 百万円</span></div>
         </div>
         <div class="segment-item">
-          <div class="segment-name">📊 その他事業</div>
+          <div class="segment-name">🏢 その他事業</div>
           <div class="segment-row"><span>外部経常収益</span><span>79,050 百万円</span></div>
           <div class="segment-row"><span>セグメント利益</span><span>340,204 百万円</span></div>
-          <div class="segment-row"><span>主な内容</span><span>経営管理・AM事業</span></div>
+          <div class="segment-row"><span>セグメント資産</span><span>4,478,272 百万円</span></div>
         </div>
       </div>
-      <div style="font-size:11px;color:var(--mid);margin-top:10px;">※ セグメント利益合計より調整額△375,415百万円（関係会社受取配当消去等）を控除後の連結経常利益は753,688百万円</div>
     </div>
 
     <!-- 来期予想 -->
@@ -269,29 +260,29 @@
           <td>経常収益</td>
           <td>11,308,275 百万円</td>
           <td>10,666,000 百万円</td>
-          <td class="down">△5.7%</td>
+          <td class="down" style="text-align:right;">△5.7%</td>
         </tr>
         <tr>
           <td>経常利益</td>
           <td>753,688 百万円</td>
           <td>869,000 百万円</td>
-          <td class="up">＋15.3%</td>
+          <td class="up" style="text-align:right;">＋15.3%</td>
         </tr>
         <tr>
           <td>当期純利益</td>
           <td>436,597 百万円</td>
           <td>513,000 百万円</td>
-          <td class="up">＋17.5%</td>
+          <td class="up" style="text-align:right;">＋17.5%</td>
         </tr>
         <tr>
           <td>EPS</td>
           <td>119.83 円</td>
           <td>142.46 円</td>
-          <td class="up">＋18.9%</td>
+          <td class="up" style="text-align:right;">＋18.9%</td>
         </tr>
       </table>
       <div class="highlight" style="margin-top:14px;">
-        <strong>📌 増益転換の見通し：</strong>Protective Life（海外保険事業）における増益を主因に、経常利益・純利益ともに来期は2桁増益を予想。経常収益はProtective Lifeの資産運用収益減少等により減収見込み。前提条件：市場金利・為替・株式相場は2026年3月期末水準を踏まえた設定。
+        <strong>来期見通し：</strong>Protective Life Corporationにおける資産運用収益の減少等により経常収益は減収見通し。一方、海外生命保険事業の利益成長を主因に経常利益・純利益は増益を予想。市場金利・為替・株式相場の前提は2026年3月期末の水準を参照。
       </div>
     </div>
   </section>
@@ -307,19 +298,15 @@
         <div class="card-title">バランスシート</div>
         <div class="data-row">
           <span class="data-key">総資産</span>
-          <span class="data-val">74,159,096<span class='data-sub'>百万円 ▲6.9%</span></span>
-        </div>
-        <div class="data-row">
-          <span class="data-key">うち有価証券</span>
-          <span class="data-val">55,576,274<span class='data-sub'>百万円 ▲4.8%</span></span>
-        </div>
-        <div class="data-row">
-          <span class="data-key">保険契約準備金</span>
-          <span class="data-val">61,255,107<span class='data-sub'>百万円 ▲3.4%</span></span>
+          <span class="data-val">74,159,096<span class='data-sub'>百万円 ＋6.9%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">純資産</span>
-          <span class="data-val">4,254,212<span class='data-sub'>百万円 ▲16.9%</span></span>
+          <span class="data-val">4,254,212<span class='data-sub'>百万円 ＋16.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">保険契約準備金</span>
+          <span class="data-val">61,255,107<span class='data-sub'>百万円 ＋3.4%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">自己資本比率</span>
@@ -329,16 +316,16 @@
           <span class="data-key">1株当たり純資産</span>
           <span class="data-val">1,181.36<span class='data-sub'>円</span></span>
         </div>
+        <div class="data-row">
+          <span class="data-key">有価証券</span>
+          <span class="data-val">55,576,274<span class='data-sub'>百万円 ＋4.8%</span></span>
+        </div>
       </div>
       <div class="card">
         <div class="card-title">キャッシュフロー</div>
         <div class="data-row">
           <span class="data-key">営業CF</span>
-          <span class="data-val" style="color:var(--green);">+792,158<span class='data-sub'>百万円 ▲33.7%</span></span>
-        </div>
-        <div class="data-row">
-          <span class="data-key">うち資産運用活動</span>
-          <span class="data-val" style="color:var(--red);">△865,141<span class='data-sub'>百万円</span></span>
+          <span class="data-val" style="color:var(--green);">+792,158<span class='data-sub'>百万円 ＋33.7%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">投資CF</span>
@@ -352,10 +339,14 @@
           <span class="data-key">期末現金</span>
           <span class="data-val">2,087,588<span class='data-sub'>百万円</span></span>
         </div>
+        <div class="data-row">
+          <span class="data-key">現金減少額</span>
+          <span class="data-val" style="color:var(--red);">△225,940<span class='data-sub'>百万円</span></span>
+        </div>
       </div>
     </div>
     <div class="highlight">
-      <strong>⚠ キャッシュフロー：</strong>責任準備金等の大幅繰入（約1.9兆円）が営業CFのマイナス要因となったものの、利息・配当金等の受取額（2,016,842百万円）や有価証券売却等の資金回収で全体としてプラス確保。有価証券への投資規模（18.5兆円取得、17.8兆円売却・償還）は保険会社の資産運用規模の大きさを反映。自己株買い（1,076億円）も実施。
+      <strong>財政状態：</strong>総資産は74兆円超へ拡大し、有価証券（55兆円超）が資産の中心。純資産は4兆2,542億円（＋16.9%）に増加し、その他有価証券評価差額金が前期比43.1%増の1兆3,726億円となったことが主因。営業CFは責任準備金繰入増もあり大幅増加。投資CFは資産運用活動（有価証券の取得・売却）が大部分を占める。
     </div>
   </section>
 
@@ -367,12 +358,12 @@
     </div>
     <div class="div-row">
       <div class="div-cell">
-        <div class="div-cell-label">2025/3（株式分割前実績）</div>
-        <div class="div-cell-val">137.00<span style="font-size:14px;color:var(--mid);">円</span></div>
-        <div class="div-cell-sub">配当性向 29.5%</div>
+        <div class="div-cell-label">2025/3（分割後換算）</div>
+        <div class="div-cell-val">34.25<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">実際の支払額：137.00円</div>
       </div>
       <div class="div-cell" style="background:var(--navy-pale);">
-        <div class="div-cell-label">2026/3（分割調整後）</div>
+        <div class="div-cell-label">2026/3</div>
         <div class="div-cell-val" style="color:var(--navy-light);">54.50<span style="font-size:14px;color:var(--mid);">円</span></div>
         <div class="div-cell-sub">配当性向 45.5%　増配</div>
       </div>
@@ -383,11 +374,12 @@
       </div>
       <div class="div-cell">
         <div class="div-cell-label">配当方針</div>
-        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:12px;">純資産配当率（DOE）5%を目安に安定・継続的な増配を目指す方針。</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">純資産配当率（ROE）・配当性向を考慮した安定的・継続的な配当を目指す。</div>
       </div>
     </div>
     <div class="highlight" style="margin-top:14px;">
-      2026年3月期は中間24円・期末30.50円の計54.50円（分割後換算）に増配。2027年3月期は中間・期末36円ずつの計72円を予定し、利益増益見通しを背景に増配継続。なお、2026/3期の株式分割前との比較では年間137円→54.50円（分割換算後の比較では+32.7%相当の増配）。配当金総額1,972億円（前期1,261億円から大幅増）。
+      ※ 2025年4月1日付で普通株式1株につき4株の株式分割を実施。分割前の配当実績はすべて分割後換算値に読み替えて表示しています。<br><br>
+      2025年度は中間24.00円・期末30.50円の計54.50円（分割後換算）。分割後換算ベースでの前期（34.25円）比＋20.25円（＋59.1%）の大幅増配。2026年度は中間・期末とも36.00円ずつ計72.00円を予定し、増益見通しに沿った増配継続方針を明示。
     </div>
   </section>
 
@@ -398,14 +390,14 @@
       <span class="section-title">主要リスク・後発事象</span>
     </div>
     <div class="risk-grid">
-      <div class="risk-item high">海外会計基準変更リスク<br><small>Protective LifeのASC944（新保険会計基準）適用が業績に影響。来期以降の数値の変動性に注意</small></div>
-      <div class="risk-item high">市場リスク（金利・為替・株式）<br><small>55.6兆円の有価証券ポートフォリオを抱え、金利上昇・円高・株安は評価損や責任準備金変動を通じて業績を直撃</small></div>
-      <div class="risk-item high">責任準備金の変動リスク<br><small>当期繰入1.8兆円超。金利・死差・解約率の前提変動が大きく業績を左右する構造的リスク</small></div>
-      <div class="risk-item mid-level">海外M&A統合リスク<br><small>Portfolio Holding買収（約1.0十億ドル）を完了。Obsidian Insurance買収も決定済（2026〜27年度完了予定）</small></div>
-      <div class="risk-item mid-level">自己資本比率の低さ<br><small>連結自己資本比率5.7%は保険会社固有の特性だが、ソルベンシー規制強化等で資本充足の継続的な管理が必要</small></div>
-      <div class="risk-item mid-level">経常収益の減収見通し<br><small>来期は△5.7%減収を予想。Protective Lifeの資産運用収益減少が主因で、前期の特殊要因（高水準の有価証券売却益・為替差益）の剥落</small></div>
-      <div class="risk-item">のれん・無形資産<br><small>のれん残高3,022億円（うち海外1,246億円）。のれん償却額327億円／年。海外事業の業績悪化時に減損リスク</small></div>
-      <div class="risk-item">地政学・規制リスク<br><small>米国保険規制（NAIC等）・IFRS17号への対応、地政学リスクによるサプライチェーン・資産運用への影響</small></div>
+      <div class="risk-item high">米国新保険会計基準（Topic944）<br><small>在外子会社での適用開始により責任準備金繰入額が急増。将来期間の損益への影響継続リスク</small></div>
+      <div class="risk-item high">市場・金利・為替リスク<br><small>運用資産55兆円超を保有。金利・株価・為替の変動がALMと評価損益に直接影響</small></div>
+      <div class="risk-item high">海外M&Aリスク<br><small>Portfolio Holding（1.0十億ドル）・Obsidian Insurance買収完了予定。統合コスト・のれん償却リスク</small></div>
+      <div class="risk-item mid-level">保険引受リスク<br><small>解約返戻金・年金支払いの増減が責任準備金に影響。長生きリスク・感染症等の外部要因も存在</small></div>
+      <div class="risk-item mid-level">有価証券評価損リスク<br><small>評価差額金1兆3,726億円を保有。相場下落時には純資産への影響大</small></div>
+      <div class="risk-item mid-level">規制・税務リスク<br><small>IFRS17（保険会計）の国内適用動向、各国税制変更が業績・資本に影響する可能性</small></div>
+      <div class="risk-item">自己株式取得・資本政策<br><small>当期107,597百万円の自己株取得を実施。今後の資本配分が株主還元と投資のバランスに影響</small></div>
+      <div class="risk-item">新規事業リスク<br><small>アセットマネジメント等の非保険事業拡大に伴う収益変動・競争激化リスク</small></div>
     </div>
     <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
       ■ 高リスク　■ 中リスク　■ その他
@@ -419,7 +411,7 @@
       <span class="section-title">総評</span>
     </div>
     <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
-      2026年3月期は経常収益が14.5%増と大幅増収を達成した一方、Protective LifeのASC944（新保険会計基準）適用による会計処理変更や責任準備金の大幅繰入（1.8兆円超）を受け、経常利益・純利益はわずかに減益となった。為替差益3,641億円・有価証券売却益7,805億円など一時的な収益貢献も大きく、実力ベースの評価には留意が必要。純資産は4.3兆円（＋16.9%）に膨らみ、その他有価証券評価差額金も1.4兆円（＋43.1%）に改善。自社株買い1,076億円・増配（54.50円→72円予定）と株主還元も積極的に実施。来期は海外保険事業の増益を主因に経常利益＋15.3%・純利益＋17.5%の増益転換を見込む。Protective Lifeを軸とした海外事業拡大戦略（M&A継続）が中長期の成長ドライバー。
+      2026年3月期は経常収益が11兆円を超え大幅増収となったものの、米国子会社における新保険会計基準（ASC Topic944）適用による責任準備金繰入額の急増が利益を圧迫し、経常利益・純利益は微減益となった。会計基準変更という特殊要因を除けば、保険料収入・資産運用収益・海外事業ともに実力ベースの収益力は拡大している。財務面では純資産が4兆円超に増加し自己資本比率も改善。株式分割（1→4株）後もEPSベースで増配を継続しており、株主還元への積極姿勢が明確。来期は経常収益が減収見通しながら、利益は海外事業主導で二桁増益を目指す。米国でのM&A（Portfolio Holding・Obsidian Insurance）が将来の事業規模拡大の鍵となる。
     </div>
   </section>
 
