@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三菱商事株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #8B1A1A;
+    --red-light: #B33A2E;
+    --red-pale: #F8EEEC;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --green: #1E7E4A;
+    --loss: #C0392B;
+    --border: rgba(139,26,26,0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--red); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--red-light), #D4897A, var(--red-light)); }
+  header::after { content: '総合商社'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #D4897A; border: 1px solid #B33A2E; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #D4897A; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--red-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--loss); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--red-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--red-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--red-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--loss); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--red-pale); border-left: 4px solid var(--red-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--red-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--red); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--red); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  footer { background: var(--red); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #B33A2E; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated</div>
+  <h1>三菱商事株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信〔IFRS〕（連結）要約　／　証券コード 8058</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月1日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">収益</div>
+      <div class="kpi-value">18,915,995<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 1.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">税引前利益</div>
+      <div class="kpi-value">1,096,094<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 21.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社帰属当期純利益</div>
+      <div class="kpi-value">800,460<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 15.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">210.92<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 236.97円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役 社長　中西 勝也</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（8事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">地球環境エネルギー、マテリアルソリューション、金属資源、社会インフラ、モビリティ、食品産業、S.L.C.、電力ソリューション</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">新規4社（Cermaq Finnmark AS 他）、除外なし</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">国際会計基準（IFRS）　財務情報の国際的比較可能性向上のため適用</span>
+      </div>
+    </div>
+    <div class="highlight">
+      エネルギー資源から食品・インフラ・金融サービスまで多様な産業に跨るグローバル総合商社。LNGカナダプロジェクト（2025年6月生産開始）や銅資産の戦略的強化、ローソンの持分法適用会社化など事業ポートフォリオの組み替えが進む。「累進配当」政策と積極的な自己株式取得を通じ株主還元を重視。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">収益</span>
+          <span class="data-val">18,915,995 <span class='data-sub'>百万円 ▲1.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">1,655,074 <span class='data-sub'>百万円 △9.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">持分法投資損益</span>
+          <span class="data-val">467,941 <span class='data-sub'>百万円 ▲38.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前利益</span>
+          <span class="data-val">1,096,094 <span class='data-sub'>百万円 △21.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社帰属当期純利益</span>
+          <span class="data-val">800,460 <span class='data-sub'>百万円 △15.8%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 ローソン持分法適用会社化に伴う前期再評価益（約3,000億円）の反動が最大要因</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛢️ 豪州原料炭事業の前期炭鉱売却益の反動・市況下落</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏗️ 社会インフラ（千代田化工建設）が前期損失の反動で大幅増益（＋4,530億円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚡ 電力ソリューションが前期減損の反動＋トレーディング増加で黒字転換（＋5,900億円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔵 銅資産の過年度減損戻入（＋532億円）が持分法損益を大幅改善</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 当期純利益（親会社帰属）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🌿 地球環境エネルギー</div>
+          <div class="segment-row"><span>売上総利益</span><span>112,211 百万円</span></div>
+          <div class="segment-row"><span>当期純利益</span><span>160,862 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△19.0%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🧪 マテリアルソリューション</div>
+          <div class="segment-row"><span>売上総利益</span><span>214,527 百万円</span></div>
+          <div class="segment-row"><span>当期純利益</span><span>26,348 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△61.4%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">⛏️ 金属資源</div>
+          <div class="segment-row"><span>売上総利益</span><span>175,226 百万円</span></div>
+          <div class="segment-row"><span>当期純利益</span><span>204,523 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△10.2%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏗️ 社会インフラ</div>
+          <div class="segment-row"><span>売上総利益</span><span>236,457 百万円</span></div>
+          <div class="segment-row"><span>当期純利益</span><span>85,124 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋113.9%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🚗 モビリティ</div>
+          <div class="segment-row"><span>売上総利益</span><span>170,999 百万円</span></div>
+          <div class="segment-row"><span>当期純利益</span><span>57,609 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△48.7%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🍎 食品産業</div>
+          <div class="segment-row"><span>売上総利益</span><span>297,344 百万円</span></div>
+          <div class="segment-row"><span>当期純利益</span><span>83,257 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△9.9%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏪 S.L.C.（ローソン等）</div>
+          <div class="segment-row"><span>売上総利益</span><span>233,460 百万円</span></div>
+          <div class="segment-row"><span>当期純利益</span><span>91,007 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△50.8%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">⚡ 電力ソリューション</div>
+          <div class="segment-row"><span>売上総利益</span><span>207,273 百万円</span></div>
+          <div class="segment-row"><span>当期純利益</span><span>43,408 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">黒字転換</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>親会社帰属当期純利益</td>
+          <td>800,460 百万円</td>
+          <td>1,100,000 百万円</td>
+          <td class="up">＋37.4%</td>
+        </tr>
+        <tr>
+          <td>EPS（基本的）</td>
+          <td>210.92 円</td>
+          <td>300.42 円</td>
+          <td class="up">＋42.5%</td>
+        </tr>
+        <tr>
+          <td>営業収益CF（独自指標）</td>
+          <td>1,048,100 百万円</td>
+          <td>1,250,000 百万円</td>
+          <td class="up">＋19.3%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📈 大幅増益見通しの主因：</strong>当期の一時的下押し要因（ローソン再評価益剥落・豪州炭鉱売却益剥落等）が解消される見込み。LNGカナダの本格稼働、銅事業の増産、S.L.C.・電力ソリューション事業の収益拡大が寄与する想定。累進配当継続と自己株式の機動的取得も継続方針。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">24,151,695<span class='data-sub'>百万円 ＋12.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">10,250,574<span class='data-sub'>百万円 ＋0.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社帰属持分</span>
+          <span class="data-val">9,440,567<span class='data-sub'>百万円 ＋0.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">39.1<span class='data-sub'>%</span><span class='data-sub'>（前期43.6%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり親会社帰属持分</span>
+          <span class="data-val">2,578.33<span class='data-sub'>円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">ネット有利子負債（リース除く）</span>
+          <span class="data-val">3,888,200<span class='data-sub'>百万円 ＋27.6%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+1,490,041<span class='data-sub'>百万円 △10.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--loss);">△448,584<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF</span>
+          <span class="data-val" style="color:var(--green);">+1,041,457<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--loss);">△804,684<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">1,841,464<span class='data-sub'>百万円 ＋19.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業収益CF（独自指標）</span>
+          <span class="data-val" style="color:var(--green);">+1,048,100<span class='data-sub'>百万円 ＋6.5%</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>営業CFは税金支払増加や営業収入減少で前期比△1,683億円。投資CFは設備投資・持分法投資取得増加により拡大（△4,486億円）。財務CFは自己株式取得（約1兆円）が主因で大幅マイナス。ネット有利子負債は3.9兆円へ増加したものの、財務健全性維持を方針に掲げている。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">100.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 42.2%</div>
+      </div>
+      <div class="div-cell" style="background:var(--red-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--red-light);">110.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 52.2%　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">125.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 41.6%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">持続的な利益成長に合わせて増配する「累進配当」を継続。自己株式の取得も機動的に実施。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度は中間55円・期末55円の計110円に増配（前期100円から10%増）。2026年度予想は中間62円・期末63円の計125円を計画。減益局面においても「累進配当」方針を堅持し、連続増配を維持する姿勢を明示。あわせて約1兆円規模の自己株式取得（2025年度）を実施し、株主還元を強化。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">商品市況リスク<br><small>原油1ドル変動で当期純利益±24億円。銅価格100ドル変動で±26億円。LNG価格は原油連動が大宗</small></div>
+      <div class="risk-item high">為替リスク<br><small>米ドル・円が1円変動で当期純利益±約50億円。海外投資・配当の円換算に直接影響</small></div>
+      <div class="risk-item high">地政学・エネルギー安保リスク<br><small>中東情勢によるLNGスポット急騰（2026年3月に20ドル超）、ロシア・ウクライナ情勢、米中対立の継続</small></div>
+      <div class="risk-item mid-level">事業投資リスク<br><small>豪州原料炭（BMA権益50%）・チリ/ペルー銅資産・Eneco（欧州再エネ）など大規模投資の変動リスク</small></div>
+      <div class="risk-item mid-level">金利リスク<br><small>有利子負債総額5.7兆円（リース除く）。変動金利主体のため金利急騰局面では一時的利払い増加リスク</small></div>
+      <div class="risk-item mid-level">株価リスク<br><small>市場性ある株式を時価1.4兆円保有（評価益3,486億円含む）。株価下落で評価益消失リスク</small></div>
+      <div class="risk-item">気候変動リスク<br><small>炭素税等の移行リスクと物理的リスク。化石燃料関連資産の長期的減損リスク</small></div>
+      <div class="risk-item">コンプライアンスリスク<br><small>国内外での多岐にわたる法令・規制（制裁・贈収賄・安全保障貿易管理等）への対応コスト増加</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は前期の特殊要因（ローソン再評価益約3,000億円・豪州炭鉱売却益1,346億円）の剥落により純利益が大幅減益（△15.8%）となった。一方、社会インフラ（千代田化工建設の採算改善）や電力ソリューション（黒字転換）、持分法損益（銅資産減損戻入で▲38.7%増）が補完。LNGカナダプロジェクトが2025年6月に生産開始するなど将来の収益基盤が着実に拡大している。来期（2027年3月期）は一時的要因解消により純利益1.1兆円（▲37.4%増）と大幅回復を見込む。自己資本比率は39.1%へ低下（自己株式1兆円取得の影響）したが、財務健全性は維持。累進配当（110円→125円）と積極的な自己株式取得で株主還元を継続強化する姿勢を鮮明にしている。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は三菱商事株式会社（8058）2026年3月期決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
