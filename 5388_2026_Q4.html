@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>クニミネ工業株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brown: #3D2B1F;
+    --brown-light: #6B4226;
+    --brown-pale: #F5EDE6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #FAF7F4;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(61,43,31,0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--brown); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--brown-light), #A0714F, var(--brown-light)); }
+  header::after { content: '鉱業・化学'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #A0714F; border: 1px solid #6B4226; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #A0714F; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--brown-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--brown-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--brown-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--brown-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--brown-pale); border-left: 4px solid var(--brown-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--brown-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--brown); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--brown); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  footer { background: var(--brown); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #6B4226; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>クニミネ工業株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 5388</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月8日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">17,075<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 8.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">1,602<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 25.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">1,340<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 24.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">110.10<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 88.13円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　國峯 保彦</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（3事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ベントナイト事業、クレイサイエンス事業、アグリ事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">変更なし（新規・除外ともなし）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用予定なし</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">グループ構成</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">当社および子会社6社（国内4社・海外2社）</span>
+      </div>
+    </div>
+    <div class="highlight">
+      ベントナイト（粘土鉱物）の採掘・製造・販売を中核とする専門素材メーカー。鋳物・土木・ペット用途のベントナイト事業を主力に、精製粘土製品のクレイサイエンス事業、農薬加工のアグリ事業を展開。高付加価値製品・価格改定の推進とコストダウンにより、売上高・全利益段階で増収増益を達成。財務健全性が高く有利子負債はゼロ（実質無借金）。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">17,075 <span class='data-sub'>百万円 ▲8.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">5,004 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">1,602 <span class='data-sub'>百万円 ▲25.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">1,954 <span class='data-sub'>百万円 ▲23.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">1,340 <span class='data-sub'>百万円 ▲24.4%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⛏ ベントナイト事業：素形材・環境建設の価格改定が奏功し増収増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌾 アグリ事業：殺虫・殺菌剤好調＋新規除草剤受注で大幅増収増益（＋50%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💱 為替差損→差益に転換：前期△12百万円→当期＋79百万円が経常利益を下支え</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 投資有価証券売却益183百万円が純利益を押し上げ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚗️ クレイサイエンス事業：工業用輸出向け需要減・在庫評価減で減収減益</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 業績（営業利益ベース）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">⛏ ベントナイト事業</div>
+          <div class="segment-row"><span>外部売上高</span><span>11,842 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>1,289 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋19.9%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🧪 クレイサイエンス事業</div>
+          <div class="segment-row"><span>外部売上高</span><span>1,788 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>167 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△7.9%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌾 アグリ事業</div>
+          <div class="segment-row"><span>外部売上高</span><span>3,444 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>829 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋50.0%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>17,075 百万円</td>
+          <td>18,000 百万円</td>
+          <td class="up">＋5.4%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>1,602 百万円</td>
+          <td>1,700 百万円</td>
+          <td class="up">＋6.1%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>1,954 百万円</td>
+          <td>2,000 百万円</td>
+          <td class="up">＋2.3%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>1,340 百万円</td>
+          <td>1,350 百万円</td>
+          <td class="up">＋0.7%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>110.10 円</td>
+          <td>110.85 円</td>
+          <td class="up">＋0.7%</td>
+        </tr>
+      </table>
+      <div class="premise-grid">
+        <div class="premise-item"><span class="premise-key">第2四半期累計（売上高）</span><span class="premise-val">8,500 百万円（＋10.2%）</span></div>
+        <div class="premise-item"><span class="premise-key">第2四半期累計（営業利益）</span><span class="premise-val">540 百万円（＋17.1%）</span></div>
+        <div class="premise-item"><span class="premise-key">第2四半期累計（経常利益）</span><span class="premise-val">650 百万円（＋11.8%）</span></div>
+        <div class="premise-item"><span class="premise-key">第2四半期累計（純利益）</span><span class="premise-val">450 百万円（＋6.9%）</span></div>
+      </div>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📌 来期見通し：</strong>各セグメントで付加価値提案・価格適正化・原価低減を継続し、売上高・全利益段階で増収増益を計画。ただし、中東情勢のさらなる緊迫化・エネルギー価格上昇・物流費・人件費の構造的上昇が不確実要因として残る。DX推進・AI活用体制の整備、新鉱区開発投資も継続予定。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">26,844<span class='data-sub'>百万円 ＋3.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">23,143<span class='data-sub'>百万円 ＋3.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債</span>
+          <span class="data-val">—<span class='data-sub'>（実質無借金）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">83.0<span class='data-sub'>%</span><span class='data-sub'>（前期83.4%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,828.69<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+4,325<span class='data-sub'>百万円 ▲322.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△2,576<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△504<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF</span>
+          <span class="data-val" style="color:var(--green);">+1,749<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">9,107<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財務ハイライト：</strong>棚卸資産が1,881百万円減少したことで営業CFが前期比大幅増（＋3,301百万円）。投資CFは有形固定資産取得1,140百万円・海外子会社への貸付1,674百万円が主因で拡大。財務CFは配当金支払487百万円が主体。自己資本比率83.0%と極めて健全な財務体質を維持。インタレスト・カバレッジ・レシオは1,108倍と際立って高水準。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">40.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 45.4%</div>
+      </div>
+      <div class="div-cell" style="background:var(--brown-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--brown-light);">40.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 36.3%　据え置き</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">40.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 36.1%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">配当性向30%を目安に業績連動。1株当たり配当金の下限を40円として安定配当を継続する方針。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      当期は中間15円・期末25円の計40円を据え置き（前期と同額）。利益増加に伴い配当性向は45.4%→36.3%へ低下。来期（2027年3月期）も40円を予定。同社は「1株当たり配当金の下限40円」を明示しており、業績悪化局面でも安定配当を維持する姿勢を示している。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">中東情勢・エネルギー価格リスク<br><small>原油・LNG等の調達コスト上昇が製造コストに直接波及。業績予想は重大影響なしを前提に策定</small></div>
+      <div class="risk-item high">構造的コスト上昇<br><small>物流費・人件費・賞与の継続的増加。インフレ進行に伴う諸費用増が利益率を圧迫</small></div>
+      <div class="risk-item high">為替リスク<br><small>当期は為替差益79百万円を計上。海外子会社・外貨建取引の拡大に伴い変動リスクが増大</small></div>
+      <div class="risk-item mid-level">需要変動リスク<br><small>ペット用途は価格改定による得意先離れで減収。自動車産業のトランプ関税影響が素形材向けに波及</small></div>
+      <div class="risk-item mid-level">在庫・品質リスク<br><small>クレイサイエンス事業で規格外品廃棄による在庫評価減が発生。品質管理の一層の強化が課題</small></div>
+      <div class="risk-item mid-level">設備投資・資源開発リスク<br><small>有形固定資産取得1,140百万円・海外貸付1,674百万円が拡大。新鉱区開発コスト増加の見込み</small></div>
+      <div class="risk-item">訴訟リスク<br><small>当期に訴訟関連損失24百万円を計上。継続案件の動向に注視が必要</small></div>
+      <div class="risk-item">労働力不足<br><small>国内全般の人手不足が製造・物流に影響。DX・AI活用による省人化推進が急務</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0ede8;">
+      2026年3月期は売上高・全利益段階で増収増益を達成。特にアグリ事業（営業利益＋50%）とベントナイト事業（同＋20%）が業績を牽引した。為替差益の転換（△12→＋79百万円）や投資有価証券売却益183百万円も利益を下支え。自己資本比率83.0%・実質無借金の極めて健全な財務体質と、潤沢な手元現金（91億円）は強固な経営基盤を示す。来期は各事業の増収増益継続を見込むが、コスト増・地政学リスクへの対応が引き続き課題。配当は下限40円を維持する安定還元方針を堅持している。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はクニミネ工業株式会社（5388）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
