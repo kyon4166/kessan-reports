@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社アイチコーポレーション 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1A3A5C;
+    --blue-light: #2E6DA4;
+    --blue-pale: #E8F0F8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,58,92,0.18);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--blue); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue-light), #5B9BD5, var(--blue-light)); }
+  header::after { content: '高所作業車・特装車'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5B9BD5; border: 1px solid #2E6DA4; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5B9BD5; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--blue-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--blue-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--blue-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--blue-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--blue-pale); border-left: 4px solid var(--blue-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--blue-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--blue); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--blue); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  footer { background: var(--blue); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E6DA4; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>株式会社アイチコーポレーション</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 6345</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年4月24日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京・名古屋証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">59,613<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 0.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">7,511<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 1.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">6,658<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 5.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">100.73<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 84.96円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">取締役社長　中澤 俊一</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（2事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">特装車（高所作業車等の新車販売）、部品・修理（アフターサービス）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">変更なし（新規・除外ともなし）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用に向けて検討中</span>
+      </div>
+    </div>
+    <div class="highlight">
+      高所作業車をはじめとする特装車の製造・販売・アフターサービスに特化した専業メーカー。東名両取引所に上場。国内市場向けの新車販売に加え、部品・修理・中古車販売・リース・教育事業などバリューチェーン全体に事業を展開。コスト削減と生産性向上を推進しながら、増収増益を達成。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">59,613 <span class='data-sub'>百万円 ▲0.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">13,180 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">7,511 <span class='data-sub'>百万円 ▲1.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">8,172 <span class='data-sub'>百万円 △0.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">6,658 <span class='data-sub'>百万円 ▲5.1%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔧 特装車売上は前期シャシ認証問題の反動で減収（△13億円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔩 部品・修理売上は継続的なワンストップサービス拡充で増収（＋13億円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 投資有価証券売却益1,249百万円（前期871百万円）が純利益を押し上げ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 為替差損39百万円発生（前期は差益34百万円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚙️ 生産性向上・原価低減活動により営業利益は増益確保</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 売上高・利益（粗利ベース）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🚛 特装車セグメント</div>
+          <div class="segment-row"><span>外部顧客売上高</span><span>44,652 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益（粗利）</span><span>7,607 百万円</span></div>
+          <div class="segment-row"><span>前期比（売上）</span><span class="down">△3.0%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🔩 部品・修理セグメント</div>
+          <div class="segment-row"><span>外部顧客売上高</span><span>14,061 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益（粗利）</span><span>5,199 百万円</span></div>
+          <div class="segment-row"><span>前期比（売上）</span><span class="up">＋10.8%</span></div>
+        </div>
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        特装車は新車販売が苦戦する一方、部品・修理は予防整備・車検取込等の積極展開で二桁成長。サービス事業の比率向上が収益構造の安定化に寄与。
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>59,613 百万円</td>
+          <td>63,000 百万円</td>
+          <td class="up">▲ 5.7%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>7,511 百万円</td>
+          <td>7,900 百万円</td>
+          <td class="up">▲ 5.2%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>8,172 百万円</td>
+          <td>8,500 百万円</td>
+          <td class="up">▲ 4.0%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>6,658 百万円</td>
+          <td>6,700 百万円</td>
+          <td class="up">▲ 0.6%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>100.73 円</td>
+          <td>103.78 円</td>
+          <td class="up">▲ 3.0%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📈 来期の見通し：</strong>国内市場でのサービス・リース・中古車販売等のバリューチェーン延伸による収益機会の創出、および海外市場開拓の強化により全項目での増収増益を計画。労務費・部品価格の上昇など不透明要因は継続するが、着実な成長軌道を想定。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">92,812<span class='data-sub'>百万円 △7.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">75,398<span class='data-sub'>百万円 △10.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">17,414<span class='data-sub'>百万円 ▲6.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">81.2<span class='data-sub'>%</span><span class='data-sub'>（前期83.7%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,167.89<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+803<span class='data-sub'>百万円 △91.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△3,675<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△17,436<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">現金及び現金同等物の増減</span>
+          <span class="data-val" style="color:var(--red);">△20,162<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">26,708<span class='data-sub'>百万円（前期46,871）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフローの特徴：</strong>財務CFが大幅マイナスの主因は、自己株式取得による支出12,831百万円と配当金支払4,546百万円。大規模な株主還元の実施により期末現金は前期比201億円超の減少。営業CFは売上債権の増加（△3,788百万円）が重荷となり前期比大幅減。固定資産取得4,918百万円と積極投資も継続。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3</div>
+        <div class="div-cell-val">55.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 64.7%</div>
+      </div>
+      <div class="div-cell" style="background:var(--blue-pale);">
+        <div class="div-cell-label">2026/3</div>
+        <div class="div-cell-val" style="color:var(--blue-light);">60.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 59.6%　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">65.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 62.6%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">安定的な配当を維持しながら、業績に応じた増配を継続する方針。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度は中間30円・期末30円の計60円（前期55円から9.1%増）に増配。2026年度は中間33円・期末32円の計65円を予定し、連続増配を継続。大規模自己株式取得（128億円）とあわせ、積極的な株主還元姿勢を鮮明にしている。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">原材料・燃料コストの上昇<br><small>中東情勢の悪化による原油・ナフサ等の供給制約と燃料コスト増が継続リスク</small></div>
+      <div class="risk-item high">為替・金利リスク<br><small>為替相場の急変動と金利上昇が収益・資金コストを圧迫。当期は為替差損39百万円を計上</small></div>
+      <div class="risk-item high">グローバルサプライチェーン混乱<br><small>日中関係悪化やシャシ認証問題の再発リスク。特装車の調達・生産に影響</small></div>
+      <div class="risk-item mid-level">人手不足・労務費上昇<br><small>深刻化する人手不足と人件費上昇がコスト構造を継続的に圧迫</small></div>
+      <div class="risk-item mid-level">現金残高の大幅減少<br><small>自己株式取得・配当により期末現金が前期比約43%減。流動性リスクへの留意が必要</small></div>
+      <div class="risk-item mid-level">米国通商政策の不透明感<br><small>関税政策変更等が輸出・グローバル展開計画に影響を及ぼすリスク</small></div>
+      <div class="risk-item">国内需要の変動<br><small>建設・インフラ投資動向に連動する高所作業車需要の変動リスク</small></div>
+      <div class="risk-item">持分法投資損益の減少<br><small>持分法投資損益が前期469百万円→362百万円に減少。関係会社の業績動向に注意</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は売上高・営業利益・当期純利益のすべてで増収増益を達成し、堅調な実力ベースの収益力を示した。特装車部門はシャシ認証問題の解消後の反動減があったものの、部品・修理部門がワンストップサービス戦略の浸透で二桁成長を遂げ、売上構成の安定化が進んでいる。自己資本比率81.2%と財務健全性は引き続き高水準を維持。一方、大規模な自己株式取得（128億円）と増配（60円）を実施し積極的な株主還元を推進、期末現金は大幅に減少した点には注目が必要。来期は全項目での増収増益を計画しており、バリューチェーン拡充と海外市場開拓が成長の鍵となる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社アイチコーポレーション（6345）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
