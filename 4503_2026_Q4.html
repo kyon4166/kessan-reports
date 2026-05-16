@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アステラス製薬株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #1A4A4A;
+    --teal-light: #2E8A72;
+    --teal-pale: #E6F4F0;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F4F7F5;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,74,74,0.16);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--teal); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--teal-light), #5BC4A4, var(--teal-light)); }
+  header::after { content: '医薬品・ヘルスケア'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5BC4A4; border: 1px solid #2E8A72; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5BC4A4; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--teal-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--teal-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--teal-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--teal-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--teal-pale); border-left: 4px solid var(--teal-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .product-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--teal-light); padding: 16px 18px; font-size: 13px; }
+  .product-name { font-weight: 600; color: var(--teal); margin-bottom: 6px; font-size: 13px; letter-spacing: 0.05em; }
+  .product-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .product-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .region-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 12px; }
+  .region-cell { background: var(--white); padding: 14px 12px; text-align: center; }
+  .region-label { font-size: 10px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .region-val { font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--dark); }
+  .region-chg { font-size: 11px; margin-top: 4px; font-weight: 500; }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--teal); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .core-badge { display: inline-block; font-size: 10px; background: var(--teal-pale); color: var(--teal); border: 1px solid var(--teal-light); padding: 2px 8px; margin-left: 6px; vertical-align: middle; letter-spacing: 0.05em; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  footer { background: var(--teal); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E8A72; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .region-grid { grid-template-columns: repeat(2, 1fr); }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated</div>
+  <h1>アステラス製薬株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信〔ＩＦＲＳ〕(連結)　要約　／　証券コード 4503</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年4月27日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上収益</div>
+      <div class="kpi-value">2,139,245<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋11.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">382,633<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋832.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社帰属当期利益</div>
+      <div class="kpi-value">291,535<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋474.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">162.77<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 28.35円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・基本情報</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長CEO　岡村 直樹</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業セグメント</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">医薬品事業（単一セグメント）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">重要な変更なし</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">国際会計基準（IFRS）／2014年3月期より適用</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要顧客（10%以上）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">McKesson Group（312,508百万円）、Cencora Group（307,123百万円）</span>
+      </div>
+    </div>
+    <div class="highlight">
+      グローバル製薬企業として、がん・泌尿器・眼科・移植領域を中心に研究開発・製造・販売を展開。重点戦略製品（PADCEV、IZERVAY、VYLOY、VEOZAH、XOSPATA）の急成長と、コスト最適化施策SMT（Sustainable Margin Transformation）の効果により、コアベース・フルベースともに大幅増益を達成。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（フルベース）</div>
+        <div class="data-row">
+          <span class="data-key">売上収益</span>
+          <span class="data-val">2,139,245 <span class='data-sub'>百万円 ＋11.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">1,730,820 <span class='data-sub'>百万円 ＋10.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">382,633 <span class='data-sub'>百万円 ＋832.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前利益</span>
+          <span class="data-val">376,587 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社帰属当期利益</span>
+          <span class="data-val">291,535 <span class='data-sub'>百万円 ＋474.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">当期包括利益</span>
+          <span class="data-val">449,472 <span class='data-sub'>百万円 ＋819.4%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">損益サマリー（コアベース）</div>
+        <div class="data-row">
+          <span class="data-key">売上収益</span>
+          <span class="data-val">2,139,245 <span class='data-sub'>百万円 ＋11.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">コア営業利益</span>
+          <span class="data-val">555,681 <span class='data-sub'>百万円 ＋41.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">コア当期利益</span>
+          <span class="data-val">424,413 <span class='data-sub'>百万円 ＋43.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">基本的1株当たりコア当期利益</span>
+          <span class="data-val">237.01 <span class='data-sub'>円 ＋43.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">無形資産償却費（除外項目）</span>
+          <span class="data-val">135,982 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">その他費用（除外項目）</span>
+          <span class="data-val">72,440 <span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">増減益の主因</div>
+      <div class="data-row" style="display:block;padding:10px 0;">
+        <span style="font-size:13px;color:var(--charcoal);display:block;">💊 重点戦略製品（PADCEV・VYLOY・IZERVAY等）の急成長が収益を牽引（売上収益＋11.9%）</span>
+      </div>
+      <div class="data-row" style="display:block;padding:10px 0;">
+        <span style="font-size:13px;color:var(--charcoal);display:block;">⚙️ SMTによるコスト最適化：販売費約110億円・研究開発費約100億円を削減</span>
+      </div>
+      <div class="data-row" style="display:block;padding:10px 0;">
+        <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前期の「その他費用」2,358億円（大型減損等）が当期は724億円へ大幅縮小、営業利益を押し上げ</span>
+      </div>
+      <div class="data-row" style="display:block;padding:10px 0;">
+        <span style="font-size:13px;color:var(--charcoal);display:block;">💱 為替：ユーロ安（164→175円）で売上＋301億円、コア営業利益＋168億円の押し上げ効果</span>
+      </div>
+      <div class="data-row" style="display:block;padding:10px 0;">
+        <span style="font-size:13px;color:var(--charcoal);display:block;">⚠️ AT132（遺伝子治療薬）戦略的中断による無形資産減損164億円、Xyphos関連減損120億円を計上</span>
+      </div>
+    </div>
+
+    <!-- 主要製品売上 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">主要製品別 売上（億円）</div>
+      <div class="product-grid">
+        <div class="product-item">
+          <div class="product-name">XTANDI</div>
+          <div class="product-row"><span>当期</span><span>9,608億円</span></div>
+          <div class="product-row"><span>前期比</span><span class="up">＋5.3%</span></div>
+          <div class="product-row"><span>主要市場</span><span style="font-family:'Noto Sans JP';font-size:11px;">欧州中心に拡大</span></div>
+        </div>
+        <div class="product-item">
+          <div class="product-name">PADCEV</div>
+          <div class="product-row"><span>当期</span><span>2,212億円</span></div>
+          <div class="product-row"><span>前期比</span><span class="up">＋34.8%</span></div>
+          <div class="product-row"><span>適応</span><span style="font-family:'Noto Sans JP';font-size:11px;">尿路上皮がん</span></div>
+        </div>
+        <div class="product-item">
+          <div class="product-name">VYLOY</div>
+          <div class="product-row"><span>当期</span><span>631億円</span></div>
+          <div class="product-row"><span>前期比</span><span class="up">＋415.6%</span></div>
+          <div class="product-row"><span>適応</span><span style="font-family:'Noto Sans JP';font-size:11px;">胃腺がん等</span></div>
+        </div>
+        <div class="product-item">
+          <div class="product-name">IZERVAY</div>
+          <div class="product-row"><span>当期</span><span>776億円</span></div>
+          <div class="product-row"><span>前期比</span><span class="up">＋33.2%</span></div>
+          <div class="product-row"><span>適応</span><span style="font-family:'Noto Sans JP';font-size:11px;">加齢黄斑変性</span></div>
+        </div>
+        <div class="product-item">
+          <div class="product-name">VEOZAH</div>
+          <div class="product-row"><span>当期</span><span>466億円</span></div>
+          <div class="product-row"><span>前期比</span><span class="up">＋37.7%</span></div>
+          <div class="product-row"><span>適応</span><span style="font-family:'Noto Sans JP';font-size:11px;">血管運動神経症状</span></div>
+        </div>
+        <div class="product-item">
+          <div class="product-name">XOSPATA</div>
+          <div class="product-row"><span>当期</span><span>718億円</span></div>
+          <div class="product-row"><span>前期比</span><span class="up">＋5.7%</span></div>
+          <div class="product-row"><span>適応</span><span style="font-family:'Noto Sans JP';font-size:11px;">急性骨髄性白血病</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 地域別売上 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">地域別 売上収益（億円）</div>
+      <div class="region-grid">
+        <div class="region-cell">
+          <div class="region-label">米国</div>
+          <div class="region-val">9,402</div>
+          <div class="region-chg up">＋8.5%</div>
+        </div>
+        <div class="region-cell">
+          <div class="region-label">日本</div>
+          <div class="region-val">2,890</div>
+          <div class="region-chg up">＋8.2%</div>
+        </div>
+        <div class="region-cell">
+          <div class="region-label">エスタブリッシュドMKT</div>
+          <div class="region-val">5,636</div>
+          <div class="region-chg up">＋16.1%</div>
+        </div>
+        <div class="region-cell">
+          <div class="region-label">チャイナ</div>
+          <div class="region-val">1,015</div>
+          <div class="region-chg up">＋29.6%</div>
+        </div>
+        <div class="region-cell">
+          <div class="region-label">インターナショナルMKT</div>
+          <div class="region-val">2,307</div>
+          <div class="region-chg up">＋13.4%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）<span class="core-badge">フルベース</span></div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上収益</td>
+          <td>2,139,245 百万円</td>
+          <td>2,220,000 百万円</td>
+          <td class="up">＋3.8%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>382,633 百万円</td>
+          <td>395,000 百万円</td>
+          <td class="up">＋3.2%</td>
+        </tr>
+        <tr>
+          <td>税引前利益</td>
+          <td>376,587 百万円</td>
+          <td>385,000 百万円</td>
+          <td class="up">＋2.2%</td>
+        </tr>
+        <tr>
+          <td>当期利益（親会社帰属）</td>
+          <td>291,535 百万円</td>
+          <td>300,000 百万円</td>
+          <td class="up">＋2.9%</td>
+        </tr>
+        <tr>
+          <td>EPS（基本的）</td>
+          <td>162.77 円</td>
+          <td>167.46 円</td>
+          <td class="up">＋2.9%</td>
+        </tr>
+      </table>
+      <div class="card-title" style="margin-top:16px;">来期予想（2027年3月期）<span class="core-badge">コアベース</span></div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上収益</td>
+          <td>2,139,245 百万円</td>
+          <td>2,220,000 百万円</td>
+          <td class="up">＋3.8%</td>
+        </tr>
+        <tr>
+          <td>コア営業利益</td>
+          <td>555,681 百万円</td>
+          <td>620,000 百万円</td>
+          <td class="up">＋11.6%</td>
+        </tr>
+        <tr>
+          <td>コア当期利益</td>
+          <td>424,413 百万円</td>
+          <td>460,000 百万円</td>
+          <td class="up">＋8.4%</td>
+        </tr>
+        <tr>
+          <td>基本的1株当たりコア当期利益</td>
+          <td>237.01 円</td>
+          <td>256.77 円</td>
+          <td class="up">＋8.3%</td>
+        </tr>
+      </table>
+      <div class="premise-grid">
+        <div class="premise-item"><span class="premise-key">想定為替（米ドル）</span><span class="premise-val">150円／ドル（実績151円）</span></div>
+        <div class="premise-item"><span class="premise-key">想定為替（ユーロ）</span><span class="premise-val">180円／ユーロ（実績175円）</span></div>
+        <div class="premise-item"><span class="premise-key">重点戦略製品売上</span><span class="premise-val">6,100億円（当期4,803億円 ＋27.0%）</span></div>
+        <div class="premise-item"><span class="premise-key">XTANDI売上</span><span class="premise-val">9,100億円（当期9,608億円 △5.3%）</span></div>
+      </div>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📌 来期の見通し：</strong>PADCEV・IZERVAY・VYLOYを中心とした重点戦略製品がXTANDIの減少を吸収し増収。SMTによる販売費削減（△7.0%）と研究開発費拡大（＋12.8%）を並行。コア営業利益・コア当期利益はともに1桁〜10%台の増益を予想。フルベースの調整項目として無形資産償却費約1,400億円＋減損リスク等約800億円を織り込み済み。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">財政状態計算書（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">3,567,042<span class='data-sub'>百万円 ＋6.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">うち無形資産</span>
+          <span class="data-val">996,932<span class='data-sub'>百万円 △11.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">1,830,884<span class='data-sub'>百万円 ＋21.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">1,829,044<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">51.3<span class='data-sub'>%（前期45.3%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり親会社所有者帰属持分</span>
+          <span class="data-val">1,020.96<span class='data-sub'>円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">社債及び借入金合計</span>
+          <span class="data-val">565,952<span class='data-sub'>百万円 △32.0%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+560,188<span class='data-sub'>百万円 ＋188.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△66,722<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△404,779<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF（営業＋投資）</span>
+          <span class="data-val" style="color:var(--green);">+493,466<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金及び現金同等物</span>
+          <span class="data-val">281,605<span class='data-sub'>百万円 ＋49.5%</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>税引前利益の大幅増（31,237→376,587百万円）を受け、営業CFは前期比約3,657億円増の5,602億円に急増。財務CFのマイナス拡大は社債・借入金の返済（2,674億円）と配当支払（1,361億円）による。負債圧縮が進み、社債及び借入金合計は8,314億円→5,660億円へ大幅削減。財務体質は着実に改善。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3（前期）</div>
+        <div class="div-cell-val">74.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 261.1%</div>
+      </div>
+      <div class="div-cell" style="background:var(--teal-pale);">
+        <div class="div-cell-label">2026/3（当期）</div>
+        <div class="div-cell-val" style="color:var(--teal-light);">78.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 47.9%　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">80.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 47.8%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">中長期的な利益成長に基づき、安定的かつ持続的な配当向上に努める。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度（当期）は中間39円・期末39円の計78円に増配（前期74円から5.4%増）。2026年度は中間40円・期末40円の計80円を予想。前期の配当性向261.1%は当期利益が低水準だったことによる特殊値であり、当期の47.9%・来期の47.8%（予）と正常化。配当総額は141,116百万円（前期133,876百万円）。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">XTANDI特許・競合リスク<br><small>売上最大製品（9,608億円）。来期は△5.3%の減収を予想。ジェネリック参入・競合品台頭が最大リスク</small></div>
+      <div class="risk-item high">大型減損リスク<br><small>無形資産996,932百万円（資産の28%）。AT132中断など戦略変更に伴う追加減損の可能性。来期約800億円の費用を織り込み済み</small></div>
+      <div class="risk-item high">為替リスク<br><small>グローバル売上が9割超。米ドル1円変動・ユーロ1円変動が収益に直接影響。来期はユーロ円安（175→180円）を想定</small></div>
+      <div class="risk-item mid-level">研究開発リスク<br><small>来期研究開発費は3,550億円（＋12.8%）に拡大予定。新規第Ⅲ相試験の成否・開発中止リスクが収益に影響</small></div>
+      <div class="risk-item mid-level">重点戦略製品の市場浸透<br><small>PADCEV・VYLOY・IZERVAYは立ち上がり段階。競合品・適応拡大の遅れが成長計画を下振れさせるリスク</small></div>
+      <div class="risk-item mid-level">社債・借入金の返済<br><small>1年以内返済予定の長期借入金1,460億円＋1年以内償還予定社債1,000億円。リファイナンスリスクは限定的だが要注意</small></div>
+      <div class="risk-item">薬価・医療費規制<br><small>各国の薬価引下げ圧力・米国インフレ抑制法による交渉対象拡大が収益を圧迫するリスク</small></div>
+      <div class="risk-item">地政学リスク<br><small>チャイナ（1,015億円・＋29.6%）のサプライチェーンおよび規制リスク。インターナショナルMKTでの地政学的不安定</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は売上収益＋11.9%・親会社帰属当期利益＋474.5%と、フルベース・コアベースともに大幅な増収増益を達成。営業利益の急改善（41,039→382,633百万円）は、前期に計上した大型「その他費用」（2,358億円）の剥落とSMTコスト最適化効果が主因で、実力ベースのコア営業利益も41.6%増と堅調。重点戦略製品VYLOYの爆発的成長（＋415.6%）やPADCEVの加速（＋34.8%）が今後の成長ドライバー。一方、AT132の戦略的中断など大型パイプラインの見直しも実施。財務面では親会社所有者帰属持分比率が51.3%（前期45.3%）に改善し、有利子負債も大幅圧縮。来期は主力XTANDIの微減を重点戦略製品群で補い、コア・フルベースともに増益を見込む安定した成長軌道にある。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はアステラス製薬株式会社（4503）2026年3月期決算短信〔IFRS〕（連結）に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
