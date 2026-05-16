@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社エーアイテイー 2026年2月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1A3A5C;
+    --blue-light: #2E6DA4;
+    --blue-pale: #E8F0F8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,58,92,0.18);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--blue); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue-light), #5B9BD5, var(--blue-light)); }
+  header::after { content: '国際物流・フォワーディング'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 80px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5B9BD5; border: 1px solid #2E6DA4; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5B9BD5; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--blue-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--blue-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--blue-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--blue-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--blue-pale); border-left: 4px solid var(--blue-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--blue-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--blue); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--blue); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  footer { background: var(--blue); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E6DA4; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>株式会社エーアイテイー</h1>
+  <p class="subtitle">2026年２月期　決算短信（連結）要約　／　証券コード 9381</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年4月14日</span></div>
+    <div class="meta-item">対象期間 <span>2025年3月1日〜2026年2月28日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">営業収益</div>
+      <div class="kpi-value">58,399<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋5.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">4,196<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋3.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">3,175<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋4.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">135.18<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 129.72円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　矢倉 英一</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（2事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本、中国（その他：台湾・ベトナム・ミャンマー子会社）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">変更なし（前期：香港現地法人を清算除外済み）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用は国内外情勢を考慮し適切に対応方針</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計方針の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">法人税等会計基準等の改正適用（財務諸表への影響なし）</span>
+      </div>
+    </div>
+    <div class="highlight">
+      国際貨物輸送（フォワーディング）を主力とする総合物流グループ。アパレル・雑貨系荷動きの堅調推移と通関受注の大幅増（前期比＋9.6%）を背景に増収増益を達成。オンライン通関・フォワーディングサービス「Cargo Information Service」の機能拡充や生成AI活用による業務効率化を推進。チャイナプラスワンの潮流を捉えたASEAN取扱量の積み上げに注力中。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">営業収益</span>
+          <span class="data-val">58,399 <span class='data-sub'>百万円 ＋5.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業原価</span>
+          <span class="data-val">48,107 <span class='data-sub'>百万円 ＋5.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">10,292 <span class='data-sub'>百万円 ＋1.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">4,196 <span class='data-sub'>百万円 ＋3.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">4,680 <span class='data-sub'>百万円 ＋3.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">3,175 <span class='data-sub'>百万円 ＋4.2%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚢 アパレル関連荷動き堅調・通関受注件数が152,656件（＋9.6%）と大幅増</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📦 海上取扱コンテナ数が輸出入合計256,851TEU（＋3.2%）に拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 前期比で受取利息等が増加し経常利益を押し上げ（受取利息120百万円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 価格転嫁推進による売上総利益率の改善（上期低下局面から回復基調）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠️ 給与ベースアップ等により人件費が増加し販管費を圧迫（6,095百万円）</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 営業利益（増減）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🗾 日本</div>
+          <div class="segment-row"><span>外部営業収益</span><span>49,731 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>3,359 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋5.5%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🇨🇳 中国</div>
+          <div class="segment-row"><span>外部営業収益</span><span>7,005 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>661 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△2.6%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌏 その他（台湾・ベトナム・ミャンマー）</div>
+          <div class="segment-row"><span>外部営業収益</span><span>1,663 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>175 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△16.0%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">📊 連結合計</div>
+          <div class="segment-row"><span>外部営業収益合計</span><span>58,399 百万円</span></div>
+          <div class="segment-row"><span>営業利益</span><span>4,196 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋3.0%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年2月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2026年2月期実績</th>
+          <th>2027年2月期予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>営業収益</td>
+          <td>58,399 百万円</td>
+          <td>62,500 百万円</td>
+          <td class="up">＋7.0%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>4,196 百万円</td>
+          <td>4,530 百万円</td>
+          <td class="up">＋7.9%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>4,680 百万円</td>
+          <td>4,960 百万円</td>
+          <td class="up">＋6.0%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>3,175 百万円</td>
+          <td>3,390 百万円</td>
+          <td class="up">＋6.7%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>135.18 円</td>
+          <td>144.29 円</td>
+          <td class="up">＋6.7%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📌 来期見通しの要点：</strong>国際輸送ネットワークの拡充とグループ総合力を活かした案件獲得を推進。ASEAN（ベトナム・ミャンマー・カンボジア・バングラデシュ）からの取扱量増加とチャイナプラスワン需要を積極取込。ただし上半期は前年度の為替差益（192百万円）剥落により経常利益が前年同期比減少の見込み。下半期の施策効果発現により通期での増収増益を目指す。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">27,596<span class='data-sub'>百万円 ＋8.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">20,858<span class='data-sub'>百万円 ＋7.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">20,495<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">74.3<span class='data-sub'>%</span><span class='data-sub'>（前期74.6%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">872.39<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+3,530<span class='data-sub'>百万円 ＋9.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△1,590<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△2,222<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF</span>
+          <span class="data-val" style="color:var(--green);">+1,940<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">13,852<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ 財務状況：</strong>総資産は投資有価証券の増加（＋1,430百万円）などで拡大。自己資本比率74.3%と高い財務健全性を維持。営業CFは純利益・売上債権回収等で前期比改善。投資CFは定期預金の預入（△1,569百万円）・投資有価証券取得（△1,258百万円）が主因。財務CFは配当金支払（△1,996百万円）が主体。有利子負債残高は軽微（ICR293.7倍の財務安全性）。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/2期</div>
+        <div class="div-cell-val">80.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 61.7%</div>
+      </div>
+      <div class="div-cell" style="background:var(--blue-pale);">
+        <div class="div-cell-label">2026/2期</div>
+        <div class="div-cell-val" style="color:var(--blue-light);">100.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 74.0%　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/2期（予想）</div>
+        <div class="div-cell-val">110.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 76.2%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">連結業績・配当性向・内部留保を総合勘案し、安定的・継続的に配当を実施する方針。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      当期は中間45円・期末55円の計100円（前期80円から25%増配）。期末配当は2026年1月14日公表の増配修正（当初予想45円→55円）を経て確定。来期は中間・期末とも55円ずつ計110円を予定。増収増益局面での積極的な利益還元姿勢を継続。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">米国通商政策・関税リスク<br><small>関税引き上げ等による荷動き減少・物流コスト増加のリスクが高まっており、先行き不透明感が継続</small></div>
+      <div class="risk-item high">海上運賃の変動リスク<br><small>前期は上半期高水準→中間期以降縮小。運賃水準の変動が売上総利益率に直結する構造</small></div>
+      <div class="risk-item high">人件費上昇・人手不足<br><small>給与ベースアップ・労働規制強化により物流コスト増と来期の利益率圧迫が見込まれる</small></div>
+      <div class="risk-item mid-level">為替変動リスク<br><small>海外子会社の円換算収益・為替換算調整勘定に影響。来期は為替差益発生を見込まない前提</small></div>
+      <div class="risk-item mid-level">地政学・物流混乱リスク<br><small>中東・ウクライナ情勢等により航路変更・遅延リスクが常態化。調達・供給網への影響大</small></div>
+      <div class="risk-item mid-level">中国依存・チャイナリスク<br><small>中国セグメントはセグメント利益が前期比△2.6%。地政学リスクと荷動き変動に注視が必要</small></div>
+      <div class="risk-item">のれん・無形資産の減損リスク<br><small>のれん326百万円・顧客関連資産789百万円を計上。償却継続中で業況悪化時は減損懸念</small></div>
+      <div class="risk-item">ASEANへの事業拡大コスト<br><small>ミャンマー・台湾・ベトナム等の費用増（その他セグメント利益△16.0%）で投資効率に注意</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年2月期は営業収益58,399百万円（＋5.0%）・営業利益4,196百万円（＋3.0%）と堅調な増収増益を達成。アパレル関連荷動きの堅調推移に加え、通関受注件数が152,656件（前期比＋9.6%）と大幅伸長したことが主な牽引役。価格転嫁の進展により一時低下した売上総利益率も改善基調に回帰。自己資本比率74.3%・インタレスト・カバレッジ・レシオ293.7倍と財務健全性は極めて高い水準を維持。配当は100円（前期比＋25%）に増配し、来期も110円への増配を予定。来期はASEAN展開強化と生成AI活用による生産性向上を軸に増収増益（＋7%台）を目指す。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社エーアイテイー（9381）2026年2月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
