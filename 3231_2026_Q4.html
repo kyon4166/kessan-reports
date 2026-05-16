@@ -7,31 +7,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #1C2E44;
-    --navy-light: #2E5077;
-    --navy-pale: #E6EDF5;
+    --navy: #1C2B3A;
+    --navy-light: #2A5298;
+    --navy-pale: #EAF0FA;
     --dark: #1A1A1A;
     --charcoal: #2D2D2D;
     --mid: #5A5A5A;
-    --light: #F5F7FA;
+    --light: #F4F6FA;
     --white: #FFFFFF;
     --red: #C0392B;
     --green: #1E7E4A;
-    --gold: #B8882A;
-    --border: rgba(28,46,68,0.15);
+    --gold: #B8860B;
+    --border: rgba(28,43,58,0.15);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
   header { background: var(--navy); padding: 56px 48px 40px; position: relative; overflow: hidden; }
-  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--navy-light), #7BAFD4, var(--navy-light)); }
-  header::after { content: '不動産・都市開発'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
-  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #7BAFD4; border: 1px solid #2E5077; padding: 4px 12px; margin-bottom: 16px; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #2A5298, #6B9FD4, #2A5298); }
+  header::after { content: '不動産・総合デベロッパー'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 90px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #6B9FD4; border: 1px solid #2A5298; padding: 4px 12px; margin-bottom: 16px; }
   header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
   header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
   .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
   .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
-  .meta-item span { color: #7BAFD4; font-weight: 500; }
+  .meta-item span { color: #6B9FD4; font-weight: 500; }
+
   main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
   .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
   .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
   .kpi-item:hover { background: var(--navy-pale); }
@@ -41,15 +44,18 @@
   .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
   .up { color: var(--green); }
   .down { color: var(--red); }
+
   section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
   section:nth-child(2) { animation-delay: 0.1s; }
   section:nth-child(3) { animation-delay: 0.15s; }
   section:nth-child(4) { animation-delay: 0.2s; }
   section:nth-child(5) { animation-delay: 0.25s; }
   section:nth-child(6) { animation-delay: 0.3s; }
+
   .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
   .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--navy-light); letter-spacing: 0.05em; }
   .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
   .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
   .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--navy-light); margin-bottom: 14px; font-weight: 500; }
   .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
@@ -57,30 +63,43 @@
   .data-key { color: var(--mid); }
   .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
   .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
   .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
   .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--navy-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
   .risk-item.high { border-left-color: var(--red); }
   .risk-item.mid-level { border-left-color: #E67E22; }
+
   .highlight { background: var(--navy-pale); border-left: 4px solid var(--navy-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
   .highlight strong { color: var(--dark); }
+
+  /* 配当グリッド */
   .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
   .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
   .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
   .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
-  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); margin-top: 2px; }
+  .div-cell-note { font-size: 10px; color: var(--mid); margin-top: 4px; font-style: italic; }
+
+  /* セグメント */
   .segment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
   .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--navy-light); padding: 16px 18px; font-size: 13px; }
   .segment-name { font-weight: 500; color: var(--navy); margin-bottom: 6px; font-size: 13px; }
   .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
   .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+
+  /* 予想テーブル */
   .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
   .forecast-table th { background: var(--navy); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
   .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
   .forecast-table td:first-child { text-align: left; color: var(--mid); }
   .forecast-table tr:last-child td { border-bottom: none; }
-  footer { background: var(--navy); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E5077; }
+
+  footer { background: var(--navy); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2A5298; }
+
   @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
   @media (max-width: 640px) {
     header { padding: 40px 24px 32px; }
     .kpi-strip { grid-template-columns: repeat(2, 1fr); }
@@ -111,22 +130,22 @@
     <div class="kpi-item">
       <div class="kpi-label">売上高</div>
       <div class="kpi-value">942,505<span class="kpi-unit">百万円</span></div>
-      <div class="kpi-change up">▲ 24.4%</div>
+      <div class="kpi-change up">＋24.4%</div>
     </div>
     <div class="kpi-item">
       <div class="kpi-label">営業利益</div>
       <div class="kpi-value">138,242<span class="kpi-unit">百万円</span></div>
-      <div class="kpi-change up">▲ 16.2%</div>
+      <div class="kpi-change up">＋16.2%</div>
     </div>
     <div class="kpi-item">
       <div class="kpi-label">当期純利益</div>
       <div class="kpi-value">82,880<span class="kpi-unit">百万円</span></div>
-      <div class="kpi-change up">▲ 10.8%</div>
+      <div class="kpi-change up">＋10.8%</div>
     </div>
     <div class="kpi-item">
       <div class="kpi-label">EPS（基本的）</div>
       <div class="kpi-value">96.69<span class="kpi-unit">円</span></div>
-      <div class="kpi-change">前期 86.77円</div>
+      <div class="kpi-change">前期 86.77円（分割後換算）</div>
     </div>
   </div>
 
@@ -152,15 +171,15 @@
       </div>
       <div class="data-row">
         <span class="data-key">会計基準</span>
-        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用については今後の動向を踏まえ対応方針を検討</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用は株主構成・同業動向を踏まえ対応方針検討中</span>
       </div>
       <div class="data-row">
         <span class="data-key">株式分割</span>
-        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2025年4月1日付 普通株式1株→5株の割合で分割実施</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2025年4月1日付　普通株式1株につき5株の割合で株式分割を実施</span>
       </div>
     </div>
     <div class="highlight">
-      住宅・都市開発・資産運用・仲介など不動産総合サービスを展開する大手デベロッパーグループ。当期は住宅・都市開発部門の大幅増収を主因に売上高が前期比24.4%増と大きく拡大。長期経営方針に基づき、総還元性向40〜50%・DOE4%を財務指針として株主還元を強化。2025年4月に1:5の株式分割を実施し投資しやすい環境を整備した。
+      野村不動産を中核とする総合不動産グループ。住宅・オフィス・商業・物流・海外と多角的な開発力が強み。当期は都市開発部門が大型物件竣工・売却で大幅増収をけん引し、グループ全体で増収増益を達成。2025年4月策定の長期経営方針「総還元性向40〜50%・DOE4%下限」を軸に株主還元を強化。
     </div>
   </section>
 
@@ -175,7 +194,7 @@
         <div class="card-title">損益サマリー</div>
         <div class="data-row">
           <span class="data-key">売上高（営業収益）</span>
-          <span class="data-val">942,505 <span class='data-sub'>百万円 ▲24.4%</span></span>
+          <span class="data-val">942,505 <span class='data-sub'>百万円 ＋24.4%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">営業総利益</span>
@@ -183,133 +202,133 @@
         </div>
         <div class="data-row">
           <span class="data-key">営業利益</span>
-          <span class="data-val">138,242 <span class='data-sub'>百万円 ▲16.2%</span></span>
+          <span class="data-val">138,242 <span class='data-sub'>百万円 ＋16.2%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">事業利益</span>
-          <span class="data-val">147,384 <span class='data-sub'>百万円 ▲17.8%</span></span>
+          <span class="data-val">147,384 <span class='data-sub'>百万円 ＋17.8%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">経常利益</span>
-          <span class="data-val">124,807 <span class='data-sub'>百万円 ▲16.9%</span></span>
+          <span class="data-val">124,807 <span class='data-sub'>百万円 ＋16.9%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">親会社株主帰属当期純利益</span>
-          <span class="data-val">82,880 <span class='data-sub'>百万円 ▲10.8%</span></span>
+          <span class="data-val">82,880 <span class='data-sub'>百万円 ＋10.8%</span></span>
         </div>
       </div>
       <div class="card">
         <div class="card-title">増減益の主因</div>
         <div class="data-row" style="display:block;padding:10px 0;">
-          <span style="font-size:13px;color:var(--charcoal);display:block;">🏠 住宅部門が17.6%増収・26.6%増益と牽引（分譲・ホテル好調）</span>
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 都市開発部門が大幅増収（＋52.2%）：大型オフィス・商業・物流物件の引渡し増加</span>
         </div>
         <div class="data-row" style="display:block;padding:10px 0;">
-          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 都市開発部門が52.2%増収・29.7%増益（大型物件引渡し集中）</span>
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏠 住宅部門も堅調増収（＋17.6%）：マンション・戸建分譲の好調な売上計上</span>
         </div>
         <div class="data-row" style="display:block;padding:10px 0;">
-          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 海外部門は60.5%減収・57.8%減益（前期プロジェクト剥落）</span>
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 海外部門は大幅減収（△60.5%）：プロジェクト会社の持分売却タイミングのずれ</span>
         </div>
         <div class="data-row" style="display:block;padding:10px 0;">
-          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 特別損失：減損損失20,073百万円・建替関連損失14,753百万円が発生</span>
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 特別損失34,826百万円計上：減損損失20,073百万円・建替関連損失14,753百万円</span>
         </div>
         <div class="data-row" style="display:block;padding:10px 0;">
-          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 特別利益：固定資産売却益17,351百万円で特損を一部相殺</span>
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 特別利益19,497百万円：固定資産売却益17,351百万円等で一部相殺</span>
         </div>
       </div>
     </div>
 
     <!-- セグメント別 -->
     <div class="card" style="margin-bottom:16px;">
-      <div class="card-title">部門別 事業利益（前期比）</div>
+      <div class="card-title">部門別 事業利益（増減）</div>
       <div class="segment-grid">
         <div class="segment-item">
-          <div class="segment-name">🏠 住宅部門</div>
+          <div class="segment-name">🏠 住宅事業</div>
           <div class="segment-row"><span>売上高</span><span>433,408 百万円</span></div>
           <div class="segment-row"><span>事業利益</span><span>61,736 百万円</span></div>
-          <div class="segment-row"><span>前期比（利益）</span><span class="up">▲26.6%</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋26.6%</span></div>
         </div>
         <div class="segment-item">
-          <div class="segment-name">🏢 都市開発部門</div>
+          <div class="segment-name">🏙️ 都市開発事業</div>
           <div class="segment-row"><span>売上高</span><span>324,789 百万円</span></div>
           <div class="segment-row"><span>事業利益</span><span>53,987 百万円</span></div>
-          <div class="segment-row"><span>前期比（利益）</span><span class="up">▲29.7%</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋29.7%</span></div>
         </div>
         <div class="segment-item">
-          <div class="segment-name">🌏 海外部門</div>
+          <div class="segment-name">🌏 海外事業</div>
           <div class="segment-row"><span>売上高</span><span>3,718 百万円</span></div>
           <div class="segment-row"><span>事業利益</span><span>2,792 百万円</span></div>
-          <div class="segment-row"><span>前期比（利益）</span><span class="down">△57.8%</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△57.8%</span></div>
         </div>
         <div class="segment-item">
-          <div class="segment-name">📊 資産運用部門</div>
+          <div class="segment-name">📊 資産運用事業</div>
           <div class="segment-row"><span>売上高</span><span>16,340 百万円</span></div>
           <div class="segment-row"><span>事業利益</span><span>10,575 百万円</span></div>
-          <div class="segment-row"><span>前期比（利益）</span><span class="up">▲7.3%</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋7.3%</span></div>
         </div>
         <div class="segment-item">
-          <div class="segment-name">🤝 仲介・CRE部門</div>
+          <div class="segment-name">🔑 仲介・CRE事業</div>
           <div class="segment-row"><span>売上高</span><span>64,363 百万円</span></div>
           <div class="segment-row"><span>事業利益</span><span>18,994 百万円</span></div>
-          <div class="segment-row"><span>前期比（利益）</span><span class="up">▲14.6%</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋14.6%</span></div>
         </div>
         <div class="segment-item">
-          <div class="segment-name">🔧 運営管理部門</div>
+          <div class="segment-name">🔧 運営管理事業</div>
           <div class="segment-row"><span>売上高</span><span>129,869 百万円</span></div>
           <div class="segment-row"><span>事業利益</span><span>13,526 百万円</span></div>
-          <div class="segment-row"><span>前期比（利益）</span><span class="up">▲13.3%</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋13.3%</span></div>
         </div>
       </div>
     </div>
 
     <!-- 来期予想 -->
-    <div class="card" style="margin-top:0;">
+    <div class="card">
       <div class="card-title">来期予想（2027年3月期）</div>
       <table class="forecast-table">
         <tr>
           <th style="text-align:left;">項目</th>
-          <th>2025年度実績</th>
-          <th>2026年度予想</th>
+          <th>2026年3月期 実績</th>
+          <th>2027年3月期 予想</th>
           <th>増減</th>
         </tr>
         <tr>
           <td>売上高</td>
           <td>942,505 百万円</td>
           <td>1,080,000 百万円</td>
-          <td class="up">▲14.6%</td>
+          <td class="up">＋14.6%</td>
         </tr>
         <tr>
           <td>営業利益</td>
           <td>138,242 百万円</td>
           <td>140,000 百万円</td>
-          <td class="up">▲1.3%</td>
+          <td class="up">＋1.3%</td>
         </tr>
         <tr>
           <td>事業利益</td>
           <td>147,384 百万円</td>
           <td>150,000 百万円</td>
-          <td class="up">▲1.8%</td>
+          <td class="up">＋1.8%</td>
         </tr>
         <tr>
           <td>経常利益</td>
           <td>124,807 百万円</td>
           <td>125,000 百万円</td>
-          <td class="up">▲0.2%</td>
+          <td class="up">＋0.2%</td>
         </tr>
         <tr>
           <td>当期純利益</td>
           <td>82,880 百万円</td>
           <td>86,000 百万円</td>
-          <td class="up">▲3.8%</td>
+          <td class="up">＋3.8%</td>
         </tr>
         <tr>
           <td>EPS</td>
           <td>96.69 円</td>
           <td>100.68 円</td>
-          <td class="up">▲4.1%</td>
+          <td class="up">＋3.8%</td>
         </tr>
       </table>
       <div class="highlight" style="margin-top:14px;">
-        <strong>来期見通し：</strong>住宅部門（▲15.3%増収）・都市開発部門（▲13.9%増収）の継続成長を主軸に全社増収増益を予想。海外部門は事業利益ゼロを見込む。運営管理部門の事業利益は△4,026百万円の減益見通し。全体としては着実な成長軌道を維持する見込み。
+        <strong>📌 来期見通しの要点：</strong>住宅部門（目標500,000百万円）・都市開発部門（370,000百万円）の引渡し増加が牽引し増収増益基調を継続。海外部門は事業利益0を見込む（持分売却案件の端境期）。運営管理部門は合併効果剥落で利益減（9,500百万円）。全体としては着実な成長軌道を維持する見通し。
       </div>
     </div>
   </section>
@@ -325,15 +344,15 @@
         <div class="card-title">バランスシート</div>
         <div class="data-row">
           <span class="data-key">総資産</span>
-          <span class="data-val">2,811,989<span class='data-sub'>百万円 ▲4.7%</span></span>
+          <span class="data-val">2,811,989<span class='data-sub'>百万円 ＋4.7%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">純資産</span>
-          <span class="data-val">802,729<span class='data-sub'>百万円 ▲6.8%</span></span>
+          <span class="data-val">802,729<span class='data-sub'>百万円 ＋6.8%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">有利子負債</span>
-          <span class="data-val">1,599,365<span class='data-sub'>百万円 ▲3.5%</span></span>
+          <span class="data-val">1,599,365<span class='data-sub'>百万円 ＋3.5%</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">自己資本比率</span>
@@ -341,18 +360,18 @@
         </div>
         <div class="data-row">
           <span class="data-key">D/Eレシオ</span>
-          <span class="data-val">2.0<span class='data-sub'>倍</span><span class='data-sub'>（前期2.1倍）</span></span>
+          <span class="data-val">2.0<span class='data-sub'>倍（前期2.1倍）</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">1株当たり純資産</span>
-          <span class="data-val">938.08<span class='data-sub'>円</span></span>
+          <span class="data-val">938.08<span class='data-sub'>円（前期873.40円）</span></span>
         </div>
       </div>
       <div class="card">
         <div class="card-title">キャッシュフロー</div>
         <div class="data-row">
           <span class="data-key">営業CF</span>
-          <span class="data-val" style="color:var(--green);">+44,906<span class='data-sub'>百万円</span></span>
+          <span class="data-val" style="color:var(--green);">+44,906<span class='data-sub'>百万円（前期△133,793）</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">投資CF</span>
@@ -360,11 +379,11 @@
         </div>
         <div class="data-row">
           <span class="data-key">財務CF</span>
-          <span class="data-val" style="color:var(--green);">+15,643<span class='data-sub'>百万円</span></span>
+          <span class="data-val" style="color:var(--green);">+15,643<span class='data-sub'>百万円（前期＋318,459）</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">フリーCF</span>
-          <span class="data-val" style="color:var(--red);">△14,161<span class='data-sub'>百万円</span></span>
+          <span class="data-val" style="color:var(--green);">△14,161<span class='data-sub'>百万円</span></span>
         </div>
         <div class="data-row">
           <span class="data-key">期末現金</span>
@@ -373,7 +392,7 @@
       </div>
     </div>
     <div class="highlight">
-      <strong>⚠ キャッシュフロー：</strong>前期は大型投資・子会社取得で営業CF△133,793百万円と大幅マイナスだったが、当期は税前利益増加（▲109,478百万円）で営業CFが44,906百万円のプラスに転換。投資CFは固定資産売却益39,147百万円の収入があったものの、投資有価証券取得48,673百万円が増加。財務CFは長期借入れ239,824百万円の収入でプラスを確保。販売用不動産が134,178百万円増加しており開発パイプラインは引き続き拡充中。
+      <strong>⚠ キャッシュフロー：</strong>前期は棚卸資産・エクイティ投資の大幅積み増しで営業CF大幅マイナスだったが、当期は税前利益増加（＋109,478百万円）と在庫消化が進み大幅改善。投資CFは固定資産取得69,165百万円（前期167,343百万円から大幅減少）。財務CFは長期借入による収入239,824百万円で増加も、前期の大型調達（318,459百万円）からは正常化。
     </div>
   </section>
 
@@ -385,27 +404,31 @@
     </div>
     <div class="div-row">
       <div class="div-cell">
-        <div class="div-cell-label">2025/3（株式分割前換算）</div>
-        <div class="div-cell-val">170.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-label">2025/3（前期）</div>
+        <div class="div-cell-val">34.00<span style="font-size:14px;color:var(--mid);">円</span></div>
         <div class="div-cell-sub">配当性向 39.2%</div>
+        <div class="div-cell-note">分割前実績：170.00円<br>（中間82.50円＋期末87.50円）</div>
       </div>
       <div class="div-cell" style="background:var(--navy-pale);">
-        <div class="div-cell-label">2026/3（分割後）</div>
+        <div class="div-cell-label">2026/3（当期）</div>
         <div class="div-cell-val" style="color:var(--navy-light);">40.00<span style="font-size:14px;color:var(--mid);">円</span></div>
         <div class="div-cell-sub">配当性向 41.4%　増配</div>
+        <div class="div-cell-note">中間18.00円＋期末22.00円</div>
       </div>
       <div class="div-cell">
         <div class="div-cell-label">2027/3（予想）</div>
         <div class="div-cell-val">44.00<span style="font-size:14px;color:var(--mid);">円</span></div>
         <div class="div-cell-sub">配当性向 43.7%（予）</div>
+        <div class="div-cell-note">中間22.00円＋期末22.00円</div>
       </div>
       <div class="div-cell">
         <div class="div-cell-label">配当方針</div>
-        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:12px;">総還元性向40〜50%、DOE4%を下限とする財務指針に基づき継続的な増配を目指す。</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:12px;line-height:1.5;">総還元性向40〜50%、年間配当金についてDOE（＝年間配当額÷期中平均自己資本）4%を満たす水準を下限とする方針。</div>
       </div>
     </div>
     <div class="highlight" style="margin-top:14px;">
-      2026年3月期は第2四半期末18円・期末22円の合計40円（株式分割後ベース）。前期の170円（分割前）を分割換算した34円から約17.6%の実質増配。2027年3月期は中間・期末各22円の計44円を予定し、増配基調を維持。配当総額34,929百万円（前期29,777百万円から17.3%増）。
+      ※2025年4月1日付で普通株式1株につき5株の株式分割を実施。前期（2025/3期）の配当実績はすべて分割後換算値に読み替えて表示しています。前期の実際の支払額は中間82.50円・期末87.50円（合計170.00円）です。<br><br>
+      当期は分割後換算ベース前期34.00円から40.00円へ増配（＋6.00円、＋17.6%）。来期も44.00円への増配（＋4.00円、＋10.0%）を予定し、連続増配の姿勢を維持。配当性向は41.4%とDOE4%基準を両立。
     </div>
   </section>
 
@@ -416,14 +439,14 @@
       <span class="section-title">主要リスク</span>
     </div>
     <div class="risk-grid">
-      <div class="risk-item high">減損損失・建替コスト<br><small>当期に減損損失20,073百万円・建替関連損失14,753百万円が発生。不動産価格変動に伴う追加リスクが継続</small></div>
-      <div class="risk-item high">金利上昇リスク<br><small>有利子負債1.6兆円（D/Eレシオ2.0倍）を抱え、金利上昇局面では利払い費18,856百万円のさらなる拡大リスク</small></div>
-      <div class="risk-item high">海外事業の不確実性<br><small>海外部門は60.5%減収・来期事業利益ゼロ見込み。地政学リスクや為替変動の影響を受けやすい構造</small></div>
-      <div class="risk-item mid-level">不動産市況の変動<br><small>マンション・オフィス・商業施設の需給変動リスク。販売用不動産残高661,595百万円と高水準</small></div>
-      <div class="risk-item mid-level">棚卸資産の収益性低下<br><small>棚卸資産評価損2,577百万円（前期1,123百万円）と増加傾向。在庫積み増しによるリスク</small></div>
-      <div class="risk-item mid-level">株式分割後の株主構成変化<br><small>1:5の株式分割実施後の流動性変化・投資家層の変化が株価・ガバナンスに影響する可能性</small></div>
-      <div class="risk-item">運営管理部門の収益性低下<br><small>来期事業利益予想△4,026百万円の減少見込み。合併・再編効果の刈り取りが課題</small></div>
-      <div class="risk-item">建設コスト・資材高騰<br><small>インフレ・建設費上昇が開発コストを押し上げ、利益率を圧迫するリスク</small></div>
+      <div class="risk-item high">減損損失・建替損失<br><small>当期に減損損失20,073百万円・建替関連損失14,753百万円を計上。物件の収益性評価が継続リスク</small></div>
+      <div class="risk-item high">有利子負債の高水準<br><small>D/Eレシオ2.0倍・有利子負債1.6兆円。金利上昇局面での利払い増加リスク（支払利息18,856百万円）</small></div>
+      <div class="risk-item high">棚卸資産・在庫リスク<br><small>販売用不動産等の棚卸資産残高が大規模（販売用不動産661,595百万円）。市況悪化時の評価損リスク</small></div>
+      <div class="risk-item mid-level">不動産市況の変動<br><small>金利上昇・景気後退時の住宅・オフィス需要低下。都市開発部門の大型引渡し計画への影響</small></div>
+      <div class="risk-item mid-level">海外事業の収益変動<br><small>プロジェクト会社の持分売却タイミング依存。当期△57.8%減益、来期は事業利益ゼロ見込み</small></div>
+      <div class="risk-item mid-level">為替・地政学リスク<br><small>海外事業（ベトナム等）における為替換算調整勘定の変動（当期△1,726百万円）</small></div>
+      <div class="risk-item">運営管理部門の収益低下<br><small>野村不動産アメニティサービスとの合併効果の剥落。来期事業利益9,500百万円（当期比△29.8%）見込み</small></div>
+      <div class="risk-item">賃貸等不動産の時価変動<br><small>賃貸等不動産の帳簿価額428,678百万円に対し時価643,840百万円。市況変動でキャピタルリスク</small></div>
     </div>
     <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
       ■ 高リスク　■ 中リスク　■ その他
@@ -437,7 +460,7 @@
       <span class="section-title">総評</span>
     </div>
     <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
-      2026年3月期は売上高942,505百万円（▲24.4%）・営業利益138,242百万円（▲16.2%）・純利益82,880百万円（▲10.8%）と全項目で増収増益を達成。住宅部門と都市開発部門の大型物件引渡しが集中したことが主因。特別損失（減損・建替）が34,826百万円と重く純利益の伸びを抑制したが、特別利益（固定資産売却等）19,497百万円で一定程度相殺。自己資本比率は28.5%へ改善し、D/Eレシオも2.0倍に低下と財務体力は着実に向上。来期（2027年3月期）は売上高1,080,000百万円（▲14.6%増）・純利益86,000百万円（▲3.8%増）の増収増益を予想。株式分割後初の増配（40円→44円）を計画し、長期経営方針の財務指針に沿った株主還元の強化を明示している。
+      2026年3月期は売上高942,505百万円（＋24.4%）・営業利益138,242百万円（＋16.2%）と全指標で増収増益を達成。都市開発部門の大型物件引渡しと住宅部門の好調が牽引した。一方、特別損失34,826百万円（減損・建替損失）の計上により純利益の伸びは＋10.8%にとどまった。財務面では自己資本比率28.5%（前期27.9%）へ小幅改善し、D/Eレシオも2.0倍と若干低下。来期（2027/3期）は売上高1兆円超・純利益86,000百万円と引き続き成長基調を見込む。配当は分割後換算ベースで40円→44円への増配を予定し、DOE4%方針の下で株主還元を着実に拡大する姿勢を鮮明にしている。
     </div>
   </section>
 
