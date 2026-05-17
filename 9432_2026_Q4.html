@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NTT株式会社 2025年度 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0D2137;
+    --navy-light: #1A4A7A;
+    --navy-pale: #E6EDF5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F4F6FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --accent: #0077CC;
+    --border: rgba(13,33,55,0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  /* HEADER */
+  header { background: var(--navy); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #0077CC, #4DAAFF, #0077CC); }
+  header::after { content: '通信・テクノロジー'; position: absolute; right: -30px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 96px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #4DAAFF; border: 1px solid #1A4A7A; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #4DAAFF; font-weight: 500; }
+
+  /* MAIN */
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  /* KPI STRIP */
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--navy-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  /* SECTIONS */
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  /* CARDS */
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .highlight { background: var(--navy-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+
+  /* SEGMENT */
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--accent); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--navy); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+
+  /* FORECAST TABLE */
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--navy); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+
+  /* DIVIDEND */
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  /* RISK */
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+
+  /* FOOTER */
+  footer { background: var(--navy); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #1A4A7A; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated</div>
+  <h1>NTT株式会社</h1>
+  <p class="subtitle">2025年度　決算短信（連結）要約　／　証券コード 9432</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月8日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">営業収益</div>
+      <div class="kpi-value">14,409,121<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 5.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">1,706,221<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 3.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当社帰属当期利益</div>
+      <div class="kpi-value">1,037,032<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 3.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">12.61<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 11.96円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　島田 明</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（4事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">総合ICT事業、グローバル・ソリューション事業、地域通信事業、その他（不動産・エネルギー等）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">新規1社（住信SBIネット銀行㈱）を連結子会社化（2025年10月）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS（国際財務報告基準）／2018年度第1四半期より適用</span>
+      </div>
+    </div>
+    <div class="highlight">
+      通信事業を中核とするグローバル総合ICTグループ。2025年7月に商号を「日本電信電話株式会社」から「NTT株式会社」へ変更しCIを刷新。NTTデータグループの完全子会社化（2025年9月）、住信SBIネット銀行の連結子会社化を完了し、データセンター・AI・金融を軸とした多角的事業構造への転換を加速。IOWN（光電融合）技術の社会実装も推進中。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">営業収益</span>
+          <span class="data-val">14,409,121 <span class='data-sub'>百万円 ▲5.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業費用</span>
+          <span class="data-val">12,702,900 <span class='data-sub'>百万円 ▲5.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">1,706,221 <span class='data-sub'>百万円 ▲3.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前利益</span>
+          <span class="data-val">1,581,923 <span class='data-sub'>百万円 ▲1.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">当社帰属当期利益</span>
+          <span class="data-val">1,037,032 <span class='data-sub'>百万円 ▲3.7%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📡 グローバル・ソリューション事業の大幅拡大（営業利益＋50.7%）がグループ全体をけん引</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 住信SBIネット銀行の連結子会社化（2025年10月）により総資産が大幅増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 総合ICT事業の営業利益が△7.7%減（コスト増・金融事業投資先行）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔴 その他（不動産・エネルギー等）が営業損失に転落（△102.8%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 NTT DC REITの活用・データセンター資産売却益（1,295億円）を計上</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 営業利益（増減）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">📱 総合ICT事業</div>
+          <div class="segment-row"><span>外部顧客売上高</span><span>6,146,232 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>942,062 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△7.7%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🌐 グローバル・ソリューション事業</div>
+          <div class="segment-row"><span>外部顧客売上高</span><span>4,754,653 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>488,211 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋50.7%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🔌 地域通信事業</div>
+          <div class="segment-row"><span>外部顧客売上高</span><span>2,555,241 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>307,402 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="up">＋4.0%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏢 その他（不動産・エネルギー等）</div>
+          <div class="segment-row"><span>外部顧客売上高</span><span>952,995 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>△1,572 百万円</span></div>
+          <div class="segment-row"><span>前期比</span><span class="down">△102.8%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2026年度・2027年3月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減率</th>
+        </tr>
+        <tr>
+          <td>営業収益</td>
+          <td>14,409,121 百万円</td>
+          <td>15,060,000 百万円</td>
+          <td class="up">＋4.5%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>1,706,221 百万円</td>
+          <td>1,710,000 百万円</td>
+          <td class="up">＋0.2%</td>
+        </tr>
+        <tr>
+          <td>税引前利益</td>
+          <td>1,581,923 百万円</td>
+          <td>1,500,000 百万円</td>
+          <td class="down">△5.2%</td>
+        </tr>
+        <tr>
+          <td>当社帰属当期利益</td>
+          <td>1,037,032 百万円</td>
+          <td>980,000 百万円</td>
+          <td class="down">△5.5%</td>
+        </tr>
+        <tr>
+          <td>EPS（基本的）</td>
+          <td>12.61 円</td>
+          <td>12.10 円</td>
+          <td class="down">△4.0%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>⚠ 来期の見通し：</strong>営業収益・営業利益は横ばい成長を見込むものの、税引前利益・当期利益は前期の関係会社株式売却益（NTT DC REIT関連等）の剥落やNTTデータグループ完全子会社化に伴う財務費用増加等により減益の見通し。データセンター・AI・金融領域への投資を継続しつつ、構造的な成長基盤の強化を優先する姿勢を示している。なお、第2四半期累計業績予想は非開示。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">46,721,259<span class='data-sub'>百万円 ▲55.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計（純資産）</span>
+          <span class="data-val">10,217,533<span class='data-sub'>百万円 △9.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">株主資本</span>
+          <span class="data-val">9,727,623<span class='data-sub'>百万円 △4.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債</span>
+          <span class="data-val">15,711,600<span class='data-sub'>百万円 ▲56.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">株主資本比率</span>
+          <span class="data-val">20.8<span class='data-sub'>%</span><span class='data-sub'>（前期34.0%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり株主資本</span>
+          <span class="data-val">119.47<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+1,485,190<span class='data-sub'>百万円 △37.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△1,023,424<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--green);">+441,332<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF（営業＋投資）</span>
+          <span class="data-val" style="color:var(--green);">+461,766<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">1,921,882<span class='data-sub'>百万円 ▲92.0%</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ 財政状態・CF概況：</strong>住信SBIネット銀行の連結子会社化（銀行業の貸出金・預金が計上）により総資産が約16兆6,589億円増加し46.7兆円超へ。有利子負債も約5.7兆円増加し15.7兆円となり、株主資本比率は34.0%→20.8%へ低下。営業CFは銀行業の貸出金増加（約1兆円）が押し下げ要因となり前期比△37.2%。財務CFは長期借入の大幅増（NTTデータグループ完全子会社化資金）で一転プラス。設備投資は2兆3,260億円と高水準が継続。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2024年度（前期）</div>
+        <div class="div-cell-val">5.20<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 43.5%</div>
+      </div>
+      <div class="div-cell" style="background:var(--navy-pale);">
+        <div class="div-cell-label">2025年度（当期）</div>
+        <div class="div-cell-val" style="color:var(--accent);">5.30<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 42.0%　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2026年度（予想）</div>
+        <div class="div-cell-val">5.40<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 44.6%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">安定的・継続的な配当を基本方針とし、株主資本配当率（DOE）も重視。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度は中間2.65円・期末2.65円の合計5.30円（前期5.20円から＋0.10円増配）。2026年度予想は中間2.70円・期末2.70円の合計5.40円をさらに増配見通し。利益減益局面でも連続増配を維持する方針を明示。株主資本配当率（DOE）は4.4%（前期4.2%）に上昇。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">有利子負債の急増<br><small>NTTデータグループ完全子会社化（約2.4兆円）・住信SBI銀行連結化で有利子負債が約5.7兆円増。金利上昇局面での利払い増加リスク</small></div>
+      <div class="risk-item high">固定資産・のれんの減損<br><small>当期にのれん減損損失574億円を計上。急速なM&A拡大に伴う資産評価リスクは継続</small></div>
+      <div class="risk-item high">株主資本比率の低下<br><small>34.0%→20.8%へ大幅低下。財務健全性の維持と投資継続のバランスが課題</small></div>
+      <div class="risk-item mid-level">総合ICT事業の収益圧迫<br><small>コスト増・金融事業の先行投資により営業利益△7.7%。モバイル競争激化も継続</small></div>
+      <div class="risk-item mid-level">地域通信の構造変化<br><small>加入電話の段階的廃止（2035年目途）・レガシー収入の継続的減少</small></div>
+      <div class="risk-item mid-level">データセンター投資リスク<br><small>2030年度3,000MW計画と巨額投資。設備投資額2.3兆円が高水準で継続</small></div>
+      <div class="risk-item">地政学・サプライチェーンリスク<br><small>半導体・海底ケーブル・グローバルDC展開における地政学的影響</small></div>
+      <div class="risk-item">サイバーセキュリティリスク<br><small>通信インフラ・金融・医療等重要インフラを担うがゆえの攻撃対象リスク</small></div>
+      <div class="risk-item">銀行業リスク<br><small>住信SBI銀行の連結化により銀行業の信用リスク・流動性リスクが新規にグループ内に取り込まれた</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 後発事象 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">重要な後発事象</span>
+    </div>
+    <div class="card">
+      <div class="card-title">自己株式の取得枠設定</div>
+      <div class="data-row">
+        <span class="data-key">決議日</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年5月8日（取締役会）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">取得期間</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年5月11日〜2027年3月31日</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">取得上限株数</span>
+        <span class="data-val">14<span class='data-sub'>億株（発行済普通株式総数）</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">取得総額上限</span>
+        <span class="data-val">200,000<span class='data-sub'>百万円</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">07</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2025年度（2026年3月期）は営業収益・営業利益・当期利益ともに増収増益となり、NTTグループとしての実力ベースの収益成長を確認できる決算となった。牽引役はグローバル・ソリューション事業（営業利益＋50.7%）であり、データセンター事業の拡大・大型案件獲得・NTT DC REITを活用した資産売却益が大きく貢献。一方でNTTデータグループ完全子会社化・住信SBIネット銀行の連結子会社化により有利子負債が急増、株主資本比率が34.0%→20.8%へ低下した点は財務規律の観点から注視が必要。来期は税引前利益・当期利益ベースで減益見通しながら、配当は5.40円へ継続増配を計画。AI・データセンター・金融の成長三軸への大型投資サイクルが本格化しており、中長期の企業価値向上に向けた正念場となる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はNTT株式会社（9432）2025年度決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
