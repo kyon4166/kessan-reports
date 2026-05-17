@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>船井総研ホールディングス 2026年12月期 第１四半期決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A2E4A;
+    --navy-light: #2B5080;
+    --navy-pale: #E8EFF8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --amber: #E67E22;
+    --border: rgba(26,46,74,0.16);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--navy); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--navy-light), #5B8FD5, var(--navy-light)); }
+  header::after { content: 'コンサルティング'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 90px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5B8FD5; border: 1px solid #2B5080; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5B8FD5; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--navy-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  .neutral { color: var(--mid); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--navy-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--navy-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--navy-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: var(--amber); }
+  .highlight { background: var(--navy-pale); border-left: 4px solid var(--navy-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .revenue-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .revenue-table th { background: var(--navy); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .revenue-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .revenue-table td:first-child { text-align: left; color: var(--mid); }
+  .revenue-table tr:last-child td { border-bottom: none; font-weight: 500; color: var(--dark); }
+  .revenue-table tr:last-child td:first-child { color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--navy); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .bs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .bs-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--navy-light); padding: 16px 18px; text-align: center; }
+  .bs-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; }
+  .bs-val { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--dark); }
+  .bs-sub { font-size: 11px; color: var(--mid); margin-top: 4px; }
+  footer { background: var(--navy); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2B5080; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .bs-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>株式会社船井総研ホールディングス</h1>
+  <p class="subtitle">2026年12月期　第１四半期決算短信（連結）要約　／　証券コード 9757</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月13日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高（累計）</div>
+      <div class="kpi-value">7,944<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋2.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益（累計）</div>
+      <div class="kpi-value">2,100<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 9.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">四半期純利益（累計）</div>
+      <div class="kpi-value">1,391<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">前期比 大幅増</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的・分割後）</div>
+      <div class="kpi-value">15.31<span class="kpi-unit">円</span></div>
+      <div class="kpi-change neutral">前期 0.85円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長 グループCEO　中谷 貴之</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">経営コンサルティング事業（単一セグメント・当期より変更）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">セグメント変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">経営コンサルティング／ロジスティクス／デジタルソリューションの3区分→単一セグメントへ集約</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">株式分割</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年1月1日付 普通株式1株→2株（1:2分割）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）／監査法人レビュー：無</span>
+      </div>
+    </div>
+    <div class="highlight">
+      中小・中堅企業向け経営コンサルティングを中核とする総合コンサルティンググループ。2026年2月公表の中期経営計画（2026〜2028年）初年度として、「中堅企業コンサルティング」及びAX（AIトランスフォーメーション）・DXコンサルティングの強化を推進。2026年1月には物流特化のロジクリエイト社をグループインし、SCM支援体制を強化。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（第１四半期累計）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">7,944 <span class='data-sub'>百万円 ＋2.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">3,385 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">販管費</span>
+          <span class="data-val">1,285 <span class='data-sub'>百万円 前期比 ＋47.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">2,100 <span class='data-sub'>百万円 △9.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">2,136 <span class='data-sub'>百万円 △8.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期純利益（親会社）</span>
+          <span class="data-val">1,391 <span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 月次支援（＋10.2%）・経営研究会（＋7.6%）が牽引し増収</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 物流BPO（△30.2%）・M&A（△12.9%）が減収で相殺</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💼 人的資本・M&A・オフィスへの先行投資で販管費が大幅増（＋47.6%）→営業減益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">✅ 前期の減損損失（2,155百万円）の剥落により四半期純利益は過去最高を更新</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 事務所移転費用138百万円が特別損失として計上</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 売上内訳 -->
+    <div class="card">
+      <div class="card-title">売上高内訳（サービス区分別）</div>
+      <table class="revenue-table">
+        <tr>
+          <th style="text-align:left;">区分</th>
+          <th>前期Q1（千円）</th>
+          <th>当期Q1（千円）</th>
+          <th>増減率</th>
+        </tr>
+        <tr>
+          <td>月次支援</td>
+          <td>4,191,104</td>
+          <td>4,620,631</td>
+          <td class="up">＋10.2%</td>
+        </tr>
+        <tr>
+          <td>プロジェクト</td>
+          <td>636,105</td>
+          <td>657,948</td>
+          <td class="up">＋3.4%</td>
+        </tr>
+        <tr>
+          <td>M&A</td>
+          <td>273,321</td>
+          <td>237,959</td>
+          <td class="down">△12.9%</td>
+        </tr>
+        <tr>
+          <td>経営研究会会費</td>
+          <td>753,427</td>
+          <td>810,781</td>
+          <td class="up">＋7.6%</td>
+        </tr>
+        <tr>
+          <td>広告運用</td>
+          <td>642,424</td>
+          <td>650,856</td>
+          <td class="up">＋1.3%</td>
+        </tr>
+        <tr>
+          <td>物流BPO</td>
+          <td>873,896</td>
+          <td>610,335</td>
+          <td class="down">△30.2%</td>
+        </tr>
+        <tr>
+          <td>その他</td>
+          <td>405,165</td>
+          <td>356,259</td>
+          <td class="down">△12.1%</td>
+        </tr>
+        <tr>
+          <td>合計</td>
+          <td>7,775,446</td>
+          <td>7,944,772</td>
+          <td class="up">＋2.2%</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 通期・中間予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期・中間業績予想（2026年12月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>前期通期実績</th>
+          <th>第２Q累計予想</th>
+          <th>通期予想</th>
+          <th>通期増減</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>33,332 百万円</td>
+          <td>17,500 百万円</td>
+          <td>37,000 百万円</td>
+          <td class="up">＋11.0%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>8,808 百万円</td>
+          <td>4,700 百万円</td>
+          <td>9,100 百万円</td>
+          <td class="up">＋3.3%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>8,843 百万円</td>
+          <td>4,700 百万円</td>
+          <td>9,100 百万円</td>
+          <td class="up">＋2.9%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>6,524 百万円</td>
+          <td>3,150 百万円</td>
+          <td>6,550 百万円</td>
+          <td class="up">＋0.4%</td>
+        </tr>
+        <tr>
+          <td>EPS（分割後）</td>
+          <td>—</td>
+          <td>34.66 円</td>
+          <td>72.07 円</td>
+          <td>—</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        通期予想は売上高11.0%増・営業利益3.3%増と増収増益を維持する見込み。先行投資（人的資本・M&A・オフィス）による費用増は、月次支援・中堅企業コンサルティングの拡大で吸収する計画。業績予想の修正なし（2026年5月13日時点）。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="bs-grid">
+      <div class="bs-item">
+        <div class="bs-label">総資産</div>
+        <div class="bs-val">31,350<span style="font-size:13px;color:var(--mid);">百万円</span></div>
+        <div class="bs-sub">前期末比 △3,142百万円</div>
+      </div>
+      <div class="bs-item">
+        <div class="bs-label">純資産</div>
+        <div class="bs-val">25,352<span style="font-size:13px;color:var(--mid);">百万円</span></div>
+        <div class="bs-sub">前期末比 △435百万円</div>
+      </div>
+      <div class="bs-item" style="border-top-color:var(--green);">
+        <div class="bs-label">自己資本比率</div>
+        <div class="bs-val" style="color:var(--green);">78.2<span style="font-size:13px;">%</span></div>
+        <div class="bs-sub">前期末 72.4%（＋5.8pt）</div>
+      </div>
+    </div>
+    <div class="two-col" style="margin-top:16px;">
+      <div class="card">
+        <div class="card-title">主要資産</div>
+        <div class="data-row">
+          <span class="data-key">現金及び預金</span>
+          <span class="data-val">11,579<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">長期預金</span>
+          <span class="data-val">3,200<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資有価証券</span>
+          <span class="data-val">3,449<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">のれん</span>
+          <span class="data-val">1,299<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">主要負債・株主資本</div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">5,997<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">短期借入金</span>
+          <span class="data-val">200<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">株主資本合計</span>
+          <span class="data-val">24,131<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本（参考）</span>
+          <span class="data-val">24,500<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>財政状態：</strong>総資産は配当支払・税金支出等による現金・有価証券の減少（△3,337百万円）で前期末比減少。一方で建物構築物の増加・長期預金積み増しなど固定資産は＋194百万円増。有利子負債は少額（短期200百万円＋長期49百万円）で財務健全性は高い。自己資本比率は78.2%へ改善（無借金経営に近い状態）。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/12期 実績（分割後換算）</div>
+        <div class="div-cell-val">42.50<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">（分割前実績：85.00円）</div>
+      </div>
+      <div class="div-cell" style="background:var(--navy-pale);">
+        <div class="div-cell-label">2026/12期 第２Q末（予想）</div>
+        <div class="div-cell-val" style="color:var(--navy-light);">24.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間配当</div>
+      </div>
+      <div class="div-cell" style="background:var(--navy-pale);">
+        <div class="div-cell-label">2026/12期 期末（予想）</div>
+        <div class="div-cell-val" style="color:var(--navy-light);">24.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">期末配当</div>
+      </div>
+      <div class="div-cell" style="background:var(--navy-pale);">
+        <div class="div-cell-label">2026/12期 年間（予想）</div>
+        <div class="div-cell-val" style="color:var(--navy-light);">48.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">前期換算比 ＋5.50円増</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      ※2026年1月1日付で1株につき2株の株式分割を実施。分割前の配当実績はすべて分割後換算値に読み替えて表示しています。<br><br>
+      2026年12月期の年間配当予想は48.00円（中間24円＋期末24円）。前期の分割後換算ベース42.50円から＋5.50円増配の見込み。配当予想の修正なし（2026年5月13日時点）。なお、第１四半期末の配当金支払いは設定なし。
+    </div>
+  </section>
+
+  <!-- 05 リスク・後発事象 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・後発事象</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">先行投資によるコスト増<br><small>人的資本・M&A・オフィス投資で販管費が前期比47.6%増。増収が追いつかず営業減益（△9.0%）</small></div>
+      <div class="risk-item high">マクロ環境の不透明感<br><small>中東情勢悪化による原油高騰・インフレ再燃。中小企業顧客の経営悪化がコンサル需要に影響する可能性</small></div>
+      <div class="risk-item mid-level">物流BPO縮小の影響<br><small>戦略的に売上縮小中（△30.2%）。将来の成長余力確保が課題</small></div>
+      <div class="risk-item mid-level">受注高の減少<br><small>経営コンサル事業の受注高が前年同期比△7.0%（5,234百万円）。先行指標として注視が必要</small></div>
+      <div class="risk-item">のれん・M&A投資リスク<br><small>ロジクリエイト等M&A拡大でのれん1,299百万円計上。将来の減損リスクに注意</small></div>
+      <div class="risk-item">ストックオプション発行（後発事象）<br><small>2026年4月〜5月に役員・執行役員向け新株予約権734個（対象株264,240株）を発行。希薄化に注意</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年12月期第１四半期は増収（＋2.2%）ながら営業・経常利益は減益（△9.0%・△8.0%）となった。月次支援・経営研究会が堅調に伸長した一方、先行投資（人的資本・M&A・オフィス）により販管費が大幅増加したことが主因。四半期純利益は前期の大型減損損失（2,155百万円）の剥落により過去最高を更新。財務面は自己資本比率78.2%と極めて健全で、実質無借金経営を維持している。2026年1月の株式分割（1:2）後も増配（年間48円予想）を継続し株主還元姿勢は維持。通期では売上高37,000百万円（＋11.0%）、営業利益9,100百万円（＋3.3%）の増収増益を見込み、中期経営計画初年度として着実なスタートを切っている。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社船井総研ホールディングス（9757）2026年12月期第１四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
