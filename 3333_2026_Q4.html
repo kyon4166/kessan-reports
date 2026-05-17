@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社あさひ 2026年2月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1A4A2E;
+    --green-light: #2E7D4F;
+    --green-pale: #E8F5EE;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7F5;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --profit-green: #1E7E4A;
+    --border: rgba(26,74,46,0.16);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--green); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--green-light), #5BAD7D, var(--green-light)); }
+  header::after { content: '自転車小売'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5BAD7D; border: 1px solid #2E7D4F; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5BAD7D; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--green-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--profit-green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--green-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--green-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--green-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--green-pale); border-left: 4px solid var(--green-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--green); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .revenue-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .revenue-table th { background: var(--green); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .revenue-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .revenue-table td:first-child { text-align: left; color: var(--mid); }
+  .revenue-table tr:last-child td { border-bottom: none; }
+  footer { background: var(--green); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E7D4F; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Non-consolidated（非連結）</div>
+  <h1>株式会社あさひ</h1>
+  <p class="subtitle">2026年2月期　決算短信〔日本基準〕（非連結）要約　／　証券コード 3333</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年4月3日</span></div>
+    <div class="meta-item">対象期間 <span>2025年2月21日〜2026年2月20日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">81,374<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 0.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">3,937<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 28.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">2,268<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 36.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">87.12<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 136.51円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">会社情報・事業構成</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　下田 佳史</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業セグメント</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">自転車事業（単一セグメント）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">店舗数（期末）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">直営店 539店舗、FC店 18店舗　計 557店舗</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）／非連結　※連結財務諸表なし</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">中期経営計画</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">「VISION2025」最終年度（2021〜2026年2月期）</span>
+      </div>
+    </div>
+    <div class="highlight">
+      全国展開の自転車専門チェーン「サイクルベースあさひ」を運営。自転車販売・修理・メンテナンス・リユース事業を柱に、OMO（オンライン×実店舗融合）推進と循環型ビジネスモデルの構築に取り組む。2027年2月期からは新中期経営計画「VISION2028」を始動予定。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">81,374 <span class='data-sub'>百万円 △0.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">38,791 <span class='data-sub'>百万円 ＋0.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">3,937 <span class='data-sub'>百万円 △28.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">4,169 <span class='data-sub'>百万円 △25.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">当期純利益</span>
+          <span class="data-val">2,268 <span class='data-sub'>百万円 △36.2%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚲 自転車市場の販売台数が想定を下回り売上微減（△0.3%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 物価上昇による人件費・諸経費増大で販管費が前期比＋4.8%増</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔧 修理・メンテナンス需要は堅調。リユース事業も拡大傾向</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 減損損失480百万円・固定資産除売却損91百万円など特別損失が急増</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 特別損失計651百万円（前期比約2.6倍）が純利益を大幅圧迫</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 収益内訳 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">売上高　品目別内訳（収益認識ベース）</div>
+      <table class="revenue-table">
+        <tr>
+          <th style="text-align:left;">品目</th>
+          <th>2025年2月期</th>
+          <th>2026年2月期</th>
+        </tr>
+        <tr>
+          <td>自転車</td>
+          <td>57,788 百万円</td>
+          <td>57,289 百万円</td>
+        </tr>
+        <tr>
+          <td>パーツ・アクセサリー</td>
+          <td>14,026 百万円</td>
+          <td>14,000 百万円</td>
+        </tr>
+        <tr>
+          <td>その他（整備・修理・長期保証等）</td>
+          <td>9,638 百万円</td>
+          <td>9,951 百万円</td>
+        </tr>
+        <tr>
+          <td>ロイヤリティ</td>
+          <td>140 百万円</td>
+          <td>133 百万円</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年2月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2026年2月期実績</th>
+          <th>2027年2月期予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>81,374 百万円</td>
+          <td>86,278 百万円</td>
+          <td class="up">＋6.0%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>3,937 百万円</td>
+          <td>4,300 百万円</td>
+          <td class="up">＋9.2%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>4,169 百万円</td>
+          <td>4,440 百万円</td>
+          <td class="up">＋6.5%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>2,268 百万円</td>
+          <td>2,730 百万円</td>
+          <td class="up">＋20.3%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>87.12 円</td>
+          <td>104.83 円</td>
+          <td class="up">＋20.3%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📌 来期回復の主因：</strong>新中期経営計画「VISION2028」始動のもと、会員CRM強化・OMO基盤深化・リユース生産体制強化・都市型店舗の出店継続により売上・利益ともに回復見込み。前期に計上した大型特別損失（減損損失等）の反動もあり純利益は約20%の回復を想定。第2四半期累計予想は売上高47,941百万円・経常利益3,389百万円。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">56,077<span class='data-sub'>百万円 ＋3.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">40,159<span class='data-sub'>百万円 ＋2.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債</span>
+          <span class="data-val">0<span class='data-sub'>百万円（実質無借金）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">71.6<span class='data-sub'>%</span><span class='data-sub'>（前期71.8%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,542.09<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--profit-green);">+6,299<span class='data-sub'>百万円 ＋46.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△2,154<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△1,313<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF</span>
+          <span class="data-val" style="color:var(--profit-green);">+4,145<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">12,269<span class='data-sub'>百万円 ＋30.0%</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財務状況：</strong>有利子負債はゼロの実質無借金経営。自己資本比率71.6%と非常に高い財務健全性を維持。営業CFは棚卸資産圧縮（商品減少766百万円）や未払消費税増加等により前期比46.7%増と大幅改善。投資CFは新規出店等の設備投資1,870百万円が主因。財務CFは配当金支払い1,313百万円のみ（前期は自己株式取得113百万円も含む）。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/2期</div>
+        <div class="div-cell-val">50.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 36.6%</div>
+      </div>
+      <div class="div-cell" style="background:var(--green-pale);">
+        <div class="div-cell-label">2026/2期</div>
+        <div class="div-cell-val" style="color:var(--green-light);">50.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 57.4%　維持</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/2期（予想）</div>
+        <div class="div-cell-val">50.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 47.7%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">配当性向35%以上、DOE3.0%を目安に安定還元。中間・期末年2回配当。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2026年2月期は中間25円・期末25円の計50円を維持（前期同額）。減益局面でも配当を維持し、配当性向は36.6%→57.4%へ上昇。2027年2月期も中間25円・期末25円の計50円を予定。配当総額は1,312百万円（前期同額）、DOEは3.3%。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">物価上昇・コスト増<br><small>仕入コスト・人件費・諸経費の上昇が販管費を圧迫。当期の販管費は前期比＋4.8%増（34,853百万円）</small></div>
+      <div class="risk-item high">消費者の節約志向<br><small>物価高による消費意欲低下。新車買い替えサイクルの長期化が新車販売数量を構造的に抑制</small></div>
+      <div class="risk-item high">減損リスク<br><small>当期は減損損失480百万円を計上（前期239百万円から倍増）。店舗損益悪化が継続する場合は追加リスク</small></div>
+      <div class="risk-item mid-level">高機能商材へのシフト<br><small>電動アシスト自転車など高単価商材への移行で買い替えサイクルが長期化。市場全体の販売台数に影響</small></div>
+      <div class="risk-item mid-level">地政学・関税リスク<br><small>米国の関税政策等による国際貿易環境の変動が資材・商品調達コストに影響する可能性</small></div>
+      <div class="risk-item mid-level">競合・価格競争<br><small>ECプラットフォームや競合他社との価格競争激化。シェア維持のため価格戦略の継続的見直しが必要</small></div>
+      <div class="risk-item">店舗展開リスク<br><small>賃料・人件費上昇局面での新規出店コスト増。当期15店舗出店・3店舗退店（純増12店）</small></div>
+      <div class="risk-item">為替・調達リスク<br><small>自転車・部品の多くを海外調達。円安進行時の仕入コスト上昇リスク（期末に為替予約105百万円を計上）</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年2月期は中期経営計画「VISION2025」の最終年度として目標値の下方修正を余儀なくされ、売上高・各利益とも減収減益となった。販管費の増加（物価上昇・人件費増）と特別損失の急増（減損損失480百万円など計651百万円）が主因で、実力ベースの粗利益率は微増（47.5%→47.7%）と底堅い。財務面では自己資本比率71.6%・実質無借金という極めて健全な財務基盤を維持しており、現金は12,269百万円まで積み上がった。来期（2027年2月期）は新中期経営計画「VISION2028」のもとで増収増益への回復を見込み、配当も50円を維持する株主還元継続を表明している。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社あさひ（3333）2026年2月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
