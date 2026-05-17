@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒューリック株式会社 2026年12月期 第1四半期決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brown: #4A2C1A;
+    --brown-light: #8B5E3C;
+    --brown-pale: #F5EDE6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #FAF7F4;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(74,44,26,0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--brown); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--brown-light), #C49A6C, var(--brown-light)); }
+  header::after { content: '不動産・総合'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #C49A6C; border: 1px solid #8B5E3C; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #C49A6C; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--brown-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--brown-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--brown-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--brown-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--brown-pale); border-left: 4px solid var(--brown-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--brown-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--brown); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--brown); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .note-box { background: #FFF8F5; border: 1px dashed var(--brown-light); padding: 12px 16px; font-size: 12px; color: var(--mid); margin-top: 12px; line-height: 1.7; }
+  footer { background: var(--brown); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #8B5E3C; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Quarterly Earnings · J-GAAP · Consolidated · Q1</div>
+  <h1>ヒューリック株式会社</h1>
+  <p class="subtitle">2026年12月期　第1四半期決算短信（連結）要約　／　証券コード 3003</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年4月27日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高（営業収益）</div>
+      <div class="kpi-value">226,841<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋44.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">31,171<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 2.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">四半期純利益（親会社）</div>
+      <div class="kpi-value">18,141<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋5.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">23.89<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前年同期 22.57円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・セグメント</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　前田 隆也</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント（3事業）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">不動産事業、保険事業、ホテル・旅館事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">新規2社（合同会社浜風プロパティ、HistoRy合同会社）／除外2社（ヒューリックビズフロンティア㈱、合同会社菖蒲プロパティ）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）連結　／　監査法人レビュー：無</span>
+      </div>
+    </div>
+    <div class="highlight">
+      東京都心部を中心に不動産賃貸・開発を主力とする総合不動産グループ。2026年3月末時点で東京23区の駅近を中心に約250件の賃貸物件（賃貸可能面積約127万㎡）を保有・管理。保険・ホテル・旅館・再生可能エネルギーなど周辺事業も展開。販売用不動産の売買動向により売上高が大きく変動するため、通期の売上高予想は非開示。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当四半期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（累計）</div>
+        <div class="data-row">
+          <span class="data-key">売上高（営業収益）</span>
+          <span class="data-val">226,841 <span class='data-sub'>百万円 ＋44.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業原価</span>
+          <span class="data-val">160,106 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業総利益</span>
+          <span class="data-val">66,735 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">販売費及び一般管理費</span>
+          <span class="data-val">35,564 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">31,171 <span class='data-sub'>百万円 △2.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">26,986 <span class='data-sub'>百万円 △3.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属 四半期純利益</span>
+          <span class="data-val">18,141 <span class='data-sub'>百万円 ＋5.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">22,185 <span class='data-sub'>百万円 ＋13.2%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 前期・当期竣工・取得物件によりオフィス等の不動産賃貸収入が安定的に推移</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📦 販売用不動産の売却（みなとみらい・府中タワー等）が順調で売上高は＋44.8%増</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 「その他」セグメントでリソー教育グループの追加のれん償却6,961百万円を計上し、営業損失4,808百万円が発生→営業利益を圧迫</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 支払利息が4,306→6,617百万円へ増加し経常利益も3.6%減</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏨 インバウンド需要旺盛でホテル・旅館事業は増収増益（＋13.5%・＋10.7%）</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- セグメント別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">セグメント別 営業収益・利益（当第1四半期累計）</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">🏢 不動産事業</div>
+          <div class="segment-row"><span>外部顧客への営業収益</span><span>189,746 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>38,534 百万円</span></div>
+          <div class="segment-row"><span>前年同期比</span><span class="up">＋15.4%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🛡️ 保険事業</div>
+          <div class="segment-row"><span>外部顧客への営業収益</span><span>1,185 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>498 百万円</span></div>
+          <div class="segment-row"><span>前年同期比</span><span class="up">＋33.8%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🏨 ホテル・旅館事業</div>
+          <div class="segment-row"><span>外部顧客への営業収益</span><span>16,747 百万円</span></div>
+          <div class="segment-row"><span>セグメント利益</span><span>2,047 百万円</span></div>
+          <div class="segment-row"><span>前年同期比</span><span class="up">＋10.7%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">📦 その他（建築・教育・エネルギー等）</div>
+          <div class="segment-row"><span>外部顧客への営業収益</span><span>19,162 百万円</span></div>
+          <div class="segment-row"><span>セグメント損失</span><span>△4,808 百万円</span></div>
+          <div class="segment-row"><span>前年同期比</span><span class="down">営業利益→損失転換（のれん償却特殊要因）</span></div>
+        </div>
+      </div>
+      <div class="note-box">
+        ⚠ 「その他」セグメントの当期特殊要因：株式会社リソー教育グループの株価に応じた追加のれん償却6,961百万円を計上。当該要因を除くと営業利益は2,153百万円（前年同期比＋189.5%増）となります。
+      </div>
+    </div>
+
+    <!-- 通期業績予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年12月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>前期実績（2025/12期）</th>
+          <th>2026/12期 通期予想</th>
+          <th>増減率</th>
+        </tr>
+        <tr>
+          <td>売上高（営業収益）</td>
+          <td>非開示（物件売買変動大）</td>
+          <td>非開示</td>
+          <td>－</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>約187,000 百万円</td>
+          <td>210,000 百万円</td>
+          <td class="up">＋12.4%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>約173,000 百万円</td>
+          <td>185,000 百万円</td>
+          <td class="up">＋6.9%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>約114,400 百万円</td>
+          <td>121,000 百万円</td>
+          <td class="up">＋5.8%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>－</td>
+          <td>159.41 円</td>
+          <td>－</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📋 通期予想の注意点：</strong>賃貸事業を中心とした安定的な事業構造を有しているが、販売用不動産の売買動向によっては営業収益（売上高）が大きく変動するため、売上高予想は非開示。第1四半期の業績は概ね計画通りに推移しており、通期業績予想に変更はない。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（2026年3月31日）</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">3,552,936<span class='data-sub'>百万円 ＋1.3%（対前期末）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">941,401<span class='data-sub'>百万円 ＋0.2%（対前期末）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">借入金残高</span>
+          <span class="data-val">1,582,333<span class='data-sub'>百万円（うちSPCノンリコース45,951百万円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">25.5<span class='data-sub'>%</span><span class='data-sub'>（前期末26.0%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,197.03<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">主な資産・負債の増減（対前期末）</div>
+        <div class="data-row">
+          <span class="data-key">現金及び預金</span>
+          <span class="data-val" style="color:var(--green);">＋99,607<span class='data-sub'>百万円増加</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業投資有価証券</span>
+          <span class="data-val" style="color:var(--green);">＋71,128<span class='data-sub'>百万円増加</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">販売用不動産</span>
+          <span class="data-val" style="color:var(--red);">△54,305<span class='data-sub'>百万円減少（売却等）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">土地</span>
+          <span class="data-val" style="color:var(--red);">△20,305<span class='data-sub'>百万円減少</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資有価証券</span>
+          <span class="data-val" style="color:var(--red);">△41,720<span class='data-sub'>百万円減少（振替・含み益増加等）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📌 財務状況：</strong>現金及び預金が約1,000億円増加し流動性が改善。賃料上昇・不動産売買市場活性化・建築費高騰を背景に不動産事業のさらなる高度化と効率化を推進。金融機関からの資金調達は高い収益力を背景に安定的かつ低コストで実施。なお、当期連結キャッシュ・フロー計算書は第1四半期のため作成していない（減価償却費5,532百万円、のれん償却額8,955百万円）。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/12期 中間</div>
+        <div class="div-cell-val">28.50<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">実績</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2025/12期 期末</div>
+        <div class="div-cell-val">33.50<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">合計 62.00円</div>
+      </div>
+      <div class="div-cell" style="background:var(--brown-pale);">
+        <div class="div-cell-label">2026/12期 中間（予想）</div>
+        <div class="div-cell-val" style="color:var(--brown-light);">33.50<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">前期比 ＋5.00円</div>
+      </div>
+      <div class="div-cell" style="background:var(--brown-pale);">
+        <div class="div-cell-label">2026/12期 期末（予想）</div>
+        <div class="div-cell-val" style="color:var(--brown-light);">33.50<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">合計予想 67.00円</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2026年12月期の年間配当予想は合計67.00円（中間33.50円・期末33.50円）。前期実績62.00円から5.00円（＋8.1%）の増配見込み。通期EPSは予想159.41円に対し、配当性向は約42.0%となる見込み。直近公表の配当予想からの修正はなし。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">販売用不動産の売買変動リスク<br><small>物件売買の成否が経済情勢・不動産市況に大きく左右され売上高が不安定。通期売上高予想を非開示とする要因</small></div>
+      <div class="risk-item high">のれん追加償却リスク<br><small>リソー教育グループの株価連動型追加のれん6,961百万円が当期に発生。今後も株価動向次第でコスト増要因となりうる</small></div>
+      <div class="risk-item high">金利上昇リスク<br><small>借入残高1.58兆円超（SPC含む）。金融環境の変化による支払利息の増加が経常利益を圧迫するリスク</small></div>
+      <div class="risk-item mid-level">建築費高騰リスク<br><small>建築費の継続的な高騰がコスト増加や開発採算の悪化につながりうる</small></div>
+      <div class="risk-item mid-level">不動産市況・賃料変動<br><small>インフレや賃料上昇は機会だが、市況反転時には賃貸収入や物件評価に影響するリスクも存在</small></div>
+      <div class="risk-item mid-level">為替・海外リスク<br><small>海外物件・外貨建て資産の保有による為替換算調整（当期＋2,769百万円）は市場環境次第で変動</small></div>
+      <div class="risk-item">インバウンド需要の変動<br><small>ホテル・旅館事業がインバウンド需要を取り込んでいるが、地政学リスクや感染症で急変する可能性がある</small></div>
+      <div class="risk-item">減損リスク<br><small>当期に減損損失1,564百万円を計上。保有資産の収益性低下時には追加損失リスク</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f5f0eb;">
+      2026年12月期第1四半期は、オフィス等の不動産賃貸収入の安定推移と販売用不動産（みなとみらい・府中タワー等）の順調な売却により売上高は前年同期比44.8%増と大幅増収。しかし、リソー教育グループに係る追加のれん償却（6,961百万円）という特殊要因が「その他」セグメントに集中し、営業利益は微減（△2.0%）、経常利益も支払利息増加により△3.6%減となった。一方で、純利益は税効果（法人税等調整額△7,144百万円）の恩恵により＋5.6%増と底堅さを示した。財務面は総資産が3.55兆円、現金及び預金が約1,000億円増加し流動性は十分。配当は通期67円（前期比＋8.1%増配）を計画しており、株主還元の姿勢は継続。通期業績予想に変更はなく、第1四半期は概ね計画通りの推移となっている。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はヒューリック株式会社（3003）2026年12月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
