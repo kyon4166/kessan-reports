@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社ステップ 2026年9月期 第2四半期決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1A3A5C;
+    --blue-light: #2E6DA4;
+    --blue-pale: #E8F0F8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,58,92,0.18);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--blue); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue-light), #5B9BD5, var(--blue-light)); }
+  header::after { content: '教育・学習塾'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5B9BD5; border: 1px solid #2E6DA4; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5B9BD5; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--blue-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--blue-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--blue-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--blue-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--blue-pale); border-left: 4px solid var(--blue-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--blue-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--blue); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--blue); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .premise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+  .premise-item { background: var(--white); border: 1px solid var(--border); padding: 10px 14px; font-size: 12px; display: flex; justify-content: space-between; }
+  .premise-key { color: var(--mid); }
+  .premise-val { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  footer { background: var(--blue); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E6DA4; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .premise-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Non-Consolidated · Q2</div>
+  <h1>株式会社ステップ</h1>
+  <p class="subtitle">2026年9月期　第2四半期（中間期）決算短信（非連結）要約　／　証券コード 9795</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年4月23日</span></div>
+    <div class="meta-item">対象期間 <span>2025年10月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高（中間累計）</div>
+      <div class="kpi-value">8,356<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 2.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益（中間累計）</div>
+      <div class="kpi-value">2,380<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 1.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">中間純利益</div>
+      <div class="kpi-value">1,697<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">▲ 2.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（中間・基本的）</div>
+      <div class="kpi-value">108.55<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前年同期 104.28円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">会社・事業の基本情報</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　遠藤 陽介</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業セグメント</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">学習塾事業（単一セグメント）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業部門</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">小中学生部門・高校生部門・学童部門</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）／非連結</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要エリア</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">神奈川県（横浜・川崎・湘南・県西・県央）を中心に展開</span>
+      </div>
+    </div>
+    <div class="highlight">
+      神奈川県を地盤とする学習塾チェーン。高校受験ステップ・Hi-STEP・大学受験ステップ・学童STEPキッズを展開。県内公立進学校への高い合格実績を武器に、ドミナント戦略で川崎・横浜東部への展開を積極推進中。当中間期は期中平均生徒数が前年同期比<strong>2.6%増</strong>と順調に拡大。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当中間期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間累計）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">8,356 <span class='data-sub'>百万円 ▲2.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上原価</span>
+          <span class="data-val">5,480 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">2,876 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">販売費及び一般管理費</span>
+          <span class="data-val">496 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">2,380 <span class='data-sub'>百万円 ▲1.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">2,426 <span class='data-sub'>百万円 ▲1.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間純利益</span>
+          <span class="data-val">1,697 <span class='data-sub'>百万円 ▲2.7%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 期中平均生徒数が前年同期比2.6%増。新年度の小学生入会が好調で増収を牽引</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏫 3月に川崎スクール開校（川崎区初出店）。既存スクールの増床・移転も実施</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 特別利益：固定資産売却益29百万円を計上（前年同期はゼロ）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 販管費が前年同期比9.1%増（新規開校・スペース拡張に伴うコスト増）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏆 入試実績が好調。学力向上進学重点校8校で初の全校1位を達成、ブランド力を強化</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 部門別売上 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">事業部門別 売上高</div>
+      <div class="segment-grid">
+        <div class="segment-item">
+          <div class="segment-name">📚 小中学生部門</div>
+          <div class="segment-row"><span>売上高</span><span>6,581 百万円</span></div>
+          <div class="segment-row"><span>前年同期比</span><span class="up">＋2.4%</span></div>
+        </div>
+        <div class="segment-item">
+          <div class="segment-name">🎓 高校生部門</div>
+          <div class="segment-row"><span>売上高</span><span>1,775 百万円</span></div>
+          <div class="segment-row"><span>前年同期比</span><span class="up">＋2.6%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 通期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年9月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>前期実績（2025/9期）</th>
+          <th>当期予想（2026/9期）</th>
+          <th>増減率</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>15,843 百万円</td>
+          <td>16,494 百万円</td>
+          <td class="up">＋4.1%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>3,780 百万円</td>
+          <td>3,942 百万円</td>
+          <td class="up">＋4.3%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>3,867 百万円</td>
+          <td>4,022 百万円</td>
+          <td class="up">＋4.0%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>2,690 百万円</td>
+          <td>2,754 百万円</td>
+          <td class="up">＋2.4%</td>
+        </tr>
+        <tr>
+          <td>EPS（通期）</td>
+          <td>—</td>
+          <td>176.51 円</td>
+          <td>—</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📌 通期予想の据え置き：</strong>2025年10月公表の予想から修正なし。売上高・各利益とも前期比4%前後の増収増益を見込む。当期は川崎・横浜東部へのスクール展開を継続しつつ、教師育成・教務力強化を優先し、質を重視した成長路線を維持する方針。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（2026年3月31日）</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">30,618<span class='data-sub'>百万円 ▲0.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">27,743<span class='data-sub'>百万円 ▲1.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">90.6<span class='data-sub'>%</span><span class='data-sub'>（前期末89.7%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債（借入金）</span>
+          <span class="data-val">68<span class='data-sub'>百万円（長短合計）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,790.06<span class='data-sub'>円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー（中間累計）</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+1,575<span class='data-sub'>百万円 ▲1.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△1,625<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△1,208<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">現金及び現金同等物</span>
+          <span class="data-val">6,320<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>投資CFは定期預金の預入（10億円）・投資有価証券の取得（5億円）により前年同期比で大幅増加（前年同期△161百万円→△1,625百万円）。財務CFは自己株式取得671百万円・配当支払707百万円が主因。自己資本比率は90.6%と財務健全性は極めて高い水準を維持。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/9期（前期）中間</div>
+        <div class="div-cell-val">40.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">前年同期実績</div>
+      </div>
+      <div class="div-cell" style="background:var(--blue-pale);">
+        <div class="div-cell-label">2026/9期（当期）中間</div>
+        <div class="div-cell-val" style="color:var(--blue-light);">44.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">増配　前年同期比＋4円</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2026/9期（当期）期末予想</div>
+        <div class="div-cell-val">44.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">通期合計88円（予想）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期通期実績</div>
+        <div class="div-cell-val">85.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間40円＋期末45円</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      当期中間配当は44円（前年同期比4円増）。通期予想88円は前期実績85円から3円の増配見通し。業績予想からの修正なし。配当性向（通期）は予想EPS 176.51円に対し88円で約49.9%。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">少子化・生徒数減少リスク<br><small>神奈川県西・県央は少子化の進展が早く、募集に停滞感。地域間の需要格差が拡大</small></div>
+      <div class="risk-item high">競合他社との競争激化<br><small>学習塾市場はオンライン塾含め競争が激化。ブランド力の維持・向上が継続課題</small></div>
+      <div class="risk-item mid-level">新規開校・拡張に伴うコスト増<br><small>スクール開校・増床・移転による固定費増加が利益率に影響。人材確保コストも上昇</small></div>
+      <div class="risk-item mid-level">自己株式取得による資本政策<br><small>当中間期に671百万円の自己株式取得を実施。キャッシュアウトが継続する可能性</small></div>
+      <div class="risk-item mid-level">教師採用・育成リスク<br><small>「質の高い授業」はの実現には時間をかけた教師育成が不可欠。人材確保が成長の制約に</small></div>
+      <div class="risk-item">投資有価証券の時価変動<br><small>投資有価証券残高4,993百万円（期末）。市況悪化による評価損が純資産に影響するリスク</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年9月期第2四半期（中間期）は、売上高8,356百万円（＋2.4%）・中間純利益1,697百万円（＋2.7%）と堅調な増収増益を達成。期中平均生徒数の2.6%増が業績を下支えし、神奈川県公立進学校への圧倒的な合格実績（学力向上進学重点校8校で全1位達成）がブランド力向上に貢献した。財務面では自己資本比率90.6%と極めて健全な財務基盤を維持しつつ、投資有価証券取得や自己株式取得など積極的な資本活用を実施。通期予想は売上・利益とも4%前後の増収増益を据え置きで維持しており、川崎・横浜東部へのスクール網拡充と教務力強化を両輪に着実な成長が続く見通し。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社ステップ（9795）2026年9月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
