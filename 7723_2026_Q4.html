@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>愛知時計電機株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1A3A5C;
+    --blue-light: #2E6DA4;
+    --blue-pale: #E8F0F8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,58,92,0.18);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--blue); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue-light), #5B9BD5, var(--blue-light)); }
+  header::after { content: '計測・センサー'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5B9BD5; border: 1px solid #2E6DA4; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5B9BD5; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--blue-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--blue-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--blue-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--blue-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--blue-pale); border-left: 4px solid var(--blue-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .segment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  .segment-item { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--blue-light); padding: 16px 18px; font-size: 13px; }
+  .segment-name { font-weight: 500; color: var(--blue); margin-bottom: 6px; font-size: 13px; }
+  .segment-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 3px 0; }
+  .segment-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--dark); }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--blue); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  .biz-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px; }
+  .biz-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--blue-light); padding: 14px 18px; }
+  .biz-name { font-size: 12px; font-weight: 500; color: var(--blue); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .biz-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .biz-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+  footer { background: var(--blue); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E6DA4; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+    .segment-grid { grid-template-columns: 1fr; }
+    .biz-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>愛知時計電機株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 7723</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月8日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京・名古屋証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">59,116<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋8.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">4,710<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋19.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">4,801<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change up">＋35.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">312.16<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 229.87円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・基本情報</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長 社長執行役員　國島 賢治</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">計測器関連事業（ガス・水道・民需センサー・計装）、特機関連事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">セグメント開示</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">計測器関連事業の割合が高く重要性乏しいため省略（全社単一的開示）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">変更なし</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※IFRS適用は今後の諸情勢を考慮の上検討</span>
+      </div>
+    </div>
+    <div class="highlight">
+      ガスメーター・水道メーター・流量センサーを中心とした計測機器の専業メーカー。中期経営計画「中期経営計画2026」（2024〜2026年度）の基本戦略「市場・事業領域の拡大」「基盤事業の競争力強化」「企業価値の向上」を推進。国内需要の堅調推移と北米・欧米向け輸出の拡大により、増収増益を達成した。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">59,116 <span class='data-sub'>百万円 ＋8.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">14,720 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">4,710 <span class='data-sub'>百万円 ＋19.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">5,208 <span class='data-sub'>百万円 ＋9.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">4,801 <span class='data-sub'>百万円 ＋35.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上高営業利益率</span>
+          <span class="data-val">8.0<span class='data-sub'>%（前期 7.3%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 国内需要の底堅い推移と増収効果（売上＋8.9%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏭 計装分野で年度またぎ大口物件の工事進行（＋34.1%増収）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💧 水道関連・民需センサーで北米・欧米向け輸出が拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠️ 一部製品の不具合対策費用（製品保証引当金1,129百万円）を計上</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 投資有価証券売却益1,242百万円を特別利益に計上し純利益を押上げ</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 事業分野別 -->
+    <div class="card" style="margin-bottom:16px;">
+      <div class="card-title">事業分野別 売上高（計測器関連事業）</div>
+      <div class="biz-grid">
+        <div class="biz-item">
+          <div class="biz-name">🔥 ガス関連機器</div>
+          <div class="biz-row"><span>売上高</span><span>27,484 百万円</span></div>
+          <div class="biz-row"><span>前期比</span><span class="up">＋3.8%</span></div>
+          <div class="biz-row" style="font-size:11px;color:var(--mid);margin-top:4px;"><span style="white-space:normal;">家庭用LPガスメーター更新需要回復・中国向け輸出増</span><span></span></div>
+        </div>
+        <div class="biz-item">
+          <div class="biz-name">💧 水道関連機器</div>
+          <div class="biz-row"><span>売上高</span><span>20,470 百万円</span></div>
+          <div class="biz-row"><span>前期比</span><span class="up">＋8.6%</span></div>
+          <div class="biz-row" style="font-size:11px;color:var(--mid);margin-top:4px;"><span style="white-space:normal;">官需・民間市場堅調、北米向けメーター輸出増加</span><span></span></div>
+        </div>
+        <div class="biz-item">
+          <div class="biz-name">📡 民需センサー・システム</div>
+          <div class="biz-row"><span>売上高</span><span>2,706 百万円</span></div>
+          <div class="biz-row"><span>前期比</span><span class="up">＋2.9%</span></div>
+          <div class="biz-row" style="font-size:11px;color:var(--mid);margin-top:4px;"><span style="white-space:normal;">国内減少も欧米向け流量センサーが増加</span><span></span></div>
+        </div>
+        <div class="biz-item">
+          <div class="biz-name">🔧 計装</div>
+          <div class="biz-row"><span>売上高</span><span>8,399 百万円</span></div>
+          <div class="biz-row"><span>前期比</span><span class="up">＋34.1%</span></div>
+          <div class="biz-row" style="font-size:11px;color:var(--mid);margin-top:4px;"><span style="white-space:normal;">前期からの年度またぎ大口物件の工事が進行</span><span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>59,116 百万円</td>
+          <td>60,480 百万円</td>
+          <td class="up">＋2.3%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>4,710 百万円</td>
+          <td>4,960 百万円</td>
+          <td class="up">＋5.3%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>5,208 百万円</td>
+          <td>5,320 百万円</td>
+          <td class="up">＋2.1%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>4,801 百万円</td>
+          <td>4,610 百万円</td>
+          <td class="down">△4.0%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>312.16 円</td>
+          <td>300.49 円</td>
+          <td class="down">△3.7%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>来期見通し：</strong>LPガスメーターの更新需要継続と各分野の底堅い推移で売上は微増収を予想。部品調達価格・人件費の上昇を生産性向上でカバーし営業・経常利益は増益を見込む。純利益は今期計上した投資有価証券売却益（1,242百万円）の剥落が影響し小幅減益見通し。なお中東情勢等の地政学リスクは現時点で業績予想に未織り込み。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">70,284<span class='data-sub'>百万円 ＋12.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">52,583<span class='data-sub'>百万円 ＋12.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債（短長期計）</span>
+          <span class="data-val">700<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">74.8<span class='data-sub'>%</span><span class='data-sub'>（前期 74.6%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">3,427.51<span class='data-sub'>円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本当期純利益率（ROE）</span>
+          <span class="data-val">9.7<span class='data-sub'>%（前期 7.8%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+2,819<span class='data-sub'>百万円 ＋51.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△2,374<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△1,581<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF</span>
+          <span class="data-val" style="color:var(--red);">+445<span class='data-sub'>百万円（営業+投資）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">8,915<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>財務・CFの概況：</strong>流動資産は売掛金・棚卸資産の増加で10.5%増。固定資産は投資有価証券の株価上昇・有形固定資産の増加で14.5%増。営業CFは増益に伴う税前利益増で改善。投資CFは有形固定資産取得2,003百万円・有価証券取得2,000百万円が響きマイナスに転換。財務CFは配当金支払1,295百万円・自己株式取得167百万円が主因。現金は10,009百万円から8,915百万円へ減少。有利子負債は極めて少なく財務健全性は高い。なお40億円のコミットメントライン契約で流動性も確保。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3（前期）</div>
+        <div class="div-cell-val">75.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 32.6%</div>
+      </div>
+      <div class="div-cell" style="background:var(--blue-pale);">
+        <div class="div-cell-label">2026/3（当期）</div>
+        <div class="div-cell-val" style="color:var(--blue-light);">113.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 36.2%　大幅増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">120.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 39.9%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">内訳（2026/3）</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:14px;line-height:1.6;">中間 45円<br>期末 68円</div>
+        <div class="div-cell-sub">合計 113円</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      2025年度（当期）は中間45円・期末68円の計113円に大幅増配（前期75円から50.7%増）。投資有価証券売却益の計上もあり純利益が35.9%増となったことが配当増額の背景。2026年度（来期）は中間・期末各60円ずつ計120円を予定。純利益が小幅減少見込みでも増配を維持する姿勢。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">製品不具合リスク<br><small>今期に製品保証引当金1,129百万円を計上。品質管理コストが利益を圧迫するリスク</small></div>
+      <div class="risk-item high">部品調達・コスト上昇<br><small>部品調達価格・人件費の継続的上昇が来期の収益構造に影響。生産性向上で対応</small></div>
+      <div class="risk-item high">地政学・通商政策リスク<br><small>中東情勢・米国通商政策・中国経済の先行き不透明感が輸出・調達に影響する恐れ</small></div>
+      <div class="risk-item mid-level">需要変動リスク<br><small>新設住宅着工戸数の減少傾向。国内民間設備投資・官需の変動が業績に直結</small></div>
+      <div class="risk-item mid-level">為替リスク<br><small>北米・欧米向け輸出が拡大しており、円高局面では売上・利益が圧縮されるリスク</small></div>
+      <div class="risk-item mid-level">投資有価証券の評価変動<br><small>保有株式（10,846百万円）の評価差額金が純資産・包括利益に影響</small></div>
+      <div class="risk-item">LPガスメーター更新サイクル<br><small>来期も更新需要を見込むが、サイクルのズレや規制変更で需要が変動するリスク</small></div>
+      <div class="risk-item">設備投資・研究開発負担<br><small>有形固定資産取得2,003百万円（前期1,618百万円）と増加基調。将来収益化が前提</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は売上高＋8.9%、営業利益＋19.5%、当期純利益＋35.9%と全指標で大幅な増収増益を達成。国内公共・民間需要の底堅い推移に加え、北米・欧米向け輸出の拡大、計装分野の大型物件進行が業績を牽引した。一方、製品不具合対応として製品保証引当金1,129百万円を新規計上しており、品質リスクの顕在化には注意が必要。財務面では自己資本比率74.8%と引き続き極めて健全で、有利子負債は実質ゼロに近い水準。来期は投資有価証券売却益の剥落で純利益が若干減少する見込みながら、売上・営業利益は増加基調を維持。連続増配（75円→113円→120円予想）を計画し、株主還元も着実に拡充している。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は愛知時計電機株式会社（7723）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
