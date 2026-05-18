@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ＪＦＥシステムズ株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1A3A5C;
+    --blue-light: #2E6DA4;
+    --blue-pale: #E8F0F8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F5F7FA;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,58,92,0.18);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  header { background: var(--blue); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue-light), #5B9BD5, var(--blue-light)); }
+  header::after { content: '情報サービス'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: 'Noto Serif JP', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: #5B9BD5; border: 1px solid #2E6DA4; padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: #5B9BD5; font-weight: 500; }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 20px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--blue-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 12px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--blue-light); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+  .card { background: var(--white); border: 1px solid var(--border); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--blue-light); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--blue-light); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .highlight { background: var(--blue-pale); border-left: 4px solid var(--blue-light); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+  .div-cell-note { font-size: 10px; color: var(--mid); margin-top: 4px; }
+  .forecast-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .forecast-table th { background: var(--blue); color: var(--white); padding: 8px 12px; text-align: center; font-weight: 500; font-size: 11px; letter-spacing: 0.05em; }
+  .forecast-table td { padding: 9px 12px; border-bottom: 1px solid rgba(0,0,0,0.06); text-align: right; background: var(--white); }
+  .forecast-table td:first-child { text-align: left; color: var(--mid); }
+  .forecast-table tr:last-child td { border-bottom: none; }
+  footer { background: var(--blue); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid #2E6DA4; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>ＪＦＥシステムズ株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 4832</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年4月24日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東京証券取引所</span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPIストリップ -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">57,411<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 10.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">6,346<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 16.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当期純利益</div>
+      <div class="kpi-value">4,266<span class="kpi-unit">百万円</span></div>
+      <div class="kpi-change down">▼ 21.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">135.81<span class="kpi-unit">円</span></div>
+      <div class="kpi-change">前期 173.27円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成・基本情報</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　大木 哲夫</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業セグメント</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">情報サービス（単一セグメント）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">重要な変更なし</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）　※国内事業中心のためIFRS適用予定なし</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">株式分割</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2025年4月1日付　1株→2株（効力発生）</span>
+      </div>
+    </div>
+    <div class="highlight">
+      JFEスチールグループのITサービス中核企業。鉄鋼系基幹システムの構築・保守を強みとしつつ、DX推進・ERPソリューション・基盤サービスを重点成長事業として位置付ける。2025〜2027年度の中期経営計画では「企業としての成長・事業間の協力連携・お客様との共創」をテーマに事業ポートフォリオ転換を推進中。
+    </div>
+  </section>
+
+  <!-- 02 当期業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">57,411 <span class='data-sub'>百万円 △10.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">14,424 <span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">6,346 <span class='data-sub'>百万円 △16.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">6,454 <span class='data-sub'>百万円 △15.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">4,266 <span class='data-sub'>百万円 △21.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上高営業利益率</span>
+          <span class="data-val">11.1 <span class='data-sub'>%（前期 11.9%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏭 鉄鋼事業の製鉄所システムリフレッシュ完遂に伴う作業量減少が主因で減収（△10.3%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💼 研究開発・社内システム投資・人材採用育成費増加により販管費が拡大（前期比＋583百万円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 基盤事業本部・ERP・デジタル製造事業本部は拡大傾向で重点成長領域は底堅い</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 非上場株式に係る投資有価証券評価損281百万円を特別損失に計上</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 受取利息増加（107百万円）など金融収益改善が経常利益を下支え</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 来期予想 -->
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      <table class="forecast-table">
+        <tr>
+          <th style="text-align:left;">項目</th>
+          <th>2025年度実績</th>
+          <th>2026年度予想</th>
+          <th>増減</th>
+        </tr>
+        <tr>
+          <td>売上高</td>
+          <td>57,411 百万円</td>
+          <td>60,000 百万円</td>
+          <td class="up">＋4.5%</td>
+        </tr>
+        <tr>
+          <td>営業利益</td>
+          <td>6,346 百万円</td>
+          <td>6,600 百万円</td>
+          <td class="up">＋4.0%</td>
+        </tr>
+        <tr>
+          <td>経常利益</td>
+          <td>6,454 百万円</td>
+          <td>6,800 百万円</td>
+          <td class="up">＋5.4%</td>
+        </tr>
+        <tr>
+          <td>当期純利益</td>
+          <td>4,266 百万円</td>
+          <td>4,380 百万円</td>
+          <td class="up">＋2.7%</td>
+        </tr>
+        <tr>
+          <td>EPS</td>
+          <td>135.81 円</td>
+          <td>139.45 円</td>
+          <td class="up">＋2.7%</td>
+        </tr>
+      </table>
+      <div class="highlight" style="margin-top:14px;">
+        <strong>📌 増収増益の根拠：</strong>鉄鋼系リフレッシュ完遂に伴う反動減の影響は一巡し、重点成長事業（DX・ERPソリューション・基盤サービス）を中心に各事業が堅調に推移する見通し。企業のDX推進・業務効率化需要を取り込み、売上・利益ともに回復局面へ転換を見込む。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">52,725<span class='data-sub'>百万円 △0.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">36,698<span class='data-sub'>百万円 ＋7.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">16,027<span class='data-sub'>百万円 △15.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">67.3<span class='data-sub'>%</span><span class='data-sub'>（前期 62.2%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,129.19<span class='data-sub'>円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本利益率（ROE）</span>
+          <span class="data-val">12.5<span class='data-sub'>%（前期 17.5%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+8,448<span class='data-sub'>百万円 △3.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△15,849<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△3,202<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金</span>
+          <span class="data-val">13,450<span class='data-sub'>百万円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">（参考）現金及び預金残高</span>
+          <span class="data-val">27,600<span class='data-sub'>百万円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>売上債権回収の進展により営業CFは8,448百万円の安定収入を確保。投資CFの大幅マイナスは定期預金預入（△29,700百万円）が主因で、実態的な設備投資は継続水準（無形固定資産取得1,149百万円等）。財務CFは配当金支払増加（△1,994百万円）と リース返済（△1,136百万円）が主因。流動比率は高く財務健全性は良好。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">2025/3（前期）</div>
+        <div class="div-cell-val">61.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 35.2%</div>
+        <div class="div-cell-note">分割前実績：122.00円</div>
+      </div>
+      <div class="div-cell" style="background:var(--blue-pale);">
+        <div class="div-cell-label">2026/3（当期）</div>
+        <div class="div-cell-val" style="color:var(--blue-light);">68.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 50.1%　増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">2027/3（予想）</div>
+        <div class="div-cell-val">70.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 50.2%（予）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">配当性向50%目途を基本方針とし、配当の安定的な継続に努める。</div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:14px;">
+      ※2025年4月1日付で1株につき2株の株式分割を実施。分割前の配当実績はすべて分割後換算値に読み替えて表示しています。<br><br>
+      2025年度は中間28円・期末40円の計68円（分割後換算ベース前期61円から増配）。2026年度は中間22円・期末48円の計70円を予定。配当性向50%目途の方針に沿って、利益水準に応じた安定還元を継続する姿勢。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">鉄鋼系依存リスク<br><small>JFEスチール向け売上への高依存。リフレッシュ完遂後の案件規模縮小が収益変動要因</small></div>
+      <div class="risk-item high">コスト増加リスク<br><small>成長基盤強化のための研究開発・人材採用・育成費用が継続増加し利益率を圧迫</small></div>
+      <div class="risk-item high">投資有価証券リスク<br><small>非上場株式の評価損（281百万円）が当期純利益を圧迫。保有有価証券の追加評価懸念</small></div>
+      <div class="risk-item mid-level">人材確保・育成リスク<br><small>IT人材市場の競争激化による採用コスト上昇と優秀人材の離職リスク</small></div>
+      <div class="risk-item mid-level">DX事業競争リスク<br><small>重点成長領域でのクラウド・セキュリティ市場は競合多数。シェア維持への投資継続が必要</small></div>
+      <div class="risk-item mid-level">売上債権・定期預金の流動性<br><small>投資CF上の定期預金（14,150百万円預入）が現預金残高を一時的に圧縮。流動性管理が重要</small></div>
+      <div class="risk-item">景気変動・設備投資動向<br><small>企業のITシステム投資抑制は直接的な受注減につながるリスク</small></div>
+      <div class="risk-item">セキュリティ・サイバーリスク<br><small>情報サービス企業として顧客データの管理責任。インシデント発生時の信頼失墜リスク</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight" style="border-left-color:var(--charcoal);background:#f0f0ef;">
+      2026年3月期は、鉄鋼事業向け製鉄所システムリフレッシュの完遂という構造的な要因により減収減益となった。ただし、これは計画内の一過性の影響であり、重点成長事業（DX・ERPソリューション・基盤サービス）は堅調に推移している。財務面では自己資本比率が67.3%（前期62.2%）へ着実に改善し、財務健全性は高水準を維持。来期（2027年3月期）は鉄鋼リフレッシュ影響の一巡により増収増益（各＋4〜5%台）への回復が見込まれ、ターンアラウンドの局面にある。配当は分割後換算ベースで増配を継続し、配当性向50%目途の安定還元姿勢を維持している。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はＪＦＥシステムズ株式会社（4832）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
