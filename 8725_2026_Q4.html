@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ＭＳ＆ＡＤインシュアランスグループホールディングス株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A3A6E;
+    --navy-light: #2C4F8A;
+    --navy-dark: #0F2347;
+    --gold: #C19A4D;
+    --gold-light: #D9B871;
+    --gold-pale: #F4EDD7;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,58,110,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--navy-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold)); }
+  header::after { content: 'Insurance'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 110px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--gold-light); border: 1px solid var(--gold); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--gold-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--gold-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--gold); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--navy); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-name { font-weight: 500; color: var(--navy); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--gold); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--gold-pale); border-left: 4px solid var(--gold); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--navy); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--navy-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--gold); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>ＭＳ＆ＡＤインシュアランスグループホールディングス株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 8725</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月20日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東証・名証</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">経常収益</div>
+      <div class="kpi-value">7兆6,530<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 14.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">1兆1,202<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 20.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属純利益</div>
+      <div class="kpi-value">7,873<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 13.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">528.87<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">前期 445.52円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成</div>
+      <div class="data-row">
+        <span class="data-key">会社形態</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">保険持株会社（国内損保・生保・海外保険を統括）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">国内損害保険</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">三井住友海上火災・あいおいニッセイ同和損保・三井ダイレクト損保</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">国内生命保険</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">三井住友海上あいおい生命・三井住友海上プライマリー生命</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">海外事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">海外保険子会社（W.R.Berkleyへの出資、MSIG各社）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">国内損保5社・国内生保・海外保険の計6セグメント</span>
+      </div>
+    </div>
+    <div class="highlight">三井住友海上とあいおいニッセイ同和損保が2027年4月1日付で合併合意。国内損保事業を再編し新会社を創造。並行してW.R.Berkley出資やBarings出資により海外・運用領域を拡張、グループとして「リスクに挑む」総合保険・金融グループへの転換を加速。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">経常収益</span>
+          <span class="data-val">7兆6,530<span class="data-sub">億円 +14.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">保険引受収益</span>
+          <span class="data-val">5兆7,625<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資産運用収益</span>
+          <span class="data-val">1兆8,130<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">1兆1,202<span class="data-sub">億円 +20.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属純利益</span>
+          <span class="data-val">7,873<span class="data-sub">億円 +13.8%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌎 海外事業の経常利益が+1,035億円増（3,348億円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚗 あいおいニッセイ同和損保が+1,084億円増益（2,485億円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💼 海外正味保険料収入+2,078億円（1兆7,351億円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 持分法投資利益+117億円（W.R.Berkley等寄与）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ あいおい生命が△519億円赤字（責任準備金繰入増）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 特別損失99億円（減損損失337億円含む）</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント別経常利益（当期）</div>
+      <div class="seg-grid">
+        <div class="seg-item">
+          <div class="seg-name">三井住友海上（損保）</div>
+          <div class="seg-row"><span>経常利益</span><span>6,602億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+842億円</span></div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">あいおいニッセイ同和（損保）</div>
+          <div class="seg-row"><span>経常利益</span><span>2,485億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+1,084億円</span></div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">三井ダイレクト（損保）</div>
+          <div class="seg-row"><span>経常損益</span><span>△24億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="down">△7億円</span></div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">あいおい生命</div>
+          <div class="seg-row"><span>経常損益</span><span>△763億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="down">△1,270億円</span></div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">プライマリー生命</div>
+          <div class="seg-row"><span>経常利益</span><span>501億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+62億円</span></div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">海外事業</div>
+          <div class="seg-row"><span>経常利益</span><span>3,348億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+1,035億円</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期・IFRS基準）</div>
+      <div class="data-row">
+        <span class="data-key">親会社の所有者帰属当期利益</span>
+        <span class="data-val">4,250<span class="data-sub">億円</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">基本的1株当たり当期利益（EPS）</span>
+        <span class="data-val">292.91<span class="data-sub">円</span></span>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>2026年3月期有価証券報告書からIFRS任意適用のため、日本基準（J-GAAP）の当期実績との直接比較・増減率は記載されていません。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">28兆6,408<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">4兆8,251<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">16.7<span class="data-sub">% （前期15.2%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">3,286.85<span class="data-sub">円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+7,626<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△6,969<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△1,292<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金及び現金同等物</span>
+          <span class="data-val" style="color:var(--green);">2兆2,228<span class="data-sub">億円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>保険料収入増で営業CF +7,626億円（前期+1,024億円増）。投資CFは有価証券取得が売却を上回り△6,969億円。財務CFは社債発行収入456億円+借入等で改善（前期△6,596億円→当期△1,292億円）。自己株式取得△2,215億円継続。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/3）</div>
+        <div class="div-cell-val">145.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 32.5%</div>
+      </div>
+      <div class="div-cell" style="background:var(--gold-pale);">
+        <div class="div-cell-label">当期実績（2026/3）</div>
+        <div class="div-cell-val" style="color:var(--gold);">160.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当性向 30.3%</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">来期予想（2027/3）</div>
+        <div class="div-cell-val">170.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">IFRS基準・性向58.0%</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">継続的増配方針<br>+15円増配（10.3%増）</div>
+      </div>
+    </div>
+    <div class="highlight">
+      内訳：当期160円のうち中間77.50円+期末82.50円（特別配当17.50円含む）。来期予想170円は中間85円+期末85円。前期比+25円の連続増配。自社株消却（141,615千株）も実施し1株価値の希薄化を抑制。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">自然災害保険金<br><small>来期想定：三井住友海上830億円・あいおい670億円</small></div>
+      <div class="risk-item high">国内生保赤字継続<br><small>あいおい生命 当期△519億円、責任準備金圧迫</small></div>
+      <div class="risk-item mid-level">金融市場変動<br><small>金利・為替・株価の前提変動が業績に影響</small></div>
+      <div class="risk-item mid-level">業界再編シナジー<br><small>2027年4月損保2社合併の統合効果実現可否</small></div>
+      <div class="risk-item mid-level">IFRS移行<br><small>2026/3期以降、業績連続性に注意必要</small></div>
+      <div class="risk-item">国内市場縮小<br><small>少子高齢化に伴う保険需要構造変化</small></div>
+      <div class="risk-item">気候変動・新リスク<br><small>サイバー、AI普及等の新興リスク対応</small></div>
+      <div class="risk-item">海外事業統合<br><small>W.R.Berkley・Barings等の協業実現リスク</small></div>
+      <div class="risk-item">過去の業法対応<br><small>保険料調整・情報漏えい問題の再発防止継続</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      経常収益+14.9%、経常利益+20.6%、純利益+13.8%の大幅増収増益。海外事業（+1,035億円）とあいおいニッセイ同和損保（+1,084億円）が業績を牽引。自己資本比率は15.2%→16.7%へ改善し財務体質も強化。配当は+15円増配の160円（連続増配）、来期予想170円とさらなる還元方針。EPS528.87円と高水準。一方、あいおい生命の赤字（△519億円）、IFRS移行による業績連続性不明瞭化、2027年4月の国内損保2社合併に伴う統合リスクは要注視。総じて高収益・株主還元拡大の堅調決算。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はＭＳ＆ＡＤインシュアランスグループホールディングス株式会社（8725）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
