@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>8766 東京海上ホールディングス 2026年3月期 決算</title>
+<style>
+:root{
+  --navy:#0B2340;--navy-mid:#163660;--navy-light:#1E4A80;
+  --gold:#D4A017;--gold-light:#F0C040;--gold-pale:#FFF8E1;
+  --bg:#070F1C;--card:#0D1E35;--card2:#112244;
+  --text:#E8EDF5;--sub:#8AA0B8;--border:#1E3A5A;
+  --up:#4CAF50;--down:#F44336;--neu:#78909C;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Helvetica Neue',Arial,'Hiragino Sans',sans-serif;font-size:14px;line-height:1.6}
+.watermark{position:fixed;bottom:40px;right:40px;font-size:120px;font-weight:900;color:rgba(212,160,23,.05);pointer-events:none;user-select:none;z-index:0;letter-spacing:-4px}
+header{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);border-bottom:3px solid var(--gold);padding:24px 32px}
+.hd-top{display:flex;justify-content:space-between;align-items:flex-start}
+.code-badge{background:var(--gold);color:#0B0800;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;letter-spacing:.5px}
+.company{font-size:22px;font-weight:700;margin:8px 0 4px;color:#fff}
+.sub-info{color:var(--sub);font-size:12px}
+.period-badge{background:var(--navy-mid);border:1px solid var(--gold);color:var(--gold);padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600}
+.kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-top:1px solid var(--border)}
+.kpi{background:var(--card);padding:16px 20px;text-align:center}
+.kpi-label{font-size:11px;color:var(--sub);margin-bottom:6px;letter-spacing:.3px}
+.kpi-val{font-size:22px;font-weight:700;color:var(--gold-light)}
+.kpi-sub{font-size:11px;margin-top:4px}
+.up{color:var(--up)}.down{color:var(--down)}.neu{color:var(--neu)}
+main{max-width:900px;margin:0 auto;padding:24px 20px}
+section{margin-bottom:28px}
+.sec-title{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:1px;text-transform:uppercase;border-left:3px solid var(--gold);padding-left:10px;margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:10px}
+.data-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border)}
+.data-row:last-child{border-bottom:none}
+.data-key{color:var(--sub);font-size:12px}
+.data-val{font-weight:600;font-size:14px}
+.data-sub{font-size:11px;color:var(--sub);margin-left:8px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.seg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.seg-item{background:var(--card2);border:1px solid var(--border);border-radius:6px;padding:12px 14px}
+.seg-name{font-size:11px;color:var(--sub);margin-bottom:4px}
+.seg-val{font-size:15px;font-weight:700;color:var(--gold-light)}
+.seg-chg{font-size:11px;margin-top:2px}
+.div-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.div-cell{background:var(--card2);border:1px solid var(--border);border-radius:6px;padding:12px;text-align:center}
+.div-label{font-size:11px;color:var(--sub);margin-bottom:6px}
+.div-val{font-size:20px;font-weight:700;color:var(--gold-light)}
+.div-sub{font-size:11px;color:var(--sub);margin-top:4px}
+.highlight{background:rgba(212,160,23,.08);border:1px solid rgba(212,160,23,.25);border-radius:6px;padding:12px 16px;margin:8px 0}
+.highlight-title{font-size:11px;font-weight:700;color:var(--gold);margin-bottom:6px;letter-spacing:.5px}
+.risk-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.risk-item{background:var(--card2);border-radius:6px;padding:10px 12px;font-size:12px}
+.risk-item.high{border-left:3px solid var(--down)}
+.risk-item.mid{border-left:3px solid #FF9800}
+.risk-title-r{font-weight:700;margin-bottom:4px;font-size:12px}
+.summary-box{background:linear-gradient(135deg,var(--navy-mid),var(--card));border:1px solid var(--gold);border-radius:8px;padding:18px 22px}
+.summary-text{font-size:15px;line-height:1.8;color:var(--text)}
+footer{text-align:center;padding:20px;color:var(--sub);font-size:11px;border-top:1px solid var(--border);margin-top:24px}
+@media(max-width:600px){
+  .kpi-strip{grid-template-columns:repeat(2,1fr)}
+  .two-col,.seg-grid,.div-grid,.risk-grid{grid-template-columns:1fr}
+  .hd-top{flex-direction:column;gap:8px}
+}
+</style>
+</head>
+<body>
+<div class="watermark">Insurance</div>
+
+<header>
+  <div class="hd-top">
+    <div>
+      <div class="code-badge">8766 ｜ 東証プライム</div>
+      <div class="company">東京海上ホールディングス株式会社</div>
+      <div class="sub-info">業種：保険業（損害保険・生命保険・海外保険）　日本基準（連結）</div>
+    </div>
+    <div class="period-badge">2026年3月期　本決算（Q4）</div>
+  </div>
+</header>
+
+<div class="kpi-strip">
+  <div class="kpi">
+    <div class="kpi-label">経常収益</div>
+    <div class="kpi-val">8.87兆円</div>
+    <div class="kpi-sub up">▲ +5.1% YoY</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">経常利益</div>
+    <div class="kpi-val">1.35兆円</div>
+    <div class="kpi-sub down">▼ −7.6% YoY</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">当期純利益（親会社）</div>
+    <div class="kpi-val">9,804億円</div>
+    <div class="kpi-sub down">▼ −7.1% YoY</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">EPS</div>
+    <div class="kpi-val">515.55円</div>
+    <div class="kpi-sub down">前期 542.16円</div>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <div class="sec-title">事業概要</div>
+  <div class="card">
+    <div class="data-row"><span class="data-key">会社名</span><span class="data-val">東京海上ホールディングス株式会社</span></div>
+    <div class="data-row"><span class="data-key">証券コード</span><span class="data-val">8766（東証プライム）</span></div>
+    <div class="data-row"><span class="data-key">決算期</span><span class="data-val">2026年3月期（2025年4月〜2026年3月）</span></div>
+    <div class="data-row"><span class="data-key">会計基準</span><span class="data-val">日本基準（連結）　※2026年3月期有価証券報告書よりIFRS任意適用</span></div>
+    <div class="data-row"><span class="data-key">主要事業</span><span class="data-val">損害保険・生命保険・海外保険・ソリューション</span></div>
+    <div class="data-row"><span class="data-key">発表日</span><span class="data-val">2026年5月20日</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">業績ハイライト</div>
+  <div class="card">
+    <div class="data-row">
+      <span class="data-key">経常収益</span>
+      <span class="data-val">8兆8,722億円<span class="data-sub up">+5.1%</span></span>
+    </div>
+    <div class="data-row">
+      <span class="data-key">経常利益</span>
+      <span class="data-val">1兆3,486億円<span class="data-sub down">−7.6%</span></span>
+    </div>
+    <div class="data-row">
+      <span class="data-key">親会社株主帰属 当期純利益</span>
+      <span class="data-val">9,804億円<span class="data-sub down">−7.1%</span></span>
+    </div>
+    <div class="data-row">
+      <span class="data-key">EPS（1株当たり純利益）</span>
+      <span class="data-val">515.55円<span class="data-sub down">前期 542.16円</span></span>
+    </div>
+    <div class="data-row">
+      <span class="data-key">自己資本当期純利益率（ROE）</span>
+      <span class="data-val">18.7%<span class="data-sub down">前期 20.6%</span></span>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <div class="highlight-title">減益要因</div>
+    国内損害保険の自然災害損害増加（国内：−1,488億円）、有価証券売却益の減少（前期比−1,289億円）が主因。海外保険事業は好調で+705億円増益。
+  </div>
+
+  <div style="margin-top:14px">
+    <div class="sec-title" style="font-size:11px">セグメント別経常利益</div>
+    <div class="seg-grid">
+      <div class="seg-item">
+        <div class="seg-name">国内損害保険事業</div>
+        <div class="seg-val">7,444億円</div>
+        <div class="seg-chg down">前期比 −1,488億円（−16.7%）</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">国内生命保険事業</div>
+        <div class="seg-val">236億円</div>
+        <div class="seg-chg down">前期比 −465億円（−66.4%）</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">海外保険事業</div>
+        <div class="seg-val">5,590億円</div>
+        <div class="seg-chg up">前期比 +705億円（+14.4%）</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">ソリューション・その他事業</div>
+        <div class="seg-val">214億円</div>
+        <div class="seg-chg up">前期比 +166億円</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">財政状態</div>
+  <div class="two-col">
+    <div class="card">
+      <div class="data-row"><span class="data-key">総資産</span><span class="data-val">31兆9,619億円</span></div>
+      <div class="data-row"><span class="data-key">純資産</span><span class="data-val">5兆4,575億円</span></div>
+      <div class="data-row"><span class="data-key">自己資本比率</span><span class="data-val">17.0%<span class="data-sub up">前期 16.3%</span></span></div>
+    </div>
+    <div class="card">
+      <div class="data-row"><span class="data-key">1株当たり純資産</span><span class="data-val">2,885.44円</span></div>
+      <div class="data-row"><span class="data-key">総資産経常利益率</span><span class="data-val">4.3%<span class="data-sub down">前期 4.7%</span></span></div>
+      <div class="data-row"><span class="data-key">自己資本純利益率（ROE）</span><span class="data-val">18.7%<span class="data-sub down">前期 20.6%</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">配当</div>
+  <div class="div-grid">
+    <div class="div-cell">
+      <div class="div-label">前期（2025年3月期）</div>
+      <div class="div-val">172円</div>
+      <div class="div-sub">中81円 + 期91円</div>
+    </div>
+    <div class="div-cell">
+      <div class="div-label">当期（2026年3月期）</div>
+      <div class="div-val" style="color:var(--up)">218円</div>
+      <div class="div-sub up">+46円　中105.5円 + 期112.5円</div>
+    </div>
+    <div class="div-cell">
+      <div class="div-label">来期予想（2027年3月期）</div>
+      <div class="div-val" style="color:var(--gold-light)">245円</div>
+      <div class="div-sub">中122.5円 + 期122.5円（予想）</div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:10px">
+    <div class="data-row"><span class="data-key">配当性向（当期）</span><span class="data-val">42.3%<span class="data-sub down">前期 31.7%（+10.6%pt）</span></span></div>
+    <div class="data-row"><span class="data-key">純資産配当率</span><span class="data-val">7.9%<span class="data-sub down">前期 6.5%</span></span></div>
+    <div class="data-row"><span class="data-key">来期配当性向（予想）</span><span class="data-val">55.5%</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">来期業績予想（2027年3月期）</div>
+  <div class="card">
+    <div class="data-row"><span class="data-key">会計基準</span><span class="data-val">IFRS（有価証券報告書より任意適用）</span></div>
+    <div class="data-row"><span class="data-key">親会社所有者帰属当期利益（IFRS）</span><span class="data-val">8,300億円<span class="data-sub up">+56.2%（IFRS 2026年3月期比）</span></span></div>
+    <div class="data-row"><span class="data-key">基本的1株当たり当期利益（IFRS）</span><span class="data-val">441.83円</span></div>
+    <div class="data-row"><span class="data-key">来期配当予想</span><span class="data-val">245円<span class="data-sub up">+27円増配</span></span></div>
+  </div>
+  <div class="highlight">
+    <div class="highlight-title">IFRS移行について</div>
+    2026年3月期の有価証券報告書から連結財務諸表にIFRSを任意適用。2027年3月期の業績予想および前期比較はIFRS基準で作成。日本基準の当期純利益（9,804億円）とのダイレクト比較は不可。
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">特記事項・トピックス</div>
+  <div class="risk-grid">
+    <div class="risk-item high">
+      <div class="risk-title-r">バークシャーとの戦略的提携</div>
+      National Indemnity Company（バークシャーハサウェイ完全子会社）へ自己株式を第三者割当処分（4,821万株、@5,962円、計2,874億円）。2026年4月13日払込完了。再保険・M&A分野での包括的パートナーシップ。
+    </div>
+    <div class="risk-item high">
+      <div class="risk-title-r">自己株式取得（大規模）</div>
+      2026年5月〜12月に2,000億円上限、最大1億3,000万株の自己株式取得を決議。希薄化抑制が目的。
+    </div>
+    <div class="risk-item mid">
+      <div class="risk-title-r">M&A（海外2件）</div>
+      ①Ignyte Insurance（コレクターカー保険代理店、約1,028億円）②Agrihedge（農業リスクソリューション、約1,500億円）を取得。のれん合計約1,258億円を計上。
+    </div>
+    <div class="risk-item mid">
+      <div class="risk-title-r">国内損保 自然災害損害</div>
+      当期国内自然災害損害が増加し経常利益を圧迫。来期は国内1,050億円・海外950億円の発生を想定。
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">総評</div>
+  <div class="summary-box">
+    <div class="summary-text">
+      増収減益。経常収益は5.1%増の8.87兆円と過去最高水準を更新したが、経常利益は自然災害損害増・有価証券売却益の反動減により7.6%減の1.35兆円。ただし海外保険事業は14%超の増益で成長継続。<br><br>
+      配当は46円大幅増配の218円（来期予想245円）と株主還元は強化基調。バークシャーハサウェイとの戦略的提携という歴史的イベントが注目。IFRS移行により来期比較は+56.2%と高く見えるが、基準の差異に注意が必要。<br><br>
+      長期的に見ると国内最大の総合保険グループとしての地位は盤石。海外成長と積極的な資本政策が株主価値向上に寄与しており、引き続き注目に値する銘柄。
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>8766 東京海上ホールディングス株式会社 ｜ 2026年3月期 本決算 ｜ 作成日：2026-05-21</footer>
+</body>
+</html>

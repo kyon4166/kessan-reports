@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>9986 蔵王産業 2026年3月期 決算</title>
+<style>
+:root{
+  --steel:#00A8CC;--steel-dark:#006E87;--steel-pale:#E0F7FA;
+  --cyan:#4DD0E1;--cyan-pale:#B2EBF2;
+  --bg:#060F14;--card:#0B1820;--card2:#0F2030;
+  --text:#DCF0F5;--sub:#6A9BAA;--border:#0E2535;
+  --up:#4CAF50;--down:#F44336;--neu:#78909C;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Helvetica Neue',Arial,'Hiragino Sans',sans-serif;font-size:14px;line-height:1.6}
+.watermark{position:fixed;bottom:40px;right:40px;font-size:100px;font-weight:900;color:rgba(0,168,204,.05);pointer-events:none;user-select:none;z-index:0;letter-spacing:-2px}
+header{background:linear-gradient(135deg,#050C12 0%,#0B1E2E 100%);border-bottom:3px solid var(--steel);padding:24px 32px}
+.hd-top{display:flex;justify-content:space-between;align-items:flex-start}
+.code-badge{background:var(--steel);color:#020C10;font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px;letter-spacing:.5px}
+.company{font-size:22px;font-weight:700;margin:8px 0 4px;color:#fff}
+.sub-info{color:var(--sub);font-size:12px}
+.period-badge{background:#0A1825;border:1px solid var(--steel);color:var(--steel);padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600}
+.kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-top:1px solid var(--border)}
+.kpi{background:var(--card);padding:16px 20px;text-align:center}
+.kpi-label{font-size:11px;color:var(--sub);margin-bottom:6px;letter-spacing:.3px}
+.kpi-val{font-size:22px;font-weight:700;color:var(--cyan)}
+.kpi-sub{font-size:11px;margin-top:4px}
+.up{color:var(--up)}.down{color:var(--down)}.neu{color:var(--neu)}
+main{max-width:900px;margin:0 auto;padding:24px 20px}
+section{margin-bottom:28px}
+.sec-title{font-size:13px;font-weight:700;color:var(--steel);letter-spacing:1px;text-transform:uppercase;border-left:3px solid var(--steel);padding-left:10px;margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:10px}
+.data-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border)}
+.data-row:last-child{border-bottom:none}
+.data-key{color:var(--sub);font-size:12px}
+.data-val{font-weight:600;font-size:14px}
+.data-sub{font-size:11px;color:var(--sub);margin-left:8px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.seg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.seg-item{background:var(--card2);border:1px solid var(--border);border-radius:6px;padding:12px 14px}
+.seg-name{font-size:11px;color:var(--sub);margin-bottom:4px}
+.seg-val{font-size:15px;font-weight:700;color:var(--cyan)}
+.seg-chg{font-size:11px;margin-top:2px}
+.div-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.div-cell{background:var(--card2);border:1px solid var(--border);border-radius:6px;padding:12px;text-align:center}
+.div-label{font-size:11px;color:var(--sub);margin-bottom:6px}
+.div-val{font-size:20px;font-weight:700;color:var(--cyan)}
+.div-sub{font-size:11px;color:var(--sub);margin-top:4px}
+.anniversary-badge{background:rgba(0,168,204,.15);border:1px solid rgba(0,168,204,.35);color:var(--steel);font-size:11px;font-weight:700;padding:2px 10px;border-radius:4px;display:inline-block;margin-left:8px}
+.highlight{background:rgba(0,168,204,.07);border:1px solid rgba(0,168,204,.2);border-radius:6px;padding:12px 16px;margin:8px 0}
+.highlight-title{font-size:11px;font-weight:700;color:var(--steel);margin-bottom:6px;letter-spacing:.5px}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.product-item{background:var(--card2);border:1px solid var(--border);border-radius:6px;padding:12px;text-align:center}
+.product-name{font-size:11px;color:var(--sub);margin-bottom:4px}
+.product-val{font-size:14px;font-weight:700;color:var(--cyan)}
+.product-chg{font-size:11px;margin-top:2px}
+.summary-box{background:linear-gradient(135deg,#0A1825,var(--card));border:1px solid var(--steel);border-radius:8px;padding:18px 22px}
+.summary-text{font-size:15px;line-height:1.8;color:var(--text)}
+footer{text-align:center;padding:20px;color:var(--sub);font-size:11px;border-top:1px solid var(--border);margin-top:24px}
+@media(max-width:600px){
+  .kpi-strip{grid-template-columns:repeat(2,1fr)}
+  .two-col,.seg-grid,.div-grid,.product-grid{grid-template-columns:1fr}
+  .hd-top{flex-direction:column;gap:8px}
+}
+</style>
+</head>
+<body>
+<div class="watermark">Industrial</div>
+
+<header>
+  <div class="hd-top">
+    <div>
+      <div class="code-badge">9986 ｜ 東証プライム</div>
+      <div class="company">蔵王産業株式会社</div>
+      <div class="sub-info">業種：卸売業（環境クリーニング機器）　日本基準（非連結）</div>
+    </div>
+    <div class="period-badge">2026年3月期　本決算（Q4）</div>
+  </div>
+</header>
+
+<div class="kpi-strip">
+  <div class="kpi">
+    <div class="kpi-label">売上高</div>
+    <div class="kpi-val">87.6億円</div>
+    <div class="kpi-sub up">▲ +3.6% YoY</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">営業利益</div>
+    <div class="kpi-val">10.2億円</div>
+    <div class="kpi-sub up">▲ +11.5% YoY</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">当期純利益</div>
+    <div class="kpi-val">7.2億円</div>
+    <div class="kpi-sub up">▲ +16.6% YoY</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">EPS</div>
+    <div class="kpi-val">132.24円</div>
+    <div class="kpi-sub up">前期 113.52円</div>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <div class="sec-title">事業概要</div>
+  <div class="card">
+    <div class="data-row"><span class="data-key">会社名</span><span class="data-val">蔵王産業株式会社</span></div>
+    <div class="data-row"><span class="data-key">証券コード</span><span class="data-val">9986（東証プライム）</span></div>
+    <div class="data-row"><span class="data-key">決算期</span><span class="data-val">2026年3月期（2025年4月〜2026年3月）</span></div>
+    <div class="data-row"><span class="data-key">会計基準</span><span class="data-val">日本基準（非連結）</span></div>
+    <div class="data-row"><span class="data-key">主要事業</span><span class="data-val">清掃機器・洗浄機器・アフターサービスの販売（OEMオリジナル商品含む）</span></div>
+    <div class="data-row"><span class="data-key">発表日</span><span class="data-val">2026年5月13日</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">業績ハイライト</div>
+  <div class="card">
+    <div class="data-row">
+      <span class="data-key">売上高</span>
+      <span class="data-val">8,757百万円<span class="data-sub up">+3.6%</span></span>
+    </div>
+    <div class="data-row">
+      <span class="data-key">売上総利益</span>
+      <span class="data-val">4,167百万円<span class="data-sub up">+7.2%</span></span>
+    </div>
+    <div class="data-row">
+      <span class="data-key">営業利益</span>
+      <span class="data-val">1,016百万円<span class="data-sub up">+11.5%</span></span>
+    </div>
+    <div class="data-row">
+      <span class="data-key">経常利益</span>
+      <span class="data-val">1,042百万円<span class="data-sub up">+12.2%</span></span>
+    </div>
+    <div class="data-row">
+      <span class="data-key">当期純利益</span>
+      <span class="data-val">718百万円<span class="data-sub up">+16.6%</span></span>
+    </div>
+    <div class="data-row">
+      <span class="data-key">売上高営業利益率</span>
+      <span class="data-val">11.6%<span class="data-sub up">前期 10.8%</span></span>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <div class="highlight-title">増収増益の背景</div>
+    製造業の生産性向上ニーズを追い風に主力の清掃機器・搭乗式清掃機が好調（清掃機器 +21.1%）。アフターサービス（工賃・パーツ）も堅調。一方、家庭用リンサーは競合参入・新機種遅延で減収。売上総利益率の改善（44.2%→47.6%）が利益を押し上げた。
+  </div>
+
+  <div style="margin-top:14px">
+    <div class="sec-title" style="font-size:11px">品目別売上高</div>
+    <div class="product-grid">
+      <div class="product-item">
+        <div class="product-name">清掃機器</div>
+        <div class="product-val">1,779百万円</div>
+        <div class="product-chg up">+21.1%</div>
+      </div>
+      <div class="product-item">
+        <div class="product-name">洗浄機器</div>
+        <div class="product-val">3,839百万円</div>
+        <div class="product-chg down">−4.5%</div>
+      </div>
+      <div class="product-item">
+        <div class="product-name">その他（工賃・パーツ等）</div>
+        <div class="product-val">3,138百万円</div>
+        <div class="product-chg up">+5.9%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">財政状態</div>
+  <div class="two-col">
+    <div class="card">
+      <div class="data-row"><span class="data-key">総資産</span><span class="data-val">15,234百万円<span class="data-sub up">+3.2%</span></span></div>
+      <div class="data-row"><span class="data-key">純資産</span><span class="data-val">13,093百万円<span class="data-sub up">+1.7%</span></span></div>
+      <div class="data-row"><span class="data-key">自己資本比率</span><span class="data-val">85.9%<span class="data-sub down">前期 87.3%（−1.4%pt）</span></span></div>
+    </div>
+    <div class="card">
+      <div class="data-row"><span class="data-key">1株当たり純資産</span><span class="data-val">2,407.74円</span></div>
+      <div class="data-row"><span class="data-key">自己資本純利益率（ROE）</span><span class="data-val">5.5%<span class="data-sub up">前期 4.8%</span></span></div>
+      <div class="data-row"><span class="data-key">総資産経常利益率（ROA）</span><span class="data-val">7.0%<span class="data-sub up">前期 6.3%</span></span></div>
+    </div>
+  </div>
+  <div class="highlight">
+    <div class="highlight-title">財務健全性</div>
+    有利子負債ゼロ（インタレスト・カバレッジ・レシオ：−）、自己資本比率85.9%と極めて健全な財務基盤。現金及び現金同等物は68.8億円。
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">配当　<span class="anniversary-badge">70周年記念配当</span></div>
+  <div class="div-grid">
+    <div class="div-cell">
+      <div class="div-label">前期（2025年3月期）</div>
+      <div class="div-val">100円</div>
+      <div class="div-sub">中50円 + 期50円</div>
+    </div>
+    <div class="div-cell">
+      <div class="div-label">当期（2026年3月期）</div>
+      <div class="div-val" style="color:var(--up)">105円</div>
+      <div class="div-sub up">中50円 + 期55円（70周年記念+5円）</div>
+    </div>
+    <div class="div-cell">
+      <div class="div-label">来期予想（2027年3月期）</div>
+      <div class="div-val" style="color:var(--cyan)">100円</div>
+      <div class="div-sub neu">中50円 + 期50円（記念配当終了）</div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:10px">
+    <div class="data-row"><span class="data-key">配当性向（当期）</span><span class="data-val">79.4%<span class="data-sub up">前期 88.1%（改善）</span></span></div>
+    <div class="data-row"><span class="data-key">来期配当性向（予想）</span><span class="data-val">72.3%</span></div>
+    <div class="data-row"><span class="data-key">配当方針</span><span class="data-val">75周年まで1株100円の安定配当を継続（2026年3月公表）</span></div>
+  </div>
+  <div class="highlight">
+    <div class="highlight-title">配当注記</div>
+    当期の年間配当は期末に70周年記念配当5円を加算し105円。来期は通常100円に戻るため、見かけ上は減配となるが、安定配当方針は不変。75周年まで1株100円は確約済み。
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">来期見通し（2027年3月期）</div>
+  <div class="card">
+    <div class="data-row"><span class="data-key">売上高</span><span class="data-val">9,310百万円<span class="data-sub up">+6.3%</span></span></div>
+    <div class="data-row"><span class="data-key">営業利益</span><span class="data-val">1,117百万円<span class="data-sub up">+9.9%</span></span></div>
+    <div class="data-row"><span class="data-key">経常利益</span><span class="data-val">1,150百万円<span class="data-sub up">+10.3%</span></span></div>
+    <div class="data-row"><span class="data-key">当期純利益</span><span class="data-val">752百万円<span class="data-sub up">+4.6%</span></span></div>
+    <div class="data-row"><span class="data-key">EPS（予想）</span><span class="data-val">138.33円<span class="data-sub up">+4.6%</span></span></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">総評</div>
+  <div class="summary-box">
+    <div class="summary-text">
+      増収増益。売上高は+3.6%、営業利益は+11.5%、当期純利益は+16.6%とすべての利益段階で前期を上回る好決算。製造業・ビルメンテナンス向け主力商品が伸長し、利益率も大幅改善。<br><br>
+      配当は70周年記念配当5円上乗せで105円（来期は100円に戻る予定）。配当性向は79.4%と高水準ながら、有利子負債ゼロ・自己資本比率85.9%と財務は盤石。安定配当方針（75周年まで100円確約）も評価できる。<br><br>
+      来期は売上高9,310百万円（+6.3%）・経常利益1,150百万円（+10.3%）と引き続き成長を見込む。新商品投入・代理店拡充・OEMブランド強化が中期の成長ドライバー。小型ながら高収益・財務健全の優良中小型株。
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>9986 蔵王産業株式会社 ｜ 2026年3月期 本決算 ｜ 作成日：2026-05-21</footer>
+</body>
+</html>
