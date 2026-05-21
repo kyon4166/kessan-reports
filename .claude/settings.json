@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__3bc6089b-4e89-4c67-b002-fc218266cd12__search_files",
+      "mcp__3bc6089b-4e89-4c67-b002-fc218266cd12__read_file_content",
+      "mcp__3bc6089b-4e89-4c67-b002-fc218266cd12__download_file_content",
+      "Bash(pip show *)"
+    ]
+  }
+}
