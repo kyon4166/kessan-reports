@@ -74,13 +74,10 @@ def _cell(row: list, col_idx: int) -> str:
 
 
 def _safe_text(v) -> str:
-    """先頭が +/-/=/@ の文字列は USER_ENTERED で数式扱いされるため、シングルクォート escape。"""
+    """テキスト列の値を文字列化（書込は RAW を使用するため数式 escape は不要）。"""
     if v is None:
         return ""
-    s = str(v).strip()
-    if s and s[0] in "+-=@":
-        return "'" + s
-    return s
+    return str(v).strip()
 
 
 def _get_quarter_label(data: dict) -> str:
@@ -130,7 +127,7 @@ def _build_row_values(data: dict, existing_row: Optional[list]) -> list:
     row[9]  = resolve_pct("equity_ratio", 9)
     row[10] = resolve_pct("equity_ratio_change", 10)
     row[11] = resolve_annual("next_dividend_forecast", 11)
-    row[12] = resolve_annual("next_dividend_change", 12)
+    row[12] = _safe_text(resolve_annual("next_dividend_change", 12))
     row[13] = resolve_annual("next_eps_forecast", 13)
     row[14] = resolve_annual_pct("next_eps_change_pct", 14)
     row[15] = _safe_text(resolve("summary", 15))
@@ -138,17 +135,27 @@ def _build_row_values(data: dict, existing_row: Optional[list]) -> list:
 
 
 def _write_row_skip_c(service, sheet_row: int, new_row: list):
-    service.spreadsheets().values().update(
+    # 数値列（E,F,I,J,K,O）は USER_ENTERED で % として書く
+    # テキスト列（D,G,H,L,M,N,P）は RAW で書く（"+46円" 等が数式扱いされるのを防止）
+    user_entered_data = [
+        {"range": f"{SHEET_NAME}!A{sheet_row}:B{sheet_row}", "values": [new_row[0:2]]},
+        {"range": f"{SHEET_NAME}!E{sheet_row}:F{sheet_row}", "values": [new_row[4:6]]},
+        {"range": f"{SHEET_NAME}!I{sheet_row}:K{sheet_row}", "values": [new_row[8:11]]},
+        {"range": f"{SHEET_NAME}!O{sheet_row}", "values": [[new_row[14]]]},
+    ]
+    raw_data = [
+        {"range": f"{SHEET_NAME}!D{sheet_row}", "values": [[new_row[3]]]},
+        {"range": f"{SHEET_NAME}!G{sheet_row}:H{sheet_row}", "values": [new_row[6:8]]},
+        {"range": f"{SHEET_NAME}!L{sheet_row}:N{sheet_row}", "values": [new_row[11:14]]},
+        {"range": f"{SHEET_NAME}!P{sheet_row}", "values": [[new_row[15]]]},
+    ]
+    service.spreadsheets().values().batchUpdate(
         spreadsheetId=SPREADSHEET_ID,
-        range=f"{SHEET_NAME}!A{sheet_row}:B{sheet_row}",
-        valueInputOption="USER_ENTERED",
-        body={"values": [new_row[0:2]]},
+        body={"valueInputOption": "USER_ENTERED", "data": user_entered_data},
     ).execute()
-    service.spreadsheets().values().update(
+    service.spreadsheets().values().batchUpdate(
         spreadsheetId=SPREADSHEET_ID,
-        range=f"{SHEET_NAME}!D{sheet_row}:P{sheet_row}",
-        valueInputOption="USER_ENTERED",
-        body={"values": [new_row[3:16]]},
+        body={"valueInputOption": "RAW", "data": raw_data},
     ).execute()
 
 
@@ -192,25 +199,36 @@ def _sort_data(service):
     sorted_rows = sorted(non_empty, key=sort_key)
     end_row = DATA_START_ROW + len(sorted_rows) - 1
 
+    def col(idx):
+        return [[(list(r)+[""]*17)[idx]] for r in sorted_rows]
+    def cols(start, end):  # inclusive start, exclusive end
+        return [(list(r)+[""]*17)[start:end] for r in sorted_rows]
+
+    # 数値列（E,F,I,J,K,O）は USER_ENTERED、テキスト列（D,G,H,L,M,N,P）は RAW、
+    # Q列はHYPERLINK数式の再構築なので USER_ENTERED で書き込む
     ab = [[(list(r)+["",""])[0], (list(r)+["",""])[1]] for r in sorted_rows]
-    service.spreadsheets().values().update(
-        spreadsheetId=SPREADSHEET_ID,
-        range=f"{SHEET_NAME}!A{DATA_START_ROW}:B{end_row}",
-        valueInputOption="USER_ENTERED", body={"values": ab},
-    ).execute()
-
-    dp = [(list(r)+[""]*16)[3:16] for r in sorted_rows]
-    service.spreadsheets().values().update(
-        spreadsheetId=SPREADSHEET_ID,
-        range=f"{SHEET_NAME}!D{DATA_START_ROW}:P{end_row}",
-        valueInputOption="USER_ENTERED", body={"values": dp},
-    ).execute()
-
     q = [[code_to_q.get(str(r[0]).strip(), "")] for r in sorted_rows]
-    service.spreadsheets().values().update(
+
+    user_entered_data = [
+        {"range": f"{SHEET_NAME}!A{DATA_START_ROW}:B{end_row}", "values": ab},
+        {"range": f"{SHEET_NAME}!E{DATA_START_ROW}:F{end_row}", "values": cols(4, 6)},
+        {"range": f"{SHEET_NAME}!I{DATA_START_ROW}:K{end_row}", "values": cols(8, 11)},
+        {"range": f"{SHEET_NAME}!O{DATA_START_ROW}:O{end_row}", "values": col(14)},
+        {"range": f"{SHEET_NAME}!Q{DATA_START_ROW}:Q{end_row}", "values": q},
+    ]
+    raw_data = [
+        {"range": f"{SHEET_NAME}!D{DATA_START_ROW}:D{end_row}", "values": col(3)},
+        {"range": f"{SHEET_NAME}!G{DATA_START_ROW}:H{end_row}", "values": cols(6, 8)},
+        {"range": f"{SHEET_NAME}!L{DATA_START_ROW}:N{end_row}", "values": cols(11, 14)},
+        {"range": f"{SHEET_NAME}!P{DATA_START_ROW}:P{end_row}", "values": col(15)},
+    ]
+    service.spreadsheets().values().batchUpdate(
         spreadsheetId=SPREADSHEET_ID,
-        range=f"{SHEET_NAME}!Q{DATA_START_ROW}:Q{end_row}",
-        valueInputOption="USER_ENTERED", body={"values": q},
+        body={"valueInputOption": "USER_ENTERED", "data": user_entered_data},
+    ).execute()
+    service.spreadsheets().values().batchUpdate(
+        spreadsheetId=SPREADSHEET_ID,
+        body={"valueInputOption": "RAW", "data": raw_data},
     ).execute()
 
 
