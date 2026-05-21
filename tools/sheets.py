@@ -73,6 +73,16 @@ def _cell(row: list, col_idx: int) -> str:
     return str(row[col_idx]).strip() if col_idx < len(row) else ""
 
 
+def _safe_text(v) -> str:
+    """先頭が +/-/=/@ の文字列は USER_ENTERED で数式扱いされるため、シングルクォート escape。"""
+    if v is None:
+        return ""
+    s = str(v).strip()
+    if s and s[0] in "+-=@":
+        return "'" + s
+    return s
+
+
 def _get_quarter_label(data: dict) -> str:
     if data.get("is_annual"):
         return "年度末"
@@ -114,8 +124,8 @@ def _build_row_values(data: dict, existing_row: Optional[list]) -> list:
     row[3]  = _get_quarter_label(data)
     row[4]  = resolve_pct("revenue_yoy", 4)
     row[5]  = resolve_pct("operating_profit_yoy", 5)
-    row[6]  = resolve("dividend_change", 6)
-    row[7]  = resolve("forecast_revision", 7)
+    row[6]  = _safe_text(resolve("dividend_change", 6))
+    row[7]  = _safe_text(resolve("forecast_revision", 7))
     row[8]  = resolve_pct("payout_ratio", 8)
     row[9]  = resolve_pct("equity_ratio", 9)
     row[10] = resolve_pct("equity_ratio_change", 10)
@@ -123,7 +133,7 @@ def _build_row_values(data: dict, existing_row: Optional[list]) -> list:
     row[12] = resolve_annual("next_dividend_change", 12)
     row[13] = resolve_annual("next_eps_forecast", 13)
     row[14] = resolve_annual_pct("next_eps_change_pct", 14)
-    row[15] = resolve("summary", 15)
+    row[15] = _safe_text(resolve("summary", 15))
     return row
 
 
