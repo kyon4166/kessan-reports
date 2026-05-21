@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本ゼオン株式会社 2026年3月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2D5F3F;
+    --primary-light: #3F7A55;
+    --primary-dark: #1A3B26;
+    --accent: #B8A04D;
+    --accent-light: #D4BE74;
+    --accent-pale: #F2EED7;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(45,95,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Polymer'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 110px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated</div>
+  <h1>日本ゼオン株式会社</h1>
+  <p class="subtitle">2026年3月期　決算短信（連結）要約　／　証券コード 4205</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月13日</span></div>
+    <div class="meta-item">対象期間 <span>2025年4月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">4,119.66<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ −2.1% YoY</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">363.77<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ +24.1% YoY</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属純利益</div>
+      <div class="kpi-value">362.26<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ +38.3% YoY</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS</div>
+      <div class="kpi-value">186.67<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">前期 127.43円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">セグメント構成</div>
+      <div class="data-row">
+        <span class="data-key">会社形態</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">合成ゴム・高機能材料の総合化学メーカー</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">エラストマー素材事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">合成ゴム・合成ラテックス・化成品（54.2%）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">高機能材料事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">高機能樹脂・電池材料・電子材料・トナー・化学品（30.2%）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">その他の事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">RIM配合液・塗料等（16.4%）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ZEON KOREA Co.,LTD. 新規連結</span>
+      </div>
+    </div>
+    <div class="highlight">中期経営計画「STAGE30 第3フェーズ」（2025〜2028年度）始動。高機能材料の生産能力拡大と、エラストマー素材の低収益→高収益製品への注力でポートフォリオ組替えを加速。AI関連投資による半導体・電子材料需要、ESS電池材料の海外需要が成長ドライバー。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">当期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">4,119.66<span class="data-sub">億円 −2.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">1,212.02<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">363.77<span class="data-sub">億円 +24.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">400.38<span class="data-sub">億円 +21.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属純利益</span>
+          <span class="data-val">362.26<span class="data-sub">億円 +38.3%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📺 大型テレビ向け光学フィルム需要堅調</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔋 ESS・車載・民生向け電池材料が中国・欧米で大幅増</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💻 半導体AI関連投資で電子材料需要旺盛</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 投資有価証券売却益173.10億円（特別利益）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚙ 減価償却方法変更（定率→定額）で営業利益+22.93億円</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 合成ゴム海外需要低迷で売上は減収</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント別業績（当期）</div>
+      <div class="seg-grid">
+        <div class="seg-item decline">
+          <div class="seg-name">エラストマー素材事業</div>
+          <div class="seg-row"><span>売上高</span><span>2,236.80億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="down">−5.4%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>116.65億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+7.34億円</span></div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">高機能材料事業</div>
+          <div class="seg-row"><span>売上高</span><span>1,242.17億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+2.1%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>224.21億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+48.61億円</span></div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">その他の事業</div>
+          <div class="seg-row"><span>売上高</span><span>673.56億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="down">−0.4%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>42.90億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+4.25億円</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">来期予想（2027年3月期）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">4,050<span class="data-sub">億円 −1.7%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">380<span class="data-sub">億円 +4.5%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">370<span class="data-sub">億円 −7.6%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属純利益</span>
+            <span class="data-val">360<span class="data-sub">億円 −0.6%</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>前提：</strong>為替150円/$、ナフサ価格63,000円/KL。営業利益は減価償却効果剥落とコスト圧迫で実質横ばい。経常利益は前期の有価証券売却益（173億円）の反動減で減益見込み。中東情勢悪化（ホルムズ海峡）の影響は織り込まず。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">5,482.46<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">3,782.52<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">68.9<span class="data-sub">% （前期66.9%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,972.74<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">ROE / ROA</span>
+          <span class="data-val">9.9<span class="data-sub">% / 7.4%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+764.36<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△424.39<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△349.20<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金及び現金同等物</span>
+          <span class="data-val" style="color:var(--green);">284.37<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">インタレストCR</span>
+          <span class="data-val">438.9<span class="data-sub">倍</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ キャッシュフロー：</strong>営業CFは前期20.78億円→764.36億円と大幅改善（棚卸資産・売上債権の減少寄与）。投資CFは有形固定資産取得583.74億円（建設仮勘定が343億円→703億円と倍増）が中心。財務CFは配当138.87億円・自社株取得100.07億円・CP減100億円で△349.20億円。財務基盤は自己資本比率68.9%と極めて健全。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/3）</div>
+        <div class="div-cell-val">70.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中35+期35　配当性向54.9%</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期実績（2026/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">76.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中36+期40　配当性向40.7%</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">来期予想（2027/3）</div>
+        <div class="div-cell-val">79.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中39+期40　配当性向42.6%</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">連続増配<br>+6円増配（+8.6%）</div>
+      </div>
+    </div>
+    <div class="highlight">
+      当期配当76円（+6円増配）、配当総額147.25億円。配当性向は前期54.9%→当期40.7%に低下（利益増による分母拡大）。来期予想79円（+3円増配）と連続増配方針。期中に自己株式100.07億円取得・7,982千株消却で1株価値向上にも寄与。
+    </div>
+  </section>
+
+  <!-- 05 リスク -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">中東情勢悪化<br><small>ホルムズ海峡封鎖でサプライチェーン混乱懸念（来期予想に未反映）</small></div>
+      <div class="risk-item high">米国通商政策<br><small>関税政策の不確実性で一部産業需要に影響</small></div>
+      <div class="risk-item mid-level">合成ゴム需要低迷<br><small>海外市場の需要弱含み・販売価格下落圧力継続</small></div>
+      <div class="risk-item mid-level">原燃料価格変動<br><small>ナフサ前提63,000円/KL、変動で利益に大幅影響</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>為替前提150円/$、円高反転で輸出採算悪化リスク</small></div>
+      <div class="risk-item">トウペ社売却（後発事象）<br><small>2026年11月完了予定、売却損約19億円見込</small></div>
+      <div class="risk-item">減損損失<br><small>当期47.96億円計上（前期58.08億円）</small></div>
+      <div class="risk-item">設備投資負担<br><small>有形固定資産取得583億円、建設仮勘定703億円</small></div>
+      <div class="risk-item">医療・衛生用手袋<br><small>合成ラテックス市場の需給緩和継続</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      売上は減収（−2.1%）ながら営業利益+24.1%・経常利益+21.1%・純利益+38.3%と利益面で大幅増益。高機能材料事業（電池材料・電子材料・光学フィルム）がAI/半導体需要を捕捉し+48.61億円の増益寄与、減価償却方法の変更（定率→定額）も+22.93億円のフォロー。投資有価証券売却益173億円も純利益を押し上げ。配当は76円（+6円増配）、来期79円予想と連続増配方針。自己資本比率68.9%・営業CF764億円と財務体質は盤石。来期は売却益剥落で経常利益−7.6%減見込みも、本業の収益力強化と中期計画「STAGE30 第3フェーズ」の進捗が要注視。中東情勢・米通商政策の地政学リスクは下振れ要因。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は日本ゼオン株式会社（4205）2026年3月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
