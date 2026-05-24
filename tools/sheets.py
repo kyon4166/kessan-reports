@@ -108,8 +108,27 @@ def _build_row_values(data: dict, existing_row: Optional[list]) -> list:
         except ValueError:
             return str(v)
 
+    def resolve_num(key, col_idx):
+        # 数値のみ。"+27円"/"-5円（記念終了）"/"未定" 等のテキストは数値抽出を試み、不可なら空欄
+        v = data.get(key)
+        if v is None or str(v).strip() == "":
+            return _cell(existing_row, col_idx) if existing_row else ""
+        s = str(v).strip().replace(",", "").replace("円", "").replace("＋", "+")
+        # 数字以外の文字（コメント等）が混ざっている場合は数値部分のみ抽出
+        m = re.match(r"^[+\-]?\d+(\.\d+)?", s)
+        if not m:
+            return ""
+        try:
+            f = float(m.group(0))
+            return int(f) if f == int(f) else f
+        except ValueError:
+            return ""
+
     def resolve_annual(key, col_idx):
         return resolve(key, col_idx) if is_annual else (_cell(existing_row, col_idx) if existing_row else "")
+
+    def resolve_annual_num(key, col_idx):
+        return resolve_num(key, col_idx) if is_annual else (_cell(existing_row, col_idx) if existing_row else "")
 
     def resolve_annual_pct(key, col_idx):
         return resolve_pct(key, col_idx) if is_annual else (_cell(existing_row, col_idx) if existing_row else "")
@@ -126,27 +145,26 @@ def _build_row_values(data: dict, existing_row: Optional[list]) -> list:
     row[8]  = resolve_pct("payout_ratio", 8)
     row[9]  = resolve_pct("equity_ratio", 9)
     row[10] = resolve_pct("equity_ratio_change", 10)
-    row[11] = resolve_annual("next_dividend_forecast", 11)
-    row[12] = _safe_text(resolve_annual("next_dividend_change", 12))
-    row[13] = resolve_annual("next_eps_forecast", 13)
+    row[11] = resolve_annual_num("next_dividend_forecast", 11)
+    row[12] = resolve_annual_num("next_dividend_change", 12)
+    row[13] = resolve_annual_num("next_eps_forecast", 13)
     row[14] = resolve_annual_pct("next_eps_change_pct", 14)
     row[15] = _safe_text(resolve("summary", 15))
     return row
 
 
 def _write_row_skip_c(service, sheet_row: int, new_row: list):
-    # 数値列（E,F,I,J,K,O）は USER_ENTERED で % として書く
-    # テキスト列（D,G,H,L,M,N,P）は RAW で書く（"+46円" 等が数式扱いされるのを防止）
+    # 数値列（E,F,I,J,K,L,M,N,O）は USER_ENTERED で書く（% や数値として解釈）
+    # テキスト列（D,G,H,P）は RAW で書く（"+46円" 等が数式扱いされるのを防止）
     user_entered_data = [
         {"range": f"{SHEET_NAME}!A{sheet_row}:B{sheet_row}", "values": [new_row[0:2]]},
         {"range": f"{SHEET_NAME}!E{sheet_row}:F{sheet_row}", "values": [new_row[4:6]]},
         {"range": f"{SHEET_NAME}!I{sheet_row}:K{sheet_row}", "values": [new_row[8:11]]},
-        {"range": f"{SHEET_NAME}!O{sheet_row}", "values": [[new_row[14]]]},
+        {"range": f"{SHEET_NAME}!L{sheet_row}:O{sheet_row}", "values": [new_row[11:15]]},
     ]
     raw_data = [
         {"range": f"{SHEET_NAME}!D{sheet_row}", "values": [[new_row[3]]]},
         {"range": f"{SHEET_NAME}!G{sheet_row}:H{sheet_row}", "values": [new_row[6:8]]},
-        {"range": f"{SHEET_NAME}!L{sheet_row}:N{sheet_row}", "values": [new_row[11:14]]},
         {"range": f"{SHEET_NAME}!P{sheet_row}", "values": [[new_row[15]]]},
     ]
     service.spreadsheets().values().batchUpdate(
@@ -213,13 +231,12 @@ def _sort_data(service):
         {"range": f"{SHEET_NAME}!A{DATA_START_ROW}:B{end_row}", "values": ab},
         {"range": f"{SHEET_NAME}!E{DATA_START_ROW}:F{end_row}", "values": cols(4, 6)},
         {"range": f"{SHEET_NAME}!I{DATA_START_ROW}:K{end_row}", "values": cols(8, 11)},
-        {"range": f"{SHEET_NAME}!O{DATA_START_ROW}:O{end_row}", "values": col(14)},
+        {"range": f"{SHEET_NAME}!L{DATA_START_ROW}:O{end_row}", "values": cols(11, 15)},
         {"range": f"{SHEET_NAME}!Q{DATA_START_ROW}:Q{end_row}", "values": q},
     ]
     raw_data = [
         {"range": f"{SHEET_NAME}!D{DATA_START_ROW}:D{end_row}", "values": col(3)},
         {"range": f"{SHEET_NAME}!G{DATA_START_ROW}:H{end_row}", "values": cols(6, 8)},
-        {"range": f"{SHEET_NAME}!L{DATA_START_ROW}:N{end_row}", "values": cols(11, 14)},
         {"range": f"{SHEET_NAME}!P{DATA_START_ROW}:P{end_row}", "values": col(15)},
     ]
     service.spreadsheets().values().batchUpdate(
