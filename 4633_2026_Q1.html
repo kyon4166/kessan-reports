@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サカタインクス株式会社 2026年12月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A2A4A;
+    --primary-light: #2C3D5E;
+    --primary-dark: #0F1A33;
+    --accent: #C2185B;
+    --accent-light: #E91E63;
+    --accent-pale: #FCE4EC;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,42,74,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Ink'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 130px; font-weight: 700; color: rgba(255,255,255,0.04); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.flat { border-top-color: var(--mid); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>サカタインクス株式会社</h1>
+  <p class="subtitle">2026年12月期　第1四半期決算短信（連結）要約　／　証券コード 4633</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年5月11日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年3月31日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">681.21<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 6.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">41.73<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 8.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属純利益</div>
+      <div class="kpi-value">33.14<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 7.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">67.65<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">前期 62.09円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成</div>
+      <div class="data-row">
+        <span class="data-key">本社所在地</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">大阪市西区（TEL: 06-6447-5824）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">印刷インキ・機材製造販売／機能性材料事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主力製品</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">グラビアインキ・フレキソインキ・メタルインキ・インクジェットインキ</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">グローバル展開</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本・アジア・米州・欧州の4地域＋機能性材料の計5セグメント</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業方針</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">中期経営計画2026（CCC-Ⅱ）最終年度／環境配慮型「ボタニカルインキ」拡販</span>
+      </div>
+    </div>
+    <div class="highlight">長期ビジョン『SAKATA INX VISION 2030』実現に向けた中期経営計画CCC-Ⅱの最終年度。パッケージ分野では成長地域（米州・アジア）での拡販を継続し、機能性材料事業ではインクジェットインキやカラーフィルター用顔料分散液など新市場開拓を推進。為替円安が業績を後押し（USD期中平均 156.86円／前期 152.60円）。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">681.21<span class="data-sub">億円 +6.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">173.05<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">41.73<span class="data-sub">億円 +8.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">47.96<span class="data-sub">億円 +13.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属純利益</span>
+          <span class="data-val">33.14<span class="data-sub">億円 +7.7%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌎 米州中心に販売好調＋為替円安効果</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🎨 機能性材料の販売拡大（+15.3%増収）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 原材料価格の安定推移で収益性改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 持分法投資利益+1.84億円増（+53％）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 米州で人件費・諸経費増、ブラジル新工場償却費発生</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 日本オフセットインキは不採算品目削減で減収</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント別業績（第1四半期）</div>
+      <div class="seg-grid">
+        <div class="seg-item">
+          <div class="seg-name">印刷インキ・機材（日本）</div>
+          <div class="seg-row"><span>売上高</span><span>121.77億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="down">△2.5%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>5.64億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+105.6%</span></div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">印刷インキ（アジア）</div>
+          <div class="seg-row"><span>売上高</span><span>143.03億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+2.0%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>16.59億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+3.6%</span></div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">印刷インキ（米州）</div>
+          <div class="seg-row"><span>売上高</span><span>276.64億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+8.2%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>12.87億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="down">△16.9%</span></div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">印刷インキ（欧州）</div>
+          <div class="seg-row"><span>売上高</span><span>62.43億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+19.1%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>2.27億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+166.4%</span></div>
+        </div>
+        <div class="seg-item flat">
+          <div class="seg-name">機能性材料</div>
+          <div class="seg-row"><span>売上高</span><span>75.18億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+15.3%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>6.07億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+0.2%</span></div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">その他</div>
+          <div class="seg-row"><span>売上高</span><span>16.58億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="down">△20.6%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>0.52億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="down">△56.7%</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年12月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">2,760<span class="data-sub">億円 +7.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">170<span class="data-sub">億円 +11.6%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">178<span class="data-sub">億円 +15.8%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">118<span class="data-sub">億円 +1.6%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS予想</span>
+            <span class="data-val">241.84<span class="data-sub">円</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">予想修正</span>
+            <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">無（2026/2/12公表値を据置）</span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>中東情勢緊迫化によるホルムズ海峡封鎖リスク・原油及びナフサ価格高騰の影響は不透明であり、今後情勢を注視。修正が必要と判断した場合は速やかに公表予定。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">2,289.33<span class="data-sub">億円 +1.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">1,284.23<span class="data-sub">億円 +1.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">1,206.61<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">52.7<span class="data-sub">% （前期末 52.8%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">資産・負債の主な変動</div>
+        <div class="data-row">
+          <span class="data-key">受取手形・売掛金</span>
+          <span class="data-val" style="color:var(--green);">+19.78<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">棚卸資産</span>
+          <span class="data-val" style="color:var(--red);">△5.12<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">短期借入金</span>
+          <span class="data-val" style="color:var(--red);">+40.74<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">為替換算調整勘定</span>
+          <span class="data-val" style="color:var(--green);">+15.92<span class="data-sub">億円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は売上債権増加と円安による為替換算影響で前期末比+30.69億円増。負債は借入金増加・為替換算影響で+11.66億円増。純資産は利益剰余金・為替換算調整勘定増加で+19.03億円増。自己資本比率は52.7%と高水準を維持。減価償却費16.00億円・のれん償却0.65億円。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/12）</div>
+        <div class="div-cell-val">95.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間45 + 期末50</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/12）</div>
+        <div class="div-cell-val" style="color:var(--accent);">100.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間50 + 期末50</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+5.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+5.3%増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">予想据置<br>修正の有無：無</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2026年12月期は前期比+5円の増配予想（中間50円+期末50円＝年間100円）。直近の配当予想からの修正はなく、安定的な株主還元方針を継続。並行して自己株式取得（第1四半期累計396,300株/9.99億円取得）も実施し1株価値の向上を図る。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">中東情勢の緊迫化<br><small>ホルムズ海峡封鎖リスクで原油・ナフサ価格高騰懸念</small></div>
+      <div class="risk-item high">原材料供給制限<br><small>サプライチェーン上流の調達環境悪化・価格上昇</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>米州・アジア中心の海外売上比率高く為替感応度大</small></div>
+      <div class="risk-item mid-level">米州コスト増<br><small>ブラジル新工場償却費・人件費・諸経費の継続増加</small></div>
+      <div class="risk-item mid-level">日本市場縮小<br><small>オフセットインキ等のデジタル化による構造的縮小</small></div>
+      <div class="risk-item">CCC-Ⅱ最終年度<br><small>次期中期経営計画の策定・移行（2027年〜）</small></div>
+      <div class="risk-item">環境配慮型展開<br><small>ボタニカルインキ等サステナブル製品の市場浸透</small></div>
+      <div class="risk-item">セグメント区分変更<br><small>連結子会社の一部を「その他」→「機能性材料」へ変更</small></div>
+      <div class="risk-item">自己株式取得<br><small>2026/2/12取締役会決議に基づく取得進行中</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      ■ 高リスク　■ 中リスク　■ その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      売上高+6.3%、営業利益+8.2%、経常利益+13.3%、純利益+7.7%の増収増益で好スタート。米州での販売数量増加と機能性材料（+15.3%）が業績を牽引し、欧州印刷インキも営業利益+166.4%と大幅改善。日本も不採算品目削減効果で営業利益が倍増（+105.6%）。一方、米州はブラジル新工場償却費等で営業利益△16.9%減と要注視。財務面は自己資本比率52.7%を維持し健全。配当は前期比+5円増配の100円予想で株主還元を強化。通期予想は据置きだが、中東情勢に伴う原材料コスト動向が今後の焦点。CCC-Ⅱ最終年度として2030年ビジョン実現への着実な進捗を示す決算。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はサカタインクス株式会社（4633）2026年12月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
