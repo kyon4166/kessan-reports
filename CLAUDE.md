@@ -32,6 +32,18 @@
 5. リスク/トピックス/特記事項
 6. 総評（gold/accent ハイライトボックス）
 
+**リスクセクションの凡例（厳守）：**
+- リスクカードは3段階で色分け：高リスク=`var(--red)` / 中リスク=`#E67E22` / その他=`var(--accent)`
+- 凡例（カード下のラベル）も**実際のborder色と一致した色付き四角**で表示する。`■` の黒文字単体は不可
+- 推奨マークアップ：
+  ```html
+  <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+    <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+    <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+    <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+  </div>
+  ```
+
 **参照テンプレート：** `8725_2026_Q4.html`（保険業 Navy/Gold）の CSS/構造を踏襲。テーマカラーだけを業種に合わせて差し替える。
 
 **既存HTMLの取り扱い：**
