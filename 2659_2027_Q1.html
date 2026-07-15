@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社サンエー 2027年2月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0E5C63;
+    --primary-light: #167A83;
+    --primary-dark: #08383D;
+    --accent: #E8654A;
+    --accent-light: #F0876E;
+    --accent-pale: #FBE4DD;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(14,92,99,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Island'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 110px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>株式会社サンエー</h1>
+  <p class="subtitle">2027年2月期　第1四半期決算短信（連結）要約　／　証券コード 2659</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年7月7日</span></div>
+    <div class="meta-item">対象期間 <span>2026年3月1日〜2026年5月31日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">営業収益</div>
+      <div class="kpi-value">637.69<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 8.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">46.44<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 13.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">30.57<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 4.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">49.59<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">前期 47.25円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">本社所在地</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">沖縄県宜野湾市（TEL: 098-898-2230）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">小売事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">食品館・総合スーパー・専門店等（沖縄地盤）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">コンビニエンスストア事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">FC・直営店運営</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">新規取り組み</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">Amazon協業「サンエーネットスーパー」（2026年5月開設）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">経営方針</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">「あるべき姿」－人財力・仕組力・商品力・店舗力の向上</span>
+      </div>
+    </div>
+    <div class="highlight">沖縄県は入域観光客数が前年同期を上回り地域経済拡大に寄与する一方、継続的なインフレ下での仕入価格高騰・人手不足・業態を越えた競争激化という厳しい経営環境が継続。企業理念の浸透、七大基本（クリンリネス・鮮度と品質・品揃え・価格・陳列技術・サービス・正しい表示）の徹底を軸に、既存店活性化と効率化（フルセルフレジ・電子棚札・配膳ロボット等）を推進。4〜5月に主要3店舗（V21食品館牧港店・西原シティ・豊見城ウィングシティ）をリニューアル。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">営業収益</span>
+          <span class="data-val">637.69<span class="data-sub">億円 +8.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業総利益</span>
+          <span class="data-val">238.14<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">46.44<span class="data-sub">億円 +13.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">48.91<span class="data-sub">億円 +12.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">30.57<span class="data-sub">億円 +4.6%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌡 昨年より気温が高く推移し季節商材が好調</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌀 5月の台風6号接近で食料品中心に売上伸長</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">✈ 国内外観光客増加で観光土産商材・免税売上が伸長</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏪 CVS事業は既存店好調・FC1店出店（2店閉店）で増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 効率機器導入（フルセルフレジ等）で利益率改善</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント別業績（第1四半期）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">小売事業</div>
+          <div class="seg-row"><span>営業収益</span><span>613.72億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+8.0%</span></div>
+          <div class="seg-row"><span>セグメント利益</span><span>40.60億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+12.9%</span></div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">コンビニエンスストア事業</div>
+          <div class="seg-row"><span>営業収益</span><span>23.99億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+7.0%</span></div>
+          <div class="seg-row"><span>セグメント利益</span><span>5.84億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+15.5%</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年2月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計予想</span>
+            <span class="data-val">1,297.89<span class="data-sub">億円 +6.2%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">第2四半期営業利益</span>
+            <span class="data-val">90.26<span class="data-sub">億円 +3.7%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">通期営業収益</span>
+            <span class="data-val">2,572.70<span class="data-sub">億円 +4.8%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">通期営業利益</span>
+            <span class="data-val">175.27<span class="data-sub">億円 +2.7%</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>2026/4/7公表予想から変更なし。通期純利益予想110.25億円（+3.3%）、EPS予想178.27円。Q1営業利益は通期予想の26.5%の進捗で、季節性を考慮すると順調なペース。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">1,960.08<span class="data-sub">億円 △9.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">1,531.05<span class="data-sub">億円 △4.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">76.1<span class="data-sub">% （前期末 72.0% / +4.1pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">1,491.24<span class="data-sub">億円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">資産・負債の主な変動</div>
+        <div class="data-row">
+          <span class="data-key">現金及び預金</span>
+          <span class="data-val" style="color:var(--red);">△256.40<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売掛金</span>
+          <span class="data-val" style="color:var(--green);">+28.94<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">買掛金</span>
+          <span class="data-val" style="color:var(--green);">△71.71<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己株式取得</span>
+          <span class="data-val" style="color:var(--red);">△26.10<span class="data-sub">億円（796,700株）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は現金及び預金が配当支払・自己株式取得等で△256.40億円減少し前期末比△212.66億円減。負債は買掛金△71.71億円・流動負債その他△64.72億円減少で△134.13億円減。純資産は純利益30.57億円計上の一方、配当支払77.30億円・自己株式取得26.10億円で△78.52億円減。自己資本比率は72.0→76.1%（+4.1pt）へ大きく改善。積極的な株主還元（自己株取得＋配当）を進めながら財務健全性も向上。Q1減価償却費17.66億円。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/2）</div>
+        <div class="div-cell-val">125.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間0 + 期末125</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/2）</div>
+        <div class="div-cell-val" style="color:var(--accent);">110.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間0 + 期末110</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--red);">△15.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">△12.0%減配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約62<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想178.27円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年2月期は前期比△15円の減配予想（125→110円）。直近の配当予想からの修正はなし。一方、Q1に26.10億円（796,700株）の自己株式取得を実施しており、配当減額分を自社株買いによる株主還元で補完する形。短信に明示的なDOE・配当性向目標の記載はないが、通期純利益+3.3%の増益計画と合わせ、配当と自社株買いを組み合わせた総還元の姿勢がうかがえる。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">配当の減配<br><small>125→110円（△15円、△12.0%）</small></div>
+      <div class="risk-item mid-level">仕入価格の高騰<br><small>継続的なインフレ下でのコスト増加圧力</small></div>
+      <div class="risk-item mid-level">人手不足<br><small>沖縄小売業界全体で採用・人件費コストが上昇</small></div>
+      <div class="risk-item mid-level">業態を越えた競争激化<br><small>コンビニ・ドラッグストア等クロスセクター競争</small></div>
+      <div class="risk-item">海外経済の不確実性<br><small>為替変動・原材料費上昇の影響</small></div>
+      <div class="risk-item">観光需要への依存<br><small>入域観光客数の増減が売上・免税売上に影響</small></div>
+      <div class="risk-item">Amazon協業の立ち上げ<br><small>サンエーネットスーパーの収益貢献は今後の検証課題</small></div>
+      <div class="risk-item">自己株式取得継続<br><small>Q1で26.10億円取得、今後の還元方針が焦点</small></div>
+      <div class="risk-item">季節要因（台風等）<br><small>天候要因による売上変動リスク（プラス・マイナス両方）</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      営業収益+8.0%・営業利益+13.2%・経常利益+12.8%・純利益+4.6%の増収増益で好スタート。気温高め推移による季節商材好調、台風6号接近による食料品需要、観光客増加による観光土産・免税売上の伸長が業績を押し上げた。小売・CVS両セグメントともに増収増益（小売+12.9%増益、CVS+15.5%増益）とバランスの取れた成長。財務面は自己資本比率76.1%（+4.1pt）へ大きく改善し健全性が向上。配当は前期比△15円の減配予想（125→110円）となるが、Q1に26.10億円の自己株式取得を実施しており、配当減額を自社株買いで補完する形の株主還元。短信に明示的なDOE・配当性向目標の記載はないが、通期純利益+3.3%の増益計画を据え置いており、沖縄地域経済の回復を背景に既存店活性化と店舗リニューアル、Amazon協業によるオンライン販売拡大など複合的な成長戦略が今後の焦点。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社サンエー（2659）2027年2月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
