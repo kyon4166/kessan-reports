@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>キヤノン株式会社 2026年12月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2E2E33;
+    --primary-light: #46464D;
+    --primary-dark: #1A1A1E;
+    --accent: #BC2B2B;
+    --accent-light: #D45151;
+    --accent-pale: #F7E0E0;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(46,46,51,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Imaging'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · US-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>キヤノン株式会社</h1>
+  <p class="subtitle">2026年12月期　第2四半期（中間期）決算短信（米国基準・連結）要約　／　証券コード 7751</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年7月27日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証・名証・札証・福証</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">2兆2,745<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 3.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">2,305.95<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 7.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">当社株主帰属中間純利益</div>
+      <div class="kpi-value">1,711.84<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 9.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">197.51<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">▲ 16.8%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成（4事業）</div>
+      <div class="data-row">
+        <span class="data-key">本社所在地</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">東京都大田区（TEL: 03-3758-2111）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">プリンティング</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">オフィス・プロダクション・インクジェット等（最大事業）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">イメージング</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">カメラ・ネットワークカメラ等（成長事業）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">メディカル</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">CT・MRI等の医療機器</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">インダストリアル</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">半導体・FPD露光装置等の産業機器</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">米国会計基準（US-GAAP）</span>
+      </div>
+    </div>
+    <div class="highlight">4事業ポートフォリオで安定成長を追求。当中間期はイメージング（カメラ）の高成長とプリンティングの堅調が全体を牽引し、増収増益を達成。積極的な自己株式取得（期中平均株式数は前期の921百万株→866百万株へ減少）でEPSは+16.8%と純利益の伸び（+9.8%）を上回る伸長。会計方針の変更（減価償却方法・耐用年数の変更）を適用。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">2兆2,745<span class="data-sub">億円 +3.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">2,305.95<span class="data-sub">億円 +7.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前中間純利益</span>
+          <span class="data-val">2,520.74<span class="data-sub">億円 +13.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">当社株主帰属中間純利益</span>
+          <span class="data-val">1,711.84<span class="data-sub">億円 +9.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val">2,149.13<span class="data-sub">億円 +84.3%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📷 イメージング事業が営業利益+38.8%と急伸（高付加価値カメラ）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🖨 プリンティング事業が営業利益+5.0%と堅調</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 税引前利益は+13.4%と営業増益を上回る伸び</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔄 自己株式取得でEPS+16.8%（株式数減）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ メディカル△29.2%・インダストリアル△9.1%減収</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント別業績（中間期・営業利益）</div>
+      <div class="seg-grid">
+        <div class="seg-item">
+          <div class="seg-name">プリンティング</div>
+          <div class="seg-row"><span>売上高</span><span>1兆2,399億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+1.5%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>1,575.25億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+5.0%</span></div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">イメージング</div>
+          <div class="seg-row"><span>売上高</span><span>5,527億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+16.9%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>976.22億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="up">+38.8%</span></div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">メディカル</div>
+          <div class="seg-row"><span>売上高</span><span>2,774億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="down">△0.7%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>83.43億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="down">△29.2%</span></div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">インダストリアル</div>
+          <div class="seg-row"><span>売上高</span><span>1,452億円</span></div>
+          <div class="seg-row"><span>前期比</span><span class="down">△9.1%</span></div>
+          <div class="seg-row"><span>売上総利益</span><span>604.48億円</span></div>
+          <div class="seg-row"><span>状況</span><span class="down">減収</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年12月期・修正済）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">4兆8,000<span class="data-sub">億円 +3.8%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">4,650<span class="data-sub">億円 +2.1%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">3,400<span class="data-sub">億円 +2.4%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS予想</span>
+            <span class="data-val">398.84<span class="data-sub">円 +8.5%</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>業績予想の修正：有。中間期時点で営業利益は通期予想の49.6%、純利益は50.3%と概ね半分の進捗。EPS予想398.84円（+8.5%）は自己株式取得による株式数減が押し上げ。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">6兆3,782<span class="data-sub">億円 +4.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産（資本合計）</span>
+          <span class="data-val">3兆6,871<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">株主資本</span>
+          <span class="data-val">3兆4,838<span class="data-sub">億円 △0.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">株主資本比率</span>
+          <span class="data-val">54.6<span class="data-sub">% （前期末 56.9%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">資産・資本の主な変動</div>
+        <div class="data-row">
+          <span class="data-key">現金及び現金同等物</span>
+          <span class="data-val" style="color:var(--green);">+1,459.41<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">棚卸資産</span>
+          <span class="data-val" style="color:var(--red);">+1,210.23<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己株式（取得）</span>
+          <span class="data-val" style="color:var(--red);">△1,280.58<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">短期借入・長期債務</span>
+          <span class="data-val" style="color:var(--red);">+2,236.50<span class="data-sub">億円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は現金及び現金同等物+1,459億円・棚卸資産+1,210億円等で前期末比+2,431億円増の6兆3,782億円。株主資本は純利益計上の一方、自己株式取得△1,280億円で△0.2%とほぼ横ばい、株主資本比率は54.6%（△2.3pt）へ。積極的な自社株買いにより資本効率を高めつつ、のれん9,892億円を含む安定した財務基盤を維持。会計方針の変更（減価償却方法・耐用年数）を適用。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/12）</div>
+        <div class="div-cell-val">160.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間80 + 期末80</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/12）</div>
+        <div class="div-cell-val" style="color:var(--accent);">160.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間80 + 期末80</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">±0.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（横ばい）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（目途）</div>
+        <div class="div-cell-val" style="color:var(--accent);">40<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想398.84円ベースで約40%</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>💡 配当方針（明記）：</strong>2026年12月期は前期同額の年間160円配当予想（中間80円+期末80円）。会社は「<strong>配当金額を下げることなく、配当性向40%を目途に安定的かつ積極的な利益還元</strong>」の方針を明示しており、今後の業績動向・財務状況を踏まえ適宜見直す。加えて積極的な自己株式取得（株式数減）を継続し、配当＋自社株買いによる総還元でEPS+16.8%を実現。配当性向は予想EPS398.84円ベースで約40%と方針通りの水準。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">インダストリアル減収<br><small>半導体・FPD露光装置が△9.1%減収</small></div>
+      <div class="risk-item high">メディカル減益<br><small>営業利益△29.2%（コスト増・研究開発）</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>海外売上比率が高くグローバル為替感応度大</small></div>
+      <div class="risk-item mid-level">地政学・通商リスク<br><small>米国通商政策・中東情勢の世界経済への影響</small></div>
+      <div class="risk-item mid-level">株主資本比率低下<br><small>56.9→54.6%（自己株式取得・借入増）</small></div>
+      <div class="risk-item">プリンティング成熟<br><small>オフィス印刷需要の構造変化への対応</small></div>
+      <div class="risk-item">イメージング依存<br><small>高成長カメラ事業の需要持続性</small></div>
+      <div class="risk-item">会計方針の変更<br><small>減価償却方法・耐用年数の変更を適用</small></div>
+      <div class="risk-item">積極的な自社株買い<br><small>資本効率向上の継続と財務バランス</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      売上高+3.5%・営業利益+7.6%・税引前中間純利益+13.4%・当社株主帰属中間純利益+9.8%の増収増益。イメージング事業（カメラ）が営業利益+38.8%と急伸し全体を牽引、最大事業のプリンティングも+5.0%と堅調に推移した。一方、メディカルは営業利益△29.2%、インダストリアル（半導体・FPD露光装置）は△9.1%減収と、事業間で明暗が分かれた。EPSは+16.8%と純利益の伸びを上回るが、これは積極的な自己株式取得による株式数の減少（921百万株→866百万株）が寄与したもの。財務は株主資本比率54.6%（△2.3pt）とやや低下したが、自社株買いによる資本効率向上の結果であり、財務基盤は依然強固。<strong>配当方針は「配当金額を下げることなく、配当性向40%を目途に安定的かつ積極的な利益還元」を明示</strong>し、年間160円を維持（配当性向約40%）。通期予想（業績予想修正：有）に対し営業利益・純利益ともに約半分の進捗と順調で、4事業ポートフォリオのバランスと配当＋自社株買いの総還元が引き続き特徴。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はキヤノン株式会社（7751）2026年12月期第2四半期（中間期）決算短信〔米国基準〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
