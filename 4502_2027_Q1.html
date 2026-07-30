@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>武田薬品工業株式会社 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #8B1A2B;
+    --primary-light: #A83545;
+    --primary-dark: #5E1019;
+    --accent: #C7972E;
+    --accent-light: #DBB253;
+    --accent-pale: #F4EBD3;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(139,26,43,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Pharma'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 108px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 23px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated · Q1</div>
+  <h1>武田薬品工業株式会社</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信〔IFRS〕（連結）要約　／　証券コード 4502</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年7月30日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証・名証・札証・福証</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上収益</div>
+      <div class="kpi-value">1兆2,199<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 10.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">2,014.17<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 9.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社所有者帰属四半期利益</div>
+      <div class="kpi-value">1,131.97<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 8.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">71.65<span class="kpi-unit">円</span></div>
+      <div class="kpi-change down">前期 79.40円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">本社所在地</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">大阪市／東京都（TEL: 03-3278-2111）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長CEO ジュリー・キム</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">消化器・希少疾患・血漿分画製剤・オンコロジー・ニューロサイエンス・ワクチン</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">特徴</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本発のグローバル製薬企業（売上の大半が海外）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS（Core財務指標・恒常為替レートベースも開示）</span>
+      </div>
+    </div>
+    <div class="highlight">日本発のグローバル製薬企業。当第1四半期は売上収益+10.2%・営業利益+9.1%と会計上は増収増益で、Core営業利益も3,589億円（+11.5%）と伸長。ただし主要製品の特許切れ（LOE：Loss of Exclusivity）を控えた移行期にあり、通期のマネジメントガイダンス（恒常為替レートベース）ではCore営業利益5〜8%減・Core EPS10%台半ば減を見込む。新薬パイプラインの育成と後発品浸食の綱引きが当面の焦点。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と損益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS報告値）</div>
+        <div class="data-row">
+          <span class="data-key">売上収益</span>
+          <span class="data-val">1兆2,199<span class="data-sub">億円 +10.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">2,014.17<span class="data-sub">億円 +9.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前利益</span>
+          <span class="data-val">1,627.18<span class="data-sub">億円 +8.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属四半期利益</span>
+          <span class="data-val">1,131.97<span class="data-sub">億円 △8.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">2,713.01<span class="data-sub">億円 +127.8%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Core指標・損益要因</div>
+        <div class="data-row">
+          <span class="data-key">Core営業利益</span>
+          <span class="data-val">3,589<span class="data-sub">億円 +11.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">Core EPS</span>
+          <span class="data-val">154<span class="data-sub">円（前期151円）</span></span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💊 主力製品の販売と新薬が売上を牽引（+10.2%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 純利益△8.9%は前年同期の一時的要因の反動</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 包括利益+127.8%は為替換算差額等が寄与</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・実勢レートベース／据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="card-title" style="font-size:11px;">IFRS報告ベース</div>
+          <div class="data-row">
+            <span class="data-key">売上収益</span>
+            <span class="data-val">4兆6,400<span class="data-sub">億円 +3.0%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">4,200<span class="data-sub">億円</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期利益</span>
+            <span class="data-val">1,660<span class="data-sub">億円（EPS104.26円）</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="card-title" style="font-size:11px;">Core指標ベース</div>
+          <div class="data-row">
+            <span class="data-key">Core売上収益</span>
+            <span class="data-val">4兆6,400<span class="data-sub">億円 +3.0%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">Core営業利益</span>
+            <span class="data-val">1兆1,600<span class="data-sub">億円 △1.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">Core EPS</span>
+            <span class="data-val">472<span class="data-sub">円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>業績予想の修正なし。マネジメントガイダンス（恒常為替レートCERベース）は、Core売上収益「一桁台前半%の減少」、Core営業利益「5〜8%の減少」、Core EPS「10%台半ばの減少」を想定。主力品の特許切れ（LOE）による浸食が背景。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">財政状態計算書（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">15兆6,633<span class="data-sub">億円 +1.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">7兆5,589<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">7兆5,579<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">48.3<span class="data-sub">% （前期末 47.9%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">主要指標</div>
+        <div class="data-row">
+          <span class="data-key">1株当たり親会社所有者帰属持分</span>
+          <span class="data-val">4,782.57<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">希薄化後EPS</span>
+          <span class="data-val">70.54<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">のれん・無形資産</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">シャイアー買収由来で大きい</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務方針</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">有利子負債の着実な削減を継続</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>資産合計は前期末比+1,517億円増の15兆6,633億円。親会社所有者帰属持分比率は47.9→48.3%（+0.4pt）へ改善。2019年のシャイアー買収に伴うのれん・無形資産と有利子負債を抱えるが、着実なデレバレッジ（負債削減）を継続しており、持分比率の改善はその進捗を示す。中間包括利益+127.8%には為替換算差額の好転が寄与。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">200.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間100 + 期末100</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">204.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間102 + 期末102</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+4.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+2.0%増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当水準</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">連続増配<br>高配当継続</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期は前期比+4円の増配予想（200→204円）。中間102円+期末102円で、減配せず着実に増配を続ける方針を体現（武田は累進的な配当を重視）。直近の配当予想からの修正はなし。Core EPSベースの配当性向は高めだが、主力品の特許切れ移行期にあっても配当水準を維持・引き上げる姿勢を示している。日本を代表する高配当・連続増配のディフェンシブ製薬銘柄。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">特許切れ（LOE）<br><small>主力品の独占期間終了による後発品浸食</small></div>
+      <div class="risk-item high">Coreベース減益ガイダンス<br><small>CERベースでCore営業利益5〜8%減・EPS10%台半ば減</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>売上の大半が海外で為替感応度が高い</small></div>
+      <div class="risk-item mid-level">R&D・パイプライン<br><small>新薬開発の成否と承認取得リスク</small></div>
+      <div class="risk-item mid-level">有利子負債<br><small>シャイアー買収由来の負債の削減継続</small></div>
+      <div class="risk-item">薬価・規制<br><small>各国の薬価引下げ・医療制度改革</small></div>
+      <div class="risk-item">純利益の反動減<br><small>前年同期の一時要因の反動で純利益△8.9%</small></div>
+      <div class="risk-item">連続増配の維持<br><small>移行期でも配当水準を維持・増配</small></div>
+      <div class="risk-item">グローバル訴訟<br><small>製薬業界特有の製造物責任・訴訟リスク</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      当第1四半期はIFRS報告ベースで売上収益+10.2%・営業利益+9.1%と増収増益、Core営業利益も3,589億円（+11.5%）・Core EPS154円（前期151円）と伸長し、実力ベースでも堅調な滑り出し。一方、親会社所有者帰属四半期利益は△8.9%となったが、これは前年同期の一時的要因の反動によるもの。財務は親会社所有者帰属持分比率48.3%（+0.4pt）へ改善し、シャイアー買収由来の負債削減（デレバレッジ）が着実に進捗。ただし通期のマネジメントガイダンス（恒常為替レートCERベース）ではCore営業利益5〜8%減・Core EPS10%台半ば減を想定しており、主力製品の特許切れ（LOE）による浸食が続く移行期にある点は要注視。配当は前期比+4円の増配予想（200→204円）で、移行期にあっても減配せず着実に増配を続ける武田の累進的な配当姿勢を体現。新薬パイプラインの育成による次の成長ドライバー確立が、特許切れの谷を乗り越える鍵となる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は武田薬品工業株式会社（4502）2027年3月期第1四半期決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
