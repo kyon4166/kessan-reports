@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社ステップ 2026年9月期 第3四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1E3A5F;
+    --primary-light: #305A87;
+    --primary-dark: #12263F;
+    --accent: #2FA36B;
+    --accent-light: #55C08D;
+    --accent-pale: #DBF1E5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(30,58,95,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Academy'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 96px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Non-Consolidated · Q3</div>
+  <h1>株式会社ステップ</h1>
+  <p class="subtitle">2026年9月期　第3四半期決算短信（非連結）要約　／　証券コード 9795</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年7月30日</span></div>
+    <div class="meta-item">対象期間 <span>2025年10月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">122.20<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 3.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">30.26<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 6.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">四半期純利益</div>
+      <div class="kpi-value">21.52<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 8.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">138.09<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">前期 125.81円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">本社所在地</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">神奈川県藤沢市（TEL: 0466-20-8000）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">学習塾事業（単一セグメント）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">地盤</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">神奈川県を中心とした高密度ドミナント展開</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">対象</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">小・中・高校生（高校受験・大学受験）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">特徴</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">対面指導重視・高い営業利益率（約25%）</span>
+      </div>
+    </div>
+    <div class="highlight">神奈川県を地盤とする学習塾。対面指導を軸に高い合格実績とブランド力を背景とした安定成長が特徴で、営業利益率は約25%と教育業界でも際立って高い。少子化が進む中でも着実な生徒獲得と授業料単価の維持により、当第3四半期累計（10〜6月）も増収増益を継続した。学習塾事業の単一セグメント。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第3四半期累計業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（累計）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">122.20<span class="data-sub">億円 +3.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">30.26<span class="data-sub">億円 +6.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">30.89<span class="data-sub">億円 +6.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期純利益</span>
+          <span class="data-val">21.52<span class="data-sub">億円 +8.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益率</span>
+          <span class="data-val">24.8<span class="data-sub">% （高収益）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📚 神奈川ドミナントでの着実な生徒獲得</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🎓 高い合格実績を背景とした授業料単価の維持</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 営業利益+6.3%と売上の伸び（+3.6%）を上回る増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 純利益+8.2%と利益率が着実に向上</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏫 対面指導重視による安定した収益基盤</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">前年同期比較（第3四半期累計）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">売上高</div>
+          <div class="seg-row"><span>当期</span><span>122.20億円</span></div>
+          <div class="seg-row"><span>前期</span><span>117.98億円</span></div>
+          <div class="seg-row"><span>増減</span><span class="up">+3.6%</span></div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">営業利益</div>
+          <div class="seg-row"><span>当期</span><span>30.26億円</span></div>
+          <div class="seg-row"><span>前期</span><span>28.48億円</span></div>
+          <div class="seg-row"><span>増減</span><span class="up">+6.3%</span></div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">四半期純利益</div>
+          <div class="seg-row"><span>当期</span><span>21.52億円</span></div>
+          <div class="seg-row"><span>前期</span><span>19.89億円</span></div>
+          <div class="seg-row"><span>増減</span><span class="up">+8.2%</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年9月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">164.94<span class="data-sub">億円 +4.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">39.42<span class="data-sub">億円 +4.3%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">27.54<span class="data-sub">億円 +2.4%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS予想</span>
+            <span class="data-val">176.51<span class="data-sub">円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>2026年公表予想から変更なし。Q3累計時点で営業利益は通期予想の76.8%進捗と順調。第4四半期（7〜9月）は夏期講習等の季節要因で収益が積み上がる期。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">301.26<span class="data-sub">億円 △1.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">275.14<span class="data-sub">億円 +0.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">91.3<span class="data-sub">% （前期末 89.7% / +1.6pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純利益（累計）</span>
+          <span class="data-val">138.09<span class="data-sub">円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">収益性・健全性指標</div>
+        <div class="data-row">
+          <span class="data-key">営業利益率</span>
+          <span class="data-val">24.8<span class="data-sub">%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益率</span>
+          <span class="data-val">25.3<span class="data-sub">%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務体質</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">実質無借金</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">91.3<span class="data-sub">%（超健全）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産301.26億円に対し純資産275.14億円、自己資本比率91.3%（+1.6pt）と実質無借金・極めて健全な財務体質。学習塾事業は設備投資負担が比較的軽く、高い営業利益率（約25%）から生み出されるキャッシュが自己資本を厚くしている。安定した収益基盤と潤沢な自己資本を背景に、着実な校舎展開と株主還元の両立が可能な財務構造。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/9）</div>
+        <div class="div-cell-val">85.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間40 + 期末45</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/9）</div>
+        <div class="div-cell-val" style="color:var(--accent);">88.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間44 + 期末44</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+3.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+3.5%増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約50<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想176.51円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2026年9月期は前期比+3円の増配予想（85→88円）。中間配当も前期40円→今期44円へ増額。直近の配当予想からの修正はなし。配当性向は予想EPS176.51円ベースで約50%。短信に明示的なDOE・配当性向目標の記載はないが、自己資本比率91.3%・実質無借金の潤沢な財務基盤を背景に、着実な増配による安定した株主還元を継続する姿勢がうかがえる。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">少子化の進行<br><small>対象人口（小中高生）の構造的減少</small></div>
+      <div class="risk-item high">講師人材の確保<br><small>対面指導重視ゆえの優秀な講師の採用・育成</small></div>
+      <div class="risk-item mid-level">地域集中リスク<br><small>神奈川県ドミナントゆえの地域経済・競合依存</small></div>
+      <div class="risk-item mid-level">人件費の上昇<br><small>賃上げ環境下での講師・スタッフ人件費増</small></div>
+      <div class="risk-item mid-level">オンライン教育競争<br><small>映像授業・オンライン塾との競争環境</small></div>
+      <div class="risk-item">季節性<br><small>Q4（夏期講習）に収益が積み上がる季節変動</small></div>
+      <div class="risk-item">高い収益性<br><small>営業利益率約25%の維持</small></div>
+      <div class="risk-item">校舎展開<br><small>ドミナント深耕と新規出店のバランス</small></div>
+      <div class="risk-item">超健全な財務<br><small>自己資本比率91.3%・実質無借金</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      第3四半期累計（10〜6月）で売上高+3.6%・営業利益+6.3%・経常利益+6.7%・四半期純利益+8.2%と、売上の伸びを上回る利益成長を実現し着実な増収増益を継続。神奈川県を地盤とする高密度ドミナント展開と、高い合格実績に支えられたブランド力・授業料単価の維持により、少子化という構造的逆風下でも安定成長を続けている。営業利益率24.8%は教育業界でも際立って高く、設備投資負担の軽い学習塾ビジネスの高収益性が、自己資本比率91.3%（実質無借金）という極めて健全な財務体質を支える。配当は前期比+3円の増配予想（85→88円、配当性向約50%）で着実な株主還元を継続。通期予想は据え置きで、Q3累計の営業利益進捗率76.8%は夏期講習が集中する第4四半期（7〜9月）を控え順調。派手さはないが、高収益・高財務健全性・着実な増配を兼ね備えた安定成長の教育銘柄。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社ステップ（9795）2026年9月期第3四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
