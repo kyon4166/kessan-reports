@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本たばこ産業株式会社 2026年12月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1F4A3D;
+    --primary-light: #2F6A57;
+    --primary-dark: #123024;
+    --accent: #C49A3A;
+    --accent-light: #D9B45E;
+    --accent-pale: #F4EBD4;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(31,74,61,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Tobacco'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 96px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated · Q2 (中間期)</div>
+  <h1>日本たばこ産業株式会社</h1>
+  <p class="subtitle">2026年12月期　第2四半期（中間期）決算短信〔IFRS〕（連結）要約　／　証券コード 2914</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年7月30日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上収益</div>
+      <div class="kpi-value">1兆9,861<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 17.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">6,449.40<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 29.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社所有者帰属中間利益</div>
+      <div class="kpi-value">4,318.29<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 35.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">243.24<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">前期 180.19円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成（2報告セグメント）</div>
+      <div class="data-row">
+        <span class="data-key">本社所在地</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">東京都港区（TEL: 03-6636-2914）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">たばこ事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">国内・海外での製造たばこの製造・販売（中核事業）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">加工食品事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">冷凍・常温加工食品・調味料等の製造・販売</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">医薬事業（売却済）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">塩野義へ承継・鳥居薬品株式譲渡で非継続事業に分類</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">中期経営計画</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">「経営計画2026」（2026〜2028年度）</span>
+      </div>
+    </div>
+    <div class="highlight">たばこ事業を中核とするグローバル企業（海外たばこJTIが利益の主軸）。前年度に医薬事業を塩野義製薬へ承継・鳥居薬品株式を譲渡し非継続事業に分類したため、前年同期比は継続事業ベース。全社利益目標として「為替一定ベースの調整後営業利益」の中長期年平均mid to high single digit成長（経営計画2026期間はhigh single digit）を掲げる。当中間期の為替一定ベース調整後営業利益は6,261.47億円（+19.4%）と力強く成長。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（継続事業ベース）</div>
+        <div class="data-row">
+          <span class="data-key">売上収益</span>
+          <span class="data-val">1兆9,861<span class="data-sub">億円 +17.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">6,449.40<span class="data-sub">億円 +29.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前利益</span>
+          <span class="data-val">6,059.99<span class="data-sub">億円 +32.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属中間利益</span>
+          <span class="data-val">4,318.29<span class="data-sub">億円 +35.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">為替一定調整後営業利益</span>
+          <span class="data-val">6,261.47<span class="data-sub">億円 +19.4%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚬 海外たばこ（JTI）の価格改定・数量が利益を牽引</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💱 為替一定ベースでも調整後営業利益+19.4%と実力成長</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 営業利益+29.0%・中間利益+35.0%と二桁増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🍚 加工食品事業も安定的に収益貢献</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ カナダJTI-Macdonald訴訟の和解金支払いを調整</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">報告セグメント（2セグメント構成）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">たばこ事業</div>
+          <div class="seg-row"><span>位置づけ</span><span style="font-size:11px;">中核・利益の主軸</span></div>
+          <div class="seg-row"><span>構成</span><span style="font-size:11px;">国内たばこ＋海外たばこ(JTI)</span></div>
+          <div class="seg-row"><span>前年外部収益</span><span>1兆6,088億円</span></div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">加工食品事業</div>
+          <div class="seg-row"><span>製品</span><span style="font-size:11px;">冷凍・常温食品・調味料</span></div>
+          <div class="seg-row"><span>前年外部収益</span><span>767億円</span></div>
+          <div class="seg-row"><span>位置づけ</span><span style="font-size:11px;">安定収益</span></div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">医薬事業（非継続）</div>
+          <div class="seg-row"><span>状況</span><span style="font-size:11px;">売却・分類変更</span></div>
+          <div class="seg-row"><span>承継先</span><span style="font-size:11px;">塩野義製薬</span></div>
+          <div class="seg-row"><span>鳥居薬品</span><span style="font-size:11px;">株式譲渡</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年12月期・修正済／継続事業）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上収益</span>
+            <span class="data-val">3兆8,850<span class="data-sub">億円 +12.0%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">1兆80<span class="data-sub">億円 +16.3%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社所有者帰属当期利益</span>
+            <span class="data-val">6,440<span class="data-sub">億円 +26.2%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS予想</span>
+            <span class="data-val">362.74<span class="data-sub">円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>業績予想の修正：有。為替一定ベース調整後営業利益の通期予想は9,880億円（+11.6%）。中間期時点で営業利益は通期予想の64.0%と進捗、たばこ事業の年間偏重を考慮しても好調。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">財政状態計算書（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">8兆6,700<span class="data-sub">億円 +3.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">4兆4,231<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">4兆3,940<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">50.7<span class="data-sub">% （前期末 48.5%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">主要指標</div>
+        <div class="data-row">
+          <span class="data-key">1株当たり親会社所有者帰属持分</span>
+          <span class="data-val">2,474.86<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益合計</span>
+          <span class="data-val">5,432.92<span class="data-sub">億円 +16.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">発行済株式数</span>
+          <span class="data-val">20.00<span class="data-sub">億株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">会計方針の変更</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS要求による変更：有</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>資産合計は前期末比+2,507億円増の8兆6,700億円。親会社所有者帰属持分比率は48.5→50.7%（+2.2pt）へ改善し、財務基盤が一段と強化。中間包括利益合計は5,432.92億円（+16.1%）。IFRS会計基準の要求による会計方針の変更を適用。カナダJTI-Macdonald訴訟の和解に伴う和解金分割支払いを非GAAP指標（調整後営業利益）から除外して開示している点に留意。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/12）</div>
+        <div class="div-cell-val">234.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間104 + 期末130</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/12）</div>
+        <div class="div-cell-val" style="color:var(--accent);">272.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間136 + 期末136</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+38.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+16.2%大幅増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（目安）</div>
+        <div class="div-cell-val" style="color:var(--accent);">75<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">75.2%（調整後利益ベース）</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>💡 配当方針（明記）：</strong>2026年12月期は前期比+38円の大幅増配予想（234→272円）。会社は<strong>配当性向75%を目安</strong>とする方針を明示しており、当期の配当金はカナダJTI-Macdonald訴訟の和解金支払い等の影響に係る調整を実施した後の当期利益（6,420億円）を基にした<strong>配当性向75.2%</strong>を用いて算定。高水準の株主還元を継続する高配当銘柄。直近予想からの修正：有（増配）。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">カナダ訴訟リスク<br><small>JTI-Macdonald喫煙と健康の和解金分割支払い</small></div>
+      <div class="risk-item high">たばこ規制強化<br><small>各国の規制・増税・喫煙率低下の構造的圧力</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>海外たばこ中心で為替影響大（為替一定指標を重視）</small></div>
+      <div class="risk-item mid-level">超インフレ経済<br><small>一部市場でIAS29号の会計調整を適用</small></div>
+      <div class="risk-item mid-level">地政学リスク<br><small>グローバル展開に伴う各国情勢の影響</small></div>
+      <div class="risk-item">事業ポートフォリオ再編<br><small>医薬事業売却でたばこ・食品に集中</small></div>
+      <div class="risk-item">RRP（次世代品）競争<br><small>加熱式たばこ等の新カテゴリー競争</small></div>
+      <div class="risk-item">会計方針の変更<br><small>IFRS要求・調整後営業利益の定義見直し</small></div>
+      <div class="risk-item">高配当の維持<br><small>配当性向75%目安の還元と利益成長の両立</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      売上収益+17.7%・営業利益+29.0%・親会社所有者帰属中間利益+35.0%（いずれも継続事業ベース）と力強い増収増益。中核の海外たばこ事業（JTI）の価格改定と数量が利益を牽引し、為替一定ベースの調整後営業利益でも+19.4%と実力ベースの成長を示した。医薬事業（塩野義へ承継・鳥居薬品株式譲渡）を非継続事業に分類し、たばこ・加工食品の2セグメントに事業を集約。財務は親会社所有者帰属持分比率50.7%（+2.2pt）へ改善し盤石。<strong>配当は配当性向75%を目安とする方針を明示</strong>し、前期比+38円の大幅増配（234→272円、調整後利益ベースの配当性向75.2%）と高水準の株主還元を継続。通期予想（修正：有）に対し営業利益は64.0%進捗と順調で、経営計画2026（2026〜2028年度）が掲げる為替一定ベース調整後営業利益の年平均high single digit成長に向け好スタート。カナダJTI-Macdonald訴訟の和解金支払いという特殊要因を抱えつつも、グローバルたばこ事業の高収益と高配当が引き続き際立つディフェンシブ銘柄。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は日本たばこ産業株式会社（2914）2026年12月期第2四半期（中間期）決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
