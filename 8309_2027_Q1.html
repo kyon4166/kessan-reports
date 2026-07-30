@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三井住友トラストグループ株式会社 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #14503C;
+    --primary-light: #206E54;
+    --primary-dark: #0C3427;
+    --accent: #B8912E;
+    --accent-light: #D0AB4E;
+    --accent-pale: #F2EAD2;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(20,80,60,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Trust'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 118px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 23px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>三井住友トラストグループ株式会社</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信（連結）要約　／　証券コード 8309</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年7月30日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証・名証</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">経常収益</div>
+      <div class="kpi-value">7,863.88<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 20.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">1,734.69<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 108.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">1,422.23<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 56.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的・分割前基準）</div>
+      <div class="kpi-value">204.72<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">前期 128.10円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">グループ構成</div>
+      <div class="data-row">
+        <span class="data-key">本社所在地</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">東京都港区（TEL: 03-3286-8187）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会社形態</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">信託銀行持株会社（本邦最大の信託銀行グループ）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">中核会社</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">三井住友信託銀行</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">銀行・信託・資産運用・不動産・証券代行等</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">株式分割</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年8月1日付で1株→4株の株式分割</span>
+      </div>
+    </div>
+    <div class="highlight">本邦最大の信託銀行グループ。銀行業務に加え、資産運用・資産管理、不動産、証券代行など信託ならではの多様なフィービジネスを展開。当第1四半期は経常利益が前年同期比+108.5%と倍増し、純利益も+56.6%の大幅増益。2026年8月1日付で1株につき4株の株式分割を実施予定で、投資単位あたりの流動性向上を図る。※本決算短信の定性情報は当社ウェブサイト掲載の「決算の概要」に記載。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">経常収益</span>
+          <span class="data-val">7,863.88<span class="data-sub">億円 +20.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">1,734.69<span class="data-sub">億円 +108.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">1,422.23<span class="data-sub">億円 +56.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">2,310.18<span class="data-sub">億円 +94.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（分割前基準）</span>
+          <span class="data-val">204.72<span class="data-sub">円（前期128.10円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 経常利益が+108.5%と倍増の大幅増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 金利上昇局面での資金利益・運用収益の改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📊 信託・資産運用等のフィービジネスが堅調</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 経常収益+20.5%の増収が利益を押し上げ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 四半期純利益は通期予想の37.4%進捗と好調</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">3,800<span class="data-sub">億円 +19.7%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS予想（分割後基準）</span>
+            <span class="data-val">137.67<span class="data-sub">円</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">EPS（分割考慮せず）</span>
+            <span class="data-val">550.69<span class="data-sub">円</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">Q1進捗率</span>
+            <span class="data-val">37.4<span class="data-sub">% （純利益ベース）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>2026年公表予想から変更なし。当期純利益は前期比+19.7%の増益計画。EPS予想は2026年8月1日付の4分割後の株数を基準（分割考慮しない場合は550.69円）。Q1で純利益は通期予想の37.4%進捗と好調な滑り出し。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">84兆2,275<span class="data-sub">億円 +2.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">3兆6,986<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">3兆6,649<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">4.4<span class="data-sub">% （前期末 4.3%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">主要指標</div>
+        <div class="data-row">
+          <span class="data-key">発行済株式数</span>
+          <span class="data-val">6億9,881<span class="data-sub">万株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己株式数</span>
+          <span class="data-val">1,032<span class="data-sub">万株（前期末183万株）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期中平均株式数</span>
+          <span class="data-val">6億9,472<span class="data-sub">万株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">特定取引勘定</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">設置：有</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は前期末比+2兆円増の84兆2,275億円。純資産は増益と包括利益で3兆6,986億円へ拡大、自己資本比率は4.3→4.4%（銀行業のため総資産が巨大で、この比率は自己資本比率告示に定めるBIS自己資本比率とは異なる）。自己株式は前期末183万株→当期1,032万株へ増加（自己株式取得の実施）、期中平均株式数も709百万→695百万株へ減少しており、配当と自社株買いによる株主還元を積極化。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">185.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">分割前・中間80+期末105</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3・分割前換算）</div>
+        <div class="div-cell-val" style="color:var(--accent);">190.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">分割後は47.50円（中23.75+期末23.75）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減（分割前換算）</div>
+        <div class="div-cell-val" style="color:var(--green);">+5.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+2.7%増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">株式分割</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;">1→4株<br>2026年8月1日</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期は分割前換算で前期比+5円の増配予想（185→190円相当）。2026年8月1日付の1株→4株の株式分割により、分割後ベースでは中間23.75円+期末23.75円＝年間47.50円と記載される（分割前換算190円）。直近の配当予想からの修正はなし。自己株式取得も並行しており、配当＋自社株買いによる総還元を強化。※短信本体に配当性向等の数値目標の記載はなく、定性情報は当社ウェブサイト掲載の「決算の概要」を参照。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">金利・市場リスク<br><small>金利・為替・株価変動が資金利益・運用収益に影響</small></div>
+      <div class="risk-item high">与信費用<br><small>景気変動に伴う貸倒引当・信用コストの増減</small></div>
+      <div class="risk-item mid-level">政策保有株式<br><small>株式市況変動による保有有価証券の評価影響</small></div>
+      <div class="risk-item mid-level">前年同期の反動<br><small>大幅増益の反動で今後の四半期比較に留意</small></div>
+      <div class="risk-item mid-level">規制・自己資本<br><small>バーゼル規制等の自己資本規制対応</small></div>
+      <div class="risk-item">株式分割の実施<br><small>2026年8月1日付1→4分割（流動性向上）</small></div>
+      <div class="risk-item">フィービジネス<br><small>資産運用・不動産・証券代行等の信託収益</small></div>
+      <div class="risk-item">株主還元<br><small>増配＋自己株式取得の積極化</small></div>
+      <div class="risk-item">定性情報の外部開示<br><small>詳細はウェブ「決算の概要」を参照</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      経常収益+20.5%・経常利益+108.5%（倍増）・親会社株主帰属四半期純利益+56.6%と極めて力強い増収増益。金利上昇局面での資金利益・運用収益の改善に加え、信託・資産運用・不動産等のフィービジネスが堅調に推移した。EPSは204.72円（分割前基準、前期128.10円）と大幅に伸長。財務は総資産84兆円と本邦最大級の信託銀行グループにふさわしい規模を維持し、自己株式取得と増配で株主還元を積極化。配当は分割前換算で185→190円相当の増配予想（2026年8月1日付の1→4分割後は年間47.50円）。純利益は通期予想（+19.7%増益）の37.4%をQ1で進捗と好調な滑り出し。※本決算短信は簡素な様式で、配当性向等の数値目標や事業別の定性説明は当社ウェブサイト掲載の「決算の概要」に記載されている。金利ある世界の到来を背景に、信託の総合力を活かした収益拡大が続く展開。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は三井住友トラストグループ株式会社（8309）2027年3月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
