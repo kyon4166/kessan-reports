@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ＳＢＩホールディングス株式会社 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #17233F;
+    --primary-light: #2A3A5C;
+    --primary-dark: #0E1728;
+    --accent: #E8802A;
+    --accent-light: #F0A05A;
+    --accent-pale: #FBE7D5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(23,35,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Finance'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated · Q1</div>
+  <h1>ＳＢＩホールディングス株式会社</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信〔IFRS〕（連結）要約　／　証券コード 8473</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年7月31日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">収益</div>
+      <div class="kpi-value">5,710.13<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 28.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">税引前利益</div>
+      <div class="kpi-value">2,258.14<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 149.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社所有者帰属四半期利益</div>
+      <div class="kpi-value">1,480.65<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 75.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的・分割調整後）</div>
+      <div class="kpi-value">229.07<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">前期 139.60円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">金融サービス・資産運用・投資（総合金融グループ）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">金融サービス事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">SBI証券・SBI新生銀行・保険等</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">資産運用事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">アセットマネジメント・PE・VC</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">投資事業・その他</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">投資・暗号資産等</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">会長兼社長 北尾 吉孝</span>
+      </div>
+    </div>
+    <div class="highlight">証券・銀行・保険・資産運用・投資・暗号資産に多角化した総合金融グループ（IFRS適用）。当第1四半期は株式市場の好調を背景に投資事業・金融サービス（SBI証券・SBI新生銀行）・資産運用が伸長し、収益+28.8%・税引前利益+149.9%・親会社所有者帰属四半期利益+75.0%と大幅増益。2025年12月1日付で1株→2株の株式分割を実施済み（EPS等は分割調整後で表示）。連結範囲からSBI貯蓄銀行（韓国）1社を除外。金融事業の特性上、通期業績予想は非開示。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">収益</span>
+          <span class="data-val">5,710.13<span class="data-sub">億円 +28.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前利益</span>
+          <span class="data-val">2,258.14<span class="data-sub">億円 +149.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期利益</span>
+          <span class="data-val">1,567.81<span class="data-sub">億円 +91.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属四半期利益</span>
+          <span class="data-val">1,480.65<span class="data-sub">億円 +75.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">1,397.28<span class="data-sub">億円 +56.1%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 株式市場の好調で投資事業が伸長</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 金融サービス（SBI証券・SBI新生銀行）が好調</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💼 資産運用事業（AM・PE・VC）が伸長</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚀 税引前利益+149.9%と大幅増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔄 連結除外1社（SBI貯蓄銀行〔韓国〕）</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント（3事業の位置づけ）</div>
+      <div class="seg-grid">
+        <div class="seg-item">
+          <div class="seg-name">金融サービス事業</div>
+          <div style="font-size:12px;color:var(--charcoal);line-height:1.5;">SBI証券・SBI新生銀行・保険等。株式市場好調で証券が伸び、銀行も業績に寄与。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">資産運用事業</div>
+          <div style="font-size:12px;color:var(--charcoal);line-height:1.5;">アセットマネジメント・PE・VC。運用資産・投資先の評価が伸長を牽引。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">投資事業・その他</div>
+          <div style="font-size:12px;color:var(--charcoal);line-height:1.5;">投資・暗号資産等。株式市場の好調を背景に投資収益が拡大。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>セグメント別数値は定性中心に記載。3事業が総じて伸長し、株式市場の好調を背景に全社の大幅増益を牽引。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">業績予想（2027年3月期）</div>
+      <div class="highlight neutral" style="margin-top:0;">
+        <strong>※ 業績予想は非開示：</strong>SBIホールディングスの業績は、株式市場をはじめとする金融マーケットの変動要因の影響が極めて大きく、合理的な業績予想の算定が困難なため、通期業績予想は開示していません。希薄化後EPSは214.32円（当第1四半期）。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">財政状態計算書（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">391,871.33<span class="data-sub">億円 +2.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">24,741.37<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">18,652.71<span class="data-sub">億円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">持分比率</div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">4.8<span class="data-sub">% （前期末 4.7% / +0.1pt）</span></span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:12px;color:var(--charcoal);display:block;line-height:1.6;">※ 銀行・証券など金融業を中核とするため、預り資産・預金等が資産合計に計上され、持分比率は一般事業会社より構造的に低い。</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>資産合計は前期末比+2.3%の391,871.33億円（約39.2兆円）。資本合計は24,741.37億円、親会社所有者帰属持分は18,652.71億円。親会社所有者帰属持分比率は4.7→4.8%（+0.1pt）。銀行・証券を中核とする金融グループのため、顧客預り資産や預金等が資産に計上され、持分比率は一般事業会社に比べ構造的に低い水準となる。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3・分割後換算）</div>
+        <div class="div-cell-val">95.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">年間（分割後換算）</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期中間予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">30.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">前期中間20円（分割後）→ +10円</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">年間予想</div>
+        <div class="div-cell-val" style="color:var(--primary);font-size:18px;">未定</div>
+        <div class="div-cell-sub">95円以上を目指す</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">株式分割</div>
+        <div class="div-cell-val" style="color:var(--accent);font-size:18px;">1→2株</div>
+        <div class="div-cell-sub">2025/12/1 実施済</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2025年12月1日付で1株→2株の株式分割を実施済み。前期実績は分割後換算で年間95円。当期は中間30円を予想（分割後、前期中間20円〔分割後換算〕から+10円増）だが、期末配当および年間配当は現時点で未定。会社は「年間配当額は前期実績1株95円（分割後換算）以上の水準を目指す」と明記している。配当予想の修正あり（中間配当予想の修正）。L列・N列は数値化困難のため未定扱い（年間は未定、95円以上を目指す方針）。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">株式市場変動<br><small>マーケット変動が業績に極めて大きく影響</small></div>
+      <div class="risk-item high">業績予想非開示<br><small>合理的な予想算定が困難で通期予想を非開示</small></div>
+      <div class="risk-item mid-level">期末・年間配当が未定<br><small>年間配当額は現時点で未定（95円以上目標）</small></div>
+      <div class="risk-item mid-level">金利・為替<br><small>金利・為替変動による銀行・投資への影響</small></div>
+      <div class="risk-item mid-level">暗号資産市況<br><small>暗号資産価格の変動リスク</small></div>
+      <div class="risk-item">M&A・投資先の評価<br><small>投資先の公正価値評価の変動</small></div>
+      <div class="risk-item">規制<br><small>証券・銀行・暗号資産の規制動向</small></div>
+      <div class="risk-item">SBI新生銀行の統合<br><small>銀行事業の統合・再生の進捗</small></div>
+      <div class="risk-item">グローバル展開<br><small>海外事業（連結除外含む）の運営</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      収益+28.8%・税引前利益+149.9%・親会社所有者帰属四半期利益+75.0%と大幅増益。株式市場の好調を背景に投資事業・金融サービス（SBI証券・SBI新生銀行）・資産運用が伸長した。EPSは229.07円（分割調整後、前期139.60円）。金融事業の特性上、マーケット変動の影響が極めて大きいため通期業績予想は非開示。配当は2025年12月1日付の1→2株分割後、中間30円予想（+10円）・年間は未定だが「前期実績95円（分割後換算）以上を目指す」方針を明示。資産合計は約39.2兆円、親会社所有者帰属持分比率は4.8%（金融業ゆえ構造的に低い）。市場変動の影響を受けやすい事業構造ではあるが、証券・銀行・投資・暗号資産に多角化したSBIグループの総合力が業績を牽引している。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はＳＢＩホールディングス株式会社（8473）2027年3月期第1四半期決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
