@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三晃金属工業株式会社 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3A424A;
+    --primary-light: #4A535C;
+    --primary-dark: #242A30;
+    --accent: #B06A38;
+    --accent-light: #C68A5E;
+    --accent-pale: #F2E5D9;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(58,66,74,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Roofing'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Non-Consolidated · Q1</div>
+  <h1>三晃金属工業株式会社</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信（非連結）要約　／　証券コード 1972</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年7月31日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証スタンダード</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">93.59<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 2.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">2.67<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 5.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">3.04<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 11.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">四半期純利益</div>
+      <div class="kpi-value">1.88<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 15.2%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">建築金属工事業（金属屋根・外壁の設計施工）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">製造事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">金属屋根・外壁材等の金属製品製造</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要市場</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">工場・倉庫等の非住宅鉄骨造建築</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">EPS（1株利益）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">9.78円（前期 11.53円）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">株式分割</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2025年10月1日付で1株→5株の株式分割を実施済</span>
+      </div>
+    </div>
+    <div class="highlight">金属屋根・外壁の設計施工（建築金属工事業）を主力に、金属製品の製造も手掛ける専業メーカー。工場・倉庫など非住宅鉄骨造建築が主戦場。当第1四半期は売上高+2.7%増収、営業利益+5.3%・経常利益+11.1%と各段階で増益を確保したが、四半期純利益は△15.2%減。完成工事は前工程の遅れで減収も、製品売上が大型物件で+30.0%と伸びて補完した。自己資本比率は69.6%と健全。EPS等は2025年10月1日付の1株→5株株式分割を反映した分割後換算ベースで表示。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増減要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">93.59<span class="data-sub">億円 +2.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">2.67<span class="data-sub">億円 +5.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">3.04<span class="data-sub">億円 +11.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期純利益</span>
+          <span class="data-val" style="color:var(--red);">1.88<span class="data-sub">億円 △15.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（1株利益）</span>
+          <span class="data-val">9.78<span class="data-sub">円（前期 11.53円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏗 非住宅鉄骨造着工床面積の減少（前年同期比△9.9%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏭 工場・倉庫向け着工も△1.8%と弱含み</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔧 完成工事は前工程の遅れで75.69億円・△2.1%減収</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📦 製品売上は大型物件で17.66億円・+30.0%と補完</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 受注高85.39億円△12.0%・繰越受注356.42億円△1.5%</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-bottom:16px;">
+      <strong>※ 純利益の減少について：</strong>経常利益は+11.1%増益であるにもかかわらず四半期純利益は△15.2%減。前期同期に計上された税効果等の特別要因の反動によるものとみられ、営業段階の収益力そのものは改善している点に留意。
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・据置／減益計画）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">470.00<span class="data-sub">億円 △0.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">35.00<span class="data-sub">億円 △7.4%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">36.00<span class="data-sub">億円 △6.3%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">24.50<span class="data-sub">億円 △7.4%（EPS127.09円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>公表予想から変更なし。第2四半期累計予想は売上高225億円（+0.6%）・営業利益14.5億円（△9.7%）・経常利益15億円（△8.6%）・純利益10.3億円（△9.3%）・EPS53.43円。通期は建設市況の弱含みと資材高を織り込んだ減益計画。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・事業の状況</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">389.71<span class="data-sub">億円 △3.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">271.42<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">69.6<span class="data-sub">% （前期末 68.1% / +1.5pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">受注・工事の状況</div>
+        <div class="data-row">
+          <span class="data-key">受注高</span>
+          <span class="data-val" style="color:var(--red);">85.39<span class="data-sub">億円 △12.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">繰越受注高</span>
+          <span class="data-val" style="color:var(--red);">356.42<span class="data-sub">億円 △1.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">製品売上高</span>
+          <span class="data-val" style="color:var(--green);">17.66<span class="data-sub">億円 +30.0%</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は前期末比△3.9%の389.71億円。自己資本比率は68.1→69.6%（+1.5pt）へ改善し、純資産271.42億円と財務は健全。一方、受注高は非住宅着工の減少を背景に85.39億円・△12.0%と弱含み、第2四半期以降への受注遅れもあり繰越受注高も356.42億円・△1.5%と減少。完成工事は前工程遅れで75.69億円・△2.1%減収も、製品売上が大型物件で+30.0%と伸びて全体の増収を下支えした。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3・分割後換算）</div>
+        <div class="div-cell-val">69.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間34 + 期末35</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">64.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間30 + 期末34</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--red);">△5.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">減配（分割後換算）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">株式分割</div>
+        <div class="div-cell-val" style="color:var(--accent);">1→5<span style="font-size:14px;color:var(--mid);">株</span></div>
+        <div class="div-cell-sub">2025/10/1 実施</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>減配（分割後換算 △5円）：</strong>2027年3月期の配当予想は年間64円（中間30円+期末34円）。2025年10月1日付で1株→5株の株式分割を実施済みのため、前期2026年3月期の中間配当170円（分割前）は分割後換算で34円に相当し、期末35円と合わせた前期の分割後換算年間配当は69円（中間34円+期末35円）。当期予想64円は分割後換算で前期比△5円の減配となる。建設市況の弱含みと通期減益計画を反映した予想。短信に明示的なDOE・配当性向目標の記載はない。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">非住宅着工の減少<br><small>鉄骨造着工床面積△9.9%と市場が縮小</small></div>
+      <div class="risk-item high">減配（69→64円）<br><small>分割後換算で前期比△5円の減配予想</small></div>
+      <div class="risk-item mid-level">受注遅れ・繰越減<br><small>受注高△12.0%・繰越受注△1.5%と弱含み</small></div>
+      <div class="risk-item mid-level">建築資材の高騰<br><small>鋼材等の価格上昇による工事採算圧迫</small></div>
+      <div class="risk-item mid-level">通期減益計画<br><small>営業△7.4%・経常△6.3%の減益見通し</small></div>
+      <div class="risk-item">労務費・人手不足<br><small>建設技能者の確保と労務費の上昇</small></div>
+      <div class="risk-item">工事採算・前工程遅れ<br><small>前工程の遅延による工期・原価変動</small></div>
+      <div class="risk-item">製品売上の変動<br><small>大型物件依存による売上の期ずれ</small></div>
+      <div class="risk-item">株式分割の実施<br><small>2025年10月1日付1→5分割（流動性向上）</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      売上高+2.7%増収、営業利益+5.3%・経常利益+11.1%増益と各段階で改善したが、四半期純利益は△15.2%減（前期の税効果等特別要因の反動とみられる）。非住宅鉄骨造着工床面積の減少（△9.9%）を背景に受注高は85.39億円・△12.0%と弱含み、完成工事は前工程遅れで△2.1%減収も、製品売上が大型物件で+30.0%と伸びて全体の増収を補完した。自己資本比率69.6%（+1.5pt）と財務は健全。配当は2025年10月の1→5株分割後、分割後換算で前期69円→当期64円と△5円の減配予想。通期も売上△0.1%・営業△7.4%の減益計画を据え置いており、建設市況の弱含みと資材高が重石となる。増益基調と健全財務を維持しつつも、受注の弱含みと減配・減益計画に留意が必要な局面。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は三晃金属工業株式会社（1972）2027年3月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
