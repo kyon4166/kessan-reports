@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ＮＴＮ株式会社 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2E3F52;
+    --primary-light: #3F5670;
+    --primary-dark: #1C2836;
+    --accent: #D07A2A;
+    --accent-light: #E09A54;
+    --accent-pale: #F7E7D6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(46,63,82,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Bearing'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>ＮＴＮ株式会社</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信（連結）要約　／　証券コード 6472</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月4日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">2,122.79<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 6.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">83.19<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 19.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">63.50<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 57.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">19.28<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 61.9%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ベアリング（軸受）の製造・販売</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要市場</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">自動車・産業機械・補修（アフターマーケット）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">地域展開</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本・米州・欧州・アジアのグローバル拠点</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">当第1四半期 EPS</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">3.24円（前期 2.25円）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">位置づけ</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">世界的なベアリング大手メーカー</span>
+      </div>
+    </div>
+    <div class="highlight">自動車・産業機械・補修市場向けにベアリング（軸受）を供給する世界的な軸受大手。日本・米州・欧州・アジアにグローバル拠点を展開する。当第1四半期は売上高+6.7%・営業利益+19.2%・経常利益+57.5%・純利益+61.9%と増収増益。円安や採算改善が経常・純利益を押し上げた。EPSは3.24円（前期2.25円）。J-GAAP・連結。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">2,122.79<span class="data-sub">億円 +6.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">83.19<span class="data-sub">億円 +19.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">63.50<span class="data-sub">億円 +57.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">19.28<span class="data-sub">億円 +61.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val" style="color:var(--green);">68.80<span class="data-sub">億円 +769.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">3.24<span class="data-sub">円（前期 2.25円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚙️ ベアリング大手として自動車・産業機械・補修が底堅い</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💴 円安が海外売上・採算にプラスに寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 採算改善・営業外改善で経常利益+57.5%</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 純利益+61.9%、EPS3.24円へ改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 包括利益+769.8%（為替換算調整等）</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val down">8,100<span class="data-sub">億円 △2.0%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">330<span class="data-sub">億円 +6.3%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val down">210<span class="data-sub">億円 △10.6%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">150<span class="data-sub">億円 +16.5%（EPS25.23円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>公表済み業績予想からの修正はなし。通期は売上高△2.0%・経常利益△10.6%と慎重な減収・経常減益計画だが、営業利益+6.3%・純利益+16.5%は増益。通期純利益150億円に対しQ1純利益19.28億円は12.9%の進捗にとどまる。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val down">8,669.90<span class="data-sub">億円 △1.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">3,149.68<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">2,999.17<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">34.6<span class="data-sub">% （前期末 33.8% / +0.8pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務の健全性</div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率（当期末）</span>
+          <span class="data-val">34.6<span class="data-sub">%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率（前期末）</span>
+          <span class="data-val">33.8<span class="data-sub">%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">増減</span>
+          <span class="data-val" style="color:var(--green);">+0.8<span class="data-sub">pt（改善）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">総資産 前期末比</span>
+          <span class="data-val down">△1.3<span class="data-sub">%</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は前期末比△1.3%の8,669.90億円。純資産は3,149.68億円、自己資本は2,999.17億円。自己資本比率は33.8%→34.6%（+0.8pt）へ改善した。ベアリング大手として設備投資負担が大きく、自己資本比率34.6%は業界水準としてはやや低めで、財務基盤の一段の強化が課題。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">11.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間5.5 + 期末5.5</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">13.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間6.5 + 期末6.5</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+2.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+18.2%増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約52<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想25.23円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期は前期比+2円の増配予想（11→13円、中間6.5円+期末6.5円、+18.2%）。配当予想からの修正はなし。予想EPS25.23円に対する配当性向は約52%。短信に明示的なDOE・配当性向目標の記載はないが、業績改善を受けて増配で株主還元を強化している。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">自動車生産・EV化<br><small>自動車生産動向とEV化による部品構成変化</small></div>
+      <div class="risk-item high">経常減益計画<br><small>通期経常利益△10.6%の慎重な会社計画</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>円高転換時の海外売上・採算への影響</small></div>
+      <div class="risk-item mid-level">原材料・エネルギー価格<br><small>鋼材・電力等のコスト上昇圧力</small></div>
+      <div class="risk-item mid-level">自己資本比率の低さ<br><small>34.6%と業界水準としてやや低め</small></div>
+      <div class="risk-item">産業機械の需要変動<br><small>設備投資サイクルによる需要の振れ</small></div>
+      <div class="risk-item">補修市場の底堅さ<br><small>アフターマーケットの安定収益基盤</small></div>
+      <div class="risk-item">通商政策・関税<br><small>各国の通商政策・関税による影響</small></div>
+      <div class="risk-item">構造改革の進捗<br><small>収益体質改善に向けた構造改革の実行</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      売上高+6.7%・営業利益+19.2%・経常利益+57.5%・純利益+61.9%の増収増益。ベアリング大手として自動車・産業機械・補修市場向けが底堅く、円安や採算改善が経常・純利益を押し上げた。包括利益は+769.8%。財務は自己資本比率34.6%（+0.8pt）へ改善。配当は+2円増配（11→13円）。ただし通期予想は売上△2.0%・経常△10.6%と慎重な計画で、Q1純利益は通期予想の12.9%進捗にとどまる。自動車のEV化への対応と構造改革、補修市場の底堅さが業績を左右する。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はＮＴＮ株式会社（6472）2027年3月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
