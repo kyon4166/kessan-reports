@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社アルプス技研 2026年12月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2E4257;
+    --primary-light: #3E5570;
+    --primary-dark: #1C2B39;
+    --accent: #D0842A;
+    --accent-light: #E0A254;
+    --accent-pale: #F7E7D6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(46,66,87,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Engineering'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>株式会社アルプス技研</h1>
+  <p class="subtitle">2026年12月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 4641</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月6日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">270.23<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 6.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">24.47<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 9.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">25.36<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 10.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">16.77<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 10.2%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">技術者派遣（機械・電気・電子・ソフトウェア設計等）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業モデル</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">エンジニアの採用・育成による技術者アウトソーシング</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">顧客基盤</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">製造業（自動車・産業機械・電機・半導体等）の設計開発</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">成長領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">海外事業・介護・農業関連等への事業多角化</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">株式分割</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年7月1日付で1株→3株の株式分割を実施</span>
+      </div>
+    </div>
+    <div class="highlight">技術者派遣（機械・電気・電子・ソフトウェア設計等）を主力とし、エンジニアの採用・育成を通じて製造業の設計開発をアウトソーシングで支える人材サービス企業。当中間期は売上高+6.6%と増収を確保したものの、成長のための技術者採用・育成コストの増加により営業利益△9.0%・中間純利益△10.2%と減益。海外事業や介護・農業関連への多角化も推進。財務は自己資本比率69.5%と健全。2026年7月1日付で1株→3株の株式分割を実施済み（EPS・配当等は分割後換算で表示）。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と増減要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">270.23<span class="data-sub">億円 +6.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">24.47<span class="data-sub">億円 △9.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">25.36<span class="data-sub">億円 △10.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間純利益</span>
+          <span class="data-val">16.77<span class="data-sub">億円 △10.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">18.57<span class="data-sub">億円 △1.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（中間・分割後換算）</span>
+          <span class="data-val">28.50<span class="data-sub">円（前期 31.68円 / 3分割調整後）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔧 技術者派遣（機械・電気・ソフト設計等）が増収を牽引</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 売上高は+6.6%と堅調に拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">👷 一方で技術者の採用・育成コストが増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 増収も先行投資で営業利益△9.0%と減益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌱 成長のための人材投資局面と位置づけ</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント別状況（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">技術者派遣（国内）</div>
+          <div style="font-size:12px;color:var(--mid);line-height:1.5;">主力事業。機械・電気・電子・ソフトウェア設計等で増収を牽引。一方、採用・育成コスト増が利益を圧迫。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">海外・その他</div>
+          <div style="font-size:12px;color:var(--mid);line-height:1.5;">海外拠点での技術者サービスを展開。中長期の成長ドライバーとして育成段階。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">介護・農業関連等</div>
+          <div style="font-size:12px;color:var(--mid);line-height:1.5;">事業多角化領域。人材サービスの周辺として新規事業を育成・拡大。</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年12月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">555.00<span class="data-sub">億円 +5.4%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">57.00<span class="data-sub">億円 +5.6%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">58.00<span class="data-sub">億円 +4.6%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">39.00<span class="data-sub">億円 △2.0%（EPS66.27円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>公表予想から変更なし。中間期は減益となったが、通期は売上高+5.4%・営業利益+5.6%の増収増益計画（当期純利益のみ△2.0%）を据え置き。下期の挽回が焦点。EPS等は2026年7月1日付の1→3分割を反映した分割後換算ベース。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">302.98<span class="data-sub">億円 +3.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">211.13<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">210.58<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">69.5<span class="data-sub">% （前期末 69.5% / 横ばい）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務健全性</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 自己資本比率69.5%と高い健全性を維持</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📊 総資産は前期末比+3.4%と着実に拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💪 自己資本210.58億円の厚い資本基盤</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌱 人材投資・多角化の原資となる安定財務</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は前期末比+3.4%の302.98億円へ増加。純資産211.13億円（自己資本210.58億円）、自己資本比率は69.5%と前期末から横ばいで高水準を維持。人材サービス業らしい身軽なバランスシートで、技術者の採用・育成や海外・新規事業への投資を支える健全な財務体質を保つ。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/12・分割後換算）</div>
+        <div class="div-cell-val">36.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間18 + 期末18</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/12・分割後）</div>
+        <div class="div-cell-val" style="color:var(--accent);">36.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間18 + 期末18</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">±0.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（分割後換算）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">株式分割</div>
+        <div class="div-cell-val" style="color:var(--accent);">1→3<span style="font-size:14px;color:var(--mid);">株</span></div>
+        <div class="div-cell-sub">2026/7/1 実施</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2026年12月期の配当は分割後換算で前期比±0円の維持予想（年間36円、中間18円+期末18円）。※2026年7月1日付の1株→3株の株式分割により、前期2025年12月期の年間配当108円（中間47円+期末61円、分割前）は分割後換算で36円に相当。当期は中間配当54円（分割前基準）＋期末18円（分割後基準）で、分割後換算した年間配当は36円（中間18円+期末18円）となり、実質前期と同水準を維持。直近の配当予想からの修正はなし。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">技術者の採用・育成コスト<br><small>先行投資が中間期の減益要因に</small></div>
+      <div class="risk-item high">中間期の減益<br><small>営業利益△9.0%・中間純利益△10.2%</small></div>
+      <div class="risk-item mid-level">人材需給・稼働率<br><small>エンジニアの確保と稼働率が収益を左右</small></div>
+      <div class="risk-item mid-level">景気変動<br><small>製造業の設計開発需要の循環に依存</small></div>
+      <div class="risk-item mid-level">通期純利益の微減計画<br><small>当期純利益△2.0%予想の達成度</small></div>
+      <div class="risk-item">海外・新規事業<br><small>海外展開の育成・収益化</small></div>
+      <div class="risk-item">M&A・事業多角化<br><small>介護・農業関連等への展開</small></div>
+      <div class="risk-item">株式分割の実施<br><small>2026/7/1付1→3分割（流動性向上）</small></div>
+      <div class="risk-item">高い財務健全性<br><small>自己資本比率69.5%の安定基盤</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      売上高+6.6%と増収を確保する一方、技術者の採用・育成コストの増加により営業利益△9.0%・経常利益△10.1%・中間純利益△10.2%と減益となった。技術者派遣（機械・電気・ソフトウェア設計等）を主力に、いまは将来の成長に向けた人材投資の局面にある。財務は自己資本比率69.5%（前期末横ばい）・総資産+3.4%と健全で、人材投資や海外・新規事業への多角化を支える安定基盤を維持。配当は2026年7月1日付の1→3株分割後、分割後換算で年間36円を維持（中間18円+期末18円）。通期は売上高+5.4%・営業利益+5.6%の増収増益計画（当期純利益のみ△2.0%）を据え置いており、中間期の減益からの下期挽回が焦点。エンジニア人材の確保と稼働率が今後の業績を左右する。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社アルプス技研（4641）2026年12月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
