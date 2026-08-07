@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社ツムラ 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #44532A;
+    --primary-light: #24405F;
+    --primary-dark: #2C3719;
+    --accent: #B5893A;
+    --accent-light: #CBA45E;
+    --accent-pale: #F2ECD8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(68,83,42,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Kampo'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>株式会社ツムラ</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信（連結）要約　／　証券コード 4540</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月6日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">497.04<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 15.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">78.81<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 2.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">97.53<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 57.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">64.57<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 47.8%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">医療用漢方製剤の製造・販売（国内最大手）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">日本事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">医療用漢方製剤（国内シェア圧倒的首位）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">中国事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">平安津村（生薬・中薬）を通じた展開</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">強み</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">生薬の調達・栽培網と漢方製剤の品質管理</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長 加藤 照和</span>
+      </div>
+    </div>
+    <div class="highlight">医療用漢方製剤で国内最大手。当第1四半期は国内の医療用漢方が堅調に推移し、中国事業（平安津村）も寄与、売上高+15.3%・営業利益+2.1%・経常利益+57.8%・純利益+47.8%の増収増益。経常利益の大幅増は為替差益・持分法投資損益等の営業外要因による面が大きい。財務は自己資本比率54.3%と安定。生薬（原料）の調達網と漢方製剤の品質管理を強みに、国内の安定成長と中国展開を両輪とする。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">497.04<span class="data-sub">億円 +15.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">78.81<span class="data-sub">億円 +2.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">97.53<span class="data-sub">億円 +57.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">64.57<span class="data-sub">億円 +47.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">131.59<span class="data-sub">億円 （前期 △41.84億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS</span>
+          <span class="data-val">86.63<span class="data-sub">円 （前期 58.16円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌿 国内の医療用漢方製剤が堅調に推移</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🇨🇳 中国事業（平安津村）の寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💱 経常+57.8%は為替差益・持分法等の営業外要因</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚖ 営業利益は+2.1%と小幅（本業は堅調維持）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 包括利益は前期の赤字から黒字転換</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">業績予想（2027年3月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div style="font-size:11px;color:var(--mid);letter-spacing:0.05em;margin-bottom:6px;">■ 第2四半期累計</div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">1,025<span class="data-sub">億円 +14.0%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">172<span class="data-sub">億円 +0.5%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">164<span class="data-sub">億円 △0.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">純利益</span>
+            <span class="data-val">111<span class="data-sub">億円 △11.0%（EPS148.90円）</span></span>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:11px;color:var(--mid);letter-spacing:0.05em;margin-bottom:6px;">■ 通期</div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">2,136<span class="data-sub">億円 +10.9%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">375<span class="data-sub">億円 +6.5%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val" style="color:var(--red);">355<span class="data-sub">億円 △11.3%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">純利益</span>
+            <span class="data-val" style="color:var(--red);">262<span class="data-sub">億円 △6.8%（EPS351.46円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>業績予想は当初公表から変更なし（据置）。通期は売上高+10.9%・営業利益+6.5%の増収増益を見込む一方、経常利益は△11.3%・純利益は△6.8%の減益計画。Q1の経常・純利益を押し上げた為替差益等の営業外益は一過性の面があり、通期では減益を計画。
+      </div>
+    </div>
+    <div style="margin-top:16px;">
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">日本</div>
+          <div class="seg-row"><span>中核事業</span></div>
+          <div style="font-size:12px;color:var(--charcoal);margin-top:4px;line-height:1.5;">医療用漢方製剤で国内圧倒的首位。堅調な需要に支えられ収益基盤を形成。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">中国</div>
+          <div class="seg-row"><span>成長領域</span></div>
+          <div style="font-size:12px;color:var(--charcoal);margin-top:4px;line-height:1.5;">平安津村を通じ生薬・中薬を展開。当四半期の増収に寄与、中長期の成長軸。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">その他</div>
+          <div class="seg-row"><span>周辺事業</span></div>
+          <div style="font-size:12px;color:var(--charcoal);margin-top:4px;line-height:1.5;">生薬関連・ヘルスケア等の周辺領域。グループ全体の裾野を形成。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">6,021.48<span class="data-sub">億円 +1.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">3,788.46<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">3,268.63<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">54.3<span class="data-sub">% （前期末 54.3% / 横ばい）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務の特徴</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 総資産6,021.48億円と前期末比+1.6%増</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛡 自己資本比率54.3%と安定した財務基盤</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📊 純利益計上・包括利益黒字化で純資産が拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌿 生薬棚卸資産・栽培投資が資産の特色</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は前期末比+1.6%増の6,021.48億円。純利益計上と包括利益の黒字転換により純資産は3,788.46億円（うち自己資本3,268.63億円）へ拡大。自己資本比率は54.3%と前期末から横ばいで、安定した財務基盤を維持。生薬（原料）の調達・栽培に係る棚卸資産・投資が資産構成の特色。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">147.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間68 + 期末79</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">158.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間79 + 期末79</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+11.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+7.5%増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="color:var(--accent);font-size:16px;">増配</div>
+        <div class="div-cell-sub">株主還元の継続</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期は前期比+11円の増配予想（147→158円、中間79円+期末79円、+7.5%）。中間配当を前期の68円から79円へ引き上げ、通期の増配を計画。短信に明示的なDOE・配当性向目標の記載はないものの、継続的な増配を実施しており株主還元姿勢を堅持。直近の配当予想からの修正はなし。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">薬価改定<br><small>医療用漢方製剤の薬価引下げによる収益圧迫</small></div>
+      <div class="risk-item high">生薬（原料）の調達・価格<br><small>原料の中国依存度が高く価格・供給に変動</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>中国事業・営業外損益に与える為替の影響</small></div>
+      <div class="risk-item mid-level">中国事業の不確実性<br><small>平安津村を巡る市場・制度・政治的リスク</small></div>
+      <div class="risk-item mid-level">通期経常・純利益減益計画<br><small>Q1の営業外益は一過性で通期は減益を計画</small></div>
+      <div class="risk-item">医療用漢方の需要<br><small>処方動向・医療政策による需要変動</small></div>
+      <div class="risk-item">新規生薬栽培・調達網<br><small>安定調達へ向けた栽培網整備の進捗</small></div>
+      <div class="risk-item">原価上昇<br><small>生薬・エネルギー・物流コストの上昇圧力</small></div>
+      <div class="risk-item">連続増配の維持<br><small>還元継続には安定的な利益基盤が前提</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      売上高+15.3%・営業利益+2.1%・経常利益+57.8%・純利益+47.8%の増収増益。国内の医療用漢方製剤が堅調に推移し、中国事業（平安津村）も寄与した。ただし経常利益の大幅増は為替差益・持分法投資損益等の営業外要因によるところが大きく、本業を示す営業利益は+2.1%と小幅な伸びにとどまる。財務は自己資本比率54.3%と安定を維持し、包括利益は前期の赤字から黒字転換した。配当は前期比+11円の増配（147→158円、+7.5%）で株主還元を強化。一方、通期は経常△11.3%・純利益△6.8%の減益計画で、Q1の営業外益は一過性の面がある点に留意が必要。中長期では生薬（原料）の中国依存と薬価改定がリスク。漢方製剤国内最大手としての安定成長と中国展開が特徴。加藤照和社長のもと、国内基盤の深耕と海外展開の両輪で持続的成長を目指す。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社ツムラ（4540）2027年3月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
