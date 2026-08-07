@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>石油資源開発株式会社 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #173A44;
+    --primary-light: #24505C;
+    --primary-dark: #0D262D;
+    --accent: #D0842A;
+    --accent-light: #E0A254;
+    --accent-pale: #F7E7D6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(23,58,68,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Petroleum'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>石油資源開発株式会社</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信（連結）要約　／　証券コード 1662</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月6日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">651.14<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 21.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">62.02<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 62.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">32.40<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 79.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">12.66<span class="kpi-unit">円</span></div>
+      <div class="kpi-change down">前期 61.41円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">本社所在地</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">東京都千代田区</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">石油・天然ガスの探鉱・開発・生産（E&amp;P）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">E&amp;P／インフラ・ユーティリティ（パイプライン・電力）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">成長・転換領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">CCS・脱炭素等のエネルギートランジション対応</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">収益特性</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">原油・天然ガス価格および為替に業績が連動</span>
+      </div>
+    </div>
+    <div class="highlight">日本を代表する石油・天然ガスのE&amp;P（探鉱・開発・生産）事業者。国内外の油田・ガス田開発に加え、パイプライン・電力などのインフラ・ユーティリティ事業を展開する。業績は原油・天然ガス価格と為替に強く連動する市況依存型の構造。当第1四半期は資源価格の下落と円高の逆風で売上高△21.4%・営業利益△62.9%・純利益△79.4%と大幅減益となり、包括利益もマイナス転落。中長期ではCCS（CO2回収・貯留）や脱炭素などエネルギートランジションへの対応が焦点となる。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">651.14<span class="data-sub down">億円 △21.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">62.02<span class="data-sub down">億円 △62.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">57.73<span class="data-sub down">億円 △72.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">32.40<span class="data-sub down">億円 △79.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val" style="color:var(--red);">△237.53<span class="data-sub down">億円 マイナス転落（前期+36.27億）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛢 原油・天然ガス価格の下落</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💱 円高進行による減収・減益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 営業利益△62.9%・純利益△79.4%の大幅減益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 包括利益は為替換算・ヘッジ評価で△237.53億へマイナス転落</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌍 E&amp;P（石油・天然ガス開発）の市況依存構造</span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">セグメント別（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">E&amp;P（探鉱・開発・生産）</div>
+          <div style="font-size:12px;color:var(--mid);line-height:1.5;">国内・海外の石油・天然ガスの開発・生産を担う中核事業。原油・ガス価格と為替の変動を直接受ける。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">インフラ・ユーティリティ</div>
+          <div style="font-size:12px;color:var(--mid);line-height:1.5;">天然ガスパイプライン・電力等の安定収益基盤。市況変動の影響が相対的に小さい。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">その他</div>
+          <div style="font-size:12px;color:var(--mid);line-height:1.5;">周辺事業・新規領域。CCS等のエネルギートランジション関連の取り組みを含む。</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・修正あり）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">3,140.00<span class="data-sub down">億円 △7.7%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">460.00<span class="data-sub up">億円 +18.2%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">460.00<span class="data-sub down">億円 △25.3%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">650.00<span class="data-sub up">億円 +21.7%（EPS253.91円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>通期予想は修正あり。売上高・経常利益は減収減益計画である一方、営業利益+18.2%・当期純利益+21.7%と増益計画で、資源価格の前提や特別損益の影響が大きい。Q1の大幅減益と通期増益計画の乖離には特別損益要因が寄与している。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="card">
+      <div class="card-title">バランスシート</div>
+      <div class="data-row">
+        <span class="data-key">総資産</span>
+        <span class="data-val">8,598.05<span class="data-sub">億円 △0.3%</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">純資産</span>
+        <span class="data-val">6,235.35<span class="data-sub">億円</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">自己資本</span>
+        <span class="data-val">5,914.24<span class="data-sub">億円</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">自己資本比率</span>
+        <span class="data-val">68.8<span class="data-sub">% （前期末 72.8% / △4.0pt）</span></span>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は8,598.05億円（前期末比△0.3%）とほぼ横ばい。純資産は6,235.35億円、自己資本は5,914.24億円で、包括利益のマイナス転落（△237.53億円）や配当支払を反映し自己資本比率は72.8→68.8%（△4.0pt）へ低下した。依然として自己資本比率68.8%と財務基盤は厚いが、資源価格・為替の変動による評価損益・換算差額が純資産に大きく影響する構造にある。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">65.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間20 + 期末45</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">45.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間22.5 + 期末22.5</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--red);">△20.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">△30.8% 減配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="color:var(--accent);font-size:16px;">明示なし</div>
+        <div class="div-cell-sub">DOE・性向目標の記載なし</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期は前期比△20円の減配予想（65→45円、中間22.5円＋期末22.5円、△30.8%）。資源価格下落と円高による大幅な減益を反映した配当水準の引き下げとなる。短信に明示的なDOE（株主資本配当率）・配当性向目標の記載はなく、業績・市況に応じた配当水準となっている。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">原油・天然ガス価格<br><small>資源価格の下落が売上・利益を直撃</small></div>
+      <div class="risk-item high">減配（65→45円）<br><small>△30.8%の減配、業績連動の還元水準</small></div>
+      <div class="risk-item mid-level">為替（円高）<br><small>円高進行による外貨建収益の目減り</small></div>
+      <div class="risk-item mid-level">包括利益マイナス転落<br><small>為替換算・ヘッジ評価で△237.53億</small></div>
+      <div class="risk-item mid-level">地政学・資源国情勢<br><small>産油国の政情・供給リスク</small></div>
+      <div class="risk-item">脱炭素・エネルギー転換<br><small>化石燃料需要の構造的変化</small></div>
+      <div class="risk-item">大型開発投資の回収<br><small>探鉱・開発投資の長期回収リスク</small></div>
+      <div class="risk-item">通期経常減益計画<br><small>経常利益△25.3%の減益見通し</small></div>
+      <div class="risk-item">CCS等新規事業<br><small>CO2回収・貯留の事業化・収益化</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      原油・天然ガス価格の下落と円高進行を背景に、当第1四半期は売上高△21.4%・営業利益△62.9%・経常利益△72.3%・純利益△79.4%と全段階で大幅な減益となり、包括利益も前期の+36.27億円から△237.53億円へマイナス転落した。配当は前期65円から当期予想45円（△20円・△30.8%）へ減配し、業績・市況連動の還元姿勢が鮮明。財務は自己資本比率68.8%（△4.0pt）と依然厚みがあるものの、評価損益・換算差額が純資産に大きく影響する市況依存構造を映す。一方で通期は当期純利益+21.7%の増益計画（修正あり）を掲げており、資源価格の前提や特別損益の影響が大きい点に留意が必要。E&amp;Pの市況依存構造と、CCS・脱炭素などエネルギートランジションへの対応が中長期の焦点となる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は石油資源開発株式会社（1662）2027年3月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
