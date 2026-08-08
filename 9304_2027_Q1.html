@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>澁澤倉庫株式会社 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2E3A4A;
+    --primary-light: #3E4E62;
+    --primary-dark: #1C2530;
+    --accent: #B5843C;
+    --accent-light: #CBA05E;
+    --accent-pale: #F2E9D6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(46,58,74,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Warehouse'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>澁澤倉庫株式会社</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信（連結）要約　／　証券コード 9304</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月7日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">営業収益</div>
+      <div class="kpi-value">209.30<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 4.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">11.95<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 18.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">18.16<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 25.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">29.98<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 65.0%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長 大隅 毅</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">倉庫・運送・国際輸送（国内／国際物流）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">セグメント</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">物流事業／不動産事業／その他</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">株式分割</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2025年10月1日付で1株→4株の株式分割を実施済</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">財務特性</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">自己資本比率55.7%・1株純資産1,266.39円</span>
+      </div>
+    </div>
+    <div class="highlight">倉庫・運送を中核に、国際輸送や不動産賃貸を組み合わせた総合物流企業。当第1四半期は営業収益+4.5%・営業利益+18.2%・経常利益+25.6%・親会社株主帰属四半期純利益+65.0%と全段階で増収増益。物流の採算改善に加え、営業外・特別要因が利益を押し上げた。<strong>2025年10月1日付で1株→4株の株式分割を実施済</strong>で、EPS・配当は分割後換算ベースで表示している。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">営業収益</span>
+          <span class="data-val">209.30<span class="data-sub">億円 +4.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">11.95<span class="data-sub">億円 +18.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">18.16<span class="data-sub">億円 +25.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">29.98<span class="data-sub">億円 +65.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">56.31<span class="data-sub">億円 +397.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的・分割調整後）</span>
+          <span class="data-val">52.71<span class="data-sub">円（前期 31.57円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📦 物流事業（倉庫・運送）の採算改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚢 国際輸送の取扱が収益に寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 不動産事業の賃貸収益が下支え</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 営業外収益の拡大で経常利益+25.6%</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">✨ 特別利益（固定資産売却益等）で純利益+65.0%</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 利益構造の注記：</strong>親会社株主帰属四半期純利益29.98億円が経常利益18.16億円を大きく上回るのは、<strong>特別利益（固定資産売却益等）の計上</strong>によるもの。また四半期包括利益が56.31億円（+397.8%）と急増しているのは、<strong>その他有価証券評価差額金等の変動</strong>が主因であり、いずれも本業の稼ぐ力とは切り分けて評価する必要がある。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">セグメント別状況（定性）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">物流事業</div>
+          <div class="seg-row"><span>領域</span><span style="font-family:'Noto Sans JP';font-size:12px;">倉庫・運送・国際輸送</span></div>
+          <div class="seg-row"><span>トレンド</span><span style="font-family:'Noto Sans JP';font-size:12px;">採算改善</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">保管・荷役・配送を軸とした国内物流に、フォワーディング等の国際輸送を加えた主力事業。料金適正化と取扱構成の改善で採算が向上し、増収増益を牽引。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">不動産事業</div>
+          <div class="seg-row"><span>領域</span><span style="font-family:'Noto Sans JP';font-size:12px;">賃貸（オフィス・物流施設）</span></div>
+          <div class="seg-row"><span>トレンド</span><span style="font-family:'Noto Sans JP';font-size:12px;">安定収益</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">自社保有不動産の賃貸により安定的な収益を確保。物流事業の市況変動を緩和する収益の下支え役を担う。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">その他</div>
+          <div class="seg-row"><span>領域</span><span style="font-family:'Noto Sans JP';font-size:12px;">周辺サービス等</span></div>
+          <div class="seg-row"><span>トレンド</span><span style="font-family:'Noto Sans JP';font-size:12px;">小規模・安定</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">物流・不動産に付帯する周辺サービス。全社に占める規模は限定的で、グループ機能の補完的な位置づけ。</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">業績予想（2027年3月期・修正なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">通期 営業収益</span>
+            <span class="data-val">900.00<span class="data-sub">億円 +12.9%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">通期 営業利益</span>
+            <span class="data-val">53.00<span class="data-sub">億円 +29.4%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">通期 経常利益・純利益</span>
+            <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">短信より判読不能のため記載を留保</span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">2Q累計 営業収益</span>
+            <span class="data-val">440.00<span class="data-sub">億円 +9.9%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">2Q累計 営業利益</span>
+            <span class="data-val">28.00<span class="data-sub">億円 +28.6%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">2Q累計 経常利益</span>
+            <span class="data-val">34.00<span class="data-sub">億円 +26.9%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">2Q累計 純利益</span>
+            <span class="data-val">48.00<span class="data-sub">億円 +46.1%（EPS 85.23円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>通期・第2四半期累計とも直近公表予想からの修正はなし。通期は<strong>営業収益900億円（+12.9%）・営業利益53億円（+29.4%）</strong>の大幅増収増益計画。通期の経常利益・当期純利益・EPSは短信上判読できなかったため記載を留保し、判明分のみ掲載している。EPSは2025年10月1日付1→4株分割を遡及適用した分割後換算ベース。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">1,288.76<span class="data-sub">億円 +8.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">719.10<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">718.34<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">55.7<span class="data-sub">% （前期末 57.3% / △1.6pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務の質</div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,266.39<span class="data-sub">円（分割後換算）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率の変動</span>
+          <span class="data-val down">△1.6<span class="data-sub">pt（57.3% → 55.7%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">総資産の変動</span>
+          <span class="data-val up">+8.0<span class="data-sub">%（前期末比の資産拡大）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資産の性格</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">倉庫・物流施設・賃貸不動産等の固定資産が中心</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は1,288.76億円と前期末比+8.0%増加し、純資産は719.10億円（自己資本718.34億円）。総資産の伸びが自己資本の伸びを上回ったため、自己資本比率は57.3%→55.7%（△1.6pt）へ低下した。1株当たり純資産は分割後換算で1,266.39円。物流施設への設備投資など資産拡大局面にあり、自己資本比率の水準は引き続き注視が必要だが、55%超と依然として健全な範囲にある。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3・分割後換算）</div>
+        <div class="div-cell-val">56.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間24 + 期末32</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">90.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間45 + 期末45</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+34.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+60.7% 大幅増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">株式分割</div>
+        <div class="div-cell-val" style="color:var(--accent);">1 → 4<span style="font-size:14px;color:var(--mid);">株</span></div>
+        <div class="div-cell-sub">2025年10月1日付</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>★ 株式分割と大幅増配：</strong>2025年10月1日付で<strong>1株→4株の株式分割</strong>を実施。前期2026年3月期の配当は中間96円（分割前）＋期末32円（分割後）と分割前後が混在するため、<strong>分割後換算した年間配当は56円（中間24円＋期末32円）</strong>となる。これに対し2027年3月期予想は年間90円（中間45円＋期末45円）で、<strong>分割後換算ベースで前期比+34円（+60.7%）の大幅増配</strong>。直近公表の配当予想からの修正はない。なお当第1四半期決算短信には、DOEや配当性向目標といった明示的な配当方針の記載はないため、方針の断定は避け実績・予想ベースでの評価が妥当。増配水準の持続性は今後の利益動向次第となる。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">物流需要・荷動きの変動<br><small>景気・貿易量に左右される保管量と輸送量</small></div>
+      <div class="risk-item high">純利益の特別要因依存<br><small>+65.0%増は特別利益（固定資産売却益等）が寄与</small></div>
+      <div class="risk-item mid-level">人手不足・労務費上昇<br><small>倉庫・運送現場の要員確保とコスト増</small></div>
+      <div class="risk-item mid-level">不動産事業の変動<br><small>賃貸稼働率・賃料水準の変動リスク</small></div>
+      <div class="risk-item mid-level">自己資本比率の低下<br><small>57.3%→55.7%（△1.6pt）と資産拡大で希薄化</small></div>
+      <div class="risk-item">設備投資（物流施設）<br><small>重資産型ビジネスに伴う継続的な投資負担</small></div>
+      <div class="risk-item">国際輸送の市況<br><small>海運運賃・フォワーディング市況の変動</small></div>
+      <div class="risk-item">株式分割（1→4株）<br><small>2025年10月1日付・投資単位の引下げと流動性向上</small></div>
+      <div class="risk-item">大幅増配の持続性<br><small>分割後換算56円→90円（+60.7%）の維持可否</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      営業収益+4.5%・営業利益+18.2%・経常利益+25.6%・親会社株主帰属四半期純利益+65.0%と、全段階で増収増益となった。物流の採算改善が本業を押し上げた一方、純利益29.98億円が経常利益18.16億円を上回るのは特別利益（固定資産売却益等）によるもので、四半期包括利益も56.31億円（+397.8%）とその他有価証券評価差額金等の変動が大きく寄与している点は切り分けて評価したい。財務は総資産1,288.76億円（+8.0%）・純資産719.10億円、自己資本比率は55.7%（△1.6pt）と資産拡大に伴い低下したが、依然健全な水準。配当は2025年10月1日付の1株→4株分割を経て、分割後換算で前期56円（中間24＋期末32）から当期予想90円（中間45＋期末45）へ+34円（+60.7%）の大幅増配となる。通期計画は営業収益900億円（+12.9%）・営業利益53億円（+29.4%）の大幅増収増益で、第2四半期累計も純利益48億円（+46.1%）と高い伸びを見込む。今後は物流需要と荷動きの動向、利益を押し上げた特別要因の一過性、そして大幅増配の持続性が注目点となる。代表取締役社長は大隅毅氏。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は澁澤倉庫株式会社（9304）2027年3月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
