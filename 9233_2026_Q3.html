@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アジア航測株式会社 2026年9月期 第3四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1E4A3E;
+    --primary-light: #2E6353;
+    --primary-dark: #122E26;
+    --accent: #3AA0C0;
+    --accent-light: #62B8D4;
+    --accent-pale: #DCEFF5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(30,74,62,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Survey'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q3</div>
+  <h1>アジア航測株式会社</h1>
+  <p class="subtitle">2026年9月期　第3四半期決算短信（連結）要約　／　証券コード 9233</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月7日</span></div>
+    <div class="meta-item">対象期間 <span>2025年10月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証スタンダード</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">306.48<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 0.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">20.29<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 12.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">19.48<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 13.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">11.23<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 13.1%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">航空測量・空間情報コンサルティング</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">重点領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">防災・国土強靭化、インフラ維持管理</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">その他領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">森林・環境、システム・保守サービス</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">決算期</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">9月期（本資料は第3四半期累計・9か月）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長 畠山 仁</span>
+      </div>
+    </div>
+    <div class="highlight">航空機・ドローン等による空間データ取得と解析を強みとする航空測量・空間情報コンサルティング企業。防災・国土強靭化、インフラ維持管理、森林・環境などの分野で官公庁向け案件を中心に事業を展開する。当第3四半期累計（2025年10月〜2026年6月）は、国土強靭化関連の需要が底堅く推移した一方、案件構成・採算の悪化とコスト増が響き、<strong>売上高△0.4%・営業利益△12.3%・経常利益△13.3%・純利益△13.1%と全項目で減益</strong>となった。なお同社は第4四半期に売上・利益が偏重する季節性を持つ。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第3四半期累計業績と減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（第3四半期累計）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">306.48<span class="data-sub">億円 <span class="down">△0.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">20.29<span class="data-sub">億円 <span class="down">△12.3%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">19.48<span class="data-sub">億円 <span class="down">△13.3%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">11.23<span class="data-sub">億円 <span class="down">△13.1%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">9.66<span class="data-sub">億円 <span class="down">△26.9%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり四半期純利益</span>
+          <span class="data-val">61.74<span class="data-sub">円（前期 71.03円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛰 防災・国土強靭化関連の需要自体は底堅く推移</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 案件構成の変化により売上総利益率が悪化</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💸 人件費・外注費などコスト増が利益を圧迫</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🗓 第4四半期偏重の季節性（累計段階では利益が小さい）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌐 包括利益は△26.9%とその他包括利益の悪化も影響</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント別の状況（定性）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">空間情報コンサルタント事業（防災・インフラ）</div>
+          <div class="seg-row"><span>位置づけ</span><span>中核</span></div>
+          <div class="seg-row"><span>需要環境</span><span>底堅い</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">防災・国土強靭化、インフラ維持管理を中心とする中核領域。公共事業予算を背景に需要は底堅いが、案件構成の変化と採算悪化が利益率を押し下げた。</div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">航空測量・計測</div>
+          <div class="seg-row"><span>位置づけ</span><span>技術基盤</span></div>
+          <div class="seg-row"><span>採算</span><span>悪化</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">航空機・ドローン等による空間データ取得の技術基盤。稼働計画や天候に左右されやすく、工程管理と機材・人員コストが採算を左右する。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">その他（システム・保守）</div>
+          <div class="seg-row"><span>位置づけ</span><span>ストック</span></div>
+          <div class="seg-row"><span>方向性</span><span>DX拡大</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">空間情報システムの開発・保守など相対的に安定したストック型の収益。デジタル空間情報・DX関連への投資で中長期の収益源として育成中。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年9月期・修正なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">420.00<span class="data-sub">億円 <span class="up">+1.0%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">26.00<span class="data-sub">億円 <span class="down">△9.0%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">26.70<span class="data-sub">億円 <span class="down">△11.7%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">16.60<span class="data-sub">億円 <span class="down">△7.9%</span>（EPS91.22円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>従来予想からの修正はなし。<strong>通期も営業利益△9.0%・経常△11.7%・純利益△7.9%の減益計画</strong>。第3四半期累計の営業利益20.29億円は通期予想26.00億円に対し<strong>78.0%の進捗</strong>で、第4四半期に売上・利益が偏重する季節性を踏まえれば概ね想定線。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">346.49<span class="data-sub">億円 △12.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">223.23<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">220.02<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">63.5<span class="data-sub">% （前期末 55.4% / <span class="up">+8.1pt</span>）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務の特徴</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 総資産は前期末比△12.6%と大きく圧縮</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 自己資本比率は55.4%→63.5%（+8.1pt）へ改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔄 改善の主因は季節性のある売上債権・仕掛品の回収等</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 期末（9月）に向け資産は再び積み上がる点に留意</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は346.49億円と前期末比△12.6%。自己資本は220.02億円、自己資本比率は55.4%→63.5%（+8.1pt）へ大きく改善した。<strong>ただしこの改善は主として総資産の圧縮によるもの</strong>で、第4四半期偏重という同社の季節性のもと、期中に売上債権や仕掛品（未成業務支出金等）が回収・費消されて資産が縮小したことが背景にある。したがって比率の改善をそのまま恒常的な財務体質の強化と読むのではなく、期末（9月）に向けて資産が再び積み上がる可能性を織り込んで評価する必要がある。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/9）</div>
+        <div class="div-cell-val">44.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間15 + 期末29</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/9）</div>
+        <div class="div-cell-val" style="color:var(--accent);">44.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間20 + 期末24</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">±0.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（配分のみ変更）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約48<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想91.22円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2026年9月期の配当予想は年間44円で、前期実績44円から<strong>維持</strong>（±0円）。ただし内訳は<strong>中間配当が15円→20円へ増額、期末配当が29円→24円へ減額</strong>と、年間額を変えずに中間・期末の配分を見直している。予想EPS91.22円ベースの配当性向は約48%で、通期が減益計画であることを踏まえると相対的に高めの水準。決算短信上、DOEや配当性向の数値目標といった明示的な配当方針の記載はない。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">通期減益計画<br><small>営業△9.0%・経常△11.7%・純利益△7.9%と通期も減益見込み</small></div>
+      <div class="risk-item high">公共事業（国土強靭化）予算への依存<br><small>官公庁案件が中心で、国・自治体の予算動向に業績が左右される</small></div>
+      <div class="risk-item mid-level">案件採算・工程管理<br><small>案件構成の変化と採算悪化が今回の減益の主因</small></div>
+      <div class="risk-item mid-level">人件費・技術者確保<br><small>測量・解析の専門技術者の採用難と人件費上昇</small></div>
+      <div class="risk-item mid-level">季節性（第4四半期偏重）<br><small>売上・利益が期末に集中し、累計段階の数値が実力を映しにくい</small></div>
+      <div class="risk-item">DX・デジタル空間情報の投資<br><small>3次元データ・AI解析等への先行投資負担と収益化</small></div>
+      <div class="risk-item">気候変動・防災需要<br><small>災害の激甚化は中長期の需要拡大要因となり得る</small></div>
+      <div class="risk-item">自己資本比率の改善<br><small>55.4%→63.5%（+8.1pt）。ただし総資産圧縮による面が大きい</small></div>
+      <div class="risk-item">受注競争<br><small>同業他社との入札競争による価格・採算への圧力</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      第3四半期累計（2025年10月〜2026年6月）は売上高△0.4%・営業利益△12.3%・経常利益△13.3%・純利益△13.1%と<strong>全項目で減益</strong>。防災・国土強靭化やインフラ維持管理の需要は底堅いものの、案件構成・採算の悪化とコスト増が響いた。財務は自己資本比率63.5%（+8.1pt）へ大きく改善したが、これは総資産の圧縮（季節性のある売上債権・仕掛品の回収等）による面が大きく、恒常的な体質強化とは切り分けて評価したい。配当は年間44円を維持（中間15→20円へ増額、期末29→24円へ減額の配分変更、配当性向約48%）。通期も営業△9.0%・純利益△7.9%の減益計画で、第3四半期累計の営業利益進捗は78.0%（第4四半期に売上・利益が偏重する季節性）。公共事業予算の動向と案件採算の管理、技術者確保が今後の業績を左右する。畠山仁社長のもと、デジタル空間情報・DX領域への展開が中長期の収益改善の鍵となる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はアジア航測株式会社（9233）2026年9月期第3四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
