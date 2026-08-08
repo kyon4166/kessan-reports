@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社アサンテ 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3A4A2A;
+    --primary-light: #55693F;
+    --primary-dark: #242F1A;
+    --accent: #C08A3C;
+    --accent-light: #D4A45E;
+    --accent-pale: #F2EAD6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(58,74,42,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Termite'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>株式会社アサンテ</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信（連結）要約　／　証券コード 6073</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月7日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">37.86<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 10.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">2.09<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 54.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">2.04<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 55.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">1.21<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 63.1%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">住宅メンテナンスサービス（シロアリ防除が中核）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">中核サービス</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">シロアリ防除工事（点検・施工・アフター）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">周辺サービス</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">住宅基礎補強・耐震補強、床下換気・調湿</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">営業モデル</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">戸建住宅への訪問型直販（営業人員が業績を左右）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長 宮内 征</span>
+      </div>
+    </div>
+    <div class="highlight">シロアリ防除を中核に、住宅基礎補強・耐震補強、床下換気などを手掛ける住宅メンテナンスサービス企業。戸建住宅を対象とした訪問型の直販モデルで、<strong>営業人員数が売上を強く規定する労働集約型の収益構造</strong>を持つ。当第1四半期は営業人員の減少と受注低迷により、売上高△10.5%・営業利益△54.9%・経常利益△55.8%・純利益△63.1%と全項目で大幅な減収減益となった。自己資本比率65.9%と財務は依然健全だが、通期も大幅減益計画であり営業体制の立て直しが急務。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">37.86<span class="data-sub down">億円 △10.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">2.09<span class="data-sub down">億円 △54.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">2.04<span class="data-sub down">億円 △55.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">1.21<span class="data-sub down">億円 △63.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">0.97<span class="data-sub down">億円 △72.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（1株当たり四半期純利益）</span>
+          <span class="data-val">12.45<span class="data-sub">円（前期 33.81円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">👥 営業人員の減少により受注獲得力が低下</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 受注低迷で売上高が△10.5%の減収</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌱 シロアリ需要は春〜初夏に集中し<strong>Q1が繁忙期</strong>だが前年割れ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚖ 固定費比率の高い構造で減収が利益を大きく毀損（営業利益△54.9%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔻 純利益は△63.1%、包括利益は△72.1%とさらに悪化</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">サービス別動向（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item decline">
+          <div class="seg-name">シロアリ防除工事</div>
+          <div class="seg-row"><span>位置づけ</span><span>中核</span></div>
+          <div class="seg-row"><span>動向</span><span>受注低迷</span></div>
+          <div style="margin-top:6px;font-size:11px;color:var(--mid);line-height:1.5;">売上の大半を占める中核サービス。春〜初夏の繁忙期にあたるQ1で前年割れとなり、全体の減収を主導。営業人員の減少が受注獲得に直結。</div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">住宅基礎補強・耐震</div>
+          <div class="seg-row"><span>位置づけ</span><span>周辺拡販</span></div>
+          <div class="seg-row"><span>動向</span><span>伸び悩み</span></div>
+          <div style="margin-top:6px;font-size:11px;color:var(--mid);line-height:1.5;">シロアリ防除の顧客基盤に対するクロスセル領域。単価は高いが訪問営業の稼働に依存するため、営業体制の縮小の影響を受けやすい。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">その他（害虫駆除等）</div>
+          <div class="seg-row"><span>位置づけ</span><span>補完</span></div>
+          <div class="seg-row"><span>動向</span><span>限定的</span></div>
+          <div style="margin-top:6px;font-size:11px;color:var(--mid);line-height:1.5;">害虫駆除・床下環境改善等の周辺サービス。全社に占める規模は小さく、中核の落ち込みを補うには至っていない。新サービスの育成が課題。</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">業績予想（2027年3月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">通期 売上高</span>
+            <span class="data-val">136.60<span class="data-sub down">億円 △4.8%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">通期 営業利益</span>
+            <span class="data-val">2.00<span class="data-sub down">億円 △76.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">通期 経常利益</span>
+            <span class="data-val">2.00<span class="data-sub down">億円 △76.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">通期 当期純利益</span>
+            <span class="data-val">0.35<span class="data-sub down">億円 △87.2%（EPS3.58円）</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計 売上高</span>
+            <span class="data-val">74.00<span class="data-sub down">億円 △6.7%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計 営業利益</span>
+            <span class="data-val">3.60<span class="data-sub down">億円 △55.6%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計 経常利益</span>
+            <span class="data-val">3.70<span class="data-sub down">億円 △54.4%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計 純利益</span>
+            <span class="data-val">2.00<span class="data-sub down">億円 △63.0%（EPS20.46円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>直近公表予想からの修正はなし。<strong>通期は営業利益△76.1%・当期純利益△87.2%の大幅減益計画</strong>で、通期EPSはわずか3.58円の見込み。Q1の減益はこの計画線に沿った推移であり、下期にかけて営業体制の再構築と受注回復が実現するかが最大の焦点。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">142.40<span class="data-sub">億円 +1.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">94.03<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">93.89<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">65.9<span class="data-sub">% （前期末 68.6% / △2.7pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">960.72<span class="data-sub">円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務のポイント</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛡 自己資本比率65.9%と依然として高水準の健全性</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 ただし前期末68.6%から△2.7ptの低下</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 総資産は+1.9%とやや増加（負債側の増加が比率を押し下げ）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 利益水準の低下と配当支払が自己資本の蓄積を鈍化</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は142.40億円（前期末比+1.9%）、純資産94.03億円（自己資本93.89億円）、1株当たり純資産は960.72円。自己資本比率は65.9%と依然健全な水準を維持しているものの、前期末の68.6%から△2.7pt低下した。四半期純利益が1.21億円まで縮小する一方で配当支払が続くため、自己資本の積み上がりが鈍化している点が背景。財務基盤そのものに直ちに懸念はないが、<strong>低収益が続けば資本の目減りが進む構図</strong>であり、収益力の回復が財務健全性の維持にも直結する。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">62.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間31 + 期末31</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">62.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間31 + 期末31</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">0.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（据置）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--red);">1,700<span style="font-size:14px;color:var(--mid);">%超</span></div>
+        <div class="div-cell-sub">EPS予想3.58円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期の配当予想は年間62円（中間31円＋期末31円）で、前期と同額の<strong>維持（据置）</strong>。減益局面でも配当水準を守る姿勢を示している。<strong>ただし通期予想EPSは3.58円にとどまり、これに対して62円を配当するため配当性向は1,700%超と、期間損益を大幅に超過する水準</strong>となる。実質的には内部留保を取り崩す形での配当であり、自己資本比率が65.9%（△2.7pt）と依然厚いことが当面の支えとなるものの、低収益が長期化した場合の継続性には留意が必要。なお決算短信上、DOEや配当性向目標といった明示的な配当方針の記載は確認されない。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">通期大幅減益計画<br><small>当期純利益△87.2%・通期EPS3.58円の計画</small></div>
+      <div class="risk-item high">営業人員の減少・採用難<br><small>訪問型直販モデルで人員数が売上を直接規定</small></div>
+      <div class="risk-item high">受注低迷・需要減<br><small>繁忙期のQ1で前年割れ、回復の道筋が課題</small></div>
+      <div class="risk-item mid-level">配当が期間損益を大幅超過<br><small>配当性向1,700%超、内部留保からの配当</small></div>
+      <div class="risk-item mid-level">住宅市場の縮小<br><small>戸建住宅ストックの減少・空き家増加</small></div>
+      <div class="risk-item">季節性<br><small>シロアリ需要は春〜初夏に集中し四半期偏重</small></div>
+      <div class="risk-item">自己資本比率の低下<br><small>68.6%→65.9%（△2.7pt）</small></div>
+      <div class="risk-item">新サービスの育成<br><small>基礎補強・害虫駆除等が中核の落ち込みを補えず</small></div>
+      <div class="risk-item">コスト構造<br><small>固定費比率が高く減収が利益を大きく毀損</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      当第1四半期は売上高△10.5%・営業利益△54.9%・経常利益△55.8%・親会社株主帰属四半期純利益△63.1%と、<strong>全項目で大幅な減収減益</strong>。シロアリ防除を中核とする住宅メンテナンスサービスにおいて、営業人員の減少と受注低迷が響いた。シロアリ需要が春〜初夏に集中し本来Q1が繁忙期にあたることを踏まえると、この時期の前年割れは重い。固定費比率の高い収益構造のため、減収が利益を増幅して毀損している。財務は自己資本比率65.9%（△2.7pt）と依然健全な水準を保つ。配当は年間62円を維持したものの、<strong>通期予想EPS3.58円に対して62円という期間損益を大幅に超過する水準（配当性向1,700%超・内部留保からの配当）</strong>であり、その継続性には留意が必要。<strong>通期も営業利益△76.1%・当期純利益△87.2%の大幅減益計画</strong>が据え置かれており、宮内征社長のもと、営業人員の確保を含む営業体制の立て直しと受注回復が最優先の課題となる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社アサンテ（6073）2027年3月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
