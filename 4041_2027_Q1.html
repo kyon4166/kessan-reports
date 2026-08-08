@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本曹達株式会社 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2A4A2E;
+    --primary-light: #24405F;
+    --primary-dark: #1A2F1D;
+    --accent: #C09340;
+    --accent-light: #D4AC62;
+    --accent-pale: #F2EAD6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(42,74,46,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Agri'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>日本曹達株式会社</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信（連結）要約　／　証券コード 4041</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月7日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">342.48<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 4.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">37.34<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 18.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">55.81<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 23.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">32.78<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 2.0%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　阿賀 英司</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">農業化学品／機能材料・医薬品／化学品／商事・建設</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主力製品</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">殺菌剤「トップジンM」、除草剤、VP（ポリビニルピロリドン）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">成長領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">農薬の海外展開、医薬中間体・機能材料</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）</span>
+      </div>
+    </div>
+    <div class="highlight">農薬（農業化学品）と機能材料を二本柱とする化学メーカー。殺菌剤「トップジンM」等の農業化学品を国内外で展開するほか、VP（ポリビニルピロリドン）系ポリマーや医薬中間体などの機能材料・医薬品、苛性ソーダ等の化学品、商事・建設を手掛ける。当第1四半期は売上高+4.9%・営業利益+18.3%・経常利益+23.2%の増収増益。自己資本比率66.0%と財務基盤は極めて健全。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">342.48<span class="data-sub">億円 +4.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">37.34<span class="data-sub">億円 +18.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">55.81<span class="data-sub">億円 +23.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">32.78<span class="data-sub">億円 +2.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">113.59<span class="data-sub">億円 +109.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS</span>
+          <span class="data-val">61.16<span class="data-sub">円（前期 58.46円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌾 農業化学品（殺菌剤トップジンM等）の海外展開が牽引</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🧬 機能材料（VP・医薬中間体等）が堅調に伸長</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚗️ 化学品（苛性ソーダ等）は市況に沿って底堅く推移</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏗 商事・建設が全社収益を安定的に補完</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 経常利益が営業利益を大きく上回る（営業外収益）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 包括利益+109.6%と資本の積み上がりが顕著</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント別の状況（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">農業化学品（殺菌剤・除草剤）</div>
+          <div class="seg-row"><span>方向感</span><span>牽引</span></div>
+          <div class="seg-row"><span>ドライバー</span><span>海外展開</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">殺菌剤「トップジンM」を中心に、除草剤等を国内外へ展開。海外市場での販売拡大が全社の増収増益を牽引した中核事業。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">機能材料・医薬品（VP・医薬中間体）</div>
+          <div class="seg-row"><span>方向感</span><span>堅調</span></div>
+          <div class="seg-row"><span>ドライバー</span><span>VP・医薬中間体</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">VP（ポリビニルピロリドン）系ポリマーや医薬中間体、電子材料関連。高付加価値領域として利益率の底上げに寄与。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">化学品・商事・建設</div>
+          <div class="seg-row"><span>方向感</span><span>底堅い</span></div>
+          <div class="seg-row"><span>ドライバー</span><span>苛性ソーダ市況</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">苛性ソーダ等の基礎化学品は市況・電力コストに連動。商事・建設は安定的に推移し、全社の収益を下支え。</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">業績予想（2027年3月期・修正なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">通期 売上高</span>
+            <span class="data-val">1,522.00<span class="data-sub">億円 +0.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">通期 営業利益</span>
+            <span class="data-val">142.00<span class="data-sub">億円 △5.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">通期 経常利益</span>
+            <span class="data-val">190.00<span class="data-sub">億円 △17.4%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">通期 当期純利益</span>
+            <span class="data-val">158.00<span class="data-sub">億円 △13.5%（EPS 294.77円）</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">2Q累計 売上高</span>
+            <span class="data-val">680.00<span class="data-sub">億円 +1.4%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">2Q累計 営業利益</span>
+            <span class="data-val">59.00<span class="data-sub">億円 △16.4%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">2Q累計 経常利益</span>
+            <span class="data-val">75.00<span class="data-sub">億円 △23.0%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">2Q累計 純利益</span>
+            <span class="data-val">48.00<span class="data-sub">億円 △29.3%（EPS 89.55円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>業績予想の修正はなし（直近公表値を据置）。<strong>Q1は営業利益+18.3%・経常利益+23.2%の増益だが、2Q累計・通期はいずれも減益計画</strong>（通期 営業△5.1%・経常△17.4%・純利益△13.5%）であり、Q1の進捗と計画との対比には留意が必要。特に経常利益は持分法投資損益・受取配当金等の営業外収益の変動影響を受けやすい。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">3,202.33<span class="data-sub">億円 +4.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">2,125.84<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">2,112.76<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">66.0<span class="data-sub">% （前期末 66.6%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務のポイント</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💪 自己資本比率66.0%と極めて健全な財務基盤</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📊 総資産は前期末比+4.2%の3,202.33億円へ拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 包括利益113.59億円（+109.6%）が純資産を押し上げ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔎 自己資本比率は資産増により66.6→66.0%へ微減</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は前期末比+4.2%の3,202.33億円。純資産2,125.84億円、自己資本2,112.76億円で、自己資本比率は66.0%（前期末66.6%）と高水準を維持している。四半期包括利益113.59億円（+109.6%）が純資産を大きく押し上げた一方、総資産の伸びがそれを上回ったため自己資本比率はわずかに低下したが、財務健全性への懸念は乏しい。投資有価証券の評価差額や為替換算調整といったその他の包括利益の変動が資本を左右しやすい構造にある点は留意点。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">160.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間70 + 期末90</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">160.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間80 + 期末80</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">±0<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（据置）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約54<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想294.77円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期の年間配当予想は160円で<strong>前期と同額の維持（±0円）</strong>。内訳は中間80円＋期末80円で、前期（中間70円＋期末90円）から中間・期末の配分を均等化する変更が行われている。年間水準そのものに変更はなく、直近の配当予想からの修正もなし。配当性向は予想EPS294.77円ベースで約54%と、通期減益計画のもとでも従来水準の配当を維持する姿勢がうかがえる。なお<strong>決算短信には明示的なDOE（株主資本配当率）や配当性向目標の記載はない</strong>ため、還元方針は年間配当額の安定維持を軸とした運用と読み取れる。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">通期は減益計画<br><small>営業△5.1%・経常△17.4%・純利益△13.5%</small></div>
+      <div class="risk-item high">農薬の天候・作付・海外市況<br><small>天候不順や作付面積の変動が販売数量を左右</small></div>
+      <div class="risk-item mid-level">原燃料・エネルギー価格<br><small>電力・原料コストの上昇が採算を圧迫</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>海外売上比率の高い農薬事業の換算・採算影響</small></div>
+      <div class="risk-item mid-level">持分法投資損益の変動<br><small>経常利益を押し上げる営業外収益のブレ</small></div>
+      <div class="risk-item">化学品市況<br><small>苛性ソーダ等の需給・価格動向</small></div>
+      <div class="risk-item">新製品・パイプライン<br><small>新規農薬・機能材料の開発と上市の進捗</small></div>
+      <div class="risk-item">規制（農薬登録）<br><small>各国の農薬登録・再登録および規制強化</small></div>
+      <div class="risk-item">自己資本比率のわずかな低下<br><small>66.6→66.0%（総資産の伸びによる希薄化）</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      当第1四半期は売上高+4.9%・営業利益+18.3%・経常利益+23.2%・親会社株主帰属四半期純利益+2.0%の増収増益。殺菌剤「トップジンM」を中心とする農業化学品の海外展開と、VP・医薬中間体などの機能材料が業績を牽引した。<strong>経常利益が営業利益を大きく上回るのは、持分法投資利益・受取配当金等の営業外収益によるもの</strong>であり、この構造は経常段階の利益変動要因として認識しておく必要がある。四半期包括利益は113.59億円（+109.6%）と大きく伸長した。財務は自己資本比率66.0%（前期末66.6%）と極めて健全な水準を維持。配当は年間160円で維持（前期比±0円）だが、内訳は中間70→80円・期末90→80円へ配分を均等化。<strong>明示的なDOE・配当性向目標の記載はない</strong>。<strong>一方、通期は営業△5.1%・経常△17.4%・純利益△13.5%の減益計画</strong>（2Q累計も営業△16.4%・経常△23.0%・純利益△29.3%）であり、Q1の増益との対比には留意が必要。農薬市況（天候・作付動向）と持分法損益の変動が今後の業績を大きく左右する。代表取締役社長は阿賀英司氏。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は日本曹達株式会社（4041）2027年3月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
