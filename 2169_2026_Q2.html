@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ＣＤＳ株式会社 2026年12月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #243A5E;
+    --primary-light: #35507C;
+    --primary-dark: #16243B;
+    --accent: #C08A3C;
+    --accent-light: #D4A45E;
+    --accent-pale: #F2EAD6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(36,58,94,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Document'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>ＣＤＳ株式会社</h1>
+  <p class="subtitle">2026年12月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 2169</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月7日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム・名証</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">41.13<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 11.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">2.39<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 48.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">2.51<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 46.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">1.59<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 48.8%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　芝崎 雄太</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">技術ドキュメント制作（取扱説明書・技術マニュアル）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">第2の柱</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">エンジニアリングソリューション（設計・開発支援）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">その他領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">プラントエンジニアリング</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要顧客</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">自動車・産業機械メーカー等</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">上場市場</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">東証プライム・名証（証券コード 2169）</span>
+      </div>
+    </div>
+    <div class="highlight">技術ドキュメント制作（取扱説明書・技術マニュアル）を中核に、エンジニアリングソリューション（設計・開発支援）、プラントエンジニアリングを展開。当中間期は自動車・産業機械向けの案件減少と技術者稼働率の低下により、売上高△11.6%・営業利益△48.0%・経常利益△46.2%・中間純利益△48.8%と全項目で大幅減益。一方で自己資本比率80.8%・実質無借金と財務体質は極めて健全。通期予想は営業利益+44.9%・純利益+45.3%の大幅増益計画を据え置いており、下期に大きく偏重した計画である点に留意が必要。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val down">41.13<span class="data-sub">億円 △11.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val down">2.39<span class="data-sub">億円 △48.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val down">2.51<span class="data-sub">億円 △46.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val down">1.59<span class="data-sub">億円 △48.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val down">2.30<span class="data-sub">億円 △29.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間EPS（基本的）</span>
+          <span class="data-val down">23.38<span class="data-sub">円（前期 45.67円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📘 技術ドキュメント制作（取扱説明書・技術マニュアル）の案件減少</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛠 エンジニアリングソリューション（設計・開発支援）の受注減</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚗 自動車・産業機械向けの設備投資・開発案件の減速</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">👷 技術者の稼働率低下による採算悪化</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏭 プラントエンジニアリングを含む全体で減収</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;margin-bottom:16px;">
+      <div class="card-title">セグメント別の状況（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item decline">
+          <div class="seg-name">ドキュメントソリューション（取説・マニュアル制作）</div>
+          <div class="seg-row"><span>位置づけ</span><span>中核</span></div>
+          <div class="seg-row"><span>方向感</span><span class="down">減速</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">取扱説明書・技術マニュアルの企画制作。自動車・産業機械メーカー向けの制作案件が減少し、稼働率低下が採算を圧迫。</div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">エンジニアリングソリューション（設計・開発支援）</div>
+          <div class="seg-row"><span>位置づけ</span><span>成長領域</span></div>
+          <div class="seg-row"><span>方向感</span><span class="down">減速</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">設計・開発の技術支援サービス。顧客の開発投資抑制により受注が減少し、技術者アサインの空きが生じた。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">プラントエンジニアリング・その他</div>
+          <div class="seg-row"><span>位置づけ</span><span>周辺領域</span></div>
+          <div class="seg-row"><span>方向感</span><span>横ばい</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">プラント設備関連の設計・技術支援等。案件規模が大きく期ズレの影響を受けやすく、全体の減収を補うには至らず。</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年12月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">94.51<span class="data-sub">億円 +7.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">9.93<span class="data-sub">億円 +44.9%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">9.92<span class="data-sub">億円 +42.3%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">6.63<span class="data-sub">億円 +45.3%（EPS 97.21円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>※ 重要な留意点：</strong>通期予想は直近公表から修正なし。ただし<strong>中間実績の営業利益2.39億円に対し通期計画は9.93億円</strong>であり、下期に約7.5億円（通期の約76%）を稼ぐ必要がある<strong>極めて下期偏重の計画</strong>。中間が全項目大幅減益であることを踏まえると、達成には下期の案件回復と技術者稼働率の改善が不可欠であり、計画未達リスクに強く留意したい。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">109.81<span class="data-sub">億円 +3.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">88.71<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">88.71<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val down">80.8<span class="data-sub">% （前期末 83.9% / △3.1pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務の特徴</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💪 実質無借金の健全財務を維持</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 自己資本比率80.8%と高水準（業界平均を大きく上回る）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 総資産は前期末比+3.6%と拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 総資産増に対し自己資本比率は△3.1ptと低下</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は前期末比+3.6%の109.81億円、純資産（＝自己資本）は88.71億円。自己資本比率は前期末83.9%から80.8%へ△3.1pt低下したものの、依然として80%超の極めて高い水準を維持し、実質無借金の健全な財務体質を保つ。減益局面でも資金繰りに不安はなく、下期の受注回復に向けた人材投資余力は十分にある。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/12）</div>
+        <div class="div-cell-val">74.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間37 + 期末37</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/12）</div>
+        <div class="div-cell-val" style="color:var(--accent);">74.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間37 + 期末37</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">±0.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（横ばい）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--red);">約76<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想97.21円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2026年12月期の配当予想は年間74円（中間37円＋期末37円）で、前期と<strong>同額を維持</strong>。減益局面でも配当水準を据え置く方針を示した点は株主還元姿勢として評価できる一方、通期予想EPS 97.21円ベースの配当性向は<strong>約76%と高水準</strong>であり、通期計画（下期偏重）が未達となった場合には配当負担が相対的に重くなる点に留意したい。決算短信にDOEや配当性向目標などの明示的な配当方針の記載はない。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">中間期の大幅減益<br><small>営業△48.0%・経常△46.2%・純利益△48.8%</small></div>
+      <div class="risk-item high">通期計画の下期偏重<br><small>中間営業2.39億に対し通期9.93億・達成リスク大</small></div>
+      <div class="risk-item mid-level">自動車・産業機械の設備投資動向<br><small>主要顧客の開発投資減速が直撃</small></div>
+      <div class="risk-item mid-level">技術者の稼働率・確保<br><small>稼働率低下が採算を大きく圧迫</small></div>
+      <div class="risk-item mid-level">案件の受注変動<br><small>プロジェクト単位の受注で業績が振れやすい</small></div>
+      <div class="risk-item">高い配当性向<br><small>予想EPSベースで約76%と高水準</small></div>
+      <div class="risk-item">自己資本比率の低下<br><small>83.9%→80.8%（△3.1pt）</small></div>
+      <div class="risk-item">DX・生産性向上<br><small>制作プロセス効率化による採算改善余地</small></div>
+      <div class="risk-item">取引先集中<br><small>特定業界・大口顧客への依存度</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高△11.6%・営業利益△48.0%・経常利益△46.2%・中間純利益△48.8%と<strong>全項目で大幅減益</strong>。取扱説明書・技術マニュアルなどの技術ドキュメント制作とエンジニアリングソリューション（設計・開発支援）を手掛けるが、自動車・産業機械向けの案件減少と技術者稼働率の低下が響き、採算が大きく悪化した。財務面は自己資本比率80.8%・実質無借金と極めて健全で、減益局面でも財務不安はない。配当は年間74円を維持（配当性向約76%と高水準）。<strong>通期は営業利益+44.9%・純利益+45.3%の大幅増益計画を据え置いているが、中間実績（営業2.39億円）に対し通期計画（9.93億円）は下期に大きく偏重しており、達成には下期の案件回復が不可欠である点に強く留意</strong>したい。受注の回復と技術者稼働率の改善が最優先課題であり、下期の受注動向が通期着地とバリュエーションを左右する。芝崎雄太社長の下、DX・生産性向上による採算改善の進捗も注目点。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はＣＤＳ株式会社（2169）2026年12月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
