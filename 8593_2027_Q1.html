@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三菱HCキャピタル 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1E3A2E;
+    --primary-light: #2E5445;
+    --primary-dark: #122419;
+    --accent: #B5453C;
+    --accent-light: #CC6A62;
+    --accent-pale: #F4E2E0;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(30,58,46,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Leasing'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>三菱ＨＣキャピタル株式会社</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信（連結）要約　／　証券コード 8593</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月7日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">5,391.02<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 7.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">471.04<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 42.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">464.86<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 41.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">316.09<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 44.8%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">総合リース・ファイナンス（国内外）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">カスタマー／航空／ロジスティクス／不動産／環境エネルギー等</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役 社長　久井 大樹</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">総資産規模</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">13兆3,144億円（前期末比 +1.7%）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">収益構造</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">リース料収入＋資産売却益・海外事業の比率が高い</span>
+      </div>
+    </div>
+    <div class="highlight">国内最大級の総合リース・ファイナンス企業。カスタマーソリューション（国内リース・ファイナンス）を基盤に、航空機・コンテナ・不動産・ロジスティクス、環境エネルギーまで幅広いアセットを保有・運用する。総資産は13兆3,144億円と業界最大級で、資産の入替（売却益）と海外事業が収益の重要な柱。当第1四半期は前年同期の高水準（大幅増益）の反動により、売上高△7.8%・営業利益△42.9%・純利益△44.8%の大幅減収減益となった一方、包括利益は570.00億円（前期51.40億円）へ大きく改善している。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val down">5,391.02<span class="data-sub">億円 △7.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val down">471.04<span class="data-sub">億円 △42.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val down">464.86<span class="data-sub">億円 △41.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val down">316.09<span class="data-sub">億円 △44.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val up">570.00<span class="data-sub">億円（前期 51.40億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり四半期純利益</span>
+          <span class="data-val">22.03<span class="data-sub">円（前期 39.89円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前年同期が+68.5%増益と高水準だった反動</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 資産売却益（不動産・航空機等）の減少</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💴 金利上昇局面における調達コストの上昇</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 為替・海外事業環境の変動</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">✅ 一方で包括利益は570.00億円と大幅改善（為替換算調整・有価証券評価等）</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント動向（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item">
+          <div class="seg-name">カスタマーソリューション（国内リース）</div>
+          <div class="seg-row"><span>領域</span><span>国内</span></div>
+          <div class="seg-row"><span>内容</span><span>設備リース・ファイナンス</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">国内法人向けの設備リース・割賦・ファイナンスを担う安定基盤。景気・設備投資動向と調達金利の影響を受ける。</div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">航空・ロジスティクス・不動産</div>
+          <div class="seg-row"><span>領域</span><span>グローバル</span></div>
+          <div class="seg-row"><span>内容</span><span>航空機／コンテナ／不動産</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">航空機・海上コンテナ・不動産等のアセット運用。前年同期に寄与した資産売却益の減少が今期減益の主因とみられる。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">環境エネルギー・海外</div>
+          <div class="seg-row"><span>領域</span><span>海外中心</span></div>
+          <div class="seg-row"><span>内容</span><span>再エネ／海外ファイナンス</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">再生可能エネルギー発電事業や海外ファイナンスを展開。中長期の成長領域だが、為替・金利・各国規制の影響を受けやすい。</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・修正なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val down">1,600.00<span class="data-sub">億円 △1.4%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">1株当たり当期純利益（EPS）</span>
+            <span class="data-val">111.57<span class="data-sub">円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>当社の通期業績予想は<strong>親会社株主に帰属する当期純利益とEPSのみの開示</strong>であり、売上高・営業利益・経常利益の予想は公表されていない。直近公表の予想からの修正はなし。Q1の親会社株主帰属四半期純利益316.09億円は、通期予想1,600億円に対し<strong>19.8%の進捗</strong>。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">13兆3,144<span class="data-sub">億円 +1.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">2兆282.99<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">2兆81.19<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">15.1<span class="data-sub">% （前期末 15.2%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">1株当たり指標・資本効率</div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産（BPS）</span>
+          <span class="data-val">1,400.56<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり四半期純利益</span>
+          <span class="data-val">22.03<span class="data-sub">円（前期 39.89円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">通期EPS予想</span>
+          <span class="data-val">111.57<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">業態特性</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">レバレッジ型（リース業は低自己資本比率が通常）</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は13兆3,144億円と前期末比+1.7%増加し、リース資産・営業資産の積み上げが続く。純資産は2兆282.99億円、うち自己資本は2兆81.19億円で、自己資本比率は15.1%（前期末15.2%）とほぼ横ばい。リース・ファイナンス業は負債による資金調達を前提としたレバレッジ型のビジネスモデルであり、自己資本比率の水準自体は業態上一般的だが、金利上昇局面では調達コストと資産の質が財務健全性を左右する。1株当たり純資産（BPS）は1,400.56円。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">46.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間22 + 期末24</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">51.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間25 + 期末26</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val up">+5.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+10.9% 増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約46<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想111.57円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期の年間配当予想は51円（中間25円＋期末26円）で、前期46円から<strong>+5円・+10.9%の増配</strong>。第1四半期が大幅減益となるなかでも増配方針を維持している点は、株主還元姿勢の強さを示す。通期EPS予想111.57円ベースの配当性向は約46%。なお、決算短信上はDOEや配当性向の数値目標といった明示的な配当方針の記載はなく、増配継続の是非は通期利益の着地と資産入替の進捗に依存する。直近公表の配当予想からの修正はなし。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">大幅減益<br><small>営業利益△42.9%・純利益△44.8%（前年反動・資産売却益減）</small></div>
+      <div class="risk-item high">通期は純利益減益計画<br><small>1,600億円・△1.4%と前期を下回る計画</small></div>
+      <div class="risk-item mid-level">金利上昇・調達コスト<br><small>レバレッジ型ビジネスで資金調達費用が利益を圧迫</small></div>
+      <div class="risk-item mid-level">航空機リース市況<br><small>需給・機材価値・航空需要の変動が収益に直結</small></div>
+      <div class="risk-item mid-level">与信・資産評価リスク<br><small>貸倒・減損など資産の質の悪化</small></div>
+      <div class="risk-item">為替変動<br><small>海外資産・収益の円換算に影響（包括利益にも波及）</small></div>
+      <div class="risk-item">海外事業の比率<br><small>各国の景気・規制・カントリーリスクの影響</small></div>
+      <div class="risk-item">自己資本比率15.1%<br><small>前期末15.2%からほぼ横ばい（業態上は一般的水準）</small></div>
+      <div class="risk-item">減益下での増配継続<br><small>46→51円（+5円）の還元強化を維持</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      売上高△7.8%・営業利益△42.9%・経常利益△41.7%・親会社株主帰属四半期純利益△44.8%と、全段階で大幅な減収減益となった。前年同期が資産売却益等で+68.5%増益という高水準だった反動が主因であり、資産入替のタイミングに利益が左右される総合リース業の特性が表れた四半期といえる。一方で四半期包括利益は570.00億円（前期51.40億円）と大幅に改善しており、為替換算調整や有価証券評価などを含めた実質的な純資産の積み上がりは進んでいる。事業はカスタマーソリューション（国内リース）を基盤に、航空機・ロジスティクス・不動産、環境エネルギーまで広がる総合リースで、総資産は13兆3,144億円（+1.7%）。財務は自己資本比率15.1%（前期末15.2%）とレバレッジ型業態として標準的な水準を維持している。注目は、この大幅減益下でも配当を46円→51円（+5円・+10.9%）へ増配する方針を継続している点で、株主還元への強い姿勢がうかがえる（DOE・配当性向の数値目標は短信に明示なし）。通期は親会社株主帰属当期純利益1,600億円・△1.4%とほぼ横ばいの計画で修正なし、Q1の進捗率は19.8%とやや低めのスタート。今後は金利上昇局面での調達コスト管理、航空機リース市況の動向、そして資産入替（売却益計上）の巧拙が業績を大きく左右する。代表取締役社長は久井大樹氏。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は三菱ＨＣキャピタル株式会社（8593）2027年3月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
