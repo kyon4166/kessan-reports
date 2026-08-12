@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東京海上ホールディングス 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0F3A5E;
+    --primary-light: #24405F;
+    --primary-dark: #08253C;
+    --accent: #C89A3C;
+    --accent-light: #DCB45E;
+    --accent-pale: #F4EBD5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(15,58,94,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Insurance'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated · Q1</div>
+  <h1>東京海上ホールディングス株式会社</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信〔IFRS〕（連結）要約　／　証券コード 8766</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月12日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">保険収益</div>
+      <div class="kpi-value">2兆471<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 12.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">税引前四半期利益</div>
+      <div class="kpi-value">3,781.67<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 11.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社所有者帰属四半期利益</div>
+      <div class="kpi-value">2,643.00<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 3.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">138.25<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">前期 133.49円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">損害保険・生命保険を中核とする保険持株会社</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">国内損害保険</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">東京海上日動火災保険（グループの中核）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">海外保険事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">北米（PHLY・DFG・TMHCC）／欧州／アジア・中南米</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">国内生命保険</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">東京海上日動あんしん生命ほか</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS（国際会計基準）／代表取締役社長 小池 昌洋</span>
+      </div>
+    </div>
+    <div class="highlight">国内損害保険（東京海上日動）を中核に、国内生命保険、北米・欧州・アジアを中心とする海外保険事業をグローバルに展開する日本最大級の保険グループ。当第1四半期は保険収益+12.3%・税引前四半期利益+11.5%・親会社所有者帰属四半期利益+3.3%と増収増益。海外保険事業と資産運用が収益を牽引し、四半期包括利益は+103.0%と大幅改善。<strong>一方、当社グループが経営指標として開示する「修正純利益」は2,613.51億円（△3.6%）とIFRS純利益（+3.3%）とは方向が異なる点に留意が必要。</strong></div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">保険収益</span>
+          <span class="data-val">2兆471.34<span class="data-sub">億円 +12.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前四半期利益</span>
+          <span class="data-val">3,781.67<span class="data-sub">億円 +11.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期利益</span>
+          <span class="data-val">2,868.86<span class="data-sub">億円 +7.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属四半期利益</span>
+          <span class="data-val">2,643.00<span class="data-sub">億円 +3.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">3,753.82<span class="data-sub">億円 +103.0%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">独自指標「修正純利益」</div>
+        <div class="data-row">
+          <span class="data-key">修正純利益</span>
+          <span class="data-val down">2,613.51<span class="data-sub" style="color:var(--red);">億円 △3.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">修正EPS</span>
+          <span class="data-val down">137<span class="data-sub" style="color:var(--red);">円（前期 141円）</span></span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">※ 修正純利益・修正EPSは当社グループ全体の業績を示す<strong>経営指標</strong>であり、IFRSで定義された指標ではないが、投資者に有用な情報として開示。</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠️ IFRS純利益は<span class="up">+3.3%増</span>、修正純利益は<span class="down">△3.6%減</span>と<strong>方向が異なる</strong>（自然災害・一過性要因の取扱いの差）。</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">増収増益の主因</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row" style="display:block;padding:10px 0;">
+            <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 国内損保（東京海上日動）：火災・自動車を中心とする収入の積み上がり</span>
+          </div>
+          <div class="data-row" style="display:block;padding:10px 0;">
+            <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 海外保険事業：北米（PHLY／DFG／TMHCC）・欧州・アジアが拡大</span>
+          </div>
+          <div class="data-row" style="display:block;padding:10px 0;">
+            <span style="font-size:13px;color:var(--charcoal);display:block;">💼 国内生保：あんしん生命を中心に安定収益を確保</span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row" style="display:block;padding:10px 0;">
+            <span style="font-size:13px;color:var(--charcoal);display:block;">📈 保険収益は+12.3%と二桁拡大、資産運用収益も寄与</span>
+          </div>
+          <div class="data-row" style="display:block;padding:10px 0;">
+            <span style="font-size:13px;color:var(--charcoal);display:block;">💹 四半期包括利益は+103.0%と大幅改善（市場環境の好転）</span>
+          </div>
+          <div class="data-row" style="display:block;padding:10px 0;">
+            <span style="font-size:13px;color:var(--charcoal);display:block;">⏱ Q1の親会社帰属利益は通期予想の31.8%進捗</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item">
+        <div class="seg-name">国内損害保険（東京海上日動）</div>
+        <div class="seg-row"><span>位置づけ</span><span>中核</span></div>
+        <div class="seg-row"><span>主力種目</span><span>火災・自動車・傷害</span></div>
+        <div class="seg-row"><span>留意点</span><span>自然災害</span></div>
+      </div>
+      <div class="seg-item star">
+        <div class="seg-name">海外保険事業（北米・欧州・アジア）</div>
+        <div class="seg-row"><span>位置づけ</span><span>成長ドライバー</span></div>
+        <div class="seg-row"><span>主要拠点</span><span>PHLY / DFG / TMHCC</span></div>
+        <div class="seg-row"><span>留意点</span><span>再保険市況・為替</span></div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">国内生命保険・金融その他</div>
+        <div class="seg-row"><span>位置づけ</span><span>安定収益</span></div>
+        <div class="seg-row"><span>主要会社</span><span>あんしん生命ほか</span></div>
+        <div class="seg-row"><span>留意点</span><span>金利・市場変動</span></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年3月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社所有者帰属当期利益</span>
+            <span class="data-val">8,300.00<span class="data-sub">億円 +56.2%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">基本的EPS</span>
+            <span class="data-val">441.83<span class="data-sub">円</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">修正純利益（経営指標）</span>
+            <span class="data-val">9,500.00<span class="data-sub">億円 +7.8%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">修正EPS</span>
+            <span class="data-val">514<span class="data-sub">円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>直近公表の業績予想から修正なし。<strong>IFRS当期利益+56.2%に対し修正純利益は+7.8%</strong>と伸び率が大きく異なるため、実勢の把握には両指標の併読が必要。Q1の親会社所有者帰属四半期利益は通期予想の31.8%進捗。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">33兆6,769<span class="data-sub">億円 +2.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">8兆3,231<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">8兆1,973<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">24.3<span class="data-sub">% （前期末 24.1% / +0.2pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務のポイント</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 資産合計は33兆円超。保険負債・運用資産を抱える保険業特有の大型バランスシート。</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📊 親会社所有者帰属持分比率24.3%は前期末24.1%から<span class="up">+0.2pt</span>改善。</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 四半期包括利益+103.0%が資本の積み増しに寄与。</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚖️ 比率の水準は業態特性によるもので、健全性は経済価値ベースの資本十分性で評価される。</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>資産合計は前期末比+2.0%の33兆6,769億円へ拡大。資本合計8兆3,231億円、うち親会社所有者帰属持分は8兆1,973億円で、親会社所有者帰属持分比率は24.1%→24.3%（+0.2pt）と改善した。保険負債と巨額の運用資産を抱える保険業の特性上、事業会社の自己資本比率とは水準の意味合いが異なる点に留意。市場環境の好転により四半期包括利益が+103.0%と大幅に伸び、資本基盤の厚みを支えている。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">218.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間105.50 + 期末112.50</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">245.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間122.50 + 期末122.50</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+27.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+12.4%の大幅増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当方針</div>
+        <div class="div-cell-val" style="color:var(--accent);">連続<span style="font-size:14px;color:var(--mid);">増配</span></div>
+        <div class="div-cell-sub">明示的なDOE・性向目標の記載なし</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期は年間245円（中間122.50円＋期末122.50円）の配当予想で、前期218円（中間105.50円＋期末112.50円）から<strong>+27円・+12.4%の大幅増配</strong>。増配は連続しており、株主還元の強化姿勢が明確。なお本決算短信には明示的なDOE水準や配当性向目標の記載はない。還元の原資となるのは<strong>グループ全体の経営指標である「修正純利益」</strong>（当第1四半期2,613.51億円／通期予想9,500億円）であり、IFRS純利益とは水準・増減率が異なる点を踏まえて評価する必要がある。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">自然災害・大規模事故<br><small>台風・豪雨・地震等による保険金支払の急増</small></div>
+      <div class="risk-item high">金融市場変動<br><small>金利・株価・為替の変動が運用損益と資本に影響</small></div>
+      <div class="risk-item mid-level">海外保険事業の収支<br><small>北米（PHLY/DFG/TMHCC）等の損害率・料率動向</small></div>
+      <div class="risk-item mid-level">IFRS利益と修正純利益の乖離<br><small>Q1は+3.3%と△3.6%で方向が逆・通期も+56.2%対+7.8%</small></div>
+      <div class="risk-item mid-level">再保険市況・料率<br><small>再保険コストの上昇が収益性を圧迫する可能性</small></div>
+      <div class="risk-item">政策株式の売却<br><small>売却益の計上と資本効率改善の進捗</small></div>
+      <div class="risk-item">気候変動リスク<br><small>自然災害の激甚化・頻発化による長期的影響</small></div>
+      <div class="risk-item">自己資本比率<br><small>親会社所有者帰属持分比率24.3%（保険業態の特性）</small></div>
+      <div class="risk-item">連続増配<br><small>218→245円（+27円・+12.4%）の還元強化</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      保険収益+12.3%・税引前四半期利益+11.5%・親会社所有者帰属四半期利益+3.3%の増収増益。海外保険事業（北米・欧州・アジア）と資産運用が牽引し、四半期包括利益は+103.0%と大幅に改善した。<strong>一方、グループ全体の業績を示す経営指標である「修正純利益」は2,613.51億円（△3.6%）と減少しており、IFRS純利益（+3.3%）とは方向が異なる点に留意が必要</strong>（自然災害や一過性要因の取扱いの差による）。財務は資産合計33兆6,769億円（+2.0%）、親会社所有者帰属持分比率24.3%（+0.2pt）と改善。配当は218→245円へ+27円の大幅増配（+12.4%）で連続増配を継続する。通期はIFRS当期利益8,300億円（+56.2%）・修正純利益9,500億円（+7.8%）の計画を据え置き、Q1の親会社帰属利益は通期予想の31.8%進捗と順調。今後は自然災害と金融市場変動、そして北米を中心とする海外保険事業の収支が業績を左右する。代表取締役社長は小池昌洋氏。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は東京海上ホールディングス株式会社（8766）2027年3月期第1四半期決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
