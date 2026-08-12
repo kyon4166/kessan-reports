@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社アイティフォー 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1E3A5E;
+    --primary-light: #2E5182;
+    --primary-dark: #122438;
+    --accent: #2AA0C0;
+    --accent-light: #54B8D4;
+    --accent-pale: #D9EFF5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(30,58,94,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'System'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>株式会社アイティフォー</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信（連結）要約　／　証券コード 4743</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月12日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">46.24<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 9.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">5.55<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 28.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">5.09<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 3.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">3.57<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 0.8%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">金融機関向け債権管理・回収システムの開発・販売</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主力領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">コールセンター／CRMソリューション</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">その他領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">流通・小売向けシステム、ネットワーク／保守サービス</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業環境</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">金融DX投資が堅調に推移</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長 坂田 幸司</span>
+      </div>
+    </div>
+    <div class="highlight">金融機関向けの債権管理・回収システムを中核に、コールセンター／CRM、流通向けシステムなどのソフトウェア開発・販売を手掛ける独立系IT企業。金融DX需要が堅調に推移するなか、当第1四半期は売上高+9.2%・営業利益+28.5%・経常利益+3.5%・純利益+0.8%と全段階で増収増益を確保した。自己資本比率78.0%・実質無借金の極めて健全な財務体質を背景に、安定的な株主還元を継続している。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">46.24<span class="data-sub">億円 <span class="up">+9.2%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">5.55<span class="data-sub">億円 <span class="up">+28.5%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">5.09<span class="data-sub">億円 <span class="up">+3.5%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">3.57<span class="data-sub">億円 <span class="up">+0.8%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">7.13<span class="data-sub">億円 <span class="up">+134.0%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">13.51<span class="data-sub">円（前期 13.42円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 金融機関向け債権管理・回収システムが堅調</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📞 コールセンター／CRMソリューションの需要拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛒 流通向けシステム等のソフトウェア開発・販売</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💡 金融DX投資が堅調に推移し増収に寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 営業利益+28.5%に対し経常+3.5%・純利益+0.8%と伸びが鈍化。前期の営業外収益の反動など営業外損益の変動による</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント・事業領域（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">金融ソリューション（債権管理・回収）</div>
+          <div class="seg-row"><span>位置づけ</span><span>中核</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">銀行・カード・信販など金融機関向けの債権管理・回収システムが主力。金融DX投資の継続で受注環境は堅調。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">CRM・コンタクトセンター</div>
+          <div class="seg-row"><span>位置づけ</span><span>成長</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">コールセンター向けCTI／CRMソリューション。顧客接点のデジタル化・省人化ニーズを取り込む。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">流通・その他ソリューション</div>
+          <div class="seg-row"><span>位置づけ</span><span>周辺</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">流通・小売向けシステム、ネットワーク構築・保守サービス等。案件規模により期ずれが生じやすい。</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">業績予想（2027年3月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">通期 売上高</span>
+            <span class="data-val">280.00<span class="data-sub">億円 <span class="up">+21.2%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">通期 営業利益</span>
+            <span class="data-val">48.00<span class="data-sub">億円 <span class="up">+24.4%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">通期 経常利益</span>
+            <span class="data-val">49.00<span class="data-sub">億円 <span class="up">+20.9%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">通期 当期純利益</span>
+            <span class="data-val">34.00<span class="data-sub">億円 <span class="up">+21.6%</span>（EPS128.48円）</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計 売上高</span>
+            <span class="data-val">108.00<span class="data-sub">億円 <span class="up">+17.1%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計 営業利益</span>
+            <span class="data-val">14.00<span class="data-sub">億円 <span class="up">+21.1%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計 経常利益</span>
+            <span class="data-val">14.50<span class="data-sub">億円 <span class="up">+15.6%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計 純利益</span>
+            <span class="data-val">10.00<span class="data-sub">億円 <span class="up">+1.2%</span>（EPS37.79円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>期初公表予想から修正なし。通期は売上+21.2%・営業利益+24.4%の大幅増収増益計画だが、<strong>Q1営業利益5.55億円は通期予想48.00億円に対し11.6%の進捗</strong>にとどまり、下期に大きく偏重する季節性を織り込んだ計画である点に留意が必要。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">256.95<span class="data-sub">億円 △8.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">205.23<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">200.53<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">757.82<span class="data-sub">円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務健全性</div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val" style="color:var(--green);">78.0<span class="data-sub">% （前期末 73.6% / +4.4pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債</span>
+          <span class="data-val">実質無借金<span class="data-sub">（借入依存度は僅少）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">総資産の増減</span>
+          <span class="data-val" style="color:var(--red);">△8.4<span class="data-sub">%（季節的な債務決済等）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務評価</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">極めて健全</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は前期末比△8.4%の256.95億円。期末に膨らんだ買掛金・未払金等の決済が進んだ一方、純資産は205.23億円（自己資本200.53億円）を確保し、自己資本比率は73.6%→<strong>78.0%（+4.4pt）</strong>へ大きく改善した。1株当たり純資産は757.82円。実質無借金の資本構成であり、金融機関向けシステムという長期案件を抱える事業特性に対して十分な財務余力を備える。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">80.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間30 + 期末50</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">80.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間40 + 期末40</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">±0.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（配分変更）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約62<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想128.48円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期の年間配当予想は前期と同額の<strong>80円（維持）</strong>。ただし内訳は変更されており、中間配当を30円→<strong>40円へ増額</strong>、期末配当を50円→<strong>40円へ減額</strong>し、中間・期末を均等配分とする形に見直された。年間総額は据え置きのため実質的な還元水準に変更はない。配当性向は通期予想EPS128.48円ベースで<strong>約62%</strong>と高めの水準。なお、決算短信にDOEや配当性向目標など明示的な配当方針の記載はない。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">通期計画の下期偏重<br><small>Q1営業進捗11.6%。通期+24.4%増益計画の達成リスク</small></div>
+      <div class="risk-item high">金融機関のIT投資動向<br><small>主要顧客である金融業界の投資抑制が直撃</small></div>
+      <div class="risk-item mid-level">IT人材の確保・単価<br><small>技術者不足と人件費・外注単価の上昇圧力</small></div>
+      <div class="risk-item mid-level">案件の受注変動<br><small>大型案件の期ずれ・検収時期による業績振れ</small></div>
+      <div class="risk-item mid-level">営業外損益の変動<br><small>営業+28.5%に対し経常+3.5%と伸びが鈍化</small></div>
+      <div class="risk-item">自己資本比率の改善<br><small>73.6%→78.0%（+4.4pt）・実質無借金</small></div>
+      <div class="risk-item">競合環境<br><small>金融DX・債権管理システム分野での競争</small></div>
+      <div class="risk-item">配当性向約62%<br><small>年間80円維持・中間40+期末40へ配分変更</small></div>
+      <div class="risk-item">新規事業の育成<br><small>CRM・流通等の周辺領域の収益化</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      当第1四半期は売上高<span class="up">+9.2%</span>・営業利益<span class="up">+28.5%</span>・経常利益<span class="up">+3.5%</span>・純利益<span class="up">+0.8%</span>の増収増益。金融機関向けの債権管理・回収システムやコールセンター／CRMを手掛け、金融DX需要が堅調に推移したことが増収と営業段階での大幅増益につながった。<strong>もっとも、営業利益+28.5%に対し経常利益+3.5%・純利益+0.8%と伸びが鈍化しているのは、前期の営業外収益の反動など営業外損益の変動によるもの</strong>で、本業の改善度合いと最終利益の伸びに差がある点は押さえておきたい。一方で四半期包括利益は+134.0%と大きく伸長した。財務は自己資本比率78.0%（+4.4pt）・実質無借金と極めて健全で、1株当たり純資産は757.82円。配当は年間80円を維持しつつ、中間30→40円へ増額・期末50→40円へ減額する配分変更を実施（配当性向約62%）。<strong>通期は売上+21.2%・営業利益+24.4%の大幅増収増益計画だが、Q1の営業利益進捗は11.6%にとどまり下期に大きく偏重する計画である点に留意</strong>が必要。今後は金融機関のIT投資動向とIT人材の確保・単価が業績を左右する。代表取締役社長は坂田幸司氏。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社アイティフォー（4743）2027年3月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
