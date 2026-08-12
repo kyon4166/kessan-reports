@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ショーボンドホールディングス 2026年6月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1E4A3A;
+    --primary-light: #2E5F4C;
+    --primary-dark: #122E24;
+    --accent: #C08A3C;
+    --accent-light: #D4A45E;
+    --accent-pale: #F2EAD6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(30,74,58,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Repair'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f2f1; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Full Year</div>
+  <h1>ショーボンドホールディングス株式会社</h1>
+  <p class="subtitle">2026年6月期　決算短信（連結）要約　／　証券コード 1414</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月10日</span></div>
+    <div class="meta-item">対象期間 <span>2025年7月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">892.04<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 1.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">208.31<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 0.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">214.85<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 1.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属当期純利益</div>
+      <div class="kpi-value">154.39<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 2.5%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">橋梁・トンネル等インフラ構造物の補修・補強工事</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ポジション</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">インフラ補修・補強の専業最大手</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業モデル</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">工事施工＋補修用資材の製造・販売の一貫体制</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">市場環境</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">インフラ老朽化対策・国土強靭化が追い風</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長 岸本 達也</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">株式分割</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年1月1日付で1株→4株の株式分割を実施済</span>
+      </div>
+    </div>
+    <div class="highlight">橋梁・トンネルをはじめとするインフラ構造物の補修・補強を手掛ける専業最大手。工事施工に加え補修用資材の製造・販売までを自社で担う一貫体制が高い採算性の源泉。2026年6月期通期は売上高△1.7%の減収ながら、採算改善により営業利益+0.2%・経常利益+1.6%・当期純利益+2.5%と増益を確保。売上高営業利益率23.4%（前期22.9%）・ROE14.6%と極めて高い収益性を維持し、自己資本比率82.3%の実質無借金という盤石な財務体質を併せ持つ。2026年1月1日付で1株→4株の株式分割を実施（EPS・配当は分割後換算ベースで統一表記）。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">通期業績と増減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（2026年6月期・通期）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">892.04<span class="data-sub down">億円 △1.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">208.31<span class="data-sub">億円 +0.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">214.85<span class="data-sub">億円 +1.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">154.39<span class="data-sub">億円 +2.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">168.42<span class="data-sub">億円 +15.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（分割後換算）</span>
+          <span class="data-val">76.08<span class="data-sub">円（前期 73.01円・4分割調整後）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌉 橋梁・トンネル等の補修・補強工事の専業最大手</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 売上高は△1.7%の減収（工事量・工期構成の影響）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 採算改善により全利益段階で増益を確保</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💎 営業利益率23.4%（前期22.9%）と極めて高い収益性</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏗 国土強靭化・インフラ老朽化対策が中長期の追い風</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🤝 持分法投資損益は+1.67億円（前期△0.69億円）へ改善</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">収益性指標</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">自己資本当期純利益率（ROE）</span>
+            <span class="data-val">14.6<span class="data-sub">% （前期 14.5%）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">総資産経常利益率（ROA）</span>
+            <span class="data-val">16.6<span class="data-sub">%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高営業利益率</span>
+            <span class="data-val">23.4<span class="data-sub">% （前期 22.9% / +0.5pt）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">持分法投資損益</span>
+            <span class="data-val" style="color:var(--green);">+1.67<span class="data-sub">億円（前期 △0.69億円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 収益性：</strong>減収局面でも売上高営業利益率は22.9%→23.4%へ改善し、ROEは14.6%（前期14.5%）を維持。工事採算の高さと資材事業を内製する一貫体制が、建設業として突出した利益率を支えている。
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント／事業別の状況</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">補修・補強工事（橋梁・トンネル）</div>
+          <div class="seg-row"><span>位置付け</span><span>主力</span></div>
+          <div class="seg-row"><span>需要基盤</span><span>公共投資</span></div>
+          <div style="margin-top:6px;font-size:11px;color:var(--mid);line-height:1.5;">高速道路・国道の橋梁、トンネル等の補修・補強工事が売上の中核。老朽インフラの更新需要と国土強靭化予算を背景に安定した受注基盤を持つ。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">補修用資材の製造・販売</div>
+          <div class="seg-row"><span>位置付け</span><span>収益補完</span></div>
+          <div class="seg-row"><span>特性</span><span>内製・高採算</span></div>
+          <div style="margin-top:6px;font-size:11px;color:var(--mid);line-height:1.5;">自社開発の補修材・工法を製造販売。工事部門との一貫体制により品質と採算を両立し、グループ全体の高利益率を下支えする。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">その他（調査・設計等）</div>
+          <div class="seg-row"><span>位置付け</span><span>周辺領域</span></div>
+          <div class="seg-row"><span>役割</span><span>上流工程</span></div>
+          <div style="margin-top:6px;font-size:11px;color:var(--mid);line-height:1.5;">インフラの点検・調査・設計など工事の上流工程を担い、補修工事の受注につながる入口機能を果たす。技術力の蓄積にも寄与。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">次期（2027年6月期）予想</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">年間配当予想（分割後）</span>
+            <span class="data-val" style="color:var(--accent);">46.50<span class="data-sub">円（中間21 + 期末25.50）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">配当性向（予想）</span>
+            <span class="data-val">60.1<span class="data-sub">%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">業績予想</span>
+            <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">短信記載の範囲</span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">基準</span>
+            <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026/1/1付 1→4株分割後ベース</span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>次期業績予想は短信記載の範囲に留め、ここでは配当方針を中心に整理。2027年6月期の年間配当予想は分割後換算で46.50円（中間21円＋期末25.50円）、配当性向60.1%。数値はすべて2026年1月1日付の1株→4株分割後ベース。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">1,298.58<span class="data-sub">億円 +0.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">1,083.76<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">1,069.22<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">82.3<span class="data-sub">% （前期末 81.4% / +0.9pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">533.19<span class="data-sub">円（分割後換算）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+193.30<span class="data-sub">億円（前期 94.73億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--green);">+2.35<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△148.74<span class="data-sub">億円（配当等）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF</span>
+          <span class="data-val" style="color:var(--green);">+195.65<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金及び現金同等物</span>
+          <span class="data-val">372.47<span class="data-sub">億円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は1,298.58億円（+0.5%）とほぼ横ばい、純資産1,083.76億円・自己資本1,069.22億円で自己資本比率は81.4%→82.3%（+0.9pt）へ改善。有利子負債に依存しない実質無借金の超健全財務を維持し、1株当たり純資産は533.19円（分割後換算）。営業CFは前期94.73億円から+193.30億円へ大幅増加し、投資CFも+2.35億円とプラス。財務CF△148.74億円（主に配当支払）を十分に賄い、期末現金及び現金同等物は372.47億円と潤沢な手元流動性を確保している。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/6・分割前）</div>
+        <div class="div-cell-val">175.50<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間64 + 期末111.50（分割前）</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期（2026/6）</div>
+        <div class="div-cell-val" style="color:var(--accent);">60.1<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">配当性向60.1% / DOE 8.7%</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">来期予想（2027/6・分割後）</div>
+        <div class="div-cell-val" style="color:var(--green);">46.50<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間21 + 期末25.50（分割後）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">株式分割</div>
+        <div class="div-cell-val">1→4<span style="font-size:14px;color:var(--mid);">株</span></div>
+        <div class="div-cell-sub">2026年1月1日付で実施</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>💰 配当方針：</strong>短信には<strong>配当性向60.1%・純資産配当率（DOE）8.7%</strong>が明記されており、利益水準と株主資本の双方に紐づけた高水準の株主還元方針を採る。当期の配当金総額は<strong>92.26億円</strong>。2026年1月1日付で1株→4株の株式分割を実施したため、当期2026年6月期の配当は<strong>中間82円（分割前基準）＋期末25.25円（分割後基準）</strong>となり、年間合計は単純合算できないため短信上「－」表記。前期2025年6月期は年間175.50円（中間64円＋期末111.50円、いずれも分割前基準）。来期2027年6月期予想は分割後換算で年間46.50円（中間21円＋期末25.50円）、配当性向は引き続き60.1%を見込む。※本ページの1株当たり指標は原則として分割後換算ベースで統一し、分割前実績はカッコ書きで注記。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">インフラ補修需要への依存<br><small>公共投資・国土強靭化予算の動向に業績が左右</small></div>
+      <div class="risk-item high">減収基調<br><small>売上高△1.7%と減収、トップラインの回復が課題</small></div>
+      <div class="risk-item mid-level">技能労働者の確保・人件費<br><small>建設技能者の不足と労務費上昇圧力</small></div>
+      <div class="risk-item mid-level">資材価格の変動<br><small>鋼材・樹脂等の原材料価格とエネルギーコスト</small></div>
+      <div class="risk-item mid-level">工事採算の変動<br><small>工期・工事構成による採算のブレ</small></div>
+      <div class="risk-item">国土強靭化予算<br><small>老朽インフラ対策の継続が中長期の追い風</small></div>
+      <div class="risk-item">高収益性の維持<br><small>営業利益率23.4%・ROE14.6%の持続性</small></div>
+      <div class="risk-item">株式分割<br><small>2026年1月1日付1→4株分割（流動性向上）</small></div>
+      <div class="risk-item">高配当性向<br><small>配当性向60.1%・DOE8.7%の還元水準</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      2026年6月期通期は売上高△1.7%の減収ながら、採算改善により営業利益+0.2%・経常利益+1.6%・当期純利益+2.5%と全利益段階で増益を確保した。橋梁・トンネル等のインフラ補修・補強の専業最大手として、売上高営業利益率23.4%（前期22.9%）・ROE14.6%（前期14.5%）と建設業として極めて高い収益性を維持し、持分法投資損益も+1.67億円（前期△0.69億円）へ改善。営業CFは前期94.73億円から193.30億円へ大幅に改善し、期末現金は372.47億円と潤沢。財務は自己資本比率82.3%（+0.9pt）・実質無借金の超健全体質を保つ。株主還元では<strong>配当性向60.1%・純資産配当率（DOE）8.7%</strong>という方針を短信に明記し、配当金総額は92.26億円。2026年1月1日付で1株→4株の株式分割を実施したため当期配当は中間82円（分割前）＋期末25.25円（分割後）と基準が混在するが、来期2027年6月期は分割後換算で年間46.50円（中間21円＋期末25.50円）・配当性向60.1%を予想する。インフラ老朽化対策と国土強靭化を追い風に安定した需要基盤を持つ一方、トップラインの減収基調からの回復、技能労働者の確保と労務費上昇への対応、工事採算の維持が中長期の焦点となる。代表取締役社長は岸本達也氏。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はショーボンドホールディングス株式会社（1414）2026年6月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
