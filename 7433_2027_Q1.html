@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>伯東株式会社 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A3A52;
+    --primary-light: #2A5372;
+    --primary-dark: #102434;
+    --accent: #C08A3C;
+    --accent-light: #D4A45E;
+    --accent-pale: #F2EAD6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,58,82,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Electronics'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #eff1f3; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>伯東株式会社</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信（連結）要約　／　証券コード 7433</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月12日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">545.37<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 35.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">23.23<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 167.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">22.95<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 219.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">14.62<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 121.8%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">半導体・電子部品・電子材料・電子機器の技術商社</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ビジネスモデル</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">技術提案型の商社機能＋自社製品・受託</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">需要ドライバー</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">半導体市況の回復・AI／データセンター投資</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長 宮下 環</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">株式分割</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年9月30日基準日で1株→3株の分割を決議</span>
+      </div>
+    </div>
+    <div class="highlight">半導体・電子部品・電子材料・電子機器を扱う技術商社。単なる流通にとどまらず、技術提案・評価・設計支援を組み合わせた付加価値型の商社機能を強みとする。当第1四半期は半導体・電子部品市況の回復とAI・データセンター関連需要の拡大を捉え、売上高+35.2%・営業利益+167.3%・経常利益+219.1%・純利益+121.8%と大幅な増収増益を達成。EPSは77.67円（前期35.03円）へ急伸した。2026年7月29日開催の取締役会で、2026年9月30日を基準日とする1株→3株の株式分割を決議している。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">545.37<span class="data-sub">億円 +35.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">23.23<span class="data-sub">億円 +167.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">22.95<span class="data-sub">億円 +219.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">14.62<span class="data-sub">億円 +121.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">27.48<span class="data-sub">億円 +78.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">77.67<span class="data-sub">円（前期 35.03円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔌 半導体・電子部品市況の回復による取扱高の拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🤖 AI・データセンター関連需要の取り込み</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 増収に伴う固定費レバレッジで営業利益+167.3%</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 経常利益は+219.1%と全段階で大幅増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🧪 電子材料・化成品など高付加価値領域の寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">✅ Q1純利益は通期予想の22.8%進捗</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント／事業別の状況</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">半導体・電子部品</div>
+          <div class="seg-row"><span>位置付け</span><span>主力</span></div>
+          <div class="seg-row"><span>環境</span><span>市況回復</span></div>
+          <div style="margin-top:6px;font-size:11px;color:var(--mid);line-height:1.5;">各種半導体デバイス・電子部品の販売が中核。市況の回復局面に加え、AI・データセンター向けの旺盛な需要が取扱高を押し上げた。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">電子材料・化成品</div>
+          <div class="seg-row"><span>位置付け</span><span>高付加価値</span></div>
+          <div class="seg-row"><span>特性</span><span>採算良好</span></div>
+          <div style="margin-top:6px;font-size:11px;color:var(--mid);line-height:1.5;">半導体製造工程向けの材料・化成品を供給。技術サポートを伴う提案型ビジネスで、相対的に高い採算性を確保する領域。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">電子機器・システム</div>
+          <div class="seg-row"><span>位置付け</span><span>装置・設備</span></div>
+          <div class="seg-row"><span>需要</span><span>設備投資連動</span></div>
+          <div style="margin-top:6px;font-size:11px;color:var(--mid);line-height:1.5;">製造装置・計測機器・システム関連を取り扱う。顧客の設備投資サイクルに連動し、半導体投資の回復が追い風となる。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・修正なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">2,275.00<span class="data-sub">億円 +25.6%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">96.00<span class="data-sub">億円 +57.9%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">86.00<span class="data-sub">億円 +54.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">64.00<span class="data-sub">億円 +27.7%（EPS113.32円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top:8px;">
+        <div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計 売上高</span>
+            <span class="data-val">1,115.00<span class="data-sub">億円 +33.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計 営業利益</span>
+            <span class="data-val">39.00<span class="data-sub">億円 +66.0%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計 経常利益</span>
+            <span class="data-val">36.00<span class="data-sub">億円 +54.8%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計 純利益</span>
+            <span class="data-val">26.00<span class="data-sub">億円 +29.5%（EPS138.10円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>直近の公表予想からの修正はなし。通期EPS113.32円は<strong>株式分割考慮後</strong>の数値で、分割を考慮しない場合は339.95円。第2四半期累計EPS138.10円は分割基準日（2026年9月30日）前の期間に対応する数値。Q1の純利益14.62億円は通期予想64.00億円に対し22.8%の進捗。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">1,680.44<span class="data-sub">億円 +2.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">707.28<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">691.54<span class="data-sub">億円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務指標</div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">41.2<span class="data-sub">% （前期末 41.6% / △0.4pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">3,673.16<span class="data-sub">円（分割前基準）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">総資産の増減</span>
+          <span class="data-val" style="color:var(--green);">+2.2<span class="data-sub">%（売上拡大に伴う運転資本増）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は1,680.44億円（前期末比+2.2%）と増加。増収に伴う売上債権・棚卸資産など運転資本の積み上がりが主因で、商社型ビジネスの拡大局面に典型的な資産構成の変化。純資産は707.28億円、自己資本は691.54億円で、四半期純利益の計上により積み上がる一方、総資産の伸びが上回ったため自己資本比率は41.6%→41.2%（△0.4pt）と小幅低下した。1株当たり純資産は3,673.16円（2026年9月30日を基準日とする1株→3株の株式分割前の基準）。40%台の自己資本比率は商社としては標準的な水準で、急拡大する取扱高に対する運転資金負担と在庫リスクの管理が引き続き重要となる。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">200.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間100 + 期末100</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">120<span style="font-size:14px;color:var(--mid);">＋</span>45<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間120（分割前）＋期末45（分割後）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">分割考慮前 年間相当</div>
+        <div class="div-cell-val" style="color:var(--green);">255.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">前期200円から+55円の増配相当</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">株式分割</div>
+        <div class="div-cell-val">1→3<span style="font-size:14px;color:var(--mid);">株</span></div>
+        <div class="div-cell-sub">2026年9月30日を基準日</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>💰 株式分割と配当の考え方：</strong>2026年7月29日開催の取締役会において、<strong>2026年9月30日を基準日とする1株につき3株の株式分割</strong>を決議した。分割の基準日が期中（第2四半期末）にあたるため、当期2027年3月期の配当は<strong>中間配当120円が分割前の株式数を基準</strong>、<strong>期末配当45円が分割後の株式数を基準</strong>となり、両者を単純合算することはできない。同一基準に揃えた「分割考慮前」ベースでは中間120円＋期末135円＝<strong>年間255円相当</strong>となり、前期実績の年間200円（中間100円＋期末100円）から+55円の実質増配となる。通期EPS予想113.32円も分割考慮後の数値（分割考慮前では339.95円）であり、配当利回り・配当性向を比較する際は分割基準を揃える必要がある。※本ページでは短信の記載に従い、中間＝分割前基準、期末＝分割後基準として表記し、合算値は「分割考慮前相当」として注記している。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">半導体・電子部品市況の変動<br><small>シリコンサイクルの反転で業績が大きく振れる</small></div>
+      <div class="risk-item high">AI・データセンター需要の持続性<br><small>投資一巡時の反動減リスク</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>輸入取引の多い商社として為替感応度が高い</small></div>
+      <div class="risk-item mid-level">在庫リスク（商社特性）<br><small>取扱高拡大に伴う棚卸資産・評価損リスク</small></div>
+      <div class="risk-item mid-level">仕入先・顧客の集中<br><small>特定サプライヤー・大口顧客への依存度</small></div>
+      <div class="risk-item">株式分割<br><small>1株→3株（2026年9月30日基準日）で流動性向上</small></div>
+      <div class="risk-item">自己資本比率<br><small>41.2%（前期末41.6%）と運転資金負担が増加</small></div>
+      <div class="risk-item">通期は大幅増益計画<br><small>売上+25.6%・営業+57.9%・純利益+27.7%</small></div>
+      <div class="risk-item">地政学・輸出規制<br><small>半導体を巡る各国の輸出管理・通商政策</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      当第1四半期は売上高+35.2%・営業利益+167.3%・経常利益+219.1%・純利益+121.8%と、全段階で大幅な増収増益となった。半導体・電子部品・電子材料を扱う技術商社として、半導体市況の回復とAI・データセンター関連需要をしっかりと捉え、増収に伴う固定費レバレッジが利益を大きく押し上げた。EPSは77.67円（前期35.03円）と2倍超。財務は総資産1,680.44億円（+2.2%）に対し自己資本比率41.2%（前期末41.6%）で、取扱高拡大に伴う運転資本の増加が資本効率と資金負担の両面で意識される局面にある。株主還元では<strong>2026年9月30日を基準日とする1株→3株の株式分割</strong>を決議しており、当期配当は中間120円（分割前基準）＋期末45円（分割後基準）＝分割考慮前で年間255円相当と、前期200円から実質増配となる見込み。通期予想は売上高+25.6%・営業利益+57.9%・当期純利益+27.7%の大幅増益計画を据え置き、Q1純利益は通期予想に対し22.8%の進捗と順調な滑り出し。今後は半導体市況とAI需要の持続性、為替動向、そして商社特有の在庫リスクの管理が業績を左右する。代表取締役社長は宮下環氏。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は伯東株式会社（7433）2027年3月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
