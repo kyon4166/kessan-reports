@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社ミズホメディー 2026年12月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A4A5E;
+    --primary-light: #2C6A82;
+    --primary-dark: #0F2E3A;
+    --accent: #3AA0C0;
+    --accent-light: #62B8D4;
+    --accent-pale: #DCEFF5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,74,94,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Diagnostic'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Non-Consolidated · Q2 (中間期)</div>
+  <h1>株式会社ミズホメディー</h1>
+  <p class="subtitle">2026年12月期　第2四半期（中間期）決算短信（非連結）要約　／　証券コード 4595</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月12日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">35.33<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 11.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">9.96<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 32.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">11.11<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 20.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">中間純利益</div>
+      <div class="kpi-value">8.22<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 19.4%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　楢原 謙次</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">体外診断用医薬品（POCT検査試薬）の開発・製造・販売</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主力製品</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">インフルエンザ・新型コロナ等の感染症検査試薬</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">成長領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">遺伝子検査・分子診断領域の製品育成</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">決算区分</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">非連結（単体）決算・12月期決算</span>
+      </div>
+    </div>
+    <div class="highlight">医療現場で迅速に結果が得られるPOCT（臨床現場即時検査）向け体外診断用医薬品の専業メーカー。インフルエンザ・新型コロナ等の感染症検査試薬を主力に、遺伝子検査・分子診断領域へ展開。当中間期は感染症検査需要の減少により売上高△11.1%・営業利益△32.5%・経常利益△20.5%・中間純利益△19.4%と全項目で減益となったが、営業利益率28.2%と依然高い収益性を維持。自己資本比率88.4%（+4.9pt）・実質無借金の超健全財務。配当は年100円を維持する予想。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第2四半期（中間期）業績と減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val down">35.33<span class="data-sub">億円 △11.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val down">9.96<span class="data-sub">億円 △32.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val down">11.11<span class="data-sub">億円 △20.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間純利益</span>
+          <span class="data-val down">8.22<span class="data-sub">億円 △19.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益率</span>
+          <span class="data-val">28.2<span class="data-sub">% （高収益を維持）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">43.18<span class="data-sub">円（前期 53.60円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🦠 インフルエンザ・新型コロナ等の検査需要が減少</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🧪 主力のPOCT検査試薬の販売数量減で減収</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 固定費負担により営業利益は△32.5%と減益幅拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 営業外収益により経常△20.5%と営業比では減少幅が縮小</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💎 それでも営業利益率28.2%と高収益体質を維持</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">❄️ 感染症シーズン（冬季）偏重の季節性が強い</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">製品領域別動向（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item decline">
+          <div class="seg-name">感染症検査試薬（インフル・コロナ等POCT）</div>
+          <div class="seg-row"><span>位置付け</span><span>主力</span></div>
+          <div class="seg-row"><span>当期動向</span><span>需要減</span></div>
+          <div class="seg-row"><span>特性</span><span>季節性大</span></div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">遺伝子検査・分子診断</div>
+          <div class="seg-row"><span>位置付け</span><span>成長領域</span></div>
+          <div class="seg-row"><span>方向性</span><span>製品育成</span></div>
+          <div class="seg-row"><span>狙い</span><span>季節性緩和</span></div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">その他（受託・研究開発）</div>
+          <div class="seg-row"><span>位置付け</span><span>周辺</span></div>
+          <div class="seg-row"><span>内容</span><span>受託・R&amp;D</span></div>
+          <div class="seg-row"><span>寄与</span><span>限定的</span></div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 補足：</strong>感染症検査試薬が売上の中核で、流行状況に業績が大きく左右される。遺伝子検査・分子診断領域の育成が収益の安定化に向けた課題。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年12月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val up">114.28<span class="data-sub">億円 +1.5%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val down">44.14<span class="data-sub">億円 △5.0%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val down">44.37<span class="data-sub">億円 △6.3%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val down">32.20<span class="data-sub">億円 △6.0%（EPS169.09円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>直近予想からの修正はなし。中間期は大幅減益だが、通期は営業△5.0%・純利益△6.0%と小幅減益の計画。これは感染症検査が冬季に偏重する季節性を反映したもので、中間実績（営業利益9.96億円）に対し通期計画44.14億円は下期への依存度が極めて高い。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">209.86<span class="data-sub">億円 △6.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">185.54<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">185.54<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">88.4<span class="data-sub">% （前期末 83.5% / +4.9pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">収益性・1株当たり指標</div>
+        <div class="data-row">
+          <span class="data-key">営業利益率（中間）</span>
+          <span class="data-val">28.2<span class="data-sub">%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間EPS</span>
+          <span class="data-val">43.18<span class="data-sub">円（前期 53.60円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">通期EPS予想</span>
+          <span class="data-val">169.09<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">年間配当予想</span>
+          <span class="data-val">100.00<span class="data-sub">円（配当性向 約59%）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は配当支払や需要減に伴う運転資本の縮小等で前期末比△6.2%の209.86億円。一方で自己資本は185.54億円を維持し、自己資本比率は83.5%→88.4%（+4.9pt）へ大きく改善。実質無借金の超健全な財務体質で、減益局面でも配当や研究開発投資を支える十分な体力を備える。通期予想EPS169.09円に対する年間配当100円は配当性向約59%と、還元と内部留保のバランスは確保されている。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/12）</div>
+        <div class="div-cell-val">100.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間50 + 期末50</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/12）</div>
+        <div class="div-cell-val" style="color:var(--accent);">100.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間50 + 期末50</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">0.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（据置）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約59<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想169.09円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2026年12月期の年間配当は前期と同額の100円（中間50円＋期末50円）を維持する予想。減益局面でも配当水準を据え置く方針で、通期予想EPS169.09円に対する配当性向は約59%と、自己資本比率88.4%・実質無借金の財務基盤を踏まえれば十分に賄える水準。短信にDOEや配当性向目標など明示的な配当方針の記載はなく、実績ベースでは安定配当の継続姿勢がうかがえる。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">感染症流行の変動（季節性）<br><small>インフル・コロナの流行規模が業績を直接左右</small></div>
+      <div class="risk-item high">中間期の大幅減益<br><small>営業△32.5%・売上△11.1%と落ち込みが大きい</small></div>
+      <div class="risk-item mid-level">検査需要の構造変化<br><small>コロナ後の検査行動・市場規模の縮小</small></div>
+      <div class="risk-item mid-level">薬価・保険償還<br><small>診療報酬改定による価格引き下げ圧力</small></div>
+      <div class="risk-item mid-level">新製品開発・パイプライン<br><small>遺伝子検査等の上市・普及が進むか</small></div>
+      <div class="risk-item">季節性（下期偏重）<br><small>通期計画の大半を下期に依存する収益構造</small></div>
+      <div class="risk-item">高収益性の維持<br><small>営業利益率28.2%を保てるか</small></div>
+      <div class="risk-item">競合<br><small>国内外の検査試薬メーカーとの競争</small></div>
+      <div class="risk-item">設備投資<br><small>生産能力・研究開発設備への投資負担</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高△11.1%・営業利益△32.5%・経常利益△20.5%・中間純利益△19.4%と全項目で減益。インフルエンザ・新型コロナ等の感染症検査需要の減少が響き、EPSも43.18円（前期53.60円）へ低下した。ただし営業利益率28.2%と依然高い収益性を維持しており、財務は自己資本比率88.4%（+4.9pt）・実質無借金の超健全体質。配当は年100円（中間50＋期末50）を維持し、配当性向は約59%にとどまる。通期計画は営業利益△5.0%・当期純利益△6.0%と小幅減益にとどまる見通しだが、これは感染症検査が冬季に偏重する季節性を反映したもので、中間実績（営業利益9.96億円）に対し通期計画44.14億円は下期に大きく依存する構造である点に留意が必要。今後は感染症の流行動向と、遺伝子検査・分子診断など新製品の育成が業績を左右する。代表取締役社長は楢原謙次氏。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社ミズホメディー（4595）2026年12月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
