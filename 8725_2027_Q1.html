@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS&amp;AD インシュアランスグループHD 2027年3月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A3A6E;
+    --primary-light: #24405F;
+    --primary-dark: #0F2347;
+    --accent: #C19A4D;
+    --accent-light: #D9B871;
+    --accent-pale: #F4EDD7;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(20,40,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Insurance'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated · Q1</div>
+  <h1>ＭＳ＆ＡＤインシュアランスグループホールディングス株式会社</h1>
+  <p class="subtitle">2027年3月期　第1四半期決算短信〔IFRS〕（連結）要約　／　証券コード 8725</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月14日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年6月30日</span></div>
+    <div class="meta-item">上場 <span>東証・名証</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">保険収益</div>
+      <div class="kpi-value">1兆6,861<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 14.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">税引前四半期利益</div>
+      <div class="kpi-value">4,409.26<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 33.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社所有者帰属四半期利益</div>
+      <div class="kpi-value">3,286.18<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 33.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">226.84<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">前期 162.99円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">グループ形態</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">保険持株会社（国内損保・国内生保・海外保険・金融サービス）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">国内損害保険</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">三井住友海上火災保険／あいおいニッセイ同和損害保険</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">国内生命保険</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">三井住友海上あいおい生命／三井住友海上プライマリー生命</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">海外保険事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">MSIG（アジア・欧米）／W.R.Berkley への出資等</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS（保険収益・保険サービス費用ベース）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">重要な予定</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2027年4月1日に国内損保2社の合併を予定</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">舩曵 真一郎 社長CEO</span>
+      </div>
+    </div>
+    <div class="highlight">国内損保2大グループの一角を占める保険持株会社。三井住友海上とあいおいニッセイ同和損保の国内損保2社を中核に、国内生保、MSIGを中心とする海外保険事業、金融サービスを展開する。当第1四半期はIFRSベースの保険収益が1兆6,861.87億円（+14.1%）と大きく拡大し、税引前四半期利益4,409.26億円（+33.4%）・親会社所有者帰属四半期利益3,286.18億円（+33.4%）と大幅な増収増益。<strong>とりわけ2027年4月1日に予定される三井住友海上とあいおいニッセイ同和損保の合併により、当社は国内損保の業界再編の渦中にある</strong>点が中期的な最大のイベントとなる。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">保険収益</span>
+          <span class="data-val up">1兆6,861.87<span class="data-sub">億円 +14.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前四半期利益</span>
+          <span class="data-val up">4,409.26<span class="data-sub">億円 +33.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期利益</span>
+          <span class="data-val up">3,297.85<span class="data-sub">億円 +33.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属四半期利益</span>
+          <span class="data-val up">3,286.18<span class="data-sub">億円 +33.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val up">4,138.30<span class="data-sub">億円 +17.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的／希薄化後）</span>
+          <span class="data-val">226.84<span class="data-sub">円 ／ 希薄化後 226.82円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増収増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛡 国内損保（三井住友海上・あいおいニッセイ同和損保）の収入拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 海外保険事業（MSIG・W.R.Berkley への出資等）が牽引</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 保険収益+14.1%と収益基盤が着実に拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 資産運用収益の改善が税引前利益+33.4%に寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 国内生保・金融サービスも底堅く推移</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠️ Q1で通期予想の77.3%進捗（通期は保守的計画）</span>
+        </div>
+      </div>
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item">
+        <div class="seg-name">国内損害保険事業</div>
+        <div class="seg-row"><span>中核会社</span><span>2社</span></div>
+        <div style="font-size:12px;color:var(--mid);margin-top:6px;line-height:1.5;">三井住友海上・あいおいニッセイ同和損保の2社体制。火災・自動車を中心に収入が拡大。2027年4月1日に両社の合併を予定。</div>
+      </div>
+      <div class="seg-item star">
+        <div class="seg-name">海外保険事業</div>
+        <div class="seg-row"><span>位置づけ</span><span>牽引役</span></div>
+        <div style="font-size:12px;color:var(--mid);margin-top:6px;line-height:1.5;">MSIG を通じたアジア・欧米での保険引受に加え、W.R.Berkley への出資等が収益に寄与。グループ利益の成長ドライバー。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">国内生命保険・金融サービス</div>
+        <div class="seg-row"><span>推移</span><span>底堅い</span></div>
+        <div style="font-size:12px;color:var(--mid);margin-top:6px;line-height:1.5;">三井住友海上あいおい生命・プライマリー生命の国内生保に、リスク関連・資産運用等の金融サービスを加えた領域。</div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年3月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社所有者帰属当期利益</span>
+            <span class="data-val down">4,250.00<span class="data-sub">億円 △16.8%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">基本的EPS（予想）</span>
+            <span class="data-val">295.75<span class="data-sub">円</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">Q1進捗率</span>
+            <span class="data-val" style="color:var(--accent);">77.3<span class="data-sub">% （3,286.18億円／4,250億円）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">予想修正</span>
+            <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">なし（直近公表予想から変更なし）</span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 強く留意：</strong>Q1は親会社所有者帰属四半期利益+33.4%の大幅増益である一方、<strong>通期計画は4,250億円・前期比△16.8%の減益計画</strong>と方向が真逆である。Q1時点で既に通期予想の<strong>77.3%</strong>に到達しており、これは下期以降の自然災害の発生想定等を織り込んだ保守的な通期計画によるもの。Q1の伸びをそのまま通期に延長して評価することはできない点に注意が必要。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">30兆1,248<span class="data-sub">億円 +1.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">6兆7,304<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">6兆6,713<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val up">22.1<span class="data-sub">% （前期末 21.7% / +0.4pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">株式・自己株式の状況</div>
+        <div class="data-row">
+          <span class="data-key">自己株式数</span>
+          <span class="data-val">51,193<span class="data-sub">千株（前期末 41,612千株）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己株式の増加</span>
+          <span class="data-val" style="color:var(--accent);">+9,581<span class="data-sub">千株（取得を継続）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期中平均株式数</span>
+          <span class="data-val">1,448<span class="data-sub">百万株（前期 1,511百万株）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">平均株式数の減少</span>
+          <span class="data-val" style="color:var(--green);">△約63<span class="data-sub">百万株（EPS押上げ要因）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>資産合計は30兆1,248億円（前期末比+1.8%）、資本合計6兆7,304億円、親会社所有者帰属持分6兆6,713億円。親会社所有者帰属持分比率は21.7%→<strong>22.1%（+0.4pt）</strong>へ改善した。保険会社は保険契約負債を多く抱える業態のため、比率の水準自体は事業会社と単純比較できない。<strong>自己株式取得を継続</strong>しており、自己株式は41,612千株→51,193千株へ増加、期中平均株式数は1,511百万株→1,448百万株と<strong>約63百万株減少</strong>し、1株当たり利益を押し上げている。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">160.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間77.50 + 期末82.50</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">170.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間85 + 期末85</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+10.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+6.3% 増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">当期予想の内訳（各期）</div>
+        <div class="div-cell-val" style="color:var(--accent);">70+15<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">普通70円 + 特別15円</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>💰 特別配当を含む配当の内訳（重要）：</strong>当社の配当には<strong>特別配当が含まれており</strong>、決算短信にその内訳が明記されている。<br>
+      ・<strong>前期（2026年3月期）実績 年間160円</strong>　… 中間77.50円＝<strong>普通配当60円＋特別配当17.50円</strong>／期末82.50円＝<strong>普通配当65円＋特別配当17.50円</strong>（特別配当は各期17.50円）<br>
+      ・<strong>当期（2027年3月期）予想 年間170円</strong>　… 中間85円・期末85円ともに<strong>普通配当70円＋特別配当15円</strong>（特別配当は各期15円）<br>
+      すなわち年間+10円（+6.3%）の増配は、<strong>普通配当を中間60円→70円・期末65円→70円へ増額</strong>する一方、<strong>特別配当は各期17.50円→15円へ縮小</strong>した結果である。普通配当の水準を着実に引き上げつつ、特別配当も継続する構図であり、特別配当部分（年間30円）は将来的に必ずしも保証されない点には留意が必要。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">自然災害・大規模事故<br><small>台風・地震等の巨大災害による保険金支払の増加</small></div>
+      <div class="risk-item high">通期減益計画との乖離<br><small>通期は△16.8%減益計画・Q1で77.3%進捗の不整合</small></div>
+      <div class="risk-item mid-level">金融市場変動<br><small>金利・株価・為替の変動が運用収益と資本に影響</small></div>
+      <div class="risk-item mid-level">国内損保2社の合併<br><small>2027年4月1日予定・システム統合や人員再編のリスク</small></div>
+      <div class="risk-item mid-level">海外保険事業の収支<br><small>MSIG等の海外引受損益・W.R.Berkley 出資の変動</small></div>
+      <div class="risk-item">政策保有株式の売却<br><small>売却益の計上と縮減方針の進捗が損益を左右</small></div>
+      <div class="risk-item">再保険市況・料率<br><small>再保険コストと元受料率改定の動向</small></div>
+      <div class="risk-item">自己資本比率<br><small>22.1%（+0.4pt）・保険業態特有の負債構成</small></div>
+      <div class="risk-item">特別配当の継続性<br><small>年間30円の特別配当は将来的に保証されない</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      保険収益+14.1%・税引前四半期利益+33.4%・親会社所有者帰属四半期利益+33.4%と大幅な増収増益。国内損保（三井住友海上・あいおいニッセイ同和損保）に加え、MSIG を中心とする海外保険事業と資産運用が牽引し、四半期包括利益も+17.1%と好調。EPSは226.84円（前期162.99円）へ拡大した。財務は親会社所有者帰属持分比率22.1%（+0.4pt）と改善し、自己株式取得も継続（期中平均株式数が約63百万株減少）して1株価値の向上に寄与している。<strong>配当は年間+10円増配の170円予想で、内訳は中間・期末とも「普通配当70円＋特別配当15円」（前期は普通60円/65円＋特別各17.50円）と、普通配当を増額しつつ特別配当を継続する構成</strong>である。<strong>一方で通期計画は親会社所有者帰属当期利益4,250億円・前期比△16.8%の減益計画であり、Q1時点で既に通期予想の77.3%に達している点には強く留意したい。</strong>これは下期の自然災害の発生想定等を織り込んだ保守的な計画によるもので、Q1の高い伸びをそのまま通期に当てはめることはできない。中長期では、2027年4月1日に予定される三井住友海上とあいおいニッセイ同和損保の合併による統合効果の実現と、自然災害・金融市場変動への耐性が焦点となる。舩曵真一郎社長CEOの下、国内損保再編の主役として業界構造の変化を主導する局面にある。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はＭＳ＆ＡＤインシュアランスグループホールディングス株式会社（8725）2027年3月期第1四半期決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
