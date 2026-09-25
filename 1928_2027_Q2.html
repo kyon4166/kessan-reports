@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>積水ハウス株式会社 2027年1月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1E4A32;
+    --primary-light: #2E6446;
+    --primary-dark: #123020;
+    --accent: #C08A3C;
+    --accent-light: #D4A45E;
+    --accent-pale: #F2EAD6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(30,74,50,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Housing'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>積水ハウス株式会社</h1>
+  <p class="subtitle">2027年1月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 1928</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年9月10日</span></div>
+    <div class="meta-item">対象期間 <span>2026年2月1日〜2026年7月31日</span></div>
+    <div class="meta-item">上場 <span>東証・名証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">1兆9,656.44<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 2.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">1,803.70<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 16.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">1,690.81<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 23.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">1,250.53<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 23.1%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">戸建住宅・賃貸住宅管理・仲介／不動産・国際（米国住宅）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">請負型ビジネス</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">戸建住宅（注文住宅の設計・施工）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ストック型ビジネス</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">賃貸住宅管理（シャーメゾン等の管理・運営）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">開発型ビジネス</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">仲介・不動産（積水ハウス不動産）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">国際事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">米国を中心とした住宅事業（当期は市場減速で大幅減収）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">仲井 嘉浩 代表取締役兼CEO 社長執行役員</span>
+      </div>
+    </div>
+    <div class="highlight">国内最大手の住宅メーカー。請負型（戸建住宅）・ストック型（賃貸住宅管理）・開発型（仲介・不動産）の国内3事業と、米国を中心とした国際事業で構成。当中間期は<strong>売上高1兆9,656.44億円（△2.5%）の減収ながら、営業利益+16.0%・経常利益+23.8%・中間純利益+23.1%の大幅増益</strong>を確保。減収の主因は米国住宅市場の減速を受けた国際事業で、国内3事業は堅調に推移し採算も改善した。財務は総資産5兆1,153億円・自己資本比率44.0%（+1.3pt）と安定。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と増減要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間期）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val" style="color:var(--red);">1兆9,656.44<span class="data-sub">億円 △2.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val" style="color:var(--green);">1,803.70<span class="data-sub">億円 +16.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val" style="color:var(--green);">1,690.81<span class="data-sub">億円 +23.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val" style="color:var(--green);">1,250.53<span class="data-sub">億円 +23.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val" style="color:var(--green);">1,583.03<span class="data-sub">億円（前期△193.56億円から黒字転換）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">192.90<span class="data-sub">円（前期156.76円／潜在株式調整後192.87円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌎 <strong>減収の主因は国際事業</strong>：6,143.81億円→4,863.53億円（△20.8%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏠 米国住宅市場の減速が国際事業の売上を大きく押し下げ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🇯🇵 国内3事業は堅調に推移し採算も改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 全社では営業利益+16.0%・経常+23.8%の大幅増益を確保</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💱 包括利益は為替等の影響で前期のマイナスから黒字転換</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 増減要因：</strong>減収の主因は<strong>国際事業</strong>で、売上が前年同期6,143.81億円→当期4,863.53億円と<strong>△20.8%の大幅減収</strong>（米国住宅市場の減速）。一方、<strong>国内3事業は堅調で採算も改善</strong>し、全社では営業利益+16.0%・経常利益+23.8%の大幅増益を確保した。中間包括利益は為替等の影響で前期△193.56億円から1,583.03億円へ黒字転換。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">セグメント別業績（中間期）</div>
+      <div class="seg-grid">
+        <div class="seg-item decline">
+          <div class="seg-name">請負型ビジネス（戸建住宅）</div>
+          <div class="seg-row"><span>売上高</span><span>2,441.68億円</span></div>
+          <div class="seg-row"><span>前期比</span><span>△1.1%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>239.90億円</span></div>
+          <div class="seg-row"><span>前期比</span><span>△5.2%</span></div>
+          <div class="seg-row" style="display:block;margin-top:6px;color:var(--charcoal);line-height:1.5;">住宅ローン金利や建設コストの上昇、中東情勢の緊迫化などが逆風となり減収減益。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">ストック型ビジネス（賃貸住宅管理）</div>
+          <div class="seg-row"><span>売上高</span><span>3,680.16億円</span></div>
+          <div class="seg-row"><span>前期比</span><span>+2.9%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>417.45億円</span></div>
+          <div class="seg-row"><span>前期比</span><span>+12.7%</span></div>
+          <div class="seg-row" style="display:block;margin-top:6px;color:var(--charcoal);line-height:1.5;">S・Aエリアを中心とした好立地の賃貸住宅が寄与し二桁増益。安定収益の柱。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">開発型ビジネス（仲介・不動産）</div>
+          <div class="seg-row"><span>売上高</span><span>2,114.90億円</span></div>
+          <div class="seg-row"><span>前期比</span><span>+5.7%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>167.71億円</span></div>
+          <div class="seg-row"><span>前期比</span><span>+17.2%</span></div>
+          <div class="seg-row" style="display:block;margin-top:6px;color:var(--charcoal);line-height:1.5;">「住まい」に強い不動産会社を目指す積水ハウス不動産が牽引し増収・二桁増益。</div>
+        </div>
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>※ 国際事業の注記：</strong>上記3セグメントに加え、<strong>国際事業は売上4,863.53億円（前年同期6,143.81億円、△20.8%）と大幅減収</strong>であり、全社減収（△2.5%）の主因となった。米国住宅市場の減速が背景。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年1月期・修正あり）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">4兆2,600.00<span class="data-sub">億円 +1.5%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">3,500.00<span class="data-sub">億円 +2.5%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val" style="color:var(--red);">3,160.00<span class="data-sub">億円 △3.6%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val" style="color:var(--red);">2,240.00<span class="data-sub">億円 △3.5%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS（予想）</span>
+            <span class="data-val">345.55<span class="data-sub">円</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">中間進捗（営業利益）</span>
+            <span class="data-val">51.5<span class="data-sub">%</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>業績予想の修正は<strong>有</strong>。中間期で営業利益は通期予想の51.5%進捗。<strong>中間期は+16.0%の増益だが、通期は経常△3.6%・純利益△3.5%の減益計画</strong>である点に留意（下期の国際事業や採算について慎重な見通し）。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">5兆1,153.20<span class="data-sub">億円 +2.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">2兆3,029.92<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">2兆2,494.87<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val" style="color:var(--green);">44.0<span class="data-sub">% （前期末 42.7% / +1.3pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務のポイント</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 自己資本比率は42.7%→44.0%へ+1.3pt改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 総資産は5兆1,153.20億円（前期末比+2.2%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 純資産2兆3,029.92億円・自己資本2兆2,494.87億円</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔄 中間純利益1,250.53億円の計上が自己資本を押し上げ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💱 包括利益の黒字転換（為替等）も自己資本に寄与</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は5兆1,153.20億円（前期末比+2.2%）、純資産2兆3,029.92億円（自己資本2兆2,494.87億円）。<strong>自己資本比率は42.7%→44.0%（+1.3pt）へ改善</strong>し、中間純利益1,250.53億円の計上と中間包括利益1,583.03億円（前期△193.56億円から黒字転換）が自己資本を押し上げた。総資産5兆円規模の資産を抱える住宅・不動産事業として、自己資本比率44.0%は安定した水準。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/1）</div>
+        <div class="div-cell-val">144.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間72 + 期末72</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/1）</div>
+        <div class="div-cell-val" style="color:var(--accent);">145.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間72 + 期末73</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+1.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約42<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">予想EPS345.55円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年1月期の年間配当予想は145円（中間72円＋期末73円）で、前期144円（中間72円＋期末72円）から<strong>+1円の増配</strong>。配当性向は予想EPS345.55円ベースで約42%。通期は経常△3.6%・純利益△3.5%の減益計画のなかでも増配を維持する姿勢を示している。<strong>決算短信に明示的なDOE・配当性向目標の記載はなし。</strong>
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">国際事業の大幅減収<br><small>米国住宅市場の減速。6,143.81億円→4,863.53億円（△20.8%）</small></div>
+      <div class="risk-item high">通期は経常・純利益の減益計画<br><small>経常△3.6%・純利益△3.5%（中間+23.1%増益との対比に留意）</small></div>
+      <div class="risk-item high">住宅ローン金利の上昇<br><small>戸建住宅の受注・販売環境に直接的な逆風</small></div>
+      <div class="risk-item mid-level">建設コスト・資材価格の上昇<br><small>請負型（戸建住宅）の採算を圧迫、営業△5.2%</small></div>
+      <div class="risk-item mid-level">国内住宅需要・着工数<br><small>人口動態・住宅市場の縮小トレンド</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>国際事業の業績・包括利益に大きく影響</small></div>
+      <div class="risk-item">賃貸住宅管理（ストック型）の安定収益<br><small>売上+2.9%・営業利益+12.7%、S・Aエリアの好立地が寄与</small></div>
+      <div class="risk-item">開発型・仲介の伸長<br><small>売上+5.7%・営業利益+17.2%、積水ハウス不動産が牽引</small></div>
+      <div class="risk-item">自己資本比率の改善<br><small>42.7%→44.0%（+1.3pt）と安定した財務基盤</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高1兆9,656.44億円（△2.5%）の減収ながら、営業利益+16.0%・経常利益+23.8%・中間純利益+23.1%の大幅増益を確保。<strong>減収の主因は国際事業で、売上が6,143.81億円→4,863.53億円（△20.8%）と米国住宅市場の減速を受けて大幅減収</strong>。一方、国内は好調で、ストック型ビジネス（賃貸住宅管理）が売上+2.9%・営業利益+12.7%、開発型ビジネス（仲介・不動産）が売上+5.7%・営業利益+17.2%と伸長し、請負型（戸建住宅）の減益（営業△5.2%、住宅ローン金利・建設コスト上昇が逆風）を補った。中間包括利益は1,583.03億円（前期△193.56億円）と黒字転換。財務は総資産5兆1,153億円・自己資本比率44.0%（+1.3pt）と安定。配当は+1円増配の145円予想（配当性向約42%）で、<strong>明示的なDOE/配当性向目標の記載はなし</strong>。<strong>通期予想は修正を行っており、売上+1.5%・営業+2.5%に対し経常△3.6%・純利益△3.5%の減益計画</strong>（中間の+23.1%増益との対比に留意）。国際事業（米国住宅）の立て直しと国内ストック型の安定収益が中長期の鍵。仲井嘉浩代表取締役兼CEO社長執行役員。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は積水ハウス株式会社（1928）2027年1月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
