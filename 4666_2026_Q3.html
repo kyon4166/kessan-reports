@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>パーク24株式会社 2026年10月期 第3四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2A2A2A;
+    --primary-light: #4A4A4A;
+    --primary-dark: #1A1A1A;
+    --accent: #E8B400;
+    --accent-light: #F2C93C;
+    --accent-pale: #FBF0CE;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(42,42,42,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Parking'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q3</div>
+  <h1>パーク２４株式会社</h1>
+  <p class="subtitle">2026年10月期　第3四半期決算短信（連結）要約　／　証券コード 4666</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年8月31日</span></div>
+    <div class="meta-item">対象期間 <span>2025年11月1日〜2026年7月31日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">3,040.49<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 2.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">289.46<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 16.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">267.26<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 20.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">363.54<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 265.1%（一過性税効果）</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">駐車場事業（国内・海外）／モビリティ事業（タイムズカー）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ブランド</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">タイムズパーキング／タイムズカー／タイムズカーシェア</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ビジョン</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">モビリティサービスプラットフォーマーへの進化</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">戦略</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">人（会員）・クルマ・街・駐車場「4つのネットワーク」の拡大・進化・融合</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">西川 光一 社長CEO</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">当期の構造変化</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">英国事業の再編・シンガポール事業の売却（海外4社を連結除外）</span>
+      </div>
+    </div>
+    <div class="highlight">「タイムズ」ブランドで国内最大の駐車場ネットワークとカーシェアリングを展開。中期経営計画2年目として、ビジョン「モビリティサービスプラットフォーマーへの進化」を掲げ、人（会員）・クルマ・街・駐車場の「4つのネットワークの拡大・進化・融合」を推進。当第3四半期累計は売上高+2.7%・営業利益+16.2%・経常利益+20.0%と本業が堅調に伸長。一方で第2四半期に英国事業の再編およびシンガポール事業の売却を実施し、海外駐車場事業のポートフォリオを整理した。<strong>親会社株主帰属四半期純利益は+265.1%と急増しているが、これは一過性の税効果によるものであり本業の伸びではない</strong>点に強く留意が必要。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第3四半期累計業績と増減要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（累計）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">3,040.49<span class="data-sub">億円 +2.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">289.46<span class="data-sub">億円 +16.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">267.26<span class="data-sub">億円 +20.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前四半期純利益</span>
+          <span class="data-val" style="color:var(--red);">150.10<span class="data-sub">億円 △20.2%（前期188.04億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">363.54<span class="data-sub">億円 +265.1%（一過性）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">446.88<span class="data-sub">億円 +213.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">212.97<span class="data-sub">円（前期58.35円／潜在株式調整後196.42円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🅿 駐車場事業国内のサービス稼働が想定を上回る</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 駐車場事業海外のサービス稼働も想定を上回る</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚗 <strong>モビリティ事業のサービス稼働は想定を下回る</strong></span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏗 中期経営計画2年目、4つのネットワークの融合を推進</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💱 英国事業再編・シンガポール事業売却で海外4社を連結除外</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🧾 法人税等調整額（益）318.74億円の計上で純利益が急増</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 最重要注記 － 純利益+265.1%は一過性の税効果によるもの：</strong>当第3四半期累計の親会社株主帰属四半期純利益363.54億円（+265.1%）の急増は本業の伸びによるものではない。第2四半期に実施した<strong>英国事業の再編およびシンガポール事業の売却</strong>に伴い、<strong>特別損失126.54億円</strong>（関係会社整理損 91.45億円＋関係会社株式売却損 33.94億円）を計上した一方、英国事業の再編の影響などにより<strong>法人税等調整額（益）318.74億円</strong>が計上され、法人税等合計が△213.43億円（益）となった結果、純利益が大きく膨らんだ。この結果、<strong>税引前四半期純利益は150.10億円で前期188.04億円から△20.2%の減益</strong>である。したがって<strong>本業の実力は営業利益+16.2%・経常利益+20.0%で評価すべき</strong>であり、純利益+265.1%は一過性である。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">連結範囲の変動（海外4社を連結除外）</div>
+      <div class="data-row">
+        <span class="data-key">連結除外①</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">PARK24 INTERNATIONAL LIMITED</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結除外②</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">MEIF II CP Holdings 2 Limited</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結除外③</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">NATIONAL CAR PARKS LIMITED</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結除外④</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">TIMES24 SINGAPORE PTE. LTD.</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">趣旨</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">英国NCP等の海外駐車場事業を整理（事業ポートフォリオの見直し）</span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">セグメント別業績（第3四半期累計）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">駐車場事業 国内</div>
+          <div class="seg-row"><span>売上高</span><span>1,607.05億円</span></div>
+          <div class="seg-row"><span>前期比</span><span>+9.1%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>284.96億円</span></div>
+          <div class="seg-row"><span>前期比</span><span>+3.4%</span></div>
+          <div class="seg-row" style="display:block;margin-top:6px;color:var(--charcoal);line-height:1.5;">タイムズパーキング20,400件（前期末比+3.7%）・749,771台（+7.5%）。総駐車場運営27,668件・917,152台。当期累計1,291件を開発。新設は原則キャッシュレス決済専用、自社開発精算機タイムズタワーと車番認証カメラで次世代駐車場化を加速。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">モビリティ事業</div>
+          <div class="seg-row"><span>売上高</span><span>1,033.38億円</span></div>
+          <div class="seg-row"><span>前期比</span><span>+12.3%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>103.75億円</span></div>
+          <div class="seg-row"><span>前期比</span><span>+14.3%</span></div>
+          <div class="seg-row" style="display:block;margin-top:6px;color:var(--charcoal);line-height:1.5;">車両86,995台（+7.8%）、うちタイムズカー専用車69,733台（+9.2%）、貸出拠点30,499箇所（+17.0%）、会員4,057千人（+12.2%）。※ただしサービス稼働は想定を下回り、車両1台当たり利益を重視した適切なペースでの拡大に方針転換。</div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">駐車場事業 海外</div>
+          <div class="seg-row"><span>サービス稼働</span><span>想定超</span></div>
+          <div class="seg-row"><span>事業再編</span><span>英国・SG</span></div>
+          <div class="seg-row"><span>連結除外</span><span>4社</span></div>
+          <div class="seg-row" style="display:block;margin-top:6px;color:var(--charcoal);line-height:1.5;">英国事業の再編およびシンガポール事業の売却を実施し、NCP等4社を連結除外。サービス稼働自体は想定を上回ったが、事業ポートフォリオの整理局面にあり、特別損失126.54億円と法人税等調整額（益）318.74億円の主因となった。</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年10月期・修正なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">4,110.00<span class="data-sub">億円 +1.2%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">425.00<span class="data-sub">億円 +13.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">395.00<span class="data-sub">億円 +15.6%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">440.00<span class="data-sub">億円 +176.4%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS（予想）</span>
+            <span class="data-val">257.76<span class="data-sub">円</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">Q3累計進捗</span>
+            <span class="data-val">68.1<span class="data-sub">%（営業利益）／純利益82.6%</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>通期業績予想の修正はなし。Q3累計は営業利益が通期予想の68.1%、純利益が82.6%の進捗。<strong>通期の親会社株主帰属当期純利益+176.4%も英国事業再編に伴う一過性の税効果を含む</strong>点に留意が必要で、本業の伸びは営業利益+13.1%・経常利益+15.6%の計画で評価すべき。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">3,550.14<span class="data-sub">億円 +0.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">1,178.26<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">1,177.78<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val" style="color:var(--green);">33.2<span class="data-sub">% （前期末 27.7% / +5.5pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務のポイント</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 自己資本比率は27.7%→33.2%へ+5.5pt改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 改善の主因は純利益の大幅計上（一過性の税効果を含む）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 総資産は3,550.14億円でほぼ横ばい（+0.2%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 海外4社の連結除外により資産構成がスリム化</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔧 駐車場設備・車両への継続的な投資負担は残存</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は3,550.14億円（前期末比+0.2%）でほぼ横ばい、純資産1,178.26億円（自己資本1,177.78億円）。<strong>自己資本比率は27.7%→33.2%（+5.5pt）と大きく改善したが、これは純利益の大幅計上（一過性の税効果を含む）によるもの</strong>であり、本業のキャッシュ創出による積み上げとは性質が異なる点に留意。水準としては依然33.2%であり、駐車場設備・車両への投資が継続する資本集約型ビジネスとしては引き続き財務規律の維持が求められる。英国事業再編・シンガポール事業売却による海外4社の連結除外は、資産構成のスリム化と海外リスクの縮小につながる。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/10）</div>
+        <div class="div-cell-val">30.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間0 + 期末30</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/10）</div>
+        <div class="div-cell-val" style="color:var(--accent);">65.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間0 + 期末65</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+35.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+116.7% 大幅増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約25<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">予想EPS257.76円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2026年10月期の年間配当予想は65円（中間0円＋期末65円）で、前期30円（中間0円＋期末30円）から<strong>+35円・+116.7%の大幅増配</strong>。配当性向は予想EPS257.76円ベースで約25%と水準自体は抑制的。ただし予想EPSには英国事業再編に伴う一過性の税効果が含まれており、増配の持続性は本業（営業・経常）の利益成長に依存する点に留意。<strong>決算短信に明示的なDOE・配当性向目標の記載はなし。</strong>
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">純利益の一過性税効果依存<br><small>税引前は150.10億円・△20.2%の減益。純利益+265.1%は本業の成果ではない</small></div>
+      <div class="risk-item high">モビリティ事業の稼働が想定下回り<br><small>車両1台当たり利益重視のペース調整へ方針転換</small></div>
+      <div class="risk-item high">海外事業再編の実行リスク<br><small>英国NCP等の整理・シンガポール事業売却に伴う追加コスト</small></div>
+      <div class="risk-item mid-level">駐車場稼働率・都市部の人流<br><small>需要変動が国内駐車場収益に直結</small></div>
+      <div class="risk-item mid-level">車両調達コスト・中古車価格<br><small>モビリティ事業の原価・売却損益に影響</small></div>
+      <div class="risk-item">自己資本比率の水準<br><small>33.2%（+5.5pt改善も資本集約型として要注視）</small></div>
+      <div class="risk-item">キャッシュレス化・次世代駐車場投資<br><small>タイムズタワー・車番認証カメラ導入の投資負担</small></div>
+      <div class="risk-item">大幅増配の持続性<br><small>30→65円（+116.7%）、配当性向約25%の継続性</small></div>
+      <div class="risk-item">カーシェア競合<br><small>他社カーシェア・レンタカー・ライドシェアとの競争</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      第3四半期累計は売上高+2.7%・営業利益+16.2%・経常利益+20.0%と本業が堅調に伸長。駐車場事業国内は売上+9.1%・タイムズパーキング749,771台（+7.5%）と拡大し、モビリティ事業も売上+12.3%・会員4,057千人（+12.2%）と伸びたが、モビリティのサービス稼働は想定を下回った。<strong>親会社株主帰属四半期純利益は363.54億円（+265.1%）と急増したが、これは本業の成果ではなく、第2四半期の英国事業再編・シンガポール事業売却に伴う特別損失126.54億円（関係会社整理損91.45億円＋関係会社株式売却損33.94億円）を計上した一方で、英国事業再編の影響などにより法人税等調整額（益）318.74億円が計上された一過性の税効果によるもの。税引前四半期純利益は150.10億円で前期比△20.2%の減益</strong>であり、実力は営業・経常の伸び（+16.2%／+20.0%）で評価すべき点に強く留意。財務は自己資本比率33.2%（+5.5pt）へ改善。配当は30→65円へ+35円の大幅増配（配当性向約25%）。<strong>明示的なDOE/配当性向目標の記載はなし。</strong>通期予想は修正なしで売上+1.2%・営業+13.1%・経常+15.6%・純利益+176.4%（純利益は税効果を含む）。「モビリティサービスプラットフォーマーへの進化」を掲げる中期経営計画2年目として、海外ポートフォリオの整理とモビリティ事業の収益性改善が中長期の焦点。西川光一社長CEO。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はパーク24株式会社（4666）2026年10月期第3四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
