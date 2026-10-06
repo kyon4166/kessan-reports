@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAKARA &amp; COMPANY 2027年5月期 第1四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1E2A4A;
+    --primary-light: #24405F;
+    --primary-dark: #10182E;
+    --accent: #8558B8;
+    --accent-light: #A47ECB;
+    --accent-pale: #ECE3F5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(20,40,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Disclosure'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q1</div>
+  <h1>株式会社TAKARA &amp; COMPANY</h1>
+  <p class="subtitle">2027年5月期　第1四半期決算短信（連結）要約　／　証券コード 7921</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年9月29日</span></div>
+    <div class="meta-item">対象期間 <span>2026年6月1日〜2026年8月31日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">95.12<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 4.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">21.25<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 24.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">22.19<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 24.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">14.46<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 21.1%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ディスクロージャー関連事業／通訳・翻訳事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ディスクロージャー</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">有価証券報告書・株主総会招集通知等の開示書類作成支援、IR支援</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主力システム</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">統合型ビジネスレポートシステム「WizLabo」</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">通訳・翻訳</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">国際会議・大型イベント通訳、AI翻訳「SIMULwiz」「AI通訳」</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長 白井 恒太</span>
+      </div>
+    </div>
+    <div class="highlight">上場企業の開示書類（有価証券報告書・株主総会招集通知等）の作成支援とIR支援を主力とし、通訳・翻訳事業を併営。統合型ビジネスレポートシステム「WizLabo」、「ネットで招集」「WizLabo SR.QA」、株主総会動画配信（ライブ・オンデマンド）等で株主総会プロセスのデジタル化に対応し、各種製品・サービスにAIを活用した先進的テクノロジーを組み込んでいる。海外投資家向け英文開示の需要増やサステナビリティ情報の開示充実（統合報告書作成支援・環境関連コンサルティング）も取り込み、社内ではRPA等により自動化・効率化を推進。当第1四半期は売上高+4.7%に対し営業利益+24.6%と増収率を大きく上回る増益となり、営業利益率は22.3%の高水準。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第1四半期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">95.12<span class="data-sub">億円 +4.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">21.25<span class="data-sub">億円 +24.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">22.19<span class="data-sub">億円 +24.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">14.46<span class="data-sub">億円 +21.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">16.94<span class="data-sub">億円 +27.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益率</span>
+          <span class="data-val">22.3<span class="data-sub">% （高収益）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">112.05<span class="data-sub">円（前期 92.33円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📄 開示決算アウトソーシングおよびコンプライアンス関連支援の売上増加が牽引</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💻 統合型ビジネスレポートシステム「WizLabo」の導入顧客数増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🗳 「ネットで招集」「WizLabo SR.QA」・株主総会動画配信（ライブ／オンデマンド）でデジタル化対応</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌐 海外投資家向け英文開示の需要増、サステナビリティ情報開示の充実（統合報告書・環境コンサル）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🤖 各種製品・サービスへのAI活用、社内はRPA等で自動化・効率化</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 国内株式市場は生成AI・半導体関連株への期待、積極的な事業構造改革・株主還元姿勢を背景に高水準で推移（6月に日経平均が史上初の7万円台）</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 季節性の注記：</strong>ディスクロージャー関連事業の売上は、顧客の決算期が3月に集中することに伴う季節的変動があり、<strong>第1四半期および第4四半期の売上が他の四半期に比べて多くなる傾向</strong>がある。四半期ごとの単純な比較・年換算には留意が必要。
+    </div>
+    <div class="highlight neutral">
+      <strong>※ 会計の注記：</strong>2026年5月期末において企業結合に係る暫定的な会計処理の確定を行っており、前年同期（2026年5月期第1四半期）の各数値は、その確定内容を反映して組替え済み。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">セグメント別業績</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">ディスクロージャー関連事業</div>
+          <div class="seg-row"><span>売上高</span><span>75.17億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span>+9.4%</span></div>
+          <div class="seg-row"><span>セグメント利益</span><span>20.28億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span>+35.5%</span></div>
+          <div style="margin-top:6px;font-size:11px;color:var(--mid);">開示決算アウトソーシング・コンプライアンス関連支援が増加し大幅増益</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">製品区分別の内訳（ディスクロージャー関連）</div>
+          <div class="seg-row"><span>金融商品取引法関連</span><span>35.10億円</span></div>
+          <div class="seg-row"><span>会社法関連</span><span>20.77億円</span></div>
+          <div class="seg-row"><span>IR関連</span><span>15.06億円</span></div>
+          <div class="seg-row"><span>その他製品</span><span>4.21億円</span></div>
+          <div style="margin-top:6px;font-size:11px;color:var(--mid);">金融商品取引法関連+21.6%（WizLabo導入顧客増）／会社法関連+9.6%（株主総会招集通知）／IR関連△4.8%（事業報告書等の減少）／その他△16.8%（適時開示情報の書面送付等の減少）</div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">通訳・翻訳事業</div>
+          <div class="seg-row"><span>売上高</span><span>19.95億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span>△9.8%</span></div>
+          <div style="margin-top:6px;font-size:11px;color:var(--mid);">通訳は国際会議・大型イベントの需要獲得とオンライン／ハイブリッド会議の定着で金融・医薬・官庁等の主要業種が前年超、AI通訳サービスの受注も伸長。翻訳はAI翻訳プラットフォーム「SIMULwiz」や「AI通訳」の活用・導入提案に注力</div>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年5月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">342.00<span class="data-sub">億円 +9.8%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">49.00<span class="data-sub">億円 +10.9%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">35.00<span class="data-sub">億円 +3.5%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS（予想）</span>
+            <span class="data-val">271.12<span class="data-sub">円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>通期業績予想の修正はなし。<strong>経常利益の通期予想は開示されていない。</strong>Q1時点で営業利益は通期予想の43.4%、親会社株主帰属純利益は41.3%の進捗だが、これはディスクロージャー関連事業のQ1偏重の季節性によるもので、単純な年換算は適当でない。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">416.97<span class="data-sub">億円 △2.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">337.22<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">333.25<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">79.9<span class="data-sub">% （前期末 76.2% / +3.7pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務の特徴</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 自己資本比率79.9%と極めて健全な財務体質</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 総資産は前期末比△2.0%の416.97億円</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 四半期純利益の積み上げにより自己資本比率は+3.7pt改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💪 高い自己資本を背景にWizLabo等のシステム投資余力を確保</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は前期末比△2.0%の416.97億円、純資産は337.22億円（自己資本333.25億円）。自己資本比率は76.2%→79.9%と+3.7pt改善し、極めて健全な財務体質を維持。高水準の自己資本は、WizLaboをはじめとするシステム投資や高い配当水準の原資としての余力を支えている。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/5）</div>
+        <div class="div-cell-val">120.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間60 + 期末60</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/5）</div>
+        <div class="div-cell-val" style="color:var(--accent);">180.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間90 + 期末90</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+60.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">大幅増配（+50.0%）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約66<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">通期予想EPS271.12円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年5月期の年間配当予想は<strong>180円（中間90円＋期末90円）</strong>で、前期120円（中間60円＋期末60円）から<strong>+60円・+50.0%の大幅増配</strong>。通期予想EPS271.12円ベースの配当性向は<strong>約66%</strong>と高水準で、株主還元姿勢の強さを示す一方、利益の変動に対する配当維持余力という観点では留意が必要な水準でもある。なお本決算短信には<strong>明示的なDOE／配当性向目標の記載はなし</strong>。自己資本比率79.9%の厚い自己資本が当面の配当原資を支える構図。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">顧客企業の決算期集中による季節変動<br><small>3月決算集中でQ1・Q4に売上が偏重、四半期比較に留意</small></div>
+      <div class="risk-item high">高い配当性向の持続性<br><small>予想EPSベースで約66%、利益変動時の配当維持余力</small></div>
+      <div class="risk-item mid-level">通訳・翻訳事業の減収<br><small>売上19.95億円（△9.8%）と前年同期から減少</small></div>
+      <div class="risk-item mid-level">AI技術の進展による競争環境変化<br><small>翻訳・開示業務の自動化が価格・付加価値構造に影響</small></div>
+      <div class="risk-item mid-level">上場企業数・開示制度の変更<br><small>制度改正や上場社数の増減が需要を左右</small></div>
+      <div class="risk-item">IR関連製品の減少<br><small>事業報告書等の減少によりIR関連15.06億円（△4.8%）</small></div>
+      <div class="risk-item">WizLabo等システム投資<br><small>システム開発・AI組込みに伴う継続的な投資負担</small></div>
+      <div class="risk-item">人材の確保<br><small>開示専門人材・通訳者の採用と育成</small></div>
+      <div class="risk-item">高い財務健全性<br><small>自己資本比率79.9%（+3.7pt）と盤石</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      第1四半期は売上高+4.7%に対し営業利益+24.6%・経常利益+24.5%・純利益+21.1%と、増収率を大きく上回る増益となった。開示決算アウトソーシングおよびコンプライアンス関連支援が伸び、主力のディスクロージャー関連事業は売上75.17億円（+9.4%）・セグメント利益20.28億円（+35.5%）と大幅増益。製品別では金融商品取引法関連製品が35.10億円（+21.6%）と好調な一方、IR関連製品は15.06億円（△4.8%）、通訳・翻訳事業は19.95億円（△9.8%）と減収となった。WizLaboや「ネットで招集」等による株主総会プロセスのデジタル化、SIMULwiz・AI通訳などAI活用を推進し、英文開示・サステナビリティ情報開示の需要も取り込んでいる。<strong>ディスクロージャー関連事業は顧客の決算期が3月に集中するため第1四半期・第4四半期に売上が偏る季節性があり、Q1の営業利益進捗43.4%はこの構造を反映している点に留意が必要</strong>。財務は自己資本比率79.9%（+3.7pt）と極めて健全。<strong>配当は120円→180円へ+60円（+50.0%）の大幅増配予想で、配当性向は約66%と高水準（明示的なDOE／配当性向目標の記載はなし）</strong>。通期は売上高+9.8%・営業利益+10.9%の増収増益計画を据え置いた。開示制度の変更やAI技術の進展への対応が中長期の焦点となる。代表取締役社長は白井恒太氏。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社TAKARA &amp; COMPANY（7921）2027年5月期第1四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
