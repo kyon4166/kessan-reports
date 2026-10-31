@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社アイチコーポレーション 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #33383D;
+    --primary-light: #4C535A;
+    --primary-dark: #1F2326;
+    --accent: #E8823A;
+    --accent-light: #F0A066;
+    --accent-pale: #FBEADC;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(51,56,61,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Aerial'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>株式会社アイチコーポレーション</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 6345</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年10月29日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム・名証プレミア</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">219.54<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 10.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">7.84<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 65.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">13.46<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 50.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">18.10<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 11.7%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">高所作業車を主力とする特殊車両の製造・販売</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要需要先</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">電力・通信・建設向けの設備投資</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ストック型事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">レンタル事業（稼働率に応じた収益）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">その他</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">海外（輸出）・部品・補修サービス</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">決算区分</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">連結（2027年3月期 第2四半期＝中間期）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">中澤俊一 社長</span>
+      </div>
+    </div>
+    <div class="highlight">高所作業車を主力とする特殊車両メーカーで、レンタル事業も展開。電力・通信・建設向けの設備投資が需要の柱。当中間期は売上高219.54億円（△10.4%）・営業利益7.84億円（<strong>△65.7%</strong>）・経常利益13.46億円（△50.2%）の大幅減収減益。<strong>親会社株主帰属中間純利益は18.10億円（△11.7%）と減少幅が小さく、純利益が経常利益を上回っているが、これは投資有価証券売却益12.20億円を含む特別利益12.23億円による一過性要因であり、本業の実力は△65.7%の大幅減益である点に強く留意が必要。</strong>財務は自己資本比率87.5%と極めて高く、実質無借金の非常に厚い基盤。</div>
+  </section>
+
+  <!-- 02 業績ハイライト -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第2四半期（中間期）業績と減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">219.54<span class="data-sub">億円 <span class="down">△10.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">7.84<span class="data-sub">億円 <span class="down">△65.7%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">13.46<span class="data-sub">億円 <span class="down">△50.2%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">18.10<span class="data-sub">億円 <span class="down">△11.7%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val">13.19<span class="data-sub">億円 <span class="down">△53.3%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（中間）</span>
+          <span class="data-val">28.04<span class="data-sub">円（前期 30.40円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益要因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚚 高所作業車を主力とする特殊車両メーカー（レンタルも展開）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚡ 電力・通信・建設向け設備投資の端境期</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📅 受注・納車の時期要因で売上高は△10.4%の減収</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏗 固定費負担から営業利益は△65.7%の大幅減益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 純利益の底堅さは特別利益（有価証券売却益）による一過性</span>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">★ 純利益が経常利益を上回った理由（最重要注記）</div>
+      <div class="data-row">
+        <span class="data-key">経常利益</span>
+        <span class="data-val">13.46<span class="data-sub">億円（△50.2%）</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">＋ 特別利益</span>
+        <span class="data-val" style="color:var(--green);">+12.23<span class="data-sub">億円（うち投資有価証券売却益 12.20億円／固定資産売却益を含む）</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">－ 特別損失</span>
+        <span class="data-val" style="color:var(--red);">△0.19<span class="data-sub">億円</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">＝ 税金等調整前中間純利益</span>
+        <span class="data-val">25.68<span class="data-sub">億円（前期 29.14億円）</span></span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">＝ 親会社株主帰属中間純利益</span>
+        <span class="data-val">18.10<span class="data-sub">億円（△11.7%）</span></span>
+      </div>
+      <div class="highlight">
+        <strong>★ 最重要の注記：</strong>営業利益は△65.7%の大幅減益であるにもかかわらず、中間純利益の減少は△11.7%にとどまり、<strong>純利益18.10億円が経常利益13.46億円を上回っている</strong>。これは<strong>投資有価証券売却益12.20億円を含む特別利益12.23億円</strong>（固定資産売却益を含む／特別損失は0.19億円）を計上したためである。損益の流れは「経常利益13.46億円 → 特別利益12.23億円 － 特別損失0.19億円 → 税金等調整前中間純利益25.68億円（前期29.14億円） → 親会社株主帰属中間純利益18.10億円」。すなわち<strong>本業（営業段階）の実力は△65.7%の大幅減益</strong>であり、純利益の相対的な底堅さは<strong>一過性の有価証券売却益によるもの</strong>である。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">ビジネスモデル別の整理（セグメント）</div>
+      <div class="seg-grid">
+        <div class="seg-item">
+          <div class="seg-name">高所作業車（製造・販売）</div>
+          <div class="seg-row"><span>内容</span><span>主力</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">電力・通信・建設向けの主力製品。設備投資サイクルと受注・納車の時期要因で振れやすい。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">レンタル事業</div>
+          <div class="seg-row"><span>内容</span><span>ストック型</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">稼働率に応じたストック型収益。販売の波を平準化する安定収益源。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">海外・その他（部品・サービス）</div>
+          <div class="seg-row"><span>内容</span><span>補完</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">輸出と補修・サービス。海外需要動向と保守需要が収益を補完する。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>本短信サマリーに<strong>セグメント別数値の開示がない</strong>ため、上記は<strong>ビジネスモデル別の定性整理</strong>である。各区分の売上・利益の内訳数値は開示されていない。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・修正なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">630.00<span class="data-sub">億円 <span class="up">+5.7%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">79.00<span class="data-sub">億円 <span class="up">+5.2%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">85.00<span class="data-sub">億円 <span class="up">+4.0%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">67.00<span class="data-sub">億円 <span class="up">+0.6%</span></span>（EPS103.78円）</span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>★★ 通期予想に関する重要な注記：</strong>中間期は営業利益△65.7%の大幅減益だが、通期は営業利益79.00億円（+5.2%）の<strong>増益計画</strong>である。<strong>中間実績7.84億円は通期予想のわずか9.9%の進捗</strong>にとどまり、下期に<strong>約71.2億円</strong>の営業利益を積み上げる必要がある。達成には<strong>下期の受注・納車の大幅な回復が前提</strong>となる点に強く留意。純利益の進捗は27.0%。なお通期予想の修正は行われていない。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">855.10<span class="data-sub">億円 <span class="down">△7.9%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">747.80<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">747.80<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">87.5<span class="data-sub">% （前期末 81.2% / <span class="up">+6.3pt</span>）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務の特徴</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💪 自己資本比率87.5%と極めて高い水準（+6.3pt改善）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 実質無借金の非常に厚い財務基盤</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 総資産は△7.9%の855.10億円</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛡 設備投資サイクルの変動に耐える厚い自己資本</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は855.10億円（前期末比△7.9%）、純資産・自己資本はともに747.80億円。<strong>自己資本比率は81.2%→87.5%へ+6.3pt改善し、87.5%と極めて高く、実質無借金の非常に厚い財務基盤</strong>である。本業の大幅減益局面でも財務の安全性は一段と高まっており、設備投資サイクルの端境期を乗り切る十分な耐久力を備える。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">60.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間30 + 期末30</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">65.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間33 + 期末32</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val up">+5.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub"><span class="up">増配（+8.3%）</span></div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約63<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">予想EPS103.78円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期の配当は前期60円（中間30円＋期末30円）から<strong>年間65円（中間33円＋期末32円）へ+5円の増配（+8.3%）</strong>を予想。注目すべきは、<strong>中間期に営業利益△65.7%の大幅減益となりながらも増配予想を維持している</strong>点であり、通期の増益計画と厚い自己資本（自己資本比率87.5%）を背景に株主還元を優先する姿勢がうかがえる。一方で配当性向は通期予想EPS103.78円ベースで<strong>約63%</strong>と高めの水準であり、通期計画が未達となる場合は実質的な負担が重くなる点に留意。短信に明示的なDOE・配当性向目標の記載はない。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">中間の営業利益が通期予想の9.9%進捗<br><small>通期営業利益79.00億円の達成リスク（下期に約71.2億円が必要）</small></div>
+      <div class="risk-item high">営業利益△65.7%の大幅減益<br><small>本業の収益力が大きく悪化（固定費負担）</small></div>
+      <div class="risk-item high">純利益が特別利益に依存<br><small>投資有価証券売却益12.20億円という一過性要因</small></div>
+      <div class="risk-item mid-level">電力・通信・建設の設備投資の端境期<br><small>需要サイクルの谷が売上を押し下げ</small></div>
+      <div class="risk-item mid-level">鋼材・部材価格の上昇<br><small>原材料コストの転嫁が採算を左右</small></div>
+      <div class="risk-item mid-level">受注・納車の時期要因<br><small>四半期ごとの業績が大きく振れやすい</small></div>
+      <div class="risk-item">レンタル稼働率<br><small>稼働率に応じたストック型収益の変動</small></div>
+      <div class="risk-item">海外需要<br><small>輸出動向・為替による影響</small></div>
+      <div class="risk-item">極めて高い財務健全性<br><small>自己資本比率87.5%・実質無借金</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高219.54億円（△10.4%）・営業利益7.84億円（△65.7%）・経常利益13.46億円（△50.2%）の大幅減収減益。高所作業車を主力とする特殊車両メーカーとして、電力・通信・建設向け設備投資の端境期や受注・納車の時期要因が響き、固定費負担から営業段階が大きく悪化した。<strong>★一方、親会社株主帰属中間純利益は18.10億円（△11.7%）と減少幅が小さく、純利益が経常利益を上回っているが、これは投資有価証券売却益12.20億円を含む特別利益12.23億円によるもので、本業の実力は△65.7%の大幅減益である点に強く留意が必要。</strong>財務は自己資本比率87.5%（+6.3pt）と極めて高く、実質無借金の厚い基盤。配当は大幅減益下でも+5円増配の65円予想（配当性向約63%）。<strong>★通期は営業利益79.00億円（+5.2%）の増益計画だが、中間実績は通期予想のわずか9.9%の進捗にとどまり、下期に約71.2億円を積み上げる必要がある。達成には下期の受注・納車の大幅回復が前提となる。</strong>中澤俊一社長。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社アイチコーポレーション（6345）2027年3月期第2四半期（中間期）決算短信〔連結〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
