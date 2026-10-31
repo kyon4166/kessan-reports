@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒューリック株式会社 2026年12月期 第3四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2B3A2E;
+    --primary-light: #3E5243;
+    --primary-dark: #1A251C;
+    --accent: #B08D4C;
+    --accent-light: #C7A96E;
+    --accent-pale: #F2EBDB;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(43,58,46,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Real Estate'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 82px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #eef0ee; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q3</div>
+  <h1>ヒューリック株式会社</h1>
+  <p class="subtitle">2026年12月期　第3四半期決算短信（連結）要約　／　証券コード 3003</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年10月28日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">5,747.25<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 35.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">1,205.03<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 13.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">1,010.98<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 10.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">694.70<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 14.5%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　前田 隆也</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">東京都心部の優良不動産の賃貸・売買・開発</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">多角化領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">保険・ホテル旅館・高齢者施設等</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">収益構造</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">安定賃料収入＋物件売却（開発）益の二本柱</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">発行済株式数</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">767,907,735株</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の重要な変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">有</span>
+      </div>
+    </div>
+    <div class="highlight">東京都心部（特に東京23区）の優良不動産を中核に、賃貸・売却（物件開発）・ホテル旅館・高齢者施設等を展開する総合不動産会社。賃貸収益の安定成長に加え、当第3四半期累計は物件売却が売上を大きく押し上げ、売上高+35.4%の大幅増収・全段階増益となった。なお当第3四半期累計において<strong>連結範囲の重要な変更が有</strong>り、前期との比較には留意が必要。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第3四半期累計業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（累計）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">5,747.25<span class="data-sub">億円 <span class="up">+35.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">1,205.03<span class="data-sub">億円 <span class="up">+13.2%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">1,010.98<span class="data-sub">億円 <span class="up">+10.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">694.70<span class="data-sub">億円 <span class="up">+14.5%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">905.97<span class="data-sub">億円 <span class="up">+23.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">91.48<span class="data-sub">円（前期 79.79円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増収増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 東京都心部の優良不動産からの安定賃料収入</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💴 物件売却（不動産売却）の構成比上昇が増収を牽引</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 全段階で増益（営業+13.2%／経常+10.4%／純利益+14.5%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏨 ホテル旅館・高齢者施設等の多角化事業が寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔄 連結範囲の重要な変更あり（比較には留意）</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 売上と利益の伸びの差：</strong>売上高<strong>+35.4%</strong>の大幅増収に対して営業利益は<strong>+13.2%</strong>と伸びに差がある。これは<strong>物件売却（不動産売却）の構成比が高まり、相対的に利益率が低い取引が増えた</strong>ことによるもの。また経常利益（+10.4%）が営業利益（+13.2%）を下回っているのは、<strong>支払利息等の金融費用の増加</strong>による。すなわち今期の増収は売却主導であり、売上の伸び率がそのまま利益の伸び率には直結しない構造にある点に留意が必要。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2026年12月期・修正：有）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">9,000.00<span class="data-sub">億円 <span class="up">+23.7%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">2,170.00<span class="data-sub">億円 <span class="up">+16.1%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">1,900.00<span class="data-sub">億円 <span class="up">+9.8%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">1,260.00<span class="data-sub">億円 <span class="up">+10.2%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS（予想）</span>
+            <span class="data-val">165.92<span class="data-sub">円</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">Q3累計進捗率</span>
+            <span class="data-val">55.5<span class="data-sub">%（営業利益）／55.1%（純利益）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 業績予想の修正：有。</strong>2026年10月28日公表の「通期業績予想及び配当予想の修正に関するお知らせ」により通期業績予想を修正。<strong>加えて、従来「予測が困難」として記載していなかった営業収益（売上高）の業績予想を新たに開示</strong>した点が今回の重要な変更点。第3四半期累計時点で営業利益は通期予想の<strong>55.5%</strong>、親会社株主帰属当期純利益は<strong>55.1%</strong>の進捗。
+      </div>
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item">
+        <div class="seg-name">不動産賃貸</div>
+        <div class="seg-row"><span>収益性格</span><span>安定</span></div>
+        <div class="seg-row"><span>主力エリア</span><span>東京23区</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">東京23区中心の優良物件からの安定した賃料収入。利益率が高く、収益基盤の中核。</div>
+      </div>
+      <div class="seg-item star">
+        <div class="seg-name">不動産売買・開発</div>
+        <div class="seg-row"><span>今期の役割</span><span>増収牽引</span></div>
+        <div class="seg-row"><span>利益率</span><span>賃貸より低い</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">物件売却の構成比上昇が売上高+35.4%の大幅増収を牽引。ただし利益率は賃貸より低く、売上と利益の伸びの差の主因。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">保険・ホテル旅館・高齢者施設等</div>
+        <div class="seg-row"><span>位置づけ</span><span>多角化</span></div>
+        <div class="seg-row"><span>特性</span><span>非賃貸</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">保険代理店、ホテル旅館、高齢者施設運営等の非賃貸の多角化事業。収益変動性は相対的に高い。</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);">※ 本決算短信サマリーにセグメント別の数値開示がないため、上記は事業内容に基づく<strong>定性整理</strong>である。</div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">3兆7,880.49<span class="data-sub">億円 <span class="up">+8.0%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">9,855.34<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">9,508.19<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">25.1<span class="data-sub">%（前期末 26.0% / <span class="down">△0.9pt</span>）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">1株当たり指標・株式</div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,251.98<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（Q3累計・基本的）</span>
+          <span class="data-val">91.48<span class="data-sub">円（前期 79.79円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">発行済株式数</span>
+          <span class="data-val">767,907,735<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">総資産の増加</span>
+          <span class="data-val">+8.0<span class="data-sub">%（物件取得による拡大）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は<strong>3兆7,880.49億円（+8.0%）</strong>へ拡大し、純資産9,855.34億円・自己資本9,508.19億円、1株当たり純資産1,251.98円。一方で<strong>自己資本比率は25.1%（前期末26.0%、△0.9pt）へ低下</strong>している。<strong>総資産が+8.0%増加する一方で自己資本比率が低下していることは、物件取得に伴う有利子負債の増加を示唆する</strong>点に留意が必要。経常利益の伸び（+10.4%）が営業利益（+13.2%）を下回った背景にも支払利息等の金融費用増加があり、金利上昇局面では財務レバレッジの水準が重要な論点となる。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/12）</div>
+        <div class="div-cell-val">62.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間28.50 + 期末33.50</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/12）</div>
+        <div class="div-cell-val" style="color:var(--accent);">70.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間33.50 + 期末36.50</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+8.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">増配（+12.9%）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約42<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">通期予想EPS165.92円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>💰 配当予想の修正：有。</strong>本日（<strong>2026年10月28日</strong>）公表の「通期業績予想及び配当予想の修正に関するお知らせ」により、<strong>配当予想を上方修正</strong>。前期実績62円（中間28.50円＋期末33.50円）に対し、当期予想は<strong>70円（中間33.50円＋期末36.50円）</strong>で前期比<strong>+8円の増配（+12.9%）</strong>となる。配当性向は通期予想EPS165.92円ベースで<strong>約42%</strong>。なお本短信には<strong>明示的なDOE・配当性向目標の記載はない</strong>が、通期業績予想の上方修正と歩調を合わせた増配であり、業績連動的な還元姿勢が示されている。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">金利上昇による金融費用の増加<br><small>経常利益+10.4%が営業利益+13.2%を下回る主因（支払利息等）</small></div>
+      <div class="risk-item high">物件売却益への依存<br><small>売上構成の変化。売却の構成比上昇で利益率が相対的に低下</small></div>
+      <div class="risk-item high">自己資本比率の低下<br><small>25.1%（△0.9pt）。総資産+8.0%と併せ有利子負債の増加を示唆</small></div>
+      <div class="risk-item mid-level">不動産市況・東京都心のオフィス需給<br><small>賃料水準・空室率の変動が賃貸収益に影響</small></div>
+      <div class="risk-item mid-level">物件取得競争・取得価格の上昇<br><small>優良物件の取得難度とキャップレート低下</small></div>
+      <div class="risk-item">ホテル旅館・高齢者施設の収益変動<br><small>非賃貸の多角化事業は景況・稼働率に左右される</small></div>
+      <div class="risk-item">連結範囲の重要な変更<br><small>有。前期との比較可能性に影響</small></div>
+      <div class="risk-item">通期予想・配当予想の修正<br><small>有（2026年10月28日公表）。売上高予想を新たに開示</small></div>
+      <div class="risk-item">保険事業<br><small>多角化事業の一角。保険市場環境の影響を受ける</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      第3四半期累計は売上高<strong>5,747.25億円（+35.4%）</strong>の大幅増収、営業利益<strong>+13.2%</strong>・経常利益<strong>+10.4%</strong>・親会社株主帰属四半期純利益<strong>+14.5%</strong>の増益となった。東京都心部の優良不動産からの安定賃料収入に加え、<strong>物件売却の構成比上昇が増収を大きく牽引</strong>した。ただし売上+35.4%に対し営業利益+13.2%と伸びに差があるのは<strong>相対的に利益率の低い売却取引の増加</strong>によるもので、経常（+10.4%）が営業を下回るのは<strong>支払利息等の金融費用の増加</strong>による点に留意したい。財務面では総資産が<strong>3兆7,880.49億円（+8.0%）</strong>へ拡大する一方、自己資本比率は<strong>25.1%（△0.9pt）</strong>へ低下しており、物件取得に伴う有利子負債の増加が進んでいる。配当は本日（10月28日）<strong>上方修正</strong>され、+8円増配の<strong>70円予想（配当性向約42%）</strong>。通期業績予想も修正し、<strong>従来「予測が困難」としていた売上高予想を新たに開示</strong>した。通期は売上+23.7%・営業+16.1%の増収増益計画で、Q3累計は営業利益で55.5%の進捗。金利上昇局面での金融費用と物件売却益への依存度、そして不動産市況が中長期の論点となる。前田隆也社長体制のもと、賃貸の安定基盤と売却による利益創出のバランスをどう保つかが注目される。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はヒューリック株式会社（3003）2026年12月期第3四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
