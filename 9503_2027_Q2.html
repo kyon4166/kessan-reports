@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>関西電力株式会社 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #123A6B;
+    --primary-light: #1E4E85;
+    --primary-dark: #0B2444;
+    --accent: #3E8FD0;
+    --accent-light: #6BABDF;
+    --accent-pale: #DCEAF7;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(18,58,107,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Energy'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>関西電力株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 9503</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年10月29日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">2兆2,351.06<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 11.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">832.25<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 69.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">1,115.50<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 64.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">1,829.95<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 21.4%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">電気事業（発電・小売）／送配電事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">非電気事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">情報通信（オプテージ）、不動産、エネルギー関連</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">収益の鍵</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">原子力発電の稼働状況・燃料費調整のタイムラグ・市場価格</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本基準（J-GAAP）・連結</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">森望 代表執行役社長</span>
+      </div>
+    </div>
+    <div class="highlight">
+      関西圏を基盤とする総合エネルギー企業。電気事業（発電・小売）と送配電事業を中核に、情報通信（オプテージ）・不動産・エネルギー関連の非電気事業を展開。当中間期は売上高2兆2,351.06億円（+11.3%）と増収だが、燃料費・購入電力料や修繕費の増加等により営業利益△69.9%・経常利益△64.6%の<strong>大幅減益</strong>。親会社株主帰属中間純利益の減少が△21.4%にとどまったのは<strong>関係会社株式売却益1,050.77億円の特別利益</strong>を計上したためであり、本業の実力は大幅減益である点に留意が必要。
+    </div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val" style="color:var(--green);">2兆2,351.06<span class="data-sub">億円 +11.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val" style="color:var(--red);">832.25<span class="data-sub">億円 △69.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val" style="color:var(--red);">1,115.50<span class="data-sub">億円 △64.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val" style="color:var(--red);">1,829.95<span class="data-sub">億円 △21.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val" style="color:var(--red);">2,108.10<span class="data-sub">億円 △10.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（中間）</span>
+          <span class="data-val">164.24<span class="data-sub">円（前期 209.08円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⛽ 燃料費・購入電力料の増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔧 修繕費の増加（設備の計画的な保全）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前期に大きかった燃料費調整のタイムラグ差益の縮小</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚛ 原子力発電の稼働状況が収益を左右する構造</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 売上高は+11.3%と増収だが、コスト増が利益を圧迫</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>★★ 最重要：純利益の底堅さは一過性の株式売却益によるもの</strong><br>
+      経常利益は△64.6%の大幅減益だが、<strong>関係会社株式売却益1,050.77億円の特別利益</strong>を計上したため中間純利益の減少は<strong>△21.4%にとどまった</strong>。損益の流れは次の通り。<br>
+      経常利益 1,115.50億円 → 渇水準備引当金取崩し（貸方）21.38億円 → <strong>特別利益 1,050.77億円（関係会社株式売却益）</strong> → 税金等調整前中間純利益 2,187.67億円（前期 3,162.08億円） → 法人税等合計 375.15億円（前期 818.11億円） → 中間純利益 1,812.52億円 → 非支配株主に帰属する中間純損失 △17.43億円 → 親会社株主帰属中間純利益 1,829.95億円<br>
+      → つまり<strong>本業（経常段階）の実力は△64.6%の大幅減益</strong>であり、純利益の相対的な底堅さは<strong>一過性の株式売却益によるもの</strong>である。
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item decline">
+        <div class="seg-name">電気事業（発電・小売）</div>
+        <div class="seg-row"><span>収益の鍵</span><span>原子力稼働</span></div>
+        <div class="seg-row"><span>変動要因</span><span>燃料費調整</span></div>
+        <div class="seg-row"><span>環境</span><span>市場価格</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">原子力の稼働状況と燃料費調整・市場価格が収益を左右。当中間期はタイムラグ差益の縮小と燃料費増が大幅減益の主因。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">送配電事業</div>
+        <div class="seg-row"><span>収益性格</span><span>規制料金</span></div>
+        <div class="seg-row"><span>安定性</span><span>高い</span></div>
+        <div class="seg-row"><span>論点</span><span>設備投資</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">規制料金に基づく安定収益。レジリエンス強化等の設備投資負担と修繕費の水準が論点。</div>
+      </div>
+      <div class="seg-item star">
+        <div class="seg-name">情報通信・不動産・その他</div>
+        <div class="seg-row"><span>情報通信</span><span>オプテージ</span></div>
+        <div class="seg-row"><span>不動産</span><span>賃貸等</span></div>
+        <div class="seg-row"><span>位置づけ</span><span>非電気事業</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">オプテージ（情報通信）と不動産賃貸等の非電気事業。電気事業の収益変動を緩和する多角化の柱。</div>
+      </div>
+    </div>
+    <div class="highlight neutral" style="margin-top:12px;">
+      <strong>※ セグメントについて：</strong>本短信サマリーにセグメント別の数値の開示がないため、上記は事業内容に基づく<strong>定性整理</strong>である。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年3月期・修正なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">4兆5,000<span class="data-sub">億円 +10.9%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val" style="color:var(--red);">2,500<span class="data-sub">億円 △42.9%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val" style="color:var(--red);">2,900<span class="data-sub">億円 △44.1%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val" style="color:var(--red);">3,100<span class="data-sub">億円 △18.4%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS（通期予想）</span>
+            <span class="data-val">278.23<span class="data-sub">円</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">中間期進捗（純利益）</span>
+            <span class="data-val">59.0<span class="data-sub">% （通期予想比）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>★ 通期も特別利益を織り込んだ構造：</strong>通期予想は営業利益2,500億円（△42.9%）・経常利益2,900億円（△44.1%）の減益計画。<strong>親会社株主帰属当期純利益3,100億円が経常利益2,900億円を上回る計画</strong>であり、中間期と同様に<strong>特別利益を織り込んだ構造</strong>である点に留意が必要。中間期で親会社帰属純利益は通期予想の<strong>59.0%</strong>進捗。本短信での業績予想の修正はなし。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">9兆9,613<span class="data-sub">億円 +1.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">3兆6,629.47<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">3兆6,179.50<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val" style="color:var(--green);">36.3<span class="data-sub">% （前期末 35.1% / +1.2pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務のポイント</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💪 自己資本比率は35.1→36.3%（+1.2pt）へ改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 中間純利益の計上と株式売却益が自己資本を押し上げ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏭 発電・送配電の設備産業ゆえ総資産は約10兆円規模</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ 自己資本比率36.3%は設備投資負担を踏まえると引き続き論点</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は9兆9,613億円（前期末比+1.1%）、純資産3兆6,629.47億円・自己資本3兆6,179.50億円。自己資本比率は35.1%→<strong>36.3%（+1.2pt）</strong>へ改善した。改善は中間純利益1,812.52億円の計上（関係会社株式売却益1,050.77億円を含む）が寄与したもので、<strong>一過性の特別利益が自己資本の押し上げに寄与している</strong>点を踏まえて評価する必要がある。発電・送配電という設備産業ゆえ総資産は約10兆円規模に達し、今後の修繕費・設備投資負担との兼ね合いが財務運営の論点となる。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">75.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間30 + 期末45</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">80.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間40 + 期末40</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+5.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+6.7%増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約29<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">通期予想EPS278.23円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期の配当予想は年間80円（中間40円＋期末40円）で、前期75円（中間30円＋期末45円）から<strong>+5円の増配（+6.7%）</strong>。中間配当は30→40円へ増額されている。配当性向は通期予想EPS278.23円ベースで<strong>約29%</strong>と余裕のある水準。短信に明示的なDOE・配当性向目標の記載はない。<strong>通期が営業△42.9%・経常△44.1%の大幅減益計画であるにもかかわらず増配を維持</strong>している点は、株主還元姿勢の継続を示すものと評価できる。ただし純利益が特別利益を織り込んだ計画である点は留意すべき。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">燃料価格・燃料費調整のタイムラグ<br><small>前期に大きかったタイムラグ差益の縮小が大幅減益の主因</small></div>
+      <div class="risk-item high">原子力発電の稼働・規制対応<br><small>稼働状況が収益を大きく左右する構造</small></div>
+      <div class="risk-item high">本業（経常）の大幅減益<br><small>経常利益1,115.50億円・△64.6%と実力ベースで大幅悪化</small></div>
+      <div class="risk-item mid-level">純利益が特別利益（株式売却益）に依存<br><small>関係会社株式売却益1,050.77億円が純利益を支える一過性要因</small></div>
+      <div class="risk-item mid-level">電力市場価格の変動<br><small>卸電力市場価格と需給により調達・販売採算が変動</small></div>
+      <div class="risk-item mid-level">修繕費・設備投資の増加<br><small>設備保全・レジリエンス強化のコスト負担が利益を圧迫</small></div>
+      <div class="risk-item">自己資本比率の水準<br><small>36.3%（+1.2pt改善）だが設備産業として引き続き論点</small></div>
+      <div class="risk-item">電力自由化・競争環境<br><small>小売自由化による顧客獲得競争と料金競争</small></div>
+      <div class="risk-item">脱炭素対応<br><small>再生可能エネルギー・水素等への投資と移行コスト</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高2兆2,351.06億円（+11.3%）と増収だが、燃料費・購入電力料や修繕費の増加等により営業利益832.25億円（△69.9%）・経常利益1,115.50億円（△64.6%）の<strong>大幅減益</strong>。<strong>一方、親会社株主帰属中間純利益は1,829.95億円（△21.4%）と減少幅が小さいが、これは関係会社株式売却益1,050.77億円の特別利益を計上したためであり、本業（経常段階）の実力は△64.6%の大幅減益である点に強く留意が必要</strong>。包括利益も2,108.10億円（△10.5%）と減少した。財務は自己資本比率が35.1→36.3%（+1.2pt）へ改善し、自己資本3兆6,179.50億円・総資産9兆9,613億円（+1.1%）。配当は+5円増配の年間80円予想（中間40＋期末40、配当性向約29%）で、大幅減益計画のもとでも増配を維持。<strong>通期は営業2,500億円（△42.9%）・経常2,900億円（△44.1%）の減益計画で、親会社株主帰属当期純利益3,100億円（△18.4%）が経常利益2,900億円を上回る構造（特別利益を織り込み）</strong>となっており、中間期で純利益は通期予想の59.0%進捗。原子力発電の稼働状況と燃料価格・燃料費調整のタイムラグ、修繕費の増加が業績を左右する。森望 代表執行役社長。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は関西電力株式会社（9503）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
