@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ジンズホールディングス 2026年8月期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2A2A2E;
+    --primary-light: #45454B;
+    --primary-dark: #19191C;
+    --accent: #E8543E;
+    --accent-light: #F07A68;
+    --accent-pale: #FBE2DE;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(42,42,46,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Eyewear'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Full Year</div>
+  <h1>株式会社ジンズホールディングス</h1>
+  <p class="subtitle">2026年8月期　決算短信（連結）要約　／　証券コード 3046</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年10月9日</span></div>
+    <div class="meta-item">対象期間 <span>2025年9月1日〜2026年8月31日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">1,112.20<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 14.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">114.54<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 5.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">115.10<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 5.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属当期純利益</div>
+      <div class="kpi-value">77.97<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 6.4%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">アイウエア（メガネ）専門チェーン「JINS」の企画・製造・小売</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業モデル</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">SPA（企画から販売までの一貫体制）による直営店network</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">展開エリア</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">国内（既存店＋新規出店）／中国・台湾・米国等の海外</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">機能性アイウエア</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">JINS SCREEN 等の機能性商品・新規事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">田中亮 社長COO</span>
+      </div>
+    </div>
+    <div class="highlight">アイウエア専門チェーン「JINS」を国内外で展開する SPA 型メガネ企業。2026年8月期（2025年9月1日〜2026年8月31日）通期は、国内の既存店と新規出店、および中国・台湾等の海外事業が増収を牽引し、売上高は1,112.20億円（+14.4%）と大幅増収。一方で出店に伴う費用と人件費・販管費の増加により、営業利益114.54億円（△5.3%）・経常利益115.10億円（△5.0%）・当期純利益77.97億円（△6.4%）と各段階で減益となった。<strong>売上高営業利益率は10.3%（前期12.4%、△2.1pt）</strong>へ低下。</div>
+  </section>
+
+  <!-- 02 業績ハイライト -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">業績ハイライト（通期）</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">1,112.20<span class="data-sub up">億円 +14.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">114.54<span class="data-sub down">億円 △5.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">115.10<span class="data-sub down">億円 △5.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">77.97<span class="data-sub down">億円 △6.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">81.40<span class="data-sub down">億円 △1.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（1株当たり当期純利益）</span>
+          <span class="data-val">334.00<span class="data-sub">円（前期 356.89円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">収益性指標</div>
+        <div class="data-row">
+          <span class="data-key">売上高営業利益率</span>
+          <span class="data-val down">10.3<span class="data-sub down">% （前期12.4% / △2.1pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">ROE（自己資本当期純利益率）</span>
+          <span class="data-val">22.6<span class="data-sub down">% （前期29.1%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">総資産経常利益率</span>
+          <span class="data-val">18.2<span class="data-sub down">% （前期21.7%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">持分法投資損益</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">該当なし</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">増減要因：国内の既存店・新規出店と中国・台湾等の海外事業が増収を牽引した一方、出店に伴う費用と人件費・販管費の増加で各段階利益は減益。</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📉 増収減益の構図：</strong>売上高を+14.4%伸ばしながら、<strong>売上高営業利益率は10.3%（前期12.4%）へ△2.1pt低下</strong>した。出店加速に伴う店舗開設費用・減価償却費の増加に加え、人件費と販管費の増加が収益性を圧迫する構図である。ROEも29.1%→22.6%、総資産経常利益率も21.7%→18.2%へ低下しており、トップライン成長を利益成長へ転換できるかが当面の焦点となる。
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item star">
+        <div class="seg-name">国内アイウエア事業</div>
+        <div class="seg-row"><span>内容</span><span style="font-family:'Noto Sans JP';font-size:12px;">JINSブランド</span></div>
+        <div class="seg-row"><span>特徴</span><span style="font-family:'Noto Sans JP';font-size:12px;">直営店network</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;">既存店の堅調推移に新規出店を重ね、増収の中核を担う国内基幹事業。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">海外アイウエア事業</div>
+        <div class="seg-row"><span>エリア</span><span style="font-family:'Noto Sans JP';font-size:12px;">中国・台湾・米国等</span></div>
+        <div class="seg-row"><span>役割</span><span style="font-family:'Noto Sans JP';font-size:12px;">成長ドライバー</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;">中国・台湾を中心に店舗展開を進め、増収に寄与。収益化の進捗が課題。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">その他（新規事業・機能性アイウエア）</div>
+        <div class="seg-row"><span>主要商品</span><span style="font-family:'Noto Sans JP';font-size:12px;">JINS SCREEN 等</span></div>
+        <div class="seg-row"><span>位置づけ</span><span style="font-family:'Noto Sans JP';font-size:12px;">付加価値領域</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;">機能性アイウエアを軸とした新規事業領域。将来の収益柱候補。</div>
+      </div>
+    </div>
+    <div class="highlight neutral" style="margin-top:12px;">
+      <strong>※ 注記：</strong>本決算短信サマリーにセグメント別の数値開示がないため、上記3区分はビジネスモデル別の定性整理である（金額・利益の開示なし）。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年8月期）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">1,242.70<span class="data-sub up">億円 +11.7%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">115.00<span class="data-sub up">億円 +0.4%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">113.00<span class="data-sub down">億円 △1.8%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">78.00<span class="data-sub">億円 ±0.0%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS予想</span>
+            <span class="data-val">334.10<span class="data-sub">円</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">第2四半期累計（売上／営業）</span>
+            <span class="data-val">575.00<span class="data-sub">億円 +13.8% ／ 38.60億円 △21.7%</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="data-row">
+        <span class="data-key">第2四半期累計（経常／純利益／EPS）</span>
+        <span class="data-val">37.40<span class="data-sub down">億円 △23.7% ／ 26.30億円 △22.5% ／ EPS 112.65円</span></span>
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>⚠️ 来期計画：</strong>2027年8月期は売上高1,242.70億円（<span class="up">+11.7%</span>）の増収計画である一方、営業利益は115.00億円（+0.4%）・経常利益113.00億円（<span class="down">△1.8%</span>）・親会社株主帰属当期純利益78.00億円（±0.0%）と<strong>ほぼ横ばい〜減益計画</strong>。とくに第2四半期累計は売上+13.8%に対し営業利益38.60億円（<span class="down">△21.7%</span>）・経常37.40億円（<span class="down">△23.7%</span>）・純利益26.30億円（<span class="down">△22.5%</span>）と<strong>大幅減益計画</strong>で、上期の費用負担が重い前提となっている。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">684.09<span class="data-sub up">億円 +18.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">373.29<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">373.29<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">54.6<span class="data-sub">% （前期54.9% / ほぼ横ばい）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,598.81<span class="data-sub">円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val up">+108.98<span class="data-sub">億円（前期 105.33億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val down">△81.45<span class="data-sub">億円（前期 △78.64億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val down">△39.22<span class="data-sub">億円（前期 △94.25億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF（営業＋投資）</span>
+          <span class="data-val up">+27.53<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末現金及び現金同等物</span>
+          <span class="data-val down">113.37<span class="data-sub">億円（前期 119.77億円）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は出店に伴う店舗資産等の増加で684.09億円（+18.2%）に拡大。純資産373.29億円・自己資本比率54.6%（前期54.9%）とほぼ横ばいで、1株当たり純資産は1,598.81円。<strong>営業CFは+108.98億円（前期105.33億円）と安定している一方、出店等の投資CF△81.45億円を差し引いた後の資金余力は+27.53億円と限定的</strong>であり、財務CF△39.22億円（配当等）を含めた結果、期末現金は119.77億円→113.37億円へ減少した。出店ペースと投資水準のコントロールが資金面の要点となる。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025年8月期）</div>
+        <div class="div-cell-val">109.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間50 + 期末59</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期実績（2026年8月期）</div>
+        <div class="div-cell-val" style="color:var(--accent);">104.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間47 + 期末57</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val down">△5.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub"><span class="down">減配（△4.6%）</span></div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向・DOE（当期）</div>
+        <div class="div-cell-val" style="color:var(--accent);">31.1<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">純資産配当率(DOE) 7.0%</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>💰 配当方針：</strong>当期（2026年8月期）の年間配当は104円（中間47円＋期末57円）、配当金総額24.58億円で、<strong>配当性向31.1%・純資産配当率（DOE）7.0%</strong>を開示。前期（2025年8月期）は109円（中間50円＋期末59円／総額25.76億円、配当性向30.5%・DOE 8.9%）であり、<strong>前期109円→当期104円の△5円減配（<span class="down">△4.6%</span>）</strong>となった。配当性向は30.5%→31.1%とほぼ同水準を維持しており、減配は利益水準の低下に沿った配当性向維持型の調整と読み取れる。来期（2027年8月期）予想は年間104円を据え置くが、<strong>中間配当を47円→35円へ減額し期末を57円→69円へ増額する配分変更</strong>を予定（予想配当性向31.1%）。DOEは前期8.9%→当期7.0%へ低下している。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">増収下での営業利益率低下<br><small>10.3%（前期12.4% / △2.1pt）</small></div>
+      <div class="risk-item high">来期も利益はほぼ横ばい〜減益計画<br><small>営業+0.4%・経常△1.8%・純利益±0.0%</small></div>
+      <div class="risk-item high">出店加速に伴う費用・人件費の増加<br><small>店舗開設費・販管費が収益性を圧迫</small></div>
+      <div class="risk-item mid-level">海外事業の不確実性<br><small>中国・台湾等の景況・政策・競争環境</small></div>
+      <div class="risk-item mid-level">アイウエア市場の競争・価格<br><small>低価格チェーン間の競合と価格圧力</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>海外事業と輸入コストへの影響</small></div>
+      <div class="risk-item">投資CF負担と資金余力<br><small>営業CF108.98億に対し投資△81.45億</small></div>
+      <div class="risk-item">減配（△5円）<br><small>109円→104円（△4.6%）</small></div>
+      <div class="risk-item">ROEの低下<br><small>29.1%→22.6%</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      2026年8月期通期は売上高1,112.20億円（<span class="up">+14.4%</span>）の大幅増収ながら、営業利益114.54億円（<span class="down">△5.3%</span>）・経常利益115.10億円（<span class="down">△5.0%</span>）・当期純利益77.97億円（<span class="down">△6.4%</span>）と各段階で減益となった。アイウエア専門チェーン「JINS」の国内出店と海外事業（中国・台湾等）が増収を牽引した一方、出店費用と人件費・販管費の増加が収益性を圧迫し、<strong>売上高営業利益率は10.3%（前期12.4%、△2.1pt）</strong>、ROEは22.6%（前期29.1%）へ低下した。営業CFは108.98億円と安定するが、投資CF△81.45億円を差し引いた資金余力は限定的で、期末現金も119.77億円→113.37億円へ減少。財務は総資産684.09億円・自己資本比率54.6%で、1株当たり純資産1,598.81円。<strong>配当は当期104円（前期109円から△5円減配、△4.6%）で、配当性向31.1%・純資産配当率（DOE）7.0%を開示</strong>し、配当性向30.5%→31.1%とほぼ同水準を維持する方針が読み取れる。来期も年間104円を据え置くが、中間35円・期末69円への配分変更を予定。<strong>来期（2027年8月期）は売上+11.7%の増収計画に対し営業+0.4%・経常△1.8%・純利益±0.0%とほぼ横ばい〜減益</strong>で、とくに第2四半期累計は営業△21.7%の大幅減益計画。出店ペースと費用コントロール、海外事業の収益化が中長期の焦点となる。経営は田中亮社長COO。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社ジンズホールディングス（3046）2026年8月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
