@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>バリューコマース株式会社 2026年12月期 第3四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #17494D;
+    --primary-light: #256A70;
+    --primary-dark: #0D2E31;
+    --accent: #16A6B0;
+    --accent-light: #45BFC7;
+    --accent-pale: #D9F0F2;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(23,73,77,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Affiliate'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Non-Consolidated · Q3</div>
+  <h1>バリューコマース株式会社</h1>
+  <p class="subtitle">2026年12月期　第3四半期決算短信（非連結）要約　／　証券コード 2491</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年10月29日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">83.79<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change">前期比 記載なし</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業損益</div>
+      <div class="kpi-value down">△7.67<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">△ 営業損失</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常損益</div>
+      <div class="kpi-value down">△7.49<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">△ 経常損失</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">四半期純損益</div>
+      <div class="kpi-value down">△6.61<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">△ 四半期純損失</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">インターネット広告（アフィリエイトマーケティング）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ビジネスモデル</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">成果報酬型広告でECサイトとメディアを仲介</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長CEO　香川 仁</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">開示区分</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年12月期第1四半期より非連結開示へ変更</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">財務特性</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">実質無借金・自己資本比率72.3%の健全財務</span>
+      </div>
+    </div>
+    <div class="highlight">アフィリエイトマーケティング（成果報酬型広告）を主力とするインターネット広告事業者。ECサイト（広告主）とメディア（提携サイト）を結ぶプラットフォームを運営する。当第3四半期累計は売上高83.79億円に対し、営業損失△7.67億円・経常損失△7.49億円・四半期純損失△6.61億円と全段階で赤字。事業構造の見直しと非連結化に伴い売上規模が縮小した。一方で実質無借金・自己資本比率72.3%と財務基盤は厚く、赤字下でも耐久力を備える。配当は前期49円から当期予想16円へ大幅減配（△67.3%）を見込む。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第3四半期累計業績と赤字要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（累計）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">83.79<span class="data-sub">億円（前期比の記載なし）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業損益</span>
+          <span class="data-val down">△7.67<span class="data-sub">億円（営業損失）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常損益</span>
+          <span class="data-val down">△7.49<span class="data-sub">億円（経常損失）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期純損益</span>
+          <span class="data-val down">△6.61<span class="data-sub">億円（四半期純損失）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり四半期純損益（EPS）</span>
+          <span class="data-val down">△30.48<span class="data-sub">円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">赤字の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔧 事業構造の見直しに伴う収益規模の縮小</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 非連結化により売上計上範囲が縮小</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💸 売上減に対し費用削減が追いつかず営業損失</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏷 アフィリエイト市場の競争環境の厳しさ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌱 新規事業は収益化に向けた育成段階</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>★ 開示区分の変更（前年同期比較不能）：</strong>2025年12月期第3四半期は<strong>連結業績</strong>を開示していたが、2026年12月期第1四半期より<strong>非連結での業績開示に変更</strong>した。そのため2025年12月期第3四半期の経営成績（累計）および対前年同四半期増減率は記載されておらず、<strong>前年同期との単純比較ができない</strong>点に留意が必要。本サマリーの売上高・各損益についても前期比を付していない。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2026年12月期・修正：有）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">110.00<span class="data-sub">億円 △53.8%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業損益</span>
+            <span class="data-val down">△10.00<span class="data-sub">億円（損失）</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常損益</span>
+            <span class="data-val down">△10.00<span class="data-sub">億円（損失）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純損益</span>
+            <span class="data-val down">△9.00<span class="data-sub">億円（損失・EPS△41.44円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>直近公表予想から<strong>修正：有</strong>。売上高の△53.8%という大幅減少は、<strong>非連結開示への変更と事業構造の見直し</strong>によるもので、<strong>連結・非連結の基準差を含む</strong>点に留意。通期も営業・経常・当期純損益のいずれも<strong>損失を見込む計画</strong>であり、事業構造の転換と収益化が最優先課題となる。
+      </div>
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item">
+        <div class="seg-name">アフィリエイト広告（成果報酬型）</div>
+        <div class="seg-row"><span>位置づけ</span><span>中核</span></div>
+        <div class="seg-row" style="display:block;">ECサイト（広告主）とメディアを結ぶ中核事業。成果報酬型のため広告主の販売動向に連動。</div>
+      </div>
+      <div class="seg-item star">
+        <div class="seg-name">広告プラットフォーム・ツール</div>
+        <div class="seg-row"><span>位置づけ</span><span>補完</span></div>
+        <div class="seg-row" style="display:block;">ストアマッチ等の広告商品。プラットフォーム機能・ツール提供で広告主の集客を支援。</div>
+      </div>
+      <div class="seg-item decline">
+        <div class="seg-name">その他（新規事業・ソリューション）</div>
+        <div class="seg-row"><span>位置づけ</span><span>育成</span></div>
+        <div class="seg-row" style="display:block;">収益化に向けた育成段階。先行投資フェーズで損益への寄与は限定的。</div>
+      </div>
+    </div>
+    <div class="highlight neutral">
+      <strong>※ セグメントについて：</strong>本決算短信サマリーに<strong>セグメント別数値の開示がないため</strong>、上記は事業内容に基づく<strong>定性整理</strong>である。各区分の売上高・損益は開示されていない。
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">159.93<span class="data-sub">億円 △0.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">115.62<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">115.62<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">72.3<span class="data-sub">% （前期末 75.5% / △3.2pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">株式関連・1株指標</div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">531.95<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己株式数</span>
+          <span class="data-val">12,734,434<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期中平均株式数</span>
+          <span class="data-val">21,712,449<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債</span>
+          <span class="data-val">—<span class="data-sub">実質無借金</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は159.93億円（前期末比△0.9%）、純資産115.62億円、自己資本比率は75.5%→72.3%（△3.2pt）へ低下した。低下は損失計上と配当支払による自己資本の減少が主因。もっとも<strong>実質無借金の健全財務</strong>を維持しており、1株当たり純資産531.95円と資産の裏付けも厚い。<strong>赤字局面にあっても財務基盤は厚く</strong>、構造改革を進める時間的余裕は確保されている。自己株式は12,734,434株を保有、期中平均株式数は21,712,449株。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/12）</div>
+        <div class="div-cell-val">49.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間25 + 期末24</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/12）</div>
+        <div class="div-cell-val" style="color:var(--accent);">16.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間8 + 期末8</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val down">△33.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">大幅減配（△67.3%）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">★ 配当方針</div>
+        <div class="div-cell-val" style="font-family:'Noto Sans JP';font-size:13px;color:var(--accent);">安定配当</div>
+        <div class="div-cell-sub">財務健全性・FCFを勘案</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>★ 大幅減配と配当方針：</strong>年間配当は前期（2025年12月期）49円（中間25円＋期末24円）から当期予想16円（中間8円＋期末8円）へ、<strong>△33円の大幅減配（△67.3%）</strong>となる。短信には配当方針が明記されており、「2026年12月期の配当方針につきましては、<strong>財務の健全性及びフリー・キャッシュ・フローを総合的に勘案した上で、安定した配当の実施を目指し</strong>、実施することといたします」としている。すなわち<strong>全段階赤字の計画下</strong>にあって、財務健全性とFCFを優先しつつ配当水準を引き下げ、持続可能な安定配当へ移行する判断である。配当性向は当期純損失（EPS△41.44円）のため算定不能。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">通期も全段階で損失計画<br><small>営業・経常・当期純損益すべて損失見込み</small></div>
+      <div class="risk-item high">売上の大幅減少<br><small>通期△53.8%（非連結化と事業見直し）</small></div>
+      <div class="risk-item high">大幅減配<br><small>49円→16円（△33円・△67.3%）</small></div>
+      <div class="risk-item mid-level">アフィリエイト市場の競争<br><small>成果報酬型広告の価格・機能競争の激化</small></div>
+      <div class="risk-item mid-level">大手プラットフォーマー依存<br><small>提携先の方針変更が取扱高に直結</small></div>
+      <div class="risk-item mid-level">広告主・メディアの離脱<br><small>両サイドのネットワーク維持が収益の前提</small></div>
+      <div class="risk-item">新規事業の収益化<br><small>育成段階で寄与は限定的・先行投資が先行</small></div>
+      <div class="risk-item">自己資本比率の低下<br><small>75.5%→72.3%（△3.2pt）</small></div>
+      <div class="risk-item">高い財務健全性<br><small>実質無借金・1株純資産531.95円</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      第3四半期累計は売上高83.79億円で、営業損失△7.67億円・経常損失△7.49億円・四半期純損失△6.61億円と全段階で赤字（EPS△30.48円）。アフィリエイトマーケティング（成果報酬型広告）を主力とするが、事業構造の見直しに伴い収益が縮小した。★2025年12月期第3四半期は連結業績を開示していたのに対し、2026年12月期第1四半期より非連結開示へ変更したため、前年同期の数値および増減率は記載されておらず単純比較ができない点に留意が必要。財務は自己資本比率72.3%（△3.2pt）・実質無借金で、赤字下でも基盤は厚い。★配当は49円から16円へ△33円の大幅減配（△67.3%）を予想。配当方針として「財務の健全性及びフリー・キャッシュ・フローを総合的に勘案した上で、安定した配当の実施を目指す」と明記されている。★通期も売上110億円（△53.8%）、営業・経常・当期純損益はいずれも損失を見込む計画（修正：有）で、事業構造の転換と収益化が最優先の課題。香川仁社長CEOの下、構造改革の進捗と収益化の時期が注目点となる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はバリューコマース株式会社（2491）2026年12月期第3四半期決算短信（非連結）に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
