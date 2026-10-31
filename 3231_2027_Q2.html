@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>野村不動産ホールディングス 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #4A1F2B;
+    --primary-light: #633040;
+    --primary-dark: #2E1219;
+    --accent: #B5893F;
+    --accent-light: #CBA463;
+    --accent-pale: #F2EAD8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(74,31,43,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Property'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 92px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f1eeef; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>野村不動産ホールディングス株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 3231</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年10月29日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">3,784.70<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 4.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">465.00<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 18.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">390.40<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 23.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">273.25<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 12.9%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長　新井 聡</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">住宅</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">分譲マンション「プラウド」ブランド</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">都市開発</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">オフィス・商業施設の開発・賃貸</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">その他事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">資産運用／仲介・CRE／運営管理／海外</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">収益計上の特性</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">分譲住宅・物件売却が下期に偏重</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計監査</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">本中間決算短信はレビューの対象外</span>
+      </div>
+    </div>
+    <div class="highlight">住宅（分譲マンション「プラウド」）、都市開発（オフィス・商業の開発・賃貸）、資産運用、仲介・CRE、運営管理、海外の各事業を展開する総合不動産グループ。当中間期は<strong>全項目で減益</strong>となったが、減収減益は主に分譲住宅の計上時期や物件売却の端境期によるもので、<strong>不動産業特有の下期偏重の計上構造</strong>を反映したもの。一方、中間包括利益は+106.8%と大幅に改善している。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間期）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">3,784.70<span class="data-sub">億円 <span class="down">△4.8%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">465.00<span class="data-sub">億円 <span class="down">△18.7%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">事業利益（独自指標）</span>
+          <span class="data-val">509.15<span class="data-sub">億円 <span class="down">△16.2%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">390.40<span class="data-sub">億円 <span class="down">△23.2%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">273.25<span class="data-sub">億円 <span class="down">△12.9%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val">334.99<span class="data-sub">億円 <span class="up">+106.8%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">31.92<span class="data-sub">円（前期 36.48円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏠 分譲住宅（プラウド）の計上時期のずれ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 物件売却の端境期（売却益の計上が下期へ）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 全項目減益（売上△4.8%／営業△18.7%／経常△23.2%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📅 不動産業特有の下期偏重の計上構造を反映</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">✅ 一方、中間包括利益は+106.8%と大幅改善（前期161.96億円）</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 独自指標「事業利益」の定義：</strong><strong>事業利益 ＝ 営業利益 ＋ 持分法投資損益 ＋ 企業買収に伴い発生する無形固定資産の償却費 ＋ 海外セグメントにおけるプロジェクト会社（不動産の保有・開発を主としたSPC等）の持分売却損益</strong>。当中間期の事業利益は<strong>509.15億円（△16.2%）</strong>で、営業利益（△18.7%）よりやや減少幅が小さい。持分法適用会社の損益や海外プロジェクト会社の持分売却損益を取り込むため、同社の実質的な事業収益力をより適切に表す指標として開示されている。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年3月期・修正：有）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">1兆850.00<span class="data-sub">億円 <span class="up">+15.1%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">1,460.00<span class="data-sub">億円 <span class="up">+5.6%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">事業利益</span>
+            <span class="data-val">1,530.00<span class="data-sub">億円 <span class="up">+3.8%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">1,270.00<span class="data-sub">億円 <span class="up">+1.8%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">860.00<span class="data-sub">億円 <span class="up">+3.8%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS（予想）</span>
+            <span class="data-val">100.35<span class="data-sub">円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 業績予想の修正：有。中間期は全項目減益だが、通期は増収増益計画。</strong>中間期の進捗は<strong>営業利益31.8%・親会社株主帰属当期純利益31.8%</strong>にとどまる。これは<strong>分譲住宅の計上や物件売却が下期に偏る不動産業特有の構造</strong>を反映したものだが、<strong>通期達成には下期の計上実現が前提</strong>となる点に留意が必要。なお本短信（第2四半期）は<strong>公認会計士又は監査法人のレビューの対象外</strong>である。
+      </div>
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item">
+        <div class="seg-name">住宅</div>
+        <div class="seg-row"><span>主力ブランド</span><span>プラウド</span></div>
+        <div class="seg-row"><span>業績要因</span><span>計上戸数・時期</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">分譲マンション「プラウド」の計上戸数・計上時期に業績が左右される。中間期減収減益の主因。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">都市開発・資産運用</div>
+        <div class="seg-row"><span>対象</span><span>オフィス・商業</span></div>
+        <div class="seg-row"><span>収益源</span><span>開発・賃貸・AM</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">オフィス・商業施設の開発と賃貸、およびアセットマネジメント。物件売却の端境期が中間期業績に影響。</div>
+      </div>
+      <div class="seg-item star">
+        <div class="seg-name">仲介・CRE／運営管理／海外</div>
+        <div class="seg-row"><span>性格</span><span>ストック型</span></div>
+        <div class="seg-row"><span>海外</span><span>持分売却損益</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">ストック型の安定収益と海外プロジェクト。海外プロジェクト会社の持分売却損益は事業利益に含まれる。</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);">※ 本決算短信サマリーにセグメント別の数値開示がないため、上記は事業内容に基づく<strong>定性整理</strong>である。</div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">2兆9,185.82<span class="data-sub">億円 <span class="up">+3.8%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">8,189.25<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">28.0<span class="data-sub">%（前期末 28.5% / <span class="down">△0.5pt</span>）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（中間期・基本的）</span>
+          <span class="data-val">31.92<span class="data-sub">円（前期 36.48円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">自己株式に関する注記</div>
+        <div class="data-row">
+          <span class="data-key">当中間期末 信託保有株式</span>
+          <span class="data-val">15,286,654<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">前期末 信託保有株式</span>
+          <span class="data-val">19,062,378<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:12px;color:var(--mid);display:block;line-height:1.6;">※ 期末自己株式数には、役員報酬BIP信託及び株式付与ESOP信託が所有する当社株式が含まれる。</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は<strong>2兆9,185.82億円（+3.8%）</strong>へ拡大、純資産は8,189.25億円。自己資本比率は<strong>28.0%（前期末28.5%、△0.5pt）</strong>と小幅に低下した。資産規模の拡大に対して自己資本の積み上がりが相対的に緩やかであり、金利上昇局面では調達コストの動向が注視される。なお期末自己株式数には<strong>役員報酬BIP信託及び株式付与ESOP信託が所有する当社株式</strong>（当中間期末15,286,654株、前期末19,062,378株）が含まれており、1株当たり指標の算定上は控除されている点に留意。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">40.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間18 + 期末22</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">44.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間22 + 期末22</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+4.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">増配（+10.0%）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約44<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">通期予想EPS100.35円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>💰 中間減益下でも増配を継続。</strong>当中間期は全項目で減益となったものの、配当は前期40円（中間18円＋期末22円）に対し当期予想<strong>44円（中間22円＋期末22円）</strong>と、前期比<strong>+4円の増配（+10.0%）</strong>を維持している。中間配当は18円→22円へ増額され、下期偏重の計上構造による中間減益を一時的なものと位置づけ、通期の増収増益計画に沿った還元姿勢を示したものといえる。配当性向は通期予想EPS100.35円ベースで<strong>約44%</strong>。なお本短信には<strong>明示的なDOE・配当性向目標の記載はない</strong>。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">中間期の全項目減益<br><small>売上△4.8%／営業△18.7%／経常△23.2%／純利益△12.9%</small></div>
+      <div class="risk-item high">通期計画の下期偏重<br><small>中間進捗は営業・純利益ともに31.8%。達成には下期の計上実現が前提</small></div>
+      <div class="risk-item mid-level">金利上昇と調達コスト<br><small>有利子負債依存度の高い業態。金融費用の増加リスク</small></div>
+      <div class="risk-item mid-level">分譲住宅の計上時期・在庫<br><small>プラウドの引渡時期のずれが四半期業績を大きく変動させる</small></div>
+      <div class="risk-item mid-level">不動産市況・用地取得競争<br><small>用地価格の上昇と取得難度の高まりが将来の利益率に影響</small></div>
+      <div class="risk-item">海外事業とプロジェクト会社の持分売却損益<br><small>事業利益に含まれるが変動性が高い</small></div>
+      <div class="risk-item">自己資本比率の水準<br><small>28.0%（△0.5pt）。資産拡大に対する資本の厚み</small></div>
+      <div class="risk-item">事業利益と営業利益の乖離<br><small>事業利益△16.2%に対し営業利益△18.7%。指標の違いに留意</small></div>
+      <div class="risk-item">中間決算はレビュー対象外<br><small>公認会計士又は監査法人のレビューを受けていない</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      当中間期は売上高<strong>3,784.70億円（△4.8%）</strong>・営業利益<strong>△18.7%</strong>・経常利益<strong>△23.2%</strong>・親会社株主帰属中間純利益<strong>△12.9%</strong>と<strong>全項目で減益</strong>となった。分譲住宅の計上時期や物件売却の端境期が主因で、独自指標の<strong>事業利益（営業利益＋持分法投資損益＋企業買収に伴う無形固定資産償却費＋海外プロジェクト会社の持分売却損益）は509.15億円（△16.2%）</strong>と営業利益より減少幅が小さい。また<strong>中間包括利益は334.99億円（+106.8%）</strong>と大幅に改善している。財務は総資産2兆9,185.82億円（+3.8%）、自己資本比率<strong>28.0%（△0.5pt）</strong>。配当は中間減益下でも<strong>+4円増配の44円予想（配当性向約44%）</strong>を維持した。通期は売上+15.1%・営業+5.6%・事業利益+3.8%の増収増益計画（修正：有）だが、<strong>中間進捗は営業・純利益ともに31.8%</strong>にとどまる。これは分譲住宅の計上や物件売却が下期に偏る不動産業特有の構造によるもので、<strong>通期達成には下期の計上実現が前提</strong>となる点に留意したい。金利上昇局面の調達コストと用地取得競争が中長期の論点。新井聡社長体制のもと、下期の計上進捗が通期計画達成の鍵となる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は野村不動産ホールディングス株式会社（3231）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
