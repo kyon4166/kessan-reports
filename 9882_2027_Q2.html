@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社イエローハット 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A2A46;
+    --primary-light: #24405F;
+    --primary-dark: #101A2C;
+    --accent: #E8A81E;
+    --accent-light: #F0BE50;
+    --accent-pale: #FBF0D4;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,42,70,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Auto'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>株式会社イエローハット</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 9882</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年10月30日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">830.15<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 4.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">64.96<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 18.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">71.84<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 17.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">53.10<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 22.9%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">カー用品小売「イエローハット」の全国展開</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">店舗形態</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">フランチャイズ（FC）中心＋直営店</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">収益基盤</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">タイヤ・オイル・バッテリー等の消耗品</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ストック収益</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">車検・整備などピット作業によるサービス収益</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">木村昭夫 社長</span>
+      </div>
+    </div>
+    <div class="highlight">カー用品小売「イエローハット」をフランチャイズ中心に全国展開するカーアフターマーケットの大手。タイヤ・オイル等の消耗品と車検・整備などのサービス収益が堅調で、価格施策と商品構成の改善により、当中間期は増収率（+4.7%）を大きく上回る営業+18.2%・純利益+22.9%の増益を達成。自己資本比率60.0%と健全な財務体質を維持している。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第2四半期（中間期）業績ハイライト</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">830.15<span class="data-sub">億円 <span class="up">+4.7%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">64.96<span class="data-sub">億円 <span class="up">+18.2%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">71.84<span class="data-sub">億円 <span class="up">+17.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">53.10<span class="data-sub">億円 <span class="up">+22.9%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">78.11<span class="data-sub">億円 <span class="up">+27.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">62.77<span class="data-sub">円（前期 49.24円 / 潜在株式調整後 62.54円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛞 タイヤ・オイル等の消耗品が堅調</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔧 車検・整備などサービス収益が堅調に推移</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💴 価格施策と商品構成の改善で利益率が向上</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 増収率+4.7%を大きく上回る営業+18.2%の増益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 包括利益も78.11億円（+27.4%）と改善</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 収益性の改善：</strong>売上高は830.15億円（+4.7%）に対し、営業利益64.96億円（+18.2%）・経常利益71.84億円（+17.4%）・親会社株主帰属中間純利益53.10億円（+22.9%）と、<strong>増収率を大きく上回る増益となり収益性が改善した</strong>。タイヤ・オイル等の消耗品と車検・整備のサービス収益が堅調に推移し、価格施策と商品構成の改善が効いた。
+    </div>
+    <div class="highlight neutral">
+      <strong>※ 会計に関する注記：</strong>前連結会計年度において<strong>企業結合に係る暫定的な会計処理の確定</strong>を行い、2026年3月期中間期の各数値はその確定内容を反映して組替え済みである。
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item star">
+        <div class="seg-name">カー用品小売（直営・FC卸）</div>
+        <div class="seg-row"><span>位置づけ</span><span>収益基盤</span></div>
+        <div class="seg-row" style="display:block;">タイヤ・オイル・バッテリー等の消耗品が収益基盤。直営店売上とFC向け商品卸の二本立て。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">サービス・車検整備</div>
+        <div class="seg-row"><span>位置づけ</span><span>ストック型</span></div>
+        <div class="seg-row" style="display:block;">ピット作業による車検・整備収益。来店頻度に支えられたストック型収益で利益率改善に寄与。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">二輪・その他（バイク用品等）</div>
+        <div class="seg-row"><span>位置づけ</span><span>周辺事業</span></div>
+        <div class="seg-row" style="display:block;">バイク用品等の周辺事業。四輪中心の事業ポートフォリオを補完。</div>
+      </div>
+    </div>
+    <div class="highlight neutral">
+      <strong>※ セグメントについて：</strong>本短信サマリーにセグメント別の数値の開示がないため、上記は事業内容に基づく定性整理である。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年3月期・修正なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">1,760.00<span class="data-sub">億円 <span class="up">+2.8%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">160.00<span class="data-sub">億円 <span class="up">+6.0%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">174.00<span class="data-sub">億円 <span class="up">+4.9%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">122.00<span class="data-sub">億円 <span class="up">+1.9%</span>（EPS142.61円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>※ 自己株式取得とEPS予想：</strong>2026年5月8日開催の取締役会において自己株式の取得を決議しているが、<strong>連結業績予想の「1株当たり当期純利益」には自己株式取得の影響を考慮していない</strong>旨が短信に注記されている。したがって<strong>実際のEPSは自己株式取得により予想（142.61円）を上回る可能性がある</strong>。
+      </div>
+      <div class="highlight neutral">
+        <strong>※ 下期の減速想定：</strong>中間期は営業+18.2%の増益だが、通期は売上+2.8%・営業+6.0%・純利益+1.9%と<strong>伸びが鈍化する計画</strong>。中間期の進捗は営業利益40.6%・純利益43.5%で、下期は減速を想定した計画となっている。業績予想の修正はなし。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">2,089.42<span class="data-sub">億円 +1.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">1,254.08<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">1,252.64<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">60.0<span class="data-sub">% （前期末 59.8% / +0.2pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,499.17<span class="data-sub">円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務のポイント</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 自己資本比率60.0%（+0.2pt）と健全な財務</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📊 総資産2,089.42億円（+1.0%）と安定推移</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 包括利益78.11億円（+27.4%）が自己資本を押し上げ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📘 1株当たり純資産1,499.17円</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔁 自己株式取得による株主還元も並行</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は前期末比+1.0%の2,089.42億円、純資産は1,254.08億円（自己資本1,252.64億円）。自己資本比率は59.8%→60.0%（+0.2pt）へ改善し、小売業として<strong>健全な財務体質</strong>を維持している。1株当たり純資産は1,499.17円。包括利益78.11億円（+27.4%）の積み上げが自己資本を押し上げた。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">62.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間29 + 期末33</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">68.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間34 + 期末34</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val up">+6.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">増配（+9.7%）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約48<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">予想EPS142.61円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期は前期62円（中間29円＋期末33円）から<strong>68円（中間34円＋期末34円）へ+6円の増配予想</strong>（+9.7%）。中間配当を29円→34円へ増額する。配当性向は通期予想EPS142.61円ベースで約48%。あわせて2026年5月8日の取締役会で決議した自己株式の取得も進めており、配当と自己株取得の両面で株主還元を実施。<strong>なお本決算短信には明示的なDOE／配当性向目標の記載はない。</strong>
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">通期は伸び鈍化計画<br><small>営業+6.0%・純利益+1.9%と下期は減速想定</small></div>
+      <div class="risk-item high">カー用品市場の需要<br><small>保有車齢・走行距離の動向に左右される</small></div>
+      <div class="risk-item mid-level">タイヤ等の仕入コスト・為替<br><small>原材料高・円安による調達コスト上昇</small></div>
+      <div class="risk-item mid-level">FC店の運営・収益性<br><small>フランチャイズ中心モデルゆえの加盟店依存</small></div>
+      <div class="risk-item mid-level">人手不足とピット人件費<br><small>整備士確保とサービス収益のコスト構造</small></div>
+      <div class="risk-item">自己株式取得のEPS未反映<br><small>通期予想EPSに取得の影響が考慮されていない</small></div>
+      <div class="risk-item">EV化による需要変化<br><small>オイル等の消耗品需要構造の中長期的な変化</small></div>
+      <div class="risk-item">競合環境<br><small>カー用品チェーン・ネット通販との競争</small></div>
+      <div class="risk-item">健全な財務<br><small>自己資本比率60.0%（+0.2pt）</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高830.15億円（+4.7%）に対し営業利益64.96億円（+18.2%）・経常71.84億円（+17.4%）・親会社株主帰属中間純利益53.10億円（+22.9%）と、<strong>増収率を大きく上回る増益で収益性が改善</strong>した。タイヤ・オイル等の消耗品と車検・整備のサービス収益が堅調で、価格施策と商品構成の改善が効いた。包括利益も78.11億円（+27.4%）。EPSは62.77円（前期49.24円）。なお前連結会計年度に企業結合に係る暫定的な会計処理の確定を行い、前期中間期の数値は組替え済みである。財務は自己資本比率60.0%（+0.2pt）と健全。配当は+6円増配の68円（配当性向約48%）で、明示的なDOE／配当性向目標の記載はない。<strong>通期は売上+2.8%・営業+6.0%・純利益+1.9%と伸びが鈍化する計画</strong>で、中間進捗は営業40.6%・純利益43.5%と下期の減速を想定している。<strong>また2026年5月8日の取締役会で自己株式の取得を決議しているが、通期予想の1株当たり当期純利益には自己株式取得の影響が考慮されていないため、実際のEPSは予想を上回る可能性がある。</strong>カー用品市場の需要と保有車齢、仕入コストが業績を左右する。木村昭夫社長。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社イエローハット（9882）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
