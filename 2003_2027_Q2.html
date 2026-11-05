@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日東富士製粉株式会社 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #5A4A30;
+    --primary-light: #6E5A3C;
+    --primary-dark: #3A301E;
+    --accent: #C99A3C;
+    --accent-light: #D9B465;
+    --accent-pale: #F4EBD5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(90,74,48,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Flour'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f1f0ea; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>日東富士製粉株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 2003</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月2日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">355.02<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 0.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">19.02<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 18.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">22.54<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 20.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">14.79<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 29.5%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">製粉（業務用小麦粉）の製造販売</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">周辺事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">食品（プレミックス・加工食品）／倉庫・不動産賃貸</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長 宮原朋宏</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">上場市場</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">東京証券取引所プライム市場（2003）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">株式分割</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年4月1日付で1株→4株の株式分割を実施</span>
+      </div>
+    </div>
+    <div class="highlight">製粉（業務用小麦粉）を中核に、食品（プレミックス・加工食品）と倉庫・不動産賃貸を展開。当中間期は売上高355.02億円（+0.3%）とほぼ横ばいながら、営業利益+18.2%・経常利益+20.3%・親会社株主帰属中間純利益+29.5%と大きく増益。原材料（小麦）コストの落ち着きと製品価格の浸透、製粉事業の採算改善が効いた構図である。財務は自己資本比率79.3%・実質無借金と極めて健全。2026年4月1日付で1株→4株の株式分割を実施しており、EPS・配当は分割後換算ベースで統一して表示（分割前実績はカッコ書きで注記）。</div>
+  </section>
+
+  <!-- 02 業績ハイライト -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">355.02<span class="data-sub up">億円 +0.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">19.02<span class="data-sub up">億円 +18.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">22.54<span class="data-sub up">億円 +20.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">14.79<span class="data-sub up">億円 +29.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">12.16<span class="data-sub up">億円 +37.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的・分割後換算）</span>
+          <span class="data-val">40.64<span class="data-sub">円（前期 31.38円・4分割調整後）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌾 原材料（小麦）コストの落ち着き</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 製品価格の浸透による採算改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏭 製粉事業（業務用小麦粉）の収益性向上</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💴 受取配当金等の営業外収益（経常＞営業の要因）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 倉庫・不動産賃貸による安定収益の寄与</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📈 増益の構図：</strong>売上高はほぼ横ばい（+0.3%）ながら、営業利益+18.2%・親会社株主帰属中間純利益+29.5%と大きく増益した。これは原材料（小麦）コストの落ち着きと製品価格の浸透により、製粉事業の採算が改善した構図である。売上の伸びではなく利益率の改善が増益を牽引している。なお<strong>経常利益22.54億円が営業利益19.02億円を上回るのは、受取配当金等の営業外収益による</strong>もの。
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item star">
+        <div class="seg-name">製粉事業</div>
+        <div class="seg-row"><span>位置づけ</span><span>中核</span></div>
+        <div style="font-size:12px;color:var(--mid);margin-top:6px;line-height:1.5;">業務用小麦粉の製造販売が収益基盤。小麦コストの落ち着きと価格浸透で採算が改善。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">食品事業</div>
+        <div class="seg-row"><span>位置づけ</span><span>成長領域</span></div>
+        <div style="font-size:12px;color:var(--mid);margin-top:6px;line-height:1.5;">プレミックス・加工食品を展開。製粉で培った技術を活かした付加価値領域。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">倉庫・不動産賃貸その他</div>
+        <div class="seg-row"><span>位置づけ</span><span>安定収益</span></div>
+        <div style="font-size:12px;color:var(--mid);margin-top:6px;line-height:1.5;">保有資産を活用した賃貸収入等。景気変動に左右されにくい安定収益源。</div>
+      </div>
+    </div>
+    <div class="highlight neutral" style="margin-top:12px;">
+      <strong>※ セグメントに関する注記：</strong>本決算短信のサマリー情報にはセグメント別の売上高・利益の数値開示がないため、上記は事業内容に基づく<strong>定性整理</strong>である。各セグメントの定量的な業績寄与は四半期報告書等の開示を待つ必要がある。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年3月期・修正なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">730.00<span class="data-sub up">億円 +0.3%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">42.00<span class="data-sub up">億円 +10.1%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">47.00<span class="data-sub up">億円 +7.2%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">33.00<span class="data-sub down">億円 △0.6%（EPS 90.44円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 下期減速の想定：</strong>中間期は親会社株主帰属中間純利益+29.5%の大幅増益だが、<strong>通期の当期純利益は33.00億円（△0.6%）とほぼ横ばい計画</strong>に留まる。中間進捗は<strong>営業利益45.3%・純利益44.8%</strong>であり、会社は下期の減速を想定している点に留意が必要。通期予想は期初計画から修正なし。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">630.10<span class="data-sub down">億円 △1.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">500.47<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">499.60<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">79.3<span class="data-sub up">% （前期末 78.5% / +0.8pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務の特徴</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛡 自己資本比率79.3%と極めて高い健全性</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💳 実質無借金の財務体質</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📊 自己資本比率は前期末比+0.8ptへ改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 倉庫・不動産等の保有資産が資産内容を支える</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 原材料価格変動への耐性が高い資本基盤</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は630.10億円（前期末比△1.1%）とやや減少したが、純資産は500.47億円、自己資本は499.60億円を確保。自己資本比率は前期末78.5%から<strong>79.3%（+0.8pt）へ改善</strong>し、実質無借金の極めて健全な財務体質を維持している。小麦という価格変動の大きい原材料を扱う事業特性に対し、厚い自己資本が十分な緩衝材として機能する構造。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（分割後換算）</div>
+        <div class="div-cell-val">70.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間35 + 期末35／短信表示は分割前280円</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">70.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間35 + 期末35</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">±0<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（分割後換算ベース）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">株式分割・配当性向</div>
+        <div class="div-cell-val" style="color:var(--accent);">1→4<span style="font-size:14px;color:var(--mid);">株</span></div>
+        <div class="div-cell-sub">2026/4/1実施・配当性向約77%</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⚠ 株式分割による配当表示の読み替え（重要）：</strong>2026年4月1日付で普通株式1株につき4株の株式分割を実施した。前期（2026年3月期）の年間配当は<strong>280円（中間140円＋期末140円）</strong>と短信に記載されているが、これは<strong>分割前の配当金の額</strong>である旨が短信に明記されている。分割後換算すると<strong>年間70円相当（中間35円＋期末35円）</strong>となる。当期（2027年3月期）予想は分割後基準で年間70円（中間35円＋期末35円）であり、<strong>分割後換算では前期70円→当期70円の「維持（±0）」</strong>が実質である。単純に280円→70円と比較すると大幅減配に見えるが、これは分割に伴う表示上の差であり誤読に注意されたい。配当予想の修正はなし。配当性向は通期予想EPS90.44円ベースで<strong>約77%と高水準</strong>。なお本短信に明示的なDOE・配当性向目標の記載はない。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">小麦の政府売渡価格・原材料コスト<br><small>輸入小麦の政府売渡価格改定が採算を直接左右</small></div>
+      <div class="risk-item high">通期純利益はほぼ横ばい計画<br><small>通期当期純利益33.00億円（△0.6%）・下期減速想定</small></div>
+      <div class="risk-item mid-level">製粉業界の競争・価格転嫁<br><small>業務用小麦粉の価格競争と転嫁の難易度</small></div>
+      <div class="risk-item mid-level">国内の小麦粉需要<br><small>人口減少・食生活変化による需要縮小</small></div>
+      <div class="risk-item mid-level">為替・輸送コスト<br><small>輸入原材料の為替変動と物流費の上昇</small></div>
+      <div class="risk-item">食品事業の収益性<br><small>プレミックス・加工食品の採算と成長</small></div>
+      <div class="risk-item">高い配当性向（約77%）<br><small>予想EPS90.44円ベース・利益減少時の負担</small></div>
+      <div class="risk-item">倉庫・不動産賃貸の安定性<br><small>景気変動に左右されにくい安定収益源</small></div>
+      <div class="risk-item">極めて高い財務健全性<br><small>自己資本比率79.3%・実質無借金</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高355.02億円（+0.3%）とほぼ横ばいながら、営業利益19.02億円（+18.2%）・経常利益22.54億円（+20.3%）・親会社株主帰属中間純利益14.79億円（+29.5%）と大きく増益した。原材料（小麦）コストの落ち着きと製品価格の浸透、製粉事業の採算改善が寄与しており、売上の伸びではなく利益率の改善が増益を牽引した構図である。経常利益が営業利益を上回るのは受取配当金等の営業外収益による。包括利益も12.16億円（+37.1%）と伸びた。財務は自己資本比率79.3%（+0.8pt）・実質無借金と極めて健全で、原材料価格変動に対する十分な耐性を備える。配当は2026年4月1日付の1株→4株の株式分割を踏まえ、<strong>分割後換算で前期70円（短信表示の280円は分割前の金額）→当期予想70円の「維持」</strong>であり、配当性向は約77%と高水準。通期は売上高+0.3%・営業利益+10.1%の増益計画だが、当期純利益は33.00億円（△0.6%）とほぼ横ばい計画に留まり、中間進捗は営業利益45.3%・純利益44.8%と<strong>下期の減速を想定</strong>している。今後は小麦の政府売渡価格と価格転嫁の進捗、国内小麦粉需要の動向が業績を左右する。なお本短信に明示的なDOE・配当性向目標の記載はなく、配当方針については明示的な記載なしと理解すべきである。代表取締役社長は宮原朋宏氏。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は日東富士製粉株式会社（2003）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
