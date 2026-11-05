@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本航空（JAL） 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2A2E33;
+    --primary-light: #3C424A;
+    --primary-dark: #1A1D21;
+    --accent: #C8102E;
+    --accent-light: #DC4055;
+    --accent-pale: #FBE0E4;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(42,46,51,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Aviation'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 118px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated · Q2 (中間期)</div>
+  <h1>日本航空株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信〔IFRS〕（連結）要約　／　証券コード 9201</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月2日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上収益</div>
+      <div class="kpi-value">1兆989.80<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 11.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">財務・法人所得税前利益</div>
+      <div class="kpi-value">701.72<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 36.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社所有者帰属中間利益</div>
+      <div class="kpi-value">390.66<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 42.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">79.91<span class="kpi-unit">円</span></div>
+      <div class="kpi-change down">▼ 前期 150.11円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">定期航空運送事業（国際線・国内線旅客、貨物郵便）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業ポートフォリオ</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">フルサービスキャリア／LCC／マイル・ライフスタイル等</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS（国際会計基準）・連結</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">鳥取三津子 社長執行役員</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">資本構成の特徴</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">社債型種類株式・永久劣後債による資本増強を実施</span>
+      </div>
+    </div>
+    <div class="highlight">国際線・国内線の旅客輸送を中核に、LCC（ZIPAIR・スプリング・ジャパン等）、貨物郵便、マイル／ライフスタイル領域へ事業を多角化する国内大手航空グループ。当中間期は旅客需要とインバウンドに支えられ売上収益1兆989.80億円（+11.7%）と増収を確保した一方、燃油費・人件費・整備費などのコスト増と前年同期の高水準の反動により、各利益段階で大幅減益となった。財務面では社債型種類株式の発行等による資本増強が進み、親会社所有者帰属持分比率は45.1%（+4.8pt）へ大きく改善している。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第2四半期（中間期）業績ハイライトと減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">売上収益</span>
+          <span class="data-val up">1兆989.80<span class="data-sub">億円 +11.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務・法人所得税前利益</span>
+          <span class="data-val down">701.72<span class="data-sub">億円 △36.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前中間利益</span>
+          <span class="data-val down">633.67<span class="data-sub">億円 △38.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属中間利益</span>
+          <span class="data-val down">390.66<span class="data-sub">億円 △42.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val down">378.89<span class="data-sub">億円 △52.1%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増収・減益の要因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">✈ 国際線・国内線の旅客需要が堅調に推移</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌐 インバウンド需要が売上収益を押し上げ（+11.7%）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⛽ 燃油費の増加が利益を圧迫</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔧 人件費・整備費などコスト全般の増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前年同期の高水準の反動で各利益段階が大幅減益</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 独自指標「財務・法人所得税前利益」の定義：</strong>当該指標は<strong>当社グループの業績を継続的に比較・評価することに資する指標</strong>として表示されているもので、<strong>中間利益から法人所得税費用、利息およびその他の財務収益・費用を除いたもの</strong>（EBIT相当）です。当中間期の金額は<strong>701.72億円（△36.0%）</strong>となりました。
+    </div>
+    <div class="highlight neutral">
+      <strong>※ EPS算定上の注記：</strong>社債型種類株式の配当金および永久劣後債の利息相当額は、1株当たり利益の算定において控除されています。また「1株当たり親会社所有者帰属持分」に使用する持分は、親会社の所有者に帰属する持分から当社普通株主に帰属しない金額を控除して算定されています。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">セグメント別状況（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item">
+          <div class="seg-name">フルサービスキャリア</div>
+          <div class="seg-row"><span>位置づけ</span><span>主力事業</span></div>
+          <div class="seg-row"><span>国際線・国内線旅客</span><span>—</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;">旅客需要とインバウンドが増収を牽引。燃油費・人件費・整備費の増加が利益を圧迫。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">LCC（ZIPAIR・スプリング・ジャパン等）</div>
+          <div class="seg-row"><span>位置づけ</span><span>成長領域</span></div>
+          <div class="seg-row"><span>路線網拡大</span><span>—</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;">中長距離LCCを含む成長領域。収益化の進展が今後の焦点。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">貨物郵便・マイル／ライフスタイル・その他</div>
+          <div class="seg-row"><span>位置づけ</span><span>多角化領域</span></div>
+          <div class="seg-row"><span>非航空収益</span><span>—</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;">貨物郵便およびマイル・ライフスタイル等の非航空収益の多角化を推進。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>本決算短信サマリーにセグメント別の数値の開示がないため、上記は事業ポートフォリオに基づく<strong>定性整理</strong>です。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上収益</span>
+            <span class="data-val up">2兆950<span class="data-sub">億円 +4.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">財務・法人所得税前利益</span>
+            <span class="data-val down">1,800<span class="data-sub">億円 △17.4%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社所有者帰属当期利益</span>
+            <span class="data-val down">1,100<span class="data-sub">億円 △20.1%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">業績予想の修正</span>
+            <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">無</span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>通期も減益計画（財務・法人所得税前利益△17.4%、親会社所有者帰属当期利益△20.1%）。中間期の進捗率は<strong>財務・法人所得税前利益39.0%・親会社所有者帰属利益35.5%</strong>と、下期偏重の計画となっています。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">3兆3,176.13<span class="data-sub">億円 +3.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">1兆5,431.96<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">1兆4,961.37<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val up">45.1<span class="data-sub">% （前期末 40.3% / +4.8pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">1株当たり情報・株式数</div>
+        <div class="data-row">
+          <span class="data-key">1株当たり親会社所有者帰属持分</span>
+          <span class="data-val">2,609.12<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己株式数</span>
+          <span class="data-val">7,191,588<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期中平均株式数</span>
+          <span class="data-val">429,863,188<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">（前年同期 期中平均）</span>
+          <span class="data-val">436,588,490<span class="data-sub">株</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>資産合計は3兆3,176.13億円（+3.7%）、資本合計1兆5,431.96億円、親会社所有者帰属持分1兆4,961.37億円。親会社所有者帰属持分比率は40.3%→<strong>45.1%（+4.8pt）</strong>と大きく改善したが、<strong>これは社債型種類株式の発行等による資本増強が寄与している点に留意が必要</strong>であり、利益蓄積のみによる改善ではない。1株当たり親会社所有者帰属持分は2,609.12円。期中平均株式数は429,863,188株（前年同期436,588,490株）へ減少、自己株式は7,191,588株。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">96.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間46 + 期末50</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">96.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間48 + 期末48</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">±0<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（配当予想の修正：無）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">対象株式</div>
+        <div class="div-cell-val" style="font-size:15px;">普通株式<span style="font-size:14px;color:var(--mid);">ベース</span></div>
+        <div class="div-cell-sub">種類株配当は別途開示</div>
+      </div>
+    </div>
+    <div class="highlight">
+      当期の配当予想は年間96円（中間48円＋期末48円）で、前期96円（中間46円＋期末50円）から<strong>±0円の維持</strong>。配当予想の修正は無し。<strong>親会社所有者帰属中間利益が△42.2%と大幅減益、通期も△20.1%の減益計画という環境下でも、株主還元水準を維持する方針</strong>を示している。※上記は<strong>普通株式に係る配当</strong>であり、<strong>社債型種類株式の配当は別途開示</strong>されている点に留意。配当性向については、通期予想EPSベースでの算出が決算短信サマリーに記載されていないため記載していない。また短信には明示的なDOE・配当性向目標の記載はない。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">燃油価格・為替の変動<br><small>コストの大半を左右する外部変動要因</small></div>
+      <div class="risk-item high">コスト増による減益<br><small>人件費・整備費の増加が利益を圧迫</small></div>
+      <div class="risk-item high">航空需要の変動<br><small>地政学リスク・感染症等による需要急変</small></div>
+      <div class="risk-item mid-level">中間・通期ともに減益計画<br><small>通期も財務・法人所得税前利益△17.4%</small></div>
+      <div class="risk-item mid-level">機材投資・更新負担<br><small>機材調達・更新に伴う資金負担</small></div>
+      <div class="risk-item mid-level">種類株式・永久劣後債の資本コスト<br><small>社債型種類株式配当・劣後債利息相当額の負担</small></div>
+      <div class="risk-item">LCC事業の収益化<br><small>ZIPAIR等成長領域の採算確立</small></div>
+      <div class="risk-item">空港発着枠・インフラ制約<br><small>スロット・空港容量による事業拡大の制約</small></div>
+      <div class="risk-item">持分比率の改善<br><small>親会社所有者帰属持分比率45.1%（+4.8pt）</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上収益1兆989.80億円（+11.7%）と増収を確保したが、財務・法人所得税前利益701.72億円（△36.0%）・税引前中間利益633.67億円（△38.4%）・親会社所有者帰属中間利益390.66億円（△42.2%）と各段階で大幅減益となった。国際線・国内線の旅客需要とインバウンドが売上を支えた一方、燃油費・人件費・整備費などのコスト増と前年同期の高水準の反動が利益を圧迫した。なお「財務・法人所得税前利益」は、中間利益から法人所得税費用・利息およびその他の財務収益費用を除いた、業績の継続的な比較・評価に資する指標として開示されているものである。中間包括利益も378.89億円（△52.1%）と減少した。財務は親会社所有者帰属持分比率が45.1%（+4.8pt）へ大きく改善したが、社債型種類株式の発行等による資本増強が寄与しており、EPS算定では社債型種類株式の配当金と永久劣後債の利息相当額が控除されている点に留意したい。配当は大幅減益下でも年間96円を維持（普通株式ベース、社債型種類株式の配当は別途開示）。通期も財務・法人所得税前利益1,800億円（△17.4%）・親会社所有者帰属当期利益1,100億円（△20.1%）の減益計画で、中間進捗は35〜39%にとどまる。燃油価格・為替の動向とコスト構造の改善が中長期の焦点となる。鳥取三津子社長執行役員。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は日本航空株式会社（9201）2027年3月期第2四半期（中間期）決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
