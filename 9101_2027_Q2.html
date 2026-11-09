@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本郵船株式会社 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #16375A;
+    --primary-light: #26517E;
+    --primary-dark: #0D2438;
+    --accent: #C89A3C;
+    --accent-light: #DCB45E;
+    --accent-pale: #F4EBD5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(22,55,90,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Shipping'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>日本郵船株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 9101</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月5日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">1兆5,050.25<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 27.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">1,148.76<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 91.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">2,132.62<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 79.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">2,034.81<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 106.9%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">総合物流・海運（定期船・不定期専用船・物流）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ライナー&amp;ロジスティクス</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">定期船（ONE）・航空運送・物流</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">不定期専用船</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">自動車専用船・ドライバルク・エネルギー輸送（LNG船等）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">持分法適用の中核</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">コンテナ船事業 ONE（Ocean Network Express）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">曽我貴也 社長</span>
+      </div>
+    </div>
+    <div class="highlight">ライナー&amp;ロジスティクス（定期船ONE・航空運送・物流）と不定期専用船（自動車専用船・ドライバルク・エネルギー輸送）を展開する総合海運・物流企業。当中間期はコンテナ運賃水準と自動車輸送、物流が好調で、売上高+27.3%・営業利益+91.9%・経常利益+79.8%・親会社株主帰属中間純利益+106.9%と全段階で大幅増益。持分法適用会社であるONEの持分法投資利益が収益構造の大きな部分を占める点が特徴。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第2四半期（中間期）業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">1兆5,050.25<span class="data-sub">億円 <span class="up">+27.3%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">1,148.76<span class="data-sub">億円 <span class="up">+91.9%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">2,132.62<span class="data-sub">億円 <span class="up">+79.8%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">2,034.81<span class="data-sub">億円 <span class="up">+106.9%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">1,859.22<span class="data-sub">億円 <span class="up">+177.0%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">503.86<span class="data-sub">円（前期 230.16円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚢 コンテナ運賃水準の上昇（定期船ONE）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚗 自動車専用船・自動車輸送の好調</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📦 物流事業の堅調な推移</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⛽ ドライバルク・エネルギー輸送の安定収益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 持分法投資利益の大幅な拡大</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>★ 重要な注記（利益構造）：</strong>経常利益2,132.62億円が営業利益1,148.76億円を大きく上回り、<strong>営業利益の約1.9倍</strong>となっている。これは<strong>持分法適用会社であるコンテナ船事業ONE（Ocean Network Express）の持分法投資利益</strong>を中心とした営業外収益によるもので、同社の収益構造では<strong>持分法損益が利益の大きな部分を占める</strong>点に留意が必要。
+    </div>
+    <div class="highlight neutral">
+      <strong>※ 会計上の注記：</strong>2026年3月期第2四半期（中間期）に係る各数値については、企業結合に係る暫定的な会計処理の確定の内容を反映している（前年同期を組替え）。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">セグメント状況（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">定期船（ONE）／航空運送</div>
+          <div class="seg-row"><span>区分</span><span>持分法</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">コンテナ運賃水準の上昇を背景に、持分法投資利益として経常利益に大きく寄与。航空運送も収益を補完。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">不定期専用船</div>
+          <div class="seg-row"><span>区分</span><span>連結</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">自動車専用船が好調。ドライバルク、エネルギー輸送（LNG船等）が中長期契約を軸に安定収益を提供。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">物流・その他（不動産等）</div>
+          <div class="seg-row"><span>区分</span><span>連結</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">物流事業が堅調に推移。不動産等その他事業が収益基盤を補完。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>本決算短信サマリーにセグメント別の数値の開示がないため、上記は事業内容に基づく<strong>定性整理</strong>である。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">3兆円<span class="data-sub"><span class="up">+23.8%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">2,100.00<span class="data-sub">億円 <span class="up">+51.5%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">3,350.00<span class="data-sub">億円 <span class="up">+58.7%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">3,300.00<span class="data-sub">億円 <span class="up">+55.8%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">EPS（予想）</span>
+            <span class="data-val">817.36<span class="data-sub">円</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">業績予想の修正</span>
+            <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">無</span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>★ 進捗率：</strong>中間期の通期予想に対する進捗は<strong>経常利益63.7%・親会社株主帰属純利益61.7%</strong>と大きく先行しており、<strong>下期は減速を想定した計画</strong>である点に留意。通期予想は据え置かれている。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">5兆6,766.77<span class="data-sub">億円 <span class="up">+9.1%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">3兆2,611.26<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">3兆1,984.87<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">56.3<span class="data-sub">%（前期末 59.1% / <span class="down">△2.8pt</span>）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">株式数（自己株式取得・消却を継続）</div>
+        <div class="data-row">
+          <span class="data-key">期末発行済株式数</span>
+          <span class="data-val">405,321,700<span class="data-sub">株（前期末 408,780,000株）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末自己株式数</span>
+          <span class="data-val">1,709,970<span class="data-sub">株（前期末 3,288,388株）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期中平均株式数</span>
+          <span class="data-val">403,844,925<span class="data-sub">株（前年同期 427,233,312株）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期中平均の減少</span>
+          <span class="data-val">約2,340<span class="data-sub">万株減（自己株式取得・消却）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>★ 財政状態：</strong>総資産は5兆6,766.77億円と前期末比<strong>+9.1%増加</strong>する一方で、<strong>自己資本比率は59.1%→56.3%と△2.8pt低下</strong>している点に留意。純資産は3兆2,611.26億円、自己資本3兆1,984.87億円。自己株式の取得・消却を継続しており、期末発行済株式数は405,321,700株（前期末408,780,000株）、期末自己株式数は1,709,970株（前期末3,288,388株）、期中平均株式数は403,844,925株（前年同期427,233,312株）と<strong>約2,340万株減少</strong>し、1株当たり価値の向上に寄与している。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">230<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間115 + 期末115</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">330<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間165 + 期末165</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val up">+100<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">大幅増配（+43.5%）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約40<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">予想EPS 817.36円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>★ 大幅増配・配当予想の修正あり：</strong>当期の配当予想を<strong>上方修正</strong>し、前期230円（中間115円+期末115円）から<strong>330円（中間165円+期末165円）へ+100円の大幅増配（+43.5%）</strong>とした。配当性向は通期予想EPS817.36円ベースで約40%。<strong>自己株式の取得・消却（期中平均株式数が約2,340万株減少）と合わせて、株主還元を大きく強化</strong>している。なお本短信において明示的なDOE/配当性向目標の記載はない。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">コンテナ運賃（ONE）の変動<br><small>持分法損益への依存度が高く、運賃下落が利益を直撃</small></div>
+      <div class="risk-item high">地政学リスク<br><small>紅海・スエズ等の航路情勢と迂回による変動</small></div>
+      <div class="risk-item high">海運市況の循環性<br><small>サイクル産業特有の需給・運賃変動</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>ドル建て運賃収入と円換算への影響</small></div>
+      <div class="risk-item mid-level">自動車輸送・世界貿易の動向<br><small>完成車輸送需要と貿易量の変化</small></div>
+      <div class="risk-item mid-level">燃料油価格<br><small>バンカー価格の変動による運航コストの増減</small></div>
+      <div class="risk-item">脱炭素への大型投資<br><small>次世代燃料船（LNG・アンモニア等）の建造負担</small></div>
+      <div class="risk-item">自己資本比率の低下<br><small>56.3%（前期末59.1%、△2.8pt）</small></div>
+      <div class="risk-item">大幅増配の持続性<br><small>330円（+100円）水準の継続性と市況依存</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高1兆5,050.25億円（+27.3%）・営業利益1,148.76億円（+91.9%）・経常利益2,132.62億円（+79.8%）・親会社株主帰属中間純利益2,034.81億円（+106.9%）と<strong>全段階で大幅増益</strong>。コンテナ運賃水準と自動車輸送、物流が好調だった。包括利益も1,859.22億円（+177.0%）。EPSは503.86円（前期230.16円）。<strong>★経常利益が営業利益の約1.9倍となっているのは、持分法適用会社であるコンテナ船事業ONE（Ocean Network Express）の持分法投資利益を中心とした営業外収益によるもので、同社の収益構造では持分法損益が利益の大きな部分を占める点に留意</strong>。財務は総資産5兆6,766.77億円（+9.1%）、自己資本比率56.3%（△2.8pt）。<strong>配当は予想を上方修正し+100円の大幅増配で330円（配当性向約40%）</strong>、自己株式取得・消却（期中平均株式数が約2,340万株減）と合わせ株主還元を大きく強化した。<strong>通期は経常利益3,350億円（+58.7%）・親会社株主帰属当期純利益3,300億円（+55.8%）の計画を据え置き</strong>、中間進捗は経常63.7%・純利益61.7%と大きく先行（下期は減速想定）。コンテナ運賃と地政学、脱炭素投資が中長期の焦点。曽我貴也社長。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は日本郵船株式会社（9101）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
