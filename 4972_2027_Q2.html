@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>綜研化学株式会社 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #38406E;
+    --primary-light: #4C5590;
+    --primary-dark: #242A4A;
+    --accent: #C08A3C;
+    --accent-light: #D4A45E;
+    --accent-pale: #F2E9D6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(56,64,110,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Adhesive'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>綜研化学株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 4972</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月5日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証スタンダード</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">257.65<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 13.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">37.54<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 26.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">37.76<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 31.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">29.37<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 40.4%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">粘着剤（光学・電子・産業用）の開発・製造・販売</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">粘着剤／機能性材料・化成品／海外（アジア）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要用途</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">半導体・ディスプレイ・光学・電子・自動車向け</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">冨田幸二 社長執行役員</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計処理</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">中間連結財務諸表の作成に特有の会計処理の適用：有</span>
+      </div>
+    </div>
+    <div class="highlight">粘着剤（光学・電子・産業用）を主力に、機能性材料・化成品、海外（アジア）を展開する化学メーカー。当中間期は売上高257.65億円（+13.3%）に対し営業利益37.54億円（+26.5%）・経常利益37.76億円（+31.2%）・親会社株主帰属中間純利益29.37億円（+40.4%）と、段階を追って伸び率が拡大する形で収益性が大きく改善した。半導体・ディスプレイ関連の需要と価格施策、採算改善が寄与。財務は自己資本比率70.2%・実質無借金と健全。なお株式分割は実施しておらず、EPS等は分割調整を要しない（過年度に分割がある場合は分割後換算で統一し、分割前実績はカッコ書きで注記する方針）。</div>
+  </section>
+
+  <!-- 02 業績ハイライト -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">業績ハイライト（増収・全段階で大幅増益）</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間期）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">257.65<span class="data-sub">億円 <span class="up">+13.3%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">37.54<span class="data-sub">億円 <span class="up">+26.5%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">37.76<span class="data-sub">億円 <span class="up">+31.2%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">29.37<span class="data-sub">億円 <span class="up">+40.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val">39.73<span class="data-sub">億円 <span class="up">+329.0%</span>（前期9.26億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">176.96<span class="data-sub">円（前期126.12円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔬 粘着剤（光学・電子）が牽引し増収</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💡 半導体・ディスプレイ関連の需要回復</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 価格施策・採算改善で利益率が大幅改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚗 機能性材料（光学・電子・自動車向け）の寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 海外（アジア）の現地生産・販売が収益を補完</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 注記（収益性の改善と包括利益の性質）：</strong>売上高<span class="up">+13.3%</span>に対し営業<span class="up">+26.5%</span>・経常<span class="up">+31.2%</span>・純利益<span class="up">+40.4%</span>と、<strong>段階を追って伸び率が拡大しており収益性が大きく改善</strong>している。粘着剤・機能性材料（光学・電子・自動車向け）が牽引した。一方、<strong>中間包括利益は39.73億円（+329.0%）と急増しているが、これは前年同期が9.26億円（前期△79.5%）と低水準だった反動に加え、為替換算調整や有価証券評価等の影響である点に留意</strong>が必要で、本体の収益改善幅（営業+26.5%）とは分けて評価すべきである。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">セグメント別（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">粘着剤（光学・電子・産業用）</div>
+          <div class="seg-row"><span>位置づけ</span><span>主力</span></div>
+          <div class="seg-row"><span>市場</span><span>半導体・DP</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;">主力事業。半導体・ディスプレイ関連の市況が収益を左右する最大の変動要因。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">機能性材料・化成品</div>
+          <div class="seg-row"><span>位置づけ</span><span>高付加価値</span></div>
+          <div class="seg-row"><span>市場</span><span>光学・自動車</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;">高付加価値領域。新製品・高機能用途の開拓が利益率向上の鍵。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">海外（アジア）</div>
+          <div class="seg-row"><span>位置づけ</span><span>成長・分散</span></div>
+          <div class="seg-row"><span>市場</span><span>中台韓ほか</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;">中国・台湾・韓国等での現地生産・販売。為替と現地競合の価格動向が業績に影響。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>本決算短信のサマリー情報にセグメント別の売上高・利益の開示がないため、上記は事業内容に基づく<strong>定性整理</strong>である（数値はセグメント別に開示されていない）。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・修正なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">515.00<span class="data-sub">億円 <span class="up">+7.4%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">63.00<span class="data-sub">億円 <span class="up">+2.1%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">62.00<span class="data-sub">億円 <span class="down">△0.6%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">43.00<span class="data-sub">億円 <span class="up">+6.3%</span>（EPS259.19円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>※ 進捗と下期の想定：</strong>中間期は営業利益<span class="up">+26.5%</span>の大幅増益だが、<strong>通期は営業+2.1%・経常<span class="down">△0.6%</span>と伸びが大きく鈍化する計画</strong>。中間進捗は営業<strong>59.6%</strong>・純利益<strong>68.3%</strong>と大きく先行しており、会社計画は<strong>下期の減速を想定</strong>している。業績予想の修正は無し。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">630.53<span class="data-sub">億円 <span class="up">+7.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">442.46<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">442.46<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">70.2<span class="data-sub">% （前期末 70.7% / <span class="down">△0.5pt</span>）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務の特徴</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏛 自己資本比率70.2%と高い健全性</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💴 実質無借金の健全な財務体質</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 総資産+7.4%は増益と事業拡大を反映</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚖ 自己資本比率△0.5ptは資産増による希薄化</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏭 設備投資・海外展開を自己資金で賄える余力</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は前期末比<span class="up">+7.4%</span>の630.53億円、純資産442.46億円（自己資本442.46億円）。自己資本比率は前期末70.7%から<strong>70.2%（<span class="down">△0.5pt</span>）</strong>と小幅低下したが、これは利益蓄積以上に総資産が増加したことによるもので、<strong>実質無借金の健全な財務</strong>は維持されている。なお中間連結財務諸表の作成に特有の会計処理の適用は「有」。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">75.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間0 + 期末75</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">未定</div>
+        <div class="div-cell-sub">短信上は「－」表記</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">－</div>
+        <div class="div-cell-sub">未定のため算出不可</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">★ 短信記載</div>
+        <div class="div-cell-val" style="font-size:15px;">現時点では未定</div>
+        <div class="div-cell-sub">配当予想の修正：無</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>★ 当期配当予想は「未定」：</strong>前期（2026年3月期）の年間配当は<strong>75円（中間0円＋期末75円）</strong>。これに対し<strong>当期2027年3月期の配当予想は決算短信上「－」表記であり、「なお2027年3月期の配当予想につきましては、現時点では未定としております」と明記されている</strong>。したがって<strong>当期の配当金額および配当性向は算出できない</strong>（本資料では推測値を記載しない）。配当予想の修正も無し。中間期が営業+26.5%・純利益+40.4%の大幅増益であるなかで配当予想が示されていない点は、投資判断上の留意点である。短信に明示的なDOE／配当性向目標の記載もなし。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">配当予想が現時点で未定<br><small>短信に「現時点では未定」と明記。金額・配当性向が算出不可</small></div>
+      <div class="risk-item high">通期の伸びが大きく鈍化<br><small>中間営業+26.5%→通期+2.1%、経常は△0.6%の計画</small></div>
+      <div class="risk-item high">粘着剤の需要変動<br><small>半導体・ディスプレイ市況の変動が主力事業に直撃</small></div>
+      <div class="risk-item mid-level">原材料・エネルギー価格<br><small>モノマー等の原料・電力コストの上昇が採算を圧迫</small></div>
+      <div class="risk-item mid-level">為替・海外市況（アジア）<br><small>中国・台湾・韓国等の需給と為替換算の影響</small></div>
+      <div class="risk-item mid-level">包括利益の急増は反動<br><small>+329.0%は前期9.26億円（△79.5%）の低水準の反動</small></div>
+      <div class="risk-item">中国等の競合と価格<br><small>現地メーカーの能力増強による価格競争</small></div>
+      <div class="risk-item">新製品・高機能用途の開拓<br><small>高付加価値領域の拡大が利益率向上の鍵</small></div>
+      <div class="risk-item">健全な財務<br><small>自己資本比率70.2%・実質無借金</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高257.65億円（<span class="up">+13.3%</span>）に対し営業利益37.54億円（<span class="up">+26.5%</span>）・経常37.76億円（<span class="up">+31.2%</span>）・親会社株主帰属中間純利益29.37億円（<span class="up">+40.4%</span>）と、段階を追って伸び率が拡大し収益性が大きく改善した。粘着剤・機能性材料（光学・電子・自動車向け）が牽引した。<strong>包括利益39.73億円（+329.0%）の急増は、前年同期が9.26億円（前期△79.5%）と低水準だった反動に加え為替換算調整等の影響である点に留意。</strong>EPSは176.96円（前期126.12円）。財務は自己資本比率70.2%・実質無借金と健全。<strong>配当については、2027年3月期の配当予想は「現時点では未定」と短信に明記されており（前期は年間75円＝中間0円＋期末75円）、大幅増益のなかでも予想が示されていない点は投資判断上の留意点。明示的なDOE／配当性向目標の記載もなし。</strong>通期は売上515.00億円（+7.4%）・営業63.00億円（+2.1%）・経常62.00億円（<span class="down">△0.6%</span>）と伸びが大きく鈍化する計画で、中間進捗は営業59.6%・純利益68.3%と大きく先行しており下期は減速を想定。粘着剤の需要（半導体・ディスプレイ関連）と配当方針の確定が今後の注目点。冨田幸二 社長執行役員。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は綜研化学株式会社（4972）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
