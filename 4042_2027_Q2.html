@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東ソー株式会社 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #103A6E;
+    --primary-light: #24405F;
+    --primary-dark: #0A2448;
+    --accent: #C79A3C;
+    --accent-light: #D9B465;
+    --accent-pale: #F4EBD5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(20,40,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Chemistry'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>東ソー株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 4042</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月5日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">5,796.77<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 16.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">493.92<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 10.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">491.76<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 7.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">267.66<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 262.8%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">クロル・アルカリ／石油化学／機能商品／エンジニアリング</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">クロル・アルカリ</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">苛性ソーダ・塩化ビニル等の基礎化学品</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">石油化学</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">オレフィン・ポリマー</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">機能商品</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ジルコニア・バイオサイエンス・電解二酸化マンガン等</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">桒田守 社長</span>
+      </div>
+    </div>
+    <div class="highlight">苛性ソーダ・塩ビのクロル・アルカリを基盤に、石油化学（オレフィン）、機能商品（ジルコニア・バイオサイエンス・電解二酸化マンガン等）、エンジニアリングを展開する総合化学メーカー。当中間期（2026年4月1日〜2026年9月30日）は売上高5,796.77億円（+16.1%）・営業利益493.92億円（+10.4%）・経常利益491.76億円（+7.5%）・親会社株主帰属中間純利益267.66億円（+262.8%）の増収増益。機能商品の採算改善と価格施策が寄与した。ただし純利益・包括利益の極端な伸び率は前年同期の低水準からの反動である点に留意が必要。自己資本比率57.0%と健全な財務水準を維持している。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間期）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">5,796.77<span class="data-sub">億円 <span class="up">+16.1%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">493.92<span class="data-sub">億円 <span class="up">+10.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">491.76<span class="data-sub">億円 <span class="up">+7.5%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">267.66<span class="data-sub">億円 <span class="up">+262.8%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">440.98<span class="data-sub">億円 <span class="up">+289.9%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">86.93<span class="data-sub">円（前期 23.21円 / 潜在株式調整後 86.92円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔬 機能商品（ジルコニア・バイオサイエンス）の採算改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 価格施策の浸透</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚗️ クロル・アルカリ（苛性ソーダ・塩ビ）の収益基盤</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛢 石油化学（オレフィン）のスプレッド</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前期の低水準からの反動で各段階が増益</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 伸び率の読み方（最重要）：</strong>中間純利益の+262.8%、包括利益の+289.9%という極端な伸び率は、<strong>前年同期の中間純利益が73.77億円（前期は△70.4%の大幅減益）、包括利益が113.09億円（同△71.7%）と低水準だった反動</strong>によるものである。営業利益（+10.4%）・経常利益（+7.5%）の伸びが実力に近い水準であり、<strong>純利益の伸び率をそのまま成長率と受け取らないよう留意が必要</strong>。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">セグメント別（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item">
+          <div class="seg-name">クロル・アルカリ</div>
+          <div class="seg-row"><span>領域</span><span>苛性ソーダ・塩ビ</span></div>
+          <div style="font-size:12px;color:var(--mid);margin-top:6px;">苛性ソーダ・塩化ビニルが収益基盤。市況と電力コストに左右される。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">石油化学</div>
+          <div class="seg-row"><span>領域</span><span>オレフィン・ポリマー</span></div>
+          <div style="font-size:12px;color:var(--mid);margin-top:6px;">オレフィン・ポリマー。ナフサ価格とスプレッドが収益に影響する。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">機能商品・エンジニアリング</div>
+          <div class="seg-row"><span>領域</span><span>高付加価値・診断薬</span></div>
+          <div style="font-size:12px;color:var(--mid);margin-top:6px;">ジルコニア、バイオサイエンス（診断薬）、電解二酸化マンガン等の高付加価値領域。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>本決算短信サマリーにセグメント別の数値開示がないため、上記は各領域の事業内容に基づく定性整理である。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・修正あり）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">1兆2,000.00<span class="data-sub">億円 <span class="up">+17.7%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">1,090.00<span class="data-sub">億円 <span class="up">+14.1%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">1,070.00<span class="data-sub">億円 <span class="up">+0.2%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">590.00<span class="data-sub">億円 <span class="up">+41.8%</span>（EPS191.61円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 業績予想の修正：有。</strong>通期は営業利益+14.1%に対し<strong>経常利益は+0.2%とほぼ横ばい計画で、営業と経常の伸びに差がある</strong>点に留意が必要。中間期の進捗は営業利益45.3%・親会社株主帰属純利益45.4%。なお中間連結財務諸表の作成に特有の会計処理の適用：有。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">1兆4,978.03<span class="data-sub">億円 +6.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">9,453.86<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">8,538.43<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">57.0<span class="data-sub">% （前期末 59.0% / <span class="down">△2.0pt</span>）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">1株当たり指標・会計上の注記</div>
+        <div class="data-row">
+          <span class="data-key">中間EPS（基本的）</span>
+          <span class="data-val">86.93<span class="data-sub">円（前期 23.21円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">潜在株式調整後EPS</span>
+          <span class="data-val">86.92<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">通期予想EPS</span>
+          <span class="data-val">191.61<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">特有の会計処理</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">中間連結財務諸表の作成に特有の会計処理の適用：有</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は1兆4,978.03億円（+6.3%）、純資産は9,453.86億円、自己資本は8,538.43億円。自己資本比率は59.0%→57.0%（△2.0pt）へ低下したものの、<strong>依然として57.0%と健全な財務水準を維持している</strong>。総資産の増加は運転資本・投資の拡大を伴うものであり、収益改善局面での資産効率と財務規律の両立が今後の論点となる。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">100.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間50 + 期末50</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">100.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間50 + 期末50</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">±0<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（配当予想の修正：無）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約52<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">予想EPS191.61円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      年間配当は前期100円（中間50円＋期末50円）から当期予想も100円（中間50円＋期末50円）で据え置き、前期比±0の維持。配当予想の修正は無。配当性向は通期予想EPS191.61円ベースで約52%。<strong>中間期に親会社株主帰属中間純利益+262.8%・包括利益+289.9%という大幅増益を計上したなかでも配当は据え置き</strong>であり、純利益の伸びが前期低水準からの反動である点を踏まえた慎重な姿勢とみられる。なお本決算短信には明示的なDOE/配当性向目標の記載はない。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">純利益・包括利益の伸び率は反動<br><small>前期の低水準（純利益73.77億円／包括113.09億円）からの反発</small></div>
+      <div class="risk-item high">クロル・アルカリと石油化学の市況<br><small>苛性ソーダ・塩ビ・オレフィンのスプレッド変動</small></div>
+      <div class="risk-item high">原燃料・電力コスト<br><small>ナフサ・電力価格の上昇が採算を直撃</small></div>
+      <div class="risk-item mid-level">通期の経常はほぼ横ばい計画<br><small>営業+14.1%に対し経常+0.2%と伸びに差</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>海外売上・換算調整を通じた損益・包括利益への影響</small></div>
+      <div class="risk-item mid-level">中国等の過剰供給と競合<br><small>アジアの能力増強による価格競争</small></div>
+      <div class="risk-item">機能商品の成長<br><small>ジルコニア・バイオサイエンスの拡大余地</small></div>
+      <div class="risk-item">自己資本比率の低下<br><small>59.0%→57.0%（△2.0pt）、水準自体は健全</small></div>
+      <div class="risk-item">大型設備投資<br><small>投資回収の遅延リスクと減価償却負担</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高5,796.77億円（+16.1%）・営業利益493.92億円（+10.4%）・経常利益491.76億円（+7.5%）・親会社株主帰属中間純利益267.66億円（+262.8%）の増収増益。機能商品の採算改善と価格施策が寄与した。ただし中間純利益の+262.8%、包括利益440.98億円の+289.9%という極端な伸び率は、前年同期の中間純利益が73.77億円（前期△70.4%）、包括利益が113.09億円（同△71.7%）と低水準だった反動によるもので、営業利益（+10.4%）・経常利益（+7.5%）の伸びが実力に近い水準である点に留意が必要。EPSは86.93円（前期23.21円）。財務は総資産1兆4,978.03億円（+6.3%）、自己資本比率57.0%（△2.0pt）と健全な水準を維持。配当は100円据え置き（配当性向約52%）。通期は売上高1兆2,000億円（+17.7%）・営業利益1,090.00億円（+14.1%）・親会社株主帰属当期純利益590.00億円（+41.8%）へ修正したが、経常利益は1,070.00億円（+0.2%）とほぼ横ばい計画で営業との伸びに差がある。中間進捗は営業利益45.3%・純利益45.4%。クロル・アルカリと石油化学の市況、原燃料・電力コスト、機能商品の成長が中長期の論点。桒田守社長。なお本短信に明示的なDOE/配当性向目標の記載はない。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は東ソー株式会社（4042）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
