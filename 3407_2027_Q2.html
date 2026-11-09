@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>旭化成株式会社 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #6E2A4E;
+    --primary-light: #24405F;
+    --primary-dark: #481B33;
+    --accent: #C0873C;
+    --accent-light: #D4A45E;
+    --accent-pale: #F4EBD5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(20,40,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Chemical'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>旭化成株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 3407</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月5日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">1兆6,896.09<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 13.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">1,654.41<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 54.0%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">1,613.80<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 52.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">1,021.98<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 54.2%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">総合化学（マテリアル・住宅・ヘルスケアの3領域）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">マテリアル領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">石油化学・高機能材料・繊維</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">住宅領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ヘーベルハウス等の住宅建設・リフォーム・不動産</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ヘルスケア領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">医薬（ベリノグラダスト等）・医療機器（ゾール）・バイオプロセス</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">工藤幸四郎 社長</span>
+      </div>
+    </div>
+    <div class="highlight">マテリアル・住宅・ヘルスケアの3領域からなる総合化学メーカー。当中間期（2026年4月1日〜2026年9月30日）は売上高1兆6,896.09億円（+13.7%）に対し営業利益1,654.41億円（+54.0%）・経常利益1,613.80億円（+52.1%）・親会社株主帰属中間純利益1,021.98億円（+54.2%）と、増収率を大きく上回る増益で収益性が大幅に改善した。ヘルスケア（医薬・医療機器）とマテリアル（高機能材料）の採算改善、価格施策が効いている。業績改善を受けて配当予想を上方修正し、年間48円（+6円増配）とした。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間期）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">1兆6,896.09<span class="data-sub">億円 <span class="up">+13.7%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">1,654.41<span class="data-sub">億円 <span class="up">+54.0%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">1,613.80<span class="data-sub">億円 <span class="up">+52.1%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">1,021.98<span class="data-sub">億円 <span class="up">+54.2%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">703.79<span class="data-sub">億円 <span class="down">△1.6%</span>（前期 715.15億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">75.94<span class="data-sub">円（前期 48.79円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💊 ヘルスケア（医薬・医療機器）の採算改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🧪 マテリアル（高機能材料）の採算改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 価格施策の浸透による収益性向上</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏠 住宅（ヘーベルハウス等）の安定収益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 増収率+13.7%を大きく上回る営業利益+54.0%</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 増益と包括利益の方向差：</strong>売上高+13.7%に対し営業利益+54.0%・中間純利益+54.2%と、収益性が大きく改善した。ヘルスケア（医薬・医療機器）とマテリアル（高機能材料）の採算改善、価格施策が効いている。<strong>一方、包括利益は703.79億円（△1.6%）と損益の大幅増益とは方向が異なり、為替換算調整勘定や有価証券評価等の影響が重い点に留意が必要</strong>である。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">セグメント別（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item">
+          <div class="seg-name">マテリアル</div>
+          <div class="seg-row"><span>領域</span><span>石化・高機能材料・繊維</span></div>
+          <div style="font-size:12px;color:var(--mid);margin-top:6px;">石油化学・高機能材料・繊維。市況と採算改善が収益を左右する基盤領域。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">住宅</div>
+          <div class="seg-row"><span>領域</span><span>住宅建設・不動産</span></div>
+          <div style="font-size:12px;color:var(--mid);margin-top:6px;">ヘーベルハウス等の住宅建設と不動産。グループの安定収益源。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">ヘルスケア</div>
+          <div class="seg-row"><span>領域</span><span>医薬・医療機器・バイオ</span></div>
+          <div style="font-size:12px;color:var(--mid);margin-top:6px;">医薬（ベリノグラダスト等）・医療機器（ゾール）・バイオプロセス。成長ドライバー。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>本決算短信サマリーにセグメント別の数値開示がないため、上記は各領域の事業内容に基づく定性整理である。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・修正あり）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">3兆4,220.00<span class="data-sub">億円 <span class="up">+11.3%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">2,900.00<span class="data-sub">億円 <span class="up">+25.4%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">2,830.00<span class="data-sub">億円 <span class="up">+22.8%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">1,730.00<span class="data-sub">億円 <span class="up">+8.9%</span>（EPS129.12円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 業績予想の修正：有。</strong>中間期の進捗は営業利益57.0%・親会社株主帰属純利益59.1%と計画を先行しており、<strong>下期は減速を想定した計画</strong>となっている。とくに通期の親会社株主帰属当期純利益は+8.9%で、中間期の+54.2%から大きく鈍化する前提である点に留意が必要。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">4兆4,114.78<span class="data-sub">億円 +6.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">2兆1,659.65<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">2兆852.71<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">47.3<span class="data-sub">% （前期末 50.5% / <span class="down">△3.2pt</span>）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">1株当たり指標・財務の論点</div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,563.40<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間EPS（基本的）</span>
+          <span class="data-val">75.94<span class="data-sub">円（前期 48.79円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">通期予想EPS</span>
+          <span class="data-val">129.12<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">総資産の増加</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">投資・運転資本の増加に伴う負債拡大を示唆</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は4兆4,114.78億円（+6.6%）、純資産は2兆1,659.65億円、自己資本は2兆852.71億円、1株当たり純資産は1,563.40円。<strong>総資産が+6.6%増加する一方で自己資本比率は50.5%→47.3%（△3.2pt）へ低下しており、投資や運転資本の増加に伴う負債の拡大を示唆する点に留意が必要</strong>。中間純利益の大幅増益による自己資本の積み上がりを上回るペースで総資産が膨らんでいる構図であり、今後の投資回収と財務規律が論点となる。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">42.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間20 + 期末22</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">48.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間24 + 期末24</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val up">+6.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+14.3% 増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当予想の修正</div>
+        <div class="div-cell-val" style="color:var(--accent);font-size:18px;">有</div>
+        <div class="div-cell-sub">配当性向 約37%</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>業績の改善を受けて配当予想を上方修正</strong>し、年間配当は前期42円（中間20円＋期末22円）から当期予想48円（中間24円＋期末24円）へ、前期比+6円（+14.3%）の増配となる。配当性向は通期予想EPS129.12円ベースで約37%。中間期に営業利益+54.0%・親会社株主帰属中間純利益+54.2%と収益性が大幅に改善したことを踏まえ、株主還元を一段引き上げた形である。なお本決算短信には明示的なDOE/配当性向目標の記載はない。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">石化市況とスプレッドの変動<br><small>石油化学の需給・価格差が収益を大きく左右</small></div>
+      <div class="risk-item high">通期純利益の伸びが大きく鈍化<br><small>中間+54.2%→通期計画+8.9%へ減速前提</small></div>
+      <div class="risk-item mid-level">自己資本比率の低下と有利子負債<br><small>47.3%（△3.2pt）・総資産+6.6%で負債拡大</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>包括利益703.79億円（△1.6%）に換算調整の影響</small></div>
+      <div class="risk-item mid-level">住宅市場の動向<br><small>住宅着工・金利環境がヘーベルハウス事業に影響</small></div>
+      <div class="risk-item">ヘルスケアの開発・薬価<br><small>医薬パイプラインの進捗と薬価改定リスク</small></div>
+      <div class="risk-item">原燃料価格<br><small>ナフサ・電力等のコスト上昇が採算を圧迫</small></div>
+      <div class="risk-item">中国等の競合と過剰供給<br><small>アジアの能力増強による価格競争</small></div>
+      <div class="risk-item">大型投資・減損リスク<br><small>M&A・設備投資の回収遅延による減損</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高1兆6,896.09億円（+13.7%）に対し営業利益1,654.41億円（+54.0%）・経常利益1,613.80億円（+52.1%）・親会社株主帰属中間純利益1,021.98億円（+54.2%）と、増収率を大きく上回る増益で収益性が大幅に改善した。ヘルスケア（医薬・医療機器）とマテリアル（高機能材料）の採算改善、価格施策が効いた。一方、包括利益は703.79億円（△1.6%）と損益の大幅増益とは方向が異なり、為替換算調整等の影響が重い。財務は総資産4兆4,114.78億円（+6.6%）と増加する一方、自己資本比率は47.3%（△3.2pt）へ低下しており、投資・運転資本の増加に伴う負債拡大を示唆する。配当は業績改善を受けて予想を上方修正し、+6円増配の年間48円（配当性向約37%）。通期は売上高3兆4,220億円（+11.3%）・営業利益2,900億円（+25.4%）へ修正したが、親会社株主帰属当期純利益は1,730億円（+8.9%）で中間期の+54.2%から大きく鈍化する計画。中間進捗は営業利益57.0%・純利益59.1%と先行しており、下期は減速を想定している。石化市況と自己資本比率の低下、ヘルスケアの成長が中長期の論点。工藤幸四郎社長。なお本短信に明示的なDOE/配当性向目標の記載はない。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は旭化成株式会社（3407）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
