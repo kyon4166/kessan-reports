@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三菱重工業株式会社 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A2B45;
+    --primary-light: #2A3F5F;
+    --primary-dark: #101A2B;
+    --accent: #B5410F;
+    --accent-light: #CC6A3C;
+    --accent-pale: #F7E4D9;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,43,69,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Industry'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated · Q2 (中間期)</div>
+  <h1>三菱重工業株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信〔IFRS〕（連結）要約　／　証券コード 7011</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月6日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム・名証・札証・福証</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上収益</div>
+      <div class="kpi-value">2兆5,232.69<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 19.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">事業利益</div>
+      <div class="kpi-value">2,493.04<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 45.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社所有者帰属中間利益</div>
+      <div class="kpi-value">2,032.91<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 76.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">60.49<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">▲ 前期 34.21円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS（国際会計基準）・連結</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">事業ドメイン</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">エナジー／プラント・インフラ／物流・冷熱・ドライブシステム／航空・防衛・宇宙</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主力製品</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ガスタービン（GTCC）・火力・原子力・防衛・宇宙</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">伊藤栄作 社長</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">上場市場</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">東証プライム・名証・札証・福証</span>
+      </div>
+    </div>
+    <div class="highlight">エナジー（ガスタービン・火力・原子力）、プラント・インフラ、物流・冷熱・ドライブシステム、航空・防衛・宇宙の4ドメインを展開する総合重機メーカー。当中間期はGTCC（ガスタービン・コンバインドサイクル）を中心としたエナジーと防衛・宇宙の需要拡大により、売上収益+19.4%・事業利益+45.3%・親会社所有者帰属中間利益+76.9%の大幅増収増益。通期予想は2026年5月12日公表分から上方修正された。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">売上収益</span>
+          <span class="data-val">2兆5,232.69<span class="data-sub"><span class="up">億円 +19.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">事業利益</span>
+          <span class="data-val">2,493.04<span class="data-sub"><span class="up">億円 +45.3%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前中間利益</span>
+          <span class="data-val">2,632.14<span class="data-sub"><span class="up">億円 +51.5%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間利益</span>
+          <span class="data-val">2,072.55<span class="data-sub"><span class="up">億円 +78.7%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属中間利益</span>
+          <span class="data-val">2,032.91<span class="data-sub"><span class="up">億円 +76.9%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val down">1,743.55<span class="data-sub"><span class="down">億円 △2.7%（前期1,792.53億円）</span></span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚡ GTCC（ガスタービン）を中心としたエナジーの需要拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛡 防衛・宇宙の需要拡大（防衛予算の増加）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏗 プラント・インフラ、物流・冷熱・ドライブシステムの4ドメイン体制</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 売上収益+19.4%に対し事業利益+45.3%と収益性が改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 EPS（基本的）60.49円（前期34.21円）・希薄化後60.47円</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>★ 独自指標「事業利益」の定義：</strong>「事業利益」は<strong>当社グループの業績を継続的に比較・評価することに資する指標</strong>であり、<strong>「売上収益」から「売上原価」「販売費及び一般管理費」「その他の費用」を控除し、「持分法による投資損益」及び「その他の収益」を加えたもの</strong>である。「その他の収益」「その他の費用」は受取配当金、固定資産売却損益、固定資産減損損失等から構成される。
+    </div>
+    <div class="highlight neutral">
+      <strong>★ 非継続事業の注記：</strong>前中間連結会計期間より、<strong>三菱ロジスネクスト株式会社（現 株式会社ロジスネクスト）及びその子会社・関連会社に係る事業を非継続事業に分類</strong>している。これにより「売上収益」「事業利益」「税引前中間利益」は<strong>非継続事業を除いた継続事業の金額</strong>を表示し、「中間利益」「親会社の所有者に帰属する中間利益」「中間包括利益」は<strong>継続事業及び非継続事業の合算</strong>を表示している。連結範囲の重要な変更：有（除外46社＝三菱ロジスネクスト ほか45社）。<strong>指標ごとに対象範囲が異なるため、単純な比較には注意が必要である。</strong>
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年3月期・修正：有／上方修正）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上収益</span>
+            <span class="data-val">6兆0,000.00<span class="data-sub"><span class="up">億円 +20.6%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">事業利益</span>
+            <span class="data-val">6,000.00<span class="data-sub"><span class="up">億円 +38.8%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">税引前利益</span>
+            <span class="data-val">6,000.00<span class="data-sub"><span class="up">億円 +26.4%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社所有者帰属当期利益</span>
+            <span class="data-val">4,400.00<span class="data-sub"><span class="up">億円 +32.5%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">基本的EPS</span>
+            <span class="data-val">130.91<span class="data-sub">円</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">中間進捗率</span>
+            <span class="data-val">41.6<span class="data-sub">%（事業利益）／46.2%（親会社帰属利益）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>★ 注記：</strong>2027年3月期第2四半期の事業の進捗状況を踏まえ、<strong>2026年5月12日に公表した売上収益・事業利益・税引前利益・親会社の所有者に帰属する当期利益を上方修正</strong>した（修正：有）。中間進捗は事業利益41.6%・親会社帰属利益46.2%。なお<strong>本中間決算短信は公認会計士又は監査法人のレビューの対象外</strong>である。
+      </div>
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item star">
+        <div class="seg-name">エナジー</div>
+        <div class="seg-row"><span>ガスタービン(GTCC)・火力・原子力。データセンター需要等を背景に受注拡大</span></div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">航空・防衛・宇宙</div>
+        <div class="seg-row"><span>防衛予算の増加と民間航空機需要</span></div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">プラント・インフラ／物流・冷熱・ドライブシステム</div>
+        <div class="seg-row"><span>製鉄機械・交通システム・冷熱製品（物流機器は非継続事業へ移行）</span></div>
+      </div>
+    </div>
+    <div class="highlight neutral">
+      <strong>※ セグメントについて：</strong>本決算短信サマリーにセグメント別の数値（売上収益・事業利益）の開示がないため、上記は4ドメイン体制を3区分に<strong>定性的に整理</strong>したものである。数値によるドメイン別比較は行っていない。
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">8兆3,142.95<span class="data-sub">億円 +0.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">3兆2,807.71<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">3兆2,170.56<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">38.7<span class="data-sub"><span class="up">%（前期末 37.3% / +1.4pt）</span></span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">株式数・財務のポイント</div>
+        <div class="data-row">
+          <span class="data-key">発行済株式数</span>
+          <span class="data-val">3,373,647,810<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己株式数</span>
+          <span class="data-val">12,163,580<span class="data-sub">株（前期末 13,438,470株）</span></span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📊 持分比率は37.3→38.7%（+1.4pt）へ改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 中間包括利益1,743.55億円（△2.7%）は損益と方向が異なる</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>資産合計は前期末比+0.5%の8兆3,142.95億円。資本合計は3兆2,807.71億円、うち親会社所有者帰属持分は3兆2,170.56億円で、親会社所有者帰属持分比率は前期末37.3%から38.7%（+1.4pt）へ改善した。発行済株式数は3,373,647,810株、自己株式は12,163,580株（前期末13,438,470株）。一方で<strong>中間包括利益は1,743.55億円（△2.7%、前期1,792.53億円）</strong>と、損益の大幅増益とは方向が異なる点に留意が必要。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">25.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間12 + 期末13</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">29.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間14 + 期末15</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val up">+4.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">増配（+16.0%）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約22<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">予想EPS130.91円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期の年間配当は前期25円（中間12円+期末13円）から<strong>29円（中間14円+期末15円）へ+4円の増配予想（+16.0%）</strong>。配当予想の修正は無。配当性向は通期予想EPS130.91円ベースで約22%と、利益成長に対して余力を残す水準。なお本決算短信に<strong>明示的なDOE（株主資本配当率）や配当性向の目標の記載はなし</strong>。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">大型プロジェクトの採算・工期<br><small>長期請負案件のコスト超過・遅延リスク</small></div>
+      <div class="risk-item high">指標ごとに継続/非継続の範囲が異なる<br><small>売上収益・事業利益は継続事業のみ、中間利益は合算</small></div>
+      <div class="risk-item mid-level">為替変動（中間包括利益△2.7%）<br><small>その他の包括利益を通じた自己資本への影響</small></div>
+      <div class="risk-item mid-level">資材・部材コストと人件費<br><small>調達インフレと人手不足による採算圧迫</small></div>
+      <div class="risk-item mid-level">防衛予算・政策動向への依存<br><small>国の防衛計画・予算編成に左右される収益</small></div>
+      <div class="risk-item">GTCC需要（データセンター向け）の持続性<br><small>電力需要拡大の継続性が受注を左右</small></div>
+      <div class="risk-item">原子力の再稼働・新設動向<br><small>規制対応・地元同意のスケジュール</small></div>
+      <div class="risk-item">脱炭素技術（水素・アンモニア・CCUS）への投資<br><small>先行投資負担と商用化までの時間軸</small></div>
+      <div class="risk-item">中間決算はレビュー対象外<br><small>公認会計士又は監査法人のレビューを受けていない</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上収益2兆5,232.69億円（+19.4%）・事業利益2,493.04億円（+45.3%）・税引前中間利益2,632.14億円（+51.5%）・親会社所有者帰属中間利益2,032.91億円（+76.9%）の大幅増収増益。GTCC（ガスタービン）を中心としたエナジーと防衛・宇宙の需要拡大が牽引した。<strong>独自指標の「事業利益」は売上収益から売上原価・販管費・その他の費用を控除し、持分法による投資損益とその他の収益を加えたもの</strong>で、業績の継続的な比較・評価に資する指標として開示されている。<strong>また前中間期より三菱ロジスネクスト（現 ロジスネクスト）及びその子会社・関連会社を非継続事業に分類</strong>しており、売上収益・事業利益・税引前利益は継続事業のみ、中間利益・親会社帰属中間利益・中間包括利益は継続＋非継続の合算という違いがあるため、<strong>指標ごとに対象範囲が異なる点に留意が必要</strong>（連結範囲は除外46社）。<strong>中間包括利益は1,743.55億円（△2.7%）</strong>と損益の大幅増益とは方向が異なる。財務は資産合計8兆3,142.95億円に対し親会社所有者帰属持分比率38.7%（+1.4pt）へ改善。配当は+4円増配の29円予想（配当性向約22%）で、明示的なDOE/配当性向目標の記載はなし。通期は中間期の進捗を踏まえ2026年5月12日公表分から売上収益・事業利益・税引前利益・親会社帰属当期利益を上方修正し、売上収益6兆円（+20.6%）・事業利益6,000億円（+38.8%）・純利益4,400億円（+32.5%）。中間進捗は事業利益41.6%。GTCC需要の持続性と大型プロジェクトの採算が中長期の焦点となる。代表者は伊藤栄作社長。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は三菱重工業株式会社（7011）2027年3月期第2四半期（中間期）決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
