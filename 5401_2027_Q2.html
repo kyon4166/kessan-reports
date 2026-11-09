@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本製鉄株式会社 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #33383E;
+    --primary-light: #474D55;
+    --primary-dark: #1F2328;
+    --accent: #D0502A;
+    --accent-light: #E07850;
+    --accent-pale: #F7E4DC;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(51,56,62,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Steel'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated · Q2 (中間期)</div>
+  <h1>日本製鉄株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信〔IFRS〕（連結）要約　／　証券コード 5401</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月6日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上収益</div>
+      <div class="kpi-value">5兆8,441.53<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 26.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">事業利益</div>
+      <div class="kpi-value">3,074.13<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 35.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社所有者帰属中間利益</div>
+      <div class="kpi-value">2,629.97<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">黒字転換（前期 △1,133.80億円）</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">50.32<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">黒字転換（前期 △21.69円・5分割調整後）</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">製鉄（国内・海外）／エンジニアリング／ケミカル&amp;マテリアル／システムソリューション</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">収益ドライバー</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">鋼材スプレッドと海外事業（米国USスチール等）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS（国際会計基準）・連結</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">新規 2社 ／ 除外 14社</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">今井 正 社長兼COO</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">株式分割</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2025年10月1日効力発生で1株→5株の株式分割を実施済</span>
+      </div>
+    </div>
+    <div class="highlight">製鉄（国内・海外）を中核に、エンジニアリング、ケミカル&amp;マテリアル、システムソリューションを展開する世界有力の鉄鋼メーカー。当中間期は<strong>鋼材スプレッドの改善と海外事業（米国USスチール等）の寄与、前期にあった一時費用の反動</strong>により、営業利益以下の全段階が前年同期の赤字から<strong>黒字転換</strong>した。2025年10月1日を効力発生日として1株を5株とする株式分割を実施済みで、本資料のEPS・配当は<strong>分割後換算ベースで統一</strong>（分割前の実績はカッコ書きで注記）。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第2四半期（中間期）業績と黒字転換</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">売上収益</span>
+          <span class="data-val">5兆8,441.53<span class="data-sub">億円 <span class="up">+26.1%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">事業利益</span>
+          <span class="data-val">3,074.13<span class="data-sub">億円 <span class="up">+35.1%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">3,074.13<span class="data-sub">億円 <span class="up">黒字転換</span>（前期 △28.35億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前利益</span>
+          <span class="data-val">2,470.09<span class="data-sub">億円 <span class="up">黒字転換</span>（前期 △301.04億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間利益</span>
+          <span class="data-val">2,791.29<span class="data-sub">億円 <span class="up">黒字転換</span>（前期 △989.10億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属中間利益</span>
+          <span class="data-val">2,629.97<span class="data-sub">億円 <span class="up">黒字転換</span>（前期 △1,133.80億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val">3,419.25<span class="data-sub">億円 <span class="up">黒字転換</span>（前期 △14.97億円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">黒字転換の主因・1株当たり情報</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔥 鋼材スプレッドの改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌎 海外事業（米国USスチール等）の寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">↩️ 前期にあった一時費用（固定資産除却損等）の反動</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏭 製鉄・エンジニアリング・ケミカル&amp;マテリアル・システムソリューションの4事業体制</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">基本的EPS</span>
+          <span class="data-val">50.32<span class="data-sub">円（前期 △21.69円・5分割調整後）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">希薄化後EPS</span>
+          <span class="data-val">44.02<span class="data-sub">円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>✅ 全段階で黒字転換：</strong>前年同期は<strong>営業利益以下の全段階が赤字</strong>（営業利益△28.35億円、税引前利益△301.04億円、中間利益△989.10億円、親会社所有者帰属中間利益△1,133.80億円、中間包括利益△14.97億円）だったが、当中間期は<strong>営業利益3,074.13億円・税引前利益2,470.09億円・中間利益2,791.29億円・親会社所有者帰属中間利益2,629.97億円・中間包括利益3,419.25億円のすべてが黒字転換</strong>した。これが当中間期の最大の特徴である。
+    </div>
+    <div class="highlight neutral">
+      <strong>📐 独自指標「事業利益」の定義：</strong>「事業利益」は<strong>持続的な事業活動の成果を表し、当社グループの業績を継続的に比較・評価することに資する連結経営業績の代表的指標</strong>であり、<strong>売上収益から売上原価、販売費及び一般管理費、並びにその他費用を控除し、持分法による投資利益及びその他収益を加えたもの</strong>。その他収益及びその他費用は受取配当金、為替差損益、固定資産除却損等から構成される。当中間期の事業利益は3,074.13億円（+35.1%）で、<strong>前期も2,275.33億円（227,533百万円）の黒字</strong>だったため、営業利益以下が赤字だった前期の姿とは様相が異なる（前期は固定資産除却損等の一時費用が営業利益以下を押し下げていた）点に留意が必要。
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item star">
+        <div class="seg-name">製鉄（国内）</div>
+        <div class="seg-row"><span>位置づけ</span><span>中核事業</span></div>
+        <div style="font-size:12px;color:var(--mid);margin-top:6px;">高炉・電炉の稼働と鋼材スプレッドが収益を左右する国内製鉄事業。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">製鉄（海外）</div>
+        <div class="seg-row"><span>位置づけ</span><span>成長ドライバー</span></div>
+        <div style="font-size:12px;color:var(--mid);margin-top:6px;">米国USスチール等の海外子会社・持分法会社。当中間期の黒字転換に寄与。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">エンジニアリング／ケミカル&amp;マテリアル／システムソリューション</div>
+        <div class="seg-row"><span>位置づけ</span><span>多角化事業</span></div>
+        <div style="font-size:12px;color:var(--mid);margin-top:6px;">非製鉄の多角化事業群。製鉄の景気変動を補完する収益源。</div>
+      </div>
+    </div>
+    <div class="highlight neutral" style="margin-top:12px;">
+      <strong>※ 注記：</strong>本短信サマリーにセグメント別の数値開示がないため、上記は事業内容にもとづく<strong>定性整理</strong>である。なお連結範囲は新規2社・除外14社。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年3月期・修正：有）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上収益</span>
+            <span class="data-val">11兆7,000<span class="data-sub">億円 <span class="up">+16.3%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">事業利益</span>
+            <span class="data-val">7,200<span class="data-sub">億円 <span class="up">+40.0%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社所有者帰属当期利益</span>
+            <span class="data-val">4,400<span class="data-sub">億円（増減率「－」＝前期が赤字のため比較不能）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">基本的EPS（予想）</span>
+            <span class="data-val">84.00<span class="data-sub">円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="data-row">
+        <span class="data-key">中間進捗率</span>
+        <span class="data-val">42.7<span class="data-sub">% 事業利益 ／ 59.8% 親会社帰属利益</span></span>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>業績予想の修正は<strong>有</strong>。親会社所有者帰属当期利益の増減率は前期が赤字のため「－」（比較不能）表記。中間進捗は事業利益42.7%・親会社帰属利益59.8%。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">15兆3,448.90<span class="data-sub">億円 <span class="up">+4.7%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">6兆2,791.45<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">5兆7,902.63<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">37.7<span class="data-sub">% （前期末 37.7% / 横ばい）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務バランスの評価</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📊 持分比率37.7%は前期末から横ばい</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏗 資産合計は15兆3,448.90億円（+4.7%）へ拡大</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💰 中間利益の積み上げが資本を押し上げる一方、資産も増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚙️ 大型設備・海外買収を抱える資本集約型の事業構造</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>資産合計は15兆3,448.90億円（+4.7%）に拡大。資本合計6兆2,791.45億円、親会社所有者帰属持分5兆7,902.63億円で、<strong>親会社所有者帰属持分比率は37.7%</strong>（前期末37.7%、横ばい）。黒字転換による資本の積み上がりと資産の増加がほぼ見合い、資本構成は前期末水準を維持している。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3・分割後換算）</div>
+        <div class="div-cell-val">24.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">短信表示は中間60円（分割前）＋期末12円</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3・分割後）</div>
+        <div class="div-cell-val" style="color:var(--accent);">24.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間12 + 期末12</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">±0<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（分割後換算）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">株式分割・配当性向</div>
+        <div class="div-cell-val" style="color:var(--accent);">1→5<span style="font-size:14px;color:var(--mid);">株</span></div>
+        <div class="div-cell-sub">2025/10/1 効力発生・配当性向約29%</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>💴 分割後換算では前期24円 → 当期予想24円の「維持」（誤読注意）：</strong>2025年10月1日を効力発生日として1株を5株とする株式分割を実施した。前期（2026年3月期）の短信表示は<strong>中間60円＋期末12円（分割後）</strong>で年間合計は「－」表記だが、<strong>この中間60円は基準日が2025年9月30日で分割前の普通株式が対象であるため「分割前の金額」</strong>である。したがって分割後換算すると前期年間は<strong>24円相当（中間60円÷5＝12円＋期末12円）</strong>となり、当期予想の中間12円＋期末12円＝<strong>年間24円</strong>と並ぶため、<strong>実質は維持（±0）</strong>。見かけ上の大幅減配ではない点に注意。※この24円という換算値は算出値である。配当予想の修正は<strong>無</strong>。配当性向は通期予想EPS84.00円ベースで約29%。なお本短信に明示的なDOE／配当性向目標の記載はない。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">鋼材スプレッド・原料価格の変動<br><small>鉄鉱石・石炭価格と販価の差が収益を直撃</small></div>
+      <div class="risk-item high">米国USスチール買収後の統合<br><small>PMIの進捗と収益貢献の実現度</small></div>
+      <div class="risk-item high">中国の鋼材過剰供給と輸出圧力<br><small>アジア市況の下押し要因</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>海外売上・原料調達の為替感応度</small></div>
+      <div class="risk-item mid-level">通商政策・関税（米国・各国）<br><small>関税措置や貿易制限の動向</small></div>
+      <div class="risk-item mid-level">国内需要（自動車・建設）の動向<br><small>主要需要分野の生産・着工水準</small></div>
+      <div class="risk-item">脱炭素への大型投資<br><small>電炉転換・水素還元製鉄の先行投資と回収</small></div>
+      <div class="risk-item">持分比率37.7%と有利子負債<br><small>資本集約型の財務バランス</small></div>
+      <div class="risk-item">黒字転換の持続性<br><small>前期赤字からの転換が一時要因に依存しないか</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上収益5兆8,441.53億円（+26.1%）、事業利益3,074.13億円（+35.1%）で、<strong>営業利益・税引前利益・中間利益・親会社所有者帰属中間利益・中間包括利益のすべてが前年同期の赤字から黒字転換</strong>した（親会社所有者帰属中間利益は2,629.97億円、前期△1,133.80億円）。鋼材スプレッドの改善と海外事業の寄与、前期にあった一時費用の反動が効いた。独自指標の<strong>「事業利益」</strong>は持続的な事業活動の成果を表す連結経営業績の代表的指標で、売上収益から売上原価・販管費・その他費用を控除し持分法投資利益とその他収益を加えたもの。前期も2,275.33億円の黒字であり、営業利益以下が赤字だった前期の姿とは様相が異なる点に留意したい。EPSは50.32円（5分割調整後、前期△21.69円）。財務は親会社所有者帰属持分比率37.7%（横ばい）。配当は2025年10月1日効力発生の1→5株分割を踏まえ、分割後換算で<strong>前期24円（短信表示の中間60円は基準日が分割前のため分割前の金額）→当期予想24円の維持</strong>（配当性向約29%）。通期は売上収益11兆7,000億円（+16.3%）・事業利益7,200億円（+40.0%）・親会社所有者帰属当期利益4,400億円へ修正し、中間進捗は事業利益42.7%・純利益59.8%。なお本短信に明示的なDOE／配当性向目標の記載はない。鋼材スプレッドと原料価格、米国USスチールの統合効果、中国の過剰供給が中長期の論点となる。今井正社長兼COO。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は日本製鉄株式会社（5401）2027年3月期第2四半期（中間期）決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
