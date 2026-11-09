@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社ツムラ 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #44532A;
+    --primary-light: #24405F;
+    --primary-dark: #2C3719;
+    --accent: #B5893A;
+    --accent-light: #CBA45E;
+    --accent-pale: #F2ECD8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(20,40,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Kampo'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (中間期)</div>
+  <h1>株式会社ツムラ</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 4540</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月9日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">1,034.41<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 15.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">188.48<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 10.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">203.16<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 23.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">162.03<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 29.9%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">漢方製剤・生薬の製造販売（漢方薬国内最大手）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">収益の中核</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本の医療用漢方製剤（医療機関向け処方）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">海外事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">中国事業（平安津村）／生薬調達・中薬市場の開拓</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">その他</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">一般用漢方製剤・生薬の調達／養命酒製造（新規連結）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">加藤照和 代表取締役社長CEO</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の重要な変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">有（新規1社：養命酒製造株式会社）</span>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>★ 連結範囲の重要な変更：有。</strong>当中間期において<strong>養命酒製造株式会社を新規1社として連結に加えている</strong>。したがって売上高+15.1%の増収には、この新規連結による寄与が含まれる可能性がある点に留意が必要。漢方薬国内最大手として、国内の医療用漢方製剤を中核に、中国事業（平安津村）および一般用漢方・生薬の調達を展開している。
+    </div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">1,034.41<span class="data-sub">億円 <span class="up">+15.1%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">188.48<span class="data-sub">億円 <span class="up">+10.1%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">203.16<span class="data-sub">億円 <span class="up">+23.7%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">162.03<span class="data-sub">億円 <span class="up">+29.9%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">300.47<span class="data-sub">億円 <span class="up">前期 13.19億円から急増（短信上は「－%」表記）</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（中間）</span>
+          <span class="data-val">217.36<span class="data-sub">円 （前期 166.65円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌿 国内の医療用漢方製剤が堅調に推移</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 養命酒製造の新規連結が増収に寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💱 為替差益・持分法投資利益等の営業外収益が経常を押し上げ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🇨🇳 中国事業（平安津村）の生薬調達・市場開拓</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 全段階で増益（営業+10.1%・経常+23.7%・純利益+29.9%）</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <strong>※ 利益構造の注記：</strong>経常利益（+23.7%）・中間純利益（+29.9%）が営業利益（+10.1%）の伸びを上回っているのは、<strong>為替差益・持分法投資利益等の営業外収益</strong>による。また<strong>★包括利益は300.47億円と前年同期の13.19億円から急増</strong>しており（短信上の増減率は「－%」表記）、為替換算調整や有価証券評価等の影響が大きい点に留意が必要。
+    </div>
+    <div class="highlight">
+      <strong>★ 連結範囲の重要な変更：有。</strong>当中間期に<strong>養命酒製造株式会社を新規1社として連結</strong>に加えている。売上高+15.1%の増収には、この新規連結の寄与が含まれる可能性がある点に留意。
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">事業区分別の状況（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">日本（医療用漢方製剤）</div>
+          <div class="seg-row"><span>位置づけ</span><span>収益の中核</span></div>
+          <div class="seg-row"><span>動向</span><span>堅調</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">国内売上の中核。医療機関向けの処方が収益基盤を形成し、当中間期も堅調に推移。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">中国（平安津村・生薬／中薬）</div>
+          <div class="seg-row"><span>位置づけ</span><span>調達・成長</span></div>
+          <div class="seg-row"><span>動向</span><span>開拓中</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">生薬（原料）の調達機能と中国市場の開拓を担う。原料の中国依存は同時にリスク要因。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">その他（一般用漢方・新規連結事業）</div>
+          <div class="seg-row"><span>位置づけ</span><span>新規連結</span></div>
+          <div class="seg-row"><span>動向</span><span>拡大</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">一般用漢方製剤に加え、当中間期から養命酒製造の新規連結を含む。増収寄与の可能性。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>本決算短信サマリーにセグメント別の数値開示がないため、上記は事業区分ベースの<strong>定性整理</strong>である。
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期）　本短信での修正：無</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">2,185.00<span class="data-sub">億円 <span class="up">+13.4%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">384.00<span class="data-sub">億円 <span class="up">+9.0%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">364.00<span class="data-sub">億円 <span class="down">△9.1%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">293.00<span class="data-sub">億円 <span class="up">+4.2%</span>（EPS 393.03円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>★ 通期計画の注記：</strong>通期は売上高<span class="up">+13.4%</span>・営業利益<span class="up">+9.0%</span>の増収増益計画だが、<strong>経常利益は364.00億円（<span class="down">△9.1%</span>）の減益計画</strong>であり、中間期の経常<span class="up">+23.7%</span>とは<strong>方向が異なる</strong>。これは中間期の営業外収益（為替差益・持分法投資利益等）が<strong>一過性の面を持つ</strong>ことを示唆している。中間進捗は<strong>営業49.1%・純利益55.3%</strong>。なお本短信での業績予想の修正は<strong>無</strong>だが、<strong>2026年10月28日付で連結業績予想の修正を公表済み</strong>。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">6,573.99<span class="data-sub">億円 <span class="up">+10.9%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">3,957.88<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">3,400.50<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">51.7<span class="data-sub">% （前期末 54.3% / <span class="down">△2.6pt</span>）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務の特徴</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📦 総資産が<strong>+10.9%と大きく増加</strong>（6,573.99億円）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 一方で自己資本比率は<strong>54.3%→51.7%（△2.6pt）へ低下</strong></span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 新規連結（養命酒製造）に伴う資産・負債の取り込みを示唆</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 包括利益300.47億円の計上が純資産を押し上げ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚖️ 50%超の自己資本比率は維持し財務健全性は確保</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は6,573.99億円（前期末比<span class="up">+10.9%</span>）と大きく増加した一方で、<strong>自己資本比率は54.3%から51.7%へ△2.6pt低下</strong>している。純資産3,957.88億円・自己資本3,400.50億円と包括利益300.47億円の計上で自己資本自体は増加しているが、総資産の伸びがそれを上回ったことによる低下であり、<strong>新規連結（養命酒製造）に伴う資産・負債の取り込みを示唆する</strong>点を注記しておきたい。なお50%超の自己資本比率は維持しており、財務健全性そのものは確保されている。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">147<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間68 + 期末79</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">158<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間79 + 期末79</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val up">+11<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">増配（+7.5%）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約40<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">予想EPS 393.03円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期の年間配当は前期147円（中間68円＋期末79円）から<strong>+11円増配の158円（中間79円＋期末79円、+7.5%）</strong>を予想。中間配当を68円→79円へ引き上げ、期末と同水準に揃える形となる。<strong>配当予想の修正：無</strong>。配当性向は通期予想EPS 393.03円ベースで<strong>約40%</strong>。なお本決算短信において<strong>明示的なDOE／配当性向目標の記載はなし</strong>。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">生薬（原料）の調達・価格と中国依存<br><small>原料生薬の多くを中国に依存。価格・供給が収益を左右</small></div>
+      <div class="risk-item high">薬価改定<br><small>医療用漢方製剤の公定価格引き下げリスク</small></div>
+      <div class="risk-item high">通期の経常は減益計画<br><small>△9.1%。中間の営業外益は一過性の面を持つ</small></div>
+      <div class="risk-item mid-level">新規連結（養命酒製造）の統合とのれん<br><small>統合効果の実現と無形資産・のれんの減損可能性</small></div>
+      <div class="risk-item mid-level">為替変動（包括利益の大幅変動）<br><small>包括利益は13.19億円→300.47億円と大きく振れる</small></div>
+      <div class="risk-item mid-level">自己資本比率の低下（51.7%）<br><small>前期末54.3%から△2.6pt低下</small></div>
+      <div class="risk-item">中国事業の不確実性<br><small>平安津村の事業環境・規制・政策の変動</small></div>
+      <div class="risk-item">医療用漢方の需要と処方動向<br><small>医療機関の処方トレンド・エビデンス評価に依存</small></div>
+      <div class="risk-item">原価上昇<br><small>原材料・エネルギー・物流コストの上昇圧力</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高1,034.41億円（+15.1%）・営業利益188.48億円（+10.1%）・経常利益203.16億円（+23.7%）・親会社株主帰属中間純利益162.03億円（+29.9%）の増収増益。国内の医療用漢方製剤が堅調で、<strong>★当中間期に養命酒製造株式会社を新規連結したことも増収に寄与している（連結範囲の重要な変更：有）</strong>。経常利益・純利益が営業利益の伸びを上回るのは<strong>為替差益・持分法投資利益等の営業外収益</strong>による。<strong>★包括利益は300.47億円と前年同期の13.19億円から急増</strong>しており、為替換算調整や有価証券評価等の影響が大きい。財務は総資産6,573.99億円（+10.9%）と大きく増加する一方、自己資本比率は51.7%（△2.6pt）へ低下しており、<strong>新規連結に伴う資産・負債の取り込みを示唆する</strong>。配当は<strong>+11円増配の158円</strong>（配当性向約40%）で、明示的なDOE／配当性向目標の記載はなし。<strong>★通期は売上+13.4%・営業+9.0%だが経常は364.00億円（△9.1%）の減益計画で、中間の経常+23.7%とは方向が異なり、中間の営業外収益が一過性の面を持つ点に留意</strong>（なお2026年10月28日付で業績予想を修正済み）。生薬（原料）の中国依存と薬価改定、そして養命酒製造の統合効果が中長期の論点となる。加藤照和 代表取締役社長CEO。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社ツムラ（4540）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
