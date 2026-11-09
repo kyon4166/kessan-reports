@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社朝日ネット 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #16324F;
+    --primary-light: #24405F;
+    --primary-dark: #0D2033;
+    --accent: #2AA0C0;
+    --accent-light: #54B8D4;
+    --accent-pale: #D9EFF5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(22,50,79,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Internet'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Non-Consolidated · Q2 (中間期)</div>
+  <h1>株式会社朝日ネット</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（非連結）要約　／　証券コード 3834</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月6日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">67.79<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 0.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">5.27<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 48.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">5.41<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 47.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">中間純利益</div>
+      <div class="kpi-value">3.76<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 48.1%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">インターネット接続サービス（ISP）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">成長領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">教育機関向けクラウドサービス「manaba」</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">決算区分</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">非連結（単体）決算</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">小松　大　社長執行役員</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">財務特性</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">自己資本比率88.1%・実質無借金</span>
+      </div>
+    </div>
+    <div class="highlight">ISP（インターネット接続プロバイダ）と教育機関向けクラウドサービス「manaba」を展開。個人・法人向けの接続サービスが安定収益基盤を構成し、大学等の教育機関向けクラウドが成長領域。当中間期は売上高67.79億円（+0.8%）とほぼ横ばいながら、営業利益5.27億円（△48.2%）・経常5.41億円（△47.4%）・中間純利益3.76億円（△48.1%）とほぼ半減。ISPと教育クラウドへの先行投資、設備・人件費の増加が収益性を大きく圧迫した。財務は自己資本比率88.1%・実質無借金と極めて健全。</div>
+  </section>
+
+  <!-- 02 業績ハイライト -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">67.79<span class="data-sub">億円 <span class="up">+0.8%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">5.27<span class="data-sub">億円 <span class="down">△48.2%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">5.41<span class="data-sub">億円 <span class="down">△47.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間純利益</span>
+          <span class="data-val">3.76<span class="data-sub">億円 <span class="down">△48.1%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（1株当たり中間純利益）</span>
+          <span class="data-val">14.50<span class="data-sub">円（前期 27.72円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益率</span>
+          <span class="data-val">7.8<span class="data-sub">% （前期 約15.1%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌐 ISP（接続サービス）への先行投資が継続</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🎓 教育クラウド「manaba」の育成コスト増</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏗 設備投資に伴う減価償却・設備費の増加</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">👥 人件費の上昇が固定費を押し上げ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 売上横ばいのため費用増が直接利益を圧迫</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 収益性に関する注記：</strong>売上高は<strong>+0.8%</strong>とほぼ横ばいながら営業利益は<strong>△48.2%</strong>とほぼ半減し、営業利益率は<strong>7.8%（前期 約15.1%）</strong>へ低下。ISP（接続サービス）と教育クラウド（manaba）への先行投資、設備・人件費の増加が収益性を大きく圧迫した構図である。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">ビジネスモデル別の構成</div>
+      <div class="seg-grid">
+        <div class="seg-item">
+          <div class="seg-name">接続サービス（ISP）</div>
+          <div class="seg-row"><span>位置づけ</span><span>収益基盤</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">個人・法人向けインターネット接続が収益基盤。安定したストック収入を構成する一方、先行投資の負担が重い。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">教育・公共サービス（manaba）</div>
+          <div class="seg-row"><span>位置づけ</span><span>育成段階</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">大学等の教育機関向けクラウドサービス。育成段階にあり、収益化に向けた投資フェーズが続く。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">その他（法人ソリューション等）</div>
+          <div class="seg-row"><span>位置づけ</span><span>周辺領域</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">法人向けソリューション等の周辺領域。接続サービスと教育クラウドを補完する位置づけ。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ セグメントに関する注記：</strong>同社は<strong>単一の事業区分で報告</strong>しており、本決算短信サマリーに<strong>セグメント別の数値の開示がない</strong>ため、上記はビジネスモデル別の<strong>定性整理</strong>である。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・修正無）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">140.00<span class="data-sub">億円 <span class="up">+3.6%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">18.00<span class="data-sub">億円 <span class="up">+0.5%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">18.30<span class="data-sub">億円 <span class="up">+0.5%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">13.00<span class="data-sub">億円 <span class="up">+0.5%</span>（EPS 50.17円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>※ 通期進捗に関する重要な注記：</strong>業績予想の修正は<strong>無</strong>。通期の営業利益18.00億円に対し<strong>中間実績5.27億円は通期予想の29.3%の進捗</strong>（当期純利益も13.00億円に対し3.76億円＝<strong>28.9%</strong>）にとどまる。中間が営業<strong>△48.2%</strong>の大幅減益であるのに対し通期は<strong>+0.5%</strong>の微増益計画であり、達成には下期に<strong>約12.7億円の営業利益（中間の約2.4倍）</strong>を積み上げる必要がある点に強く留意が必要。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">148.71<span class="data-sub">億円 <span class="up">+2.5%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">131.06<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">131.06<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">88.1<span class="data-sub">% （前期末 90.3% / <span class="down">△2.2pt</span>）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">実質無借金</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">株式数</div>
+        <div class="data-row">
+          <span class="data-key">期末自己株式数</span>
+          <span class="data-val">6,035,002<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">前期末自己株式数</span>
+          <span class="data-val">6,089,002<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期中平均株式数</span>
+          <span class="data-val">25,934,141<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">前年同期 期中平均株式数</span>
+          <span class="data-val">26,161,013<span class="data-sub">株</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>総資産は148.71億円（前期末比+2.5%）、純資産131.06億円・自己資本131.06億円。自己資本比率は90.3%→<strong>88.1%（△2.2pt）</strong>へ低下したが、<strong>実質無借金</strong>の極めて健全な財務体質を維持している。自己株式は期末6,035,002株（前期末6,089,002株）、期中平均株式数は25,934,141株（前年同期26,161,013株）。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">25.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間12.50 + 期末12.50</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">26.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間13 + 期末13</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val up">+1.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">増配（+4.0%）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当予想の修正</div>
+        <div class="div-cell-val" style="color:var(--accent);">有</div>
+        <div class="div-cell-sub">配当性向 約52%</div>
+      </div>
+    </div>
+    <div class="highlight">
+      前期25円（中間12.50円＋期末12.50円）に対し、当期予想は<strong>26円（中間13円＋期末13円）</strong>で前期比<strong>+1円の増配（+4.0%）</strong>。<strong>配当予想の修正は「有」</strong>で、2026年11月6日公表の「剰余金の配当（中間配当）及び期末配当予想の修正に関するお知らせ」により増額された。<strong>中間期の利益がほぼ半減（営業△48.2%・中間純利益△48.1%）するなかでも、本日付で配当予想を上方修正して増配を予想している</strong>点は株主還元姿勢の強さを示す。配当性向は通期予想EPS50.17円ベースで<strong>約52%</strong>。なお短信には<strong>明示的なDOE/配当性向目標の記載なし</strong>。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">中間の営業利益がほぼ半減<br><small>営業利益5.27億円・△48.2%／利益率7.8%へ低下</small></div>
+      <div class="risk-item high">通期計画の達成リスク<br><small>中間進捗29.3%・下期に中間の約2.4倍が必要</small></div>
+      <div class="risk-item high">先行投資の負担<br><small>教育クラウド・設備投資が収益性を圧迫</small></div>
+      <div class="risk-item mid-level">ISP市場の競争・価格<br><small>接続サービスの価格競争と単価低下圧力</small></div>
+      <div class="risk-item mid-level">教育クラウド(manaba)の収益化<br><small>育成段階にあり投資回収の時期が焦点</small></div>
+      <div class="risk-item mid-level">人件費の上昇<br><small>固定費増が利益率を継続的に圧迫</small></div>
+      <div class="risk-item">通信品質・システム障害<br><small>接続サービスの安定運用が事業の前提</small></div>
+      <div class="risk-item">自己資本比率の低下<br><small>90.3%→88.1%（△2.2pt）</small></div>
+      <div class="risk-item">実質無借金の高い財務健全性<br><small>自己資本比率88.1%・借入依存なし</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高67.79億円（+0.8%）とほぼ横ばいながら、営業利益5.27億円（△48.2%）・経常5.41億円（△47.4%）・中間純利益3.76億円（△48.1%）とほぼ半減した。営業利益率は<strong>7.8%（前期 約15.1%）</strong>へ低下しており、ISP（接続サービス）と教育クラウド「manaba」への先行投資、設備・人件費の増加が収益性を大きく圧迫した。財務は自己資本比率88.1%（△2.2pt）・実質無借金と極めて健全で、総資産148.71億円・純資産131.06億円。配当は<strong>本日付で予想を上方修正し+1円増配の26円（配当性向約52%）</strong>とし、利益が半減するなかでも還元を強化している（明示的なDOE/配当性向目標の記載はなし）。通期は営業利益18.00億円（+0.5%）の微増益計画を据え置いたが、<strong>中間実績5.27億円は通期予想の29.3%の進捗</strong>（純利益28.9%）にとどまり、達成には<strong>下期に中間の約2.4倍の営業利益</strong>を積み上げる必要がある点に強く留意が必要。先行投資の回収と教育クラウドの拡大が中長期の焦点となる。小松大社長執行役員。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社朝日ネット（3834）2027年3月期第2四半期（中間期）決算短信（非連結）に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
