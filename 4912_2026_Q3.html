@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ライオン株式会社 2026年12月期 第3四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A4A7A;
+    --primary-light: #24405F;
+    --primary-dark: #0F2F4E;
+    --accent: #D93A3A;
+    --accent-light: #E86464;
+    --accent-pale: #FBE0E0;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,74,122,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Hygiene'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated · Q3</div>
+  <h1>ライオン株式会社</h1>
+  <p class="subtitle">2026年12月期　第3四半期決算短信〔IFRS〕（連結）要約　／　証券コード 4912</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月6日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">3,254.13<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 6.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">312.85<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 12.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社所有者帰属四半期利益</div>
+      <div class="kpi-value">179.77<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 13.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">64.97<span class="kpi-unit">円</span></div>
+      <div class="kpi-change down">▼ 前期 75.25円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">竹森征之 社長執行役員</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">オーラルケア／ビューティケア／ファブリックケア／リビングケア／薬品</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">海外展開</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">タイ・中国・東南アジア等の成長市場</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS（国際財務報告基準）・連結</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">独自指標</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">事業利益（売上総利益−販売費及び一般管理費）</span>
+      </div>
+    </div>
+    <div class="highlight">オーラルケア（ハミガキ・ハブラシ）、ビューティケア、ファブリックケア（洗剤）、リビングケア、薬品を中核に、タイ・中国・東南アジアへ展開する日用品メーカー。当第3四半期累計は売上高3,254.13億円（+6.7%）・営業利益312.85億円（+12.4%）・税引前利益337.72億円（+13.3%）と増収増益。国内の価格改定効果と海外の伸長、原材料コストの落ち着きが寄与した。一方で親会社所有者帰属四半期利益は179.77億円（△13.6%）と減益で、本業の増益と最終利益の減益が逆方向となっている。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第3四半期業績（累計）と増減要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS・累計）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">3,254.13<span class="data-sub up">億円 +6.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">312.85<span class="data-sub up">億円 +12.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">事業利益（独自指標）</span>
+          <span class="data-val">257.06<span class="data-sub up">億円 +15.2%（前期223.20億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前四半期利益</span>
+          <span class="data-val">337.72<span class="data-sub up">億円 +13.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期利益</span>
+          <span class="data-val">209.37<span class="data-sub down">億円 △9.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属四半期利益</span>
+          <span class="data-val">179.77<span class="data-sub down">億円 △13.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">234.77<span class="data-sub up">億円 +4.6%</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏷 国内の価格改定効果が売上・利益に寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 海外（タイ・中国・東南アジア）の伸長</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 原材料コストの落ち着きが採算を改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 事業利益+15.2%と営業利益の伸びを上回る</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🧾 法人所得税費用の増加で最終利益は減益</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 最重要の注記：</strong>営業利益（<strong>+12.4%</strong>）・税引前利益（<strong>+13.3%</strong>）は増益なのに、四半期利益（<strong>△9.8%</strong>）・親会社所有者帰属四半期利益（<strong>△13.6%</strong>）は減益となっている。<strong>税引前段階までは増益で、そこから下の段階で減益に転じているため、法人所得税費用の増加（税負担の上昇）が主因</strong>とみられる。本業（営業・税引前）は堅調である点に留意。
+    </div>
+    <div class="highlight neutral">
+      <strong>※ 独自指標「事業利益」：</strong>当第3四半期累計の<strong>事業利益は257.06億円（+15.2%）</strong>（前年同期223.20億円、+19.9%）。<strong>事業利益は売上総利益から販売費及び一般管理費を控除したもので、恒常的な事業の業績を測る当社の利益指標</strong>である。営業利益（+12.4%）を上回る<strong>+15.2%</strong>の伸びで、恒常的な事業の実力は堅調といえる。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">セグメント別（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item">
+          <div class="seg-name">一般用消費財（国内）</div>
+          <div class="seg-row"><span>位置づけ</span><span>収益基盤</span></div>
+          <div class="seg-row"><span>変動要因</span><span>価格改定・市場競争</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;">オーラルケア・ビューティケア・ファブリックケア・リビングケア。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">海外</div>
+          <div class="seg-row"><span>位置づけ</span><span>成長領域</span></div>
+          <div class="seg-row"><span>変動要因</span><span>現地需要・為替</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;">タイ・中国・東南アジア等の成長市場で伸長。</div>
+        </div>
+        <div class="seg-item">
+          <div class="seg-name">産業用品・その他</div>
+          <div class="seg-row"><span>位置づけ</span><span>補完領域</span></div>
+          <div class="seg-row"><span>変動要因</span><span>法人需要</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;">化学品・業務用等の周辺事業。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>本短信サマリーにセグメント別の数値開示がないため、上記は事業ポートフォリオの<strong>定性整理</strong>である。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2026年12月期・修正なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">4,300.00<span class="data-sub up">億円 +1.9%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">400.00<span class="data-sub up">億円 +10.0%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社所有者帰属当期利益</span>
+            <span class="data-val">250.00<span class="data-sub down">億円 △9.4%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">事業利益（通期）／EPS</span>
+            <span class="data-val">350.00<span class="data-sub">億円／基本的EPS 90.38円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>※ 通期の注記：</strong>業績予想の修正は<strong>無</strong>。通期も営業利益は<strong>+10.0%の増益</strong>だが親会社所有者帰属当期利益は<strong>△9.4%の減益計画</strong>で、第3四半期累計と同じ<strong>「営業増益・最終減益」の構図が続く</strong>点に留意。第3四半期累計の進捗率は営業利益<strong>78.2%</strong>・親会社所有者帰属当期利益<strong>71.9%</strong>。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">5,322.12<span class="data-sub">億円 +0.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">3,614.45<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">3,355.29<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">63.0<span class="data-sub up">%（前期末 61.1% / +1.9pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">1株当たり情報</div>
+        <div class="data-row">
+          <span class="data-key">基本的EPS（累計）</span>
+          <span class="data-val">64.97<span class="data-sub">円（前期 75.25円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">希薄化後EPS（累計）</span>
+          <span class="data-val">64.91<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">通期予想EPS（基本的）</span>
+          <span class="data-val">90.38<span class="data-sub">円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">配当性向（予想）</span>
+          <span class="data-val">約38<span class="data-sub">%（年間34円 / 予想EPSベース）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>資産合計は5,322.12億円（前期末比+0.7%）、資本合計3,614.45億円、親会社所有者帰属持分3,355.29億円。<strong>親会社所有者帰属持分比率は61.1%→63.0%と+1.9pt改善</strong>しており、利益の積み上げにより資本の厚みが増している。6割超の自己資本水準は日用品メーカーとして堅牢な財務基盤を示す。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/12）</div>
+        <div class="div-cell-val">30.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間15 + 期末15</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/12）</div>
+        <div class="div-cell-val" style="color:var(--accent);">34.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間17 + 期末17</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+4.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+13.3%増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約38<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">予想EPS90.38円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>💰 配当：</strong>年間配当は前期30円（中間15円＋期末15円）から当期予想34円（中間17円＋期末17円）へ<strong>+4円の増配（+13.3%）</strong>。配当予想の修正は<strong>無</strong>。<strong>最終利益が減益（親会社所有者帰属四半期利益△13.6%、通期計画も△9.4%）となるなかでも増配を予想</strong>しており、営業・税引前段階の増益と堅調な事業利益を背景に株主還元を前進させる姿勢がうかがえる。配当性向は予想EPS90.38円ベースで約38%と余裕のある水準。なお、本短信には<strong>明示的なDOE／配当性向目標の記載なし</strong>。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">営業増益でも最終減益となる税負担の増加<br><small>税引前+13.3%→四半期利益△9.8%と逆転</small></div>
+      <div class="risk-item high">通期も最終利益は減益計画（△9.4%）<br><small>営業+10.0%に対し親会社帰属当期利益250億円</small></div>
+      <div class="risk-item high">事業利益と営業利益・最終利益の方向差<br><small>事業利益+15.2%／最終△13.6%と指標間で乖離</small></div>
+      <div class="risk-item mid-level">原材料・エネルギー価格<br><small>落ち着いているが再騰時は採算を圧迫</small></div>
+      <div class="risk-item mid-level">国内日用品市場の競争・価格<br><small>価格改定の浸透度と販売数量のトレードオフ</small></div>
+      <div class="risk-item mid-level">海外事業（タイ・中国等）の不確実性<br><small>現地景況・競争環境・規制の変動</small></div>
+      <div class="risk-item">為替変動<br><small>海外子会社の収益・換算差額への影響</small></div>
+      <div class="risk-item">ブランド・新製品への投資<br><small>販促費・研究開発費の増加と回収</small></div>
+      <div class="risk-item">持分比率の改善（63.0%）<br><small>前期末61.1%から+1.9ptと財務基盤が強化</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      第3四半期累計は売上高3,254.13億円（+6.7%）・営業利益312.85億円（+12.4%）・税引前四半期利益337.72億円（+13.3%）と増収増益。国内の価格改定効果と海外（タイ・東南アジア）の伸長、原材料コストの落ち着きが寄与し、<strong>恒常的な事業の業績を測る独自指標の事業利益は257.06億円（+15.2%）</strong>と営業利益の伸びを上回った。一方、四半期利益209.37億円（△9.8%）・親会社所有者帰属四半期利益179.77億円（△13.6%）は減益で、<strong>税引前段階までは増益であることから法人所得税費用の増加（税負担の上昇）が主因</strong>とみられる。本業は堅調である点に留意したい。財務は<strong>親会社所有者帰属持分比率63.0%（+1.9pt）へ改善</strong>。配当は最終利益が減益のなかでも<strong>+4円増配の34円（配当性向約38%）</strong>。通期も営業利益400億円（+10.0%）の増益に対し親会社所有者帰属当期利益は250億円（△9.4%）の減益計画で、同じ<strong>「営業増益・最終減益」の構図が続く</strong>。第3四半期累計進捗は営業利益78.2%。原材料コストと国内市場の競争、海外展開が業績を左右する。なお本短信に明示的なDOE／配当性向目標の記載はない。代表者は竹森征之社長執行役員。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はライオン株式会社（4912）2026年12月期第3四半期決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
