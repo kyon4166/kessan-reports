@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KDDI 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A1A4A;
+    --primary-light: #2E2E68;
+    --primary-dark: #0F0F2E;
+    --accent: #E8641E;
+    --accent-light: #F08850;
+    --accent-pale: #FBE4D6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(20,40,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Telecom'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated · Q2 (中間期)</div>
+  <h1>ＫＤＤＩ株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信〔IFRS〕（連結）要約　／　証券コード 9433</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月6日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">3兆528.11<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 4.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">5,592.91<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 0.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社所有者帰属中間利益</div>
+      <div class="kpi-value">3,632.74<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 0.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">96.83<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">▲ 前期 92.37円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS（連結）／代表取締役社長CEO 松田 浩路</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">パーソナル（通信）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">au／UQ mobile／povo のモバイル通信</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">パーソナル（ライフデザイン）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">金融・エネルギー・コマース等の非通信領域</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">ビジネス</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">法人DX・IoT・データセンター（AI関連需要の取り込み）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の重要な変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">有（除外1社＝株式会社ジェイコムウエスト）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">レビュー</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">本中間短信は公認会計士または監査法人のレビューの対象外</span>
+      </div>
+    </div>
+    <div class="highlight">パーソナル（au／UQ mobile／povo のモバイル通信、および金融・エネルギー・コマース等のライフデザイン）とビジネス（法人DX・IoT・データセンター）を展開する総合通信グループ。当中間期はライフデザインとビジネス（データセンター・AI関連）が増収を牽引し、売上高3兆528.11億円（+4.7%）・営業利益5,592.91億円（+0.8%）・親会社所有者帰属中間利益3,632.74億円（+0.9%）と増収増益。連結範囲には重要な変更があり、株式会社ジェイコムウエスト1社が除外されている。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と「調整後」利益の乖離</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS報告ベース）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val up">3兆528.11<span class="data-sub">億円 +4.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val up">5,592.91<span class="data-sub">億円 +0.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前中間利益</span>
+          <span class="data-val up">5,933.07<span class="data-sub">億円 +5.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間利益</span>
+          <span class="data-val up">4,069.36<span class="data-sub">億円 +2.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属中間利益</span>
+          <span class="data-val up">3,632.74<span class="data-sub">億円 +0.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val down">4,015.37<span class="data-sub">億円 △1.6%（前期4,081.09億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">希薄化後EPS</span>
+          <span class="data-val">96.80<span class="data-sub">円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">参考指標「調整後」利益</div>
+        <div class="data-row">
+          <span class="data-key">調整後営業利益</span>
+          <span class="data-val up">6,330.82<span class="data-sub">億円 +13.9%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属調整後中間利益</span>
+          <span class="data-val up">3,900.49<span class="data-sub">億円 +13.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">基本的1株当たり調整後中間利益</span>
+          <span class="data-val up">103.97<span class="data-sub">円（前期88.15円）</span></span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💳 ライフデザイン（金融・エネルギー・コマース）が増収を牽引</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🖥 ビジネス（法人DX・データセンター・AI関連）の需要取り込み</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 独自指標「調整後」利益との乖離：</strong>参考指標として調整後利益が開示されており、<strong>調整後営業利益6,330.82億円（+13.9%）、親会社所有者帰属調整後中間利益3,900.49億円（+13.6%）、基本的1株当たり調整後中間利益103.97円（前期88.15円）</strong>。<strong>調整後利益は非経常的な損益やポートフォリオ見直しに伴う一時損益を除外したもの</strong>である。IFRS報告の営業利益は<strong>+0.8%とほぼ横ばい</strong>だが、調整後営業利益は<strong>+13.9%の二桁増益</strong>であり、当中間期に<strong>非経常的な損失やポートフォリオ見直しに伴う一時損失が生じている</strong>ことを示す。したがって<strong>本業の実力は調整後ベースで評価すべき</strong>である。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">セグメント別（定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item">
+          <div class="seg-name">パーソナル（通信）</div>
+          <div style="font-size:12px;color:var(--mid);line-height:1.6;">au・UQ mobile・povo のモバイル通信。通信料値下げ圧力と競争環境が収益性に影響。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">パーソナル（ライフデザイン）</div>
+          <div style="font-size:12px;color:var(--mid);line-height:1.6;">金融・エネルギー・コマース等の非通信領域。増収を牽引。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">ビジネス</div>
+          <div style="font-size:12px;color:var(--mid);line-height:1.6;">法人DX・IoT・データセンター。AI関連需要の取り込みが進む。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>本短信サマリーにセグメント別数値の開示がないため、上記は<strong>定性整理</strong>である。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・据置／修正：無）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val up">6兆4,100.00<span class="data-sub">億円 +5.6%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">調整後営業利益</span>
+            <span class="data-val up">1兆2,100.00<span class="data-sub">億円 +5.0%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社所有者帰属調整後当期利益</span>
+            <span class="data-val up">7,310.00<span class="data-sub">億円 +2.7%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">基本的1株当たり調整後当期利益</span>
+            <span class="data-val">196.29<span class="data-sub">円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>※ 通期予想の留意点：</strong>通期予想は<strong>IFRS営業利益ではなく「調整後」ベースでの開示</strong>である。修正は<strong>無</strong>（据置）。中間期の調整後営業利益6,330.82億円は通期予想1兆2,100億円に対し<strong>52.3%の進捗</strong>。なお本中間短信は<strong>公認会計士または監査法人のレビューの対象外</strong>である。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val down">18兆8,463.31<span class="data-sub">億円 △1.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">5兆5,285.33<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">5兆17.86<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val down">26.5<span class="data-sub">%（前期26.6% / △0.1pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">株式数（自己株式取得・消却の継続）</div>
+        <div class="data-row">
+          <span class="data-key">期末発行済株式数</span>
+          <span class="data-val">4,007,450,967<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">前期末発行済株式数</span>
+          <span class="data-val">4,187,847,474<span class="data-sub">株（約1.8億株減）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末自己株式数</span>
+          <span class="data-val">312,265,319<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">前期末自己株式数</span>
+          <span class="data-val">380,769,056<span class="data-sub">株</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>資産合計18兆8,463.31億円（△1.1%）、資本合計5兆5,285.33億円、親会社所有者帰属持分5兆17.86億円、親会社所有者帰属持分比率26.5%（前期26.6% / △0.1pt）。<strong>大規模な自己株式取得・消却を継続</strong>しており、期末発行済株式数は4,007,450,967株（前期末4,187,847,474株）と<strong>約1.8億株減少</strong>、期末自己株式数は312,265,319株（前期末380,769,056株）。※自己株式数には役員報酬BIP信託口が所有する当社株式（中間期1,370,325株、前期1,495,908株）を含む。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">80.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間40 + 期末40</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">84.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間42 + 期末42</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+4.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">増配（+5.0%）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約43<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">通期調整後EPS196.29円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      前期（2026年3月期）年間80円（中間40＋期末40）から、当期予想は年間<strong>84円（中間42＋期末42）</strong>へ<strong>+4円の増配（+5.0%）</strong>。配当予想の修正は<strong>無</strong>。配当性向は通期予想の調整後EPS196.29円ベースで約43%。短信に<strong>明示的なDOE/配当性向目標の記載はない</strong>が、連続増配を継続している。配当に加えて<strong>発行済株式数を約1.8億株減らす大規模な自己株式取得・消却</strong>を継続しており、増配と自己株式取得の両輪による総還元で株主還元を強化している。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">IFRS報告利益と調整後利益の乖離<br><small>営業利益+0.8%に対し調整後+13.9%＝非経常損失の発生</small></div>
+      <div class="risk-item high">通信料値下げ圧力とモバイル競争<br><small>au・UQ・povoの料金競争が収益性に影響</small></div>
+      <div class="risk-item mid-level">成長投資の費用負担<br><small>データセンター・AI関連投資の先行コスト</small></div>
+      <div class="risk-item mid-level">ライフデザインの収益性<br><small>金融・エネルギー領域の採算と市場環境</small></div>
+      <div class="risk-item mid-level">為替・市場変動<br><small>中間包括利益4,015.37億円（△1.6%）</small></div>
+      <div class="risk-item">通期予想が調整後ベース<br><small>IFRS営業利益ではなく調整後での開示</small></div>
+      <div class="risk-item">連結範囲の変更<br><small>除外1社＝株式会社ジェイコムウエスト</small></div>
+      <div class="risk-item">大規模自己株式取得・消却<br><small>発行済株式数を約1.8億株削減</small></div>
+      <div class="risk-item">中間決算はレビュー対象外<br><small>公認会計士・監査法人のレビュー未了</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上高3兆528.11億円（+4.7%）・営業利益5,592.91億円（+0.8%）・親会社所有者帰属中間利益3,632.74億円（+0.9%）。ライフデザイン（金融・エネルギー）とビジネス（法人DX・データセンター・AI関連）が増収を牽引した。<strong>ただしIFRS報告の営業利益が+0.8%とほぼ横ばいである一方、非経常的な損益やポートフォリオ見直しに伴う一時損益を除外した調整後営業利益は6,330.82億円（+13.9%）、調整後中間利益3,900.49億円（+13.6%）、調整後EPS103.97円と二桁増益</strong>であり、当中間期に非経常的な損失や一時損失が生じていることを示す。本業の実力は調整後ベースで評価すべき点に留意。中間包括利益は4,015.37億円（△1.6%）。財務は親会社所有者帰属持分比率26.5%で、発行済株式数を約1.8億株減らす大規模な自己株式取得・消却を継続。配当は+4円増配の84円（通期調整後EPSベースの配当性向約43%）。<strong>通期は調整後ベースで売上高6兆4,100億円（+5.6%）・調整後営業利益1兆2,100億円（+5.0%）の計画を据え置き、中間の調整後営業利益は52.3%進捗。</strong>通信料の値下げ圧力とデータセンター・AI投資の回収が中長期の論点。なお配当方針については短信に明示的なDOE/配当性向目標の記載はない。松田浩路社長CEO。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はＫＤＤＩ株式会社（9433）2027年3月期第2四半期（中間期）決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
