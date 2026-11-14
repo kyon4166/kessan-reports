@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本田技研工業株式会社 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #A81528;
+    --primary-light: #C33246;
+    --primary-dark: #78101D;
+    --accent: #5A5A5A;
+    --accent-light: #8A8A8A;
+    --accent-pale: #EDE3E4;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(168,21,40,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Motor'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated · Q2 (中間期)</div>
+  <h1>本田技研工業株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信〔IFRS〕（連結）要約　／　証券コード 7267</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月10日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上収益</div>
+      <div class="kpi-value">12兆376.58<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 13.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">6,487.37<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 48.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社所有者帰属中間利益</div>
+      <div class="kpi-value">5,167.61<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 65.7%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">132.75<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">▲ 前期 76.30円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">二輪・四輪・パワープロダクツ・金融サービス</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">二輪事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">世界首位。高収益で全社の利益を支える</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">四輪事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">北米を中心とする販売とEV化対応</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS（国際会計基準）・連結</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">三部敏宏　取締役代表執行役社長</span>
+      </div>
+    </div>
+    <div class="highlight">二輪（世界首位）・四輪・パワープロダクツ・金融サービスをグローバルに展開する総合輸送機器メーカー。当中間期は売上収益12兆376.58億円（+13.2%）に対し営業利益6,487.37億円（+48.1%）・親会社所有者帰属中間利益5,167.61億円（+65.7%）と大幅な増収増益。前期の米国関税影響・一時費用の反動に加え、世界首位の二輪事業の好調とコスト改善が寄与した。一方で中間包括利益は3,827.07億円（△21.7%）と損益の大幅増益とは方向が異なり、為替換算調整等の影響が重い点に留意が必要。</div>
+  </section>
+
+  <!-- 02 業績ハイライト -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">業績ハイライト（中間期）と増益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS・中間期）</div>
+        <div class="data-row">
+          <span class="data-key">売上収益</span>
+          <span class="data-val">12兆376.58<span class="data-sub">億円 +13.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">6,487.37<span class="data-sub">億円 +48.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税引前利益</span>
+          <span class="data-val">7,408.51<span class="data-sub">億円 +40.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間利益</span>
+          <span class="data-val">5,601.91<span class="data-sub">億円 +60.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属中間利益</span>
+          <span class="data-val">5,167.61<span class="data-sub">億円 +65.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val down">3,827.07<span class="data-sub">億円 △21.7%（前期 4,887.06億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">希薄化後EPS</span>
+          <span class="data-val">132.75<span class="data-sub">円（基本的EPSと同額）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏍 世界首位の二輪事業が好調、高い収益性で全社を牽引</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚗 四輪事業のコスト改善が進展</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 前期の米国関税影響・一時費用の反動（ベース効果）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💳 金融サービス・パワープロダクツが販売を補完</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠ ただし包括利益は為替換算調整等で△21.7%と逆方向</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>※ 注記（増益の構造）：</strong>売上収益+13.2%に対し営業利益+48.1%・親会社所有者帰属中間利益+65.7%と<strong>大幅増益</strong>。前期の米国関税影響・一時費用の反動に加え、世界首位の二輪事業の好調とコスト改善が寄与した。<strong>一方、中間包括利益は3,827.07億円（△21.7%）と損益の大幅増益とは方向が異なり、為替換算調整等の影響が重い点に留意</strong>。<br>※基本的および希薄化後1株当たり中間利益は、親会社の所有者に帰属する中間利益を基に算出している。
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item star">
+        <div class="seg-name">二輪事業</div>
+        <div class="seg-row"><span>ポジション</span><span>世界首位</span></div>
+        <div class="seg-row"><span>特性</span><span>高収益</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">世界首位。高収益で全社を支える柱。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">四輪事業</div>
+        <div class="seg-row"><span>主要市場</span><span>北米中心</span></div>
+        <div class="seg-row"><span>論点</span><span>EV化・関税</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">北米を中心とする販売とEV化対応。関税・コストの影響を受けやすい。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">金融サービス／パワープロダクツ</div>
+        <div class="seg-row"><span>内容</span><span>販売金融</span></div>
+        <div class="seg-row"><span>補完</span><span>汎用製品</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">販売金融とパワープロダクツ。二輪・四輪の販売を補完。</div>
+      </div>
+    </div>
+    <div class="highlight neutral">
+      <strong>※ セグメントについて：</strong>本短信サマリーにセグメント別数値の開示がないため、上記は事業内容に基づく<strong>定性整理</strong>である。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年3月期・修正：有）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上収益</span>
+            <span class="data-val">24兆4,000<span class="data-sub">億円 +11.9%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">7,800<span class="data-sub">億円（増減率 －）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">税引前利益</span>
+            <span class="data-val">7,900<span class="data-sub">億円（増減率 －）</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">当期利益</span>
+            <span class="data-val">5,800<span class="data-sub">億円（増減率 －）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社所有者帰属当期利益</span>
+            <span class="data-val">5,000<span class="data-sub">億円（増減率 －）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">基本的EPS（予想）</span>
+            <span class="data-val">128.44<span class="data-sub">円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>業績予想の修正は<strong>有</strong>。利益項目の対前期増減率が<strong>「－」</strong>と表示されているのは、前期が米国関税の影響等で基準が特殊であったため<strong>比較を示していない</strong>ものである。
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>★ 通期予想の進捗に関する最重要の注記：</strong><strong>中間実績の親会社所有者帰属中間利益5,167.61億円は、通期予想の親会社所有者帰属当期利益5,000億円を既に上回っている（進捗103.4%）</strong>。営業利益の進捗も<strong>83.2%</strong>。つまり<strong>下期の最終利益はほぼゼロないしマイナスを織り込んだ、極めて保守的な通期計画</strong>であることを示す。米国関税や為替等の不確実性を厚めに見込んでいる可能性があり、実績が通期予想を上回る余地にも、下期の収益悪化リスクにも留意が必要。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">33兆9,684.22<span class="data-sub">億円 +1.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">12兆2,916.42<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">12兆367.50<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">35.4<span class="data-sub">%（前期末 35.3% / +0.1pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務のポイント</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 資産合計33兆9,684.22億円は金融サービス事業の債権を含む規模</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📊 親会社所有者帰属持分比率35.4%（+0.1pt）とほぼ横ばい</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💱 中間包括利益△21.7%は為替換算調整等の影響</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔧 大規模な研究開発・EV化投資を継続</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>資産合計は33兆9,684.22億円（前期末比+1.4%）、資本合計12兆2,916.42億円、うち親会社所有者帰属持分は12兆367.50億円。親会社所有者帰属持分比率は35.3%→35.4%（+0.1pt）とほぼ横ばいで推移した。中間利益の積み上げがある一方、為替換算調整等により中間包括利益が3,827.07億円（△21.7%）にとどまっており、資本の積み上がりが損益の増益幅ほど大きくなっていない点が特徴。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">70.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間35 + 期末35</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--primary);">70.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間35 + 期末35</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">±0<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（配当予想の修正：無）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--primary);">約54<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">通期予想EPS128.44円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期の配当予想は年間70円（中間35円＋期末35円）で、前期実績70円（中間35円＋期末35円）から<strong>±0円の維持</strong>。配当予想の修正は<strong>無</strong>。配当性向は通期予想EPS128.44円ベースで<strong>約54%</strong>と、利益水準が前期の特殊要因から正常化する局面でも高めの水準を維持する計画。なお本短信に<strong>明示的なDOE/配当性向目標の記載はない</strong>。中間実績の親会社所有者帰属中間利益が既に通期予想を上回っている（進捗103.4%）ことを踏まえると、通期利益が予想を上振れた場合の実質的な配当性向は低下する余地がある。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">中間実績が通期予想の最終利益を超過<br><small>中間5,167.61億円＞通期予想5,000億円（進捗103.4%）。下期はほぼゼロ〜マイナスの計画</small></div>
+      <div class="risk-item high">米国関税・通商政策<br><small>北米を主力市場とする四輪事業への影響。前期も収益を圧迫</small></div>
+      <div class="risk-item high">為替変動<br><small>中間包括利益3,827.07億円（△21.7%）に為替換算調整等が重く作用</small></div>
+      <div class="risk-item mid-level">四輪のEV化投資と収益性<br><small>電動化対応の大型投資と足元の収益性の両立</small></div>
+      <div class="risk-item mid-level">中国市場の競争<br><small>現地メーカーの台頭による価格・シェア競争</small></div>
+      <div class="risk-item mid-level">原材料・部品コスト<br><small>素材価格・物流費の変動とサプライチェーン</small></div>
+      <div class="risk-item">二輪事業への依存度<br><small>世界首位の二輪が全社利益を支える構造</small></div>
+      <div class="risk-item">通期予想の増減率が「－」<br><small>前期の基準が特殊なため利益項目の対前期比較が困難</small></div>
+      <div class="risk-item">大規模な研究開発投資<br><small>電動化・知能化に向けた継続的な開発負担</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上収益12兆376.58億円（+13.2%）・営業利益6,487.37億円（+48.1%）・税引前利益7,408.51億円（+40.5%）・親会社所有者帰属中間利益5,167.61億円（+65.7%）の大幅増収増益。前期の米国関税影響・一時費用の反動に加え、世界首位の二輪事業の好調とコスト改善が寄与した。<strong>一方、中間包括利益は3,827.07億円（△21.7%）と損益の大幅増益とは方向が異なり、為替換算調整等の影響が重い</strong>。財務は資産合計33兆9,684.22億円に対し親会社所有者帰属持分比率35.4%（+0.1pt）。配当は70円維持（配当性向約54%、明示的なDOE/配当性向目標の記載なし）。<strong>通期は売上収益24兆4,000億円（+11.9%）へ修正したが、中間実績の親会社所有者帰属中間利益5,167.61億円が通期予想の5,000億円を既に上回っており（進捗103.4%、営業利益も83.2%）、下期の最終利益はほぼゼロないしマイナスを織り込んだ極めて保守的な計画</strong>であることを示す。米国関税や為替等の不確実性を厚めに見込んでいる可能性があり、上振れの余地と下期の収益悪化リスクの両面に留意が必要（なお利益項目の対前期増減率は前期の基準が特殊なため「－」表示）。関税・為替とEV化対応が中長期の焦点。三部敏宏取締役代表執行役社長。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は本田技研工業株式会社（7267）2027年3月期第2四半期（中間期）決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
