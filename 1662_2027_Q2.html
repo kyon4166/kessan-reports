@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>石油資源開発株式会社 2027年3月期 第2四半期（中間期） 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #4A2C0A;
+    --primary-light: #24405F;
+    --primary-dark: #331E07;
+    --accent: #C17A2B;
+    --accent-light: #D9A05B;
+    --accent-pale: #F5ECD8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(20,40,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: '石油・天然ガス'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 / Interim</div>
+  <h1>石油資源開発株式会社（JAPEX）</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 1662</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月12日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">代表者 <span>代表取締役社長 山下 通郎</span></div>
+    <div class="meta-item">配当支払開始予定日 <span>2026年12月14日</span></div>
+    <div class="meta-item">補足資料・説明会 <span>有／有（機関投資家・アナリスト向け）</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">1,526.68<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 9.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">300.47<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 17.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">308.20<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 13.9%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">中間包括利益</div>
+      <div class="kpi-value">139.32<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 34.2%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">石油・天然ガスの探鉱・開発・生産（E&amp;P）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">第2の柱</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">インフラ・ユーティリティ（国内天然ガス供給・電力）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本／北米／欧州／中東の4地域</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">生産実績（中間期）</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">海外原油 6,152千bbl（+14.6%）／海外天然ガス 7,804百万cf（+137.1%）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">上場</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">東証（発行済 257,000,380株）</span>
+      </div>
+    </div>
+    <div class="highlight">石油・天然ガスの探鉱・開発・生産（E&amp;P）を中核に、国内天然ガスパイプライン網と電力供給を担うインフラ・ユーティリティ事業を併せ持つ資源開発会社。報告セグメントは日本・北米・欧州・中東の4地域。当中間期は売上高△9.2%の減収ながら営業利益+17.8%・経常利益+2.2%・中間純利益+13.9%の<strong>減収増益</strong>。原油価格の上昇と北米での販売量増加がE&amp;P事業を押し上げた一方、石油製品等の仕入販売の縮小が売上高を押し下げた。自己資本比率70.4%と極めて高い財務健全性を維持する。</div>
+  </section>
+
+  <!-- 02 業績ハイライト -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">業績ハイライトと利益構造の分析</span>
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item star">
+        <div class="seg-name">E&amp;P事業</div>
+        <div class="seg-row"><span>売上高</span><span>629.64億</span></div>
+        <div class="seg-row"><span>前年同期比</span><span class="up">▲ 11.4%</span></div>
+        <div class="seg-row"><span>主因</span><span style="font-family:'Noto Sans JP';font-size:11px;">原油販売価格の上昇</span></div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">インフラ・ユーティリティ事業</div>
+        <div class="seg-row"><span>売上高</span><span>786.45億</span></div>
+        <div class="seg-row"><span>前年同期比</span><span class="down">▼ 1.7%</span></div>
+        <div class="seg-row"><span>主因</span><span style="font-family:'Noto Sans JP';font-size:11px;">天然ガス・電力の販売量減</span></div>
+      </div>
+      <div class="seg-item decline">
+        <div class="seg-name">その他の事業</div>
+        <div class="seg-row"><span>売上高</span><span>110.58億</span></div>
+        <div class="seg-row"><span>前年同期比</span><span class="down">▼ 65.1%</span></div>
+        <div class="seg-row"><span>主因</span><span style="font-family:'Noto Sans JP';font-size:11px;">石油製品等の仕入販売の減少</span></div>
+      </div>
+    </div>
+    <div class="two-col" style="margin-top:16px;">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間期）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">1,526.68<span class="data-sub">億円 △9.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">529.73<span class="data-sub">億円 +21.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">探鉱費</span>
+          <span class="data-val">43.29<span class="data-sub">億円 +486.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">300.47<span class="data-sub">億円 +17.8%（利益率19.7%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">336.50<span class="data-sub">億円 +2.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">308.20<span class="data-sub">億円 +13.9%（EPS 120.39円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">地域別セグメント利益（中間期）</div>
+        <div class="data-row">
+          <span class="data-key">日本（売上1,010.10億）</span>
+          <span class="data-val" style="color:var(--red);">107.05<span class="data-sub">億円 △38.1%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">北米（売上448.08億 +53.7%）</span>
+          <span class="data-val" style="color:var(--green);">230.50<span class="data-sub">億円 +111.3%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">欧州（売上61.27億）</span>
+          <span class="data-val" style="color:var(--green);">33.01<span class="data-sub">億円 +50.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中東（売上7.21億 △93.9%）</span>
+          <span class="data-val" style="color:var(--red);">3.79<span class="data-sub">億円 △71.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">全社費用等（調整額）</span>
+          <span class="data-val" style="color:var(--red);">△73.89<span class="data-sub">億円</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>① 減収なのに営業利益+17.8%の大幅増益：</strong>売上高は△9.2%（△154.72億円）と減収だが、売上原価が996.95億円へ圧縮され売上総利益は529.73億円（<span class="up">▲ 21.7%</span>）へ拡大。原油価格の上昇と北米での販売量増加によるE&amp;P事業の増収増益を、石油製品等の仕入販売という<strong>低採算の売上の縮小</strong>が覆った構図で、探鉱費が43.29億円（+486.8%）へ急増したにもかかわらず営業利益は300.47億円（<span class="up">▲ 17.8%</span>）まで押し上げられた。<strong>売上の「量」を落として利益の「質」を上げた、収益構造の改善</strong>と読める。
+    </div>
+    <div class="highlight">
+      <strong>② 営業+17.8%に対し経常+2.2%と伸びが大きく鈍化：</strong>営業段階の改善が経常段階でほぼ消えている。短信は主因を<strong>為替差益が差損に転じたこと</strong>と明記しており、前年同期の為替差益23.03億円が当期は為替差損16.49億円へ反転（約39.5億円のマイナス寄与）。加えて持分法による投資利益も25.57億円→20.77億円へ減少、支払利息は4.29億円→16.72億円へ約3.9倍に膨張した。結果、営業外収益合計83.50億円・営業外費用合計47.47億円で、<strong>営業利益の増加分（+45.39億円）のうち経常段階に残ったのは+7.12億円のみ</strong>。営業段階の改善が経常段階で目減りしている点に留意が必要。
+    </div>
+    <div class="highlight">
+      <strong>③ 中間包括利益139.32億円（△34.2%）が中間純利益308.20億円（+13.9%）と真逆の方向：</strong>その他の包括利益合計が△177.66億円と大きくマイナスに働いた。内訳は<strong>その他有価証券評価差額金△277.41億円</strong>（前年同期は+129.29億円）、繰延ヘッジ損益△25.56億円、一方で為替換算調整勘定は+124.96億円のプラス。<strong>損益計算書上の増益だけでは企業価値の変化を捉えきれない</strong>典型例であり、保有有価証券の時価下落が株主資本の積み上がりを大きく削っている。実際、中間純利益308.20億円に対し純資産の増加はわずか+23.55億円にとどまる。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年3月期・修正有）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">3,360.00<span class="data-sub">億円 △1.3%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val" style="color:var(--green);">520.00<span class="data-sub">億円 +33.6%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val" style="color:var(--red);">530.00<span class="data-sub">億円 △13.9%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val" style="color:var(--green);">700.00<span class="data-sub">億円 +31.0%（EPS 273.41円）</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>④ 通期予想の歪み（最重要）：</strong>営業利益は520.00億円（<span class="up">▲ 33.6%</span>）と増益計画である一方、<strong>経常利益は530.00億円（<span class="down">▼ 13.9%</span>）と減益計画</strong>。さらに<strong>当期純利益700.00億円が経常利益530.00億円を170億円も上回る異例の構図</strong>となっている。これは特別利益や税効果（繰延税金資産の計上等）といった<strong>営業・経常段階を超える要因</strong>を通期計画に織り込んでいることを強く示唆する。実際、当中間期だけで<strong>投資有価証券売却益103.33億円</strong>（特別利益合計103.36億円）を計上済みで、固定資産が前期末比△311.32億円減少した主因も「時価下落及び売却に伴う投資有価証券の減少」と説明されている。通期の純利益700億円は<strong>本業の稼ぎではなく保有株式の売却益・税効果に相当程度依存する計画</strong>と理解すべきで、その持続性には注意が必要。
+    </div>
+    <div class="highlight">
+      <strong>⑤ 中間進捗の高さと通期計画との不整合：</strong>中間純利益308.20億円は通期予想700.00億円の<strong>44.0%</strong>にとどまる一方、<strong>営業は57.8%・経常は63.5%</strong>と既に6割前後へ到達（売上は45.4%）。営業・経常ベースでは下期の計画が保守的に見える。だが逆算すると下期の<strong>営業利益は219.53億円（中間比△26.9%）・経常利益は193.50億円（中間比△42.5%）</strong>と大幅減速する計画で、通期の経常減益計画との整合が課題。他方、下期の純利益は逆算391.80億円（中間比+27.1%）と<strong>経常利益193.50億円の2倍</strong>に設定されており、下期にも大型の特別利益ないし税効果を見込んでいることが読み取れる。営業・経常の上振れ余地と、純利益の「中身」の脆さを分けて評価する必要がある。
+    </div>
+    <div class="highlight neutral">
+      <strong>※ 注記：</strong>通期業績予想は2026年8月6日公表予想から<strong>修正有</strong>（2026年11月12日公表の「業績予想の修正に関するお知らせ」参照）。配当予想の修正は<strong>無</strong>。セグメント区分は日本・北米・欧州・中東の地域別で、上記3枚のグリッドは短信本文の<strong>売上高内訳（E&amp;P／インフラ・ユーティリティ／その他）</strong>に基づく事実ベースの数値。地域別セグメント利益は注記（セグメント情報等）の実数値。潜在株式調整後1株当たり中間純利益は「－」（該当なし）。
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">8,938.69<span class="data-sub">億円 +3.6%（前期末 8,624.70億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">2,326.17<span class="data-sub">億円 +290.44億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">6,612.52<span class="data-sub">億円 +0.4%（前期末 6,588.97億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">6,290.65<span class="data-sub">億円（前期末 6,275.37億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val" style="color:var(--red);">70.4<span class="data-sub">% （前期末 72.8% / △2.4pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">株式数・増減の内訳</div>
+        <div class="data-row">
+          <span class="data-key">期末発行済株式数</span>
+          <span class="data-val">257,000,380<span class="data-sub">株（前期末同数）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末自己株式数</span>
+          <span class="data-val">966,916<span class="data-sub">株（前期末 1,000,978株）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期中平均株式数</span>
+          <span class="data-val">256,012,218<span class="data-sub">株</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">流動資産</span>
+          <span class="data-val" style="color:var(--green);">+625.31<span class="data-sub">億円（現預金・売上債権の増加）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">固定資産</span>
+          <span class="data-val" style="color:var(--red);">△311.32<span class="data-sub">億円（投資有価証券の時価下落・売却）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⑥ 自己資本比率70.4%の極めて高い財務健全性（ただし△2.4ptの低下）：</strong>総資産は前期末比+313.99億円増の8,938.69億円。流動資産が+625.31億円増加（現金及び預金・受取手形／売掛金及び契約資産の増加）した一方、固定資産は<strong>投資有価証券の時価下落及び売却により△311.32億円減少</strong>。負債は+290.44億円増の2,326.17億円で、流動負債は△196.35億円減（コマーシャル・ペーパーの減少／未払法人税等は31.03億円→136.83億円へ増加）、固定負債は+486.80億円増（長期借入金及び社債の増加）。純資産は<strong>その他有価証券評価差額金の減少を利益剰余金と為替換算調整勘定の増加で相殺し+23.55億円の微増</strong>にとどまった。この結果、自己資本比率は72.8%→70.4%へ<span class="down">▼ 2.4pt</span>低下。70%台は資源開発会社としては突出した健全性だが、<strong>総資産の膨張（有利子負債の増加）と有価証券評価差額金の減少という二方向から比率が押し下げられている</strong>点は、今後の資産取得ペースと合わせて注視すべき。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3期）</div>
+        <div class="div-cell-val">65.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間20.00 + 期末45.00</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3期）</div>
+        <div class="div-cell-val" style="color:var(--accent);">67.50<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間22.50（実績）+ 期末45.00（予想）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+2.50<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">増配（中間 20.00→22.50円 / +12.5%）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想ベース）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約24.7<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想 273.41円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期は年間67.50円の<strong>増配予想</strong>（前期65.00円から+2.50円）。内訳は中間22.50円（実績・前期中間20.00円から+2.50円）＋期末45.00円（予想・前期と同額）で、<strong>中間配当の増額がそのまま年間の増配につながる構図</strong>。直近に公表されている配当予想からの修正は<strong>無</strong>で、期初計画どおりの増配となる。配当支払開始予定日は2026年12月14日。配当性向はEPS予想273.41円ベースで<strong>約24.7%</strong>と低水準にとどまり、増配余地は数字上大きい。ただし通期純利益700億円が投資有価証券売却益等の特別要因に相当程度依拠する計画であることを踏まえると、<strong>この配当性向の低さは「余力」ではなく「一過性利益で分母が膨らんだ結果」とも読める</strong>点に留意。なお本短信には累進配当・DOE・配当性向目標といった<strong>明示的な配当方針の記載はない</strong>。
+    </div>
+  </section>
+
+  <!-- 05 主要リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">原油・天然ガス価格の変動<br><small>売上・利益が国際商品価格に直結。価格上昇が当期増益の主因</small></div>
+      <div class="risk-item high">通期予想の歪んだ利益構造<br><small>経常△13.9%減益計画に対し純利益700億円＞経常530億円。特別利益・税効果依存</small></div>
+      <div class="risk-item mid-level">為替変動リスク<br><small>為替差益23.03億円→差損16.49億円に反転。為替換算調整勘定も大幅変動</small></div>
+      <div class="risk-item mid-level">脱炭素・エネルギー転換<br><small>化石燃料需要の長期的減退と座礁資産化リスク</small></div>
+      <div class="risk-item mid-level">探鉱費の急増と減損リスク<br><small>探鉱費43.29億円（+486.8%）。開発プロジェクトの進捗次第で減損の可能性</small></div>
+      <div class="risk-item">中東セグメントの急縮小<br><small>売上7.21億円（△93.9%）・利益3.79億円（△71.8%）。資源国のカントリーリスク</small></div>
+      <div class="risk-item">国内天然ガス・電力の需要動向<br><small>国内天然ガス生産6,739百万cf（△6.4%）・電力販売975百万kWh（△31.0%）</small></div>
+      <div class="risk-item">米国Fundare社の持分取得（後発事象）<br><small>2026年10月1日付・取得原価278百万米ドル。RBL融資220百万米ドルを調達</small></div>
+      <div class="risk-item">高い財務健全性<br><small>自己資本比率70.4%・自己資本6,290.65億円（ただし前期末比△2.4pt）</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+    <div class="highlight neutral">
+      <strong>トピックス（重要な後発事象）：</strong>連結子会社Peoria Resources, LLC傘下のPeoria Resources Acquisition Company, LLCを通じ、米国でタイトオイル・ガス資産を保有するFundare Resources Operating Company, LLC他3社の全持分（議決権100%）を<strong>2026年10月1日付で取得</strong>。取得原価は<strong>278百万米ドル</strong>（現金対価）。主要リースは2026年2月に取得済のVerdad資産に近接しており、立地を活かした効率的な開発と単位コスト低減を見込む。資金の一部は確認埋蔵量を担保とする融資（Reserve Based Lending）で調達し、Wells Fargo Bank, N.A.をエージェントとするシンジケートローン<strong>220百万米ドル</strong>（2026年10月1日実行・2030年2月26日返済期日）を実行した。北米セグメントの利益が230.50億円（+111.3%）へ倍増した流れを、下期以降さらに加速させる布石となる。
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight">
+      当中間期は<strong>売上高1,526.68億円（△9.2%）の減収ながら、営業利益300.47億円（<span class="up">▲ 17.8%</span>）・経常利益336.50億円（<span class="up">▲ 2.2%</span>）・中間純利益308.20億円（<span class="up">▲ 13.9%</span>）の減収増益</strong>。原油価格の上昇と北米での販売量増加がE&amp;P事業を押し上げ、低採算の石油製品等仕入販売の縮小が売上を削る一方で売上総利益を529.73億円（+21.7%）へ拡大させた、<strong>「量」より「質」の収益構造改善</strong>が本決算の骨格である。北米セグメント利益は230.50億円（+111.3%）へ倍増し、主力の日本（107.05億円・△38.1%）を初めて大きく上回った。利益の重心が国内から北米タイトオイル・ガスへ移りつつある構造変化は、2026年10月のFundare社買収（278百万米ドル）と合わせ中期的な注目点。<br><br>
+      一方で<strong>3つの「ねじれ」</strong>を見落とすべきではない。第一に、<strong>営業+17.8%に対し経常+2.2%</strong>——為替差益23.03億円が差損16.49億円へ反転し、支払利息も約3.9倍に膨らんで、営業段階の改善（+45.39億円）が経常段階では+7.12億円しか残らなかった。第二に、<strong>中間包括利益139.32億円（△34.2%）が中間純利益308.20億円（+13.9%）と真逆</strong>——その他有価証券評価差額金△277.41億円が効き、純利益308億円を計上しながら純資産の増加はわずか+23.55億円。自己資本比率も72.8%→70.4%（△2.4pt）へ低下しており、<strong>損益計算書の増益が株主価値の増加と一致していない</strong>。第三に、<strong>通期予想の構造的な歪み</strong>——営業520.00億円（+33.6%）の増益計画に対し<strong>経常530.00億円は△13.9%の減益</strong>で、しかも<strong>純利益700.00億円が経常利益を170億円上回る</strong>。当中間期の投資有価証券売却益103.33億円がすでに示すとおり、通期純利益は<strong>特別利益と税効果に相当程度依存する計画</strong>であり、下期逆算では経常193.50億円に対し純利益391.80億円という一段と極端な構図になる。<br><br>
+      進捗率は営業57.8%・経常63.5%に対し<strong>純利益は44.0%</strong>。営業・経常は下期計画が保守的に見える半面、通期の経常減益計画との整合には注意が必要である。配当は年間67.50円（前期65.00円から+2.50円の<strong>増配</strong>、配当予想の修正は無）で、配当性向は予想EPS273.41円ベースで約24.7%。<strong>本短信には累進配当・DOE・配当性向目標といった明示的な配当方針の記載はなく</strong>、中間22.50円への増額という実績から安定・漸増型の還元姿勢が読み取れるにとどまる。配当性向の低さは一過性利益で分母が膨らんだ結果でもあり、「増配余力」と即断はできない。自己資本比率70.4%・自己資本6,290.65億円という厚い資本基盤を土台に、北米重心への事業ポートフォリオ転換が本業の利益でどこまで裏打ちされるか——<strong>特別利益を除いた経常段階の実力値</strong>が今後の評価軸となる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は石油資源開発株式会社（1662）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
