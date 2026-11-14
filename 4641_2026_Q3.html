@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社アルプス技研 2026年12月期 第3四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A4A4A;
+    --primary-light: #24405F;
+    --primary-dark: #0F3333;
+    --accent: #2E7D6A;
+    --accent-light: #55A890;
+    --accent-pale: #E6F4F1;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(20,40,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: '技術者派遣'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q3</div>
+  <h1>株式会社アルプス技研</h1>
+  <p class="subtitle">2026年12月期　第3四半期決算短信（連結）要約　／　証券コード 4641</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月12日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年9月30日</span></div>
+    <div class="meta-item">代表者 <span>代表取締役社長 須藤 泰志</span></div>
+    <div class="meta-item">補足資料／説明会 <span>いずれも無</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高（Q3累計）</div>
+      <div class="kpi-value">406.02<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 6.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">37.05<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 5.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">38.83<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 4.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">25.84<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 3.7%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">技術者派遣を中核とするアウトソーシングサービス事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">アウトソーシングサービス事業・グローバル事業（＋その他）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">サービス内容</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">技術者派遣／技術プロジェクト受託（請負）／事務派遣／海外プラント設計・製作・据付</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">注力領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">航空宇宙・医療機器の新規開拓（宇宙事業推進室・受託業務推進室を設置）、農業・介護・SCM等の新領域</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">株式分割</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年5月14日取締役会決議、2026年7月1日付で普通株式1株→3株の株式分割を実施</span>
+      </div>
+    </div>
+    <div class="highlight">技術者派遣を中核とするアウトソーシング企業。大手製造業の研究開発先行投資が維持される中、航空宇宙・医療機器等の新規開拓とチーム派遣・請負化の営業施策により<strong>総稼働人数・契約単価はともに上昇</strong>し、売上高は+6.3%の増収。一方で<strong>人件費の上昇と前期の国内外大型案件完工の影響により営業△5.6%・経常△4.5%・純利益△3.7%の減益</strong>となり、前年同期の全段階増益（営業+9.4%／経常+9.4%／純利益+13.6%）から<strong>増収減益へ転換</strong>した。2026年7月1日付で1株→3株の株式分割を実施済（EPS・株式数・当期末配当は分割後換算／分割考慮後で表示）。</div>
+  </section>
+
+  <!-- 02 業績ハイライト -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">業績ハイライトと増収減益への転換</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（Q3累計・連結）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">406.02<span class="data-sub">億円 +6.3%（前年 381.90億円／+6.2%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">37.05<span class="data-sub">億円 △5.6%（前年 39.24億円／+9.4%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">38.83<span class="data-sub">億円 △4.5%（前年 40.65億円／+9.4%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">25.84<span class="data-sub">億円 △3.7%（前年 26.83億円／+13.6%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">28.62<span class="data-sub">億円 +1.7%（前年 28.13億円／+16.7%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（分割後換算）</span>
+          <span class="data-val">43.89<span class="data-sub">円（前年同期 45.54円）※1→3分割を前期首に遡及</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益の主因と収益構造</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">① <strong>人件費の上昇</strong>：売上原価が293.97→317.15億円へ増加し、売上総利益率は23.0%→21.9%へ低下</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">② <strong>前期の国内外大型案件完工の影響</strong>：グローバル事業の営業利益が5.03→2.92億円（△41.9%）へ急減</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">③ 販管費も48.69→51.82億円へ増加（採用企画・技術教育の強化）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">④ 売上は<span class="up">+6.3%</span>で稼働率は高水準維持・契約単価も上昇＝<strong>需要側ではなくコスト側の問題</strong></span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⑤ 減価償却費1.71億円・のれん償却0.19億円と資産負担は小さい人材サービス型の収益構造</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>【重点注記1】増収減益への転換：</strong>売上は+6.3%（前年同期+6.2%）とほぼ同ペースで伸びているのに、<strong>利益は前年同期の営業+9.4%・経常+9.4%・純利益+13.6%の増益から、今期は営業△5.6%・経常△4.5%・純利益△3.7%の減益へ反転</strong>した。売上が伸びているのに利益が減る構図は、<strong>技術者の採用・育成コストや人件費・処遇改善の負担増が利益を圧迫</strong>していることを示唆する（会社説明も「人件費の上昇」「前期に国内外の大型案件を完工していた影響」を主因に挙げる）。技術者派遣ビジネス特有の<strong>「稼働率と契約単価、採用コストのバランス」</strong>がこの決算の最大の論点であり、稼働率は高水準維持・契約単価も上昇しているため、需要側ではなく<strong>コスト側で利益が削られている</strong>点を正確に押さえる必要がある。
+    </div>
+    <div class="highlight neutral">
+      <strong>【重点注記2・3】包括利益と営業外の寄与：</strong>四半期包括利益28.62億円（<span class="up">+1.7%</span>）はわずかながらプラスを維持し、純利益（△3.7%）より良好。その他有価証券評価差額金+2.53億円・為替換算調整勘定+0.13億円でその他の包括利益が+2.66億円と小幅にプラス寄与した。また<strong>経常利益38.83億円が営業利益37.05億円を上回る</strong>（営業外収益2.11億円 − 営業外費用0.32億円＝純額+1.78億円のプラス）。営業外収益は受取利息0.31億円・受取配当金0.26億円・助成金収入0.41億円等で構成される。
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item star"><div class="seg-name">アウトソーシングサービス事業</div><div class="seg-row"><span>売上高</span><span>370.04億円</span></div><div class="seg-row"><span>前年同期比</span><span class="up">▲ 6.2%</span></div><div class="seg-row"><span>セグメント利益</span><span>34.47億円</span></div><div class="seg-row"><span>前年同期比</span><span class="down">▼ 0.6%</span></div><div class="seg-row" style="display:block;margin-top:6px;"><span style="font-size:11px;">稼働率は高水準維持・契約単価も上昇し増収。人件費上昇で利益は小幅減</span></div></div>
+      <div class="seg-item decline"><div class="seg-name">グローバル事業</div><div class="seg-row"><span>売上高</span><span>35.08億円</span></div><div class="seg-row"><span>前年同期比</span><span class="up">▲ 7.7%</span></div><div class="seg-row"><span>セグメント利益</span><span>2.92億円</span></div><div class="seg-row"><span>前年同期比</span><span class="down">▼ 41.9%</span></div><div class="seg-row" style="display:block;margin-top:6px;"><span style="font-size:11px;">半導体業界中心に受注好調で増収も、前期大型案件完工の影響で大幅減益</span></div></div>
+      <div class="seg-item"><div class="seg-name">その他（サービス付き高齢者向け住宅）</div><div class="seg-row"><span>売上高</span><span>0.89億円</span></div><div class="seg-row"><span>前年同期</span><span>0.83億円</span></div><div class="seg-row"><span>セグメント損失</span><span class="down">▼ 0.36億円</span></div><div class="seg-row"><span>前年同期</span><span class="down">▼ 0.46億円</span></div><div class="seg-row" style="display:block;margin-top:6px;"><span style="font-size:11px;">報告セグメント外。損失は△0.46→△0.36億円へ縮小</span></div></div>
+    </div>
+    <div class="highlight neutral">
+      <strong>【重点注記10】セグメント区分についての注記：</strong>短信の報告セグメントは<strong>「アウトソーシングサービス事業」と「グローバル事業」の2区分のみ</strong>で、「その他」は報告セグメントに含まれない<strong>サービス付き高齢者向け住宅事業</strong>である。会社が推進する農業・介護・サプライチェーンマネジメント等の新領域は<strong>独立した報告セグメントとしては開示されておらず</strong>、上記の数値は短信のセグメント情報どおりの事実ベース。新領域の規模・採算は本短信からは特定できないため、ここでの位置づけは<strong>定性整理</strong>にとどまる。なお重要な後発事象として、2026年10月1日付で連結子会社㈱アルプスアグリキャリアの農業生産事業を新設分割により㈱アルプスリージョナルパートナーズ十勝（北海道十勝）へ承継し、派遣事業を㈱アルプスビジネスサービスへ吸収合併（いずれも100%出資子会社間の再編で、2026年12月期連結業績予想への影響は軽微）。当第3四半期累計における<strong>連結範囲の重要な変更は「無」</strong>。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2026年12月期・修正無）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高（連結）</span>
+            <span class="data-val">555.00<span class="data-sub">億円 +5.4%（進捗 73.2%）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益（連結）</span>
+            <span class="data-val">57.00<span class="data-sub">億円 +5.6%（進捗 65.0%）</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益（連結）</span>
+            <span class="data-val">58.00<span class="data-sub">億円 +4.6%（進捗 66.9%）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益（連結）</span>
+            <span class="data-val">39.00<span class="data-sub">億円 △2.0%（進捗 66.3%／EPS 66.27円・分割後換算）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>【重点注記6】通期は増益計画だがQ3累計は減益＝第4四半期に大幅増益へ転じる前提：</strong>Q3累計進捗は売上73.2%・営業65.0%・経常66.9%・純利益66.3%。<strong>通期は営業+5.6%・経常+4.6%の増益計画だが、Q3累計は営業△5.6%・経常△4.5%の減益</strong>であり、達成には第4四半期での大幅な増益転換が必要。通期営業57.00億円に対し残り必要額は<strong>19.95億円＝Q3累計の四半期平均（12.35億円）の約1.6倍</strong>で、達成のハードルは高い。<strong>業績予想の修正は「無」で据え置かれている</strong>（2026年2月12日公表の連結・個別予想から変更なし／会社は足元の派遣要請が引き続き堅調であることを据置きの理由としている）。この未達リスクは下記リスクセクションで高リスクとして扱う。
+      </div>
+      <div class="highlight neutral">
+        <strong>【重点注記7】連結と個別（単体）の差＝本体事業が収益の中核：</strong>参考として開示された<strong>個別（単体）業績予想</strong>は売上高420.00億円（+3.2%）・経常利益49.00億円（+3.1%）・当期純利益34.00億円（△3.0%）・EPS 57.77円（分割後換算）。連結の売上555.00億円・純利益39.00億円に対し、<strong>純利益ベースでは個別が連結の約87%</strong>（34.00÷39.00）を占め、売上ベースでも約76%。すなわち<strong>本体（アルプス技研単体）の技術者派遣事業が収益の中核</strong>であり、連結子会社の寄与は限定的という構図。※連結値と個別値は必ず区別して読む必要がある（Q3累計の個別実績は売上320.59億円・営業33.12億円・経常37.91億円・四半期純利益26.89億円）。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">312.30<span class="data-sub">億円（前期末 293.11億円／<span class="up">+19.19億円</span>）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">101.72<span class="data-sub">億円（前期末 88.74億円／+12.98億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">210.58<span class="data-sub">億円（前期末 204.36億円／<span class="up">+6.22億円</span>）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">209.98<span class="data-sub">億円（前期末 203.74億円／+6.24億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">67.2<span class="data-sub">%（前期末 69.5%／<span class="down">△2.3pt</span>）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増減要因・株式数（分割後換算）</div>
+        <div class="data-row">
+          <span class="data-key">総資産増加の主因</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">現金及び預金の増加</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債増加の主因</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">賞与引当金の増加</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末発行済株式数</span>
+          <span class="data-val">62,240,025<span class="data-sub">株（前期末同数）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末自己株式数</span>
+          <span class="data-val">3,358,845<span class="data-sub">株（前期末 3,389,241株）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期中平均株式数</span>
+          <span class="data-val">58,871,318<span class="data-sub">株（前年同期 58,935,558株）※1→3分割を前期首に遡及</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>【重点注記4】自己資本比率67.2%（△2.3pt）の低下は「資産の伸び」と「資本の積み上がり」の差：</strong>総資産が<strong>+19.19億円</strong>増加（主因は現金及び預金の増加）する一方で、自己資本の増加は<strong>+6.24億円</strong>にとどまった。負債は賞与引当金の増加を主因に+12.98億円増えており、<strong>資産の伸びに対し自己資本の積み上がりが小さいため比率が低下</strong>した。すなわち自己資本の減少ではなく分母の拡大による低下であり、質的な悪化ではない。<strong>それでも67%台の高い健全性を維持</strong>しており、賞与引当金の増加は人件費上昇（＝減益の主因）と整合する。※四半期連結キャッシュ・フロー計算書は作成されていない（減価償却費1.71億円、のれん償却額0.19億円のみ開示）。株主資本の金額に著しい変動があった場合の注記は該当なし。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/12期・分割後換算）</div>
+        <div class="div-cell-val">36.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">分割前 年間108.00円（中間47.00＋期末61.00）</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/12期・分割後換算）</div>
+        <div class="div-cell-val" style="color:var(--accent);">36.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間18.00（実績・分割前基準54.00円）＋期末18.00（予想・分割考慮後）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減（分割後換算）</div>
+        <div class="div-cell-val">維持 0.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">配当予想の修正 無</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約54.3<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">通期予想EPS 66.27円（分割後換算）ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>【重点注記5】株式分割を跨ぐ配当表示の複雑さ（必読）：</strong>2026年7月1日付の1株→3株の株式分割により、短信の配当欄は<strong>「年間配当金合計を『－』として非表示」</strong>としている（当期末配当金のみ分割を考慮した金額を記載）。このため<strong>短信の表面を素直に読むと年間配当が把握できない</strong>点に注意が必要。整理すると、当期の中間配当<strong>54.00円は分割前基準の金額（分割後換算では18.00円）</strong>、期末予想<strong>18.00円は分割考慮後の金額</strong>であり、<strong>分割後換算では前期36.00円 → 当期予想36.00円＝「維持」（増減0円）</strong>となる。前期（2025年12月期）は分割前ベースで中間47.00円＋期末61.00円＝年間108.00円（÷3＝分割後換算36.00円）。配当予想の修正は「無」。
+    </div>
+    <div class="highlight neutral">
+      <strong>【重点注記8】配当方針：</strong>本短信からは<strong>明示的なDOE・配当性向目標の記載は読み取れない（記載無し）</strong>。ただし<strong>分割後換算での年間36.00円の維持</strong>と<strong>中間配当の継続実施</strong>は株主還元姿勢として評価でき、株式分割（1→3株）による投資単位の引き下げ＝流動性向上も還元の一環と位置づけられる。通期予想EPS66.27円（分割後換算）に対し配当36.00円＝<strong>配当性向約54.3%</strong>で、減益局面でも無理のない水準。期末自己株式数は3,389,241株→3,358,845株とわずかに減少しており、当期は自己株式取得による還元は確認されない（株主資本の著しい変動の注記も該当なし）。配当支払開始予定日は「－」。
+    </div>
+  </section>
+
+  <!-- 05 主要リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">第4四半期の大幅増益前提と通期未達リスク<br><small>通期営業+5.6%計画に対しQ3累計△5.6%。残り必要額19.95億円＝四半期平均の約1.6倍</small></div>
+      <div class="risk-item high">技術者の採用難・人件費上昇による採算悪化<br><small>人材獲得競争の激化。売上+6.3%でも営業△5.6%＝原価率上昇が利益を直撃</small></div>
+      <div class="risk-item mid-level">稼働率の低下<br><small>派遣・請負の稼働率は高水準維持中だが、低下すれば固定費が即座に収益を圧迫</small></div>
+      <div class="risk-item mid-level">顧客の開発予算・設備投資動向<br><small>自動車・電機・IT・半導体等の研究開発先行投資の抑制が派遣要請に直結</small></div>
+      <div class="risk-item mid-level">グローバル事業の案件変動<br><small>前期大型案件完工の影響で営業利益△41.9%。大型案件依存による利益の振れ</small></div>
+      <div class="risk-item">法規制（労働者派遣法等）<br><small>同一労働同一賃金・派遣規制の改正が処遇コストと契約形態に影響</small></div>
+      <div class="risk-item">新規事業の収益化<br><small>農業・介護・SCM等。その他（サ高住）はなお△0.36億円の損失</small></div>
+      <div class="risk-item">株式分割後の株価変動・配当表示<br><small>2026年7月1日付1→3分割。年間配当合計が「－」表示で誤読リスク</small></div>
+      <div class="risk-item">グループ再編の進行<br><small>2026年10月1日付で農業生産事業の新設分割・派遣事業の吸収合併を実施（影響は軽微）</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+    <div class="highlight neutral">
+      <strong>その他の注記事項：</strong>当四半期連結累計期間における<strong>連結範囲の重要な変更 無</strong>（新規－社・除外－社）／会計方針の変更・会計上の見積りの変更・修正再表示 いずれも無／公認会計士等によるレビュー 無／決算補足説明資料の作成 無・決算説明会の開催 無。重要な後発事象として、2026年8月6日の取締役会決議に基づき2026年10月1日付で㈱アルプスアグリキャリアの農業生産事業を㈱アルプスリージョナルパートナーズ十勝（新設分割・資本金25百万円・北海道河東郡音更町）へ承継、同社の派遣事業は㈱アルプスビジネスサービスへ吸収合併。いずれも100%出資の連結子会社・関連会社間の共通支配下取引であり、2026年12月期の連結業績予想への影響は軽微（個別業績予想は精査の上、必要に応じて修正を開示予定）。
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight">
+      <strong>需要は堅調、問題はコスト。前年同期の全段階増益から増収減益へ明確に転換した決算。</strong>売上高406.02億円（+6.3%）は前年同期の+6.2%とほぼ同ペースで伸び、航空宇宙・医療機器等の新規開拓とチーム派遣・請負化の施策により<strong>総稼働人数・契約単価はともに上昇</strong>、稼働率も高水準を維持した。にもかかわらず<strong>営業37.05億円（△5.6%）・経常38.83億円（△4.5%）・純利益25.84億円（△3.7%）と全段階で減益</strong>し、前年同期（営業+9.4%／経常+9.4%／純利益+13.6%）から反転した。主因は<strong>人件費の上昇</strong>（売上原価293.97→317.15億円、売上総利益率23.0%→21.9%）と<strong>前期の国内外大型案件完工の影響</strong>であり、技術者派遣ビジネスにおける<strong>稼働率・契約単価と採用・育成コストのバランス</strong>が収益の分岐点になっていることを示す。セグメントでは中核のアウトソーシングサービス事業が売上370.04億円（+6.2%）・利益34.47億円（△0.6%）と増収ながら人件費で小幅減益、グローバル事業は半導体業界中心に受注好調で売上35.08億円（+7.7%）も前期大型案件の反動で利益2.92億円（△41.9%）と大きく落ち込んだ。包括利益28.62億円（+1.7%）は純利益より良好で、経常利益が営業利益を上回る（営業外純額+1.78億円）など利益の質は底堅い。財務は総資産312.30億円（+19.19億円・主因は現預金増）に対し自己資本の増加が+6.24億円にとどまり自己資本比率は69.5%→<strong>67.2%（△2.3pt）</strong>へ低下したが、これは<strong>資産の伸びに対する資本の積み上がりの差によるもので質的悪化ではなく</strong>、67%台の高い健全性を維持している（負債増は賞与引当金＝人件費上昇と整合）。最も注意すべきは<strong>通期予想との乖離</strong>で、通期は営業+5.6%・経常+4.6%の増益計画を据え置いている（修正 無）一方、Q3累計は減益。進捗は売上73.2%・営業65.0%・経常66.9%・純利益66.3%にとどまり、<strong>第4四半期に営業利益19.95億円＝四半期平均12.35億円の約1.6倍を稼ぐ前提</strong>で、達成ハードルは高く未達リスクを織り込む必要がある。なお<strong>個別（単体）予想は売上420.00億円・経常49.00億円・純利益34.00億円で、純利益ベースでは個別が連結の約87%</strong>を占め、本体の技術者派遣事業が収益の中核という構図も確認できる。<strong>配当方針については、短信から明示的なDOE・配当性向目標の記載は読み取れない（記載無し）</strong>が、2026年7月1日付の1株→3株分割により短信が年間配当合計を「－」と非表示にしている点を正しく読み替えれば、<strong>分割後換算で前期36.00円→当期予想36.00円の「維持」</strong>（中間18.00円＝分割前基準54.00円、期末予想18.00円＝分割考慮後、修正 無）であり、<strong>中間配当の継続実施と分割による流動性向上を含め株主還元姿勢は維持</strong>されている。通期予想EPS66.27円に対し配当性向は約54.3%で、減益局面でも無理のない水準。総じて、<strong>需要・単価は伸びているがコストが先行する「成長の踊り場」型の決算</strong>であり、人件費上昇の転嫁進捗と第4四半期の増益転換の実現可否が今後の評価を左右する。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社アルプス技研（4641）2026年12月期第3四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>

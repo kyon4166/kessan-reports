@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社ＳＲＡホールディングス 2027年3月期 第2四半期（中間期） 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A4A4A;
+    --primary-light: #24405F;
+    --primary-dark: #0F3333;
+    --accent: #2E7D7D;
+    --accent-light: #55A8A8;
+    --accent-pale: #E8F5F5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(20,40,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: '情報サービス'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · H1</div>
+  <h1>株式会社ＳＲＡホールディングス</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 3817</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月11日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証</span></div>
+    <div class="meta-item">代表者 <span>代表取締役社長 大熊 克美</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高（中間期）</div>
+      <div class="kpi-value">247.40<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 7.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">38.20<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 0.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">24.49<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 3.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">195.74<span class="kpi-unit">円</span></div>
+      <div class="kpi-change down">前年同期 200.17円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">情報サービス（開発事業／運用・構築事業／販売事業）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役社長 大熊 克美</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">問合せ先</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">執行役員 管理本部財務・経理部長 小林 俊昭（TEL: 03-5979-2666）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">注力領域</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">クラウドビジネス、好調な金融業界向け開発事業、AI活用、既存事業の生産性向上</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">半期報告書提出予定日</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年11月12日（配当支払開始予定日 2026年11月30日）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">説明資料・説明会</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">決算補足説明資料：有／決算説明会：有（機関投資家・アナリスト向け、オンライン開催＜Zoom使用＞）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">連結範囲の変更</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">無（会計方針の変更・見積りの変更・修正再表示もすべて無）</span>
+      </div>
+    </div>
+    <div class="highlight">システム開発を中核とする情報サービス企業グループ。報告セグメントは<strong>開発事業・運用・構築事業・販売事業</strong>の3区分。当中間期は国内景気の緩やかな回復基調のなか、業務効率化・ビジネス改革の投資需要が堅調でAI活用の動きも活発化した一方、製造業顧客では原材料価格の高騰や米国の通商政策の影響も見られた。こうした環境下で<strong>クラウドビジネス等の収益性の高い事業の推進・既存事業の生産性向上・好調な金融業界向け開発事業への注力</strong>に努めたが、販売事業における<strong>前年同期の27億円超の大型販売案件（株式会社ＡＩＴ）の反動減</strong>により、売上高△7.4%・営業利益△0.8%・経常利益△5.9%・中間純利益△3.1%と全段階で減収減益となった。ただし減収幅に比べ利益の落ち込みは小さく、採算性の高い事業構成へのシフトが進んでいる。</div>
+  </section>
+
+  <!-- 02 業績ハイライト -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">業績ハイライト</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間期）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">247.40<span class="data-sub">億円 <span class="down">▼ 7.4%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val">65.15<span class="data-sub">億円 <span class="down">▼ 0.8%</span>（利益率 26.3%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">38.20<span class="data-sub">億円 <span class="down">▼ 0.8%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">37.70<span class="data-sub">億円 <span class="down">▼ 5.9%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">24.49<span class="data-sub">億円 <span class="down">▼ 3.1%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val">44.84<span class="data-sub">億円 <span class="up">▲ 81.5%</span></span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">前年同期（2026年3月期中間期）との対比</div>
+        <div class="data-row">
+          <span class="data-key">売上高 267.19億円</span>
+          <span class="data-val" style="font-size:14px;"><span class="up">▲ 12.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益 38.49億円</span>
+          <span class="data-val" style="font-size:14px;"><span class="up">▲ 6.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益 40.08億円</span>
+          <span class="data-val" style="font-size:14px;"><span class="up">▲ 27.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間純利益 25.28億円</span>
+          <span class="data-val" style="font-size:14px;"><span class="up">▲ 22.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益 24.70億円</span>
+          <span class="data-val" style="font-size:14px;"><span class="down">▼ 26.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS 200.17円</span>
+          <span class="data-val" style="font-size:14px;">→ 当中間期 195.74円（潜在株式調整後は「－」）</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight"><strong>【重点1】全段階減収減益への転換 ― ただし減収幅に比べ利益の落ち込みは小さい。</strong>前年同期は売上+12.0%・営業+6.5%・経常+27.6%・純利益+22.6%の全段階増収増益だったが、今期は売上△7.4%・営業△0.8%・経常△5.9%・純利益△3.1%へ反転した。もっとも<strong>売上△7.4%に対し営業利益は△0.8%にとどまっており、減収幅に比べて利益の落ち込みは著しく小さい</strong>。実際に<strong>売上総利益率は24.6%→26.3%、売上高営業利益率は14.4%→15.4%へ前年同期比で向上</strong>している。これは利益率の低い販売事業（大型案件の反動減）が縮小し、相対的に利益率の高い開発事業・運用・構築事業が拡大したという<strong>売上構成の改善＝高付加価値化</strong>と、採算性を重視した取組みの成果である。「減収だが利益は維持」という構図であり、売上の表面的な減少のみで業績悪化と判断するのは適切でない。</div>
+    <div class="highlight"><strong>【重点2】経常利益37.70億円が営業利益38.20億円を下回る ― 営業外費用が純額でマイナス。</strong>かつ<strong>経常△5.9%の落ち込みが営業△0.8%より大きい</strong>。主因は為替差損で、<strong>前年同期の為替差損計上額が0.05億円（5百万円）であったのに対し当中間期は2.21億円（221百万円）</strong>に拡大し、経常利益を前年同期比2.38億円押し下げた。前年同期は<strong>経常40.08億円 &gt; 営業38.49億円</strong>と営業外が純額プラスで、しかも経常+27.6%が営業+6.5%を大きく上回る構図だった（為替差益等の寄与）。<strong>今期はその逆の構図＝前年同期の営業外収益の反動</strong>であり、営業外損益の振れが経常段階の見え方を大きく左右している点に留意すべき。</div>
+    <div class="highlight"><strong>【重点3】中間包括利益44.84億円（+81.5%）が中間純利益24.49億円を大きく上回り、損益が減益なのに包括利益は大幅増。</strong>差額はその他の包括利益、とくに<strong>保有有価証券の評価差額</strong>の大幅なプラス寄与によるもので、実際に純資産では<strong>その他有価証券評価差額金が16.26億円増加して58.66億円</strong>となり、投資有価証券も24.81億円増加して123.65億円となっている。<strong>損益は全段階減益、包括利益は+81.5%の大幅増と、両者が真逆の方向を向いている</strong>ことを正しく認識する必要がある。しかも前年同期の包括利益は24.70億円（△26.8%）と減少していたため、包括利益は市場要因により年度間の振れが極端に大きい。保有有価証券の価格が反転すれば包括利益・純資産は同じ幅で下振れし得る。</div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">報告セグメント別の状況（外部顧客への売上高 / セグメント利益）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">開発事業</div>
+          <div class="seg-row"><span>売上高</span><span>132.32億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="up">▲ 9.4%</span></div>
+          <div class="seg-row"><span>セグメント利益</span><span>27.56億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="up">▲ 8.8%</span></div>
+          <div class="seg-row"><span>牽引要因</span><span>金融業向け増加</span></div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">運用・構築事業</div>
+          <div class="seg-row"><span>売上高</span><span>33.09億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="up">▲ 3.9%</span></div>
+          <div class="seg-row"><span>セグメント利益</span><span>10.24億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="up">▲ 7.2%</span></div>
+          <div class="seg-row"><span>牽引要因</span><span>金融業向け堅調</span></div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">販売事業</div>
+          <div class="seg-row"><span>売上高</span><span>81.99億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="down">▼ 28.3%</span></div>
+          <div class="seg-row"><span>セグメント利益</span><span>9.50億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="down">▼ 26.9%</span></div>
+          <div class="seg-row"><span>減収要因</span><span>大型案件の反動減</span></div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;"><strong>※ セグメントの内訳（短信本文・セグメント注記に基づく事実ベース）：</strong>セグメント間取引を含む計では開発事業132.48億円・運用・構築事業35.09億円・販売事業82.15億円、合計249.72億円で、調整額△2.31億円を加え売上高247.40億円。セグメント利益合計47.31億円から<strong>全社費用等の調整額△9.11億円</strong>（報告セグメントに帰属しない一般管理費及び研究開発費／前年同期は△9.38億円）を控除して営業利益38.20億円となる。<strong>減収は販売事業に集中しており（△32.35億円の減収）、開発事業+11.34億円・運用・構築事業+1.23億円の増収がこれを一部補った</strong>。販売事業の減収要因は株式会社ＡＩＴにおいて前年同期に27億円超の大型販売案件があった反動減であり、構造的な需要減退ではない点が重要。利益率で見れば開発事業20.8%・運用・構築事業29.2%に対し販売事業11.6%であり、<strong>販売事業の縮小が全社の利益率を押し上げた</strong>関係にある。固定資産の減損損失・のれん等に関する重要な事項の記載は無し。</div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・修正無＝据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">555.00<span class="data-sub">億円 <span class="up">▲ 4.2%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">86.00<span class="data-sub">億円 <span class="up">▲ 4.3%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">90.00<span class="data-sub">億円 <span class="down">▼ 5.3%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">55.00<span class="data-sub">億円 <span class="down">▼ 1.8%</span></span>（EPS 439.44円）</span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight" style="margin-top:12px;"><strong>【重点5】通期予想との整合 ― 下期に増収増益へ転じる前提。</strong>中間進捗率は<strong>売上44.6%・営業44.4%・経常41.9%・純利益44.5%</strong>で、いずれも50%を下回る。<strong>通期は売上+4.2%・営業+4.3%の増収増益計画であるのに対し、中間実績は売上△7.4%・営業△0.8%の減収減益</strong>であり、<strong>下期に増収増益へ明確に転じることが前提</strong>となっている。通期売上555.00億円に対する下期必要額は307.60億円＝<strong>中間247.40億円の約1.24倍</strong>、通期営業利益86.00億円に対する下期必要額は47.80億円＝中間38.20億円の約1.25倍であり、情報サービス業に典型的な下期・年度末偏重の季節性を考慮しても相応のハードルと言える。さらに<strong>通期の経常△5.3%・純利益△1.8%は減益計画</strong>であり、<strong>営業は増益なのに経常・純利益は減益という歪み</strong>も残る（前期の営業外収益・特別損益の反動を織り込んでいる可能性）。業績予想の修正は<strong>無</strong>で2026年5月13日公表値が据え置かれているが、中間の減収トレンドが下期も継続した場合の<strong>通期未達リスク</strong>は相応に高いと見るべき。</div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">527.90<span class="data-sub">億円（前期末 519.20億円 <span class="up">▲ 1.7%</span>）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">357.69<span class="data-sub">億円（前期末 340.31億円 <span class="up">▲ 5.1%</span>／+17.38億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">352.84<span class="data-sub">億円（前期末 336.04億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">66.8<span class="data-sub">%（前期末 64.7% / <span class="up">▲ 2.1pt</span>）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">170.21<span class="data-sub">億円（前期末比 <span class="down">▼ 4.9%</span>＝負債は減少）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+23.67<span class="data-sub">億円（前年同期 +12.11億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△15.97<span class="data-sub">億円（前年同期 △11.77億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△27.65<span class="data-sub">億円（前年同期 △12.78億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF</span>
+          <span class="data-val" style="color:var(--green);">+7.70<span class="data-sub">億円（前年同期 +0.34億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">現金及び現金同等物</span>
+          <span class="data-val">183.16<span class="data-sub">億円（期首 202.24億円／△19.07億円）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight"><strong>【重点4】自己資本比率66.8%（+2.1pt）へ改善し、純資産も+17.38億円増加。</strong>包括利益44.84億円が配当・自己株式取得を上回って資本を積み上げた形で、<strong>純資産の内訳ではその他有価証券評価差額金が+16.26億円（58.66億円へ）、利益剰余金が+10.60億円（271.15億円へ）増加した一方、自己株式を13.56億円取得し自己株式は△34.39億円となった</strong>。期末自己株式数は<strong>2,606,111株 → 2,906,118株へ約30万株増加（自己株式取得の実施）</strong>、期中平均株式数は12,633,889株 → 12,515,852株へ減少しておりEPSを支える構造（期末発行済株式数は15,240,000株で前期末と同数）。資産側では投資有価証券が+24.81億円（123.65億円）・商品及び製品が+4.10億円増加した一方、現金及び預金が△27.07億円（182.29億円）、受取手形・売掛金及び契約資産が売上債権の回収等により△16.58億円（76.59億円）、長期貸付金が△5.57億円減少。負債側は前受金+6.86億円・賞与引当金+3.73億円・繰延税金負債+8.37億円の増加に対し、未払費用△8.37億円・未払法人税等△8.17億円・未払消費税等△7.96億円の減少で<strong>負債合計は△4.9%</strong>。営業CFは+23.67億円へ大きく改善し、フリーCFも+7.70億円を確保して財務CF△27.65億円（配当・自己株式取得）の大半を賄っている。</div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3期）</div>
+        <div class="div-cell-val">200.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間90.00 + 期末110.00</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3期）</div>
+        <div class="div-cell-val" style="color:var(--accent);">220.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間100.00（実績）+ 期末120.00（予想）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+20.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+10.0% の大幅増配（修正：無）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約50.1<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想439.44円ベース</div>
+      </div>
+    </div>
+    <div class="highlight"><strong>【重点6】減収減益下でも+20円の大幅増配 ― 配当性向約50%水準での安定増配。</strong>2027年3月期の年間配当予想は<strong>220.00円（中間100.00円＝実績、期末120.00円＝予想）で前期200.00円から+20円（+10.0%）の大幅増配</strong>。中間配当は前期90円から100円へ+10円、期末予想も110円から120円へ+10円と、上期・下期の双方で増額している。通期予想EPS439.44円に対し220円で<strong>配当性向は約50.1%</strong>。<strong>中間期は全段階減収減益、通期も経常△5.3%・純利益△1.8%の減益計画であるにもかかわらず増配を実施しており、株主還元姿勢は明確</strong>である。配当予想の修正は<strong>無</strong>（2026年5月13日公表値を据置）。なお<strong>短信にDOEや配当性向の数値目標など配当方針の明示的な記載は無く</strong>、方針の定量的な裏付けは確認できないが、実績ベースでは<strong>配当性向約50%水準での安定的な増配継続と自己株式取得（13.56億円・約30万株増）の併用</strong>という総還元の姿勢が読み取れる。配当支払開始予定日は2026年11月30日。</div>
+  </section>
+
+  <!-- 05 主要リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">下期の増収増益転換を前提とする通期計画<br><small>通期は売上+4.2%・営業+4.3%の増収増益計画だが中間は売上△7.4%・営業△0.8%。下期は中間の約1.24〜1.25倍が必要で、予想修正は「無」のまま据置＝未達リスク</small></div>
+      <div class="risk-item high">減収トレンドの継続<br><small>販売事業は前年同期の27億円超の大型案件の反動減で△28.3%。同規模案件が再現しない限り減収基調が続く可能性。開発・運用の伸びで全体を補えるか</small></div>
+      <div class="risk-item mid-level">保有有価証券の価格変動<br><small>投資有価証券123.65億円（+24.81億円）、その他有価証券評価差額金58.66億円（+16.26億円）。包括利益+81.5%の主因であり反転すれば純資産を同幅で押し下げる</small></div>
+      <div class="risk-item mid-level">IT技術者の人件費上昇・採用難<br><small>労働集約的な開発事業では人材の確保・定着と単価転嫁が収益性を左右。賞与引当金も+3.73億円増加</small></div>
+      <div class="risk-item mid-level">顧客のIT投資予算動向<br><small>業務効率化・AI活用の投資需要は堅調だが、製造業顧客では原材料価格の高騰や米国の通商政策の影響が見られ、予算抑制のリスク</small></div>
+      <div class="risk-item">為替変動<br><small>為替差損は前年同期0.05億円→当中間期2.21億円に拡大し経常利益を押し下げ。経常△5.9%が営業△0.8%を上回る主因</small></div>
+      <div class="risk-item">大型案件依存による売上変動<br><small>単一の大型販売案件の有無で売上が二桁変動する構造。四半期・半期の売上比較の連続性が損なわれやすい</small></div>
+      <div class="risk-item">受注競争と採算管理<br><small>情報サービス業の受注競争。採算性重視の選別受注は利益率を高めるが売上規模の成長を抑制するトレードオフ</small></div>
+      <div class="risk-item">オフショア・海外子会社の採算<br><small>海外拠点・グループ会社の採算と為替影響。貸倒引当金51.85億円・長期貸付金73.23億円の残高推移も注視</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight">
+      当中間期は売上高247.40億円（△7.4%）・営業利益38.20億円（△0.8%）・経常利益37.70億円（△5.9%）・中間純利益24.49億円（△3.1%）と、前年同期の全段階増収増益（売上+12.0%・営業+6.5%・経常+27.6%・純利益+22.6%）から<strong>一転して全段階減収減益</strong>となった。ただし中身は単純な悪化ではない。減収は<strong>販売事業（株式会社ＡＩＴにおける前年同期27億円超の大型販売案件の反動減、△28.3%）に集中</strong>しており、<strong>開発事業は金融業向けを中心に+9.4%、運用・構築事業も+3.9%と増収</strong>。利益率の低い販売事業が縮小し相対的に利益率の高い開発・運用が拡大した結果、<strong>売上総利益率は24.6%→26.3%、営業利益率は14.4%→15.4%へ向上し、売上△7.4%に対して営業利益は△0.8%にとどまった</strong>。「減収だが利益は維持」という高付加価値化の進展は正当に評価すべきである。一方で<strong>経常利益37.70億円は営業利益38.20億円を下回り、経常△5.9%の落ち込みが営業△0.8%を上回った</strong>。主因は為替差損が前年同期0.05億円から当中間期2.21億円へ拡大したことで、前年同期が経常40.08億円＞営業38.49億円という逆の構図だったことからも、<strong>前年同期の営業外収益の反動</strong>が明確に表れている。また<strong>中間包括利益44.84億円（+81.5%）は中間純利益24.49億円を大きく上回り、損益は減益なのに包括利益は大幅増という真逆の方向</strong>を示した。これは保有有価証券の評価差額（その他有価証券評価差額金+16.26億円、投資有価証券+24.81億円）の寄与であり、市場要因が反転すれば同じ幅で逆回転し得る点に留意が必要。財務は<strong>純資産357.69億円（+17.38億円）・自己資本比率66.8%（+2.1pt）へ改善</strong>し、包括利益が配当・自己株式取得（13.56億円・約30万株増）を上回って資本を積み上げた。営業CFは+23.67億円へ改善しフリーCF+7.70億円を確保、期中平均株式数の減少もEPSを支える。最大の論点は<strong>通期予想との整合</strong>である。中間進捗は売上44.6%・営業44.4%・経常41.9%・純利益44.5%といずれも50%未満で、<strong>通期の売上+4.2%・営業+4.3%の増収増益計画を達成するには下期に中間の約1.24〜1.25倍の売上・営業利益が必要</strong>となる。情報サービス業の下期偏重の季節性を考慮しても相応のハードルであり、しかも<strong>通期の経常△5.3%・純利益△1.8%は減益計画＝営業増益と経常・純利益減益の歪み</strong>も残る。予想修正は「無」で据え置かれており、減収トレンドが継続すれば未達リスクが顕在化する。<strong>配当方針については、短信にDOEや配当性向の数値目標など明示的な記載は無いものの、年間220.00円（中間100円＋期末120円）は前期200円から+20円（+10.0%）の大幅増配であり、通期予想EPS439.44円に対する配当性向は約50.1%。減収減益下での増配という事実は株主還元の優先度の高さを示しており、実績ベースでは配当性向約50%水準での安定的な増配継続と自己株式取得の併用という総還元姿勢が読み取れる。</strong>総じて、売上の減少は大型案件の反動という一過性要因に起因し、採算改善により利益はほぼ維持、財務健全性と株主還元は一段と強化された決算である。評価の分かれ目は下期に増収増益へ転じられるかどうかであり、通期計画の達成確度と、包括利益を支える保有有価証券の価格動向が今後の注目点となる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社ＳＲＡホールディングス（3817）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
