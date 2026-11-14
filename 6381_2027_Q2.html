@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アネスト岩田株式会社 2027年3月期 第2四半期（中間期） 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1C2B3A;
+    --primary-light: #24405F;
+    --primary-dark: #101C27;
+    --accent: #2D5F8A;
+    --accent-light: #5A8CB5;
+    --accent-pale: #E6EEF5;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(20,40,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: '圧縮機・塗装機器'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · H1</div>
+  <h1>アネスト岩田株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 6381</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月10日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証</span></div>
+    <div class="meta-item">代表者 <span>代表取締役 社長執行役員 CEO 三好 栄祐</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高（中間期）</div>
+      <div class="kpi-value">314.78<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 19.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">36.23<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 44.3%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">26.47<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 22.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">67.81<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">前年同期 54.89円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">空気圧縮機・真空機器（エアエナジー事業）／塗装機器・塗装設備（コーティング事業）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">代表取締役 社長執行役員 CEO 三好 栄祐</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">問合せ先</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">常務執行役員CFO 経営企画本部長 大丸 正徳（TEL: 045-591-9344）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">グローバル展開</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本・アジア／欧州・豪・アフリカ／米州・インド／中国・アセアンの4地域体制</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">半期報告書提出予定日</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">2026年11月11日（配当支払開始予定日 2026年12月8日）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">説明資料・説明会</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">決算補足説明資料：有／決算説明会：有（アナリスト・機関投資家向け）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">組織再編</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">第1四半期より報告セグメントを4地域区分へ変更、株式会社SANWAを子会社化</span>
+      </div>
+    </div>
+    <div class="highlight">空気圧縮機（オイルフリー式等）と塗装機器・塗装設備を軸とする機械メーカー。CxO制導入に伴い第1四半期より報告セグメントを従来の「日本／欧州／米州／中国／その他」から<strong>「日本・アジア」「欧州・豪・アフリカ」「米州・インド」「中国・アセアン」の4地域区分へ変更</strong>し、全社費用の一部を各セグメントへ配分する方法に改めた。また日本の圧縮機製造販売会社 株式会社SANWA を株式取得により子会社化（のれん増加額 5.43億円）。当中間期は売上高+19.6%・営業利益+44.3%・経常利益+28.7%・中間純利益+22.5%と全段階で大幅増益となったが、<strong>前年同期が減収減益だった低いベースからの回復局面</strong>である点に留意が必要。</div>
+  </section>
+
+  <!-- 02 業績ハイライト -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">業績ハイライト</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間期）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">314.78<span class="data-sub">億円 <span class="up">▲ 19.6%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">36.23<span class="data-sub">億円 <span class="up">▲ 44.3%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">42.41<span class="data-sub">億円 <span class="up">▲ 28.7%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">26.47<span class="data-sub">億円 <span class="up">▲ 22.5%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val">43.20<span class="data-sub">億円 <span class="up">▲ 182.3%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益率</span>
+          <span class="data-val">11.5<span class="data-sub">%（前年同期 9.5%）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">前年同期（2026年3月期中間期）との対比</div>
+        <div class="data-row">
+          <span class="data-key">売上高 263.25億円</span>
+          <span class="data-val" style="font-size:14px;"><span class="down">▼ 2.7%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益 25.11億円</span>
+          <span class="data-val" style="font-size:14px;"><span class="down">▼ 15.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益 32.96億円</span>
+          <span class="data-val" style="font-size:14px;"><span class="down">▼ 4.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間純利益 21.60億円</span>
+          <span class="data-val" style="font-size:14px;"><span class="down">▼ 1.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益 15.30億円</span>
+          <span class="data-val" style="font-size:14px;"><span class="down">▼ 70.4%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS 54.89円</span>
+          <span class="data-val" style="font-size:14px;">→ 当中間期 67.81円（潜在株式調整後は「―」）</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight"><strong>【重点1】全段階の大幅増益だが、前年同期は減収減益の低いベース。</strong>当中間期は売上+19.6%・営業+44.3%・経常+28.7%・純利益+22.5%と全段階で大幅増益。ただし<strong>前年同期は売上△2.7%・営業△15.2%・経常△4.8%・純利益△1.5%と落ち込んでいた</strong>ため、今期の高い伸び率は<strong>反動増（低ベースからの回復）の性格が強い</strong>。2期前の水準との比較で見れば、営業利益は中間期ベースで依然として大きく水準を切り上げたとは言い切れず、伸び率の額面どおりの評価は避けるべき局面。</div>
+    <div class="highlight"><strong>【重点2】利益段階を下るほど増益率が縮小、かつ経常利益が営業利益を上回る収益構造。</strong>営業+44.3% → 経常+28.7% → 純利益+22.5% と段階を下るごとに増益率が縮小している。一方で<strong>経常利益42.41億円は営業利益36.23億円を上回っており</strong>、持分法による投資損益・為替差益・受取配当金等の<strong>営業外収益が収益の重要な構成要素</strong>となっている。前年同期も経常32.96億円 &gt; 営業25.11億円で同じ構造であり、<strong>営業外収益に相応に依存した収益構造</strong>が継続している。営業利益の伸びが経常段階で希薄化したのは、前年同期に厚かった営業外収益の反動（持分法による投資損益の変動で営業CFも4.02億円分減少）を示唆する。</div>
+    <div class="highlight"><strong>【重点3】中間包括利益43.20億円（+182.3%）が中間純利益26.47億円を大きく上回る。</strong>差額はその他の包括利益（為替換算調整勘定・その他有価証券評価差額金等）の大幅なプラス寄与によるもので、実際に純資産では「為替換算調整勘定」が7.20億円増加している。ただし<strong>前年同期の包括利益は15.30億円（△70.4%）と大きく落ち込んでいた</strong>ため、包括利益は<strong>為替・市場要因により年度間の変動が極端に大きい</strong>項目である点に留意。本業の稼ぐ力を測る指標としては営業利益を見るべき。</div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">事業別の状況（ご参考値・会社独自基準）</div>
+      <div class="seg-grid">
+        <div class="seg-item star">
+          <div class="seg-name">エアエナジー事業</div>
+          <div class="seg-row"><span>売上高</span><span>181.11億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="up">▲ 14.5%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>19.65億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="up">▲ 39.5%</span></div>
+          <div class="seg-row"><span>圧縮機 / 真空機器</span><span>166.09 / 15.02</span></div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">コーティング事業</div>
+          <div class="seg-row"><span>売上高</span><span>130.52億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="up">▲ 29.5%</span></div>
+          <div class="seg-row"><span>営業利益</span><span>17.76億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="up">▲ 43.6%</span></div>
+          <div class="seg-row"><span>塗装機器 / 塗装設備</span><span>99.67 / 30.84</span></div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">その他</div>
+          <div class="seg-row"><span>売上高</span><span>3.15億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="down">▼ 27.0%</span></div>
+          <div class="seg-row"><span>営業損益</span><span class="down">△1.18億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span>―（損失）</span></div>
+          <div class="seg-row"><span>内容</span><span>EC・モビリティ</span></div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;"><strong>※ 事業別・地域別の内訳（短信本文に基づく事実ベース）：</strong>エアエナジー事業は圧縮機166.09億円（+13.9%）・真空機器15.02億円（+21.8%）。日本で8月実施の値上げに伴う駆け込み需要と販売単価上昇、株式会社SANWAの連結取込、台湾での半導体製造装置向け真空ポンプ、北米データセンター向けオイルフリー圧縮機の需要拡大が寄与。コーティング事業は塗装機器99.67億円（+13.6%）・<strong>塗装設備30.84億円（+135.3%）</strong>で、日本・中国における自動車部品製造向け大型塗装設備の納入完了が大幅増収を牽引。地域別セグメント（新区分）は<strong>日本・アジア 売上167.88億円（+21.7%）／利益23.14億円（+40.9%）、欧州・豪・アフリカ 63.67億円（+19.3%）／7.06億円（+54.6%）、米州・インド 63.95億円（+27.4%）／9.33億円（+54.8%）、中国・アセアン 74.41億円（+18.8%）／4.96億円（+100.3%）、その他 2.87億円（△28.2%）／△0.79億円（損失）</strong>。中国は国内景況悪化で圧縮機の国内向け販売が低迷したものの、リチウムイオン電池メーカーの新工場設立に伴う特需が売上を押し上げた点は一過性要因の可能性がある。その他セグメントの損失はフィリピンにおける新規事業開拓投資によるもの。</div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・修正無＝据置）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">607.00<span class="data-sub">億円 <span class="up">▲ 8.6%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">54.00<span class="data-sub">億円 <span class="down">▼ 2.9%</span></span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">64.60<span class="data-sub">億円 <span class="down">▼ 16.3%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">39.50<span class="data-sub">億円 <span class="down">▼ 26.3%</span></span>（EPS 100.45円）</span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight" style="margin-top:12px;"><strong>【重点4・最重要】通期予想と中間実績の深刻な乖離 ― 下期ほぼ半減を前提とする計画。</strong>中間期は全段階で大幅増益にもかかわらず、<strong>通期予想は営業△2.9%・経常△16.3%・純利益△26.3%の減益計画</strong>。中間進捗率は<strong>売上51.9%・営業67.1%・経常65.6%・純利益67.0%</strong>で、<strong>営業・経常・純利益はいずれも既に通期予想の約2/3を達成</strong>している。通期計画を前提にすると下期の営業利益は約17.77億円（中間36.23億円の<strong>約49%</strong>）、経常利益は約22.19億円（同42.41億円の約52%）、純利益は約13.03億円（同26.47億円の<strong>約49%</strong>）にとどまり、<strong>下期に利益がほぼ半減する前提</strong>となる。それにもかかわらず業績予想の修正は「無」で2026年8月10日公表値が据え置かれており、(a) 極端に保守的な計画である、(b) 下期に為替の反転・一過性費用・関税/通商政策の影響・前年同期にあった特需（中国リチウムイオン電池向け、大型塗装設備納入完了）の消失を織り込んでいる、のいずれかを示す。<strong>上振れ余地と計画の信頼性低下が同時に示唆される</strong>構図であり、下期の予想修正の方向と幅が最大の注目点。</div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">755.35<span class="data-sub">億円（前期末 746.41億円 <span class="up">▲ 1.2%</span>）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">575.69<span class="data-sub">億円（前期末 575.42億円 ＝ ほぼ横ばい）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">510.10<span class="data-sub">億円（前期末 507.45億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">67.5<span class="data-sub">%（前期末 68.0% / <span class="down">▼ 0.5pt</span>）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">179.66<span class="data-sub">億円（+5.1% / 流動143.63・固定36.02）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+25.68<span class="data-sub">億円（前年同期比 △36.2%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△18.08<span class="data-sub">億円（同 △40.0%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△45.35<span class="data-sub">億円（同 +149.1%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF</span>
+          <span class="data-val" style="color:var(--green);">+7.60<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">現金及び現金同等物</span>
+          <span class="data-val">145.65<span class="data-sub">億円（前期末比 △19.5%）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight"><strong>【重点5】純資産がほぼ横ばい（575.42→575.69億円）で自己資本比率は△0.5pt。</strong>中間純利益26.47億円・中間包括利益43.20億円を計上しながら純資産がほとんど増えていないのは、<strong>自己株式取得（15.00億円の支出、自己株式は14.85億円減少＝純資産のマイナス項目として増加）と配当による株主還元が利益を相殺</strong>しているため。純資産の内訳では利益剰余金+8.26億円・為替換算調整勘定+7.20億円の増加に対し自己株式が14.85億円減少した。期末自己株式数は<strong>2,359,253株 → 3,189,918株へ約83万株増加</strong>し、期中平均株式数も39,361,873株 → 39,044,644株へ減少してEPSを押し上げる構造となっている（期末発行済株式数は41,745,505株で前期末と同数）。財務CFは△45.35億円（前年同期比+149.1%）と大きく、自己株式取得15.00億円がその主因。総資産は圧縮機製造販売会社の子会社化に伴う建物+4.05億円・のれん+4.46億円等で固定資産が+5.5%となった一方、現金及び預金が42.46億円減少し流動資産は△1.3%。<strong>※ 業績連動型株式報酬制度「株式給付信託（BBT）」が保有する当社株式は、1株当たり中間純利益の算定において期中平均株式数から控除されている（2020年3月期より導入、信託に残存する当社株式は純資産の部に自己株式として計上）。</strong></div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3期）</div>
+        <div class="div-cell-val">87.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間41.00 + 期末46.00</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3期）</div>
+        <div class="div-cell-val" style="color:var(--accent);">93.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間43.00（実績）+ 期末50.00（予想）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+6.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">うち記念配当5円 → 普通ベース実質+1円</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--red);">約92.6<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想100.45円ベース</div>
+      </div>
+    </div>
+    <div class="highlight"><strong>【重点6】配当の実質を正しく読む ― 年間93円のうち5円は創業100周年記念配当。</strong>2027年3月期の年間配当予想93.00円は前期87.00円から+6円の増配だが、<strong>短信注記により、第2四半期末配当43円には2円、期末配当50円には3円の「創業100周年記念配当」が含まれる（記念配当合計5円）</strong>。したがって<strong>記念配当5円を除いた普通配当ベースは88円で、実質的な普通配当の増配は+1円（+1.1%）にとどまる</strong>。来期（2028年3月期）は記念配当が終了するため、普通配当が据え置かれる場合は<strong>年間88円前後へ実質減配となる可能性</strong>があり、表面上の「減配」として受け取られるリスクがある。配当性向は通期予想EPS100.45円に対し93円で<strong>約92.6%</strong>という極めて高い水準だが、これは(a) 記念配当5円を含む一時的な上乗せ、(b) 通期純利益予想が△26.3%の減益計画であることの両方が重なった結果であり、恒常的な配当方針としての持続性には疑問が残る。記念配当を除いた88円ベースでも配当性向は約87.6%と高い。配当予想の修正は<strong>無</strong>（2026年5月12日公表値を据置）。自己株式取得（15.00億円・約83万株増）も並行実施しており、総還元姿勢は明確である一方、通期予想利益との関係では還元水準が高止まりしている。</div>
+  </section>
+
+  <!-- 05 主要リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">通期計画と中間実績の深刻な乖離<br><small>中間は全段階大幅増益なのに通期は営業△2.9%・経常△16.3%・純利益△26.3%の減益計画。下期の営業利益・純利益は中間の約49%＝ほぼ半減が前提で、予想修正は「無」のまま据置</small></div>
+      <div class="risk-item high">記念配当5円終了後の配当水準<br><small>年間93円のうち創業100周年記念配当5円（中間2円＋期末3円）。来期は普通配当88円ベースへ実質減配の可能性。配当性向約92.6%の高止まりも持続性に疑問</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>経常利益が営業利益を上回る構造で営業外収益（為替差益・持分法投資損益）への依存度が高く、包括利益（+182.3%／前年同期△70.4%）の振れも極端に大きい</small></div>
+      <div class="risk-item mid-level">設備投資需要の景気連動性<br><small>空気圧縮機・塗装機器は顧客の設備投資に連動。中国国内の景況悪化で圧縮機の国内向け販売は低迷しており、日本の非製造業でも景況感が悪化</small></div>
+      <div class="risk-item mid-level">海外需要と関税・通商政策<br><small>日本・アジア／欧州・豪・アフリカ／米州・インド／中国・アセアンの4地域に展開。米国の通商政策・地政学リスク長期化が需要とコストの双方に影響</small></div>
+      <div class="risk-item">一過性の売上押上げ要因<br><small>日本8月値上げ前の駆け込み需要、中国リチウムイオン電池向け圧縮機特需、大型塗装設備の納入完了（塗装設備+135.3%）は反動減の可能性</small></div>
+      <div class="risk-item">原材料価格・コスト高<br><small>中東情勢に伴うエネルギー価格上昇、原材料価格の高騰、金利上昇への警戒感が継続</small></div>
+      <div class="risk-item">セグメント区分変更とM&amp;A<br><small>第1四半期より4地域区分へ変更し全社費用の配分方法も変更。株式会社SANWA子会社化でのれん5.43億円が発生（減損リスク）</small></div>
+      <div class="risk-item">競合環境と株主還元の両立<br><small>圧縮機・塗装機器各市場での競争。自己株式取得15.00億円と高配当の併用で財務CF△45.35億円、現金同等物は前期末比△19.5%</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight">
+      当中間期は売上高314.78億円（+19.6%）・営業利益36.23億円（+44.3%）・経常利益42.41億円（+28.7%）・中間純利益26.47億円（+22.5%）と全段階で大幅増益を達成した。日本における8月値上げ前の駆け込み需要と単価上昇、株式会社SANWAの連結取込、北米データセンター・台湾/米国の半導体関連向けオイルフリー圧縮機と真空ポンプ、そして自動車部品向け大型塗装設備の納入完了（塗装設備+135.3%）が牽引し、地域別では4セグメントすべてが増収・増益となった。もっとも、<strong>前年同期が売上△2.7%・営業△15.2%と減収減益だった低いベースからの回復局面である点、営業+44.3%→経常+28.7%→純利益+22.5%と段階を下るほど増益率が縮小する点、経常利益が営業利益を上回る＝営業外収益（持分法投資損益・為替差益等）に依存した収益構造である点は差し引いて評価すべき</strong>である。中間包括利益43.20億円（+182.3%）は純利益を大きく上回るが、前年同期が△70.4%だったことからも分かるように為替換算調整勘定等による振れが極端に大きい項目であり、本業の実力は営業利益で測るべきだ。最大の論点は<strong>通期予想との乖離</strong>である。通期は営業△2.9%・経常△16.3%・純利益△26.3%の減益計画が修正「無」で据え置かれる一方、中間進捗は営業67.1%・経常65.6%・純利益67.0%と既に約2/3に到達しており、<strong>下期の営業利益・純利益は中間の約49%＝ほぼ半減が前提</strong>となる。極端に保守的な計画か、下期に為替反転・一過性費用・関税影響・特需消失を織り込んでいるかのいずれかであり、下期の予想修正の方向と幅が最大の注目点となる。財務面では総資産755.35億円（+1.2%）に対し<strong>純資産は575.42→575.69億円とほぼ横ばい、自己資本比率は68.0→67.5%へ△0.5pt低下</strong>した。これは利益・包括利益の計上を<strong>自己株式取得15.00億円（約83万株増）と配当が相殺</strong>した結果であり、期中平均株式数の減少がEPSを支える構図にある。<strong>配当方針については、年間93.00円（中間43円＋期末50円）が前期87円から+6円増配となる一方、注記のとおりそのうち5円は創業100周年記念配当（中間2円＋期末3円）であり、記念配当を除いた普通配当は88円＝実質+1円の増配にとどまる。来期は記念配当終了により普通配当据置なら年間88円前後への実質減配となる可能性があり、また通期予想EPS100.45円に対する配当性向は約92.6%（記念配当除きでも約87.6%）と極めて高く、恒常的な還元方針としての持続性には留意が必要である。短信にDOEや配当性向の数値目標の明示的な記載はないが、記念配当の上乗せと自己株式取得15.00億円の併用という形で創業100周年の節目に合わせた積極的な株主還元姿勢が示されている。</strong>総じて、中間実績は力強いが「低ベースからの反動増」「営業外依存」「下期半減前提の通期計画」「記念配当による一時的な高配当」という4つの読み替えを要する決算であり、額面の増益率と増配額をそのまま評価するのは避けるべきと考える。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はアネスト岩田株式会社（6381）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本カーボン株式会社 2026年12月期 第3四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A3A5C;
+    --primary-light: #24405F;
+    --primary-dark: #102641;
+    --accent: #2E6DA4;
+    --accent-light: #5A94C4;
+    --accent-pale: #E8F0F8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(20,40,63,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: '炭素・素材'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q3</div>
+  <h1>日本カーボン株式会社</h1>
+  <p class="subtitle">2026年12月期　第3四半期決算短信（連結）要約　／　証券コード 5302</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月10日</span></div>
+    <div class="meta-item">対象期間 <span>2026年1月1日〜2026年9月30日</span></div>
+    <div class="meta-item">代表者 <span>代表取締役社長 宮下 尚史</span></div>
+    <div class="meta-item">補足資料／説明会 <span>いずれも無</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高（Q3累計）</div>
+      <div class="kpi-value">283.20<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 3.1%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">40.72<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 17.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">37.00<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 0.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属四半期純利益</div>
+      <div class="kpi-value">21.74<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 52.6%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">炭素製品（ファインカーボン・電極材）／炭化けい素製品</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">炭素製品関連・炭化けい素製品関連・その他（3区分）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要用途・市場</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">鉄鋼・電炉（電極材）、半導体・AIデータセンター（ファインカーボン）、航空機エンジン（SiC連続繊維）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">中期経営方針</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">「GO BEYOND 2030」（2025年初年度）収益性向上／サステナビリティ／株主還元の強化</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">上場市場・会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">東証／日本基準（連結）・配当支払開始予定日 ―</span>
+      </div>
+    </div>
+    <div class="highlight">炭素・炭化けい素を中核とする素材メーカー。電極材は鉄鋼・電炉向け、ファインカーボンは半導体・AIデータセンター関連向け、炭化けい素連続繊維は航空機エンジン向けと、景気連動性の高い領域と構造成長領域の双方を併せ持つ。当第3四半期累計は売上+3.1%・営業利益+17.5%と<strong>本業は明確な増収増益</strong>だが、経常+0.4%・純利益△52.6%と利益段階ごとに方向が大きく分かれる異例の決算となった。中期経営方針「GO BEYOND 2030」の重点課題として株主還元の強化を掲げ、当期は自己株式取得（約25.0億円・521千株超）を実施。</div>
+  </section>
+
+  <!-- 02 業績ハイライト -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">業績ハイライトと利益段階の乖離</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（Q3累計）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">283.20<span class="data-sub">億円 +3.1%（前年 274.79億円／+0.2%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">40.72<span class="data-sub">億円 +17.5%（前年 34.65億円／△26.9%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">37.00<span class="data-sub">億円 +0.4%（前年 36.87億円／△24.2%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属四半期純利益</span>
+          <span class="data-val">21.74<span class="data-sub">億円 △52.6%（前年 45.90億円／+59.0%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">四半期包括利益</span>
+          <span class="data-val">36.42<span class="data-sub">億円 △14.3%（前年 42.49億円／+8.0%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（1株当たり四半期純利益）</span>
+          <span class="data-val">200.03<span class="data-sub">円（前年同期 415.15円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">三段構えの乖離とその要因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">① 営業段階：売上+3.1%に対し<span class="up">営業+17.5%</span>＝販管費減（40.67→38.01億円）等で本業は大幅改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">② 経常段階：<span class="up">+0.4%</span>とほぼ横ばい。休止設備関連費用3.80億円の計上等で営業外費用が2.97→7.24億円に増加、受取配当金も2.67→1.70億円へ減少</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">③ 最終段階：<span class="down">△52.6%の半減</span>。前年同期に計上した投資有価証券売却益35.30億円の剥落が主因（当期の特別利益は0）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">④ 包括利益は<span class="down">△14.3%</span>にとどまり、その他有価証券評価差額金+10.43億円等でその他の包括利益が+10.46億円のプラス寄与</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⑤ 減価償却費は24.88億円（前年同期 26.11億円）</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>【重点注記1】利益段階ごとに方向が激しく分かれる異例の決算：</strong>売上+3.1%・<strong>営業+17.5%の本業増益</strong>に対し、<strong>経常+0.4%とほぼ横ばい</strong>、<strong>最終は△52.6%の半減</strong>。営業段階の改善が経常段階で消え、最終段階で大幅減益に転じる三段構えの乖離が当決算の最大の特徴であり、単一の増減率で業績を判断してはならない。
+    </div>
+    <div class="highlight">
+      <strong>【重点注記2】最終△52.6%の主因は前年同期の特殊要因（高いベースからの反落）：</strong>前年同期は営業△26.9%・経常△24.2%と本業が落ち込んでいたにもかかわらず<strong>四半期純利益だけが+59.0%と急増</strong>していた。これは前年同期に投資有価証券売却益35.30億円という一過性のプラス要因が含まれていたためで、当期の△52.6%は<strong>異常に高いベースからの反落</strong>にすぎない。したがって今期の最終減益は、<strong>本業の改善（営業+17.5%）とは切り離して読む必要がある</strong>。EPSが415.15円→200.03円へほぼ半減しているのも同じ要因による。
+    </div>
+    <div class="highlight neutral">
+      <strong>【重点注記3】経常利益37.00億円が営業利益40.72億円を下回る逆転：</strong>営業外費用が純額でマイナス（収益3.51億円 − 費用7.24億円＝△3.73億円）となり、経常利益が営業利益を3.72億円下回る。主因は休止設備関連費用3.80億円および支払利息の増加（0.80→1.30億円）。<strong>ただし通期予想では経常46.00億円 &gt; 営業43.00億円と逆転しており</strong>、下期に営業外収益の計上を見込む前提となっている点に留意。
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item star"><div class="seg-name">炭素製品関連</div><div class="seg-row"><span>売上高</span><span>242.28億円</span></div><div class="seg-row"><span>前年同期比</span><span class="up">▲ 3.7%</span></div><div class="seg-row"><span>営業利益</span><span>25.85億円</span></div><div class="seg-row"><span>前年同期比</span><span class="up">▲ 20.5%</span></div><div class="seg-row" style="display:block;margin-top:6px;"><span style="font-size:11px;">電極材は国内外需要を取込み販売量増。ファインカーボンは設備増強コストで収益性低下</span></div></div>
+      <div class="seg-item"><div class="seg-name">炭化けい素製品関連</div><div class="seg-row"><span>売上高</span><span>32.82億円</span></div><div class="seg-row"><span>前年同期比</span><span class="up">▲ 0.8%</span></div><div class="seg-row"><span>営業利益</span><span>12.01億円</span></div><div class="seg-row"><span>前年同期比</span><span class="up">▲ 6.3%</span></div><div class="seg-row" style="display:block;margin-top:6px;"><span style="font-size:11px;">SiC連続繊維は航空機エンジン向け中心に旺盛な需要が継続、高水準の生産を維持</span></div></div>
+      <div class="seg-item decline"><div class="seg-name">その他（産業用機械等）</div><div class="seg-row"><span>売上高</span><span>8.09億円</span></div><div class="seg-row"><span>前年同期比</span><span class="down">▼ 5.6%</span></div><div class="seg-row"><span>営業利益</span><span>2.79億円</span></div><div class="seg-row"><span>前年同期比</span><span class="up">▲ 53.5%</span></div><div class="seg-row" style="display:block;margin-top:6px;"><span style="font-size:11px;">産業用機械の販売は減速も、販売価格維持と製造コスト削減で減収増益</span></div></div>
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2026年12月期・修正無）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">410.00<span class="data-sub">億円 +8.7%（進捗 69.1%）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">43.00<span class="data-sub">億円 △10.6%（進捗 94.7%）</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">46.00<span class="data-sub">億円 △9.9%（進捗 80.4%）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">親会社株主帰属当期純利益</span>
+            <span class="data-val">27.00<span class="data-sub">億円 △44.1%（進捗 80.5%／EPS 244.19円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>【重点注記4】営業利益は既に通期予想の約95%に到達、通期計画はQ3累計と真逆の減益計画：</strong>Q3累計進捗は売上69.1%・<strong>営業94.7%</strong>・経常80.4%・純利益80.5%。<strong>通期予想（営業△10.6%）はQ3累計の+17.5%とまったく逆方向の減益計画</strong>であり、第4四半期の営業利益は残り<strong>約2.28億円（43.00億円−40.72億円）</strong>とほぼ出ない前提になっている。極端に保守的な計画か、下期に大きな費用計上（休止設備関連等）を見込んでいる可能性を示す。なお<strong>業績予想の修正は「無」で据え置かれている</strong>（2026年2月10日公表の予想から変更なし）。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">823.41<span class="data-sub">億円（前期末 856.07億円／<span class="down">△32.66億円</span>）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">625.22<span class="data-sub">億円（前期末 636.07億円／<span class="down">△10.85億円</span>）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">529.16<span class="data-sub">億円（前期末 543.93億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">64.3<span class="data-sub">%（前期末 63.5%／<span class="up">+0.8pt</span>）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">5,023.07<span class="data-sub">円（前期末 4,919.46円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">主な増減要因・株式数</div>
+        <div class="data-row">
+          <span class="data-key">流動資産</span>
+          <span class="data-val">454.86<span class="data-sub">億円 △35.95億円（売上債権△30.43・現預金△16.51、棚卸資産+7.38）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">固定資産</span>
+          <span class="data-val">368.54<span class="data-sub">億円 +3.29億円（投資有価証券+16.22、有形固定資産△9.12）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">198.19<span class="data-sub">億円 △21.80億円（未払法人税等△16.30・借入金△11.11）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期末自己株式数</span>
+          <span class="data-val">1,297,755<span class="data-sub">株（前期末 775,616株／+522,139株）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期中平均株式数</span>
+          <span class="data-val">10,870,012<span class="data-sub">株（前年同期 11,056,842株）／発行済 11,832,504株（前期末同数）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight neutral">
+      <strong>【重点注記5】包括利益との対比：</strong>四半期包括利益36.42億円（△14.3%）は、純利益の△52.6%ほどの落ち込みではない。その他有価証券評価差額金が前年同期△12.67億円から当期+10.43億円へ転じ、<strong>その他の包括利益がプラスに働いた</strong>ことによる。評価差額金の増加は投資有価証券の時価上昇（+16.22億円）と整合しており、資本の質という観点では純利益の数字以上に底堅い。※四半期連結キャッシュ・フロー計算書は作成されていない（減価償却費のみ開示：24.88億円）。
+    </div>
+    <div class="highlight">
+      <strong>【重点注記6】総資産・純資産が減少する中で自己資本比率は+0.8pt上昇：</strong>総資産△32.66億円・純資産△10.85億円と縮小したにもかかわらず、自己資本比率は63.5%→<strong>64.3%（+0.8pt）</strong>へ改善した。純資産の減少要因は<strong>自己株式の取得約25.0億円</strong>と配当金の支払21.88億円であり、四半期純利益21.74億円とその他有価証券評価差額金の増加10.29億円が一部を打ち返した構図。自己株式は<strong>775,616株→1,297,755株へ約52万株増加</strong>しており、<strong>自己株式取得による株主還元が資産・資本の減少要因</strong>となっている。期中平均株式数も11,056千株→10,870千株へ減少し、1株当たり指標を支える構造。有利子負債も借入金△11.11億円と圧縮が進む。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/12期）</div>
+        <div class="div-cell-val">200.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間100.00 + 期末100.00</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2026/12期）</div>
+        <div class="div-cell-val" style="color:var(--accent);">200.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間100.00（実績）+ 期末100.00（予想）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">維持 0.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">前期同額・配当予想の修正 無</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--red);">約81.9<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">通期予想EPS 244.19円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>【重点注記7】大幅減益下でも200円を維持、ただし配当性向は約81.9%の高水準：</strong>2026年12月期の年間配当は中間100.00円（実績）＋期末100.00円（予想）＝<strong>年間200.00円で前期と同額の「維持」</strong>、配当予想の修正も「無」。最終利益が△52.6%（通期予想△44.1%）と大きく落ち込む中で<strong>減配せず維持している点は株主還元姿勢として評価できる</strong>。一方、通期予想EPS244.19円に対し配当200円＝<strong>配当性向約81.9%</strong>と高水準であり、減益がさらに続く場合には維持余力が論点となる。中期経営方針「GO BEYOND 2030」で<strong>「株主還元の強化」を重点課題</strong>に掲げ、当期は自己株式取得（約25.0億円・5,216百株）も実施して配当と自己株式取得の両輪で還元を進めている。配当支払開始予定日は「―」。
+    </div>
+  </section>
+
+  <!-- 05 主要リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">高い配当性向の持続性<br><small>予想EPS244.19円に対し配当200円＝性向約81.9%。減益継続時の維持余力が論点</small></div>
+      <div class="risk-item high">第4四半期の利益計画の保守性<br><small>通期営業43.00億円に対しQ3累計40.72億円＝残り約2.28億円。下期の大幅費用計上懸念</small></div>
+      <div class="risk-item mid-level">需要の景気連動性<br><small>黒鉛電極・特殊炭素製品は鉄鋼・電炉向け中心で景気感応度が高い</small></div>
+      <div class="risk-item mid-level">原材料・エネルギー価格<br><small>ニードルコークス等の原料コストと電力・燃料価格の変動</small></div>
+      <div class="risk-item mid-level">中国勢との価格競争<br><small>電極材分野における海外競合の供給増と価格下落圧力</small></div>
+      <div class="risk-item">前年一過性益との比較<br><small>前年同期の投資有価証券売却益35.30億円の剥落による見かけの大幅減益</small></div>
+      <div class="risk-item">休止設備関連費用<br><small>当期営業外費用に3.80億円を計上、経常段階の利益を圧迫</small></div>
+      <div class="risk-item">為替変動<br><small>海外売上・調達および為替換算調整勘定（1,024百万円）への影響</small></div>
+      <div class="risk-item">成長投資とコスト負担<br><small>ファインカーボン製造設備の増強に伴う減価償却・固定費の先行</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+    <div class="highlight neutral">
+      <strong>その他の注記事項：</strong>連結範囲の重要な変更 無／四半期連結財務諸表の作成に特有の会計処理 無／会計方針の変更・会計上の見積りの変更・修正再表示 いずれも無／公認会計士等によるレビュー 無。2026年2月10日の取締役会決議に基づき自己株式を取得し、当第3四半期累計で自己株式が2,499百万円（5,216百株）増加、期末残高は4,469百万円。取締役に対する業績連動型株式報酬「株式給付信託（BBT）」を導入済（信託残存株式456百株・帳簿価額159百万円）。火災損失引当金6.99億円を固定負債に計上。
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight">
+      <strong>利益段階ごとに方向が激しく分かれる、読み方の難しい決算。</strong>売上+3.1%・営業+17.5%と<strong>本業は明確に改善</strong>したが、休止設備関連費用3.80億円等で経常は+0.4%とほぼ横ばいに消え、さらに前年同期の投資有価証券売却益35.30億円の剥落により最終は<strong>△52.6%の半減</strong>（EPS 415.15円→200.03円）となった。重要なのは、前年同期が営業△26.9%・経常△24.2%の本業不振下で<strong>純利益だけ+59.0%</strong>という一過性要因で膨らんだ異常値だったことであり、今期の最終減益は<strong>高いベースからの反落</strong>と理解すべきで、営業+17.5%の実質的な改善とは切り離して評価する必要がある。包括利益36.42億円（△14.3%）がその他有価証券評価差額金のプラス寄与で純利益ほど落ちていない点も、実態の底堅さを示す。セグメントは炭素製品関連（242.28億円／+3.7%・営業25.85億円／+20.5%）が電極材の販売量増で牽引し、炭化けい素製品関連（32.82億円・営業12.01億円／+6.3%）は航空機エンジン向けの旺盛な需要で高水準の生産を維持、その他も減収ながら+53.5%の増益と全セグメント増益。一方で<strong>通期予想は営業△10.6%の減益計画のまま据え置かれ（修正 無）、Q3累計で営業利益は既に通期予想の94.7%に到達</strong>。第4四半期の営業利益が残り約2.28億円しか織り込まれていない計算となり、極端に保守的な計画か下期の大きな費用計上を見込む前提か、いずれにせよ会社計画の読み替えが必要である。財務面は総資産△32.66億円・純資産△10.85億円と縮小しつつも、約25.0億円の自己株式取得（775,616株→1,297,755株、約52万株増）と配当21.88億円という<strong>積極的な株主還元が減少要因</strong>であり、自己資本比率は63.5%→64.3%（+0.8pt）へむしろ改善、1株当たり純資産も4,919.46円→5,023.07円へ増加している。<strong>配当方針としては中期経営方針「GO BEYOND 2030」において「収益性の向上」「サステナビリティ経営の推進」とともに「株主還元の強化」を重点課題に掲げており</strong>、大幅減益下でも年間200円を維持（修正 無）し自己株式取得を併走させる姿勢は明確。ただし通期予想EPS244.19円に対する<strong>配当性向は約81.9%</strong>と高く、減益が長引けば還元水準の持続性が論点になる。総じて、<strong>本業の改善と会計上の見かけの大幅減益が混在した決算</strong>であり、営業利益の水準・セグメント全面増益・財務健全性の改善を評価軸に据えつつ、第4四半期の計画の保守性と高い配当性向を注視すべき局面。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は日本カーボン株式会社（5302）2026年12月期第3四半期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
