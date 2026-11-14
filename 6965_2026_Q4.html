@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>浜松ホトニクス株式会社 2026年9月期 通期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0E4A5A;
+    --primary-light: #166275;
+    --primary-dark: #083643;
+    --accent: #1A8A9A;
+    --accent-light: #3FAFBF;
+    --accent-pale: #E4F3F6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(14,74,90,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: '光技術・精密機器'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · FY (Q4)</div>
+  <h1>浜松ホトニクス株式会社</h1>
+  <p class="subtitle">2026年9月期　通期決算短信（連結）要約　／　証券コード 6965</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月10日</span></div>
+    <div class="meta-item">対象期間 <span>2025年10月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+    <div class="meta-item">代表者 <span>代表取締役社長 社長執行役員 丸野 正</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">2,433.60<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 14.8%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">271.81<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 68.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属当期純利益</div>
+      <div class="kpi-value">198.32<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 39.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（基本的）</div>
+      <div class="kpi-value">67.94<span class="kpi-unit">円</span></div>
+      <div class="kpi-change up">前期 47.32円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">光技術応用製品の開発・製造・販売（光計測・精密機器）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">報告セグメント</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">電子管／光半導体／画像計測機器／レーザ（＋その他）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主力製品</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">光電子増倍管・イメージセンサ・故障解析装置・ファイバーレーザ</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要需要分野</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">半導体製造・検査、データセンター、医用・ライフサイエンス、FA</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">IR体制</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">決算補足説明資料：有／決算説明会：有（アナリスト・機関投資家向け）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">主要日程</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">定時株主総会 2026/12/18・配当支払開始 2026/12/21・有報提出 2026/12/17</span>
+      </div>
+    </div>
+    <div class="highlight">光に関する高度な研究開発力を競争優位の基盤とする光技術・精密機器メーカー。当期はデータセンター向けを中心とした半導体需要の拡大が全セグメントの売上げを押し上げ、売上高2,433.60億円（+14.8%）・営業利益271.81億円（+68.2%）・経常利益306.12億円（+62.8%）・純利益198.32億円（+39.6%）と大幅な増収増益。ROEは4.4%→6.2%、売上高営業利益率は7.6%→11.2%へ回復した。連結範囲の重要な変更および会計方針の変更はいずれも無し。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">業績ハイライトとV字回復の構造</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（通期）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">2,433.60<span class="data-sub">億円 +14.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">271.81<span class="data-sub">億円 +68.2%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">306.12<span class="data-sub">億円 +62.8%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属当期純利益</span>
+          <span class="data-val">198.32<span class="data-sub">億円 +39.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">包括利益</span>
+          <span class="data-val">329.58<span class="data-sub">億円 +50.1%（前期219.55億円・△11.0%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">持分法投資損益</span>
+          <span class="data-val">5.47<span class="data-sub">億円（前期0.98億円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">収益性指標（前期比）</div>
+        <div class="data-row">
+          <span class="data-key">売上高営業利益率</span>
+          <span class="data-val">11.2<span class="data-sub">% （前期 7.6% / ▲3.6pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">ROE（自己資本当期純利益率）</span>
+          <span class="data-val">6.2<span class="data-sub">% （前期 4.4% / ▲1.8pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">総資産経常利益率</span>
+          <span class="data-val">6.5<span class="data-sub">% （前期 4.2% / ▲2.3pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">67.94<span class="data-sub">円（前期 47.32円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">潜在株式調整後EPS</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">－（該当なし）</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">期中平均株式数</span>
+          <span class="data-val">291,917<span class="data-sub">千株（前期 300,170千株）</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <strong>⚠ 重点注記① V字回復＝低いベースからの反動増：</strong>前期（2025年9月期）は営業利益 <span class="down">▼ 49.7%</span>・経常利益 <span class="down">▼ 45.5%</span>・純利益 <span class="down">▼ 43.5%</span> の大幅減益であった。今期の営業 <span class="up">▲ 68.2%</span> という高い伸びは<strong>実力の急改善というより、前期の落ち込みからの回復局面（低いベースからの反動増）</strong>である点に留意が必要。売上高営業利益率も7.6%→11.2%へ戻した水準感であり、絶対水準として過去最高益を更新した「成長加速」とは性格が異なる。
+    </div>
+
+    <div class="highlight">
+      <strong>⚠ 重点注記② 利益段階を下るほど増益率が縮小：</strong>営業 <span class="up">▲ 68.2%</span> → 経常 <span class="up">▲ 62.8%</span> → 純利益 <span class="up">▲ 39.6%</span> と、下の段階へ行くほど伸びが鈍化。経常利益306.12億円が営業利益271.81億円を<strong>34.31億円上回る</strong>のは為替差益・受取利息配当金等の営業外収益によるもので、一方で純利益の伸びが相対的に鈍いのは税負担等の影響。<strong>営業外収益に依存した利益水準は反動が出やすい</strong>点に注意。
+    </div>
+
+    <div class="highlight">
+      <strong>⚠ 重点注記③ 包括利益が純利益を大きく上回る：</strong>包括利益329.58億円（<span class="up">▲ 50.1%</span>）は純利益198.32億円を<strong>131.26億円上回る</strong>。これは為替換算調整勘定（+90.21億円）・その他有価証券評価差額金・退職給付に係る調整累計額（+26.71億円）などの<strong>その他の包括利益がプラスに大きく寄与</strong>したためで、円安等の外部要因が純資産を押し上げた構図。
+    </div>
+
+    <div class="seg-grid">
+      <div class="seg-item star">
+        <div class="seg-name">光半導体事業</div>
+        <div class="seg-row"><span>売上高</span><span>919.76億円</span></div>
+        <div class="seg-row"><span>前期比</span><span class="up">▲ 15.7%</span></div>
+        <div class="seg-row"><span>営業利益</span><span>171.18億円</span></div>
+        <div class="seg-row"><span>前期比</span><span class="up">▲ 36.0%</span></div>
+      </div>
+      <div class="seg-item star">
+        <div class="seg-name">電子管事業</div>
+        <div class="seg-row"><span>売上高</span><span>814.01億円</span></div>
+        <div class="seg-row"><span>前期比</span><span class="up">▲ 13.2%</span></div>
+        <div class="seg-row"><span>営業利益</span><span>259.01億円</span></div>
+        <div class="seg-row"><span>前期比</span><span class="up">▲ 36.7%</span></div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">画像計測機器事業</div>
+        <div class="seg-row"><span>売上高</span><span>366.14億円</span></div>
+        <div class="seg-row"><span>前期比</span><span class="up">▲ 12.0%</span></div>
+        <div class="seg-row"><span>営業利益</span><span>106.65億円</span></div>
+        <div class="seg-row"><span>前期比</span><span class="up">▲ 10.0%</span></div>
+      </div>
+    </div>
+
+    <div class="highlight neutral">
+      <strong>※ セグメント補足（短信記載の事実ベース）：</strong>上記3事業に加え、<strong>レーザ事業</strong>は売上高260.27億円（<span class="up">▲ 16.9%</span>）だが<strong>営業損失46.00億円</strong>（前期営業損失43.65億円）と赤字が継続・拡大。<strong>その他</strong>（磐田グランドホテル、北京浜松光子技術等）は売上高73.39億円（<span class="up">▲ 29.2%</span>）、<strong>営業損失1.48億円</strong>（前期営業利益8.63億円）へ悪化した。増収の牽引役はデータセンター向けを中心とした半導体製造・検査装置需要（光電子増倍管・キセノンランプ・イメージセンサ・マイクロフォーカスX線源）、新興国のX線CT向けシリコンフォトダイオード、FA向けフォトダイオード、半導体故障解析装置・病理デジタルスライドスキャナ、ステルスダイシングエンジン・量子コンピュータ向け単一周波数ファイバーレーザ。
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">来期業績予想（2027年9月期）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">2,700.00<span class="data-sub">億円 +10.9%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">320.00<span class="data-sub">億円 +17.7%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">330.00<span class="data-sub">億円 +7.8%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">220.00<span class="data-sub">億円 +10.9%（EPS 76.34円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>⚠ 重点注記⑦ 来期は増益率が大幅に鈍化する計画：</strong>売上 <span class="up">▲ 10.9%</span>・営業 <span class="up">▲ 17.7%</span> に対し、<strong>経常は <span class="up">▲ 7.8%</span> と営業の伸びを大きく下回る</strong>。これは今期の営業外収益（為替差益等）の反動を織り込んだ可能性が高い。純利益も <span class="up">▲ 10.9%</span> と、今期の <span class="up">▲ 68.2%</span>（営業）から<strong>一段の減速を前提とした計画</strong>。前提為替レートは1米ドル155円・1ユーロ175円・1中国元22円50銭。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">4,823.26<span class="data-sub">億円（前期 4,550.08億円 / ▲273.17億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">3,239.85<span class="data-sub">億円（前期 3,234.55億円 / ▲5.30億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">3,222.06<span class="data-sub">億円（前期 3,215.21億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val">66.8<span class="data-sub">% （前期 70.7% / <span class="down">▼3.9pt</span>）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり純資産</span>
+          <span class="data-val">1,118.00<span class="data-sub">円（前期 1,076.18円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフロー</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+553.78<span class="data-sub">億円（前期 +377.84億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val" style="color:var(--red);">△189.60<span class="data-sub">億円（前期 △421.66億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△343.20<span class="data-sub">億円（前期 △28.43億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">フリーCF（営業＋投資）</span>
+          <span class="data-val" style="color:var(--green);">+364.18<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">現金同等物期末残高</span>
+          <span class="data-val">921.90<span class="data-sub">億円（前期 860.37億円）</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <strong>⚠ 重点注記④ 自己資本比率66.8%（<span class="down">▼3.9pt</span>）の低下は「還元強化の結果」：</strong>期末自己株式が20,429,930株→<strong>31,057,728株へ約1,063万株増加</strong>（取得額199.99億円）し、財務CFは△28.43億円→<strong>△343.20億円へ大幅に拡大</strong>。自己資本比率の低下は業績悪化ではなく<strong>自己株式取得と配当による積極的な株主還元の結果</strong>である。期中平均株式数も300,170千株→291,917千株へ減少し、EPSを押し上げている（純利益 <span class="up">▲ 39.6%</span> に対しEPSは47.32円→67.94円、<span class="up">▲ 43.6%</span>）。期末発行済株式数は319,257,365株（前期 319,191,114株）。
+    </div>
+
+    <div class="highlight">
+      <strong>⚠ 重点注記⑤ 営業CFの大幅改善と投資CFの縮小：</strong>営業CFは+377.84億円→<strong>+553.78億円</strong>へ175.94億円改善（税金等調整前当期純利益および減価償却費の計上）。投資CFは△421.66億円→<strong>△189.60億円</strong>へ縮小（新棟の建設・設備導入が完了し建設仮勘定が285.22億円減少＝<strong>大型設備投資が一巡</strong>）。結果<strong>フリーCF+364.18億円</strong>を確保し、これが自己株式取得199.99億円＋配当112.37億円の<strong>還元原資となっている構図</strong>。
+    </div>
+
+    <div class="highlight neutral">
+      <strong>※ BS変動の内訳（短信記載）：</strong>流動資産は受取手形及び売掛金+125.71億円・現金及び預金+80.68億円等で+135.88億円。固定資産は建設仮勘定△285.22億円の一方、リース資産+168.15億円・建物及び構築物+91.31億円等で+137.29億円。負債合計は+267.87億円の1,583.41億円（短期借入金+34.32億円、長期借入金△69.25億円、リース債務+154.71億円）。純資産は自己株式取得△199.99億円を為替換算調整勘定+90.21億円等が相殺し+5.30億円。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2025/9期）</div>
+        <div class="div-cell-val">38.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間19.00 + 期末19.00<br>配当性向80.3% / DOE 3.5%</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期実績（2026/9期）</div>
+        <div class="div-cell-val" style="color:var(--accent);">39.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間19.00 + 期末20.00<br>配当性向57.4% / DOE 3.5%</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">来期予想（2027/9期）</div>
+        <div class="div-cell-val" style="color:var(--accent);">40.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間20.00 + 期末20.00<br>配当性向52.4%</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">増減（当期／来期）</div>
+        <div class="div-cell-val" style="color:var(--green);">+1.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">38→39→40円の連続増配<br>配当金総額 113.17億円</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>💰 配当方針（短信に明記）：</strong>利益配分の基本方針として<strong>「配当による成果の配分を最重要方針とし、配当性向30％を目途に安定的かつ継続的な配当の増加に努める」</strong>とし、さらに<strong>自己資本配当率（DOE）3.5％を配当方針の下限</strong>として採用（長期的な株主還元の安定性を明確化）。中長期的には<strong>株主資本コストを上回るROEの実現</strong>を目指し、<strong>自己株式の取得も株主還元の一環</strong>として資本効率向上を目的に適宜実施。実績はDOEが2025年9月期・2026年9月期ともに<strong>3.5%で揃っており、DOE下限が実質的な配当の下支え</strong>として機能している。配当性向は80.3%→57.4%→（来期予想）52.4%と低下しているが、これは減配ではなく<strong>利益成長により配当性向に余裕が生まれた形</strong>で、年間配当は38円→39円→40円と連続増配。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">需要の景気連動性<br><small>半導体・データセンター・産業機器向けのシリコンサイクル依存。今期の増収は同需要拡大が主因で反動リスク</small></div>
+      <div class="risk-item high">為替変動リスク<br><small>海外売上比率が高く、営業外収益（為替差益）が経常利益を押し上げる構造。前提155円/米ドルからの乖離が直撃</small></div>
+      <div class="risk-item mid-level">レーザ事業の赤字継続<br><small>売上260.27億円に対し営業損失46.00億円（前期損失43.65億円）と赤字が拡大</small></div>
+      <div class="risk-item mid-level">研究開発費・設備投資の回収<br><small>新棟建設は完了したがリース資産+168.15億円等の負担。開発テーマの収益化が課題</small></div>
+      <div class="risk-item mid-level">自己資本比率の低下<br><small>70.7%→66.8%（▼3.9pt）。還元強化の結果だが財務余力とのバランスが論点</small></div>
+      <div class="risk-item">医用・ライフサイエンス分野<br><small>各国の研究開発予算・医療機器投資動向に左右される</small></div>
+      <div class="risk-item">輸出規制・地政学<br><small>米中を含む先端技術の輸出管理強化。中国子会社（北京浜松光子技術）を保有</small></div>
+      <div class="risk-item">競合技術・代替技術<br><small>光電子増倍管・イメージセンサ等における技術的優位の維持</small></div>
+      <div class="risk-item">株主還元の強化<br><small>自己株式199.99億円取得＋連続増配。DOE 3.5%下限・配当性向30%目途を明示</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      2026年9月期は売上高2,433.60億円（<span class="up">▲ 14.8%</span>）・営業利益271.81億円（<span class="up">▲ 68.2%</span>）・経常利益306.12億円（<span class="up">▲ 62.8%</span>）・純利益198.32億円（<span class="up">▲ 39.6%</span>）と大幅な増収増益。ただし<strong>前期（2025年9月期）が営業 <span class="down">▼ 49.7%</span>・純利益 <span class="down">▼ 43.5%</span> の大幅減益であった低いベースからの反動増</strong>であり、+68.2%という数字をそのまま成長力と読むべきではない。売上高営業利益率は7.6%→11.2%、ROEは4.4%→6.2%への「回復」水準である。利益段階を下るほど増益率は縮小（営業 <span class="up">▲ 68.2%</span> → 経常 <span class="up">▲ 62.8%</span> → 純利益 <span class="up">▲ 39.6%</span>）し、経常利益が営業利益を34.31億円上回るのは為替差益等の営業外収益によるもので、包括利益329.58億円（<span class="up">▲ 50.1%</span>）が純利益を131.26億円上回るのも為替換算調整勘定等の寄与。<strong>外部要因（円安・データセンター需要）の追い風が色濃い決算</strong>と評価すべき。
+      セグメントは光半導体919.76億円（<span class="up">▲ 15.7%</span>・OP <span class="up">▲ 36.0%</span>）、電子管814.01億円（<span class="up">▲ 13.2%</span>・OP <span class="up">▲ 36.7%</span>）、画像計測機器366.14億円（<span class="up">▲ 12.0%</span>・OP <span class="up">▲ 10.0%</span>）が揃って増収増益の一方、<strong>レーザ事業は営業損失46.00億円と赤字が拡大</strong>しており改善が課題。
+      財務は営業CFが+377.84億円→<strong>+553.78億円</strong>へ大幅改善し、新棟完成による設備投資一巡で投資CFも△421.66億円→△189.60億円へ縮小。<strong>フリーCF+364.18億円</strong>を原資に自己株式199.99億円（約1,063万株）を取得し配当112.37億円を支払ったため財務CFは△343.20億円へ拡大、自己資本比率は70.7%→66.8%（<span class="down">▼3.9pt</span>）へ低下した。<strong>この低下は業績悪化ではなく還元強化の結果</strong>であり、期中平均株式数の減少（300,170千株→291,917千株）がEPSを押し上げている。
+      <strong>配当方針は短信に明記されており、「配当性向30%を目途に安定的かつ継続的な配当の増加」＋「自己資本配当率（DOE）3.5%を配当方針の下限」</strong>を採用。実績もDOEが2期連続3.5%で揃い、年間配当は38円→39円→（来期予想）40円の<strong>連続増配</strong>、配当性向は80.3%→57.4%→52.4%へ低下（利益成長による余裕）。中長期的に<strong>株主資本コストを上回るROE</strong>を目指す資本効率志向と自己株式取得の併用も明示されている。
+      来期（2027年9月期）は売上<span class="up">▲ 10.9%</span>・営業<span class="up">▲ 17.7%</span>に対し<strong>経常は<span class="up">▲ 7.8%</span></strong>と営業の伸びを大きく下回る計画で、今期の為替差益等の反動を織り込んだ減速前提。前提為替は155円/米ドル。<strong>投資判断上は「V字回復の持続性」と「営業外収益への依存度」、そしてレーザ事業の黒字化時期が焦点</strong>となる。財務健全性（自己資本比率66.8%）と潤沢なフリーCFを背景に、DOE下限による下支えのある連続増配銘柄として位置づけられる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は浜松ホトニクス株式会社（6965）2026年9月期決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
