@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社クレハ 2027年3月期 第2四半期 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1E4A5A;
+    --primary-light: #2E5F72;
+    --primary-dark: #123039;
+    --accent: #C88A3C;
+    --accent-light: #DCA85E;
+    --accent-pale: #F4EBD8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(30,74,90,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Polymer'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · IFRS · Consolidated · Q2 (中間期)</div>
+  <h1>株式会社クレハ</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信〔IFRS〕（連結）要約　／　証券コード 4023</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月10日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上収益</div>
+      <div class="kpi-value">871.01<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 12.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">コア営業利益</div>
+      <div class="kpi-value">108.41<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 43.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">107.17<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 32.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社所有者帰属中間利益</div>
+      <div class="kpi-value">75.99<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 20.3%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">会計基準</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">IFRS（国際会計基準）・連結</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">機能製品</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">PVDF（リチウムイオン電池向け）・PGA・炭素製品</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">化学製品・樹脂製品</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">苛性ソーダ等の基礎化学品／NEWクレラップ</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">その他</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">建設・その他事業</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">名武 克泰 社長兼CEO</span>
+      </div>
+    </div>
+    <div class="highlight">機能製品（PVDF・PGA・炭素製品）、化学製品（苛性ソーダ等）、樹脂製品（NEWクレラップ）、建設・その他を展開する総合化学メーカー。当中間期はリチウムイオン電池向けPVDF等の機能製品の回復と価格施策が牽引し、売上収益871.01億円（+12.6%）・コア営業利益108.41億円（+43.5%）・親会社所有者帰属中間利益75.99億円（+20.3%）と大幅増収増益。当連結会計年度より経常的な経営成績の明瞭性を高めるため、新たな管理指標「コア営業利益」を採用している。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">第2四半期（中間期）業績ハイライト</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">売上収益</span>
+          <span class="data-val">871.01<span class="data-sub">億円 <span class="up">+12.6%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">コア営業利益</span>
+          <span class="data-val">108.41<span class="data-sub">億円 <span class="up">+43.5%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">107.17<span class="data-sub">億円 <span class="up">+32.2%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間利益</span>
+          <span class="data-val">76.93<span class="data-sub">億円 <span class="up">+20.2%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属中間利益</span>
+          <span class="data-val">75.99<span class="data-sub">億円 <span class="up">+20.3%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val">99.84<span class="data-sub">億円 <span class="down">△0.9%</span>（前期100.72億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">EPS（基本的）</span>
+          <span class="data-val">198.83<span class="data-sub">円（前期151.03円／希薄化後198.52円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">（参考）税引前中間利益</span>
+          <span class="data-val">約105<span class="data-sub">億円（前期84.64億円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">増益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔋 リチウムイオン電池向けPVDF等の機能製品の回復</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💹 価格施策の浸透による採算改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🧪 化学製品（苛性ソーダ等）の安定収益</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏠 樹脂製品（NEWクレラップ）の家庭用市場基盤</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 コア営業利益+43.5%と経常的な実力が大幅改善</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠️ 一方で中間包括利益は△0.9%と損益と方向が異なる</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <strong>★ 独自指標「コア営業利益」の定義：</strong><strong>当連結会計年度より、当社グループの経常的な経営成績の明瞭性を高めるため、営業利益から非経常的な要因により発生した損益（非経常項目）を除いた「コア営業利益」を、利益に関する管理指標として新たに採用している。</strong>当中間期はコア営業利益108.41億円（+43.5%）で、営業利益107.17億円（+32.2%）を上回り、経常的な事業の実力はより強いことを示す。★一方、中間包括利益は99.84億円（△0.9%）と損益の大幅増益とは方向が異なる点に留意。
+    </div>
+
+    <div class="seg-grid">
+      <div class="seg-item star">
+        <div class="seg-name">機能製品</div>
+        <div class="seg-row"><span>主力製品</span><span>PVDF</span></div>
+        <div class="seg-row"><span>用途</span><span>LIB向け</span></div>
+        <div class="seg-row"><span>その他</span><span>PGA・炭素</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">PVDF（リチウムイオン電池向け）・PGA・炭素製品。当中間期の回復が全社増益を牽引した収益の柱。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">化学製品・樹脂製品</div>
+        <div class="seg-row"><span>化学製品</span><span>苛性ソーダ</span></div>
+        <div class="seg-row"><span>樹脂製品</span><span>クレラップ</span></div>
+        <div class="seg-row"><span>特性</span><span>安定収益</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">苛性ソーダ等の基礎化学品と家庭用ラップ「NEWクレラップ」。市況・原燃料価格の影響を受ける安定基盤。</div>
+      </div>
+      <div class="seg-item">
+        <div class="seg-name">建設・その他</div>
+        <div class="seg-row"><span>内容</span><span>建設</span></div>
+        <div class="seg-row"><span>区分</span><span>その他</span></div>
+        <div class="seg-row"><span>位置付け</span><span>周辺事業</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">建設およびその他事業。グループの周辺領域として事業基盤を補完。</div>
+      </div>
+    </div>
+    <div class="highlight neutral" style="margin-top:12px;">
+      <strong>※ 注記：</strong>本短信サマリーにセグメント別数値の開示がないため、上記3区分は事業内容に基づく<strong>定性整理</strong>である。
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年3月期・修正あり）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上収益</span>
+            <span class="data-val">1,760.00<span class="data-sub">億円 <span class="up">+8.9%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">コア営業利益</span>
+            <span class="data-val">160.00<span class="data-sub">億円 <span class="up">+10.6%</span></span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">135.00<span class="data-sub">億円（増減率「－」）</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">親会社所有者帰属当期利益</span>
+            <span class="data-val">90.00<span class="data-sub">億円（増減率「－」）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">基本的EPS</span>
+            <span class="data-val">235.43<span class="data-sub">円</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">（参考）税引前利益</span>
+            <span class="data-val">約130<span class="data-sub">億円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>業績予想の修正は<strong>有</strong>。★営業利益および親会社所有者帰属当期利益の対前期増減率が短信上「－」と表記されているのは、コア営業利益を新指標として採用したことに伴う表示上の扱い等によるものと考えられる（短信上「－」表記である事実のみを示す）。
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>★ 中間進捗が大きく先行：</strong>通期予想に対する中間進捗は<strong>コア営業利益67.8%・親会社所有者帰属利益84.4%</strong>と大きく先行しており、下期は減速を想定した計画となっている点に留意が必要。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート（IFRS）</div>
+        <div class="data-row">
+          <span class="data-key">資産合計</span>
+          <span class="data-val">3,410.71<span class="data-sub">億円 <span class="up">+0.8%</span></span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">資本合計</span>
+          <span class="data-val">1,731.14<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分</span>
+          <span class="data-val">1,711.04<span class="data-sub">億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社所有者帰属持分比率</span>
+          <span class="data-val">50.2<span class="data-sub">% （前期末 48.8% / <span class="up">+1.4pt</span>）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">財務のポイント</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏦 親会社所有者帰属持分比率は50.2%へ改善（+1.4pt）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📊 資産合計は3,410.71億円（+0.8%）とほぼ横ばい</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💪 中間利益の積み上げが資本基盤を押し上げ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚠️ 中間包括利益99.84億円（△0.9%）は為替等の影響</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏭 機能製品の設備投資負担が今後の焦点</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📊 財政状態：</strong>資産合計は3,410.71億円（前期末比+0.8%）とほぼ横ばい。資本合計1,731.14億円、うち親会社所有者帰属持分1,711.04億円で、親会社所有者帰属持分比率は前期末48.8%から<strong>50.2%（+1.4pt）</strong>へ改善し、財務基盤は着実に強化された。一方、中間包括利益は99.84億円（△0.9%）と中間利益（+20.2%）の大幅増益とは方向が異なり、為替換算等その他の包括利益がマイナスに作用した点に留意。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">214.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間109.50 + 期末104.50</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">216.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間108 + 期末108</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+2.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+0.9% 増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">★ 配当方針</div>
+        <div class="div-cell-val" style="color:var(--accent);">DOE 5<span style="font-size:14px;color:var(--mid);">%目安</span></div>
+        <div class="div-cell-sub">連結株主資本配当率</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>★ 配当方針（DOE 5%目安）：</strong>短信に「<strong>2027年3月期は、DOE（連結株主資本配当率）5％を目安とした配当を実施します。なお、1株当たり配当予想金額は、現時点における予想株主資本を前提に算定しています</strong>」と明記されている。すなわち当期の1株当たり配当予想金額（年間216円＝中間108円+期末108円）は、<strong>現時点の予想株主資本を前提に算定された金額</strong>であり、株主資本の増減に応じて変動する余地がある。前期214円（中間109.50円+期末104.50円）から<strong>+2円の増配（+0.9%）</strong>で、配当予想の修正は無。配当性向は通期予想EPS235.43円ベースで<strong>約92%</strong>と高水準であり、DOE基準の配当方針のもとで利益水準に対して手厚い還元となっている。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">中間進捗が大きく先行<br><small>純利益84.4%進捗・下期は減速を想定した計画</small></div>
+      <div class="risk-item high">PVDFの需要変動と競合<br><small>EV電池向けの需要変動と中国勢との価格競合</small></div>
+      <div class="risk-item mid-level">高い配当性向<br><small>約92%の配当性向とDOE5%目安の水準</small></div>
+      <div class="risk-item mid-level">原燃料・エネルギー価格<br><small>基礎化学品の採算を左右するコスト変動</small></div>
+      <div class="risk-item mid-level">為替変動<br><small>中間包括利益△0.9%に表れた換算影響</small></div>
+      <div class="risk-item">新指標と営業利益の乖離<br><small>コア営業利益108.41億円 vs 営業利益107.17億円</small></div>
+      <div class="risk-item">設備投資負担<br><small>機能製品の能力増強に伴う投資とその回収</small></div>
+      <div class="risk-item">通商政策<br><small>関税・輸出規制等の国際通商環境の変化</small></div>
+      <div class="risk-item">機能製品への依存度<br><small>収益の柱が機能製品に集中する事業構造</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      中間期は売上収益871.01億円（+12.6%）に対し、★<strong>当期より新たに採用された管理指標の「コア営業利益」は108.41億円（+43.5%）</strong>、営業利益107.17億円（+32.2%）、親会社所有者帰属中間利益75.99億円（+20.3%）と大幅増益。リチウムイオン電池向けPVDF等の機能製品の回復と価格施策が牽引した。コア営業利益は営業利益から非経常項目を除いたもので、経常的な事業の明瞭性を高めるために導入された指標であり、営業利益を上回る伸びは経常的な実力の強さを示す。★一方、中間包括利益は99.84億円（△0.9%）と損益の大幅増益とは方向が異なる。財務は親会社所有者帰属持分比率50.2%（+1.4pt）。★配当は+2円増配の216円で、短信に「<strong>2027年3月期はDOE（連結株主資本配当率）5%を目安とした配当を実施する（1株当たり配当予想金額は現時点の予想株主資本を前提に算定）</strong>」と配当方針が明記されている（配当性向は約92%）。★通期はコア営業利益160.00億円（+10.6%）へ修正したが、中間進捗はコア営業利益67.8%・純利益84.4%と大きく先行しており下期は減速を想定した計画。EV電池向けPVDFの需要と中国勢との競合が中長期の焦点。名武克泰社長兼CEO。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社クレハ（4023）2027年3月期第2四半期（中間期）決算短信〔IFRS〕に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
