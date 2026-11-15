@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社学究社 2027年3月期 第2四半期（中間期） 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1A3A5C;
+    --primary-light: #2A4E74;
+    --primary-dark: #102641;
+    --accent: #2E6DA4;
+    --accent-light: #5A94C4;
+    --accent-pale: #E8F0F8;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(26,58,92,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: '教育・学習塾'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (Interim)</div>
+  <h1>株式会社 学究社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 9769</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月12日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証</span></div>
+    <div class="meta-item">半期報告書提出予定日 <span>2026年11月13日</span></div>
+    <div class="meta-item">配当支払開始予定日 <span>2026年12月9日</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">63.99<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 2.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">13.25<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 8.5%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">8.32<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 8.6%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">EPS（中間期・基本的）</div>
+      <div class="kpi-value">76.64<span class="kpi-unit">円</span></div>
+      <div class="kpi-change down">前期 83.86円</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="card">
+      <div class="card-title">事業構成</div>
+      <div class="data-row">
+        <span class="data-key">主要事業</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">「ena」ブランドによる小中高生向け進学塾の運営</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">強み</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">首都圏の都立中高一貫校・都立難関高校受験指導</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">部門構成</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">ena小中学部 / ena個別 / 大学受験（ena看護・美術・高校部）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">海外展開</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">GAKKYUSHA USA グループ（米国・カナダ・ENA EUROPE GmbH 等）</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">教育システム</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">全授業に単方向映像授業を完備「ダブル学習システム」</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">安心・安全の取組</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">保護者がネットで授業・合宿をリアルタイム確認「ネット授業参観」</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">代表者 / 問合せ</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">取締役兼代表執行役社長 齊藤 浩太 / 取締役兼執行役財務部長 新井 一男</span>
+      </div>
+      <div class="data-row">
+        <span class="data-key">開示体制</span>
+        <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">決算補足説明資料：無 ／ 決算説明会：有（アナリスト・機関投資家向け）</span>
+      </div>
+    </div>
+    <div class="highlight">首都圏を中心に「ena」ブランドで小中高生向け進学塾を展開し、<strong>都立中高一貫校・都立難関高校の受験指導に強み</strong>を持つ。全授業に単方向映像授業を備えた「ダブル学習システム」、保護者が授業・合宿をリアルタイムで視聴できる「ネット授業参観」などを特色とし、合宿指導も収益機会として拡充。当中間期は<strong>東京都による私立高校授業料の実質無償化</strong>を背景に中学・高校受験の市場環境が変化し、同社が強みとする<strong>都立中・都立高を志望する生徒数の減少が業績に大きな影響</strong>を及ぼした。これに対し私立中・私立高受験分野への展開を加速し、2026年度入試の<strong>早慶中高合格者数は前年度98名から224名へ大幅伸長</strong>。地域戦略では東京中心から<strong>千葉県・埼玉県へ進出（ena小中学部を9校開校、当中間期に新たに4校の開校を決定）</strong>。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績ハイライトと減益要因</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間期）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">63.99<span class="data-sub">億円 △2.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val">13.25<span class="data-sub">億円 △8.5%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val">13.52<span class="data-sub">億円 △9.0%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val">8.32<span class="data-sub">億円 △8.6%</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val">7.99<span class="data-sub">億円 △11.9%（前期9.07億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益率</span>
+          <span class="data-val">20.7<span class="data-sub">% （前年同期 22.1% / △1.4pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">減益の主因</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏫 私立高校授業料の実質無償化で都立志望の生徒数が減少</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📉 ena小中学部・ena個別・大学受験部門で在籍生徒数が前年割れ</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏢 前期実施の閉校（ena個別・ena看護）に伴う校舎数の減少</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💸 販管費 10.68→11.11億円へ増加（売上減下でのコスト増）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">⚖ 固定費負担が重く売上減が利益を増幅して押し下げる構造</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🌏 一方で GAKKYUSHA USA グループは在籍生徒数が想定どおり増収</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>① 減収減益への転換（オペレーティングレバレッジの逆回転）：</strong>前年同期は売上△1.6%の減収ながら営業利益+6.1%・経常利益+6.1%の<strong>増益</strong>を確保していたが、当中間期は売上△2.5%・営業△8.5%・経常△9.0%・純利益△8.6%と<strong>全段階で減益</strong>に転じた。<strong>売上の減少率（△2.5%）を大きく超えて利益が落ち込んでいる</strong>点が重要で、教室運営費・校舎賃借料・人件費といった固定費の負担が重く、<strong>売上減が利益減を増幅する構造（オペレーティングレバレッジの逆回転）</strong>を示す。売上高は前年同期も△1.6%であり、<strong>2期連続の減収</strong>となっている点も留意が必要。
+    </div>
+    <div class="highlight neutral">
+      <strong>② 経常利益が営業利益を上回る構造：</strong>経常利益13.52億円 &gt; 営業利益13.25億円。営業外収益0.42億円（受取利息0.28億円等）が営業外費用0.15億円（支払利息0.13億円等）を上回り、<strong>営業外損益が純額でプラス</strong>となっている。前年同期も経常14.87億円 &gt; 営業14.48億円で同じ構造が続く。<br>
+      <strong>③ 包括利益は純利益より大きく減少：</strong>中間包括利益7.99億円（△11.9%）は中間純利益（△8.6%）を上回る減少率。その他の包括利益が△0.34億円（その他有価証券評価差額金△0.47億円、為替換算調整勘定+0.13億円）とマイナスで、<strong>損益の悪化が包括利益にも表れている</strong>。
+    </div>
+    <div class="seg-grid">
+      <div class="seg-item decline">
+        <div class="seg-name">① 教育事業</div>
+        <div class="seg-row"><span>売上高</span><span>60.32億円</span></div>
+        <div class="seg-row"><span>前年同期比</span><span>△3.0%</span></div>
+        <div class="seg-row"><span>構成比</span><span>約94%</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">ena小中学部：都立中・都立高志望の生徒数減で在籍減・減収／ena個別：前期の閉校で校舎減・減収／大学受験（ena看護・美術・高校部）：ena看護閉校で減収／GAKKYUSHA USAグループ：在籍生徒数が想定どおり推移し増収</div>
+      </div>
+      <div class="seg-item star">
+        <div class="seg-name">② 不動産事業</div>
+        <div class="seg-row"><span>売上高</span><span>0.86億円</span></div>
+        <div class="seg-row"><span>前年同期比</span><span>+2.8%</span></div>
+        <div class="seg-row"><span>構成比</span><span>約1%</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">保有する賃貸用物件が概ね安定的に稼働し、賃貸収入は前年同期と同水準で推移。3セグメント中で唯一の増収。</div>
+      </div>
+      <div class="seg-item decline">
+        <div class="seg-name">③ その他</div>
+        <div class="seg-row"><span>売上高</span><span>2.88億円</span></div>
+        <div class="seg-row"><span>前年同期比</span><span>△12.0%</span></div>
+        <div class="seg-row"><span>構成比</span><span>約5%</span></div>
+        <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">受験・教育情報の配信サービス等。学校法人関連は新規アプリ・バナー制作が伸長したがグループ会社との取引見直しで広告関連は全体減。人材サービス（塾訪問）は関西等への拡大で契約校数増。</div>
+      </div>
+    </div>
+    <div class="highlight neutral" style="margin-top:12px;">
+      <strong>※ セグメント注記：</strong>当中間連結会計期間より報告セグメントの区分を変更しており、前年同期比は変更後の区分に基づく。セグメント別売上高はセグメント間の内部取引消去前の金額（単純合計 63.06億円）。<strong>合宿事業の拡充：</strong>本年夏期に新たに34泊35日の長期合宿を実施、前年度開始の22泊23日長期合宿は参加者数が2倍以上に増加。英語漬け合宿など新プログラムも展開。なお短信では在籍生徒数・校舎数の具体的な実数開示はなく（千葉・埼玉のena小中学部9校開校＋4校の開校決定を除く）、部門別の生徒数動向は定性記述に基づく整理である。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">通期業績予想（2027年3月期・据置）と中間進捗</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">146.56<span class="data-sub">億円 +12.1%（進捗43.7%）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">32.35<span class="data-sub">億円 +11.4%（進捗41.0%）</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">32.40<span class="data-sub">億円 +7.8%（進捗41.7%）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">21.86<span class="data-sub">億円 +18.3%（進捗38.1%・EPS201.20円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight">
+        <strong>④★ 最重要：通期予想との著しい乖離</strong><br>
+        中間期は<strong>全段階で減収減益</strong>（売上△2.5%・営業△8.5%・経常△9.0%・純利益△8.6%）であるにもかかわらず、<strong>通期予想は売上+12.1%・営業+11.4%・経常+7.8%・純利益+18.3%の大幅増収増益</strong>で据え置かれている。中間進捗は<strong>売上43.7%・営業41.0%・経常41.7%・純利益38.1%</strong>にとどまる。通期達成には下期に<strong>売上82.57億円（中間63.99億円の約1.29倍）、営業利益19.10億円（中間13.25億円の約1.44倍）、純利益13.54億円（中間8.32億円の約1.63倍）</strong>が必要であり、<strong>中間が減益であるにもかかわらず下期に大幅増益へ転じる前提</strong>となっている。学習塾ビジネス特有の<strong>下期偏重の季節性（冬期講習・直前講習・受験期の集中、入学・新年度生の募集）</strong>を考慮しても相応のハードルである。会社側は「概ね計画の範囲内」として<strong>業績予想の修正は「無」</strong>で据え置いたが、<strong>通期未達リスクは最大の着眼点</strong>となる。
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>2026年5月15日公表の「2026年3月期 決算短信」記載の通期予想から変更なし。特別損益は特別利益0.01億円（固定資産売却益）、特別損失0.28億円（減損損失0.05億円・固定資産除却損0.22億円・賃貸借契約解約損0.01億円）で、前年同期の特別損失1.11億円（減損0.89億円等）から縮小。中間決算短信は公認会計士・監査法人のレビュー対象外。税金費用は見積実効税率による中間期特有の会計処理を適用。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">127.15<span class="data-sub">億円 前期末比+1.49億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val">83.97<span class="data-sub">億円 前期末比+2.23億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">83.94<span class="data-sub">億円（前期末 81.71億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val" style="color:var(--green);">66.0<span class="data-sub">% （前期末 65.0% / +1.0pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val">43.18<span class="data-sub">億円 前期末比△0.73億円</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">主な増減と資産内容</div>
+        <div class="data-row">
+          <span class="data-key">流動資産</span>
+          <span class="data-val">38.24<span class="data-sub">億円 +0.36億円</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">固定資産</span>
+          <span class="data-val">88.91<span class="data-sub">億円 +1.12億円（建物・工具器具備品増）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">現金及び預金</span>
+          <span class="data-val">33.73<span class="data-sub">億円（前期末 34.17億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債</span>
+          <span class="data-val">10.87<span class="data-sub">億円（長期9.57 + 1年内1.31）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">前受金</span>
+          <span class="data-val">13.22<span class="data-sub">億円（前期末 11.19億円・+2.04億円）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⑥ 財政状態：</strong>総資産は前期末比+1.49億円増の127.15億円。固定資産が+1.12億円（校舎の建物及び構築物、工具・器具及び備品の増加＝<strong>校舎展開投資の継続</strong>）、流動資産が+0.36億円。負債は固定負債の△1.27億円（長期借入金・資産除去債務の減少）を主因に△0.73億円減。純資産は<strong>配当金の支払いを行いながら中間純利益8.32億円を計上したことで+2.23億円増の83.97億円</strong>となり、<strong>自己資本比率は65.0%→66.0%（+1.0pt）へ改善</strong>。現金及び預金33.73億円に対し有利子負債10.87億円で<strong>実質ネットキャッシュ約22.9億円</strong>。自己株式は100,159株→100,163株とほぼ変化なく（期末発行済株式数10,968,356株は前期末と同数）、<strong>株主還元は配当中心</strong>。前受金が+2.04億円増加しており下期売上の先行指標として注目される。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">103.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間50.00 + 期末53.00</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">127.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間62.00（実績）+ 期末65.00（予想）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val" style="color:var(--green);">+24.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">+23.3%の大幅増配</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想EPSベース）</div>
+        <div class="div-cell-val" style="color:var(--accent);">約63.1<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想201.20円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>⑤★ 減収減益下での+24円の大幅増配：</strong>年間配当は<strong>103.00円→127.00円（+24.00円・+23.3%）</strong>の大幅増配予想。<strong>中間62.00円（前期中間50.00円から+12円）・期末予想65.00円（前期期末53.00円から+12円）と上期・下期ともに増配</strong>しており、配当予想の修正は「無」。<strong>業績が全段階で減益の局面にあるなかでの大幅増配</strong>であり、株主還元を強く優先する姿勢の表れといえる。ただし<strong>通期予想EPS201.20円に対し配当127円＝配当性向約63.1%</strong>、さらに<strong>中間実績EPS76.64円の年換算（約153円）ベースで見れば配当127円は配当性向約83%に相当</strong>する。前述のとおり通期予想は中間進捗（純利益38.1%）との乖離が大きく、<strong>通期計画が未達となった場合には配当余力（配当性向の一段の上昇）が論点となる</strong>点に必ず留意が必要。配当支払開始予定日は2026年12月9日。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">通期予想との著しい乖離<br><small>中間は全段階減益／進捗 売上43.7%・営業41.0%・純利38.1%。下期に純利益1.63倍が必要だが予想修正は「無」</small></div>
+      <div class="risk-item high">減収トレンドと生徒数の減少<br><small>2期連続の減収。都立中・都立高志望の生徒数減が主因で、ena小中学部・ena個別・大学受験部門の在籍生徒数が前年割れ</small></div>
+      <div class="risk-item mid-level">少子化・学齢人口の減少<br><small>学習塾業界の構造的課題。生徒数確保の難度が中長期的に上昇</small></div>
+      <div class="risk-item mid-level">固定費負担と人件費上昇<br><small>校舎賃借料・教室運営費の固定費と講師の採用難・深刻な人手不足によるコスト増加圧力。販管費は10.68→11.11億円へ増加</small></div>
+      <div class="risk-item mid-level">公教育制度・入試制度の変更<br><small>東京都の私立高校授業料の実質無償化が都立志望の需要を直撃。大学入試改革・ICT教育・生成AI対応も必要</small></div>
+      <div class="risk-item">減益下での高配当の持続性<br><small>年間127円（配当性向約63.1%、中間EPS年換算では約83%相当）。通期未達なら還元余力が論点</small></div>
+      <div class="risk-item">私立受験分野への事業転換<br><small>2026年度入試の早慶中高合格者数が98名→224名へ大幅伸長。私立中・私立高志望生の獲得を強化</small></div>
+      <div class="risk-item">千葉・埼玉への地域拡大<br><small>ena小中学部を9校開校済、当中間期に新たに4校の開校を決定。東京一極から首都圏広域へ</small></div>
+      <div class="risk-item">財務健全性と季節性<br><small>自己資本比率66.0%（+1.0pt）・ネットキャッシュ約22.9億円。一方で冬期・直前講習に収益が偏る四半期業績の季節性</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight">
+      当中間期は売上高63.99億円（△2.5%）・営業利益13.25億円（△8.5%）・経常利益13.52億円（△9.0%）・親会社株主帰属中間純利益8.32億円（△8.6%）と<strong>全段階で減収減益</strong>に転じた。前年同期が売上△1.6%でも営業・経常+6.1%の増益を確保していたのに対し、今期は<strong>売上の減少率を大きく超えて利益が落ち込んでおり、校舎賃借料・教室運営費・人件費などの固定費負担によるオペレーティングレバレッジの逆回転</strong>が明確に表れた。2期連続の減収である点も構造的な警戒要因。要因は<strong>東京都の私立高校授業料の実質無償化</strong>により同社の強みである都立中・都立高志望の生徒数が減少したことで、セグメント別では<strong>教育事業60.32億円（△3.0%）、不動産事業0.86億円（+2.8%）、その他2.88億円（△12.0%）</strong>と、安定稼働の不動産事業のみが増収。打ち手として<strong>私立中・私立高受験分野への展開（2026年度入試の早慶中高合格者98名→224名）、千葉・埼玉への進出（ena小中学部9校＋4校の開校決定）、長期合宿の拡充（34泊35日の新設、22泊23日は参加者2倍以上）、GAKKYUSHA USAグループの増収</strong>が進むが、収益貢献の本格化には時間を要する。中間包括利益7.99億円（△11.9%）は純利益より減少率が大きく、その他の包括利益のマイナスが損益悪化に重なった。経常利益が営業利益を上回る（営業外損益が純額プラス）構造は前年同期から継続。財務面は<strong>自己資本比率66.0%（前期末65.0%、+1.0pt）</strong>・純資産+2.23億円増、現金預金33.73億円対有利子負債10.87億円のネットキャッシュ約22.9億円と健全で、自己株式はほぼ不変（100,159→100,163株）＝<strong>還元は配当中心</strong>。配当は<strong>年間103円→127円（+24円・+23.3%）の大幅増配</strong>（中間62円・期末予想65円、修正無）で、<strong>減益局面でも株主還元を優先する姿勢</strong>が際立つ。<strong>短信には累進配当方針・DOE・配当性向目標といった明示的な配当方針の記載は無く</strong>、配当性向は予想EPS201.20円ベースで約63.1%、中間実績EPS年換算（約153円）ベースでは約83%相当となる。<strong>最大の着眼点は通期予想との乖離</strong>で、中間が減益にもかかわらず通期は売上+12.1%・営業+11.4%・純利益+18.3%の大幅増収増益を据え置き、進捗は売上43.7%・営業41.0%・純利益38.1%。下期に売上82.57億円（1.29倍）・営業19.10億円（1.44倍）・純利益13.54億円（1.63倍）が必要で、冬期・直前講習や新年度募集という<strong>下期偏重の季節性を織り込んでも達成ハードルは高い</strong>。通期未達となれば高水準の配当の持続性が論点化するため、下期の生徒数動向・前受金（13.22億円、+2.04億円）の推移と12月4日の決算説明会での説明が今後の焦点となる。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社学究社（9769）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
