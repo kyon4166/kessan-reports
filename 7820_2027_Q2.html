@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ニホンフラッシュ株式会社 2027年3月期 第2四半期（中間期） 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3A4A3A;
+    --primary-light: #4E624E;
+    --primary-dark: #242F24;
+    --accent: #B5843C;
+    --accent-light: #CBA05E;
+    --accent-pale: #F2E9D6;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(58,74,58,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: 'Interior'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 100px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #f0f1f0; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (Interim)</div>
+  <h1>ニホンフラッシュ株式会社</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 7820</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月12日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証プライム</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">売上高</div>
+      <div class="kpi-value">87.91<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 14.4%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業損益</div>
+      <div class="kpi-value" style="color:var(--red);">△1.58<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 営業損失（前年同期 +4.55億円）</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常損益</div>
+      <div class="kpi-value" style="color:var(--red);">△1.16<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 経常損失（前年同期 +5.57億円）</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純損益</div>
+      <div class="kpi-value" style="color:var(--red);">△4.03<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 純損失（前年同期 +3.37億円）</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">事業構成</div>
+        <div class="data-row">
+          <span class="data-key">主要事業</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">マンション用内装ドア・住宅設備（木製建具）の製造販売</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">主力市場</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">日本・中国（現地生産・現地販売）</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">新規開拓市場</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">台湾／アラブ首長国連邦／カザフスタン</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">代表者</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">高橋 栄二 代表取締役社長</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">IR開示</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">決算補足説明資料:無／決算説明会:無</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">当中間期の位置づけ</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔻 売上高△14.4%の減収で全段階が赤字に転落</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏭 国内は価格改定が進捗、プレス工程の最新鋭設備で工場全体30%の生産性向上を実現</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🇨🇳 中国は「第2の創業」と位置づける構造改革局面。数量減を計画に織り込み済</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💱 中間包括利益は+14.63億円と損益と真逆のプラス</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛡 自己資本比率73.2%（+1.5pt）で財務不安はない</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">マンション用内装ドアおよび住宅設備（木製建具）の製造販売を手がける建材メーカー。日本と中国が主力市場で、中国では現地生産・現地販売体制を構築している。当中間期は中国不動産市況の低迷と国内住宅市場の厳しい環境により減収となり、営業・経常・最終の全段階で赤字に転落した。ただし国内では価格改定と生産性向上が進み、中国では製品・販売先・販売対象国の多様化を進める<strong>事業構造の転換</strong>が本格化しており、下期以降の業績貢献を見込む局面にある。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績と赤字転落の構造</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間期）</div>
+        <div class="data-row">
+          <span class="data-key">売上高</span>
+          <span class="data-val">87.91<span class="data-sub">億円 △14.4%（前年 102.74億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">売上総利益</span>
+          <span class="data-val" style="color:var(--red);">18.74<span class="data-sub">億円 △25.5%（前年 25.16億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業損益</span>
+          <span class="data-val" style="color:var(--red);">△1.58<span class="data-sub">億円（前年 +4.55億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常損益</span>
+          <span class="data-val" style="color:var(--red);">△1.16<span class="data-sub">億円（前年 +5.57億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純損益</span>
+          <span class="data-val" style="color:var(--red);">△4.03<span class="data-sub">億円（前年 +3.37億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり中間純損益（EPS）</span>
+          <span class="data-val" style="color:var(--red);">△17.71<span class="data-sub">円（前年 14.83円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val" style="color:var(--green);">+14.63<span class="data-sub">億円（前年 △12.15億円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">損失が段階ごとに拡大した内訳</div>
+        <div class="data-row">
+          <span class="data-key">売上総利益率</span>
+          <span class="data-val" style="color:var(--red);">21.3<span class="data-sub">%（前年 24.5%／△3.2pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">販管費</span>
+          <span class="data-val">20.32<span class="data-sub">億円 △1.4%（ほぼ削減できず）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業外収益</span>
+          <span class="data-val" style="color:var(--green);">+2.12<span class="data-sub">億円（受取利息0.97・配当0.79）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業外費用</span>
+          <span class="data-val" style="color:var(--red);">1.70<span class="data-sub">億円（前年1.07億円／支払利息0.34・減価償却費1.04）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">特別損益（純額）</span>
+          <span class="data-val" style="color:var(--red);">△1.62<span class="data-sub">億円（投資不動産売却損1.86・減損0.28／売却益0.50）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">税金等調整前中間純損益</span>
+          <span class="data-val" style="color:var(--red);">△2.78<span class="data-sub">億円（前年 +5.38億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">法人税等</span>
+          <span class="data-val" style="color:var(--red);">1.92<span class="data-sub">億円（赤字でも計上）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📉 最終損失△4.03億円が営業損失△1.58億円より大きい理由（最重要）：</strong>営業損失△1.58億円に対し、営業外収益+2.12億円が営業外費用1.70億円を上回ったことで<strong>経常損失は△1.16億円まで縮小</strong>している。ところが最終損失は△4.03億円へ一気に拡大した。内訳は(1)<strong>投資不動産売却損1.86億円と減損損失0.28億円</strong>を含む特別損失2.15億円（特別利益0.53億円との純額△1.62億円）で税前△2.78億円となり、(2)さらに<strong>赤字でありながら法人税等1.92億円を計上</strong>したためである。なお中間純損失△4.71億円のうち非支配株主帰属分△0.68億円を除いた親会社株主帰属分が△4.03億円。<strong>最終損失の約6割は本業外の資産売却損と税金費用</strong>であり、本業の赤字幅（営業△1.58億円）とは区別して読む必要がある。
+    </div>
+    <div class="highlight">
+      <strong>💱 損益は赤字なのに包括利益は+14.63億円という真逆の動き：</strong>中間純損失△4.71億円に対し、その他の包括利益が<strong>+19.34億円</strong>（うち<strong>為替換算調整勘定+16.96億円</strong>、その他有価証券評価差額金+2.39億円）計上され、中間包括利益は<strong>+14.63億円のプラス</strong>となった。前年同期はこれが逆で、純利益+3.37億円に対しその他の包括利益△15.29億円（為替換算調整△17.24億円）で包括利益△12.15億円だった。<strong>為替換算調整勘定の振れが損益の数倍の規模で発生</strong>しており、中国事業の比重と人民元為替が同社の企業価値を決定的に左右する。損益計算書だけでは実態を全く捉えられない点に留意。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">市場別動向（本短信にセグメント情報の開示はないため定性整理）</div>
+      <div class="seg-grid">
+        <div class="seg-item decline">
+          <div class="seg-name">日本（マンション用内装ドア）</div>
+          <div class="seg-row"><span>環境</span><span>厳しい</span></div>
+          <div class="seg-row"><span>打ち手</span><span>価格改定・生産性</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">原材料価格・人件費・物流コストの上昇で環境は厳しいが、新規受注・受注済案件とも<strong>価格改定を進め大半の得意先から理解</strong>を得た。プレス工程の最新鋭設備の設置が完了し<strong>工場全体で30%の生産性向上</strong>を実現。豊富な受注残を有し、価格改定後も順調に成約。</div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">中国（構造改革局面）</div>
+          <div class="seg-row"><span>環境</span><span>不動産低迷</span></div>
+          <div class="seg-row"><span>方針</span><span>第2の創業</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">自動車・IT関連の輸出企業は好調な一方、不動産関連は厳しく、若年失業率は20%超で消費低迷が長期化。製品・販売先・販売対象国の多様化による<strong>事業構造の転換</strong>を推進。目先の数量拡大を追わず<strong>製造・販売数量の減少を当初から計画に織り込み</strong>、将来の成長基盤構築を優先。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">海外新市場（成長ドライバー）</div>
+          <div class="seg-row"><span>華住集団</span><span>納入開始</span></div>
+          <div class="seg-row"><span>台湾・中東</span><span>契約・提携</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">中国を中心に世界展開する大手ホテルグループ<strong>華住集団</strong>（2026年3月末時点で21カ国・13,215ホテル・130万室）へ共同開発の<strong>遮音ドアの本格納入を開始</strong>、量産設備投資も完了。台湾・潤泰グループの分譲マンション<strong>「南港の星」（979戸）</strong>へ全製品を2027年度後半から納入する契約を締結。UAE・カザフスタンでも業務提携等を予定。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 注記：</strong>本短信にセグメント情報の開示はないため、上記は定性情報および財務諸表から整理したものです。海外案件向け製品は中国工場から輸出する予定ですが、取り扱う製品が多岐にわたるため、現地需要への対応と恒久的な取引化には<strong>ショールームとアッセンブル工場の整備が必要</strong>と会社は説明しており、追加投資を伴う可能性があります。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想（2027年3月期・2026年5月15日公表から変更なし）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">売上高</span>
+            <span class="data-val">210.00<span class="data-sub">億円 △10.5%／進捗 41.9%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val">14.00<span class="data-sub">億円 △19.8%</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val">14.50<span class="data-sub">億円 △28.8%</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val">9.00<span class="data-sub">億円 △36.4%（EPS 39.55円）</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>⚠ 通期計画との乖離が最大の論点：</strong>通期は減益ながら<strong>黒字（営業14.00億円・純利益9.00億円）を確保する計画</strong>だが、中間実績は営業△1.58億円・純損失△4.03億円の赤字。達成には下期に<strong>営業利益15.58億円・純利益13.03億円</strong>を稼いで赤字を埋め切る必要があり、売上も下期122.09億円＝<strong>中間87.91億円の約1.39倍</strong>が求められる。売上・採算の両面で大幅な改善が前提で、予想は<strong>「修正無」で据え置かれている</strong>。会社は価格改定の浸透、30%の生産性向上、華住集団への納入開始を下期の収益源として挙げているが、<strong>未達リスクは相当に高い</strong>と見るべき水準。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val">449.13<span class="data-sub">億円（前期末比 +5.93億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val" style="color:var(--green);">113.20<span class="data-sub">億円（△4.59億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val" style="color:var(--green);">335.93<span class="data-sub">億円（+10.53億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本</span>
+          <span class="data-val">328.71<span class="data-sub">億円（前期末 317.98億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val" style="color:var(--green);">73.2<span class="data-sub">%（前期末71.7%／+1.5pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">現金及び預金</span>
+          <span class="data-val">105.88<span class="data-sub">億円（前期末 116.27億円）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">主な増減と資本の内訳</div>
+        <div class="data-row">
+          <span class="data-key">投資不動産</span>
+          <span class="data-val">95.21<span class="data-sub">億円（+6.10億円＝資産増の主因）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">受取手形及び売掛金</span>
+          <span class="data-val">134.71<span class="data-sub">億円（+2.30億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">貸倒引当金（流動）</span>
+          <span class="data-val" style="color:var(--red);">△36.87<span class="data-sub">億円（前期末 △33.18億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">為替換算調整勘定</span>
+          <span class="data-val" style="color:var(--green);">93.64<span class="data-sub">億円（前期末 77.16億円／+16.48億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">利益剰余金</span>
+          <span class="data-val" style="color:var(--red);">210.63<span class="data-sub">億円（前期末 218.76億円／△8.13億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">有利子負債</span>
+          <span class="data-val">24.42<span class="data-sub">億円（短期22.42＋1年内返済2.01、長期0）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>🛡 赤字でも純資産・自己資本比率が改善した因果：</strong>中間純損失△4.03億円と配当支払を計上したため<strong>利益剰余金は△8.13億円の減少</strong>となったが、純資産は逆に<strong>+10.53億円増加</strong>し自己資本比率は73.2%（+1.5pt）へ改善した。主因は<strong>為替換算調整勘定が+16.48億円増加</strong>したこと、すなわち包括利益+14.63億円が損失と配当を上回って吸収したためである。負債も△4.59億円（未払法人税等△2.06億円、契約負債△2.15億円）減少し、有利子負債24.42億円に対し現金及び預金105.88億円で<strong>実質無借金の状態を維持</strong>。赤字であっても財務面の不安はない。
+    </div>
+    <div class="highlight neutral">
+      <strong>※ 留意点：</strong>流動資産に対する<strong>貸倒引当金が36.87億円（前期末33.18億円から+3.69億円）</strong>と受取手形及び売掛金134.71億円に対して高い水準にあり、中国の不動産関連取引先に対する信用リスクが織り込まれていると見られます。また資産増の主因である<strong>投資不動産95.21億円（+6.10億円）</strong>は、当中間期に売却損1.86億円を計上した対象でもあり、今後の時価動向が損益・資産価値の双方に影響します。契約負債は△2.15億円減少し、受注の先行指標としては弱含みです。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">36.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間18 + 期末18</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">36.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間18（実績）+ 期末18</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">0.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（配当予想の修正:無）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val" style="color:var(--red);">約91.0<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想39.55円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期の配当予想は年間36円（中間18円＋期末18円）で前期から<strong>維持</strong>、配当予想の修正も「無」。注目すべきは<strong>中間純損失△4.03億円を計上しながら中間配当18円を実施している</strong>点で、株主還元を優先する姿勢が明確である。ただし通期予想EPS39.55円に対する配当性向は<strong>約91.0%と極めて高水準</strong>であり、そもそも通期計画自体が達成に下期の大幅改善を要する。<strong>通期計画が未達となれば配当の持続性が論点</strong>となる。短信に明示的なDOE目標・配当性向目標の記載はなく、実績ベースでは36円の安定配当を継続する方針と読み取れる。配当支払開始予定日は2026年11月24日。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">中間期の赤字転落<br><small>営業△1.58億・経常△1.16億・純損失△4.03億円</small></div>
+      <div class="risk-item high">通期黒字計画との大幅乖離<br><small>下期に営業15.58億・純利13.03億円が必要（修正無）</small></div>
+      <div class="risk-item mid-level">中国不動産市況の低迷<br><small>若年失業率20%超・消費低迷の長期化が継続</small></div>
+      <div class="risk-item mid-level">人民元為替の変動<br><small>為替換算調整勘定が損益の数倍の規模で振れる</small></div>
+      <div class="risk-item mid-level">高い配当性向（約91.0%）<br><small>赤字下での36円維持は負担が重い</small></div>
+      <div class="risk-item">貸倒引当金36.87億円<br><small>売掛金134.71億円に対し信用リスクを厚く織込み</small></div>
+      <div class="risk-item">投資不動産95.21億円<br><small>当中間期に売却損1.86億円・減損0.28億円を計上</small></div>
+      <div class="risk-item">海外展開の追加投資<br><small>ショールーム・アッセンブル工場の整備が必要</small></div>
+      <div class="risk-item">財務健全性は維持<br><small>自己資本比率73.2%（+1.5pt）・実質無借金</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      当中間期は売上高87.91億円（△14.4%）の減収に加え、営業損失△1.58億円・経常損失△1.16億円・親会社株主帰属中間純損失△4.03億円と<strong>全段階で赤字に転落</strong>した。前年同期は営業+79.7%・経常+29.6%・純利益+32.2%と好調だったため、落差は大きい。売上総利益率が24.5%→21.3%（△3.2pt）へ低下する一方で販管費は△1.4%しか減らせず、固定費負担が赤字を招いた構図である。ただし<strong>最終損失△4.03億円の中身は本業の赤字だけではない</strong>。経常段階では営業外収益+2.12億円が営業外費用1.70億円を上回って損失は△1.16億円まで縮小しており、そこから投資不動産売却損1.86億円・減損0.28億円を含む特別損失2.15億円と、赤字でも計上された法人税等1.92億円が最終損失を押し広げている。<strong>本業の赤字幅と資産売却損・税金費用は区別して読むべき</strong>である。さらに<strong>中間包括利益は+14.63億円のプラス</strong>（為替換算調整勘定+16.96億円）で損益と真逆に動き、純資産は+10.53億円増加、自己資本比率は73.2%（+1.5pt）へ改善した。有利子負債24.42億円に対し現金105.88億円の実質無借金で、赤字でも財務不安はない。国内では<strong>価格改定が大半の得意先に浸透し、プレス工程の最新鋭設備で工場全体30%の生産性向上</strong>を実現、豊富な受注残も抱える。中国では<strong>「第2の創業」と位置づける構造改革</strong>として製品・販売先・販売対象国の多様化を進め、数量減をあらかじめ計画に織り込んでいる。成長の芽として<strong>華住集団（21カ国・13,215ホテル・130万室）への遮音ドア本格納入開始</strong>と量産設備完了、台湾・潤泰グループ「南港の星」（979戸）への全製品納入契約（2027年度後半〜）、UAE・カザフスタンでの業務提携予定が並ぶ。<strong>最大の論点は通期計画との乖離</strong>で、通期は営業14.00億円・純利益9.00億円の黒字計画を「修正無」で据え置いているが、達成には下期に営業15.58億円・純利益13.03億円、売上は中間の約1.39倍を稼ぐ必要があり、未達リスクは相当に高い。配当は<strong>中間純損失を計上しながら中間18円を実施し年間36円を維持</strong>（明示的なDOE・配当性向目標の記載は無し）だが、通期予想EPS39.55円に対し配当性向約91.0%と極めて高く、計画未達時の持続性が問われる。構造改革の成果が下期に現れるかが当面の最大の焦点。高橋栄二代表取締役社長。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料はニホンフラッシュ株式会社（7820）2027年3月期第2四半期（中間期）決算短信に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
