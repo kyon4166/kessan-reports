@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社上組 2027年3月期 第2四半期（中間期） 決算要約</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #12344F;
+    --primary-light: #1E5278;
+    --primary-dark: #0A2235;
+    --accent: #1E96A8;
+    --accent-light: #4FB4C2;
+    --accent-pale: #DEF0F3;
+    --dark: #1A1A1A;
+    --charcoal: #2D2D2D;
+    --mid: #5A5A5A;
+    --light: #F7F6F2;
+    --white: #FFFFFF;
+    --red: #C0392B;
+    --green: #1E7E4A;
+    --border: rgba(18,52,79,0.15);
+    --border-light: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  header { background: var(--primary-dark); padding: 56px 48px 40px; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent)); }
+  header::after { content: '港湾・物流'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); font-family: 'DM Serif Display', serif; font-size: 86px; font-weight: 700; color: rgba(255,255,255,0.05); pointer-events: none; white-space: nowrap; letter-spacing: -0.02em; }
+  .header-tag { display: inline-block; font-size: 11px; letter-spacing: 0.15em; color: var(--accent-light); border: 1px solid var(--accent); padding: 4px 12px; margin-bottom: 16px; }
+  header h1 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; letter-spacing: 0.05em; }
+  header .subtitle { font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; }
+  .header-meta { margin-top: 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .meta-item { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .meta-item span { color: var(--accent-light); font-weight: 500; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 48px; animation: fadeUp 0.6s ease both; }
+  .kpi-item { background: var(--white); padding: 24px 18px; text-align: center; transition: background 0.2s; }
+  .kpi-item:hover { background: var(--accent-pale); }
+  .kpi-label { font-size: 10px; letter-spacing: 0.12em; color: var(--mid); margin-bottom: 8px; }
+  .kpi-value { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--dark); line-height: 1.1; }
+  .kpi-unit { font-size: 11px; color: var(--mid); }
+  .kpi-change { font-size: 11px; margin-top: 6px; font-weight: 500; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+
+  section { margin-bottom: 44px; animation: fadeUp 0.6s ease both; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-number { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--accent); letter-spacing: 0.05em; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
+
+  .card { background: var(--white); border: 1px solid var(--border-light); padding: 28px 32px; margin-bottom: 16px; }
+  .card-title { font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .data-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px; }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--mid); }
+  .data-val { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--dark); }
+  .data-sub { font-size: 11px; color: var(--mid); margin-left: 6px; font-family: 'Noto Sans JP', sans-serif; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .seg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px; }
+  .seg-item { background: var(--white); border: 1px solid var(--border-light); border-top: 3px solid var(--primary); padding: 14px 16px; font-size: 13px; }
+  .seg-item.decline { border-top-color: var(--red); }
+  .seg-item.star { border-top-color: var(--accent); }
+  .seg-name { font-weight: 500; color: var(--primary); margin-bottom: 6px; font-size: 12px; }
+  .seg-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--mid); padding: 2px 0; }
+  .seg-row span:last-child { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--dark); }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .risk-item { background: var(--white); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); padding: 14px 16px; font-size: 13px; color: var(--charcoal); line-height: 1.5; }
+  .risk-item.high { border-left-color: var(--red); }
+  .risk-item.mid-level { border-left-color: #E67E22; }
+  .risk-item small { color: var(--mid); font-size: 11px; }
+
+  .highlight { background: var(--accent-pale); border-left: 4px solid var(--accent); padding: 18px 24px; margin-top: 16px; font-size: 14px; color: var(--charcoal); line-height: 1.7; }
+  .highlight strong { color: var(--dark); }
+  .highlight.neutral { background: #eff2f4; border-left-color: var(--primary); }
+
+  .div-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .div-cell { background: var(--white); padding: 18px 16px; text-align: center; }
+  .div-cell-label { font-size: 11px; color: var(--mid); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .div-cell-val { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--dark); }
+  .div-cell-sub { font-size: 11px; color: var(--mid); }
+
+  footer { background: var(--primary-dark); padding: 24px 48px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; border-top: 1px solid var(--accent); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 32px; }
+    .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .risk-grid, .seg-grid { grid-template-columns: 1fr; }
+    .div-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Earnings Summary · J-GAAP · Consolidated · Q2 (Interim)</div>
+  <h1>株式会社 上組</h1>
+  <p class="subtitle">2027年3月期　第2四半期（中間期）決算短信（連結）要約　／　証券コード 9364</p>
+  <div class="header-meta">
+    <div class="meta-item">決算発表日 <span>2026年11月12日</span></div>
+    <div class="meta-item">対象期間 <span>2026年4月1日〜2026年9月30日</span></div>
+    <div class="meta-item">上場 <span>東証・名証</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-label">営業収益</div>
+      <div class="kpi-value">1,541.11<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change up">▲ 5.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">営業利益</div>
+      <div class="kpi-value">182.80<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 5.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">経常利益</div>
+      <div class="kpi-value">210.15<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 2.2%</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">親会社株主帰属中間純利益</div>
+      <div class="kpi-value">144.69<span class="kpi-unit">億円</span></div>
+      <div class="kpi-change down">▼ 5.1%</div>
+    </div>
+  </div>
+
+  <!-- 01 事業概要 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <span class="section-title">事業概要</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">事業構成</div>
+        <div class="data-row">
+          <span class="data-key">主要事業</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">港湾運送を中核とする総合物流（倉庫・国内運送・工場荷役請負・国際運送）</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">報告セグメント</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">「物流事業」「その他事業」の2区分</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中期経営計画</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">基本方針「国内基盤事業のシェア拡大・強靭化」</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">代表者</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">田原 典人 代表取締役社長</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">IR開示</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">決算補足説明資料:有／決算説明会:有（機関投資家・アナリスト向け）</span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">スケジュール</span>
+          <span class="data-val" style="font-family:'Noto Sans JP';font-size:13px;">半期報告書提出予定 2026年11月13日／配当支払開始予定 2026年12月3日</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">当中間期の位置づけ</div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">📈 営業収益+5.2%の増収だが利益は全段階で減益（増収減益）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🚢 増収の牽引は国際運送+152.5%（海外子会社の連結効果）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">💸 販管費+9.9%の増加が営業減益の主因</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🔼 通期予想は全項目を上方修正（ただし修正後も減益計画）</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🏗 固定資産取得224.36億円（前年の約3.9倍）の大型投資局面</span>
+        </div>
+        <div class="data-row" style="display:block;padding:10px 0;">
+          <span style="font-size:13px;color:var(--charcoal);display:block;">🛡 自己資本比率74.8%（+1.3pt）の極めて高い健全性</span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">港湾運送を中核に、倉庫・国内運送・工場荷役請負・国際運送まで手がける総合物流企業。中期経営計画の基本方針「国内基盤事業のシェア拡大・強靭化」として、当中間期は<strong>横浜幸浦コールドセンター</strong>および鹿嶋市の<strong>北海浜倉庫</strong>の営業を開始し、事業拡張を進めた。経営環境は、輸出貨物に持ち直しの動きがみられ輸入貨物はおおむね横ばいとなる一方、物価高や慢性的な人手不足が物流コストを押し上げる厳しい状況が継続している。</div>
+  </section>
+
+  <!-- 02 業績 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <span class="section-title">中間期業績・セグメント</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">損益サマリー（中間期）</div>
+        <div class="data-row">
+          <span class="data-key">営業収益</span>
+          <span class="data-val">1,541.11<span class="data-sub">億円 <span class="up">+5.2%</span>（前年 1,465.16億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業総利益</span>
+          <span class="data-val">314.30<span class="data-sub">億円 +0.6%（前年 312.52億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">販売費及び一般管理費</span>
+          <span class="data-val" style="color:var(--red);">131.49<span class="data-sub">億円 +9.9%（コスト増／前年 119.59億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業利益</span>
+          <span class="data-val" style="color:var(--red);">182.80<span class="data-sub">億円 △5.2%（前年 192.92億円 / +14.3%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">経常利益</span>
+          <span class="data-val" style="color:var(--red);">210.15<span class="data-sub">億円 △2.2%（前年 214.89億円 / +15.0%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">親会社株主帰属中間純利益</span>
+          <span class="data-val" style="color:var(--red);">144.69<span class="data-sub">億円 △5.1%（前年 152.45億円 / +12.8%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">中間包括利益</span>
+          <span class="data-val" style="color:var(--red);">176.23<span class="data-sub">億円 △8.5%（前年 192.66億円 / +66.6%）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">1株当たり中間純利益（EPS）</span>
+          <span class="data-val">147.43<span class="data-sub">円（前年 150.54円／潜在株式調整後は－）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">営業外損益と利益率</div>
+        <div class="data-row">
+          <span class="data-key">営業総利益率</span>
+          <span class="data-val" style="color:var(--red);">20.4<span class="data-sub">%（前年 21.3%／△0.9pt）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業外収益</span>
+          <span class="data-val" style="color:var(--green);">31.62<span class="data-sub">億円（前年 24.08億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">├ 持分法による投資利益</span>
+          <span class="data-val">11.27<span class="data-sub">億円（前年 10.14億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">├ 受取配当金</span>
+          <span class="data-val">11.11<span class="data-sub">億円（前年 10.29億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">└ 受取利息</span>
+          <span class="data-val">3.06<span class="data-sub">億円（前年 1.35億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">営業外費用（支払利息）</span>
+          <span class="data-val" style="color:var(--red);">4.27<span class="data-sub">億円（うち支払利息3.43億円＝前年0.95億円の約3.6倍）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">特別損益（純額）</span>
+          <span class="data-val">+0.31<span class="data-sub">億円（特別利益0.75／特別損失0.44）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">法人税等合計</span>
+          <span class="data-val">64.36<span class="data-sub">億円（税前210.46億円／実効税率30.6%）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>📉 増収減益の正体は「原価と販管費」（最重要）：</strong>営業収益は+5.2%（+75.95億円）伸びたが、<strong>営業総利益は314.30億円（+0.6%／+1.78億円）とほぼ横ばい</strong>にとどまった。増収分のほぼ全てが営業原価（1,152.63億円→1,226.80億円）に吸収され、営業総利益率は21.3%→<strong>20.4%（△0.9pt）</strong>へ低下。さらに<strong>販管費が119.59億円→131.49億円（+9.9%／+11.90億円）</strong>と大幅に増加したため、営業利益は△5.2%の減益に転じた。物価高と慢性的な人手不足による物流コスト上昇が、増収効果を上回って採算を押し下げた構図である。前年同期が営業+14.3%・経常+15.0%・純利益+12.8%の好調だったため、反転の印象は一層強い。
+    </div>
+    <div class="highlight">
+      <strong>🚢 増収の牽引役と、そのコスト（表裏一体）：</strong>増収の主因は<strong>国際運送の+152.5%（52.38億円→132.25億円／+79.87億円）</strong>で、国際貨物の取扱量増加に加え<strong>前期に海外子会社を連結した</strong>効果が大きい。全社の増収額+75.95億円を国際運送だけで上回っている計算になる。ただしこの連結は<strong>のれん償却額4.05億円の新規発生</strong>（前年同期は計上なし）と、<strong>支払利息が0.95億円→3.43億円（約3.6倍）</strong>へ膨らんだ要因でもあり、M&Aに伴うコストが利益段階を圧迫している点は見落とせない。のれん残高は110.81億円→102.96億円。
+    </div>
+    <div class="highlight">
+      <strong>💹 経常利益が営業利益を27.35億円上回る収益構造：</strong>経常利益210.15億円は営業利益182.80億円を大きく上回る。営業外収益31.62億円（<strong>持分法による投資利益11.27億円・受取配当金11.11億円・受取利息3.06億円</strong>）が収益の重要な構成要素となっており、持分法適用会社と保有株式からのリターンが本業を補完している。この営業外の厚みにより、<strong>経常の減益率△2.2%は営業の△5.2%より小さく抑えられた</strong>（営業外が緩衝材として機能）。中間包括利益176.23億円（△8.5%）は、その他有価証券評価差額金+36.80億円を含むその他の包括利益+30.13億円を加えたもので、損益と同方向の減少。
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title">セグメント別営業収益・利益（百万円未満切捨て）</div>
+      <div class="seg-grid">
+        <div class="seg-item decline">
+          <div class="seg-name">物流事業</div>
+          <div class="seg-row"><span>営業収益</span><span>1,379.56億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="up">+5.9%</span></div>
+          <div class="seg-row"><span>セグメント利益</span><span class="down">159.68億円 △5.0%</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">外部顧客への営業収益1,378.56億円。港湾運送はコンテナ取扱量増で増収だが穀物・青果物は減少。国内運送は前期スポット案件の剥落で減収。国際運送が取扱量増と海外子会社連結で急伸。<strong>増収ながら利益は△5.0%</strong>（前年168.17億円）。</div>
+        </div>
+        <div class="seg-item decline">
+          <div class="seg-name">その他事業</div>
+          <div class="seg-row"><span>営業収益</span><span>176.32億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="down">△2.3%</span></div>
+          <div class="seg-row"><span>セグメント利益</span><span class="down">22.94億円 △6.7%</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">外部顧客への営業収益162.55億円。重量・建設59.22億円（+2.9%）は重量貨物の運搬据付案件増で増収。その他103.32億円（△2.9%）は<strong>賃貸不動産の売却による賃貸収入減と鋼材の販売減少</strong>で減収（前年利益24.60億円）。</div>
+        </div>
+        <div class="seg-item star">
+          <div class="seg-name">国際運送（物流事業内）</div>
+          <div class="seg-row"><span>営業収益</span><span>132.25億円</span></div>
+          <div class="seg-row"><span>前年同期比</span><span class="up">+152.5%</span></div>
+          <div class="seg-row"><span>増減額</span><span class="up">+79.87億円</span></div>
+          <div style="font-size:11px;color:var(--mid);margin-top:6px;line-height:1.5;">全社の増収額+75.95億円を単独で上回る最大の成長ドライバー。国際貨物の取扱量増加と<strong>前期の海外子会社連結</strong>が寄与。ただしのれん償却4.05億円と支払利息の約3.6倍増という<strong>コスト面の裏返し</strong>も同時に発生。</div>
+        </div>
+      </div>
+      <div class="highlight neutral" style="margin-top:12px;">
+        <strong>※ 物流事業の内訳（営業収益・前年同期比）：</strong>港湾運送 713.48億円（+0.4%）／倉庫 214.32億円（+2.3%）／<strong>国内運送 163.17億円（△7.2%）</strong>／工場荷役請負 148.35億円（+1.7%）／<strong>国際運送 132.25億円（+152.5%）</strong>／その他 6.96億円（△2.9%）。最大の柱である港湾運送が+0.4%とほぼ横ばいにとどまり、国内運送が前期スポット案件の剥落で△7.2%の減収。<strong>国内基盤事業が伸び悩むなかで海外連結が増収を作り出した構図</strong>であり、本来の中計方針「国内基盤事業のシェア拡大・強靭化」の進捗は数字の上では力強さを欠く。セグメント利益の調整額は+0.17億円（連結消去に係る決算調整額）。報告セグメントごとの減損損失・のれん等に関する該当事項はなし。
+      </div>
+    </div>
+    <div class="card" style="margin-top:0;">
+      <div class="card-title">通期業績予想の上方修正（2027年3月期・修正:有）</div>
+      <div class="two-col">
+        <div>
+          <div class="data-row">
+            <span class="data-key">営業収益</span>
+            <span class="data-val">3,072.00<span class="data-sub">億円 +4.2%（前回3,050.00／+22.00億円・+0.7%）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">営業利益</span>
+            <span class="data-val" style="color:var(--red);">347.00<span class="data-sub">億円 △5.0%（前回343.00／+4.00億円・+1.2%）</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="data-row">
+            <span class="data-key">経常利益</span>
+            <span class="data-val" style="color:var(--red);">391.00<span class="data-sub">億円 △3.9%（前回375.00／+16.00億円・+4.3%）</span></span>
+          </div>
+          <div class="data-row">
+            <span class="data-key">当期純利益</span>
+            <span class="data-val" style="color:var(--red);">279.00<span class="data-sub">億円 △10.8%（前回273.40／+5.60億円・+2.0%）／EPS 287.56円</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="highlight" style="margin-top:12px;">
+        <strong>🔼 「上方修正」でも中身は減益計画：</strong>当中間期の結果を受けて通期予想を<strong>全項目で上方修正</strong>（EPSは276.94円→287.56円／+10.62円・+3.8%、特に経常利益が+4.3%と最も大きく引き上げ）した。ただし<strong>修正後の数値そのものは前期実績に対して営業△5.0%・経常△3.9%・純利益△10.8%の減益</strong>である（前期実績：営業収益2,947.58億円・営業365.44億円・経常406.85億円・純利益312.62億円・EPS311.26円）。「上方修正」という見出しだけで増益と読まないよう注意が必要。中間進捗は<strong>営業収益50.2%・営業52.7%・経常53.7%・純利益51.9%</strong>と各項目ほぼ半分を超えており、下期は中間並みの水準を想定した現実的な計画といえる。
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 財政状態 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <span class="section-title">財政状態・キャッシュフロー</span>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-title">バランスシート</div>
+        <div class="data-row">
+          <span class="data-key">総資産</span>
+          <span class="data-val" style="color:var(--red);">5,254.69<span class="data-sub">億円（前期末比 △129.37億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">├ 流動資産</span>
+          <span class="data-val" style="color:var(--red);">1,184.22<span class="data-sub">億円（△311.12億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">│　├ 現金及び預金</span>
+          <span class="data-val" style="color:var(--red);">535.08<span class="data-sub">億円（前期末 762.79億円／△227.71億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">│　└ 有価証券</span>
+          <span class="data-val" style="color:var(--red);">68.59<span class="data-sub">億円（前期末 170.95億円／△102.36億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">└ 固定資産</span>
+          <span class="data-val" style="color:var(--green);">4,070.46<span class="data-sub">億円（+181.74億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">　　├ 有形固定資産</span>
+          <span class="data-val" style="color:var(--green);">2,376.76<span class="data-sub">億円（+122.72億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">　　└ 投資有価証券</span>
+          <span class="data-val">1,307.55<span class="data-sub">億円（前期末 1,290.88億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">負債合計</span>
+          <span class="data-val" style="color:var(--green);">1,297.31<span class="data-sub">億円（△108.15億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">純資産</span>
+          <span class="data-val" style="color:var(--red);">3,957.37<span class="data-sub">億円（△21.21億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己資本比率</span>
+          <span class="data-val" style="color:var(--green);">74.8<span class="data-sub">%（前期末 73.5%／+1.3pt）</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">キャッシュフローと資本の内訳</div>
+        <div class="data-row">
+          <span class="data-key">営業CF</span>
+          <span class="data-val" style="color:var(--green);">+205.43<span class="data-sub">億円（前年同期 +86.36億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">投資CF</span>
+          <span class="data-val">△23.28<span class="data-sub">億円（前年同期 △190.85億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">財務CF</span>
+          <span class="data-val" style="color:var(--red);">△301.20<span class="data-sub">億円（前年同期 △87.34億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">現金同等物 中間期末残高</span>
+          <span class="data-val">574.18<span class="data-sub">億円（期首 691.89億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">固定資産の取得</span>
+          <span class="data-val" style="color:var(--red);">△224.36<span class="data-sub">億円（前年同期 △57.12億円／約3.9倍）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">減価償却費／のれん償却額</span>
+          <span class="data-val">77.23<span class="data-sub">億円（前年 63.77億円）／4.05億円（前年 －）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">配当金の支払額</span>
+          <span class="data-val" style="color:var(--red);">△113.52<span class="data-sub">億円（前年同期 △81.02億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">自己株式の取得</span>
+          <span class="data-val" style="color:var(--red);">△84.78<span class="data-sub">億円（前年同期 △6.39億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">長期借入金の返済</span>
+          <span class="data-val">△100.83<span class="data-sub">億円（1年内返済予定 201.69→101.63億円）</span></span>
+        </div>
+        <div class="data-row">
+          <span class="data-key">利益剰余金／自己株式</span>
+          <span class="data-val">3,343.27<span class="data-sub">億円（+31.17）／△368.89億円（△284.68から+84.21億円増）</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="highlight">
+      <strong>🔄 「現金を使い切って設備と株主還元に振り向けた」中間期：</strong>総資産は△129.37億円の減少だが、中身は大規模な入れ替えである。<strong>現金及び預金△227.71億円・有価証券△102.36億円</strong>を減らす一方、<strong>有形固定資産は+122.72億円</strong>増加した。内訳は土地995.17→1,084.89億円（<strong>+89.72億円</strong>）、機械装置及び運搬具227.46→292.21億円（<strong>+64.75億円</strong>）、建物及び構築物925.19→964.17億円（+38.98億円）で、逆に建設仮勘定は82.63→12.95億円（<strong>△69.68億円</strong>）へ減少。これは<strong>横浜幸浦コールドセンター・北海浜倉庫の完成に伴う本勘定への振替</strong>と新規用地取得が同時に進んだことを示す。キャッシュフローでも<strong>営業CFが+86.36億円→+205.43億円へ約2.4倍に改善</strong>する一方、固定資産の取得に△224.36億円（前年の約3.9倍）を投じ、定期預金を+209.99億円取り崩して財源に充てている。財務CFは△301.20億円（配当△113.52億円・自己株式取得△84.78億円・長期借入金返済△100.83億円）で、現金同等物は691.89→574.18億円へ減少した。
+    </div>
+    <div class="highlight neutral">
+      <strong>※ 自己資本比率の上昇をどう読むか：</strong>自己資本比率は74.8%（+1.3pt）へ改善したが、<strong>純資産そのものは△21.21億円減少している</strong>。中間純利益の計上とその他有価証券評価差額金の増加（283.03→321.33億円）で押し上げられた一方、<strong>自己株式の取得（+84.21億円）</strong>がそれを上回って資本を減らしたためである。比率が上がったのは、分母の総資産が△129.37億円とそれ以上に縮小したことによる。つまり<strong>比率改善は資産・資本の両方を圧縮しながら進んだもの</strong>で、利益の内部留保による厚みの増加ではない点に留意したい。なお<strong>2026年6月26日の取締役会決議に基づき自己株式1,685千株を取得</strong>し、期中平均株式数は101,270,158株→<strong>98,145,706株（△3,124,452株）</strong>へ減少してEPSを支えている（期末自己株式 7,855,893→9,525,392株）。有利子負債は長期借入金503.25億円＋1年内返済予定101.63億円＝604.88億円に対し現金及び預金535.08億円・投資有価証券1,307.55億円で、財務の余力は依然大きい。
+    </div>
+  </section>
+
+  <!-- 04 配当 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <span class="section-title">配当</span>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="div-cell-label">前期実績（2026/3）</div>
+        <div class="div-cell-val">205.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間90 + 期末115</div>
+      </div>
+      <div class="div-cell" style="background:var(--accent-pale);">
+        <div class="div-cell-label">当期予想（2027/3）</div>
+        <div class="div-cell-val" style="color:var(--accent);">205.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">中間100（実績）+ 期末105</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">前期比増減</div>
+        <div class="div-cell-val">0.00<span style="font-size:14px;color:var(--mid);">円</span></div>
+        <div class="div-cell-sub">維持（配当予想の修正:無）</div>
+      </div>
+      <div class="div-cell">
+        <div class="div-cell-label">配当性向（予想）</div>
+        <div class="div-cell-val">約71.3<span style="font-size:14px;color:var(--mid);">%</span></div>
+        <div class="div-cell-sub">EPS予想287.56円ベース</div>
+      </div>
+    </div>
+    <div class="highlight">
+      2027年3月期の配当予想は年間205円で前期と同額の<strong>維持</strong>（配当予想の修正も「無」）。ただし<strong>中間90円→100円（+10円）・期末115円→105円（△10円）と期中の配分が変わっている</strong>ため、期末の減少だけを見て減配と誤読しないよう注意が必要。注目すべきは<strong>配当と自己株式取得を合わせた総還元額</strong>で、当中間期は配当金の支払額113.52億円（前年同期81.02億円）＋自己株式取得84.78億円（前年同期6.39億円）＝<strong>約198.30億円</strong>を株主に還元しており、前年同期の約87.41億円から<strong>2倍超に拡大</strong>している。中間純利益144.69億円を上回る還元であり、株主還元を強く意識した資本政策がうかがえる。通期予想EPS287.56円に対する配当性向は約71.3%。<strong>短信に明示的な配当方針（累進配当・DOE・配当性向目標）の記載はなく</strong>、実績ベースでは205円の安定配当と自己株式取得を併用する姿勢と読み取れる。
+    </div>
+  </section>
+
+  <!-- 05 リスク・トピックス -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <span class="section-title">主要リスク・トピックス</span>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-item high">増収減益への転換<br><small>物価高・人手不足で営業総利益率△0.9pt、販管費+9.9%</small></div>
+      <div class="risk-item high">国内基盤事業の伸び悩み<br><small>港湾運送+0.4%・国内運送△7.2%／増収は海外連結頼み</small></div>
+      <div class="risk-item mid-level">通期も減益計画<br><small>上方修正後も営業△5.0%・経常△3.9%・純利△10.8%</small></div>
+      <div class="risk-item mid-level">M&amp;Aコストの顕在化<br><small>のれん償却4.05億円が新規発生、支払利息が約3.6倍</small></div>
+      <div class="risk-item mid-level">大型投資局面<br><small>固定資産取得224.36億円で現金・有価証券が330億円減少</small></div>
+      <div class="risk-item">荷動きの不透明感<br><small>中東情勢・円安基調で輸出入貨物の先行きは不透明</small></div>
+      <div class="risk-item">営業外依存の収益構造<br><small>持分法11.27億・受取配当11.11億が利益を補完</small></div>
+      <div class="risk-item">高い財務健全性<br><small>自己資本比率74.8%（+1.3pt）・投資有価証券1,307.55億円</small></div>
+      <div class="risk-item">株主還元の拡大<br><small>配当113.52億＋自己株取得84.78億＝約198.30億円</small></div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);text-align:right;">
+      <span style="display:inline-block;width:10px;height:10px;background:var(--red);vertical-align:middle;margin-right:4px;"></span>高リスク
+      <span style="display:inline-block;width:10px;height:10px;background:#E67E22;vertical-align:middle;margin-left:12px;margin-right:4px;"></span>中リスク
+      <span style="display:inline-block;width:10px;height:10px;background:var(--accent);vertical-align:middle;margin-left:12px;margin-right:4px;"></span>その他
+    </div>
+  </section>
+
+  <!-- 06 総評 -->
+  <section>
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <span class="section-title">総評</span>
+    </div>
+    <div class="highlight neutral">
+      当中間期は営業収益1,541.11億円（+5.2%）の増収に対し、営業利益182.80億円（△5.2%）・経常利益210.15億円（△2.2%）・親会社株主帰属中間純利益144.69億円（△5.1%）と<strong>全利益段階で減益の「増収減益」</strong>。前年同期が営業+14.3%・経常+15.0%・純利益+12.8%の好調だったため反転が目立つ。減益の正体は明確で、増収分+75.95億円のほぼ全てが営業原価に吸収されて<strong>営業総利益は+0.6%（営業総利益率21.3%→20.4%／△0.9pt）</strong>にとどまり、さらに<strong>販管費が+9.9%（+11.90億円）</strong>増えたことによる。物価高と慢性的な人手不足という物流業界共通のコスト上昇が採算を削った。増収の牽引役は<strong>国際運送の+152.5%（+79.87億円）</strong>で全社の増収額を単独で上回るが、これは前期の海外子会社連結によるもので、<strong>のれん償却4.05億円の新規発生と支払利息の約3.6倍増（0.95→3.43億円）という裏のコスト</strong>を同時に生んでいる。一方で最大の柱である<strong>港湾運送は+0.4%とほぼ横ばい、国内運送は△7.2%の減収</strong>であり、中計方針「国内基盤事業のシェア拡大・強靭化」の進捗は数字上は力強さを欠く。セグメントは物流事業1,379.56億円（+5.9%）／利益159.68億円（△5.0%）、その他事業176.32億円（△2.3%）／利益22.94億円（△6.7%）と<strong>両セグメントとも減益</strong>。救いは<strong>経常利益が営業利益を27.35億円上回る営業外の厚み</strong>で、持分法による投資利益11.27億円・受取配当金11.11億円・受取利息3.06億円が本業を補完し、経常の減益率を△2.2%に抑えた。財政・キャッシュ面は「現金を設備と株主還元に振り向けた」中間期といえる。<strong>営業CFは+86.36億円→+205.43億円へ約2.4倍に改善</strong>する一方、<strong>固定資産の取得に224.36億円（前年の約3.9倍）</strong>を投じ、現金及び預金△227.71億円・有価証券△102.36億円を原資に有形固定資産を+122.72億円積み増した（土地+89.72億円、機械装置+64.75億円、建設仮勘定△69.68億円＝<strong>横浜幸浦コールドセンター・北海浜倉庫の完成に伴う本勘定振替</strong>）。自己資本比率は74.8%（+1.3pt）へ改善したが、<strong>純資産自体は△21.21億円減少</strong>しており、比率上昇は自己株式取得（+84.21億円）と総資産圧縮（△129.37億円）の結果である点を正しく押さえたい。通期予想は当中間期の結果を受けて<strong>全項目を上方修正（修正:有）</strong>し、EPSは276.94円→287.56円（+3.8%）、経常利益は+4.3%と最も大きく引き上げられた。ただし<strong>修正後の数値そのものは営業△5.0%・経常△3.9%・純利益△10.8%の減益計画</strong>であり、「上方修正」の見出しだけで増益と読まないことが肝要。中間進捗は営業52.7%・経常53.7%・純利益51.9%と各項目半分超で、下期は中間並みを見込む現実的な計画である。配当は<strong>年間205円を維持</strong>（中間90→100円・期末115→105円と期中配分の変更があるのみ）だが、<strong>配当113.52億円＋自己株式取得84.78億円＝約198.30億円</strong>と前年同期の約87.41億円から2倍超に総還元を拡大し、中間純利益を上回る水準を還元している。<strong>短信に明示的な配当方針（累進配当・DOE・配当性向目標）の記載はない</strong>（通期予想EPS287.56円に対し配当性向約71.3%）。コスト上昇を価格・生産性に転嫁できるか、積み増した物流拠点が下期以降の収益に結実するかが当面の焦点。田原典人代表取締役社長。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  本資料は株式会社上組（9364）2027年3月期第2四半期（中間期）決算短信（XBRLデータ）に基づく要約です。投資判断は自己責任にてお願いいたします。
+</footer>
+
+</body>
+</html>
